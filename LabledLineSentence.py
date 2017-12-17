@@ -8,10 +8,10 @@ from gensim import utils
 from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
 # classifier
-from sklearn.linear_model import LogisticRegression
 from sklearn import svm
 
-from download_and_preprocess import download_html_from_url, preprocess_doc
+from Download import download_html_from_url, visible_text_from_html
+from Preprocess import preprocess_doc
 
 
 class LabeledLineSentence(object):
@@ -79,8 +79,6 @@ for i in range(number_of_negatives):
     train_arrays[number_of_positives + i] = model.docvecs[prefix_train_neg]
     train_labels[number_of_positives + i] = 0
 
-
-
 # test_arrays = numpy.zeros((1600, 100))
 # test_labels = numpy.zeros(1600)
 # for i in range(800):
@@ -102,11 +100,10 @@ classifier.fit(train_arrays, train_labels)
 url = "http://scikit-learn.org/stable/modules/svm.html"
 html = download_html_from_url(url)
 print(html)
-doc = preprocess_doc(html)
+visible_text = visible_text_from_html(html)
+doc = preprocess_doc(visible_text)
 print(doc)
 new_vector = model.infer_vector(doc)
 classification = "No Job" if classifier.predict([new_vector])[0] < 0.5 else "Job"
 print(classifier.predict([new_vector])[0])
 print(classification + " with confidence: " + str(classifier.decision_function([new_vector])))
-
-
