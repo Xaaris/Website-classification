@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="de-de" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8" />
+	<base href="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Selbsthilfe und Trialog - psychenet.de</title>
+	<link href="/templates/psychenet/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<script src="/media/jui/js/jquery.min.js?9d28c020f246a224e1391037a718288f"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?9d28c020f246a224e1391037a718288f"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?9d28c020f246a224e1391037a718288f"></script>
+	<script src="http://www.psychenet.de/plugins/system/nano/2.1/resource/vue.min.js"></script>
+	<script src="http://www.psychenet.de/plugins/system/nano/2.1/resource/es6-promise.min.js"></script>
+	<script src="/media/jui/js/chosen.jquery.min.js?9d28c020f246a224e1391037a718288f"></script>
+	<script src="/media/jui/js/bootstrap.min.js?9d28c020f246a224e1391037a718288f"></script>
+	<script>
+window.lang = 'de';
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find("select").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Werte eingeben oder ausw\u00e4hlen","placeholder_text_single":"Wert ausw\u00e4hlen","no_results_text":"Keine Ergebnisse gefunden!"});
+		}
+	});
+	jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,400i,600,600i">
+
+    <link rel="stylesheet" href="/templates/psychenet/style/font/linearicons.css">
+    <link rel="stylesheet" href="/templates/psychenet/style/css/flickity.css">
+    <link rel="stylesheet" href="/templates/psychenet/style/css/jui.css">
+    <link rel="stylesheet" href="/templates/psychenet/style/css/style.css">
+
+    <script src="/templates/psychenet/script/externals/tweenmax.min.js"></script>
+    <script src="/templates/psychenet/script/externals/lodash.min.js"></script>
+    <script src="/templates/psychenet/script/externals/i18n.min.js"></script>
+    <script src="/templates/psychenet/script/externals/es5shim.min.js"></script>
+    <script src="/templates/psychenet/script/externals/ofi.min.js"></script>
+    <script src="/templates/psychenet/script/externals/flickity.min.js"></script>
+    <script src="/templates/psychenet/script/externals/clipboard.min.js"></script>
+
+
+    <script src="/templates/psychenet/script/jquery/visible.jquery.js"></script>
+    <script src="/templates/psychenet/script/jquery/stickyheader.jquery.js"></script>
+    <script src="/templates/psychenet/script/jquery/linkmenu.jquery.js"></script>
+    <script src="/templates/psychenet/script/jquery/smoothscroll.jquery.js"></script>
+    <script src="/templates/psychenet/script/jquery/promoslide.jquery.js"></script>
+    <script src="/templates/psychenet/script/jquery/transit.jquery.js"></script>
+
+    <script>
+        window.lang = 'de';
+    </script>
+
+    <script src="/templates/psychenet/script/dist/index.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="not-home">
+
+    <div class="web-sticky">
+
+        <!-- Top -->
+        <section class="web-topbar">
+                            <div class="web-max">
+                    <div class="grid-flex">
+                        
+<div class="language">
+    <nav>
+        <ul>
+                                                <li class="is-active">
+                        <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html">
+                            DE                        </a>
+                    </li>
+                                                                                            </ul>
+    </nav>
+</div>
+
+
+
+<nav class="quicklinks pull-right">
+	<ul>
+					<li class="is-inactive is-flat" data-toggle="120">
+            <a href="/de/ueber-diese-seite.html">Über diese Seite</a>
+        </li>					<li class="is-inactive is-flat" data-toggle="121">
+            <a href="/de/impressum.html">Impressum</a>
+        </li>					<li class="is-inactive is-flat" data-toggle="122">
+            <a href="/de/datenschutz.html">Datenschutz</a>
+        </li>					<li class="is-inactive is-flat" data-toggle="123">
+            <a href="/de/kontakt.html">Kontakt</a>
+        </li>					<li class="is-inactive is-flat" data-toggle="124">
+            <a href="/de/sitemap.html">Sitemap</a>
+        </li>					<li class="is-inactive is-flat" data-toggle="125">
+            <a href="/de/?Itemid=1http://integrierte-versorgung.psychenet.de/">Integrierte Versorgung</a>
+        </li>			</ul>
+</nav>
+                    </div>
+                </div>
+                    </section>
+        <!-- Top end -->
+
+        <!-- Header -->
+        <header id="header" class="web-header" data-toggle-limit>
+
+            <!-- Mainbar -->
+            <div class="mainbar web-max">
+                <div class="grid-flex align-middle">
+
+                    <!-- Sitelogo -->
+                    <div class="sitelogo col-6-12">
+                        <a href="http://www.psychenet.de/">
+                            <img src="/templates/psychenet/image/psychenet-header.jpg" alt="psychenet">
+                        </a>
+                    </div>
+                    <!-- Sitelogo end -->
+
+                    <!-- Sitepartner -->
+                    <div class="sitepartner col-4-12 pull-right">
+                        <ul class="grid-flex">
+                            <li class="col-6-12">
+                                <a href="http://dgppn.de" target="_blank">
+                                    <img src="/templates/psychenet/image/dgppn-header.jpg" alt="DGPPN">
+                                </a>
+                            </li>
+                            <li class="col-6-12">
+                                <a href="http://uke.de" target="_blank">
+                                    <img src="/templates/psychenet/image/uke-header.jpg" alt="UKE Hamburg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sitepartner end -->
+
+                    <!-- Donation  -->
+                    <div class="donation">
+                        <a href="/de/ueber-uns/news-und-presse/8-kurzmitteilungen/9-spenden-fuer-psychenet-de.html" class="btn btn-primary">Spenden</a>
+                    </div>
+                    <!-- Donation end  -->
+
+                </div>
+            </div>
+            <!-- Mainbar end -->
+
+            <!-- Mainmenu -->
+                            
+<div class="mainmenu ">
+	<div class="web-max">
+		<div class="grid-flex align-middle" style="flex-wrap: nowrap;">
+
+			<!-- Sitelogo  -->
+			<div class="sitelogo col-md-4-12 col-sm-6-12">
+				<a href="http://www.psychenet.de/"><img src="/templates/psychenet/image/psychenet-header.jpg" alt="psychenet"></a>
+			</div>
+			<!-- Sitelogo end  -->		
+					
+			<nav>
+				<ul>
+											<li class="menu-hover is-inactive is-flat" data-toggle="103">
+            <a href="/de/">Home</a>
+        </li>											<li class="menu-hover is-inactive is-deep" data-toggle="112">
+            <a href="/de/psychische-gesundheit.html">Psychische Gesundheit</a>
+        </li>											<li class="menu-hover is-inactive is-deep" data-toggle="116">
+            <a href="/de/entscheidungshilfen.html">Entscheidungshilfen</a>
+        </li>											<li class="menu-hover is-inactive is-deep" data-toggle="115">
+            <a href="/de/selbsttests.html">Selbsttests</a>
+        </li>											<li class="menu-hover is-active is-deep" data-toggle="117">
+            <a href="/de/hilfe-finden.html">Hilfe finden</a>
+        </li>											<li class="menu-hover is-inactive is-deep" data-toggle="118">
+            <a href="/de/ueber-uns.html">Über uns</a>
+        </li>									</ul>
+			</nav>
+
+			<!-- Toggle  -->
+			<div class="menu-click menu-toggle" data-toggle="mobile">
+				<div class="hamburger hamburger--collapse">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+			<!-- Toggle end  -->
+
+			<!-- Goto  -->
+			<div class="goto">
+				<a href="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#top"><i class="icon-arrow-up"></i></a>
+			</div>
+			<!-- Goto end  -->
+		
+		</div>
+	</div>
+</div>
+
+<div class="mobilemenu" data-toggle-id="mobile">
+	<div class="web-max">
+		<nav>
+			<ul>
+									<li class="is-inactive is-flat">
+                <a href="/de/">Home</a>
+        </li>									<li class="is-inactive is-deep">
+            <span class="menulist mobile-menu-click" data-mobile="112"></span>
+                <a href="/de/psychische-gesundheit.html">Psychische Gesundheit</a>
+                <nav data-mobile-id="112">
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="113">
+            <a href="/de/psychische-gesundheit/informationen.html">Informationen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="133">
+            <a href="/de/psychische-gesundheit/kampagne.html">Kampagne</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="134">
+            <a href="/de/psychische-gesundheit/leitlinien.html">Leitlinien</a>
+        </li>                            </ul>
+        </nav>
+    </li>									<li class="is-inactive is-deep">
+            <span class="menulist mobile-menu-click" data-mobile="116"></span>
+                <a href="/de/entscheidungshilfen.html">Entscheidungshilfen</a>
+                <nav data-mobile-id="116">
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="267">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/was-ist-eine-depression/was-ist-eine-depression.html">Depressionen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="288">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung-2.html">Generalisierte Angststörung</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="330">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/was-ist-eine-psychose/was-ist-eine-psychose-2.html">Psychose</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="364">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit.html">Rückkehr zur Arbeit</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="326">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-depressionen.html">Allgemeine Informationen Entscheidungshilfe</a>
+        </li>                            </ul>
+        </nav>
+    </li>									<li class="is-inactive is-deep">
+            <span class="menulist mobile-menu-click" data-mobile="115"></span>
+                <a href="/de/selbsttests.html">Selbsttests</a>
+                <nav data-mobile-id="115">
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="261">
+            <a href="/de/selbsttests/depression.html">Depression</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="262">
+            <a href="/de/selbsttests/somatoforme-stoerungen.html">Somatoforme Störungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="263">
+            <a href="/de/selbsttests/essstoerungen.html">Essstörungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="258">
+            <a href="/de/selbsttests/trinkgewohnheiten.html">Trinkgewohnheiten</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="260">
+            <a href="/de/selbsttests/bipolare-stoerungen.html">Bipolare Störungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="259">
+            <a href="/de/selbsttests/angststoerungen.html">Angststörungen</a>
+        </li>                            </ul>
+        </nav>
+    </li>									<li class="is-active is-deep">
+            <span class="menulist mobile-menu-click" data-mobile="117"></span>
+                <a href="/de/hilfe-finden.html">Hilfe finden</a>
+                <nav data-mobile-id="117">
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="159">
+            <a href="/de/hilfe-finden/schnelle-hilfe.html">Schnelle Hilfe</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="191">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick.html">Hilfesystem im Überblick</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="172">
+            <a href="/de/hilfe-finden/spezielle-angebote-in-hamburg.html">Spezielle Angebote in Hamburg</a>
+        </li>                            </ul>
+        </nav>
+    </li>									<li class="is-inactive is-deep">
+            <span class="menulist mobile-menu-click" data-mobile="118"></span>
+                <a href="/de/ueber-uns.html">Über uns</a>
+                <nav data-mobile-id="118">
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="119">
+            <a href="/de/ueber-uns/das-projekt-psychenet.html">Das Projekt psychenet</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="197">
+            <a href="/de/ueber-uns/kontakt.html">Kontakt</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="198">
+            <a href="/de/ueber-uns/partner.html">Partner</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="210">
+            <a href="/de/ueber-uns/news-und-presse.html">News und Presse</a>
+        </li>                            </ul>
+        </nav>
+    </li>							</ul>
+		</nav>
+	</div>
+</div>
+
+				<div class="submenu" data-toggle-id="112">
+			<div class="web-max">
+				<nav>
+					<ul>
+													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="113"></span>
+                <a href="/de/psychische-gesundheit/informationen.html">Informationen</a>
+                <nav data-toggle-id="113">
+            <h4>
+                Informationen            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="130">
+            <span>Psychische Erkrankungen</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="128">
+            <a href="/de/psychische-gesundheit/informationen/basiswissen.html">Basiswissen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="114">
+            <a href="/de/psychische-gesundheit/informationen/depressionen.html">Depressionen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="129">
+            <a href="/de/psychische-gesundheit/informationen/somatoforme-stoerungen.html">Somatoforme Störungen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="139">
+            <a href="/de/psychische-gesundheit/informationen/psychosen.html">Psychosen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="140">
+            <a href="/de/psychische-gesundheit/informationen/magersucht.html">Magersucht</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="141">
+            <a href="/de/psychische-gesundheit/informationen/bulimie.html">Bulimie</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="142">
+            <a href="/de/psychische-gesundheit/informationen/bipolare-stoerungen.html">Bipolare Störungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="143">
+            <a href="/de/psychische-gesundheit/informationen/panik-und-agoraphobie.html">Panik und Agoraphobie</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="144">
+            <a href="/de/psychische-gesundheit/informationen/soziale-phobie.html">Soziale Phobie</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="145">
+            <a href="/de/psychische-gesundheit/informationen/generalisierte-angststoerung.html">Generalisierte Angststörung</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="265">
+            <a href="/de/psychische-gesundheit/informationen/demenz.html">Demenz</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="131">
+            <span>Angehörige</span>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="146">
+            <a href="/de/psychische-gesundheit/informationen/information-und-unterstuetzung.html">Information und Unterstützung</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="132">
+            <span>Themen</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="147">
+            <a href="/de/psychische-gesundheit/informationen/alkohol-im-jugendalter.html">Alkohol im Jugendalter</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="148">
+            <a href="/de/psychische-gesundheit/informationen/schlaf-und-beruhigungsmittel.html">Schlaf- und Beruhigungsmittel</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="149">
+            <a href="/de/psychische-gesundheit/informationen/psyche-und-arbeit.html">Psyche und Arbeit</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="150">
+            <a href="/de/psychische-gesundheit/informationen/burnout.html">Burnout</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="266">
+            <a href="/de/psychische-gesundheit/informationen/umgang-mit-demenz.html">Umgang mit Demenz</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="133"></span>
+                <a href="/de/psychische-gesundheit/kampagne.html">Kampagne</a>
+                <nav data-toggle-id="133">
+            <h4>
+                Kampagne            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="352">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-depressionen.html">Kampagne Depressionen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="353">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-psychosen.html">Kampagne Psychosen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="354">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-bipolare-stoerungen.html">Kampagne Bipolare Störungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="355">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-esstoerungen.html">Kampagne Essstörungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="356">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-angststoerungen.html">Kampagne Angststörungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="357">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-somatoforme-stoerungen.html">Kampagne Somatoforme Störungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="358">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-borderline-stoerung.html">Kampagne Borderline-Störung</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="359">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-sucht.html">Kampagne Sucht</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="360">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-angehoerige.html">Kampagne Angehörige</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="361">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-betriebliche-gesundheit.html">Kampagne Betriebliche Gesundheit</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="362">
+            <a href="/de/psychische-gesundheit/kampagne/kampagne-kontaktformular.html">Kampagne Kontaktformular</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="363">
+            <a href="/de/psychische-gesundheit/kampagne/bildungsprojekte.html">Bildungsprojekte</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="134"></span>
+                <a href="/de/psychische-gesundheit/leitlinien.html">Leitlinien</a>
+                <nav data-toggle-id="134">
+            <h4>
+                Leitlinien            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="246">
+            <a href="/de/psychische-gesundheit/leitlinien/leitlinien-fuer-die-behandlung-von-erwachsenen.html">Leitlinien für die Behandlung von Erwachsenen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="247">
+            <a href="/de/psychische-gesundheit/leitlinien/leitlinien-fuer-die-behandlung-von-kindern-und-jugendlichen.html">Leitlinien für die Behandlung von Kindern und Jugendlichen</a>
+        </li>                            </ul>
+        </nav>
+    </li>											</ul>
+				</nav>
+			</div>
+		</div>
+				<div class="submenu" data-toggle-id="116">
+			<div class="web-max">
+				<nav>
+					<ul>
+													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="267"></span>
+                <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/was-ist-eine-depression/was-ist-eine-depression.html">Depressionen</a>
+                <nav data-toggle-id="267">
+            <h4>
+                Depressionen            </h4>
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="312">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/was-ist-eine-depression/was-ist-eine-depression.html">Was ist eine Depression?</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="273">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/behandlungsmoeglichkeiten/wie-wird-eine-depression-behandelt.html">Behandlungsmöglichkeiten</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="284">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/meine-entscheidung/welche-behandlung-ist-die-richtige.html">Meine Entscheidung</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="285">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/was-kann-ich-selbst-tun/alltagsgestaltung.html">Was kann ich selbst tun?</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="288"></span>
+                <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung-2.html">Generalisierte Angststörung</a>
+                <nav data-toggle-id="288">
+            <h4>
+                Generalisierte Angststörung            </h4>
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="289">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/behandlungsmoeglichkeiten/wie-wird-eine-generalisierte-angststoerung-behandelt.html">Was ist eine generalisierte Angststörung?</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="295">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/behandlungsmoeglichkeiten/wie-wird-eine-generalisierte-angststoerung-behandelt.html">Behandlungsmöglichkeiten</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="380">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/meine-entscheidung/welche-behandlung-ist-die-richtige.html">Meine Entscheidung</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="306">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/was-kann-ich-selbst-tun/was-kann-ich-selbst-tun-2.html">Was kann ich selbst tun?</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="330"></span>
+                <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/was-ist-eine-psychose/was-ist-eine-psychose-2.html">Psychose</a>
+                <nav data-toggle-id="330">
+            <h4>
+                Psychose            </h4>
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="331">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/was-ist-eine-psychose/was-ist-eine-psychose-2.html">Was ist eine Psychose?</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="335">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/behandlung/erster-kontakt.html">Behandlung</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="344">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/was-kann-ich-selbst-tun/stabilitaet-im-alltag-finden.html">Was kann ich selbst tun?</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="348">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/meine-vorstellungen-und-wuensche/meine-vorstellungen.html">Meine Vorstellungen und Wünsche</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="364"></span>
+                <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit.html">Rückkehr zur Arbeit</a>
+                <nav data-toggle-id="364">
+            <h4>
+                Rückkehr zur Arbeit            </h4>
+            <ul>
+                                    <li class="is-inactive is-deep" data-toggle="365">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit.html">Rückkehr zur Arbeit</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="366">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit-fakten/entscheidungshilfe-rueckkehr-zur-arbeit-der-nutzen.html">Fakten</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="370">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit-weitere-informationen/entscheidungshilfe-rueckkehr-zur-arbeit-weitere-informationen-i.html">Weitere Informationen</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="377">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit-meine-entscheidung/entscheidungshilfe-rueckkehr-zur-arbeit-meine-entscheidung-2.html">Meine Entscheidung</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="326"></span>
+                <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-depressionen.html">Allgemeine Informationen Entscheidungshilfe</a>
+                <nav data-toggle-id="326">
+            <h4>
+                Allgemeine Informationen Entscheidungshilfe            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="325">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-depressionen.html">Allgemeine Informationen Entscheidungshilfe Depressionen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="327">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-psychose.html">Allgemeine Informationen Entscheidungshilfe Psychose</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="328">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-generalisierte-angststoerung.html">Allgemeine Informationen Entscheidungshilfe generalisierte Angststörung</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="329">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/datenschutz-und-sicherheit.html">Datenschutz und Sicherheit</a>
+        </li>                            </ul>
+        </nav>
+    </li>											</ul>
+				</nav>
+			</div>
+		</div>
+				<div class="submenu" data-toggle-id="115">
+			<div class="web-max">
+				<nav>
+					<ul>
+													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/depression.html">Depression</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/somatoforme-stoerungen.html">Somatoforme Störungen</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/essstoerungen.html">Essstörungen</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/trinkgewohnheiten.html">Trinkgewohnheiten</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/bipolare-stoerungen.html">Bipolare Störungen</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/selbsttests/angststoerungen.html">Angststörungen</a>
+        </li>											</ul>
+				</nav>
+			</div>
+		</div>
+				<div class="submenu" data-toggle-id="117">
+			<div class="web-max">
+				<nav>
+					<ul>
+													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="159"></span>
+                <a href="/de/hilfe-finden/schnelle-hilfe.html">Schnelle Hilfe</a>
+                <nav data-toggle-id="159">
+            <h4>
+                Schnelle Hilfe            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="161">
+            <span>Erwachsene</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="160">
+            <a href="/de/hilfe-finden/schnelle-hilfe/krisenanlaufstellen.html">Krisenanlaufstellen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="163">
+            <a href="/de/hilfe-finden/schnelle-hilfe/soforthilfe.html">Soforthilfe</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="162">
+            <span>Kinder und Jugendliche</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="164">
+            <a href="/de/hilfe-finden/schnelle-hilfe/krisenanlaufstellen-kj.html">Krisenanlaufstellen (KJ)</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="165">
+            <a href="/de/hilfe-finden/schnelle-hilfe/soforthilfe-kj.html">Soforthilfe (KJ)</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-active is-deep">
+            <span class="menulist menu-click" data-toggle="191"></span>
+                <a href="/de/hilfe-finden/hilfesystem-im-ueberblick.html">Hilfesystem im Überblick</a>
+                <nav data-toggle-id="191">
+            <h4>
+                Hilfesystem im Überblick            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="193">
+            <span>Erwachsene</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="166">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/ambulante-angebote.html">Ambulante Angebote</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="195">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/voll-und-teilstationaere-angebote.html">Voll- und teilstationäre Angebote</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="167">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/rehabilitations-wohneinrichtungen.html">Rehabilitations-/ Wohneinrichtungen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="168">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/berufliche-wiedereingliederung.html">Berufliche Wiedereingliederung</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="211">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/angebote-von-krankenkassen.html">Angebote von Krankenkassen</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="169">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html">Selbsthilfe und Trialog</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="194">
+            <span>Kinder und Jugendliche</span>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="170">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/ambulante-angebote-kj.html">Ambulante Angebote (KJ)</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="171">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick/voll-teilstationaere-angebote-kj.html">Voll-/ teilstationäre Angebote (KJ)</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-flat">
+                <a href="/de/hilfe-finden/spezielle-angebote-in-hamburg.html">Spezielle Angebote in Hamburg</a>
+        </li>											</ul>
+				</nav>
+			</div>
+		</div>
+				<div class="submenu" data-toggle-id="118">
+			<div class="web-max">
+				<nav>
+					<ul>
+													<li class="is-inactive is-deep">
+            <span class="menulist menu-click" data-toggle="119"></span>
+                <a href="/de/ueber-uns/das-projekt-psychenet.html">Das Projekt psychenet</a>
+                <nav data-toggle-id="119">
+            <h4>
+                Das Projekt psychenet            </h4>
+            <ul>
+                                    <li class="is-inactive is-flat" data-toggle="135">
+            <a href="/de/ueber-uns/das-projekt-psychenet/entstehungsgeschichte.html">Entstehungsgeschichte</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="137">
+            <a href="/de/ueber-uns/das-projekt-psychenet/ziele-aufgaben-und-organisationsstruktur.html">Ziele, Aufgaben und Organisationsstruktur</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="136">
+            <a href="/de/ueber-uns/das-projekt-psychenet/organisation-und-leitung.html">Organisation und Leitung</a>
+        </li>                                    <li class="is-inactive is-deep" data-toggle="138">
+            <a href="/de/ueber-uns/das-projekt-psychenet/teilprojekte.html">Teilprojekte</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="196">
+            <a href="/de/ueber-uns/das-projekt-psychenet/ergebnisse.html">Ergebnisse</a>
+        </li>                                    <li class="is-inactive is-flat" data-toggle="264">
+            <a href="/de/ueber-uns/das-projekt-psychenet/verstetigung-der-bestandteile-von-psychenet.html">Verstetigung der Bestandteile von psychenet</a>
+        </li>                            </ul>
+        </nav>
+    </li>													<li class="is-inactive is-flat">
+                <a href="/de/ueber-uns/kontakt.html">Kontakt</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/ueber-uns/partner.html">Partner</a>
+        </li>													<li class="is-inactive is-flat">
+                <a href="/de/ueber-uns/news-und-presse.html">News und Presse</a>
+        </li>											</ul>
+				</nav>
+			</div>
+		</div>
+	
+                        <!-- Mainmenu end -->
+
+        </header>
+        <!-- Header end -->
+
+    </div>
+
+    <div class="web-sticky-buffer" id="top"></div>
+
+    <!-- Jumbotron -->
+            
+<section class="web-jumbotron">
+
+    <!-- Slide -->
+		    <div class="slide carousel-cell left small">
+
+	        <!-- Image -->
+	        <div class="image">
+	            <img src="/images/jumbotron/header-hilfe-finden.jpg" alt="Hilfe [finden]">
+	        </div>
+	        <!-- Image end -->
+
+	        <!-- Content -->
+	        <div class="content web-max">
+	            <div class="inner">
+	                <h2>
+	                    Hilfe <span class="marker">finden</span>	                </h2>
+	                <ul>
+	                    	                </ul>
+	            </div>
+	        </div>
+	        <!-- Content end -->
+
+	    </div>
+        <!-- Slide end -->
+
+</section>
+        <!-- Jumbotron end -->
+
+    <main id="content" class="web-max">
+
+                    
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/de/" class="pathway"><span itemprop="name">Startseite</span></a>
+													<span class="divider"></span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/de/hilfe-finden.html" class="pathway"><span itemprop="name">Hilfe finden</span></a>
+													<span class="divider"></span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/de/hilfe-finden/hilfesystem-im-ueberblick.html" class="pathway"><span itemprop="name">Hilfesystem im Überblick</span></a>
+													<span class="divider"></span>
+								<meta itemprop="position" content="3">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="is-active">
+				<span itemprop="name">
+					Selbsthilfe und Trialog				</span>
+				<meta itemprop="position" content="4">
+			</li>
+		</ul>
+
+        
+        
+        
+                    <div id="system-message-container">
+	</div>
+
+            
+<div id="pagebuilder" class="grid-flex grid-spaced">
+            <div class="pagebuilder-content col-8-12 col-xl-12-12">
+                        
+
+<div class="module web-headline text-red" id="selbsthilfe-und-trialog">
+	<h2>Selbsthilfe und Trialog</h2>	</div>
+
+<div class="module web-headline " id="selbsthilfe">
+	<h3>Selbsthilfe</h3>			<div class="clipboard" data-clipboard-text="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#selbsthilfe"></div>
+	</div>
+<div class="module web-textarea">
+	<p>Die psychiatrische Selbsthilfebewegung hat in den vergangenen 10 bis 20 Jahren im deutschsprachigen Raum stark zugenommen. Eine wesentliche Aufgabe liegt in der gegenseitigen Unterst&uuml;tzung und im Erfahrungsaustausch von psychisch Erkrankten und/oder Angeh&ouml;rigen.</p>
+<p>Die <a href="http://www.nakos.de" target="_blank" rel="noopener noreferrer">NAKOS</a> ist die bundesweite Aufkl&auml;rungs-, Service- und Netzwerkeinrichtung im Feld der Selbsthilfe. Auf der Webseite von NAKOS finden Sie auch eine <a href="http://www.nakos.de/adressen/datenbanksuche/" target="_blank" rel="noopener noreferrer">bundesweite Suchfunktion zu Selbsthilfegruppen</a>.</p>
+<p>Folgende regionale Angebote gibt es au&szlig;erdem in gro&szlig;en deutschen St&auml;dten.</p>
+<ul>
+<li>Berlin: <a href="http://www.sekis-berlin.de/" target="_blank" rel="noopener noreferrer">Selbsthilfe Kontakt- und Informationsstelle</a></li>
+<li>Hamburg: In Hamburg gibt es die <a href="http://www.kiss-hh.de/" target="_blank" rel="noopener noreferrer">Kontakt- und Informationsstellen f&uuml;r Selbsthilfegruppen (KISS)</a>. Eine &ouml;ffentliche Liste der Selbsthilfegruppen f&uuml;r Menschen mit psychischen Erkrankungen und Angeh&ouml;rige finden Sie im <a href="http://212.72.185.91/fmi/iwp/cgi?-db=_shg_call&amp;-loadframes" target="_blank" rel="noopener noreferrer">Hamburger Selbsthilfeverzeichnis</a> (Hrsg. KISS Hamburg).</li>
+<li>M&uuml;nchen: <a href="http://www.shz-muenchen.de/" target="_blank" rel="noopener noreferrer">Selbsthilfezentrum M&uuml;nchen</a></li>
+</ul></div>
+
+<div class="module web-headline " id="psychoseseminar-–-trialogforum">
+	<h3>Psychoseseminar – Trialogforum</h3>			<div class="clipboard" data-clipboard-text="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#psychoseseminar-–-trialogforum"></div>
+	</div>
+<div class="module web-textarea">
+	<p>Psychoseseminare oder Trialogforen zielen auf den wechselseitigen Erfahrungsaustausch und die gegenseitige Fortbildung von Psychiatrieerfahrenen, Angeh&ouml;rigen und Therapeuten ab. &bdquo;Trialog&ldquo; bedeutet ein Gespr&auml;ch zu dritt oder zwischen drei Gruppen. Die verschiedenen Erfahrungen der beteiligten Patienten, Angeh&ouml;rigen und Therapeuten stehen beim Trialog im Vordergrund. Trialogforen gibt es nicht nur f&uuml;r Psychose, sondern inzwischen auch f&uuml;r andere Diagnosegruppen (insbesondere mit Bipolar- und Borderline-Erfahrenen und ihren Angeh&ouml;rigen).&nbsp;</p>
+<p><a href="http://www.trialog-psychoseseminar.de/de/13/Adressen.html" target="_blank" rel="noopener noreferrer">Hier</a> finden Sie Psychoseminare/Trialogforen in allen Bundesl&auml;ndern.</p></div>
+
+<div class="module web-headline " id="bundesverband-psychiatrie-erfahrener">
+	<h3>Bundesverband Psychiatrie-Erfahrener</h3>			<div class="clipboard" data-clipboard-text="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#bundesverband-psychiatrie-erfahrener"></div>
+	</div>
+<div class="module web-textarea">
+	<p>Der <a href="http://www.bpe-online.de/" target="_blank" rel="noopener noreferrer">Bundesverband Psychiatrie-Erfahrener (BPE) e.V.</a> engagiert sich in diversen Bereichen, bietet z.B. Psychoseseminare, betroffenenkontrollierte Forschungsprojekte und Unterst&uuml;tzung der Selbsthilfearbeit an.</p></div>        </div>
+                <div class="pagebuilder-sidebar col-4-12 col-xl-12-12">
+                        <div class="module web-pagemenu">
+    <h3>Seitenübersicht</h3>
+    <ul>
+                    <li>
+                                                            <a href="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#selbsthilfe">Selbsthilfe </a>
+                                                </li>
+                    <li>
+                                                            <a href="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#psychoseseminar-–-trialogforum">Psychoseseminar – Trialogforum</a>
+                                                </li>
+                    <li>
+                                                            <a href="http://www.psychenet.de/de/hilfe-finden/hilfesystem-im-ueberblick/selbsthilfe-und-trialog.html#bundesverband-psychiatrie-erfahrener">Bundesverband Psychiatrie-Erfahrener</a>
+                                                </li>
+            </ul>
+</div>
+        </div>
+                <div class="pagebuilder-footer col-12-12">
+            <div class="fill-white">
+                
+<div class="module web-textarea web-source" data-collapse="250" data-collapse-style="01">
+	<div class="grid-flex grid-spaced">
+					<div class="col-12-12">
+				<h4><strong class="">Verfasst von:</strong></h4>
+<p><a href="https://www.uke.de/kliniken-institute/institute/institut-und-poliklinik-f%C3%BCr-medizinische-psychologie/team/sarah-liebherz.html" target="_blank" rel="noopener noreferrer">Dr. Sarah Liebherz</a> (Psychologische Psychotherapeutin) Dr.&nbsp;Nina Weymann&nbsp;(Psychologische Psychotherapeutin),&nbsp;Dr. Lisa Tlach&nbsp;(Diplom-Psychologin), <a href="https://www.uke.de/kliniken-institute/institute/institut-und-poliklinik-f%C3%BCr-medizinische-psychologie/team/j%C3%B6rg-dirmaier.html" target="_blank" rel="noopener noreferrer">PD Dr. J&ouml;rg Dirmaier</a> (Psychologischer Psychotherapeut), <a href="https://www.uke.de/kliniken-institute/institute/institut-und-poliklinik-f%C3%BCr-medizinische-psychologie/team/martin-h%C3%A4rter.html" target="_blank" rel="noopener noreferrer">Prof. Dr. Dr. Martin H&auml;rter</a> (Arzt und Psychologischer Psychotherapeut)<br class="" /><br class="" />Datum der Erstellung: 23.01.2017<br class="" />Datum der letzten inhaltlichen &Uuml;berarbeitung: 23.01.2017<br class="" />Datum der n&auml;chsten inhaltlichen &Uuml;berarbeitung: 23.01.2018</p>			</div>
+							<div class="col-6-12 col-lg-12-12">
+							</div>
+				<div class="col-12-12">
+					</div>
+	</div>
+</div>            </div>
+        </div>
+    </div>
+
+        
+                    
+<div class="module web-divider">
+    <span class="text"><i class="icon-city"></i> Starke Bündnisse</span>
+</div>
+
+    <div class="module web-partner web-partner-default">
+        <ul>
+                            <li>
+                    <div class="web-partner-image">
+                        <a href="http://dgppn.de" target="_blank">
+                            <img src="/images/partner/dgppn.png" alt="DGPPN">
+                        </a>
+                    </div>
+                </li>
+                            <li>
+                    <div class="web-partner-image">
+                        <a href="http://uke.de" target="_blank">
+                            <img src="/images/partner/uke.png" alt="UKE">
+                        </a>
+                    </div>
+                </li>
+                    </ul>
+    </div>
+
+<div class="module web-divider">
+    <span class="text"><i class="icon-site-map"></i> Sitemap</span>
+</div>
+
+        
+        
+        
+        <!-- Sitemap -->
+                    <section id="sitemap" class="web-sitemap grid-flex grid-spaced">
+                
+<div class="col-2-10 col-lg-10-10" data-toggle-limit>
+	<nav>
+		<h3>
+			Psychische Gesundheit <i class="menu-click" data-toggle="112"></i>
+		</h3>
+		<ul data-toggle-id="112">
+							<li class="is-inactive is-deep" data-toggle="113">
+            <a href="/de/psychische-gesundheit/informationen.html">Informationen</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="133">
+            <a href="/de/psychische-gesundheit/kampagne.html">Kampagne</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="134">
+            <a href="/de/psychische-gesundheit/leitlinien.html">Leitlinien</a>
+        </li>					</ul>
+	</nav>
+</div>
+<div class="col-2-10 col-lg-10-10" data-toggle-limit>
+	<nav>
+		<h3>
+			Selbsttests <i class="menu-click" data-toggle="115"></i>
+		</h3>
+		<ul data-toggle-id="115">
+							<li class="is-inactive is-flat" data-toggle="261">
+            <a href="/de/selbsttests/depression.html">Depression</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="262">
+            <a href="/de/selbsttests/somatoforme-stoerungen.html">Somatoforme Störungen</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="263">
+            <a href="/de/selbsttests/essstoerungen.html">Essstörungen</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="258">
+            <a href="/de/selbsttests/trinkgewohnheiten.html">Trinkgewohnheiten</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="260">
+            <a href="/de/selbsttests/bipolare-stoerungen.html">Bipolare Störungen</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="259">
+            <a href="/de/selbsttests/angststoerungen.html">Angststörungen</a>
+        </li>					</ul>
+	</nav>
+</div>
+<div class="col-2-10 col-lg-10-10" data-toggle-limit>
+	<nav>
+		<h3>
+			Entscheidungshilfen <i class="menu-click" data-toggle="116"></i>
+		</h3>
+		<ul data-toggle-id="116">
+							<li class="is-inactive is-deep" data-toggle="267">
+            <a href="/de/entscheidungshilfen/entscheidungshilfen-depressionen/was-ist-eine-depression/was-ist-eine-depression.html">Depressionen</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="288">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung/was-ist-eine-generalisierte-angststoerung-2.html">Generalisierte Angststörung</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="330">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-psychose/was-ist-eine-psychose/was-ist-eine-psychose-2.html">Psychose</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="364">
+            <a href="/de/entscheidungshilfen/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit/entscheidungshilfe-rueckkehr-zur-arbeit.html">Rückkehr zur Arbeit</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="326">
+            <a href="/de/entscheidungshilfen/allgemeine-informationen-entscheidungshilfe/allgemeine-informationen-entscheidungshilfe-depressionen.html">Allgemeine Informationen Entscheidungshilfe</a>
+        </li>					</ul>
+	</nav>
+</div>
+<div class="col-2-10 col-lg-10-10" data-toggle-limit>
+	<nav>
+		<h3>
+			Hilfe finden <i class="menu-click" data-toggle="117"></i>
+		</h3>
+		<ul data-toggle-id="117">
+							<li class="is-inactive is-deep" data-toggle="159">
+            <a href="/de/hilfe-finden/schnelle-hilfe.html">Schnelle Hilfe</a>
+        </li>							<li class="is-inactive is-deep" data-toggle="191">
+            <a href="/de/hilfe-finden/hilfesystem-im-ueberblick.html">Hilfesystem im Überblick</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="172">
+            <a href="/de/hilfe-finden/spezielle-angebote-in-hamburg.html">Spezielle Angebote in Hamburg</a>
+        </li>					</ul>
+	</nav>
+</div>
+<div class="col-2-10 col-lg-10-10" data-toggle-limit>
+	<nav>
+		<h3>
+			Über uns <i class="menu-click" data-toggle="118"></i>
+		</h3>
+		<ul data-toggle-id="118">
+							<li class="is-inactive is-deep" data-toggle="119">
+            <a href="/de/ueber-uns/das-projekt-psychenet.html">Das Projekt psychenet</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="197">
+            <a href="/de/ueber-uns/kontakt.html">Kontakt</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="198">
+            <a href="/de/ueber-uns/partner.html">Partner</a>
+        </li>							<li class="is-inactive is-flat" data-toggle="210">
+            <a href="/de/ueber-uns/news-und-presse.html">News und Presse</a>
+        </li>					</ul>
+	</nav>
+</div>
+            </section>
+                <!-- Sitemap end -->
+
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer -->
+    <footer id="footer" class="web-footer">
+
+        <!-- Mainbar -->
+        <div class="mainbar web-max grid-flex grid-spaced align-middle">
+
+            <!-- Sitelogo -->
+            <div class="sitelogo col-3-12">
+                <a href="http://www.psychenet.de/"><img src="/templates/psychenet/image/psychenet-footer.jpg" alt=""></a>
+            </div>
+            <!-- Sitelogo end -->
+
+            <!-- Siteaward -->
+            <div class="siteaward col-6-12 col-lg-9-12 col-md-12-12 pull-right">
+                <ul>
+                    <li class="grid-flex align-middle">
+                        <span class="image">
+                            <img src="/templates/psychenet/image/award-honcode.jpg" alt="">
+                        </span>
+                        <span class="content">
+                            Wir befolgen den HONcode Standard für vertrauenswürdige Gesundheitsinformationen
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Siteaward end -->
+
+        </div>
+        <!-- Mainbar end -->
+
+        <!-- Bottombar -->
+        <div class="bottombar web-max">
+            <span>2017 &copy; psychenet - Für die Richtigkeit der in dieser Website enthaltenen Angaben können wir trotz sorgfältiger Prüfung keine Gewähr übernehmen</span>
+        </div>
+        <!-- Bottombar end -->
+
+    </footer>
+    <!-- Footer end -->
+
+    
+
+</body>
+</html>

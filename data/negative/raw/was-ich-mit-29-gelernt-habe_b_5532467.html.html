@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+	
+<!--  Mobile redirect: 80 -->
+<!--esi
+
+<esi:assign name="is_mobile" value="0" />
+<esi:choose>
+  <esi:when test="$(done)!='1'">
+    <esi:assign name="done" value="0"/>
+  </esi:when>
+</esi:choose>
+
+<esi:assign name="query_param" value="''"/>
+<esi:choose>
+    <esi:when test="$(QUERY_STRING)">
+        <esi:assign name="query_param">'?'+$(QUERY_STRING)</esi:assign>
+    </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="$(HTTP_USER_AGENT) matches_i '''SCH-I535|SPH-L710|SGH-N064|SGH-N035|SGH-T999|SGH-I747|GT-I9305|GT-I9300|android.+mobile|iphone|ipod|webos|blackberry.+webkit.+mobile|htc|opera\ mini|operamini|iemobile|opera\ mobi|lge|lg|palm|samsung|nokia|windows\ phone|windows\ ce|bb10|blackberry|Mobile.+Firefox|tizen.+mobile'''">
+    <esi:assign name="is_mobile" value="1" />
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="$(HTTP_USER_AGENT) matches_i '''SAMSUNG\ SM-T'''">
+    <esi:assign name="is_mobile" value="0" />
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="$(is_mobile) == '1' && $(HTTP_HOST) has 'huffingtonpost.com' && $(REQUEST_PATH) matches_i '/jobs'">
+    <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="$(is_mobile) == '1' && $(HTTP_HOST) has 'huffingtonpost.com' && $(REQUEST_PATH) matches_i '/hill/signup\.html'">
+    <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="($exists($(QUERY_STRING{'m'})) && $(QUERY_STRING{'m'}) == 'false')
+                    && $(is_mobile)=='1'">
+      $add_header('Set-Cookie','mobileview=false; path=/;')
+      $set_redirect('http://www.huffingtonpost.de'+$(REQUEST_PATH))
+      <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="($exists($(QUERY_STRING{'m'})) && $(QUERY_STRING{'m'}) == 'true')
+                    && $(is_mobile)=='1'">
+      $add_header('Set-Cookie','mobileview=true; path=/;')
+      <esi:assign name="ignore_mobile_cookie" value="1"/>
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="($exists($(QUERY_STRING{'tm'})) && $(QUERY_STRING{'tm'}) == 'false')
+                    && $(is_mobile)=='1'">
+      <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+
+<esi:choose>
+  <esi:when test="$(is_mobile) == '1' && $(HTTP_HOST) has 'huffingtonpost.com' && $(REQUEST_PATH) matches_i 'special\/disney_travel'">
+    $set_redirect('http://m.news.travel.aol.com/disney/')
+    <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+<esi:choose>
+  <esi:when test="( $(ignore_mobile_cookie) == '1' || !$exists($(HTTP_COOKIE{'mobileview'}) ) || $(HTTP_COOKIE{'mobileview'})=='true' ) && $(is_mobile) == '1' && $(done)=='0'">
+    <esi:choose>
+      <esi:when test="!$exists($(HTTP_COOKIE{'mobileview'}))">
+        $add_header('Set-Cookie','mobileview=true; path=/;')
+      </esi:when>
+    </esi:choose>
+    <esi:choose>
+      <esi:when test="$(REQUEST_PATH) matches_i '/?([0-9]+)/([0-9]+)/([0-9]+)/([^/]+)_([0-9]+)\.html#(.+)$' ">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/entry/'+$(MATCHES{5})+'#$(MATCHES{6})'+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/?([0-9]+)/([0-9]+)/([0-9]+)/([^/]+)_([0-9]+)\.html' ">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/entry/'+$(MATCHES{5})+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/([^/]+)/([^/]+)_([0-9]+)\.html'">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/entry/'+$(MATCHES{3})+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/(news|tag|actualites)/([a-z0-9-_]+)' ">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/news/'+$(MATCHES{2})+'/'+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/newsletter/([a-z0-9-_]+)'">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/?pop=nls&nls='+ $(MATCHES{1})</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/imageblog'">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/news/imageblog/'+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/thirdmetric'">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/news/third-metric/'+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '/p/horoscopos-([a-z]+)\.html' ">
+        <esi:assign name="redirect_to">'http://m.huffpost.com/de/horoscopos/'+$(MATCHES{1})+$(query_param)</esi:assign>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '^\/(subscription|users\/notifications|terms)' ">
+        <esi:assign name="done" value="1"/>
+      </esi:when>
+      <esi:when test="$(REQUEST_PATH) matches_i '^\/([a-z0-9-_]{2,})' ">
+                  <esi:assign name="redirect_to">'http://m.huffpost.com/de/vertical/'+$(MATCHES{1})+'/'+$(query_param)</esi:assign>
+              </esi:when>
+      <esi:when test="$is_empty($(REQUEST_PATH)) || $(REQUEST_PATH) =='/'">
+        <esi:choose>
+          <esi:when test="($(GEO{'country_code'}) == 'AU')">
+            <esi:assign name="redirect_to">'http://m.huffpost.com/au'+$(query_param)</esi:assign>
+          </esi:when>
+          <esi:otherwise>
+            <esi:assign name="redirect_to">'http://m.huffpost.com/de'+$(query_param)</esi:assign>
+          </esi:otherwise>
+        </esi:choose>
+      </esi:when>
+    </esi:choose>
+    <esi:choose>
+      <esi:when test="$exists($(redirect_to)) && !$is_empty($(redirect_to))">
+        $set_redirect($(redirect_to))
+      </esi:when>
+    </esi:choose>
+    <esi:assign name="done" value="1"/>
+  </esi:when>
+</esi:choose>
+-->
+<!--esi
+<esi:assign name="ads_ord" value="$rand()" />
+<esi:assign name="is_aol_referer" value="0" />
+<esi:choose>
+  <esi:when test="$(HTTP_REFERER) has '.aol.com'">
+    <esi:assign name="is_aol_referer" value="1" />
+  </esi:when>
+</esi:choose>
+-->
+<!--esi
+
+<esi:assign name="IS_US" value="$(HTTP_HOST) has 'huffingtonpost.com'" />
+
+<esi:choose>
+        <esi:when test="$(IS_US) && $(GEO{'country_code'}) == 'IN' && $(done)!='1'">
+        <esi:choose>
+                <esi:when test="!$(QUERY_STRING)">
+                        <esi:assign name="done" value="1"/>
+                        $set_redirect('http://' + $(HTTP_HOST) + $(REQUEST_PATH) + '?ir=India&adsSiteOverride=in')
+                </esi:when>
+                <esi:when test="!$(QUERY_STRING{'ir'})">
+                        <esi:assign name="done" value="1"/>
+                        $set_redirect('http://' + $(HTTP_HOST) + $(REQUEST_PATH) + '?' + $(QUERY_STRING) + '&ir=India&adsSiteOverride=in')
+                </esi:when>
+        </esi:choose>
+        </esi:when>
+</esi:choose>
+
+-->
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="de" class="no-js modern ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="de" class="no-js modern"> <!--<![endif]-->
+<head>
+    <title>29 Dinge, die ich mit 29 Jahren gelernt habe&nbsp;|&nbsp;Serena Dyer</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' />
+<meta name="keywords" content="blogs,lifestyle,leben"/>
+<meta name="description" content="Da nun das letzte Jahr meiner 20er anbricht, habe ich beschlossen, aufzuschreiben, was ich nun wei&szlig;, das ich noch nicht wusste, als ich in dieses heikle Jahrzehnt eintrat."/>
+<meta name="category" content="Germany" />
+<meta http-equiv="Content-Language" content="de_DE" />
+<meta name="robots" content="noodp,noydir" />
+<meta property="twitter:card" value="summary_large_image"/>
+<meta property="twitter:site" value="@HuffPostDE"/>
+<meta name="twitter:description" content="Da nun das letzte Jahr meiner 20er anbricht, habe ich beschlossen, aufzuschreiben, was ich nun wei&szlig;, das ich noch nicht wusste, als ich in dieses heikle Jahrzehnt eintrat.">
+<meta property="fb:app_id" content="137920063083844"/>
+<meta property="og:site_name" content="The Huffington Post"/>
+<meta property="og:title" content="29 Dinge, die ich mit 29 Jahren gelernt habe"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:url" content="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"/>
+<meta property="og:image" content="http://i.huffpost.com/gen/1885809/images/o-FRAU-facebook.jpg" />
+<meta property="og:description" content="Da nun das letzte Jahr meiner 20er anbricht, habe ich beschlossen, aufzuschreiben, was ich nun wei&szlig;, das ich noch nicht wusste, als ich in dieses heikle Jahrzehnt eintrat."/>
+<meta property="og:locale" content="de_DE"/>
+<meta name="sailthru.date" content="Mon, 30 Jun 2014 08:37:52 -0400">
+<meta name="sailthru.expire_date" content="Tue, 01 Jul 2014 08:37:52 -0400">
+<meta name="sailthru.image.thumb" content="http://i.huffpost.com/gen/1885809/images/s-FRAU-small.jpg">
+<meta name="sailthru.tags" content="blogs,lifestyle,leben">
+<meta property="article:publisher" content="https://www.facebook.com/HuffPostDE"/>
+<meta property="article:section" content="Germany"/>
+<link rel="image_src" href="http://i.huffpost.com/gen/1885809/images/s-FRAU-large.jpg" />
+<meta name="image" content="http://i.huffpost.com/gen/1885809/images/s-FRAU-small.jpg" />
+<meta name="thumbnail" content="http://i.huffpost.com/gen/1885809/images/o-FRAU-facebook.jpg" />
+    <meta name="og:see_also" content="http://www.huffingtonpost.de/2017/10/10/polizei-koln-tassen-brief_n_18227556.html" />
+<meta name="og:see_also" content="http://www.huffingtonpost.de/nina-palmo/luegen-muttersein-kind_b_18227436.html" />
+<meta name="og:see_also" content="http://www.huffingtonpost.de/2017/10/10/wieso-der-wer-wird-millionar-kandidat-nachste-woche-nicht-weiter-machen-kann_n_18227284.html" />
+    <link rel="shortcut icon" href="/favicon.ico?v=2">
+    <link rel="alternate" hreflang="de" href="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"/>
+    <link rel="alternate" href="android-app://com.huffingtonpost.android/http/www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"/>
+    <link rel="alternate" href="ios-app://306621789/huffpostnews/?editionID=de&entryID=5532467"/>
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.huffpost.com/de/entry/5532467" >
+    <link rel="stylesheet" href="http://s1.huffpost.com/assets/css.php?v=1507134562&f=phoenix%2Fapp.css" type="text/css">
+    <link rel="stylesheet" href="http://s0.huffpost.com/assets/css.php?v=1507134562&f=phoenix%2Fcore.css%2Cphoenix%2Fpageheader.css%2Cphoenix%2Frightrail.css%2Cphoenix%2Fauthor_article.css%2Cphoenix%2Fted.css%2Cphoenix%2Fcolorbox.css%2Cphoenix%2Femail_form.css%2Cphoenix%2Fslideshow%2Fflexslider.css%2Cphoenix%2Fslideshow%2Fstyles.css" type="text/css">
+    <link rel="stylesheet" href="http://s0.huffpost.com/assets/css.php?v=1507134562&f=liveblog.css%2Cbasic.css%2Csailthru_concierge.css%2Crecipe_gadget.css%2Chp_modules%2Fmodule.sponsor-widgets.css%2Chp_modules%2Fmodule.apps_feeds.css%2C_slideshows%2Finline.css%2C_slideshows%2Fmodules%2Finline.css%2C_slideshows%2Fmodules%2Fparticipation.css%2C_slideshows%2Fmodules%2Fparticipation_new.css%2Ccommercial.css%2Cadd%2Finner.css%2Cemail_share.css%2Cbuttons.css" type="text/css">
+    <link rel="stylesheet" href="http://s0.huffpost.com/assets/css.php?v=1507134562&f=" type="text/css">
+    <link rel="stylesheet" href="http://s0.huffpost.com/assets/css.php?v=1507134562&f=phoenix%2Fverticals%2Fgermany.css%2Cphoenix%2Fverticals%2F.css%2Cphoenix%2Fverticals%2Fentertainment.css" type="text/css">
+	    <link rel="canonical" href="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html">
+
+    <!--[if lt IE 9]><link rel="stylesheet" href="http://s1.huffpost.com/assets/js.php?v=1507134562&f=conversations%2Fstylesheets%2Fapp.css" /><![endif]-->
+    <!--[if lte IE 7]><link rel="stylesheet" href="http://s1.huffpost.com/assets/css.php?v=1507134562&f=phoenix%2Fie7.css" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="http://s0.huffpost.com/assets/css.php?v=1507134562&f=phoenix%2Fie8.css" type="text/css" /><![endif]-->
+	
+    <script type="text/javascript" src="http://s1.huffpost.com/assets/js.php?v=1507134562&f=jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://s0.huffpost.com/assets/js.php?v=1507134562&f=jquery%2Fjquery.I18N.js%2Clocale%2Fde_DE%2Fpublic.js%2Csprintf-0.7.js"></script>
+    <script type="text/javascript" src="http://s1.huffpost.com/assets/js.php?v=1507134562&f=huff.js%2Chp_config.js%2Clazyload-min.js%2Chp_util.js%2Chp_track.js%2Cyui_sub.js%2Chp_liveblog.js%2Chptwitter_anywhere.js%2Cphoenix%2Fcustom.modernizr.js%2Cphoenix%2Ffoundation.min.js%2C_tmp%2Fquick_fan.js%2C_tmp%2Fhp_ads.js%2C_tmp%2Fcommon.js%2Chp_browser.js%2Csubmissions.js%2Cphoenix%2Funderscore.js%2Cphoenix%2Fbackbone.js%2Cphoenix%2Fthreeup.js%2Crecipe_gadget.js%2Clivebetteramerica%2Fmodule.jquerydl.js%2Cphoenix%2Ffollow-huffpost.js%2Cphoenix%2Fsocial-sidebar.js%2Cposts.js%2Cphoenix%2Fnumeral.js%2Cphoenix%2Fsocial_widget_views.js%2Cconversations%2Fbootstrap.js%2Cscroll-track.js%2Cphoenix%2Fjquery.colorbox.js%2Cphoenix%2Fthreeup-carousel.js%2Cphoenix%2Flightbox.js%2Cphoenix%2Fjquery.formparams.js%2Cphoenix%2Fsubmit_correction.js%2C_tmp%2Fquick_subscribe_user.js%2Cphoenix%2Fnewsletter.js%2Chptwitter.js%2Cphoenix%2Flogin.js%2C_tmp%2Fclick_tracker.js%2Cphoenix%2Fimage_loader.js%2Cphoenix%2Fcaption.js%2Cconnect_overview.js%2Cimage_embed.js%2Cswfobject.js%2Cphoenix%2Fhulu_to_5min.js%2C_tmp%2Fevent_module.js%2Cphoenix%2Fslideshow%2Fjquery.flexslider.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-html.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-tracking.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-share.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-main.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-participation.js%2Cphoenix%2Fslideshow%2Fhp-slideshow-participation_new.js%2Cphoenix%2Fde_videoflip.js%2Con-hover-pinterest.js"></script>
+    <script type="text/javascript" src="http://s1.huffpost.com/assets/js.php?v=1507134562&f=facebook.js%2Ccookiesmin.js%2Csnproject.js%2C_tmp%2Fquick_login.js%2Chuffconnect.js%2Cprovider.js%2Cpopup_manager.js%2C_util%2Fuser.js%2Cuser.js"></script>
+        <script type="text/javascript">
+        huff.v({"last_deploy_commit_id":"e1a78edbc81e6d44991c74294064e3348dfe2f4f","deploy_commit_id":"1033013050b12681129165a3a15ea3fd0e2bf801","deploy_seq":1507134562,"last_deploy_seq":1501522368,"deploy_date":"Wed, 04 Oct 2017 12:29:22 -0400","last_deploy_date":"Mon, 31 Jul 2017 13:32:48 -0400"});
+    </script>
+
+    <script type="text/javascript">
+// common modules
+huff.use('conf', 'modal', 'image', 'layout', 'cookies', 'user', 'track', 'common', 'promo');
+</script>
+    <!-- modulous header -->
+    <script type="text/javascript" src="http://c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+<script type="text/javascript">
+    try {
+        amznads.getAds('3128');
+    } catch (e) {
+        /*ignore*/
+    }
+</script>
+<!-- AdEngine - TFM Mapping Paramert and AdServer Script Start -->
+<script>
+    // placement mappings
+    var formatPlaceMapping = {
+        "DESKTOP_BANNER_TOP": ["curtain"],
+        "DESKTOP_BANNER_ANY": ["leaderboard_flex","leaderboard_top","leaderboard_below_nav","bottom_728x90","leaderboard_bottom"],
+        "DESKTOP_RECTANGLE_ANY": ["right_rail_flex", "right_rail_edit_promo", "sponsorship", "sponsorship_2", "right_rail_recirc", "right_rail_300x100_upper", "right_rail_lower", "btf_300x100", "lower_promo", "right_column_promo", "top_left_300x150", "left_lower", "right_rail_300x100_lower", "text_sponsorship_2", "commercial_module", "right_rail_300x250_lower"],
+        "DESKTOP_RECTANGLE_SINGLE_ANY": [],
+        "DESKTOP_SKYSCRAPER_TOP": ["right_skyscraper"],
+        "DESKTOP_RECTANGLE_GALLERY": ["slideshow_300x250_req"],
+        "TABLET_BANNER_TOP": [],
+        "TABLET_BANNER_ANY": [],
+        "TABLET_RECTANGLE_ANY": [],
+        "TABLET_RECTANGLE_SINGLE_ANY": [],
+        "SMARTPHONE_BANNER_TOP": ["mobileweb_top"],
+        "SMARTPHONE_BANNER_ANY": ["mobileweb_a_page_top_square", "mobileweb_instream_square", "mobileweb_transporter_bottom", "before_related_media", "mobileweb_article_bottom_refresh", "mobileweb_taboola", "mobileweb_bottom_floating", "mobileweb_instream_banner", "article_foot", "mobileweb_transporter_top"]
+    };
+    var placeFormatMapping = {};
+    (function(){
+        for(var format in formatPlaceMapping){
+            var placements = formatPlaceMapping[format] || [];
+            if(placements.length){
+                for(var i in placements){
+                    if ("string" === typeof placements[i]){
+                        placeFormatMapping[placements[i]] = format;
+                    }
+                }
+            }
+        }
+    })();
+    
+    var hp_adengine = (function() {
+        var page = {
+            is_homepage:  false ,
+            is_vertical:  false ,
+            is_bnp:  false ,
+            is_bpage:  true 
+        };
+        
+        if (page.is_bpage) {
+            page.is_blog_bpage =  true ;
+            page.is_news_bpage = !page.is_blog_bpage;
+        }
+        
+        var section_overridden_names = {
+          "huffpost-satire": "satire",
+          "lgbt": "gay",
+          "tageshoroskop": "horoskope",
+          "technologie": "tech"
+        };
+        
+        return {
+            get_adsc_ressort: function() {
+                var val = "nil";
+                if (page.is_homepage) {
+                    val = "homepage";
+                } else if (page.is_vertical) {
+                    val = "germany";
+                } else if (page.is_bnp) {
+                    val = "";
+                } else if (page.is_bpage) {
+                    val = "lifestyle";
+                }
+                return section_overridden_names.hasOwnProperty(val) ? section_overridden_names[val] : val;
+            },
+            get_adsc_rubrik: function() {
+                var val = "nil";
+                if (page.is_homepage) {
+                    val = "homepage";
+                } else if (page.is_bnp || page.is_vertical) {
+                    val = "startseite";
+                } else if (page.is_bpage) {
+                    val = page.is_blog_bpage ? "blog" : "artikel";
+                }
+                return val;
+            },
+            get_adsc_layout: function() {
+                var val = "nil";
+                if (page.is_homepage) {
+                    val = "home";
+                } else if (page.is_bnp || page.is_vertical) {
+                    val = "topic";
+                } else if (page.is_bpage) {
+                    val = page.is_blog_bpage ? "blog" : "article";
+                }
+                return val;
+            },
+            get_adsc_meta_key: function() {
+                var val = "nil";
+                if (page.is_homepage) {
+                    val = "homepage";
+                } else if (page.is_vertical) {
+                    val = "germany";
+                } else if (page.is_bnp) {
+                    val = "";
+                } else if (page.is_bpage) {
+                    val = "blogs,leben,lifestyle";
+                }
+                return val;
+            }
+        };
+    })();
+</script>
+<script>
+    var adsc_ressort = hp_adengine.get_adsc_ressort();
+    var adsc_rubrik = hp_adengine.get_adsc_rubrik();
+    var adsc_layout = hp_adengine.get_adsc_layout();
+    var adsc_metakey = hp_adengine.get_adsc_meta_key();
+    
+    var adsc_mode = "infinite";
+    var adsc_mobile = "false";
+    var adsc_device = "desktop";
+    var adsc_vtype = "";
+
+    var adsc_adunit2 = adsc_ressort;
+    var adsc_adunit3 = adsc_rubrik;
+    var adsc_keyword = adsc_metakey;
+
+    
+
+    
+</script>
+<script src="https://a.bf-ad.net/pubjs/huffpo/container.js"></script>
+<script src="https://a.bf-ad.net/pubjs/huffpo/adengine.js"></script>
+<script>
+    var placeTFMAd = function(placement_slug, div_id, format_override){
+        try {
+            
+            var format = format_override || placeFormatMapping[placement_slug] || "";
+            TFM.Tag.getAdTag(format, div_id);
+        } catch (e) {
+            if (window.console) window.console.log(e.message);
+        }
+    };
+</script>
+
+<script>
+if (typeof HPAds !== 'undefined') {
+  HPAds.ad_reload_old = HPAds.ad_reload;
+  HPAds.ad_reload = function(placement, id) {
+    window.jQuery && jQuery(document).trigger('reloadAd', document.getElementById(id));
+  }
+}
+</script>
+
+
+<script>
+var _HPJS = (function (_mod) {
+  "use strict";
+
+  _mod.loadJS = function (src, options) {
+    var options = options || {};
+    var ref = window.document.getElementsByTagName("script")[0];
+    var script = window.document.createElement("script");
+    script.src = src;
+    script.async = options.async;
+    script.defer = options.defer;
+    ref.parentNode.insertBefore(script, ref);
+    return script;
+  }
+
+  _mod.loadJSLater = function (url, timeout) {
+    var ran = false;
+    var loader = function () {
+      if (ran) {
+        return;
+      }
+      ran = true;
+      _mod.loadJS(url, {async:true});
+    }
+    window.addEventListener ?
+      window.addEventListener("load",loader,false) :
+      window.attachEvent && window.attachEvent("onload",loader);
+    // in case the load event never fires
+    setTimeout(loader, timeout || 15000);
+  }
+
+  _mod.waitForGlobal = function(identifier, cb, poll) {
+    var test = typeof identifier === "function" ? identifier : function() { return !!window[identifier]; };
+    var interval;
+    if(test()) {
+      cb();
+    } else {
+      interval = setInterval(function(){
+        if(test()) {
+          cb();
+          clearInterval(interval);
+        }
+      }, poll || 50);
+    }
+  };
+
+  return _mod;
+
+}(_HPJS || {}));
+</script>
+<script>
+var dataLayer = [{
+  pageArea: 'huffington post',
+  pageType: 'desktop',
+  pageCountry: 'de',
+  pageLanguage: 'de',
+  pageAuthor: 'serena-dyer',
+  pageLevel1: 'lifestyle' || 'news',
+  pageId: '5532467'
+}];
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], 
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T2B9KX');
+</script>
+<!-- End Google Tag Manager -->
+<!-- debugadcode -->
+<style>
+.debugadcode-box { z-index:10000; position:relative; }
+.debugadcode { position:absolute; padding:5px; background-color:rgba(232, 212, 244, 0.85); font-size:0.8rem; color:black; }
+</style>
+<script>
+window.debugadcode = function(title, properties, div) {
+  if (window.location.search.indexOf('debug_ad_code') < 0) return;
+  var head = '<div><strong>'+title+'</strong></div>'; var body = '';
+  for (key in properties) { body += '<div><em>'+key+'</em>: '+properties[key]+'</div>'; }
+
+  var s = document.getElementsByTagName('script');
+  var sLast = div || s[s.length - 1];
+  var d = document.createElement('div');
+  d.className = 'debugadcode-box';
+  d.innerHTML = '<div class="debugadcode">'+head+body+'</div>';
+  sLast.parentNode.insertBefore(d, sLast);
+}
+</script>
+<!-- /debugadcode -->
+<script>var _sf_startpt=(new Date()).getTime()</script>
+
+<script>
+document.trackerImg = function(url, holder) {
+  var matches = url.match(/http[^"']+/);
+  if (!matches) return;
+  
+  url = matches[0];
+  if (!holder) holder = document.body;
+  window.ord = window.ord || 1e16*Math.random();
+  var img = new Image();
+  img.src = url.replace('%n', ord);
+  img.width = img.height = 1;
+  img.style.display = 'none';
+  try { holder.appendChild(img); } catch(e) { return; }
+}
+</script>    <!-- END modulous header -->
+            <!-- ads_adtech_header -->
+    
+    <!-- ads_init_functions -->
+    
+    <!-- ads_commercial_video -->
+    
+    <!-- ads_asset_insert -->
+    
+            
+	<script type="text/javascript">
+        var ads_ext_ref_sig = '';
+    </script>
+<!--esi
+    <esi:choose>
+        <esi:when test="$(HTTP_REFERER) has '|dl' || $(QUERY_STRING) has '|dl' || $(HTTP_REFERER) has 'fundrace.' || $(QUERY_STRING) has 'fundrace.'">
+            <esi:choose>
+                            <esi:when test="($(HTTP_REFERER) has '|dl') || ($(QUERY_STRING) has '|dl')">
+                	<esi:text>
+                    <script type="text/javascript">
+                        var ads_ext_ref_sig = 'aol_welcome_screen';
+                    </script>
+                    </esi:text>
+                </esi:when>
+                            <esi:when test="($(HTTP_REFERER) has 'fundrace.') || ($(QUERY_STRING) has 'fundrace.')">
+                	<esi:text>
+                    <script type="text/javascript">
+                        var ads_ext_ref_sig = 'fundrace';
+                    </script>
+                    </esi:text>
+                </esi:when>
+                        </esi:choose>
+        </esi:when>
+    </esi:choose>   
+-->
+<!--esi
+	<esi:choose>
+		<esi:when test="($exists($(HTTP_COOKIE{'ad_ops_bookmarklet'})) && !($(HTTP_HOST) has 'editorial'))">
+            <script type="text/javascript" src="/ads/bookmarklet/bookmarklet.js"></script>
+		</esi:when>
+	</esi:choose>
+-->
+    <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js" async defer></script>
+	
+	<!-- Parsely tracking params start -->
+	<script type="application/ld+json">
+				{
+					"@context": "http://schema.org",
+					"@type": "NewsArticle",
+                    "mainEntityOfPage":{
+                        "@type":"URL",
+                        "@id":"http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"
+                    },
+                    "headline": "29 Dinge, die ich mit 29 Jahren gelernt habe",
+                    "author": {
+                "@type":"Person",
+                "name":"Serena Dyer"
+                },
+					"image":
+                    {
+                        "@type":"ImageObject",
+                        "url":"http://i.huffpost.com/gen/1885809/images/o-FRAU-facebook.jpg",
+                        "width":2000,"height":1000
+                    },
+					
+                    "dateCreated": "2014-06-30T02:37:51Z",
+                    "datePublished": "2014-06-30T02:37:51Z",
+				"dateModified": "2014-08-30T05:12:02Z",
+                    "publisher":{
+                        "@type":"Organization",
+                        "name":"The Huffington Post",
+                        "logo":{
+                            "@type":"ImageObject","url":"http://s.huffpost.com/images/v/logos/v4/homepage.gif",
+                            "width":497,
+                            "height":60
+                        }
+                    },
+                    "description": "Da nun das letzte Jahr meiner 20er anbricht, habe ich beschlossen, aufzuschreiben, was ich nun wei&Atilde;�, das ich noch nicht wusste, als ich in dieses heikle Jahrzehnt eintrat.",
+                    "articleSection": "leben",
+                    "keywords": ["blogs","lifestyle","type:blog"],
+                    "thumbnailUrl": "http://i.huffpost.com/gen/1885809/images/s-FRAU-small.jpg",
+                    "url": "http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"
+				}
+			</script>	<!-- Parsely tracking params end -->
+
+	<!-- Google Json Markup start -->
+		<!-- Google Json Markup end -->
+	
+	
+	
+</head>
+<body>
+    <!-- Newsletter ads popup -->
+        <!-- END Newsletter ads popup -->
+    <!-- Pinterest follow popup -->
+        <!-- END Pinterest follow popup -->
+    <!--modulous_debug_header -->
+        <!-- END modulous_debug_header -->
+    <div id="view_mobile_banner" style="display: none; min-width: 1000px; width: 100%; height: 105px; background: url(/images/mobile/view-mobile-bkg.png);background-size: cover; text-align: center;">
+	<a href="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html?m=true" style="color: #FFF; font-size: 40px; display: inline-block; padding-top: 18px; text-transform: uppercase; width: 100%; height: 105px;">
+		<img src="/images/mobile/view-mobile-icon.png" style="height: 68px; margin-bottom: -16px;"/>
+		Zur mobilen Ansicht wechseln	</a>
+</div>
+<script> if(window.navigator.userAgent.match(/SCH-I535|SPH-L710|SGH-N064|SGH-N035|SGH-T999|SGH-I747|GT-I9305|GT-I9300|android.+mobile|iphone|ipod|webos|blackberry.+webkit.+mobile|htc|opera\ mini|operamini|iemobile|opera\ mobi|lge|lg|palm|samsung|nokia|windows\ phone|windows\ ce|bb10|blackberry|Mobile.+Firefox/i)) {
+	document.getElementById("view_mobile_banner").style.display = 'block';
+}
+</script>
+    <!-- RUM header -->
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4HV1FADAMCXFhRDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>    <!-- GA, Data Layer and Omniture -->
+    <script type="text/javascript">
+var _gaq = _gaq || [];
+HPTrack.async = true;
+HPTrack.getTracker('UA-71081-1');
+HPTrack.setCustomVar("blog", "default");
+HPTrack.setCustomVar("vertical", "Germany");
+           
+HPTrack.trackPageview();
+    
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+
+bN_cfg = {
+  h: location.hostname,
+  p: {"dL_ch":"de.hpmg","dL_flid":"_","dL_dpt":"default","dL_cmsID":"hpo:5532467","dL_author":"Serena Dyer","dL_crtdt":"2014-06-30 08:37:52","dL_pubts":1404110271000,"dL_blogID":3,"dL_tags":"blogs,lifestyle,leben","cobrand":"HuffPost","dL_vid":"video_novideo"}
+};
+
+
+function runOmni() {
+ 
+ if(typeof HuffPoUtil != "undefined"){
+  if (HuffPoUtil.getCookie('huffpost_user_id') != '')
+    s_265.eVar17 = 'huffpost_' + HuffPoUtil.getCookie('huffpost_user_id');
+  }
+
+  s_265.prop54 = 'huffpost';
+  s_265.pfxID = 'hpo';
+  s_265.channel = 'de.hpmg';
+  s_265.linkInternalFilters = 'javascript:,huffingtonpost.de';
+  s_265.prop16 = 'blog';
+  s_265.prop1 = 'default';
+  s_265.prop62 = 'video_novideo';
+  s_265.prop65 = 'blogger_content';
+  s_265.pageName = '29 Dinge, die ich mit 29 Jahren gelernt habe';
+  s_265.prop9 = 'hpo:5532467';
+  s_265.prop22 = 'serena-dyer';
+  s_265.prop23 = '06-30-2014';
+  s_265.prop12 = "" + document.URL.split('?')[0];
+  s_265.prop19 = '|blogs|lifestyle|leben|';
+  if (window.location.href.toLowerCase().match(/[\?\&][ni]cid\=/)) s_265.events = 'event1';
+  s_265.t();
+}
+
+s_265_account ="aoldehuffpo,aoldegermanytotal";
+
+(function(d){
+var s = d.createElement('script');
+s.src = "http://o.aolcdn.com/os/aol/beacon.min.js";
+d.getElementsByTagName('head')[0].appendChild(s);
+s = d.createElement('script');
+s.src = "http://o.aolcdn.com/os/aol/omniture-intl.min.js";
+d.getElementsByTagName('head')[0].appendChild(s);
+})(document);
+
+
+</script>
+
+<script type="text/javascript" src="https://script.ioam.de/iam.js"></script>
+<script type="text/javascript">
+<!-- SZM VERSION="2.0" -->
+    var ivwcpCodes = {"default":1,"politik":1,"happiness":6,"allyouneedishealth":15,"horoskope":3,"horoskop":3,"good":21,"blogs":21,"sport":2,"entertainment":3,"lifestyle":21,"technologie":10,"tech":10,"wirtschaft":14,"other":20,"search":34,"kino":3,"serien":3,"gadgets":10,"reisen":8,"gesundheit":15,"familie":5,"auto-bailout":7,"ernahrung":16,"mode":4,"spiele":12,"karriere":14,"apple":9,"@video_primary":21};
+    var ivwcp = ivwcpCodes["default"];
+
+    if (typeof(adsc_subchannel) != 'undefined' && ivwcpCodes[adsc_subchannel]) {
+        ivwcp = ivwcpCodes[adsc_subchannel];
+    } else if (typeof(adsc_ressort) != 'undefined' && ivwcpCodes[adsc_ressort]) {
+        ivwcp = ivwcpCodes[adsc_ressort];
+    } else if (bN_cfg.p.dL_tags) {
+        for (var cat in ivwcpCodes) {
+         if (bN_cfg.p.dL_tags.indexOf(cat) > -1) {
+                ivwcp = ivwcpCodes[cat];
+                break;
+            }
+        }
+    }
+
+    if ( typeof(adsc_ressort) != 'undefined' && adsc_ressort == "news" && ivwcp == ivwcpCodes["default"] ) {
+        if ( String(typeof document) != "undefined" && String(typeof document.location) != "undefined" ) {
+            for (var cat in ivwcpCodes) {
+                if ( String(document.location).split("/").filter(Boolean)[String(document.location).split("/").filter(Boolean).length-1] == cat ) {
+                    ivwcp = ivwcpCodes[cat];
+                    break;
+                }
+            }
+        }
+    }
+    
+    if (location.pathname.indexOf("/search") == 0) {
+        ivwcp = ivwcpCodes["search"];
+    } else if (typeof(s_265) != 'undefined' && (s_265.channel == "de.hpmguncat" || s_265.channel == "de.hpmgother")) {
+        ivwcp = ivwcpCodes["other"];
+    }
+    
+    if ( location.pathname.indexOf("/news/luxusreisen") > - 1 && ivwcp == ivwcpCodes["default"] ) {
+        ivwcp = 8;
+    }
+
+
+    var iam_data = {
+        "st":"huffpost",
+        "cp":"hpo_news_www_1-1-1-2-1-2-2-" + ivwcp,    
+        "sv":"in"
+    };
+
+    iam_data["oc"] = iam_data["cp"];
+    iam_data["mg"] = "yes";
+
+    iom.c(iam_data,2);
+<!--/SZM -->
+</script>
+
+
+    <!-- comScore Tag -->
+    <script type="text/javascript">
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var comscore_data = {
+        c1:2,
+        c2:6723616,
+        c3:"",
+        c4:"",
+        c5:"germany",
+        c6:"",
+        c15:"",
+        options: {
+            url_append: "comscorekw=germany"
+        }
+    }
+    COMSCORE.beacon(comscore_data);
+</script>
+<noscript>
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=6723616&c3=&c4=&c5=germany&c6=&c15=&cj=1" width="1" height="1" alt="" />
+</noscript>
+    <!-- end Rum -->
+
+    <!-- ads_top_1x1 -->
+    <div id="modulous_top_1x1" class="ad_spot">
+    <script type="application/javascript" src="http://eu-services.babator.com/tags?apiKey=2f8800e0-809a-11e6-82ab-39bf507fd706" async></script><!-- AdEngine TFM skyscraper Custom Start -->
+<div style="min-height: 1px;" id="adsd_skyscraper_div"><script type="text/javascript">TFM.Tag.getAdTag("DESKTOP_SKYSCRAPER_TOP","adsd_skyscraper_div");</script></div>
+<!-- AdEngine TFM skyscraper Custom End -->
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function(){
+            try {
+                var wrapper = $("#wrapper");
+                var rightAd = $("#adsd_skyscraper_div");
+                var adSpot = $("#ad_bottom_1x1");
+                var isBottomSpotWithinWrapper = jQuery.contains(wrapper.get(0), adSpot.get(0));
+
+                function __getLeftOffsetVal() {
+                    if ( isBottomSpotWithinWrapper ) {
+                        return wrapper.width() + 1;
+                    } else {
+                        return wrapper.offset().left + wrapper.width() + 1;
+                    }
+                }
+
+                rightAd.css("left", __getLeftOffsetVal());
+                //rightAd.show();
+                $(window).bind("resize", function(){
+                    rightAd.css("left", __getLeftOffsetVal());
+                });
+                
+            } catch (e) {
+                if(window.console) 
+                  window.console.log(e.message);
+            }
+        });
+    })(jQuery);
+</script><script>
+var unruly = window.unruly || {};
+unruly.native = unruly.native || {};
+unruly.native.siteId = 596571;
+</script>
+<script src="//video.unrulymedia.com/native/native-loader.js"></script><style type="text/css">.shares .redditshare{display: none !important;}</style><style type="text/css">.shares .email{display: none !important;}</style></div>
+        
+    <!-- Facebook stuff -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        HPFB.app_id = "137920063083844";
+        HPFB.api_key = "137920063083844";
+        HPFB.app_namespace = "FACEBOOK_APP_NAMESPACE";
+        HPFB.init();
+        // modal form that encourages user to like HP FB page
+    	huff.use('yahoofacebook', function(y) { y.likesFromYahoo(); });
+    </script>
+
+    <!--User auth stuff -->
+    <script type="text/javascript">
+        HPConfig.locale = "de_DE";
+        HPConfig.enable_fb_widgets = 1;
+        HPVertical = "";
+    </script>
+
+                 <script type="text/javascript">
+        var zone_info = "germany.news";
+        HPConfig.current_vertical_name = "germany";
+        HPConfig.current_vertical_id = 130;
+        HPConfig.current_web_address = "www.huffingtonpost.de";
+        HPConfig.current_uri = "/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html";
+        HPConfig.entry_bitly_url = "http://huff.to/1x3p4Wr";
+        HPConfig.entry_seo_title = "29 Dinge, die ich mit 29 Jahren gelernt habe&amp;nbsp;|&amp;nbsp;Serena Dyer";
+        HPConfig.hp_static_domain = "s.huffpost.com";
+        HPConfig.inst_type = "prod";
+        HPConfig.timestamp_for_clearing_js = "0";
+        HPConfig.wide_format = 0;
+        HPConfig.entry_id = 5532467;
+        HPConfig.blog_id = 3;
+        HPConfig.display_domain = "";
+        HPConfig.page_type = "bpage";
+        HPConfig.twitter_signature = "@HuffPostDE";
+        HPConfig.current_vertical_color = "#058b7b";
+        HPConfig.current_vertical_color_light = "#005F4C";
+        HPConfig.entry_tags = new Array('');
+        HPConfig.huffsite = "www.huffingtonpost.com";
+        HPConfig.fb_lang = "de_DE";
+        HPConfig.googleplus_lang = "en-US";
+        HPConfig.image = "http:\/\/i.huffpost.com\/gen\/1885809\/images\/s-FRAU-large.jpg";
+        HPConfig.fb_page_id = "366193510165011";
+        HPConfig.fb_vertical_name = "Germany";
+        HPConfig.fb_vertical_handle = "HuffPostDE";
+        
+        HPConfig.site='germany';
+        HPConfig.recaptcha_key = "6Ld6ZcISAAAAAIhkL02obhQNn6tdW47W-t-HcPAO";
+        HPConfig.bit_ly_key = {"_Note":"bit.ly public key, will generate huff.to links only for whitelisted domains","user_name":"huffpostapi","user_key":"R_d7766e99c939e9f2b0c074c155e98b83"};
+
+        
+
+
+        
+        HPConfig.terms_link = "http://www.huffingtonpost.de/p/nutzungsbedingungen.html";
+        HPConfig.privacy_link = "http://www.huffingtonpost.de/p/datenschutz.html";
+                HPConfig.slideshow_video_interstitial = "";
+            </script>
+
+    <!-- ads_pushdown -->
+    
+    <!-- / working -->
+        <script>
+        jQuery(window).bind( 'load', function() {
+
+            //Twitter
+            window.twttr = (function (d,s,id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+                js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            //Google+
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+            //StumbleUpon
+            (function() {
+                var li = document.createElement('script'); li.type = 'text/javascript'; li.async = true;
+                li.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//platform.stumbleupon.com/1/widgets.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(li, s);
+            })();
+            //LinkedIn
+            jQuery.getScript( '//platform.linkedin.com/in.js', function() { lang: 'en_us' } );
+            //Pintrest
+            /* jQuery.getScript( '//assets.pinterest.com/js/pinit.js', function() {}); */
+        });
+    </script>
+ 
+
+     <!-- Tuenti
+    <script type="text/javascript" src="http://widgets.tuenti.com/widgets.js"></script>
+    -->
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- ads_pushdown -->
+        <!-- ads_quickread -->
+        <!-- ads_quickread_most_popular -->
+    
+    <!-- page_wrapper -->
+    <!-- classes for page wrapper: wrapper bpage [[entry/blog], wide] -->
+    <div id="wrapper" class="wrapper bpage entry germany blog">
+        <!-- ads_sponsored_content_logo -->
+                <!-- Phoenix buglist -->
+                <!-- page_header -->
+		<section class="header">
+    <!-- AOL navbar for UK -->
+        <!-- visual_header_area -->
+    <header class="masthead group">
+        <!-- ads_leaderboard_flex -->
+                <!-- ads_leaderboard_top -->
+                <!-- page branding and current date -->
+		        <div class="tophead_wrapper">
+            <div class="branding" style="padding-bottom:20px !important;">
+                                    <a href="http://www.huffingtonpost.de/germany">
+                                                                                <img class="masthead-logo width_300px" src="http://s.huffpost.com/images/v/logos/v5/logos-hero-blk-small.png" alt="Huffpost Germany" />
+						                                                            </a>
+            </div>
+
+            <!-- edition dropdown -->
+            
+<!-- edition dropdown -->
+<div class="edition geo_dropdown">
+	<span class="current">
+		Edition: <strong class="this-region">de</strong>
+		<span class="arrow-down"></span>
+		<button class="show-hide" data-target=".editions">Show/Hide</button>
+	</span>
+	<menu class="editions inner off">
+		<ul>
+                     <li>
+			      <a href="http://www.huffingtonpost.com/?country=AR">
+				       <span>عربي (Arabic) </span> <strong>AR</strong>
+			            </a>
+			</li>
+                                          <li>
+				<a href="http://www.huffingtonpost.com/?country=AU">
+					<span>Australia</span> <strong>AU</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=BR">
+					<span>Brasil</span> <strong>BR</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=CA">
+					<span>Canada</span> <strong>CA</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=DE">
+					<span>Deutschland</span> <strong>DE</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=ES">
+					<span>Espa&ntilde;a</span> <strong>ES</strong>
+				</a>        
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=FR">
+					<span>France</span> <strong>FR</strong> 
+				</a>        
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=GR">
+					<span>Ελλάδα (Greece)</span> <strong>GR</strong> 
+				</a>        
+			</li>
+                     <li>
+				<a href="http://www.huffingtonpost.com/?country=IN">
+					<span>India</span> <strong>IN</strong> 
+				</a>        
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=IT">
+					<span>Italia</span> <strong>IT</strong>
+				</a>        
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=JP">
+					<span>&#26085;&#26412; (Japan)</span> <strong>JP</strong>
+				</a>		
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=KR">
+					<span>&#54620;&#44397; (Korea)</span> <strong>KR</strong>
+				</a>		
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=MG">
+					<span>Maghreb</span> <strong>MG</strong>
+				</a>		
+			</li>
+            <li>
+               <a href="http://www.huffingtonpost.com.mx/">
+                	<span>M&eacute;xico</span> <strong>MX</strong>
+               </a>
+            </li>                                               
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=ZA">
+					<span>South Africa</span> <strong>ZA</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=UK">
+					<span>United Kingdom</span> <strong>UK</strong>
+				</a>
+			</li>
+			<li>
+				<a href="http://www.huffingtonpost.com/?country=US">
+					<span>United States</span> <strong>US</strong>
+				</a>
+			</li>
+		</ul>
+	</menu>	
+</div>
+
+	
+
+            <!-- wrapper of line of social, newsletter  -->
+            <div id="social-subscribe-search" class="social-subscribe-search group">
+                <ul class="group">
+                    <li class="facebook">
+                        <div class="content like">
+                            <!-- facebook button code -->
+                                <div class="fb-like" data-href="http://www.facebook.com/HuffPostDE/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="trebuchet ms" data-action="like" ref="" style="width: 40px" ></div>                        </div>
+                    </li>
+                    <li class="twitter">
+                        <div class="content tweet">
+                            <!-- twitter button code -->
+                                
+
+<a href="https://twitter.com/HuffPostDE" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="de" data-width="220px">Follow</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                        </div>
+                    </li>
+                    <li class="newsletters" data-fx="hover">
+                        <div class="content">
+                            <strong>Newsletter</strong>
+                            <div class="form">
+                                <!-- sign up for vertical newsletter -->
+                                 <div class="newsletters"  >
+                                  <form action="#">
+                                      <fieldset>
+					                                                 <legend>Get GermanyNewsletter</legend>
+                                          <label for="newsletter-email">E-Mail-Adresse</label>
+                                          <input class="input-email" placeholder="Newsletter abonnieren" id="newsletter-email" type="text" />
+                                          <input type="checkbox" value="1" name="email_subscribe_check" class="email_subscribe_check" style="display:none;" />
+                                          <label for="newsletter-submit">Newsletter abonnieren</label>
+						                                              <input data-vertical="germany" class="submit" id="newsletter-submit" type="submit" value="Los"  />
+						                                      </fieldset>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                    </li>
+		        </ul>
+			</div>
+			            <div class="clear"></div>
+        </div><!-- .tophead_wrapper ENDS -->
+    </header>
+    <!-- line of links that sit on top of the visual header and user account controls -->
+    <div class="topnav">
+        <!-- line of links that sit on top of the visual header   -->
+        <div class="links-products" >
+    <!-- big news links that are vertical specific -->
+    <div class="big-news-links">
+        <ul>
+          <li class="commercial_big_news_links">
+            <!-- ads_big_news_link -->
+            <div id="modulous_big_news_link" class="ad_spot">
+    <script type="text/javascript">
+ads_top_bar_sponsor_links = ["<a href=\"http://pubads.g.doubleclick.net/gampad/clk?id=4447553974&amp;iu=/3673/tfm_clicktrack\" class=\"margin_right_10\" onclick=\"HPTrack.trackPageview(\\'/t/a/topnav_bignews/v2\\');\">Sicher fahren</a>\r\n","<a href=\"http://pubads.g.doubleclick.net/gampad/clk?id=4443022009&amp;iu=/3673/tfm_clicktrack\" class=\"margin_right_10\" onclick=\"HPTrack.trackPageview(\\'/t/a/topnav_bignews/v2\\');\">Für ein gesundes Ich</a>\r\n","<a href=\"http://pubads.g.doubleclick.net/gampad/clk?id=4437590766&amp;iu=/3673/tfm_clicktrack\" class=\"margin_right_10\" onclick=\"HPTrack.trackPageview(\\'/t/a/topnav_bignews/v2\\');\">Gelebte Solidarität</a>\r\n"];
+ads_top_bar_sponsor_links.sort( function() { return 0.5 - Math.random() } );
+for(var i = 0; i < 2 && i < ads_top_bar_sponsor_links.length; i++) {
+    document.write(ads_top_bar_sponsor_links[i].replace('<//script>', '</scr'+'ipt>'));
+}
+</script></div>
+          </li>
+        </ul>
+    </div>
+    <!-- links to HP products that are the same across all verticals -->
+    <div class="products" >
+        <ul>
+          <li><a href="http://itunes.apple.com/de/app/the-huffington-post/id306621789?mt=8"  >iOS App</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.huffingtonpost.android&hl=de"  >Android App</a></li>
+          <li><a href="/big-news/#germany"  >Mehr</a></li>
+        </ul>
+    </div>
+</div>
+        <!-- user account controls -->
+        					<!-- user account controls -->
+					<div id="wendybird_user" class="user">
+					    <div class="not-logged-in">
+                            <ul class="group">
+                      <li><span class="hidden"><a href="javascript:void(0);" onclick="return false;" class="hp_desktop_alerts">Desktop Alerts</button></span></li>
+					            
+                            </ul>
+					    </div>
+					    <div class="logged-in off">
+					        				            <div id="wendybird_user_data" class="account vcard">
+				                <div class="top group">
+				                	<figure>
+									    <img src="" alt="" width="20" height="20" />
+									</figure>
+								    <span class="username">$USERNAME</span>
+				                </div>
+				                <menu class="controls">
+                                    <ul>
+                                        <li>
+                                        <span class="hidden"><a href="javascript:void(0);" onclick="return false;" class="hp_desktop_alerts">Desktop Notifications</button></span>
+                                        </li>
+                                        <li>
+                                            <a href="/social/" class="profile">Profil</a>
+                                        </li>
+                                        <li>
+                                            <a href="/users/preferences/">Einstellungen</a></li>
+                                        <li>
+                                            <a href="/users/logout/?referer=%2F" onclick="QuickLogin.SocialLogout('/users/logout/?referer=%2F'); return false;">
+                                                Abmelden                                            </a>
+                                         </li>
+                                    </ul>
+                                </menu>
+				            </div>
+					    </div>
+					</div>
+                    <script type="text/javascript">
+                        HPUtil.initUserNavStatus(false);
+                        //SocialNotifications.setEvents();
+                        //huff.use('desktop_stream');
+                    </script>
+
+    </div>
+    <!-- large banner ad -->
+    </section>
+<script>
+(function($){ // no Conflict
+    $(function() { // dom ready
+    var socialSubSearch = $('#social-subscribe-search'),
+        newsletter = socialSubSearch.find('.newsletters'),
+        rollout = socialSubSearch.find('[data-fx="hover"]'),
+        liContent = socialSubSearch.find('.content');
+        var searchcheck="HuffPost-Suche";
+        var checkInputContent = function(evt){
+        
+    };
+
+    newsletter.find('.content').hover(
+      function(){
+        var inputVal = "";
+        if (inputVal != searchcheck && inputVal != "") {
+
+        }
+      },
+      function(){
+        var inputVal = "";
+        if (inputVal != searchcheck && inputVal != "") {
+
+        }
+      }
+    );
+
+    // rollover effects
+    liContent
+      .on('mouseenter', function() {
+        var that = $(this),
+            thatParent = that.parent('li'),
+            inputField = that.find('input[type="text"]');
+
+        if(thatParent.data('fx') === 'hover') {
+          thatParent.addClass('hover');
+          inputField.focus();
+        }
+      })
+      .on('mouseleave', function() {
+            var that = $(this),
+                thatParent = that.parent('li'),
+                inputField = that.find('input[type="text"]');
+
+            thatParent.removeClass('hover');
+            inputField.blur();
+          });
+        // end liContent
+    });
+})(jQuery);
+</script>
+        <!-- END page_header -->
+        <!-- page_navigation -->
+        <nav class="main group">
+    <!-- top nav bar -->
+    <section class="verticals germany group"  data-beacon='{"p":{"mnid":"topnav_first_row","mlid":"topnav"}}'  >
+        <ul class="verticals-ul">
+            <li class="front-page toplevel"  data-beacon='{"p":{"lnid":"homepage"}}'  >
+	                             <a class="toplevel-a" href="http://www.huffingtonpost.de" title="Home" tabindex="1" class="link">STARTSEITE</a>
+		  	
+            </li>
+                                                <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/politik/">Politik</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/wirtschaft/">Wirtschaft</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/good/">Good</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/entertainment/">Entertainment</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/lifestyle/">Lifestyle</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/technologie/">Tech</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/blogs/">Blogs</a>
+                            </li>
+                        <li class=" toplevel"  data-beacon='{"p":{"lnid":false}}' >
+                            <a class="toplevel-a" tabindex="" href="http://www.huffingtonpost.de/news/@video_primary">Video</a>
+                            </li>
+            
+            <!-- START UK BLOGS DROP DOWN -->
+            										
+            <!-- END UK BLOGS DROP DOWN -->
+            
+            
+                    </ul>
+    </section>
+        <!-- bottom nav bar -->
+    <section class="stories group"  data-beacon='{"p":{"mnid":"topnav_subnav","mlid":"topnav"}}'  >
+        <ul class="group">
+                                                 
+            <li>
+                <a href="http://www.huffingtonpost.de/news/international/">International</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/serien/">Serien</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/reisen/">Reisen</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/familie">Familie</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/fluechtlinge">Flüchtlinge</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/de-impact/">Impact</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/lgbt/">Gay</a>
+            </li>
+             
+            <li>
+                <a href="http://pubads.g.doubleclick.net/gampad/clk?id=300931414&iu=/3673/tfm_clicktrack">Electrify The World</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/huffpost-satire">Satire</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/young-urban-muslims/">Young Urban Muslims</a>
+            </li>
+             
+            <li>
+                <a href="http://www.huffingtonpost.de/news/praxistipp">Praxistipp</a>
+            </li>
+                            	
+        </ul>
+    </section>
+    </nav>
+<!-- ads_leaderboard_below_nav -->
+<!-- ads_curtain -->
+<div id="curtain_wrapper">
+    <div id="curtainunit"></div>
+</div>
+<div id="modulous_curtain" class="ad_spot">
+    <div style="text-align: center"><!-- AdEngine TFM superbanner1 Start -->
+<div id="adsd_superbanner1_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'curtain', position: 'superbanner1'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_superbanner1_div";
+            
+                placeTFMAd("curtain", current_div_id, "");
+            
+        } else {
+            
+                document.write(ads_gettag("superbanner1") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM superbanner1 End --></div></div>
+<!-- ads_status_bar -->
+
+<!-- ads_edit_banner -->
+
+        <!-- END page_navigation -->
+        <!-- page_content -->
+        <section class="content">
+            <!-- breaking_news module -->
+<!-- 3up carousel module -->
+<!-- ads_threeup_edit_promo -->
+<section id="carousel" class="three-up"  data-beacon='{"p":{"mnid":"threeup_top_wrapper","mlid":"threeup"}}' >
+    <div class="group three-up-list">
+        <ul class="three-up-holder">
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18227556","mpid":0}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/10/polizei-koln-tassen-brief_n_18227556.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5545024/images/r-KLN-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Kölner Polizei fahndet nach drei Räubern - und erlebt mitten in der Nacht eine Überraschung" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/10/polizei-koln-tassen-brief_n_18227556.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Kölner Polizei fahndet nach drei Räubern - und erlebt mitten in der Nacht eine Überraschung</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18227436","mpid":1}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/nina-palmo/luegen-muttersein-kind_b_18227436.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5544944/images/r-ELTERN-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for 6 Mythen übers Elternsein, an die ich geglaubt habe, bevor ich selbst Mutter wurde" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/nina-palmo/luegen-muttersein-kind_b_18227436.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">6 Mythen übers Elternsein, an die ich geglaubt habe, bevor ich selbst Mutter wurde</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18227284","mpid":2}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/10/wieso-der-wer-wird-millionar-kandidat-nachste-woche-nicht-weiter-machen-kann_n_18227284.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5544758/images/r-WWM-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for "WWM"-Kandidat steht bei 8000 Euro - trotzdem werdet ihr ihn nächste Woche nicht wiedersehen" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/10/wieso-der-wer-wird-millionar-kandidat-nachste-woche-nicht-weiter-machen-kann_n_18227284.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">"WWM"-Kandidat steht bei 8000 Euro - trotzdem werdet ihr ihn nächste Woche nicht wiedersehen</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18227200","mpid":3}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/10/mann-zurich-flagge-is-jack-daniels_n_18227200.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5544760/images/r-JACKDANIELS-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Schweizer hängt eine Flagge vor seinem Haus auf - und bekommt Post von einem besorgten Bürger" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/10/mann-zurich-flagge-is-jack-daniels_n_18227200.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Schweizer hängt eine Flagge vor seinem Haus auf - und bekommt Post von einem besorgten Bürger</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18226892","mpid":4}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/10/fridtjof-nansen-google-doodle-zeigt-den-forscher-der-einen-friedensnobelpreis-bekam_n_18226892.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5502946/images/r-GOOGLE-HEADQUATER-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Google Doodle für Fridtjof Nansen: Wieso der Forscher einen Friedensnobelpreis bekam" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/10/fridtjof-nansen-google-doodle-zeigt-den-forscher-der-einen-friedensnobelpreis-bekam_n_18226892.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Google Doodle für Fridtjof Nansen: Wieso der Forscher einen Friedensnobelpreis bekam</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18225480","mpid":5}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/bka-hatte-missbrauchten-madchen-gefahndet---nun-sind-opfer-und-kinderschander-identifiziert_n_18225480.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5027400/images/r-BLAULICHT-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for BKA fahndete nach missbrauchtem Mädchen - nun sind Opfer und mutmaßlicher Täter identifiziert" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/bka-hatte-missbrauchten-madchen-gefahndet---nun-sind-opfer-und-kinderschander-identifiziert_n_18225480.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">BKA fahndete nach missbrauchtem Mädchen - nun sind Opfer und mutmaßlicher Täter identifiziert</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18225394","mpid":6}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/grobritanniens-premierministerin-may-will-das-land-schon-einmal-auf-einen-harten-breixt-vorbereiten_n_18225394.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5544148/images/r-THERESA-MAY-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Die Verhandlungen zwischen Großbritannien und der EU stehen still - nun bereitet sich London auf einen harten Brexit vor" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/grobritanniens-premierministerin-may-will-das-land-schon-einmal-auf-einen-harten-breixt-vorbereiten_n_18225394.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Die Verhandlungen zwischen Großbritannien und der EU stehen still - nun bereitet sich London auf einen harten Brexit vor</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18225178","mpid":7}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/us-kirche-verlost-sturmgewehre-las-vegas_n_18225178.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5544094/images/r-AR15-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for US-Kirche verlost Sturmgewehre - selbst nach erbosten Reaktionen stoppt sie die Aktion nicht" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/us-kirche-verlost-sturmgewehre-las-vegas_n_18225178.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">US-Kirche verlost Sturmgewehre - selbst nach erbosten Reaktionen stoppt sie die Aktion nicht</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18224774","mpid":8}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/das-passiert-wenn-katalonien-am-dienstag-wirklich-die-unabhangigkeit-ausruft_n_18224774.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5543986/images/r-KATALONIEN-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Das passiert, wenn Katalonien am Dienstag wirklich die Unabhängigkeit ausruft" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/das-passiert-wenn-katalonien-am-dienstag-wirklich-die-unabhangigkeit-ausruft_n_18224774.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Das passiert, wenn Katalonien am Dienstag wirklich die Unabhängigkeit ausruft</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18224732","mpid":9}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/was-ein-video-von-einer-schweinefarm-zeigt-macht-gerade-vielen-menschen-angst_n_18224732.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5544018/images/r-SCHWEINEFARM-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Was ein Video von einer Schweinefarm zeigt, macht gerade vielen Menschen Angst" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/was-ein-video-von-einer-schweinefarm-zeigt-macht-gerade-vielen-menschen-angst_n_18224732.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Was ein Video von einer Schweinefarm zeigt, macht gerade vielen Menschen Angst</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18224600","mpid":10}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/rebecca-bojasch/dunkelhautig-deutsche-rassismus-diskriminierung_b_18224600.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5543936/images/r-REBECCA-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Ich bin dunkelhäutig und Deutsche - trotzdem werde ich oft wie eine Fremde behandelt" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/rebecca-bojasch/dunkelhautig-deutsche-rassismus-diskriminierung_b_18224600.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Ich bin dunkelhäutig und Deutsche - trotzdem werde ich oft wie eine Fremde behandelt</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18224494","mpid":11}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/kampf-mit-skurrilen-waffen-zwei-dorfer-streiten-um-einen-felsen--video_n_18224494.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5543906/images/r-TWC-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Kampf mit skurrilen Waffen: Zwei Dörfer streiten um einen Felsen – Video" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/kampf-mit-skurrilen-waffen-zwei-dorfer-streiten-um-einen-felsen--video_n_18224494.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Kampf mit skurrilen Waffen: Zwei Dörfer streiten um einen Felsen – Video</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18224006","mpid":12}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/ein-republikanischer-sena_n_18224006.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5543808/images/r-BOB-CORKER-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Ex-Parteifreund des US-Präsidenten warnt: Trump könnte den Dritten Weltkrieg auslösen" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/ein-republikanischer-sena_n_18224006.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Ex-Parteifreund des US-Präsidenten warnt: Trump könnte den Dritten Weltkrieg auslösen</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18223456","mpid":13}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/ukraine-kroatien-im-live_n_18223456.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i0.huffpost.com/gen/5543672/images/r-LUKA-MODRIC-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Ukraine - Kroatien im Live-Stream: WM-Quali online sehen, so geht's" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/ukraine-kroatien-im-live_n_18223456.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Ukraine - Kroatien im Live-Stream: WM-Quali online sehen, so geht's</a></strong>
+            </article>
+        </li>
+            <li class="three-up-item">
+            <article  data-beacon='{"p":{"plid":"18223436","mpid":14}}' >
+                <figure>
+                    <a href="http://www.huffingtonpost.de/2017/10/09/wales-irland-im-live-stream-wm-quali-online-sehen-so-gehts_n_18223436.html"  data-beacon='{"p":{"lnid":"img"}}'  onclick="HPTrack.trackPageview('');"><img data-img-path="http://i1.huffpost.com/gen/5543650/images/r-GARETH-BALE-medium260.jpg" src="http://s1.huffpost.com/images/blank.gif" alt="Image for Wales - Irland im Live-Stream: WM-Quali online sehen, so geht's" class="async-img-load" /></a>
+                </figure>
+                <strong><a href="http://www.huffingtonpost.de/2017/10/09/wales-irland-im-live-stream-wm-quali-online-sehen-so-gehts_n_18223436.html"  data-beacon='{"p":{"lnid":"hdln"}}'  onclick="HPTrack.trackPageview('');">Wales - Irland im Live-Stream: WM-Quali online sehen, so geht's</a></strong>
+            </article>
+        </li>
+            </ul>
+    </div>
+    <button class="previous">Previous Story</button>
+    <button class="next">Next Story</button>
+</section>
+<script>
+    (function($){
+        $('.lnid-threeup_left_nav').on('click', function(){
+            HPTrack.trackPageview('/t/a/threeupnav.v6/left.v2/Germany');
+        });
+        $('.lnid-threeup_right_nav').on('click', function(){
+            HPTrack.trackPageview('/t/a/threeupnav.v6/right.v2/Germany');
+        });
+    })(jQuery);
+</script>
+<!-- blog_banner module -->
+<section class="blog-banner group">
+	<a class="title" href="/the-blog/">BLOG</a>
+	<p>
+        
+           Eine offene Plattform für kontroverse Meinungen und aktuelle Analysen aus dem HuffPost-Gastautorennetzwerk           </p>
+    </section>
+<!-- main entry body -->
+<section class="main group">
+            <!-- Breaking news bar -->
+        <!-- main entry body -->
+    <div class="column entry">
+        <!-- Article content -->
+        <!-- entry header -->
+	<article class="entry" id="printable">
+		<header>
+                                                        <!-- ads_entry_body_top-->
+                            
+                            <!-- Author Information -->
+                
+    <div class="author blog">
+                <figure>
+            <img src="http://s.huffpost.com/contributors/serena-dyer/headshot.jpg" alt="Serena Dyer Headshot" />
+        </figure>
+                <div class="byline vcard group ">
+            <div class="info">
+
+                            <a rel="author" href="/serena-dyer/" ><span class="name fn">Serena Dyer</a>
+                  
+                                                        <a class="fan" href="/users/becomeFan.php?of=hp_blogger_Serena Dyer">Fan werden</a>
+                                    </span>
+                                    <span class="teaser"><p>Autorin, 'Don’t Die With Your Music Still In You'</p></span>
+                
+                        </div>
+                        <!-- author social buttons -->
+            <ul class="social group">
+            	                
+		    		        <li class="email">
+			     <a href="/users/login/" onclick="QuickFan.emailAlerts('hp_blogger_Serena Dyer', 'Serena Dyer');return false;" >
+                              <button>E-Mail</button>
+                          </a>
+			 </li>	
+		                    				                                        <li class="twitter tweet">
+                        <a href="http://twitter.com/serenadyer" author_nickname="hp_blogger_Serena Dyer" class="twitter-anywhere-user twitter-tooltip" sl-processed="1"></a>
+                    </li>
+                    				                <li class="facebook like">
+					
+                    	                 <a href="#" class="fb-tooltip-330936 fb-tooltip" sl-processed="1"></a>
+	                    <script type="text/javascript">
+		                 (function($){
+		                     huff.js('jquery/jquery.tooltip.hp.js', function(){
+		                         $('.fb-tooltip-330936').toolTip({
+		                             toolTipWidth : 250,
+		                             namespacevlaue: '.aol_tooltip_330936 .aol_tooltip',
+		                                html : '<div class="fb-follow-tooltip"><b>Updates erhalten von %s Serena Dyer</b><div class="fb-like-container"><div class="fb-like" data-href="http://www.huffingtonpost.de/serena-dyer/" data-send="false" data-layout="button_count" data-width="40" data-show-faces="false" data-colorscheme="light" data-font="trebuchet ms" data-action="like" ref="" style="width: 40px" ></div></div></div>'
+		                           });
+		                     });
+		                  }(jQuery));
+		             </script>
+	        	    		                    </li>
+            </ul>
+                    </div>
+    </div>
+                                                                <!-- Title -->
+                <h1 class="title">29 Dinge, die ich mit 29 Jahren gelernt habe</h1>
+                        <!-- Article Byline Information -->
+            <div class="headline group">
+                
+<div class="times"  >
+    <span class="posted">
+        Veröffentlicht: <time datetime="2014-06-30T02:37:51-04:00">
+            30/06/2014 08:37 CEST        </time>
+    </span>
+    <span class="updated">
+        Aktualisiert: <time datetime="2014-08-30T05:12:02-04:00">
+            30/08/2014 11:12 CEST        </time>
+    </span>
+</div>
+            </div>
+                  
+                            <!-- Article Main Image -->
+                    <!-- article image/video (if applicable) -->
+    <div class="main-visual group embedded-image">
+            <img src="http://i.huffpost.com/gen/1885809/images/n-FRAU-large570.jpg" alt="FRAU" data-img-path='http://i.huffpost.com/gen/1885809/images/n-FRAU-large570.jpg' />
+        <div class="entry_image_caption large-image-caption">Thinkstock</div>            </div>
+
+                        
+            <!-- Imageblog Social Share Bar -->
+            
+            <!-- Social Share Bar -->
+            <menu id="social_badges" class="social_badges_ social-bar group floating">
+        <section class="social-badge" data-url="/ajax/social/phoenix_social_badge_json.php?badges=facebook_like%2Cfacebook%2Ctwitter%2Cgoogleshare%2Cpinterest%2Cemail%2Ccomments&id=5532467&url=http%3A%2F%2Fwww.huffingtonpost.de%2Fserena-dyer%2Fwas-ich-mit-29-gelernt-habe_b_5532467.html" data-entry-id="5532467"> 
+      <ul class="shares group">
+        <li class='share facebook_like VERB_LIKE' data-type='fblike'><a href='javscript:void(0)'><div class="fb-like" data-href="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-colorscheme="light" data-font="arial" data-action="like" ref="" style="width: 450px" ></div></a></li><li class="share facebook" data-type="facebook">
+	<a class="social-fb-share-btn" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.huffingtonpost.de%2Fserena-dyer%2Fwas-ich-mit-29-gelernt-habe_b_5532467.html" data-url="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html" data-title="29 Dinge, die ich mit 29 Jahren gelernt habe" data-caption="www.huffingtonpost.de" data-image="http://i.huffpost.com/gen/1885809/images/o-FRAU-facebook.jpg">
+	  <span class="facebook-share-btn label">Teilen</span>
+	  <span class="facebook-share-count count"></span>
+	</a>
+</li>
+<li class="share twitter" data-type="twitter">
+	<div class="social-twitter-btn" data-size="128" data-account="HuffPostDE">
+    <a class="twitter-tweet-btn" href="https://twitter.com/intent/tweet?lang=de&text=29+Dinge%2C+die+ich+mit+29+Jahren+gelernt+habe+http%3A%2F%2Fwww.huffingtonpost.de%2Fserena-dyer%2Fwas-ich-mit-29-gelernt-habe_b_5532467.html">
+      <span class="twitter-tweet-btn label">Tweet</span>
+      <span class="twitter-tweet-count count"></span>
+    </a>
+	</div>
+</li>
+<li class="share googleshare" data-type="googleshare"><div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-href="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html"></div>
+</li>
+<li class="share pinterest" data-type="pinterest">
+<div class="social-pinterest-btn" >
+    <a class="pinterest-pinit-btn" data-url="http://www.huffingtonpost.de/serena-dyer/was-ich-mit-29-gelernt-habe_b_5532467.html" href="http://www.pinterest.com/pin/create/button/?media=http%3A%2F%2Fi.huffpost.com%2Fgen%2F1885809%2Fimages%2Fn-FRAU-large570.jpg&description=29+Dinge%2C+die+ich+mit+29+Jahren+gelernt+habe" target="_blank" data-pin-do="skipLink" data-pin-config="above">
+        <span class="pinterest-pinit-count count"></span>
+    </a>
+</div>
+</li>
+<li class="share email" data-type="email">
+	<div class="social-email-btn">
+	    <a href="#" class="hp-email-btn label">E-Mail</a>
+	    <span class="hp-email-count count"></span>
+	</div>
+</li>
+<li class="share comment" data-type="comments">
+	<div class="social-comment-btn">
+	    <span class="hp-comment-btn label">Kommentare</span>
+	    <span class="hp-comment-count count"></span>
+	</div>
+</li>
+      </ul>  
+      
+    </section>
+        </menu>
+            <!-- Print Icon for Canada and Quebect verticals in permalink page -->
+            				<a href="javascript:window.print()" title="Drucken" class="print_btn print_common" ><img src="http://www.huffingtonpost.com/images/v/print_icon.png" width="20" height="17" alt="Drucken"/></a>
+			
+            <div style="clear:both"></div>
+        </header>
+
+                <!-- Article Text Body -->
+                <div class="float_right padding_left_10">
+                    </div>
+
+    <!-- Entry main text -->
+    <div class="content" id="mainentrycontent">
+      <div class="float_left">
+        <!-- AD ads_sharebox_260x60 -->
+        <div class="ad_share_box">
+                    <script type="text/javascript">
+            if ( 'undefined' != typeof(HPAds.ad_sharebox_260x60_fix) ) {
+              HPAds.ad_sharebox_260x60_fix();
+            }
+          </script>
+        </div>
+              </div>
+            
+        <!-- Entry Text -->
+        		  
+        <p>Da nun das letzte Jahr meiner 20er anbricht, habe ich beschlossen, aufzuschreiben, was ich nun weiß, das ich noch nicht wusste, als ich in dieses heikle Jahrzehnt eintrat. </p><p>1. Wenn wir schlau sind, merken wir irgendwann, dass nicht alles im Leben unseren Kommentar oder unsere Meinung erfordert. Ich habe jetzt mit 29 zu weniger Dingen eine Meinung als noch mit 20. Ich persönlich sehe das als Zeichen für Reife.</p><p>2. Erzählen Ihnen die Leute auch die ganze Zeit, dass ihr mit 29 nicht mehr so essen könnt wie mit 22, ohne zuzunehmen? Sie haben nicht ganz Unrecht. Ihr "schneller Metabolismus" ist nicht mehr wirklich schnell, wenn Sie vier Jahre Choco Krispies zum Frühstück hatten. </p><div id="modulous_mid_article" class="ad_spot">
+    <div id="ad_mid_article" class="ad_wrapper"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- MedRectangle HuffPost (linke Spalte) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6290110528288861"
+     data-ad-slot="4441681639"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+<p>3. Wenn Sie Glück haben, leben Ihre Mutter und Ihr Vater noch. Wenn Sie richtig Glück haben, stehen Sie den beiden näher als je zuvor. Und wenn Sie am meisten Glück haben von allen, sind Ihre Eltern die beiden wichtigsten Menschen in Ihrem Leben. </p><p>4. Mit jedem Jahr realisieren Sie mehr und mehr, dass Clubnächte weit weniger Spaß machen als Sie sich einreden wollen. </p><p>5. Irgendwann sind die lustigsten Nächte die, die Sie mit Ihren Liebsten im Schlafanzug verbringen. Oder zu Hause mit Freunden und Familie, einer Flasche Wein und vielleicht sogar dem Baby. </p><p>6. Wenn ich jetzt auf die Zeit zurückblicke, in der ich 29-Jährige "alt" und über 30-Jährige "uralt" nannte, weiß ich auch, warum ich das getan habe: aus Angst davor, selbst in das Alter zu kommen. Noch ist man Anfang 20 und ehe man sich's versieht, ist man 29 Jahre alt - und merkt, dass im langen Verlauf der Zeit 29 noch gar nichts ist. </p><p>7. Ihre beste Zeit ist noch lange nicht vorbei. Ich hatte meine besten Jahre, habe sie jetzt gerade und werde sie auch in Zukunft haben. Jedes Jahr hat seine Best-ofs; hoffentlich wird es uns am Ende unseres Lebens unmöglich sein, einen Abschnitt als den besten überhaupt zu bestimmen. </p><p>8. Ich habe sehr viel Geld für Reisen ausgegeben. Das bereue ich auch überhaupt nicht. Das einzige, was ich bereue, ist, dass ich kein Reisetagebuch geführt habe. </p><p>9. Es ist wirklich wichtig, Zahnseide zu verwenden. Vorm ins-Bett-Gehen abschminken... darüber lässt sich streiten.</p><p>10. Ihre Ex-Partner gehören Ihnen nicht. Die neue Freundin zu hassen oder die Ex-Freundin des eigenen Freundes, ist ganz und gar unsinning. </p><p>11. Ich fand immer, jemandem zu verzeihen, der einen betrogen hat, sei erbärmlich und schwach. Jetzt sehe ich das anders. Vergeben können macht einen stärker. Untreue, die man überwunden hat, kann zwei Menschen noch näher zusammenbringen. Oder auch nicht. Keine Situation ist wie die andere. Bevor Sie also Ratschläge erteilen und drohen, den Menschen zu ermorden, der einen ihrer Freunde verletzt hat, versuchen Sie zuzuhören. </p><p>12. Wenn Sie mit dem Alter auch reifer werden, werden Sie feststellen, dass Sie weniger Urteile fällen, sich weniger mit anderen vergleichen und mehr Mitgefühl für die Leute haben, denen Sie begegnen. </p><p>13. Meine Geschwister bedeuten mir jetzt mehr als je zuvor. Sie teilen alle meine Triumphe und Niederlagen aufrichtig mit mir. Diese Art von Unterstützung ist unbezahlbar. </p><p>14. Ich habe herausgefunden, dass einige Leute in meinem Leben mir keine Energie geben, sondern mich anstrengen. Von ihnen entferne ich mich nun langsam und ohne viel Aufhebens darum zu machen. Das war eine wichtige Lektion, die ich gelernt habe.</p><p>15. Die Freundschaften, die schon 15 Jahre oder länger dauern, werden ziemlich sicher für immer sein. Diese Verbindungen werden Ihnen von Jahr zu Jahr mehr bedeuten. Ihre Kinder werden Ihre Nichten und Neffen sein. Sie werden zu Ihrer Familie. Am Ende werden Sie merken, dass Sie mehr intime Details mit Ihren Freunden teilen als mit anderen nahestehenden Personen...oder geht das nur mir so?</p><p>16. heute ist die Vorstellung, ins Solarium zu gehen für mich ebenso abschreckend wie eine Wurzelbehandlung. Und wenn Sie in die Sonne gehen: Sonnencreme zu verwenden und viel Wasser zu trinken ist wichtiger als jemals zuvor. Ich gebe es zu: Ich bin bekannt dafür, eine irrationale Angst davor zu haben zu dehydrieren. </p><p>17. Jeder, den ich kenne, hat schon einen geliebten Menschen verloren. Ich selbst auch. Mit diesem Wissen im Hinterkopf versuche ich, die Leute ein bisschen freundlicher zu behandeln. Man weiß wirklich oft nicht, was der andere gerade durchmacht. </p><p>18. Es gibt keinen Masterplan für das Leben. Manche Ihrer Freunde werden früh heiraten, andere spät und manche überhaupt nicht. Einige werden sehr viel Geld verdienen, andere nicht. Einige werden fünf Kinder haben und einige kein einziges. Manche werden die Welt bereisen und andere werden nie den Kontinent verlassen. Wie Nietzsche einmal schrieb: "Das ist mein Weg, was ist dein Weg? DER eine Weg existiert nicht." Versuchen Sie, sich daran zu erinnern, bevor Sie Ihren Freunden sagen, wie sie ihr Leben zu führen haben. Und bemühen Sie sich, andere auch nicht danach zu beurteilen, welchen Lebensstil sie gewählt haben. </p><p>19. "Wie kann ich dienen?" ist zu meinem täglichen Leitspruch geworden. "Was springt für mich dabei heraus?" schleicht sich manchmal mit ein, aber dafür verurteile ich mich selbst nicht. Ich versuche, auch andere nicht dafür zu verurteilen. </p><p>20. Ich habe inzwischen begriffen, dass die Leute meistens das tun, was in ihrer Macht steht. Das mag nicht immer das Beste sein, das ich könnte und auch nicht das, was ich gerne von ihnen hätte, aber es ist eben das Beste, was sie tun können. Geduld ist wirklich eine Tugend.</p><p>21. Eine Beziehung, in der die Chemie nicht stimmt, ist sinnlos. Wenn Sie sich nicht sicher sind, ob das für Ihre Beziehung zutrifft, dann tut es das nicht. Das verspreche ich Ihnen. </p><p>22. Ich habe mein ganzes bisheriges Leben dafür gebraucht, zu verstehen, dass ich in der Lage bin, freundlich zu den Netten und zu den weniger Netten zu sein, weil MEIN Wesen eben von Freundlichkeit geprägt ist. Ich habe wieder und wieder gehört "wie dich die Leute behandeln, ist ihr Karma, und wie du reagierst, ist deins". Ich reagiere inzwischen freundlich - zumindest meistens. </p><p>23. Unhöflichkeit überzeugt niemanden. Genaus so wenig wie zickiges Verhalten, fiese Blicke oder Rumgefluche. Überzeugend aber ist eine gute Wortwahl. Wenn Sie ständig von "haterz" und "all das Drama in Ihrem Leben" sprechen, stehen die Chancen gut, dass Sie beides auch bekommen. Wenn Sie das im Sinn haben, machen Sie ruhig so weiter. </p><p>24. Menschen, die großzügig sind, wenn sie wenig Geld haben, werden es auch dann bleiben, wenn sie wohlhabend sind. Und wohlhabende Leute, die großzügig sind, wären es auch, wenn sie arm wären. Das liegt daran, dass großzügige Menschen von Natur aus großzügig sind. Das hat nichts mit Geld zu tun, sondern mit Einstellung.  </p><p>25. Ich habe eine wichtige Sache begriffen: Was du in die Welt hinausträgst, bekommst du auch zurück. Jetzt, da ich mir das sage, sind meine Begegnungen mit anderen Frauen fast immer positiv, erhebend, hilfreich, verständnisvoll und voller Zuneigung. Ich habe mit keiner Frau zu tun, die im Umgang eifersüchtig, zickig oder schwierig ist. Ich mag es nicht, wenn Leute sagen "ich weiß doch, wie ihr Frauen seid". Nein, wisst ihr nicht. Ich weiß, wie ich bin, und ich weiß, dass die Frauen in meinem Leben über alle Maßen vertrauensvoll sind. Ende der Geschichte. </p><p>26. Ich lege mehr Wert auf meine Gesundheit. Hin und wieder trinke ich natürlich eine oder zwei gute Flaschen Wein (auch mal ganz alleine), aber ich fühle mich nicht mehr gut, wenn ich mich vollgestopft oder das Training ausgelassen habe. Ich hätte nie gedacht, dass ich den letzten Satz je schreiben würde.   </p><p>27. Ich weiß jetzt, dass wahre Liebe nicht einfach ist, zumindest nicht für mich. Zu ihr gehört so sehr zu lachen, bis es weh tut, peinliche Tanzbewegungen, Spitzfindigkeiten, darüber streiten, wer mit dem Streit angefangen hat, Küsse auf die Stirn, vergeben Können, Intimität, Kämpfe, Umbrüche, selbst gekochete Abendessen, Urlaube, Geburtstage, Schmerz, Hochs, Tiefs und alles dazwischen. Aber dieser Blick, den nur Sie beide teilen, der nichts aussagt, aber alles bedeutet, lässt Ihre Knie noch immer weich werden und macht Sie unheimlich verwundbar. </p><p>28. Ich finde jetzt, da ich in das 29. Jahr meines Lebens starte, dass ich jemand bin, den ich gerne hab, und daran ist auch nichts Beschämendes. Ich habe keine Angst, das zuzugeben. </p><p>29. Ich weiß jetzt, dass Veränderungen unvermeidbar sind. Ich habe mich tausend Mal verändert und trotzdem immer an dem festgehalten, was mich ausmacht. Ich kenne mich. Jetzt mehr als je zuvor. Ich kann mir nur versuchen vorzustellen, wie ich mich mit 39, 49, 59, 69, 79, 89, 99 und 109 fühlen werde. Und ich freue mich so sehr auf diese Reise.</p>
+        </div>
+    <!-- Follow Twitter Author -->
+    <p>
+        <b class='follow_twt_author'>
+            Serena Dyer auf Twitter folgen:
+            <a target="_blank" href="http://www.twitter.com/serenadyer">www.twitter.com/serenadyer</a>
+        </b>
+    </p>
+                        <!-- Follow Tag Links Bottom -->
+        
+<div class="follow bottom-tags"  >
+    <h2>Mehr:</h2>
+    <span class="group">
+                <span class="entrytag">
+            <a href="/news/blogs/">blogs</a>
+        </span>
+                <span class="entrytag">
+            <a href="/news/lifestyle/">lifestyle</a>
+        </span>
+                <span class="entrytag">
+            <a href="/news/leben/">leben</a>
+        </span>
+            </span>
+</div>
+        <!-- Books By Author -->
+                                <!-- article_foot ad -->
+            <div class="margin_10_0">
+                            </div>
+            <footer>
+                                <!-- article_bottom ad -->
+                <div id="modulous_article_bottom" class="ad_spot">
+    <!-- AdEngine TFM polar_entry_content_btf Start -->
+<div id="adsd_polar_entry_content_btf_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'article_bottom', position: 'polar_entry_content_btf'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_polar_entry_content_btf_div";
+            
+                placeTFMAd("article_bottom", current_div_id, "DESKTOP_TEASER_HOR_ANY");
+            
+        } else {
+            
+                document.write(ads_gettag("polar_entry_content_btf") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM polar_entry_content_btf End --></div>
+                                 
+		        <!--end of content-->
+                    </footer>
+        </article>	
+                                <!-- ads_below_entry_recirc -->
+        <div id="modulous_below_entry_recirc" class="ad_spot">
+    <div class="OUTBRAIN" data-src="" data-widget-id="AR_1" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="AR_2" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="AR_3" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="AR_4" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="AR_6" data-ob-template="DE_Huffingtonpost.de" ></div>
+</div>
+		
+				
+        <!-- Orbitz Module -->
+                <!-- 4Wnet_feed Module -->
+                <!-- ads_bottom_article_text -->
+                    <!-- ads_related_content_top -->
+                    <!-- Sailthru flyout -->
+                <!-- Around the web -->
+                        <!-- Conversations -->
+        <div id="floaterTarget">
+                  </div>
+                    </div>
+            <!-- right rail -->
+    	    <section class="rail"  data-beacon='{"p":{"mlid":"sidebar_right"}}' >
+	        <!-- ads_right_rail_flex -->
+<div id="modulous_right_rail_flex" class="ad_spot">
+    <script type="text/javascript">
+  if ( "function" === typeof(adSetSyncDelay) ) {
+    adSetSyncDelay('125');
+  }
+</script>
+<div id="ad_right_rail_flex" class="ad_wrapper_top"><!-- AdEngine TFM medrectangle1 Start -->
+<div id="adsd_medrectangle1_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'right_rail_flex', position: 'medrectangle1'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_medrectangle1_div";
+            
+                placeTFMAd("right_rail_flex", current_div_id, "");
+            
+        } else {
+            
+                document.write(ads_gettag("medrectangle1") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM medrectangle1 End --></div></div>
+<!-- ads_text_sponsorship -->
+<div id="modulous_sponsorship" class="ad_spot">
+    <div class='margin_10_0 center'><!-- AdEngine TFM polar_right_rail Start -->
+<div id="adsd_polar_right_rail_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'sponsorship', position: 'polar_right_rail'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_polar_right_rail_div";
+            
+                placeTFMAd("sponsorship", current_div_id, "DESKTOP_TEASER_VER_ANY");
+            
+        } else {
+            
+                document.write(ads_gettag("polar_right_rail") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM polar_right_rail End --></div></div>
+<!-- ads_right_rail_edit_promo -->
+<div id="modulous_right_rail_edit_promo" class="ad_spot">
+    <div class='margin_10_0 center'>	
+
+
+<div class="preview">
+  <div class="commercial_title commercial_title_germany i18n">SPONSORED BY DEUTSCHE FERNSEHLOTTERIE</div>
+  <ul class="carousel" style="width:300px;">
+    <li class="unbordered jcarousel-item-1" style="display: inline-block; float: left;">
+      <div class="preview_entry preview_no_border">
+        <div class="preview_clear"></div>
+        <div class="preview_image_wrapper">
+          <a href="http://www.huffingtonpost.de/2017/11/15/helfen-macht-gluecklich-solange-man-seine-eigenen-grenzen-kennt_n_18069396.html" class="preview_a" rel="nofollow">
+            <img width="282" src="http://i.huffpost.com/gen/5521350/thumbs/s-HANDS-large300.jpg" />
+          </a>
+        </div>
+        <span class="preview_h4"><a href="http://www.huffingtonpost.de/2017/11/15/helfen-macht-gluecklich-solange-man-seine-eigenen-grenzen-kennt_n_18069396.html" class="preview_a" rel="nofollow">Helfen macht glücklich – solange man seine eigenen Grenzen kennt</a></span>
+        <ul class="preview_meta_links">
+          <li class="first"><a class="preview_a i18n" href="http://www.huffingtonpost.de/2017/11/15/helfen-macht-gluecklich-solange-man-seine-eigenen-grenzen-kennt_n_18069396.html" rel="nofollow">Quick Read</a> |</li>
+          <li><a class="preview_a i18n" href="http://www.huffingtonpost.de/2017/11/15/helfen-macht-gluecklich-solange-man-seine-eigenen-grenzen-kennt_n_18069396.html#comments" rel="nofollow">Comments</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div style="clear:both"></div>
+</div>
+
+<script>
+if (typeof __ === 'function') {
+  var txt = document.getElementsByClassName('i18n');
+  for(i=0; i<txt.length; i++) { txt[i].innerHTML = __(txt[i].innerHTML); }
+}
+</script></div></div>
+<!-- HPIN unit --><section class="most-popular"  >
+    <div id="modulous_gravity_most_popular" class="ad_spot">
+    <div class="OUTBRAIN" data-src="" data-widget-id="SB_1" data-ob-template="DE_Huffingtonpost.de" ></div>
+</div>
+</section>
+<div id="modulous_right_rail_recirc" class="ad_spot">
+    <style>
+.trc_rbox.trc-auto-size{width:100%; height:auto;}
+</style><div class="OUTBRAIN" data-src="" data-widget-id="SB_4" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="SB_3" data-ob-template="DE_Huffingtonpost.de" ></div>
+<div class="OUTBRAIN" data-src="" data-widget-id="SB_2" data-ob-template="DE_Huffingtonpost.de" ></div>
+</div>
+					<section class="follow-huffpost"  data-beacon='{"p":{"mnid":"mod-follow"}}'  >
+						<h2>HUFFPOST FOLGEN</h2>
+						<ul class="untouched follow-links group">
+							<li class="email selected"  data-beacon='{"p":{"lnid":"email"}}'  >
+								<button>E-Mail</button>
+								<div class="content">
+									<form class="subscribe">
+										<fieldset class="email">
+											<legend>E-Mail-Adresse</legend>
+											<input id="subscribe_user_email" class="text" name="email" onfocus="if(this.value=='E-Mail-Adresse')this.value=''" value="E-Mail-Adresse" type="text">
+											<input type="checkbox" value="1" name="email_subscribe_check" class="email_subscribe_check" style="display:none;" />
+	                                        <input type="hidden" name="vertical" value="germany">
+                                            <input class="button right_rail_signup" type="submit" value="Jetzt anmelden">
+                                            <label class="signup_error" style="display:none;">Aktivieren Sie das Kontrollkästchen, um Ihre Zustimmung auszudrücken.</label>
+                                            <fieldset class="options">
+                                                <legend>Optionen</legend>
+                                                                                                	<input type="hidden" name="daily-brief"  id="daily-brief" value="0">
+                                                                                                                                                                                                	<div class="item">
+                                                		                                                			<input type="checkbox" class="list" id="vertical-brief" checked="checked" >
+                                                			<label for="vertical-brief">Newsletter</label>
+                                                		                                                	</div>
+                                                                                                
+                                                                                                                                                                                                
+                                                                                            	
+                                            </fieldset>
+                                      </fieldset>
+                                                                              <p class="instructions">
+                                          Erhalten Sie die wichtigsten Artikel und Blog-Beiträge täglich per Mail.
+                                        </p>
+                                                                                                                </form>
+                                </div>
+                            </li>
+
+                            <li class="facebook"  data-beacon='{"p":{"lnid":"fb"}}'  > 
+                                <button>Facebook</button>
+                                <div class="content off">
+                                    <ul>
+                                    <li class="group">
+                                                                               <strong class="name">HuffPost</strong>
+                                            <div class="share-button">
+                                                <div class="fb-like" data-href="http://www.facebook.com/HuffPostDE" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-colorscheme="light" data-font="trebuchet ms" data-action="like" ref="" style="width: 100px" ></div>                                            </div>
+                                                                                    
+                                          </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="twitter"  data-beacon='{"p":{"lnid":"twitter"}}'  > 
+                                <button>Twitter</button>
+                                <div class="content off">
+                                    <ul>
+                                        <li class="group">
+                                            <div class="share-button">
+																						<strong class="name">HuffPost</strong>
+											<div class="share-button">
+											 
+
+<a href="https://twitter.com/HuffPostDE" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-lang="de" data-width="100px">Follow</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+											 </div>
+                                             											
+                                              
+                                            </li>
+                                    </ul>
+                                </div>
+                            </li>
+                                                            <li class="google pinterest" data-beacon='{"p":{"lnid":"pinterest"}}'>
+                                <button style="background-position: 0px -599px;">Pinterest</button>
+                                <div class="content off">
+                                    <ul>    
+                                        <li class="group">
+                                                <strong class="name">HuffPost</strong>
+                                               <div class="share-button">
+                                                  
+<a href="http://pinterest.com/huffpostde/" target="_blank"><img src="http://passets-cdn.pinterest.com/images/pinterest-button.png" width="78" height="26" alt="Follow Me on Pinterest" /></a>
+                                                 </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                                                        
+							<li class="rss no-ad"  data-beacon='{"p":{"lnid":"rss"}}'  >
+								<button>RSS</button>
+								<div class="content off">
+									<ul>
+									                                    																				
+																																	<li>
+		                                            <a href="/feeds/verticals/germany/blog.xml" class="name sprite">The Huffington Post</a>
+												</li>
+																					                                    										<li>
+                                            <a class="more" href="/syndication/">Alle RSS/Feeds</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="phone no-ad"  data-beacon='{"p":{"lnid":"mobile"}}'  >
+								<button>Telefon</button>
+								<div class="content off">
+									<ul>
+										<li>
+											<a class="ios sprite" href="http://itunes.apple.com/de/app/the-huffington-post/id306621789?mt=8" target="_blank">Available on the App Store</a>
+										</li>
+										<li>
+											<a class="android sprite" href="https://play.google.com/store/apps/details?id=com.huffingtonpost.android&hl=de" target="_blank">Android App on Google Play</a>
+										</li>
+                                        <li>
+                                            <a class="blackberry sprite" href="http://appworld.blackberry.com/webstore/content/19143/?countrycode=DE&lang=de" target="_blank">Get it at Blackberry App World</a>
+                                        </li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+                        					</section>
+ <!-- ads_text_sponsorship -->
+<!-- ads_snn_234x60 -->
+<!-- ads_most_popular_edit_promo -->
+<!-- ads_sponsorship_2 -->
+<!-- ads_lower_promo -->
+<!-- ads_right_rail_300x100_upper -->
+<!-- ads_right_rail_lower -->
+<div id="modulous_right_rail_lower" class="ad_spot">
+    <!-- AdEngine TFM medrectangle2 Start -->
+<div id="adsd_medrectangle2_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'right_rail_lower', position: 'medrectangle2'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_medrectangle2_div";
+            
+                placeTFMAd("right_rail_lower", current_div_id, "");
+            
+        } else {
+            
+                document.write(ads_gettag("medrectangle2") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM medrectangle2 End --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lower MedRectangle HuffPost -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-6290110528288861"
+     data-ad-slot="1254637630"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- ads_btf_300x100 -->
+<div id="modulous_btf_300x100" class="ad_spot">
+    <!-- AdEngine TFM medrectangle3 Start -->
+<div id="adsd_medrectangle3_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'btf_300x100', position: 'medrectangle3'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_medrectangle3_div";
+            
+                placeTFMAd("btf_300x100", current_div_id, "");
+            
+        } else {
+            
+                document.write(ads_gettag("medrectangle3") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM medrectangle3 End --></div>
+<div class="ad_lower_right_commercials_wrapper">
+    <!-- ads_right_rail_300x100_lower -->
+    <div id="modulous_right_rail_300x100_lower" class="ad_spot">
+    <!-- AdEngine TFM polar_right_rail_btf Start -->
+<div id="adsd_polar_right_rail_btf_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'right_rail_300x100_lower', position: 'polar_right_rail_btf'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_polar_right_rail_btf_div";
+            
+                placeTFMAd("right_rail_300x100_lower", current_div_id, "DESKTOP_TEASER_VER_ANY");
+            
+        } else {
+            
+                document.write(ads_gettag("polar_right_rail_btf") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM polar_right_rail_btf End --></div>
+    <!-- ads_text_sponsorship_2 -->
+        <!-- ads_commercial_module -->
+    	<!-- ads_right_rail_300x250_lower -->
+    </div>
+<script type="text/javascript">
+    try {
+        var ad_els = jQuery("#ad_right_rail_300x250_lower");
+        var right_rail_el = jQuery(".rail");
+        
+        if ( ad_els.length && right_rail_el.length ) {
+            ad_els.bind("mouseover", function(){
+                if ( right_rail_el.hasClass("fix") ) {
+                    window.scrollTo(window.scrollX, window.scrollY - 1);   
+                }
+                return;
+            });
+        }
+    } catch (e) {
+        
+    }
+</script>
+ <script type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+    jQuery('#ad_right_rail_flex').prepend("<span class='adflex'></span>");
+   jQuery('.adflex').append( __('Advertisement'));
+}
+);
+</script>
+<style>
+#ad_right_rail_flex .adflex {
+color: #999;
+text-transform: uppercase;
+font-size: 9px;
+font-family: arial;
+padding-bottom: 4px;
+display: inline-block;
+padding-left: 2px;
+}
+.ad_wrapper_top {
+background: none !important;
+}
+</style>
+	    </section>
+    
+    </section>
+        </section>
+        <!-- END page_content -->
+        <!-- page_footer -->
+        <section class="footer">
+    <!-- Served from: production-mt-wfe-56-191.use1 -->
+    <!-- ads_leaderboard_bottom --> 
+    <div id="modulous_leaderboard_bottom" class="ad_spot">
+    <div id="ad_leaderboard_bottom" class="ad_leaderboard_bottom ad_wrapper_" style="display:table;margin:0 auto;padding:5px 0 15px;"><!-- AdEngine TFM FOOTER_YIELD Start -->
+<div id="adsd_FOOTER_YIELD_div">
+    <script type="text/javascript">
+        if (typeof debugadcode == 'function') { debugadcode('AdEngine', {placement: 'leaderboard_bottom', position: 'FOOTER_YIELD'}); }
+        if ( "function" === typeof placeTFMAd ) {
+            var current_div_id = "adsd_FOOTER_YIELD_div";
+            
+                placeTFMAd("leaderboard_bottom", current_div_id, "");
+            
+        } else {
+            
+                document.write(ads_gettag("FOOTER_YIELD") || "");
+            
+        }
+    </script>
+</div>
+<!-- AdEngine TFM FOOTER_YIELD End --></div></div>
+    <!-- visual footer -->
+    <footer>
+        <!-- Search Box -->
+        <div class="search">
+
+</div>
+        <!-- Legal and Informational Links -->
+        <menu class="links">
+			                      <a href="/archive">Archiv | </a>
+             <a href="http://www.huffingtonpost.de/p/cookies-und-andere-technologien.html">Cookies</a>
+                 </menu>
+                <!-- Legal Disclaimers -->
+        <div class="legal">
+		                                               
+                                           <span class="copyright">Urheberrecht &copy;2017 ForwardContentServices GmbH.  Alle Rechte vorbehalten.</span>
+                                                                                  <span class="trademark"> &quot;The Huffington Post&quot; ist eine eingetragene Marke von TheHuffingtonPost.com, Inc. Alle Rechte vorbehalten. 2017&copy; </span>
+		   	   
+        </div>
+        			<div class="part-of">Teil von <span class="part-of-group">HuffPost News</span></div>
+            </footer>
+</section>
+        <!-- END page_footer -->
+        <div id="tfm_skyscraper" class="top_right_skyscraper"></div>
+    </div>
+    <!-- ads_bottom_code_blocks -->
+        <!-- ads_bottom_1x1 -->
+    <div id="modulous_bottom_1x1" class="ad_spot">
+    <script type="text/javascript">
+    (function($){
+        window.addEventListener('adRendered', function(e) {
+            function native_display_callback(other_native_divs) {
+                if (e.detail.isFiller) {
+                    var _tmp1 = other_native_divs.length && other_native_divs.show();
+                } else if (e.detail.type === 'native' || e.detail.type === 'adexchange') {
+                    var _tmp2 = other_native_divs.length && other_native_divs.hide();
+                }
+                return;
+            }
+
+            var left_native_divs = $(' \
+                div.grid_block.left div.sgc_promo.top_left_edit_promo \
+                ,div.grid_block.left div#polar_basic:first \
+                ,div.grid_block.left div#polar_premium:first \
+                ,div.grid_left_bl div.sgc_promo.top_left_edit_promo\
+                ,div.grid_left_bl div#polar_basic:first\
+                ,div.grid_left_bl div#polar_premium:first\
+            ');
+
+            var right_native_divs = $(' \
+                div.grid_block.right div.sgc_promo.right_rail_edit_promo \
+                ,div.grid_block.right div#polar_basic:first \
+                ,div.grid_block.right div#polar_premium:first \
+                ,div.grid_block.right div.preview \
+                ,div#right_col div.sgc_promo.right_rail_edit_promo \
+                ,div#right_col div#polar_basic:first \
+                ,div#right_col div#polar_premium:first \
+                ,div#modulous_right_rail_edit_promo \
+            ');
+
+            // window.console && window.console.log(e);
+            // window.console && window.console.log(e.detail.container);
+
+            var left_nav_divs_check = ('ads_polar_left_rail' === e.detail.container || 'adsd_polar_left_rail_div' === e.detail.container);
+            var right_nav_divs_check = ('ads_polar_right_rail' === e.detail.container || 'adsd_medrectangle1_div' === e.detail.container || 'adsd_polar_right_rail_div' === e.detail.container);
+
+            var _tmp1 = left_nav_divs_check && native_display_callback(left_native_divs);
+            var _tmp2 = right_nav_divs_check && native_display_callback(right_native_divs);
+
+            return;
+        }, false);
+    })(jQuery);
+</script>
+<script>
+    try{
+        (function($){
+            var ctries = 150;
+            var intvl = setInterval(function(){
+                var consentBtn = $("#usrConsent .closeBtn");
+                var skyscraperDiv = $("#adsd_skyscraper_div");        
+                if ( consentBtn.length ) {
+                    skyscraperDiv.css({"top": "40px"});
+                    consentBtn.bind("click", function(){ skyscraperDiv.css({"top": 0}); });
+                    clearInterval(intvl);
+                } else if ( --ctries <= 0 ) {
+                    clearInterval(intvl);
+                }
+            }, 500);
+        })(window.jQuery);
+    }
+    catch(e){}
+</script><script type="text/javascript">
+      window.ktxtrPublisherId = 'bd875c6e-7501-410c-8d68-c834788a6fd7';
+      (function(){
+        var kx = document.createElement('script');
+        kx.type = 'text/javascript';
+        kx.async = true;
+        kx.src = 'http://s.ktxtr.com/kx.js';
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(kx);
+      })();
+</script><script src="//js.smartredirect.de/js/?h=vdTS2ahP" type="text/javascript" async></script><script>
+var _sf_async_config={uid:59418,domain:'huffingtonpost.de',useCanonical:true};
+/** CONFIGURATION START **/
+_sf_async_config.sections = 'lifestyle';
+_sf_async_config.authors = 'serena-dyer';
+/** CONFIGURATION END **/
+(function(){
+function loadChartbeat() {
+  window._sf_endpt=(new Date()).getTime();
+  var e = document.createElement('script');
+  e.setAttribute('language', 'javascript');
+  e.setAttribute('type', 'text/javascript');
+  e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+  document.body.appendChild(e);
+}
+
+window.addEventListener ? 
+window.addEventListener("load",loadChartbeat,false) : 
+window.attachEvent && window.attachEvent("onload",loadChartbeat);
+})();
+</script>
+<script type="text/javascript">
+
+  try {
+     // Make sure the adsDevilAd object exists before putting your function on it
+     window.adsDevilAd=window.adsDevilAd||{};
+
+     adsDevilAd.adinfo=function(n,d,w,h){
+       // n will be the ad number, we assume the LB ad is #1. 
+       // NOTE: d=divName if you'd rather use that.  And w,h are width and height respectively.
+
+         if (window.adsDevilAd.ad[1].aolFormat == "Wallpaper") {
+           window.floater.destroy();
+           jQuery('#badges_v2_1').css('display','none !important');
+         }
+
+     };
+   }
+   catch (e) {}
+
+</script></div>
+
+    <!--modulous footer -->
+    
+<script>
+    (function(){
+        try {
+            
+            var hostname = window.location.hostname;
+            hostname = hostname.replace(/(.+)sandbox./, "www.");
+            var permalink = (window.location.protocol + "//" + hostname + window.location.pathname);
+            var allOutbrains = document.querySelectorAll('.OUTBRAIN');
+            for (var w in allOutbrains){
+                var __tmpOb = allOutbrains[w].setAttribute && allOutbrains[w].setAttribute('data-src', permalink);
+            }
+            
+            var e = document.createElement('script');
+            e.async = 1;
+            e.src = "http://widgets.outbrain.com/outbrain.js";
+            document.body.appendChild(e);
+        } catch(e) { console.error(e); }
+    }());
+</script>    <!-- END modulous footer -->
+
+    
+    <!-- Aol Universal Navbar module -->
+        <!-- correction -->
+    
+<style type="text/css">
+span.error {
+	 margin-top: 0;
+	 display: none;
+}
+  
+span.error.show {
+	display: block;
+}
+.hp_blue_lb_head_subimage {
+    text-align: center;
+}
+</style>
+
+<div style="display: none;">
+	<div id="lightbox">
+        <div class="content">        
+            
+            <div class="social_modal_content">
+                <div id="submissions_modal" class="sbm_modal">
+                    <h4 id="submission_header" class="sbm_heading hd_title">Nutzen Sie dieses Formular, um einen Huffpost-Redakteur auf einen inhaltlichen oder sprachlichen Fehler in diesem Beitrag hinzuweisen.</h4>
+                <div id="submission_notify" class="sbm_notify">Benachrichtigung</div>
+                <span class="required">* Pflichtfeld</span>
+                <form id="submissions_form" method="post">
+                    <input type="hidden" name="entry_id" value="5532467">
+                    <div class="smb-line clearfix group">
+                        <span class="sbm_asterisk ar_right">*</span>
+                        <input class="bordered" type="text" placeholder="Name" name="submission_name" id="submission_name" value="">
+                        <span class="sbm_asterisk ar_right">*</span>
+                        <input class="bordered nomargin" type="text" placeholder="E-Mail-Adresse" name="submission_email" id="submission_email" value="">
+                    </div>
+                    <div class="smb-line clearfix">
+                          <span class="submission_name error"></span>
+                          <span class="submission_email error"></span>
+                    </div>
+                    <div class="sbm_fc">
+                        <span class="sbm_l"><span class="sbm_asterisk">*</span> <strong>Art des Fehlers?</strong></span>
+                        <select name="submission_error_kind" id="submission_error_kind" class="sbm_koe sbm_r">
+                            <option value="">Auswählen</option>
+                            <option value="Factual or typographical">inhaltlich oder sprachlich</option>
+                            <option value="Comment moderation problem">Kommentar melden</option>
+                            <option value="Rights and permissions">Rechtliche Hinweise</option>
+                            <option value="Other">Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="smb-line clearfix">
+                          <span class="submission_error_kind error"></span>
+                    </div>
+                    <div class="sbm_fc">
+                            <span class="sbm_l float_left"><span class="sbm_asterisk">*</span> Was soll korrigiert werden?</span>
+                            <span class="sbm_counter" id="sbm_counter">0 Anzahl</span>
+                        <div class="clear_first"></div>
+                        <textarea id="submission_body" class="basic sbm_textarea sbm_r arial_12" name="submission_body" rows="9" cols="22">Beschreiben Sie hier den Fehler (max. 1.000 Zeichen).</textarea>
+                    </div>
+                    <div class="smb-line clearfix">
+                        <span class="submission_body error"></span>
+                    </div>
+                    <div class="bottom_block clearfix">
+                        <p class="small smb_note">
+                        	<span class="sbm_asterisk">*</span> Bitte geben Sie die unten stehenden Begriffe ein                        </p>
+                        <!--captcha-->
+                        <div class="float_left recaptcha_nothad_incorrect_sol recaptcha_isnot_showing_audio" id="submission_recaptcha">
+                           <!-- Insert PHP captcha code here -->
+                        </div>
+                        <!-- end captcha -->
+                        <div class="float_left" style="padding:20px; width: 227px;">
+                            <input id="submission_opt_in" class="sbm_checkbox" name="submission_opt_in" type="checkbox">
+                                                        <label for="submission_opt_in">Für den täglichen Huffington-Post-Newsletter eintragen</label>
+                                                        <br>
+                            <br>
+                            <div class="centered" id="submissions_bottom_area">
+                                <input type="submit" value="Absenden" id="submission_submit" href="javascript:void(0);" class="button double-extra-large light-blue sbm_send">
+                            </div>
+                            <div id="submission_ajax_loader" class="submission_ajax_loader"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="submission_thanks" class="sbm_thanks">Vielen Dank für Ihren Bericht.</div>
+    </div>
+</div>
+    <!-- Tracking -->
+    <!-- Nielson Feed -->
+    <!-- BEGIN Nielsen Tracking -->
+<script type="text/javascript">
+  HPTrack.Services.trackTo(['Nielsen']);
+</script>
+<noscript>
+   <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-703240h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+</noscript>
+
+<!-- END Nielsen Tracking -->
+     <!-- Webtrekk Feed -->
+        <!-- Xiti Tracking -->
+        <!-- VGWort Tracking -->
+    <!-- BEGIN VGWort Tracking -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+var vgwort_image = new Image();
+vgwort_image.src ="http://vg07.met.vgwort.de/na/46f57193c0ee49ae8cbf5ed38c90b11b";
+});
+</script>
+<!-- END VGWort Tracking -->
+    
+    <!-- quantcast Tracking -->
+        <!-- Parsely Tracking -->
+    <!-- START Parse.ly Include: Standard -->
+
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="huffingtonpost.de"></div>
+</div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include -->    <!-- END page_wrapper -->
+
+    <!-- end RUM -->
+    <script type="text/javascript">huff.use('conf', function(c){ c.set({"mtime":1507650212,"entry":"5532467","vertical":"germany","vertical-id":"130","vertical-name":"Germany","ads\/zone":"","topnav\/version":"2","cookie\/domain":"huffingtonpost.de","websocket\/enabled":false,"websocket\/url":"fiji-production-ws.use1.huffpo.net","websocket\/init":false,"site_blog_id":43,"auth_secure_domain":"secure.huffingtonpost.com","auth_secure_protocol":"https","auth_method":"frame","static_secure_domain":"s-s.huffpost.com","images_secure_domain":"s-i.huffpost.com","images_secure_www_domain":"s-i.huffpost.com","social_tracking":true,"primary_vertical_id":-1,"primary_vertical_name":false,"primary_vertical_facebook_name":"HuffingtonPost","primary_vertical_twitter_name":"HuffingtonPost","current_vertical_facebook_name":"HuffingtonPost","current_vertical_twitter_name":"HuffingtonPost"}); });</script>    <!-- RUM footer -->
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a2134792db","applicationID":"4028938","transactionName":"YFIDbEBYVhJYURBaXFkYIk1BTVcMFkIMXFZZXhkXaVxWFUtLORxXUhgmXUBUWQ9A","queueTime":0,"applicationTime":475,"ttGuid":"","agentToken":"","atts":"TBUAGghCRRw=","errorBeacon":"bam.nr-data.net","agent":""}</script>    <script type="text/javascript" src="http://s1.huffpost.com/assets/js.php?v=1507134562&f=phoenix%2Feditions.js%2Clayouts%2F13.js%2Cphoenix%2Ffloating_share.js" async></script>
+    
+    <script> jQuery(document).foundation(); </script>
+
+</body>
+</html>

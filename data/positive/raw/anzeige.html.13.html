@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+  <head>
+  	<title></title>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    
+    <link rel="stylesheet" href="https://css.bewerbermatching.com/base.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://css.bewerbermatching.com/responsive.css" type="text/css" media="all and (max-width: 772px)">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700" rel="stylesheet"> 
+    
+    <style>
+    /* LAYOUT */
+	/* DHA / v1 / 28.11.2016 */
+        
+		#ag {
+        	max-width: 780px;
+    	}
+        #ag p, #ag ul, #ag h1, #ag h2 {
+            font-family: 'Open Sans', sans-serif;
+            color: #000000;
+            font-size: 13px;
+            padding: 0 30px;
+            line-height: 18px;
+        }	
+        #ag p { 
+            padding-top: 20px; 
+        }    
+        #ag h1 {
+			font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+			margin-top: 30px;
+			color: #d43120;
+			text-transform: uppercase;
+            line-height: 26px;
+			position: relative;
+		}
+		#ag h1:before {
+			content: " ";
+			position: absolute;
+			width: 22px;
+			height: 22px;
+			left: -12px;
+			top: 3px;
+			background: url(indicator.png);
+			background-size: cover;
+			
+        }    
+        #ag h2 { 
+            font-size: 18px; 
+            padding-top: 2px; 
+            line-height: 20px; 
+        }
+        #ag a { 
+            color:#000;	
+            text-decoration:none; 
+        }
+        #ag ul { 
+            padding-left: 30px;
+			list-style-type: none;
+        }
+        #ag li { 
+            padding-left:15px; 
+            padding-top:2px;
+			position: relative;
+        }
+		#ag li:before {
+			position:absolute;
+			top: 1px;
+			left: 0;
+			content: "\2605";
+			font-size: 9px;
+		}
+		#ag .crossfade {
+			height:345px;
+}
+		#ag .crossfade img {
+			position:absolute;
+			left:0;
+			top: 0;
+			opacity: 1;
+		}
+		#ag .crossfade img.bottom {
+			opacity: 0;
+			animation: fade 8s ease infinite 3s;
+		}
+		@keyframes fade { 
+			0% {opacity: 0;}
+			25% {opacity: 1;}
+			50% {opacity: 1;}
+			75% {opacity: 0;}
+			100% {opacity: 0;}
+		}
+		#ag .intro {
+			background: url(intro_bg.jpg) repeat-x top left;
+			background-size: contain;
+			transform: skewY(-3deg);
+			margin-top: -45px;
+			padding-bottom: 25px;
+		}
+		#ag .intro p {
+			font-family: 'Oswald', sans-serif;
+			padding-left: 100px;
+			font-size: 18px;
+			letter-spacing: 0.7px;
+			word-spacing: 2px;
+			padding-top: 8px;
+			color: #fff;
+			transform: skewY(3deg) rotate(-3deg);			
+		}
+		#ag .intro p:first-child {
+			font-family: 'Oswald', sans-serif;
+			font-size: 40px;
+			line-height: 42px;
+			padding: 25px 100px 0 100px;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: #fff;
+			letter-spacing: 0.5px;
+			word-spacing: 1px;
+		}
+		#ag .logo {
+			margin-top: -60px;
+		}
+		#ag .arrow {
+			margin: 55px auto 0 auto;
+			width: 100%;
+			float: left;
+		}
+		#ag .arrow img {
+			margin: 0 auto;
+		}
+		#ag .content {
+			border-left: 2px solid #cbcbcb;
+			margin-top: 50px;
+			margin-bottom: 40px;
+		}
+		#ag .content p:nth-child(2) {
+			padding-top: 35px;
+		}
+		#ag .apply {
+			font-family: 'Oswald', sans-serif;
+			background: #d43120;
+			color: #fff;
+			padding: 10px 15px;
+			margin-left: 30px;
+			margin-top: -14px;
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 24px;
+			width: 150px;
+			text-align: center;
+			letter-spacing: 0.75px;
+			position: relative;
+		}
+		#ag .apply:before {
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 20px;
+			top: 11px;
+			left: -41px;
+			background: url(indicator.png) no-repeat;
+			background-size: cover;
+		}
+		#ag p + .apply {
+			margin-top: 30px;
+		}
+		#ag p + .apply:before {
+			height: 40px;
+			top: 11px;
+			left: -41px;
+			background: url(indicator.png) no-repeat #fff;
+			background-size: contain;
+		}
+		#ag .apply a {
+			color:#fff;
+		}
+		#ag .apply a:hover {
+			text-decoration: underline;
+		}
+		#ag .highlight {
+			font-family:'Oswald', sans-serif;
+			color: #d43120;
+			font-size: 16px;
+			position: relative;
+		}
+		#ag .highlight:before {
+			position: absolute;
+			top: 23px;
+			left: -7px;
+			content:"";
+			width: 13px;
+			height: 13px;
+			background: url(indicator.png) no-repeat;
+			background-size: cover;
+		}
+		#ag .highlight + p {
+			padding-top: 2px;
+		}
+		#ag .icons {
+			padding:25px 30px 15px 28px;
+		}
+		#ag .icons img {
+			max-width:25px;
+			display: inline;
+		}
+		#ag .zert {
+			position: absolute;
+			bottom: 0;
+			right: 30px;
+			width: 100px;
+		}
+		#ag .zert2 {
+			position: absolute;
+			bottom: 0;
+			right: 150px;
+			width: 100px;
+		}
+
+
+@media screen and (max-width: 699px) {
+		
+		#ag .crossfade {
+			height: 230px;
+		}	
+		#ag .intro p {
+			padding-left: 50px;
+			line-height: 22px
+		}
+		#ag .intro p:first-child {
+			font-size: 30px;
+			line-height: 33px;
+			padding: 25px 50px 0 50px;
+		}
+		#ag .arrow {
+			margin-top: 20px;
+		}
+		#ag .logo {
+			margin-top: 15px;
+		}
+		#ag .content {
+			margin-top: 40px;
+		}
+		#ag p + .apply:before {
+			height: 115px;
+		}
+		#ag .zert {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			margin: 35px 30px 0 30px;
+		}
+		#ag .zert2 {
+			bottom: -1px;
+			right: 130px;
+			margin: 20px 0 0 30px
+		}
+
+}
+@media screen and (max-width: 480px) {
+
+		#ag .crossfade {
+			height: 50vw;
+		}
+		#ag .intro {
+			padding-bottom: 12px;
+		}
+		#ag .intro p {
+			padding-left: 30px;
+			padding-top: 5px;
+			font-size: 14px;
+			line-height: 18px
+		}
+		#ag .intro p:first-child {
+			font-size: 20px;
+			line-height: 23px;
+			padding: 15px 30px 0 30px;
+		}
+		#ag .content {
+			margin-top: 40px;
+		}
+		#ag p + .apply:before {
+			height: 190px;
+			top: 11px;
+			left: -41px;
+			background: url(indicator.png) no-repeat #fff;
+			background-size: contain;
+		}
+		#ag .zert2 {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			margin: 25px 30px 0 30px;
+		}
+
+}
+        
+    </style>
+
+
+  </head>
+  <body>
+	<div id="ag" class="clear">
+        <div id="ag-inner-wrapper">
+			<div class="zwoelf spalten crossfade">
+                <img src="pic1.jpg" width="100%">
+                <img class="bottom" src="pic2.jpg" width="100%">
+            </div>
+            
+            <div class="zwoelf spalten intro">
+				<p class="claim">Sauber Karriere machen bei Carglass<sup>&reg;</sup> bedeutet &hellip;</p>
+				<p>&hellip; 1,2 Mio. Kunden im Jahr rund um die Uhr gl&uuml;cklich zu machen.</p>
+            </div>
+			<div class="arrow"><a href="#bottom"><img src="arrow.png"></a></div>
+			<div class="drei spalten achtabstand fuenf-s sechsabstand-s sechs-xs fuenfabstand-xs logo"><img src="logo.png" width="100%"></div>
+			<div class="zehn spalten zweiabstand elf-xs eineabstand-xs content">
+				<p class="apply"><a href="https://recruitingapp-5078.de.umantis.com/Vacancies/1345/Application/CheckLogin/31?customer=5078	" target="_blank">Jetzt bewerben!</a></p>
+		  <p>F&uuml;r unser Kundenkontaktcenter in Bonn suchen wir unbefristet und zum n&auml;chstm&ouml;glichen Zeitpunkt einen</p>
+			  <h1>Teamleiter Kundenkontaktcenter (m/w), Schwerpunkt B2B</h1>
+				<p>CARGLASS<sup>&reg;</sup> ist einer der Top Arbeitgeber Deutschland und eine der Marken des Jahrhunderts. In &uuml;ber 300 Service Centern arbeiten 2.200 qualifizierte Mitarbeiter j&auml;hrlich f&uuml;r 1,2 Mio. Kunden&shy;kontakte. Zahlreiche Mitarbeiter-, Trainings- &amp; Fortbildungsangebote lassen Raum f&uuml;r die pers&ouml;nliche Entwicklung und Entfaltung von Ideen. CARGLASS<sup>&reg;</sup> geh&ouml;rt zum internationalen Belron<sup>&reg;</sup>-Konzern, der in 30 L&auml;ndern auf 5 Kontinenten vertreten ist und insgesamt 25.000 Mitarbeiter besch&auml;ftigt.</p>
+			  <p class="highlight">Dein Aufgabenbereich</p>
+			  <ul>
+			    <li>In dieser Position &uuml;bernimmst Du die fachliche und disziplinarische F&uuml;hrung sowie operative Steuerung eines Teams in unserem Kundenkontaktcenter </li>
+			    <li> Du analysierst und verantwortest die Ergebnisse Deiner unterstellten Mitarbeiter und leitest erforder&shy;liche Ma&szlig;nahmen zur Steigerung der Kundenservice&shy;qualit&auml;t und Erreichung der verein&shy;barten Performance&shy;ziele und KPIs in Deinem Team ein </li>
+			    <li> Zudem sorgst Du f&uuml;r die stetige Weiterentwicklung der Mitarbeiter durch beispielsweise Schulungs&shy;ma&szlig;nahmen und einen reibungslosen Kommuni&shy;kationsfluss und unterst&uuml;tzt bei der Einarbeitung neuer Mitarbeiter </li>
+			    <li> Du k&uuml;mmerst Dich um die Identifikation und Umsetzung von Verbesserungsma&szlig;nahmen sowie die kontinuierliche Optimierung der Arbeitsabl&auml;ufe und -prozesse und wirkst an Projekten rund um das Kundenkontaktcenter mit </li>
+			    <li> Du berichtest regelm&auml;&szlig;ig an die operativen Manager und tauschst Dich mit den anderen Teamleitern im Kundenkontaktcenter zum operativen Tagesgesch&auml;ft und Best-Practice aus </li>
+			  </ul>
+			  <p class="highlight">Du bringst mit</p>
+			  <ul>
+			    <li>Auf Basis eines abgeschlossenen betriebswirtschaft&shy;lichen Studiums oder einer abge&shy;schlos&shy;senen kaufm&auml;nnischen Ausbildung bringst Du mehrj&auml;hrige Berufserfahrung in vergleichbarer Position, idealerweise in einem Kundenkontaktcenter, mit </li>
+			    <li> Als F&uuml;hrungskraft zeichnest Du Dich durch ein hohes Ma&szlig; an Entscheidungsfreude und Durchsetzungs&shy;verm&ouml;gen sowie eine ausgepr&auml;gte Kunden- und Serviceorientierung aus  </li>
+			    <li> Pers&ouml;nlich &uuml;berzeugst Du mit Deiner hohen kommu&shy;ni&shy;kativen und sozialen Kompetenz und &uuml;bernimmst gerne auch die Vorbildfunktion </li>
+			    <li> Mit modernen Systemen / Tools und Arbeits&shy;prozessen in einem Kundenkontaktcenter kennst Du Dich aus und kannst mit den g&auml;ngigen MS Office-Programmen sicher umgehen  </li>
+			    <li> Du &uuml;berzeugst durch Dein analytisches, konzeptio&shy;nelles und umsatzf&ouml;rderndes Denken und Handeln </li>
+			    <li> Du zeichnest Dich durch Dein Verst&auml;ndnis f&uuml;r digitale Prozesse aus und arbeitest sehr eigen&shy;verantwortlich, strukturiert als auch l&ouml;sungs&shy;orientiert  </li>
+			    <li> Sehr gute Deutsch- und gute Englischkenntnisse runden Dein Profil ab</li>
+			  </ul>
+			  <p class="highlight">Wir bieten Dir &hellip;</p>
+			  <p>&hellip; einen der saubersten Arbeitspl&auml;tze der Auto&shy;mobil&shy;branche! In einem erfolgreich wachsenden Unter&shy;nehmen, einem Top- Arbeitgeber und zahlreichen Angeboten wie Sport- und Gesundheits&shy;ma&szlig;nahmen, Aus- und Weiterbildung, Familienservice uvm. Dazu erh&auml;ltst Du eine profes&shy;sio&shy;nelle Einarbeitung und nat&uuml;rlich ein starkes Team.</p>
+			  <div class="zwoelf spalten icons">
+					<img src="arbeitszeiten.png" title="Flexible Arbeitszeiten">
+					<img src="homeoffice.png" title="Home Office">
+					<img src="kantine.png" title="Kantine">
+
+
+					<img src="gesundheitsmassnahmen.png" title="Gesundheitsmaßnahmen">
+					<img src="betriebsarzt.png" title="Betriebsarzt">
+					<img src="coaching.png" title="Coaching">
+					<img src="park.png" title="Parkplatz">
+					<img src="verkehrsanbindung.png" title="Gute Verkehrsanbindung">
+					<img src="rabatte.png" title="Mitarbeiterrabatte">
+
+					<img src="beteiligung.png" title="Mitarbeiterbeteiligung">
+					<img src="events.png" title="Mitarbeiterevents">
+
+			  </div>
+			  <p>Wir freuen uns auf Dich und Deine Bewerbung!</p>
+			  <p> Du strebst einen Wechsel der T&auml;tigkeit an? <br>
+		      Dann bewirb Dich bitte direkt &uuml;ber unser Online-Bewerbungsformular.  </p>
+			  <p>Wir freuen uns auf Dich! </p>
+			  <p>Carglass GmbH <br>
+		      Dorothea Rubin</p>
+			  <p class="apply"><a href="https://recruitingapp-5078.de.umantis.com/Vacancies/1345/Application/CheckLogin/31?customer=5078	" target="_blank">Jetzt bewerben!</a></p>
+			  <div class="zert">
+			  	<img src="zert.jpg" width="100%" alt="">
+			  </div>
+			  <div class="zert2">
+				<img src="zert2.jpg" width="100%" alt="">
+			  </div>
+
+				<a id="bottom"></a>
+			</div>
+            
+    	</div>
+	<div id="foo" style="display: none">Teamleiterin Leiter Leiterin Kundenkontakt Kundencenter Abteilungsleiter Abteilungsleiterin Führungsposition Führungskraft Leitung Teamleitung Betriebswirtschaft Betriebswirt Betriebswirtin Kauffrau Kaufmann Bürokauffrau Bürokaufmann Industriekaufmann Industriekauffrau </div>
+   	</div>
+  <script type="text/javascript"> 
+    var _paq = _paq || [];
+	_paq.push(['setCustomVariable', 1, 'domain', document.domain, 'visit']);
+	_paq.push(['setCustomVariable', 2, 'jobboerse', 'xing', 'visit']);
+	_paq.push(['setCustomVariable', 3, 'jobboerse', 'xing', 'page']);
+	_paq.push(['setDoNotTrack', true]);
+	_paq.push(['disableCookies']);
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+
+	(function() {
+	var u='https://pw.bewerbermatching.com/';
+	_paq.push(['setTrackerUrl', u+'piwik.php']);
+	_paq.push(['setSiteId', '89232']);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+	g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	})();</script><noscript><img src="https://pw.bewerbermatching.com/xing/89232" style="border:0"></noscript></body>
+</html>

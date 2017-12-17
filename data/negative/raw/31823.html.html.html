@@ -1,0 +1,2407 @@
+<!DOCTYPE html><html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="keywords" content="fehlercode 204, smartcard" /><meta charset="utf-8" /><!--[if IE]><![endif]-->	<script type='text/javascript' src="//assets.adobedtm.com/e9e956c5e126005d1cc9cacd2d7637dcf1d19452/satelliteLib-d476500d99649b750160c26af49936d78a800032.js"></script><script type='text/javascript' src="/themes/skyandfriends/js/wasky-fallback-community.js"></script><title>SmartCard plötzlich nicht mehr freigeschaltet (... | Sky &amp; Friends</title>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<script>
+    if (top != self) {
+        var isSafeTopUrl = false;
+        try {
+            var topUrl = top.location.href;
+            var topUrlQsIdx = topUrl.indexOf('?');
+            if (topUrlQsIdx > 0) {
+                topUrl = topUrl.substring(0, topUrlQsIdx);
+            }
+            topUrl = topUrl.toLowerCase();
+            var safeTopUrls = new Array( 'https://community.sky.de/theme-site.jspa', 'https://community.sky.de/skin-advanced.jspa', 'https://community.sky.de/skin-advanced!UploadSkinZip.jspa' );
+            for (var i = 0; i < safeTopUrls.length; i++) {
+                if (safeTopUrls[i].toLowerCase() == topUrl) {
+                    isSafeTopUrl = true;
+                    break;
+                }
+            }
+        } catch (err) {
+        }
+        if (!isSafeTopUrl) {
+            top.location = location;
+        }
+    }
+</script>
+<link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive-base.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive-icons.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive-streambuilder.css" type="text/css" media="all" /><link rel="search" href="/opensearch.xml" title="Sky &amp; Friends" type="application/opensearchdescription+xml"/><link rel="shortcut icon" type="image/x-icon" href="/resources/images/palette-1022/faviconImage-1501656532033-favicon64x64.ico" /><!--[if lt IE 9]><script src="/7.0.5.bc5ae04/resources/scripts/vendor/html5shiv.min.js"></script><![endif]--><script src="/7.0.5.bc5ae04/resources/scripts/gen/0b4201f696d932043cacbd11cf607d45.js"></script>
+
+
+
+
+<meta name="description" content="Wie im Titel schon beschrieben, funktioniert mein Sky plötzlich nicht mehr. Folgender Text wird mir angezeigt: &quot;Für dieses Programm ist Ihre SmartCard" />
+
+<link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive-content.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jive-bridges.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/7.0.5.bc5ae04/styles/tiny_mce3/themes/advanced/skins/default/content.css"
+      type="text/css" media="all"/>
+<link rel="stylesheet" href="/7.0.5.bc5ae04/styles/jfo.css" type="text/css" media="all">
+
+    <link rel="alternate" type="application/rss+xml"
+          title=" Service Feed: Diskussionen"
+          href="/community/feeds/threads?community=2003">
+
+<link rel="alternate" type="application/rss+xml"
+      title="Messages in 'SmartCard plötzlich nicht mehr freigeschaltet (Fehlercode 204)' Feed: Diskussion"
+      href="/community/feeds/messages?thread=31823">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN action bar -->
+
+    
+
+<!-- END action bar -->
+
+
+<link rel="canonical" href="/thread/31823"/>
+
+
+
+<link rel="stylesheet" href="/7.0.5.bc5ae04/plugins/gamification_7.0.5.0_92/resources/styles/n4jive.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/plugins/gamification_7.0.5.0_92/resources/styles/lib/n4jive/n4jive.core.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/plugins/gamification_7.0.5.0_92/resources/styles/lib/n4jive/nitro4x.base.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/plugins/sky-extension-plugin_4.0.0/resources/styles/sky-extension-plugin.css" type="text/css" media="all"/><link class="j-custom-theme" rel="stylesheet" href="/resources/styles/palette-1022/1501672574954.css" type="text/css"  media="all"/><link rel="stylesheet" href="/7.0.5.bc5ae04/resources/styles/exobjects-icons/jive-exobjects-icons.css" type="text/css" media="all"/>
+    <style type="text/css">
+
+#j-footer{display:none;}
+#j-cust-foot{margin-bottom:20px;}
+
+    </style>
+    
+		<script type="text/javascript">
+
+
+var app = function( site ){
+
+    this.init = function(){
+         /*! jquery.livequery - v1.3.6 - 2013-08-26
+         * Copyright (c)
+         *  (c) 2010, Brandon Aaron (http://brandonaaron.net)
+         *  (c) 2012 - 2013, Alexander Zaytsev (http://hazzik.ru/en)
+         * Dual licensed under the MIT (MIT_LICENSE.txt)
+         * and GPL Version 2 (GPL_LICENSE.txt) licenses.
+         */
+        !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?a(require("jquery")):a(jQuery)}(function(a,b){function c(a,b,c,d){return!(a.selector!=b.selector||a.context!=b.context||c&&c.$lqguid!=b.fn.$lqguid||d&&d.$lqguid!=b.fn2.$lqguid)}a.extend(a.fn,{livequery:function(b,e){var f,g=this;return a.each(d.queries,function(a,d){return c(g,d,b,e)?(f=d)&&!1:void 0}),f=f||new d(g.selector,g.context,b,e),f.stopped=!1,f.run(),g},expire:function(b,e){var f=this;return a.each(d.queries,function(a,g){c(f,g,b,e)&&!f.stopped&&d.stop(g.id)}),f}});var d=a.livequery=function(b,c,e,f){var g=this;return g.selector=b,g.context=c,g.fn=e,g.fn2=f,g.elements=a([]),g.stopped=!1,g.id=d.queries.push(g)-1,e.$lqguid=e.$lqguid||d.guid++,f&&(f.$lqguid=f.$lqguid||d.guid++),g};d.prototype={stop:function(){var b=this;b.stopped||(b.fn2&&b.elements.each(b.fn2),b.elements=a([]),b.stopped=!0)},run:function(){var b=this;if(!b.stopped){var c=b.elements,d=a(b.selector,b.context),e=d.not(c),f=c.not(d);b.elements=d,e.each(b.fn),b.fn2&&f.each(b.fn2)}}},a.extend(d,{guid:0,queries:[],queue:[],running:!1,timeout:null,registered:[],checkQueue:function(){if(d.running&&d.queue.length)for(var a=d.queue.length;a--;)d.queries[d.queue.shift()].run()},pause:function(){d.running=!1},play:function(){d.running=!0,d.run()},registerPlugin:function(){a.each(arguments,function(b,c){if(a.fn[c]&&!(a.inArray(c,d.registered)>0)){var e=a.fn[c];a.fn[c]=function(){var a=e.apply(this,arguments);return d.run(),a},d.registered.push(c)}})},run:function(c){c!==b?a.inArray(c,d.queue)<0&&d.queue.push(c):a.each(d.queries,function(b){a.inArray(b,d.queue)<0&&d.queue.push(b)}),d.timeout&&clearTimeout(d.timeout),d.timeout=setTimeout(d.checkQueue,20)},stop:function(c){c!==b?d.queries[c].stop():a.each(d.queries,d.prototype.stop)}}),d.registerPlugin("append","prepend","after","before","wrap","attr","removeAttr","addClass","removeClass","toggleClass","empty","remove","html","prop","removeProp"),a(function(){d.play()})});       
+
+        /* SPOILER-PLUGIN */
+        window.setTimeout( function(){ if( $j( 'body.jive-body-formpage.jive-body-formpage-doc-upload .jive-editor-panel,body.jive-body-formpage .jive-large-editor-panel' ).length ){
+                $j( '.mceToolbar .mceButton' ).livequery( function(){
+                    if( skySpecificOptions.spoilerExtensionInitialised ) return false;
+                    skySpecificOptions.spoilerExtensionInitialised = true;
+                    var name = 'Spoiler';
+                    tinyMCE.activeEditor.formatter.register({spoiler: {block : 'div', wrapper : 1, attributes : {'class' : 'spoiler'}, exact:true}})
+                    $j( 'head' ).append( '<style>a.mceButton.mce_spoiler{ margin-top:-3px; }a.mceButton.mce_spoiler:hover .mce_spoiler.mceIcon,a.mceButton.mce_spoiler.mceButtonActive .mce_spoiler.mceIcon{ background-position:center bottom; } .mce_spoiler.mceIcon{ height:23px !important;width:28px !important;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAuCAYAAAA7v3kyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAK8AAACvABQqw0mAAAAB90RVh0U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgOLVo0ngAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDkvMDgvMTRQh38EAAAD8UlEQVRYhe2WzW9UVRjGf+femdvOB9OPaekUGOg0LUSRCsXGkthE3BFX7ggm7Ny6MsFElq5dmLj2b5C4MiEuWFWlKEQoZQp1CtPvdjrcO733nnPPcVE/oul02gEGQ3x2N3nzPOd97/n4iVqtZmihrFaG/R/4QhTbS5GUEt+rEG2WMYGL0AoiBTpCWHHs7jztvQPEYo3tRKNd6rouavMxlr+CY8WQoU9lfQMVhrTZ0JtJEYUBShvsoQkS3bnmA6vVKnrlHg6Sx0/KlBbW8UUa2ZZDRoJQaVJqiUOUOZXPYukICuO0Hx2pG1h3Bq7roteLOHqL2/fncAbepZbqRyoIpMGXhkBqlkNNKu+wVv2WlPuI9PR13PYu0gfzO/rW3TTKXcV4iywHDhMffMSaOUwgYSs0fHJphM8un6IWGLZCw51SyOB7F7FPnMfzPBa/+3r/HQarMyRypyn0Ht7+Dg21ICJQYIzGGE0tjAgCjTDb6+4cfgsv2UF47av9B8YPnsJJdxFFEZZlkc3A/FqEH2o+/vLH7QVsKXypOXk0idZ6u7b7CF2Db9QNrH8O3UVkdQmlFFJKjmUt0o7Gq0m8LYXnS1xf0pMWjBZiSClRShEszGJXF5vosDuPKf1A+HSRKFsgm+pgfMiizTLcnQ/QGF7LO4wNOxR6BaFXRc5NIX/6hsqhMQ7W8d31WCyVisTmJ0nEBPQMQ7oXkp1gO/+o06u/Ec3cIJz/lYdWP29fvgJC7D8QoPTgLmvTk+TYIJ1sh7YMOp7EGBBaodwNWCryaNVDDJ1j9P1LCMuu69cwEMBEiuXiHcrTN6mU7mOrAMsoTGSId/eTHT5N7sQoB/qONLLaW+Dz1Kv/PLX+PTSmpb/wJXQohBAjn982xZUA29r5sD6LIm2wLUEh63D76oiI9V2ZMlNXR5970E7quzJlrKd+1JIwgKd+hPUixrib/puYKLQkLivEvDLsgIlRR54gM4AWje0aVsSVi+M9xgr+wEQTUtn4FyYu/oxTvoUcmKCW2B0Tdw10VJX4+p+YuLAzJpb+xsTEvWvEjo1TzTaBibZ0iVebwMSZ68RPdiEz+8TEeNA8Jm5+3wQmqrXmMVG+DEzUdXzrjlQ/AyZazWBidCCPWWgOE1f6xujab6Bq72HzwHGS5UkSq7PInmFyyV4uvNnJhbOpv+qMAX9hFvNgGxMfiH6OTXy4/w4BrJ4h1vwQtzhJ//KNhpgoC+c4ev4SUP9+bnjTpI68TvLQcSpzd3hYvIn/5BdsFWCzjYl09JMsTND5ziiJnsaYuLe71IqRGTxDZvDMXsp31atPba0PjHRrMVF4nkfu01vmRbONbQmqX5wVvwOd2pWGKGSHqgAAAABJRU5ErkJggg==) top center no-repeat;}</style>' );
+                    $j( 'table.mceToolbar td' ).last().before( '<td><span tabindex="-1" class="mceSeparator"></span></td>' );
+                    $j( 'table.mceToolbar td' ).last().before( '<td style="position:relative;"><a title="'+name+'" class="mceButton mceButtonEnabled mce_spoiler" id="content_spoiler" tabindex="-1"><span class="mceIcon mce_spoiler"></span></a></td>' );
+                    $j( '#content_spoiler' ).click( function(){
+                        if( $j.browser.msie && parseInt( $j.browser.version ) < 9 ){
+                            if( skySpecificOptions.lastSelection ){
+                                tinyMCE.activeEditor.getWin().document.focus();
+                                skySpecificOptions.lastSelection.select();
+                            }
+                        }
+                        tinyMCE.activeEditor.formatter.toggle( 'spoiler' );
+                        if( tinyMCE.activeEditor.formatter.match( 'spoiler' ) )
+                            $j( this ).addClass( 'mceButtonActive' );
+                        else
+                            $j( this ).removeClass( 'mceButtonActive' );
+                        return false;
+                    } );
+
+                    $j( tinyMCE.activeEditor.getWin().document ).find( 'head' ).append( '<style>div.spoiler{ background:#D3D3D3; }</style>' );
+
+                    var spoilerActiveCheck = function( editor, evt ){
+                        if( tinyMCE.activeEditor.formatter.match( 'spoiler' ) )
+                            $j( '#content_spoiler' ).addClass( 'mceButtonActive' );
+                        else
+                            $j( '#content_spoiler' ).removeClass( 'mceButtonActive' );
+                        if( $j.browser.msie && parseInt( $j.browser.version ) < 9 ){
+                            var o = tinyMCE.activeEditor.getWin().document.selection.createRange();
+                            if( o.offsetLeft )
+                                skySpecificOptions.lastSelection = o;
+                        }
+                    }
+                    tinyMCE.activeEditor.onEvent.add( spoilerActiveCheck );
+                    tinyMCE.activeEditor.onChange.add( spoilerActiveCheck );
+                    if( $j.browser.msie && parseInt( $j.browser.version ) < 9 ){
+                        tinyMCE.activeEditor.onNodeChange.add( spoilerActiveCheck );
+                        tinyMCE.activeEditor.onChange.add( spoilerActiveCheck );
+                    }
+                } );
+            }
+        }, 3000 );
+        var name = 'Spoiler';
+        $j( 'div.spoiler' ).each( function(){
+            if( $j( this ).prev().hasClass( 'showspoiler' ) ) return false;
+            $j( this ).before( '<a class="showspoiler j-outcome-badge" href="#">'+name+'</a>' ).hide();
+        } );
+        $j( 'a.showspoiler' ).click( function(){
+            if( $j( this ).hasClass( 'active' ) )
+                $j( this ).removeClass( 'active' ).next().hide( 'slow' );
+            else
+                $j( this ).addClass( 'active' ).next().show( 'slow' );
+            return false;
+        } );    
+    
+    };
+
+}
+var skySpecificOptions = {
+    spoilerExtensionInitialised:false
+};
+document.ready = function(){
+    var App = new app( 'sky' );
+    App.init();
+};
+
+
+
+        </script>
+        <style type="text/css">
+            div.spoiler{display:none;}
+        </style>
+        </head><body class="jive-body-content j-thread jive-body-content-thread j-header-mode-custom"><a id="top"></a><div id="j-header-wrap" data-company-name="" data-no-user-bar="false" role="banner" ><header id="j-compact-header" class="clearfix"><!-- Customer generated HTML --><div id="j-cust-head" class="clearfix"><h1>
+    <a href="/">Sky &amp; Friends</a>
+  </h1></div><!-- Navigational buttons/links --><nav id="j-globalNav-bg" role="navigation" aria-label="Jive" data-mode="custom"><ul id="j-globalNav" role="menubar" class="j-globalNav"><li id="jive-nav-link-home"class="  j-globalNav-li j-ui-elem"><a  href="/home"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Übersicht</span></a></li><li id="customLink0"aria-haspopup="true"class="  j-globalNav-li j-custom-link j-ui-elem"><a  href="/"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link   j-ui-elem">Bereiche<span class="j-ui-elem j-nav-more"></span></span></a><div id="customLink0-menu" class="j-pop-main j-menu j-quick-menu" style="display: none;"><ul><li><a id="customLink0-0" href="/community/filme/content"class="j-ui-elem"><span class="lnk">Filme</span></a></li><li><a id="customLink0-1" href="/community/serien/content"class="j-ui-elem"><span class="lnk">Serien</span></a></li><li><a id="customLink0-2" href="/community/sport/content"class="j-ui-elem"><span class="lnk">Sport</span></a></li><li><a id="customLink0-3" href="/community/technik/content"class="j-ui-elem"><span class="lnk">Technik</span></a></li><li><a id="customLink0-4" href="/community/service/content"class="j-ui-elem"><span class="lnk">Service</span></a></li><li><a id="customLink0-5" href="https://community.sky.de/community/off-topic/content"class="j-ui-elem"><span class="lnk">Off Topic</span></a></li><li><a id="customLink0-6" href="/community/ueber-die-community/content"class="j-ui-elem"><span class="lnk">Über die Community</span></a></li><li><a id="customLink0-7" href="/places"class="j-ui-elem"><span class="lnk">Alle Bereiche</span></a></li></ul></div></li><li id="customLink1"class="  j-globalNav-li j-custom-link j-ui-elem"><a  href="/content?filterID=all"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Inhalte</span></a></li><li id="jive-nav-link-conx"class="  j-globalNav-li j-ui-elem"><a  href="/people"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Personen</span></a></li></ul><div id="j-links"><ul class="j-globalNav"><li class="j-nav-create j-nav-user j-globalNav-li js-satellite-nav-container" aria-haspopup="true"><ul id="j-satNav"><li class="login"><a href="/login.jspa" class="login" id="navLogin" title="Anmelden">Anmelden</a></li><li class="register"><a href="/login.jspa?registerOnly=true" class="register" title="Registrieren" id="jive-nav-link-reg">Registrieren</a></li></ul><div id="j-satNav-menu" class="clearfix" style="display:none;"></div></li></ul><div id="j-spotlight-search" role="search" data-mode="custom"><span id="searchpopupanchor" class="j-ui-elem j-search-left"></span><span><label for="autosearch" class="j-508-label">Suche</label><input data-spotlight-enabled="true" id="autosearch" class="j-ui-elem" data-component="autosearch" data-popup-anchor="searchpopupanchor" placeholder="Suche" type="text" role="combobox" data-hidetypes="bookmarks frequent recent " data-community-name="Sky &amp; Friends"/></span><span class="j-ui-elem j-search-right"></span><span class="jive-icon-sml jive-glyph-delete" data-component="button" data-type="clear" data-field="autosearch"></span></div></div></nav></header></div><section id="j-main" class="clearfix"><div id="jive-body" class="clearfix">
+<div id="jive-breadcrumb"><span><a href="/places">Alle Bereiche</a> &gt; <a href="/community/service">Service</a> &gt;             <a href="/community/service/content?filterID=contentstatus[published]~objecttype~objecttype[thread]">Diskussionen</a>
+</span></div>
+
+
+<div id="rte-template" style="display:none;">
+        <input type="hidden" name="jive.token.name" value="message.post.31823"/>
+        <input type="hidden" name="message.post.31823" value="[placeholder]"/>
+	<form action="/post.jspa?container=2003&containerType=14&thread=31823&message=175197&reply=true" method="post" name="isInline" id="postform" >
+	<input type="hidden" name="containerType" value="14">
+	<input type="hidden" name="container" value="2003">
+
+		<input type="hidden" name="thread" value="31823">
+
+		<input type="hidden" name="reply" value="true">
+        <input type="hidden" name="message" value="">
+        <input type="hidden" name="inlinePost" value="true">
+    <input type="hidden" class="js-outcome-attachment" name="outcome" value="" />
+
+<input type="hidden" name="postedFromGUIEditor" id="postTypeFlag" value="false"/>
+
+	<div class="jive-error-message jive-error-box" id="dwr-error-table" style="display:none;" aria-live="polite" aria-atomic="true">
+		<div>
+			<span class="jive-icon-med jive-icon-redalert"></span>
+			<span class="jive-error-text" id="dwr-error-text"></span>
+		</div>
+	</div>
+
+
+
+	<div class="jive-error-message jive-error-box" id="post-error-table" style="display:none;" aria-live="polite" aria-atomic="true">
+		<div id="post-error-subject" style="display:none;">
+Geben Sie einen Titel an.		</div>
+		<div id="post-error-body" style="display:none;">
+Sie können keine leere Nachricht posten. Geben Sie Ihre Nachricht ein und wiederholen Sie den Vorgang.		</div>
+	</div>
+	<input type="hidden" name="subject" size="75" maxlength="255"  id="subject01" value="SmartCard plötzlich nicht mehr freigeschaltet (Fehlercode 204)"/>
+
+
+<textarea name="body" rows="10" class="jive-comment-textarea"></textarea>
+
+
+<div>
+    <input type="submit" name="post" class="jive-form-button-save j-btn-callout" value="Antwort hinzufügen"/>
+    <input type="button" name="cancel" class="jive-form-button-cancel" value="Abbrechen"/>
+</div>
+</form>
+</div>
+
+
+<!-- draft deps -->
+
+
+
+
+
+
+<!-- BEGIN layout -->
+<div class="j-layout j-layout-ls clearfix">
+
+<!-- BEGIN large column -->
+<div class="j-column-wrap-l">
+<div class="j-column j-column-l lg-margin">
+<!-- moderation feedback message -->
+
+<!-- hidden div used in parsing of ajax response to indicate that we have a moderated message -->
+
+
+
+
+
+<div id="object-follow-notify" class="jive-info-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+<div id="content-featured-notify" class="jive-info-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+
+
+
+
+
+<!-- BEGIN thread messages -->
+<div id="jive-thread-messages-container" class="jive-thread-messages" role="main">
+
+
+    <!-- BEGIN thread info -->
+    <div class="jive-thread-info clearfix j-rc4">
+
+<ul class="js-outcome-badge-container js-outcome-badge-container-top j-outcome-badge-container-top j-outcome-badge-container js-ed-1-31823 j-outcome-summary-container clearfix" data-object-type="1" data-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;finalized\&quot;, \&quot;outdated\&quot;, \&quot;official\&quot;)&quot;"aria-live="polite"></ul>
+        <!-- BEGIN pagination-->
+
+            <strong class="font-color-meta j-thread-info-block">11 Antworten</strong>
+        <span class=" j-thread-info-block font-color-meta">
+<a href="#175595"
+                   class="localScroll">Neueste Antwort</a> am 23.10.2016 21:25 von Daniela H.         </span>
+
+
+
+            <a class="j-rss-icon" href="/community/feeds/messages?thread=31823">
+                <img class="jive-icon-sml jive-icon-rss" src="/7.0.5.bc5ae04/images/transparent.png" title="RSS" alt="RSS"/>
+            </a>
+
+
+    </div>
+    <!-- END thread info -->
+
+    <!-- BEGIN original thread post -->
+         
+
+        <div class="jive-content j-op j-rc4  js-tlo js-ed-1-31823"  role="article" data-object-type="1" data-object-id="31823">
+
+            <div class="j-thread-post j-rc4 " style="background: #ffffff">
+                <span class="j-thread-pointer j-ui-elem"></span>
+
+                <a name="31823"></a><a name="175197"></a>
+
+                <header class="js-original-header">
+
+                    <h1>
+                        <a href="/message/175197#175197">SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                    </h1>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/k.biermeier97"
+   data-externalId=""
+   data-username="k.biermeier97"
+   data-avatarId="1276"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="19782"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/k.biermeier97/avatar/46.png?a=1276"
+                data-avatarId="1276"
+            data-username="k.biermeier97"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="k.biermeier97"
+        />
+    </a>
+                        </div>
+                                <span class="j-post-author">
+                                        <strong><a href="/people/k.biermeier97"
+data-externalId=""
+data-username="k.biermeier97"
+data-avatarId="1276"
+id="jive-1978292857312625080727"
+data-userId="19782"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>k.biermeier97</a></strong> 22.10.2016 20:25
+                                </span>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-1-31823 j-outcome-tlo-badge-container" data-object-type="1" data-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                </header>
+                <section class="j-original-message">
+                <!-- [DocumentBodyStart:0674b65c-0911-4f13-a861-7a683a0d76cb] --><div class="jive-rendered-content"><p>Wie im Titel schon beschrieben, funktioniert mein Sky pl&ouml;tzlich nicht mehr. Folgender Text wird mir angezeigt: "F&uuml;r dieses Programm ist Ihre SmartCard nicht freigeschaltet. Vermutlich ist der Sender Teil eines Programmpakets, das Sie nicht abonniert haben. Bitte wenden Sie sich an unseren Kundenservice (Fehlercode 204). Was kann ich tun? Mein Abo l&#228;uft noch und muss weiterhin bezahlen.</p></div><!-- [DocumentBodyEnd:0674b65c-0911-4f13-a861-7a683a0d76cb] -->
+
+
+                </section>
+
+                <footer>
+
+
+                    <ul class="clearfix">
+                        <li class="j-footer-left font-color-meta">
+     
+        <span class="jive-content-footer-item">
+            1470&nbsp;Ansichten
+        </span>
+
+                        </li>
+
+                            <li class="j-footer-left font-color-meta">
+                                <span class="jive-content-footer-item">
+                                    <span class="jive-icon-sml jive-icon-folder"></span>Kategorien:  Sky Abonnement
+                                </span>
+                            </li>
+
+                        <li class="j-footer-left font-color-meta">
+
+    <!-- BEGIN view/add/edit tags -->
+    <span class="jive-content-footer-item jive-content-footer-tags">
+            <span class="jive-icon-sml jive-icon-tag"></span>Tags: <span id="jive-edit-inline-add-none" style="display:none;">keine</span> <span style="display:none;" id="jive-edit-inline-placeholder"> (<a href="#" class="jive-edit-inline-tags-link">hinzufügen</a>)</span>
+
+            <span class="jive-thread-post-details-tags" id="jive-thread-post-details-tags_G6vOm1">
+                <a href="/community/service/tags#/?tags=smartcard" title="Inhalte gekennzeichnet mit smartcard" aria-labelledby="tag-link-tooltip-0"><span role="presentation" aria-hidden="true">smartcard</span><div id="tag-link-tooltip-0" class="j-508-label">Inhalte gekennzeichnet mit smartcard</div></a>,
+                <a href="/community/service/tags#/?tags=fehlercode%20204" title="Inhalte gekennzeichnet mit fehlercode 204" aria-labelledby="tag-link-tooltip-1"><span role="presentation" aria-hidden="true">fehlercode 204</span><div id="tag-link-tooltip-1" class="j-508-label">Inhalte gekennzeichnet mit fehlercode 204</div></a>
+            </span>
+    </span>
+    <!-- END view/add/edit tags -->
+                        </li>
+
+
+                    </ul>
+
+                </footer>
+
+                <div class="jive-thread-ratings clearfix">
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="success-moderation-edit" class="jive-content-moderation-box" style="display:none"></div>
+
+    <!-- END original thread post -->
+
+
+<ul id="js-outcome-summary-container-1-31823" class="js-outcome-summary-container j-outcome-summary-container js-ed-1-31823" data-object-type="1" data-object-id="31823" aria-label="Ergebniszusammenfassung" role="group"></ul>
+<div id="jive-rolled-up-replies" class="j-so-finalized-rollup j-rc4"  style="display:none" >
+    Dieser Inhalt wurde als abgeschlossen markiert&nbsp;
+    <a id='jive-unroll-replies' class="j-so-finalized-unroll j-comment-count" href="#">
+Anzeige von                 11 Antworten
+    </a>
+</div>
+
+<div id="jive-replies"  >
+         
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-0">
+    <li class="reply" id="discussion-175198" data-object-type="2" data-object-id="175198">
+
+
+        <div id="thread-message-175198" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175198" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175198"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175198#175198">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/herbst"
+   data-externalId=""
+   data-username="herbst"
+   data-avatarId="7064"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="6247"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/herbst/avatar/46.png?a=7064"
+                data-avatarId="7064"
+            data-username="herbst"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="herbst"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/herbst"
+data-externalId=""
+data-username="herbst"
+data-avatarId="7064"
+id="jive-624792857312629111106"
+data-userId="6247"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>herbst</a>            </strong>
+
+        22.10.2016 20:32
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175197"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:08f1a17f-8105-4e06-8505-50314bb16aa4] --><div class="jive-rendered-content"><p>Welches Ger&#228;t nutzt du denn?</p></div><!-- [DocumentBodyEnd:08f1a17f-8105-4e06-8505-50314bb16aa4] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175198 j-outcome-badge-container" data-object-type="2" data-object-id="175198"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175198-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175198-2-count-label"
+                    data-command="showLikes" data-object-id="175198" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175198"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175199" data-object-type="2" data-object-id="175199">
+
+
+        <div id="thread-message-175199" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4 j-op  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175199" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175199"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175199#175199">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/k.biermeier97"
+   data-externalId=""
+   data-username="k.biermeier97"
+   data-avatarId="1276"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="19782"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/k.biermeier97/avatar/46.png?a=1276"
+                data-avatarId="1276"
+            data-username="k.biermeier97"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="k.biermeier97"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/k.biermeier97"
+data-externalId=""
+data-username="k.biermeier97"
+data-avatarId="1276"
+id="jive-1978292857312634162161"
+data-userId="19782"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>k.biermeier97</a>            </strong>
+
+        22.10.2016 20:41
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175198"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: herbst</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:e4042273-2e00-4149-8741-7bb853dc9e3b] --><div class="jive-rendered-content"><p>Der Receiver ist von Unitymedia</p></div><!-- [DocumentBodyEnd:e4042273-2e00-4149-8741-7bb853dc9e3b] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175199 j-outcome-badge-container" data-object-type="2" data-object-id="175199"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175199-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175199-2-count-label"
+                    data-command="showLikes" data-object-id="175199" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175199"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175200" data-object-type="2" data-object-id="175200">
+
+
+        <div id="thread-message-175200" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175200" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175200"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175200#175200">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/herbst"
+   data-externalId=""
+   data-username="herbst"
+   data-avatarId="7064"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="6247"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/herbst/avatar/46.png?a=7064"
+                data-avatarId="7064"
+            data-username="herbst"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="herbst"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/herbst"
+data-externalId=""
+data-username="herbst"
+data-avatarId="7064"
+id="jive-624792857312637575729"
+data-userId="6247"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>herbst</a>            </strong>
+
+        22.10.2016 20:41
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175199"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:692cab04-316a-454b-97c5-481ec4bfe6af] --><div class="jive-rendered-content"><p>Die Horizonbox?</p></div><!-- [DocumentBodyEnd:692cab04-316a-454b-97c5-481ec4bfe6af] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175200 j-outcome-badge-container" data-object-type="2" data-object-id="175200"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175200-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175200-2-count-label"
+                    data-command="showLikes" data-object-id="175200" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175200"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175203" data-object-type="2" data-object-id="175203">
+
+
+        <div id="thread-message-175203" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4 j-op  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175203" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175203"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175203#175203">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/k.biermeier97"
+   data-externalId=""
+   data-username="k.biermeier97"
+   data-avatarId="1276"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="19782"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/k.biermeier97/avatar/46.png?a=1276"
+                data-avatarId="1276"
+            data-username="k.biermeier97"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="k.biermeier97"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/k.biermeier97"
+data-externalId=""
+data-username="k.biermeier97"
+data-avatarId="1276"
+id="jive-1978292857312640441598"
+data-userId="19782"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>k.biermeier97</a>            </strong>
+
+        22.10.2016 20:46
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175200"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: herbst</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:4a680104-d11c-4836-a26c-f17ec212398c] --><div class="jive-rendered-content"><p>HD Recorder</p></div><!-- [DocumentBodyEnd:4a680104-d11c-4836-a26c-f17ec212398c] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175203 j-outcome-badge-container" data-object-type="2" data-object-id="175203"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175203-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175203-2-count-label"
+                    data-command="showLikes" data-object-id="175203" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175203"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175204" data-object-type="2" data-object-id="175204">
+
+
+        <div id="thread-message-175204" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175204" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175204"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175204#175204">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/herbst"
+   data-externalId=""
+   data-username="herbst"
+   data-avatarId="7064"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="6247"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/herbst/avatar/46.png?a=7064"
+                data-avatarId="7064"
+            data-username="herbst"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="herbst"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/herbst"
+data-externalId=""
+data-username="herbst"
+data-avatarId="7064"
+id="jive-624792857312643642250"
+data-userId="6247"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>herbst</a>            </strong>
+
+        22.10.2016 20:49
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175203"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:e088dcab-9e6c-4cab-a52f-afe6cad8c485] --><div class="jive-rendered-content"><p>Wenn nur die Freischaltung fehlt, muss halt eine gemacht werden? Gehen alle Skysender nicht?</p></div><!-- [DocumentBodyEnd:e088dcab-9e6c-4cab-a52f-afe6cad8c485] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175204 j-outcome-badge-container" data-object-type="2" data-object-id="175204"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175204-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175204-2-count-label"
+                    data-command="showLikes" data-object-id="175204" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175204"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175205" data-object-type="2" data-object-id="175205">
+
+
+        <div id="thread-message-175205" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4 j-op  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175205" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175205"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175205#175205">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/k.biermeier97"
+   data-externalId=""
+   data-username="k.biermeier97"
+   data-avatarId="1276"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="19782"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/k.biermeier97/avatar/46.png?a=1276"
+                data-avatarId="1276"
+            data-username="k.biermeier97"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="k.biermeier97"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/k.biermeier97"
+data-externalId=""
+data-username="k.biermeier97"
+data-avatarId="1276"
+id="jive-1978292857312646444398"
+data-userId="19782"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>k.biermeier97</a>            </strong>
+
+        22.10.2016 20:50
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175204"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: herbst</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:8dc00489-9ac1-48b7-b985-211dfa4db0f3] --><div class="jive-rendered-content"><p>Habe nur Sky Bundesliga und kein Sender funktioniert.</p></div><!-- [DocumentBodyEnd:8dc00489-9ac1-48b7-b985-211dfa4db0f3] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175205 j-outcome-badge-container" data-object-type="2" data-object-id="175205"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175205-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175205-2-count-label"
+                    data-command="showLikes" data-object-id="175205" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175205"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175206" data-object-type="2" data-object-id="175206">
+
+
+        <div id="thread-message-175206" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175206" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175206"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175206#175206">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/herbst"
+   data-externalId=""
+   data-username="herbst"
+   data-avatarId="7064"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="6247"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/herbst/avatar/46.png?a=7064"
+                data-avatarId="7064"
+            data-username="herbst"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="herbst"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/herbst"
+data-externalId=""
+data-username="herbst"
+data-avatarId="7064"
+id="jive-624792857312649182250"
+data-userId="6247"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>herbst</a>            </strong>
+
+        22.10.2016 20:53
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175205"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:bae6c2f9-6f87-4dfa-aff5-6d05d9e602f9] --><div class="jive-rendered-content"><p>Am WE ist hier etwas mehr Geduld von N&ouml;ten, bis sich ein Moderator der Sache annehmen kann. ggf. anrufen: Tel.: 0180 6 11 00 00</p></div><!-- [DocumentBodyEnd:bae6c2f9-6f87-4dfa-aff5-6d05d9e602f9] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175206 j-outcome-badge-container" data-object-type="2" data-object-id="175206"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175206-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175206-2-count-label"
+                    data-command="showLikes" data-object-id="175206" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175206"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </li>
+    
+<!-- END reply -->
+<!-- BEGIN reply -->
+
+
+
+    <li class="reply" id="discussion-175190" data-object-type="2" data-object-id="175190">
+
+
+        <div id="thread-message-175190" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175190" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175190"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175190#175190">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/galaxis56"
+   data-externalId=""
+   data-username="galaxis56"
+   data-avatarId="1039"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="2780"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/galaxis56/avatar/46.png?a=1039"
+                data-avatarId="1039"
+            data-username="galaxis56"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="galaxis56"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/galaxis56"
+data-externalId=""
+data-username="galaxis56"
+data-avatarId="1039"
+id="jive-278092857312652255339"
+data-userId="2780"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>galaxis56</a>            </strong>
+
+        22.10.2016 20:58
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175205"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:92c6688c-f000-400d-8b97-17ba2d94cc5a] --><div class="jive-rendered-content"><p>versuche doch mal, dich auf der Sky-Homepage einzuloggen und dort eine Freischaltung abzuschicken.</p><p>ansonsten wird ein MOD weiterhelfen k&ouml;nnen.</p></div><!-- [DocumentBodyEnd:92c6688c-f000-400d-8b97-17ba2d94cc5a] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175190 j-outcome-badge-container" data-object-type="2" data-object-id="175190"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175190-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175190-2-count-label"
+                    data-command="showLikes" data-object-id="175190" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175190"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175209" data-object-type="2" data-object-id="175209">
+
+
+        <div id="thread-message-175209" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4 j-op  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175209" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175209"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175209#175209">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/k.biermeier97"
+   data-externalId=""
+   data-username="k.biermeier97"
+   data-avatarId="1276"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="19782"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/k.biermeier97/avatar/46.png?a=1276"
+                data-avatarId="1276"
+            data-username="k.biermeier97"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="k.biermeier97"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/k.biermeier97"
+data-externalId=""
+data-username="k.biermeier97"
+data-avatarId="1276"
+id="jive-1978292857312655515568"
+data-userId="19782"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>k.biermeier97</a>            </strong>
+
+        22.10.2016 21:18
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175190"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: galaxis56</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:4a711bd7-2915-47bb-a0f7-eb537e52fdd5] --><div class="jive-rendered-content"><p>Ok, und wie mache ich das?</p></div><!-- [DocumentBodyEnd:4a711bd7-2915-47bb-a0f7-eb537e52fdd5] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175209 j-outcome-badge-container" data-object-type="2" data-object-id="175209"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175209-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175209-2-count-label"
+                    data-command="showLikes" data-object-id="175209" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175209"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+<!-- BEGIN reply -->
+
+
+
+    <ul class="jive-discussion-replies jive-discussion-threaded jive-discussion-indent-1">
+    <li class="reply" id="discussion-175210" data-object-type="2" data-object-id="175210">
+
+
+        <div id="thread-message-175210" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175210" style="background: #ffffff">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175210"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175210#175210">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/herbst"
+   data-externalId=""
+   data-username="herbst"
+   data-avatarId="7064"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="6247"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/herbst/avatar/46.png?a=7064"
+                data-avatarId="7064"
+            data-username="herbst"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="herbst"
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/herbst"
+data-externalId=""
+data-username="herbst"
+data-avatarId="7064"
+id="jive-624792857312659435648"
+data-userId="6247"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>herbst</a>            </strong>
+
+        22.10.2016 21:21
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175209"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:963c920e-3ef6-4a87-8b83-4c58cebd5118] --><div class="jive-rendered-content"><p><a class="jive-link-blog-small" data-containerId="1003" data-containerType="37" data-objectId="1399" data-objectType="38" href="https://community.sky.de/community/technik/blog/2016/01/22/technik-faq-zum-start-der-bundesliga">Keine Freischaltung, was tun?</a></p></div><!-- [DocumentBodyEnd:963c920e-3ef6-4a87-8b83-4c58cebd5118] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175210 j-outcome-badge-container" data-object-type="2" data-object-id="175210"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175210-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175210-2-count-label"
+                    data-command="showLikes" data-object-id="175210" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175210"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    
+<!-- END reply -->
+ 
+<!-- BEGIN reply -->
+
+
+
+    <li class="reply" id="discussion-175595" data-object-type="2" data-object-id="175595">
+
+
+        <div id="thread-message-175595" class="jive-thread-message clearfix">
+
+            <div class="js-thread-post-wrapper j-thread-post-wrapper j-rc4  jive-content">
+
+                <div class="j-thread-post  j-rc4" id="175595" style="background: #d7e5f7">
+
+                    <span class="j-thread-pointer j-ui-elem"></span>
+                    <a name="175595"></a>
+
+                    <header>
+
+                        <h6>
+                            <strong>
+
+                                <a class="font-color-meta-light"
+                                   href="/message/175595#175595">Re: SmartCard pl&ouml;tzlich nicht mehr freigeschaltet (Fehlercode 204)</a>
+                            </strong>
+                        </h6>
+
+                        <div class="j-post-avatar">
+
+
+<a href="/people/daniela"
+   data-externalId=""
+   data-username="daniela"
+   data-avatarId="7027"
+   class="j-avatar jiveTT-hover-user "
+       data-userId="2024"
+       data-presence="null"
+>
+    <img
+            class="jive-avatar"
+
+                src="/people/daniela/avatar/46.png?a=7027"
+                data-avatarId="7027"
+            data-username="daniela"
+
+        border="0" height="46" data-height="46" width="46"
+        alt="Daniela H."
+        />
+    </a>
+                        </div>
+
+<span class="j-post-author ">
+
+            <strong>
+
+                    <!-- Office can post messages on behalf of someone who's not in the system -->
+                    <!-- Add a link to their email address if this is the case -->
+<a href="/people/daniela"
+data-externalId=""
+data-username="daniela"
+data-avatarId="7027"
+id="jive-202492857312663426169"
+data-userId="2024"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>Daniela H.</a>            </strong>
+
+        23.10.2016 21:25
+
+
+                <span class="font-color-meta-light j-thread-replyto">
+                    (<a
+                        href="#175197"
+                        title="Gehe zur Nachricht"
+                        class="font-color-meta-light localScroll">als Antwort auf: k.biermeier97</a>)
+                </span>
+
+
+    </span>
+
+                    </header>
+
+                    <section>
+
+
+                    <!-- [DocumentBodyStart:e931dd15-b40e-48ce-be6d-ee05164c3e38] --><div class="jive-rendered-content"><p>Guten Abend k.biermeier97,<br/><br/>bitte entschuldige die lange Wartezeit und die fehlende Freischaltung.<br/><br/>Besteht das Problem aktuell noch? Falls ja, schicke mir bitte Deine Kundennummer in einer privaten Nachricht zu und schalte schon einmal auf einen abonnierten Sky Kanal.<br/><br/><span aria-label="Info" class="emoticon-inline emoticon_info" style="height:16px;width:16px;"></span><span> Und so kontaktierst Du mich: </span><a class="jive-link-wiki-small" data-containerId="2001" data-containerType="14" data-objectId="1005" data-objectType="102" href="https://community.sky.de/docs/DOC-1005">https://community.sky.de/docs/DOC-1005</a><br/><br/>VG, Daniela</p></div><!-- [DocumentBodyEnd:e931dd15-b40e-48ce-be6d-ee05164c3e38] -->
+
+                    </section>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-2-175595 j-outcome-badge-container" data-object-type="2" data-object-id="175595"data-parent-object-type="1"data-parent-object-id="31823"aria-label="Ergebnisplaketten"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>
+                    <footer>
+                        <ul class="clearfix">
+
+
+                                <li class="discussion-message-acclaim">    <span data-type="small" data-can-like="false" data-ratingType="like" data-likes="0" class="js-acclaim-container acclaim-container  acclaim-like-container  j-disabled">
+        <span>
+            <span class="j-social-action">
+            <span class="jive-icon-sml jive-icon-like"></span>
+
+Gefällt mir
+            </span>
+            <label class="j-508-label" id="showLikes-175595-2-count-label">
+0 gefällt das anzeigen            </label>
+                (<a href="#" class=" jive-acclaim-likedlink" role="button" aria-labelledby="showLikes-175595-2-count-label"
+                    data-command="showLikes" data-object-id="175595" data-object-type="2" data-count="0"
+                    >0</a>)
+        </span>
+    </span>
+</li>
+
+                            <li class="j-footer-left j-message-action-button">
+<a href="#" class="font-color-meta js-outcome-button j-outcome-button" data-object-type="2" data-object-id="175595"data-dom-actions="[]"data-root-community="Sky &amp; Friends">Aktionen <span class="j-ui-elem j-action-down-arrow"></span></a>                            </li>
+                        </ul>
+                    </footer>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </li>
+    </ul>
+    
+<!-- END reply -->
+
+
+
+    <div id="jive-thread-reply-footer" class="clearfix">
+            <a href="#31823" class="localScroll"><span
+                    class="jive-icon-sml jive-icon-arrow-top"></span>Gehe zum ursprünglichen Eintrag</a>
+    </div>
+
+
+</div>
+<!-- END messages -->
+
+</div>
+</div>
+<!-- END large column -->
+</div>
+
+    <!-- BEGIN small -->
+    <div class="j-column-wrap-s">
+        <div class="j-column-s j-column j-content-extras">
+
+
+
+
+<div class="j-box j-box-actions" role="toolbar" aria-labeledby="jive-action-sidebar-tab-header_thread-actions-tab">
+    <header>
+        <h4 id="jive-action-sidebar-tab-header_thread-actions-tab">Aktionen</h4>
+    </header>
+    <div id="jive-action-sidebar_thread-actions-tab" class="j-box-body">
+
+        <div id="jive-action-sidebar-tab-_thread-actions-tab"
+             class="jive-action-sidebar-tab-first"
+ >
+
+
+
+            <ul id="jive-action-sidebar-tab-list_thread-actions-tab" class=" j-icon-list">
+
+
+
+
+
+
+
+
+
+
+
+                <li id="featured-toggle-unfeature-onprofile" style="
+                    display:none"
+                        ><a href="#"
+rel="nofollow"
+onclick="toggleFeaturedOnProfile(); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-forbidden
+"></span>
+Aus Ihrem Profil entfernen
+</a></li>
+
+                <li id="featured-toggle-feature-onprofile" style="
+                    display:none"
+                        ><a href="#"
+rel="nofollow"
+onclick="toggleFeaturedOnProfile(); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-plus
+"></span>
+In Ihrem Profil hervorheben
+</a></li>
+
+
+
+
+
+
+
+            </ul>
+        </div> <!-- /#jive-action-sidebar-tab-_id -->
+
+    </div>
+
+
+</div><!-- /.j-box-actions -->
+
+
+    <!-- BEGIN sidebar box 'More Like This' -->
+    <div class="j-box">
+        <header>
+            <h4 id="more-like-header-2-175.197">Weitere ähnliche Themen</h4>
+        </header>
+        <nav class="j-box-body" role="navigation" aria-labeledby="more-like-header-2-175.197">
+                <div id="jive-more-like-this-2-175197">
+                    <p>Daten werden abgerufen ...</p>
+                </div>
+        </nav>
+    </div>
+
+    <!-- END sidebar box 'More Like This' -->
+
+            
+            
+
+
+
+        </div>
+    </div>
+    <!-- END small column -->
+
+
+</div>
+<!-- END layout -->
+
+</div></section><div id="jiveTT-note" class="jive-tooltip2 notedefault snp-mouseoffset" role="tooltip"><div class="jive-tooltip2-mid j-mini-modal j-mini-modal-place"><div class="jive-tooltip2-mid-padding j-modal-content clearfix j-js-note-body" id="jive-note-body"></div></div></div><div id="jiveTT-note-additems" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content clearfix" id="jive-note-additems-body"></div></div></div><div id="jiveTT-note-checkpoint" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-checkpoint-body"></div></div></div><div id="jiveTT-note-tasks" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-tasks-body"></div></div></div>
+    <script type="text/javascript"></script><div class="j-js-footer-wrap"><footer id="j-cust-foot" class="clearfix" role="contentinfo"><div style="display:block; text-align:left; float:left;">
+    <a class="toppage" href="#top">Zum Seitenanfang</a> | 
+    <a href="/">Home</a>
+  </div>
+  <div style="display:block; text-align:right;">
+    <a href="http://www.sky.de" target="_blank">www.sky.de</a> | 
+    <a href="http://www.sky.de/hilfecenter" target="_blank">Hilfecenter</a> | 
+    <a href="http://www.sky.de/tvguide" target="_blank">TV Guide</a> | 
+    <a href="https://community.sky.de/docs/DOC-1072?q=neti">Nutzungsbedingungen</a> | 
+    <a href="https://community.sky.de/docs/DOC-1024?q=neti">Netiquette</a> | 
+    <a href="http://www.sky.de/impressum" target="_blank">Impressum</a>
+  </div></footer><footer id="j-footer" role="contentinfo"><div id="j-footer-poweredBy"><a class="font-color-meta" href="http://www.jivesoftware.com/poweredby/" target="_blank" title="Jive Software Version: 7.0.5.1 , Überarbeitung: 20160414082946.bc5ae04.release_7.0.5.x">© 2007-2017 Jive Software &nbsp; | <img src="/7.0.5.bc5ae04/images/powered_by_Jive.png" title="Betrieben von Jive" alt="Betrieben von Jive"/></a></div><div class="j-footer-nav"><a class="font-color-meta" href="/">Übersicht</a> | <a class="font-color-meta" href="#top">Seitenanfang</a> | <a class="font-color-meta" href="http://www.jiveon.com/about">Info zu Jive</a> | <a class="font-color-meta" href="http://docs.jivesoftware.com/jive/7.0/community_user/index.jsp">Hilfe</a></div><div class="j-footer-jiveVersion">Jive Software Version: 7.0.5.1 , Überarbeitung: 20160414082946.bc5ae04.release_7.0.5.x</div><span id='speakSpan' class='j-508-label' role='marquee' aria-live='assertive' aria-relevant='all'></span></footer></div><div class="j-alert-container" role="alert" aria-live="polite" aria-atomic="true"></div><span id="j-speak-accessibility" class="j-508-label" role="status" aria-live="polite" aria-relevant="all" aria-atomic="true"></span><script>(function() {var prepareUrl = function(url) {if (url.indexOf(";") > 0) {url = url.substring(0, url.indexOf(";"));}if (url.charAt(url.length - 1) == '/') {url = url.substring(0, url.length - 1);}return url}; if (typeof(window._jive_base_url) == "undefined") {window._jive_base_url = prepareUrl("\/")}if (typeof(window._jive_base_absolute_url) == "undefined") {window._jive_base_absolute_url = prepareUrl("https:\/\/community.sky.de")}if (typeof(window._jive_resource_url) == "undefined") {window._jive_resource_url = prepareUrl("\/7.0.5.bc5ae04\/")}if (typeof(window._jive_theme_url) == "undefined") {window._jive_theme_url = prepareUrl("\/themes\/skyandfriends\/")}if (typeof(window._jive_current_user) == "undefined") {window._jive_current_user = {anonymous: true, partner: false, visible: true, username: 'ANONYMOUS', ID: '-1', enabled: true, avatarID: '-1', displayName: 'ANONYMOUS'};}})(); var _jive_effective_user_id = "-1"; var _jive_auth_token ="no-user"; var _jive_locale = "de"; var _jive_translation_language = "de"; var _jive_browser_event = {"providers":["activityStream.poll","appAlert.create"],"since":1507650459921}; var _jive_browser_event_polling_delay =  30000.0 ; var _jive_socket_events = {"socketEvents":["activityStream.push","tiledata.push"]}; var _jive_realtime_push_enabled =  false ;var _jive_timezoneoffset =  2.0 ; var _jive_server_timezoneoffset =  2.0 ; var jive = jive || {}; jive.global = jive.global || {}; jive.global.instanceID = 'e3cc2758-a66d-4129-a23c-4f325da07dd4'; jive.global.containerType = '14'; jive.global.containerID = '2003';jive.global.containerBrowseId = '1036';window.SPELL_LANGS = "English (Canada)\x3den_ca,English (United Kingdom)\x3den_gb,+English (United States)\x3den_us,French\x3dfr,French (Canada)\x3dfr_ca,German\x3dde,Italian\x3dit,Spanish\x3des"; window.CS_BASE_URL = ""; window.CS_RESOURCE_BASE_URL = "\/7.0.5.bc5ae04"; window.tinyMCEPreInit = {suffix : "_src", base : CS_BASE_URL + "/resources/scripts/tiny_mce3"}; if (typeof(_jive_project_i18n) == "undefined") {var _jive_project_i18n = new Array(); _jive_project_i18n['project.calendar.task'] = "Aufgabe"; _jive_project_i18n['project.calendar.tasks'] = "Aufgaben"; _jive_project_i18n['project.calendar.checkpoint'] = "Checkpoint"; _jive_project_i18n['project.calendar.checkpoints'] = "Prüfpunkte"; _jive_project_i18n['global.edit'] = "Bearbeiten"; _jive_project_i18n['global.delete'] = "Löschen"; _jive_project_i18n['project.task.mark.complete'] = "Als vollständig markieren"; _jive_project_i18n['project.task.assign.to.me'] = "Mir zuweisen"; _jive_project_i18n['task.incomplete.link'] = "Unerledigt"; _jive_project_i18n['project.checkPoint.create.link'] = "Checkpoint erstellen"; _jive_project_i18n['project.task.create.link'] = "Aufgabe erstellen";}</script><script>var containerShortUrl = "\/container-short.jspa"; var videoShortUrl = "\/view-video-short.jspa"; var profileShortUrl = "\/profile-short.jspa"; var profileLoadingTooltip = "Laden des Benutzerprofils"; var profileErrorTooltip = "Beim Laden der Daten für dieses Profil ist ein Fehler aufgetreten."; var followErrorMessage = "Beim Folgen des Objekts ist ein interner Fehler aufgetreten."; var ajaxErrorMessage = "Es ist ein unerwarteter Fehler aufgetreten. Stellen Sie sicher, dass Ihre Sitzung beim Anzeigen dieser Seite nicht abgelaufen ist."; var ajaxNotFoundMessage = "Das angegebene Element wurde nicht gefunden.";; var ajaxUnauthorizedMessage = "Sie sind nicht berechtigt, diesen Vorgang auszuführen. Wenn Sie nicht angemeldet sind, melden Sie sich an und wiederholen Sie den Vorgang.";
+        (function() {
+            var originalWrite = document.write;
+            document.write = function() {
+                if(typeof $j != 'undefined' && $j.isReady) {
+                    console.warn("document.write called after document was loaded: ", arguments);
+                }
+                else {
+                    // In IE before version 8 `document.write()` does not
+                    // implement Function methods, like `apply()`.
+                    return Function.prototype.apply.call(originalWrite, document, arguments);
+                }
+            }
+        })();
+        </script><script>
+reg(["osapi","shindig","gadgets"], ["/7.0.5.bc5ae04/resources/scripts/gen/214ac0197d986e4f96fe2ba616d868e2.js"],function(){
+define('gadgets', gadgets); define('shindig', shindig); define('osapi', osapi);
+
+
+});
+</script><script type="text/javascript">window.appsMarketEnabled =  false ; window.anyAppsEnabled =  false ; window.appUUIDs = ""; $j(document).ready(function() {require(['appContainer'], function(appContainer) {});});</script><script>
+reg(["JAF","appContainer","syntheticAppContainer"], ["/7.0.5.bc5ae04/resources/scripts/gen/7cf5b0af5c2afef48869ded04f13531c.js"],function(){
+define('JAF', ['osapi'], function(osapi) {return {};});
+
+define('appContainer', ['jive/app/core_container/'+'mock'], function(C) { return new C(); }); define('syntheticAppContainer', ['jive/app/core_container/'+'tile_app', 'jive/app/core_container/'+'main', 'jive/app/core_container/'+'common_container'], function(C) {var c = new C(); c.initActionLinkContext({coreAPIType: 'osapi.jive.core.Discussion', id: 31823  }); return c;});
+
+
+});
+</script><script src="/7.0.5.bc5ae04/resources/scripts/gen/77ca075631296e24eda004245a211423.js"></script>
+<script>
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+DWREngine._origScriptSessionId = "5E33BC4AECB5FF4020F6332BE07BDCA5";
+DWREngine._sessionCookieName = "JSESSIONID"; // JSESSIONID
+DWREngine._allowGetForSafariButMakeForgeryEasier = "true";
+DWREngine._scriptTagProtection = "throw 'allowScriptTagRemoting is false.';";
+DWREngine._defaultPath = "/dwr/interface";
+DWREngine._pollWithXhr = "false";
+if (jQuery.fn.message && DWREngine.setErrorHandler) {
+    DWREngine.setErrorHandler(function(message, ex) {
+        dwr.engine._debug('Error: ' + ex.name + ', ' + ex.message, true);
+        if (message == null || message == '') jQuery('<p>A server error has occurred.</p>').message({ style: 'error' });
+        // Ignore NS_ERROR_NOT_AVAILABLE if Mozilla is being narky
+        else if (message.indexOf('0x80040111') != -1) dwr.engine._debug(message);
+        else jQuery('<p/>').text(message).message({ style: 'error' });
+    })
+}
+
+
+jive.rte.defaultStyles = ["\/7.0.5.bc5ae04\/plugins\/gamification_7.0.5.0_92\/resources\/styles\/n4jive.css","\/7.0.5.bc5ae04\/plugins\/gamification_7.0.5.0_92\/resources\/styles\/lib\/n4jive\/n4jive.core.css","\/7.0.5.bc5ae04\/plugins\/gamification_7.0.5.0_92\/resources\/styles\/lib\/n4jive\/nitro4x.base.css","\/7.0.5.bc5ae04\/plugins\/sky-extension-plugin_4.0.0\/resources\/styles\/sky-extension-plugin.css"];
+
+var jiveControl = null; require(['jive/model/control'], function(JiveModelController) {jiveControl = new JiveModelController();}); jive.rte.mobileUI = false;
+
+jive.observable = jive.conc.observable;
+
+jive.global.typeToNumeric = {"remoteDocument":9876,"streamEntry":1501,"webhook":1224013431,"idea":3227383,"document":102,"dm":109016030,"project":600,"update":1464927464,"discussion":1,"poll":18,"profileImage":501,"blog":37,"carousel":1527402675,"space":14,"mention":550,"file":102,"post":38,"attachment":13,"share":109400031,"outcome":2700,"announcement":22,"group":700,"image":111,"static":1140061448,"securityGroup":4,"message":2,"url":801,"task":602,"system":-2,"slide":1606291040,"person":3,"extprop":-1840153649,"collaboration":2800,"privateprop":987082157,"interaction":2801,"comment":105,"extStreamActivity":-960826044,"invite":350,"contentVersion":120,"favorite":800,"user":2020}; jive.global.typeToMacroName = {"idea":"idea","document":"document","project":"project","update":"microblog","discussion":"thread","poll":"polls","blog":"blog","message":"message","space":"community","url":"external-site","task":"task","file":"document","post":"blogpost","person":"user","extStreamActivity":"tilestream","group":"group"};
+
+$j.ajaxSettings.traditional = true;
+
+$j(function(){define('documentReady',document);});
+
+require(['tAMD/hooks'], function(h) {h.on('define', 'Zapatec.Calendar', function(id, deps, factory, next) {reg(['Zapatec.Calendar.translations'], ['\/7.0.5.bc5ae04\/resources\/scripts\/zapatec\/zpcal\/lang\/calendar-de.js'], function() {define('Zapatec.Calendar.translations', {});}); require(['Zapatec.Calendar.translations'], $j.noop); next(id, deps.concat('Zapatec.Calendar.translations'), factory);}); h.on('publish', 'Zapatec.Calendar', function(id, Calendar, next) {Calendar._TT["DEF_DATE_FORMAT"] = "%d.%m.%Y"; next(id, Calendar);});});
+
+$j(document).ready(function() {var followView = new jive.FollowUserApp.ProfileFollowView({i18n: {startFollowingMessage: '<p>Sie folgen jetzt {0}.</p>', stopFollowingMessage:  '<p>Sie haben das Folgen von {0} beendet.</p>', pendingConnectionMessage: '<p>Hinweis: {0} muss Ihre Anfrage genehmigen</p>'}, bidirectional: false}); var jiveUserFollow = new jive.FollowUserApp.Main({followView: followView}); $j("input[placeholder]").placeHeld();});
+
+</script>
+<script>var containerType = '14'; var containerID = '2003';var spotlightSearchURL = "spotlight-search";</script><script>window._jive_images_enabled = false;</script><script>
+reg(["jive.rte"], ["/7.0.5.bc5ae04/resources/scripts/gen/88c9d4eb861ecf7398bb41e0bd26f0bd.js"],function(){
+window.errorHandlerMessage = "An error occurred:";
+            window.editorErrorHandler = function(message, exception) {
+              // if the message is something other than a timeout, show the message plus the error code
+              if (message.indexOf('Timeout') == -1) {
+                  $j('#dwr-error-text').text(errorHandlerMessage + ' Error Code: ' + message);
+                  $j('#dwr-error-table').fadeIn();
+                  setTimeout(function() {
+                      $j('#dwr-error-table').fadeOut();
+                  }, 10000);
+              }
+            };
+            if(typeof(tinyMCE) != "undefined"){tinyMCE.addI18n('de.jivemacros',{"unused.jive.key" : "nothing."});}
+          window.RawHTMLSaveFunction = function(element_id, html, body){
+              var text = $j('#wysiwygtext');
+              if (text.is(':not(:visible)')) {
+                  return html;
+              }else{
+                  return text.val();
+              }
+          }
+          jive.rte.multiRTE = new Array();
+  
+          //Not used by RTEWrap, but we need this for backward compatibility; see CS-23883
+          window.refreshLinks = function() {
+              jive.rte.multiRTE.forEach(function(rteID) {
+                  if ($j('#' + rteID + '_parent').length < 1) {
+                      // safari 2, text only
+                      $j('#' + rteID + '_toggle_html').hide();
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                      return;
+                  }
+  
+                  if(currentMode == 'rawhtml') {
+                      $j('#' + rteID + '_toggle_html').css('display', 'block');
+                  }else{
+                      $j('#' + rteID + '_toggle_html').hide();
+                  }
+  
+                  if (preferredMode == currentMode) {
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                  } else {
+                      $j('#jivePreferredEditorModeLinkHREF').css('display', 'block');
+                  }
+              });
+          }
+  
+          window.editor = new jive.ext.y.HashTable();
+          
+
+
+jive.rte.macros.push(new jive.rte.Macro("color","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("size","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("font","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("toc","","IMAGE", true, true, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("code","","TEXT", false, true, [{ name: "java", deleteAll: true, params: [{ name: "__default_attr", value :"java"} ]},{ name: "plain", deleteAll: true, params: [{ name: "__default_attr", value :"plain"} ]},{ name: "xml", deleteAll: true, params: [{ name: "__default_attr", value :"xml"} ]},{ name: "html", deleteAll: true, params: [{ name: "__default_attr", value :"html"} ]},{ name: "sql", deleteAll: true, params: [{ name: "__default_attr", value :"sql"} ]}], [{name: "__default_attr",value: ["java","plain","xml","html","sql"]}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("noformat","","TEXT", true, false, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("thread","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("message","message/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("external-site","bookmarks/","INLINE", false, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("document","docs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tag","tags/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "tag",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("microblog","status/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("polls","polls/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blogpost","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blog","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "name",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("community","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("space","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("user","people/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "username",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("project","project/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("task","view-task.jspa?task=","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("group","groups/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("quote","","TEXT", false, true, [], [{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("vimeo","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("veoh","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("dailymotion","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("youtube","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("kaltura","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("brightcove","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("application","","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "__title",value: ""},{name: "__view",value: ""},{name: "__params",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("appEmbeddedView","","INLINE", true, false, [], [{name: "_default_attr",value: ""},{name: "_appuuid",value: ""},{name: "_title",value: ""},{name: "_view",value: ""},{name: "_context",value: ""},{name: "_url",value: ""},{name: "_previewimage",value: ""},{name: "_icon",value: ""},{name: "_action_id",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tilestream","external/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("idea","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+define('jive.rte', jive.rte);
+
+
+});
+</script><script src="/7.0.5.bc5ae04/resources/scripts/i18n/keys/de.js?h=fabe581c246c8f7e2b93ea1da69387ed"></script><script src="/7.0.5.bc5ae04/resources/scripts/gen/32162b5694afe3988d7c57cf61f1b0f9.js"></script>
+<script>
+reg(["apps/userpicker/views/select_skill_view"],["/7.0.5.bc5ae04/resources/scripts/gen/c10a93bb6a44c6316b76ede45104bcd4.js"]);
+
+reg(["apps/share/main"],[]);
+
+reg(["soy!jive.UserPicker.soy.renderModalSkillSearchButton"],[]);
+
+reg(["apps/shared/models/lazy_corev3"],["/7.0.5.bc5ae04/resources/scripts/gen/92f5c98081f51a635e49089b20e9bc08.js"]);
+
+reg(["soy!jive.error.rest.soy.errorFinding"],[]);
+
+var jiveMembership = new jive.MembershipApp.Main({objectID:2003});
+var pickerArgs = {
+objectType: 1,
+objectID: 31823,
+personalContainerTitleKey:'nav.bar.create.personal_container.title.thread',
+personalContainerCaptionKey:'nav.bar.create.personal_container.caption.thread',
+searchPlaceholderKey:'place.picker.move.search.thread',
+containerID: 2003,
+containerType: 14};
+var jiveMoveContent = new jive.Move.Content.Main(pickerArgs);
+var jiveThreadToDoc = new jive.ThreadToDoc.Main($j.extend({maxMessages:100,
+threadMessageCount: 12}, pickerArgs));
+var jiveLockThread = new jive.Modalizer.Main({triggers:['#jive-link-lock a','#jive-link-unlock a']});
+var jiveBranchThread = new jive.Modalizer.Main({liveTriggers:['.js-link-branch'], width: 'medium'});
+var jiveDeleteContent = new jive.Modalizer.Main({triggers:['#jive-link-delete a'], liveTriggers:['.js-link-delete']});
+var jiveReportAbuse = new jive.Modalizer.Main({triggers:['#jive-link-abuse a'],liveTriggers:['.js-link-abuse'], width:
+'medium'});
+$j(function() { new jive.EmailNotification.Main(31823, 1); });
+
+
+var _editor_lang = "de";
+var _jive_video_picker__url = "?container=2003&containerType=14";
+
+
+    
+    function toggleFeatured() {
+
+        ToggleFeatured.toggleFeatured(1, 31823, 2003, 14, {
+            callback:function(featured) {
+
+                if (featured) {
+                    $j('#featured-toggle-feature').hide();
+                    $j('#featured-toggle-unfeature').show();
+                } else {
+                    $j('#featured-toggle-unfeature').hide();
+                    $j('#featured-toggle-feature').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured) {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>Dieses Element wird nun empfohlen!</div>');
+                           
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>Sie haben dies aus den empfohlenen Inhalten entfernt.</div>');
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    function toggleFeaturedOnProfile() {
+        ToggleFeatured.toggleFeaturedOnProfile(1, 31823, {
+            callback:function(featured) {
+                if (featured) {
+                    $j('#featured-toggle-feature-onprofile').hide();
+                    $j('#featured-toggle-unfeature-onprofile').show();
+                } else {
+                    $j('#featured-toggle-unfeature-onprofile').hide();
+                    $j('#featured-toggle-feature-onprofile').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured) {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>Dieses Element wird nun empfohlen!</div>');
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>Sie haben dies aus den empfohlenen Inhalten entfernt.</div>');
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+
+reg(["jive/rte/syntax/SyntaxHighlighter"],["/7.0.5.bc5ae04/resources/scripts/gen/6a48f6f208b34465b096ece56a1246e1.js"]);
+
+reg(["apps/outcomes/actionView"],["/7.0.5.bc5ae04/resources/scripts/gen/2824d0716cba3cd47fd8a4aa40a24a24.js"]);
+
+reg(["underscore", "apps/shared/controllers/switchboard", "apps/shared/views/itemList", "apps/shared/controllers/localexchange", "jive/promise_util", "apps/shared/models/core_deferred"],["/7.0.5.bc5ae04/resources/scripts/gen/b4980d09370cadce6b2ef18597e8c84c.js"]);
+
+reg(["apps/outcomes/summaryView"],["/7.0.5.bc5ae04/resources/scripts/gen/dd057537f722ae52e695c6e87ba71698.js"]);
+
+        function initBadgeHelper(badgeHelper) {
+        badgeHelper.enableHeaderBadges();
+        }
+        require(['apps/outcomes/badgeHelper'],initBadgeHelper);
+
+
+    define('forumMacroDiscussionApp', ['apps/discussion_app/main'], function() {
+    var options = {
+    isThreaded:         true,
+    isModerated:        false,
+    isFinalized:        false,
+    resourceType:       1,
+    resourceID:         31823,
+
+    containerType:      14,
+    containerID:        2003,
+
+    listAction:         "/comment-list.jspa",
+    //TODO: edit and delete actions
+    editAction: "/update-advanced-comment.jspa",
+    deleteAction: "/thread-delete!input.jspa?start=0&amp;tstart=0",
+    resourceVersionID:  -1,
+
+    preferredMode:      'advanced',
+    currentMode:        'advanced',
+    rteDisabledBrowser: false,
+    isAnonymous:        true,
+
+    question:           true,
+    imagesEnabled:      false,
+    rteOptions : {
+    controller    : jiveControl,
+    preset        : "mini-w-quote",
+    preferredMode : "advanced",
+    startMode     : "advanced",
+    mobileUI      : false,
+    toggleText    : 'Vollen Editor anzeigen',
+    alwaysUseTabText : 'Stets diesen Editor verwenden',
+    editDisabledText : 'Sie nutzen ein Gerät, mit dem Sie nur Inhalte hinzufügen können.',
+    editDisabledSummary : 'Wenn Sie von einem Computer aus auf {0} zugreifen, können Sie Ihre Inhalte hinzufügen und bearbeiten.',
+    communityName : 'Sky & Friends',
+    height        : 300,
+    images_enabled: false,
+    imagePickerUrl : "/image-picker!input.jspa?containerType=14&container=2003&messageID=175197&postedFromGUIEditor=true&reply=true",
+    destroyImagePickerUrl : _jive_base_url + "/image-picker!clean.jspa"
+    },
+    i18n: {
+    postSuccessText:         'Ihre Antwort wurde erfolgreich hinzugefügt, doch sie muss von einem Moderator genehmigt werden, bevor sie veröffentlicht werden kann.',
+    postErrorText:           'Beim Absenden Ihres Posts ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
+    forumThrdReplyTo:        'Antworten auf',
+
+    // Question text for discussions-question.soy
+    questionNotAnswered:     'Diese Frage ist {0}Unbeantwortet{1}',
+    markQuestionAsAssumedAnswered: '{0}{1}Als vermutlich beantwortet markieren{2}{3}',
+    questionAssumedAnswered: 'Diese Frage wird als {0}vermutlich beantwortet{1} angesehen.',
+    questionAnswered: 'Diese Frage wurde {0}beantwortet{1}',
+    correctAnswer: 'Richtige Antwort',
+    helpfulAnswer: 'Hilfreiche Antwort',
+    helpfulAnswers: 'Hilfreiche Antworten',
+    byWord: 'von',
+    onWord: 'am',
+    leftParen: '(',
+    rightParen: ')',
+    unmarkAsCorrectAnswer: 'Markierung als richtig aufheben',
+    unmarkAsHelpfulAnswer: 'Markierung als hilfreich aufheben',
+    seeAnswerInContext: 'Antwort im Kontext anzeigen',
+    seeThisAnswer: 'Diese Antwort anzeigen',
+    allHelpfulAnswersAwarded: 'Sie haben alle verfügbaren hilfreichen Antworten vergeben',
+    oneHelpfulAnswerLeft: 'Sie können noch {0} hilfreiche Antwort vergeben.',
+    someHelpfulAnswersLeft: 'Sie können noch {0} hilfreiche Antworten vergeben.',
+    postUserWroteLabel: '{0} schrieb',
+    postGuestWroteLabel: 'Der Gast schrieb:',
+    formSubmitPleaseWait:'Bitte warten ...',
+    postReplyMustBeApprvdText:'Bitte beachten: Ein Moderator muss Ihre Inhalte genehmigen, bevor sie veröffentlicht werden können.',
+    globalLoginRequired:'Sie sind nicht mehr angemeldet. Bitte {0}anmelden{1}, um fortzufahren.',
+    advEditor:'Erweiterten Editor verwenden'
+    }
+    };
+
+    // Create DiscusssionApp
+    return jive.DiscussionApp.instance = new jive.DiscussionApp.Main(options);
+
+    });
+
+
+        new jive.MoreLikeThisApp.Main({
+            objectType: 2,
+            objectID: 175197,
+            containerID: "jive-more-like-this-2-175197",
+            numResults: 5,
+            noContentMessage: "Keine ähnlichen Inhalte gefunden",
+            errorMessage: "Inhalte können nicht vom Server abgerufen werden:"
+        });
+
+
+reg(["apps/onboarding/views/add_document_collaborator"],["/7.0.5.bc5ae04/resources/scripts/gen/92dbcd71df75f5e28f97ec9b692f2a1d.js"]);
+
+reg(["apps/onboarding/views/fill_out_profile"],["/7.0.5.bc5ae04/resources/scripts/gen/b55191672fcf4d4021cb2848d4204c90.js"]);
+
+reg(["apps/onboarding/views/like_content"],["/7.0.5.bc5ae04/resources/scripts/gen/745fb958c73c7a44246fbd6a9ade4db5.js"]);
+
+reg(["apps/browse/container/model/container_source"],[]);
+
+reg(["apps/onboarding/views/about_you"],["/7.0.5.bc5ae04/resources/scripts/gen/1fd4bf9d1d9f88bcab23c851ebb6dafe.js"]);
+
+reg(["apps/navbar/menu/satellite/main"],["/7.0.5.bc5ae04/resources/scripts/gen/c241e820b57c5c34f8782746cc01a0b5.js"]);
+
+reg(["apps/onboarding/views/learn_system"],["/7.0.5.bc5ae04/resources/scripts/gen/863357ee5adfd7f76c9d166212bc3999.js"]);
+
+reg(["apps/metric/models/metric_source"],["/7.0.5.bc5ae04/resources/scripts/gen/6c7857ebadac8dbf9740c0fc028c2f6a.js"]);
+
+reg(["apps/onboarding/views/create_blogpost"],["/7.0.5.bc5ae04/resources/scripts/gen/34e26baf79b1c4c9a08b9c6e6035565f.js"]);
+
+reg(["apps/onboarding/views/jive_for_outlook"],["/7.0.5.bc5ae04/resources/scripts/gen/5542cd98df60a76f38aa4a82c25e8c4c.js"]);
+
+reg(["apps/trial/views/trial_tip_helper"],[]);
+
+reg(["apps/onboarding/views/create_or_set_shared_group"],["/7.0.5.bc5ae04/resources/scripts/gen/97c18f545da18c2eb3499b64203ab340.js"]);
+
+reg(["apps/feedback/main"],["/7.0.5.bc5ae04/resources/scripts/gen/3a484aec23bf5ec4397282c0b18f8167.js"]);
+
+reg(["apps/shared/controllers/browser_events"],["/7.0.5.bc5ae04/resources/scripts/gen/270736d5df72098be0e274b8d279ac14.js"]);
+
+reg(["apps/onboarding/views/create_or_join_group"],["/7.0.5.bc5ae04/resources/scripts/gen/ff1c8746584c82e1ed0d32f3116ef30b.js"]);
+
+reg(["jive/app/core_container/views/rtc_view"],["/7.0.5.bc5ae04/resources/scripts/gen/7992a3ca7366e02c9cb49cefc73a9d68.js"]);
+
+reg(["apps/social_sharing/main"],["/7.0.5.bc5ae04/resources/scripts/gen/6dd2e09af20333e554be0733e92c3d88.js"]);
+
+reg(["jive/app/core_container/mock"],["/7.0.5.bc5ae04/resources/scripts/gen/b00e09fb7ff83f5c8fd8b063714ad323.js"]);
+
+reg(["apps/shared/controllers/socket_holder"],["/7.0.5.bc5ae04/resources/scripts/gen/1488ddedb1c38263f98b3ae62679b285.js"]);
+
+reg(["apps/onboarding/views/create_wall_entry"],["/7.0.5.bc5ae04/resources/scripts/gen/0e2a58c521bf4b45a467cb9f09e1d836.js"]);
+
+reg(["apps/onboarding/views/create_comment_or_message"],["/7.0.5.bc5ae04/resources/scripts/gen/7a09d5887c9c0ad7fecd256b171c0113.js"]);
+
+reg(["apps/microblogging/views/attachment_view", "apps/direct_messaging/factory"],["/7.0.5.bc5ae04/resources/scripts/gen/741ee5c7a7d75652fe55821834e1fcf4.js"]);
+
+reg(["apps/onboarding/views/jive_anywhere"],["/7.0.5.bc5ae04/resources/scripts/gen/7d2de374ec7e4c52ef6060a993ff1bd9.js"]);
+
+reg(["apps/onboarding/views/create_private_group"],["/7.0.5.bc5ae04/resources/scripts/gen/8684740dc19f3dc96a0601341f4fdd8a.js"]);
+
+reg(["apps/onboarding/views/create_project"],["/7.0.5.bc5ae04/resources/scripts/gen/0366036fd1b175e3e51777f4c5c52815.js"]);
+
+reg(["apps/onboarding/views/invite_to_group"],["/7.0.5.bc5ae04/resources/scripts/gen/ff877d3768ac2ab5d4bc64eb1c521f5f.js"]);
+
+reg(["apps/filters/view/item_grid_view"],["/7.0.5.bc5ae04/resources/scripts/gen/7d0b0eeb07fc9cd88aa5a8c676104cf8.js"]);
+
+reg(["apps/onboarding/views/jive_for_office"],["/7.0.5.bc5ae04/resources/scripts/gen/1e39e11c2370ee3afffbfb41ab3754dc.js"]);
+
+reg(["apps/onboarding/views/connect_colleagues"],["/7.0.5.bc5ae04/resources/scripts/gen/1264614fdc3911199f6bb63c8b2cd9ea.js"]);
+
+reg(["apps/onboarding/views/mobile_login"],["/7.0.5.bc5ae04/resources/scripts/gen/21026b4e8a1dcb100d98ad832e788d79.js"]);
+
+reg(["apps/onboarding/views/create_thread"],["/7.0.5.bc5ae04/resources/scripts/gen/33b3afacc7c80c3e927053f05b032a9b.js"]);
+
+reg(["jive/app/core_container/main"],["/7.0.5.bc5ae04/resources/scripts/gen/181874c516cd7fe41d02bd6530d7f1bd.js"]);
+
+reg(["apps/autosearch/lightbox"],["/7.0.5.bc5ae04/resources/scripts/gen/415847331d9752ecefe970c2064a346f.js"]);
+
+reg(["apps/trial/models/trial_panel_source"],["/7.0.5.bc5ae04/resources/scripts/gen/ab9e72208b1a8b63cd611d98776a84f3.js"]);
+
+reg(["apps/onboarding/views/create_document"],["/7.0.5.bc5ae04/resources/scripts/gen/8773c5806a266099f10e16d1abbd75ec.js"]);
+
+reg(["jive/app/core_container/common_container"],["/7.0.5.bc5ae04/resources/scripts/gen/4146db07194e998a636f2c955bbdcbf1.js"]);
+
+reg(["Zapatec.Calendar"],["/7.0.5.bc5ae04/resources/scripts/gen/4143a160327287d2b3b771515b02066e.js"]);
+
+reg(["apps/onboarding/views/invite_users"],["/7.0.5.bc5ae04/resources/scripts/gen/033b214d35c1887cee75dec2a2a1ebc2.js"]);
+
+reg(["apps/onboarding/views/invite_external_users"],["/7.0.5.bc5ae04/resources/scripts/gen/e2f40f76eb819fafeb4c1581498e8f36.js"]);
+
+reg(["apps/home/views/badge_menu_template_loader"],["/7.0.5.bc5ae04/resources/scripts/gen/3ed80f92fe04969024fe28b31b78f153.js"]);
+
+reg(["apps/onboarding/views/follow_user"],["/7.0.5.bc5ae04/resources/scripts/gen/f2715e8a33851dbc3f6339c5662a17ce.js"]);
+
+reg(["apps/onboarding/views/upload_or_move_file"],["/7.0.5.bc5ae04/resources/scripts/gen/aca95e9cd9d01d8e7f968d614553b264.js"]);
+
+reg(["apps/trial/views/trial_view"],["/7.0.5.bc5ae04/resources/scripts/gen/c33058ec83fb2eed4c3a069584d17165.js"]);
+
+reg(["apps/onboarding/views/tour_ui"],["/7.0.5.bc5ae04/resources/scripts/gen/febee33dd407e2f50b7be86731dbc4d6.js"]);
+
+$j(document).ready(function() {new jive.nitro.content.Main({apiKey: "2045149670994920886807f3414a9294", timeStamp: "1507650459", signature: "67073015df07fcc9bd040ac33296671f", server: "https://solutions.nitro.bunchball.net/nitro/json", userID: "-1", localizationEnabled: false});});
+
+$j(function() {var tipsApp = new jive.Tips.Main({tipGroups:[], skippedTipGroupIDs: []});});
+
+$j(function(){new jive.Navbar.Menu.Custom.Main('#customLink0','#customLink0-menu');});
+
+$j(function(){require(['apps/navbar/menu/home/navbar_menu_home_main'], function(Main) {jive.Navbar.Menu.Home.GlobalController = new Main('#j-satNav-indicator');});});
+
+require([ 'apps/activity_stream/activity_notifier', 'apps/activity_stream/models/activity_stream_source' ], function(ActivityNotifier, ActivityStreamSource) {}); $j(window).load(function(){jive.onLoadEventComplete = true;});
+
+var authSource = new jive.Authentication.Source({forceSecure: false});
+
+reg(["jive/promise_util"],[]);
+
+reg(["apps/status_input/data_source", "underscore"],["/7.0.5.bc5ae04/resources/scripts/gen/5c67cf9b6629013cbe4165acd99c2c65.js"]);
+
+reg(["apps/microblogging/status_input_drop_down"],["/7.0.5.bc5ae04/resources/scripts/gen/13a567f781111af53d92e26300619744.js"]);
+
+reg(["apps/microblogging/link_builder"],["/7.0.5.bc5ae04/resources/scripts/gen/1b1557c0acee4e014ca6a3ad12696964.js"]);
+
+reg(["jive/fresh_action_queue"],[]);
+
+reg(["jive/app/rte/artifacts"],[]);
+
+window.tinyMCE_GZ = { loaded: true };
+
+</script>
+<!-- plugin javascript --><!-- end plugin javascript --><script src="/7.0.5.bc5ae04/resources/scripts/gen/baefb1ae9602f22611bc83b500f1ffb0.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"e1336a1f47","agent":"","beacon":"bam.nr-data.net","applicationTime":106,"applicationID":"21100024","transactionName":"b1xUN0YHXEVRWxIMWFYWeAxGC1NaWUIDAWJKUBkXXBRXV1QXTA==","queueTime":0}</script><script type="text/javascript">if (typeof(_satellite) !== "undefined") {_satellite.pageBottom();}</script></body></html>

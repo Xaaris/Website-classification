@@ -1,0 +1,310 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2009 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at http://typo3.com/ and http://typo3.org/
+-->
+
+	<link rel="stylesheet" type="text/css" href="typo3temp/stylesheet_efa087a3cf.css" />
+	<link rel="stylesheet" type="text/css" href="uploads/tf/aiu_stylesheet.css" />
+
+	<meta name="generator" content="TYPO3 4.2 CMS" />
+	<meta name="robots" content="INDEX,FOLLOW" />
+	<meta name="author" content="André Minhorst" />
+	<meta name="Publisher" content="André Minhorst" />
+	<meta name="Copyright" content="André Minhorst" />
+	<meta name="Content-language" content="de" />
+	<meta name="Page-topic" content="Datenbank" />
+	<meta name="Page-type" content="Software" />
+	<meta name="Revisit-after" content="14 days" />
+	<meta name="Audience" content="Alle" />
+	<meta name="expires" content="NEVER" />
+	<script type="text/javascript" src="typo3temp/javascript_93077bb238.js"></script>
+
+
+<title>Steuerelemente aktivieren und deaktivieren [Access im Unternehmen]</title><meta name="title" content="Steuerelemente aktivieren und deaktivieren"/><meta name="description" content="Wenn eine Funktion oder ein Steuerelemente temporär nicht zur Verfügung steht, haben Sie zwei Möglichkeiten: Entweder Sie weisen den Benutzer per Meldungsfenster auf diesen Umstand hin, wenn er versucht, das Steuerelemente dennoch zu benutzen. Das ist schlecht, weil dies den Benutzer einen unnötigen Klick kostet. Oder Sie deaktivieren das Steuerelement direkt. Das dies manchmal gar nicht so einfach ist und wie Sie es dennoch schaffen, zeigt dieser Beitrag."/>
+</head>
+<body topmargin="0" leftmargin="0">
+
+
+<table width=1024 cellpadding=0 cellspacing=0 align=center>
+	<tr>
+		<td width=100% height=96 style="background-repeat:no-repeat;background-image:url(fileadmin/images/2010/Top.gif);background-color:#cccccc">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellpadding=0 cellspacing=0 style='border-left:#cccccc 1px solid;border-right: #cccccc 1px solid;background-color:#cccccc'>
+				<tr>
+					<td width=58 height=65 align=left><a href="index.php?id=2"><img src="fileadmin/images/2010/Home.gif" alt="Zur Hauptseite ..." onmouseover="this.src = 'fileadmin/images/2010/Home.gif';" onmouseout="this.src = 'fileadmin/images/2010/Home.gif';" border=0></a></td>
+					<td width=84 height=65 align=left><a href="index.php?id=579"><img src="fileadmin/images/2010/Onlinearchiv.gif" alt="Zum Onlinearchiv ..." onmouseover="this.src = 'fileadmin/images/2010/Onlinearchiv.gif';" onmouseout="this.src = 'fileadmin/images/2010/Onlinearchiv.gif';" border=0></a></td>
+					<td width=88 height=65 align=left><a href="index.php?id=392"><img src="fileadmin/images/2010/Abonnement.gif" alt="Zum Abonnement ..." onmouseover="this.src = 'fileadmin/images/2010/Abonnement.gif';" onmouseout="this.src = 'fileadmin/images/2010/Abonnement.gif';" border=0></a></td>
+					<td width=75 height=65 align=left><a href="index.php?id=380"><img src="fileadmin/images/2010/Newsletter.gif" alt="Zum Newsletter ..." onmouseover="this.src = 'fileadmin/images/2010/Newsletter.gif';" onmouseout="this.src = 'fileadmin/images/2010/Newsletter.gif';" border=0></a></td>
+					<td width=44 height=65 align=left><a href="index.php?id=309"><img src="fileadmin/images/2010/Tools.gif" alt="Zu den Tools ..." onmouseover="this.src = 'fileadmin/images/2010/Tools.gif';" onmouseout="this.src = 'fileadmin/images/2010/Tools.gif';" border=0></a></td>
+					<td width=77 height=65 align=left><a href="index.php?id=388"><img src="fileadmin/images/2010/Impressum.gif" alt="Zum Impressum ..." onmouseover="this.src = 'fileadmin/images/2010/Impressum.gif';" onmouseout="this.src = 'fileadmin/images/2010/Impressum.gif';" border=0></a></td>
+					<td width=49 height=65 align=left><a href="index.php?id=386"><img src="fileadmin/images/2010/Login.gif" alt="Zum Login ..." onmouseover="this.src = 'fileadmin/images/2010/Login.gif';" onmouseout="this.src = 'fileadmin/images/2010/Login.gif';" border=0></a></td>
+					<td width=549 height=65 align=left><img src="fileadmin/images/2010/Rest.gif" border=0></td>
+				</tr>	
+			</table>
+		</td>
+	</tr>
+
+	<tr valign="top">
+		<td valign="top" width="100%">
+
+			<!--neu-->
+			<table cellpadding=0 cellspacing=0>
+			
+  <tr>
+    <td valign=top style='border-collapse:collapse; border-left:#cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid'>
+		<table style="cell-spacing:10pt">
+				<tr valign="top">
+					<td valign="top"></td>
+				</tr>
+				<tr valign="top">
+					<td valign="top"></td>
+				</tr>
+				
+				<tr valign="top">
+					<td valign="top"></td>
+				</tr>
+				<tr valign="top">
+					<td valign="top"><script type="text/javascript">
+function chkKommentar () {
+  if (document.frmKommentar.Benutzername.value.length < 1) {
+    alert("Bitte geben Sie Ihren Namen ein.");
+    document.frmKommentar.Benutzername.focus();
+    return false;
+  }
+  if (document.frmKommentar.Email.value.length < 1) {
+    alert("Bitte geben Sie Ihre E-Mail-Adresse ein.");
+    document.frmKommentar.Email.focus();
+    return false;
+  }
+  if (document.frmKommentar.Betreff.value.length < 1) {
+    alert("Bitte geben Sie einen Betreff ein.");
+    document.frmKommentar.Betreff.focus();
+    return false;
+  }
+  if (document.frmKommentar.Kommentar.value.length < 1) {
+    alert("Bitte geben Sie Ihren Kommentar ein.");
+    document.frmKommentar.Kommentar.focus();
+    return false;
+  }
+}
+</script>
+
+
+
+
+<script type="text/javascript">
+function facebook () {
+window.open('http://www.facebook.com/sharer.php?s=100&p[title]=Steuerelemente aktivieren und deaktivieren&p[summary]=Wenn eine Funktion oder ein Steuerelemente temporÃ¤r nicht zur VerfÃ¼gung steht, haben Sie zwei MÃ¶glichkeiten: Entweder Sie weisen den Benutzer per Meldungsfenster auf diesen Umstand hin, wenn er versucht, das Steuerelemente dennoch zu benutzen. Das ist schlecht, weil dies den Benutzer einen unnÃ¶tigen Klick kostet. Oder Sie deaktivieren das Steuerelement direkt. Das dies manchmal gar nicht so einfach ist und wie Sie es dennoch schaffen, zeigt dieser Beitrag.&p[url]=http://www.access-im-unternehmen.de/764?fb&p[images][0]=http://www.access-im-unternehmen.de/fileadmin/images/2010/twitter24.png','sharer', 'toolbar=0, status=0, width=626, height=436')}
+</script>
+<table width=100% cellpadding=0 cellspacing=0>
+  		<tr>
+    		<td colspan=2>
+      			<table valign=top cellpadding=2 cellspacing=0>
+			        <tr>
+			          	<td>
+            				<table style="position:relative">
+              					<tr>
+								</tr>
+						        <tr><td><p><b><font color=red>Achtung: Dies ist nicht der vollständige Artikel, sondern nur ein paar Seiten davon. Wenn Sie hier nicht erfahren, was Sie wissen möchten, finden Sie am Ende Informationen darüber, wie Sie den ganzen Artikel lesen können.</font></b></p></td></tr>
+
+
+						                      					<tr>
+								              						<td>
+																    	<form id="subscribe" action="692.0.html" method="post" name="anmeldungAIU" onsubmit="return validierung()">
+																			<table border=0 cellspacing=0 cellpadding=2>
+																			    <tr>
+																			        <td colspan="2">
+																			        	<img src="fileadmin/images/2006/mail2_48.png" height=48 width=48 border=0 align=left style="margin-right:10px">
+																			        	<h1 style="margin-bottom:0px">Kompletten Artikel lesen?</h1>
+																			        	<p>Einfach für den Newsletter anmelden, dann lesen Sie schon in einer Minute den kompletten Artikel und erhalten die Beispieldatenbanken.</p>
+																			        </td>
+																			    </tr>
+																			    <tr>
+																			        <td width="52px"></td>
+																			        <td>
+																						 <table>
+																							 <tr>
+																								<td align=left class="text" width="60px"><span class=textbox>E-Mail:</span></span></td>
+																								<td class="textbox"><input type="text" name="benutzeremail" size="25" value=""  class="validate[required,custom[email]]">
+																								<td class="textbox">		<input type="hidden" name="BeitragID" value="764">
+																								<input type="Submit" name="anmelden" value="Anmelden" class="button"></td>
+																							</tr>
+																						</table>
+																			        </td>
+																			    </tr>
+																			</table>
+																		</form>
+																	</td>
+								              					</tr>
+
+
+        						<tr><td><table align='right' style='border: 1px black dotted;'><tr><td><table width='360px'><tr valign='top'>    <td><img src='fileadmin/images/document_24.png' border=0></td>    <td style='padding: 0px 10px 10px 10px'><p><a href="http://www.access-im-unternehmen.de/index.php?id=392"><b>Gedrucktes Heft</b></a></p><p>Diesen Beitrag finden Sie in Ausgabe 2/2011.</p></td></tr></table></td></tr><tr><td><table width='360px'><tr valign='top'>    <td><a href="http://www.access-im-unternehmen.de/index.php?id=392"><img src='fileadmin/images/sign_stop.png' border=0></a></td>    <td style='padding: 0px 10px 10px 10px'><p><a href="http://www.access-im-unternehmen.de/index.php?id=392"><b>Unser Angebot für Sie!</b><img src='http://www.access-im-unternehmen.de/fileadmin/images/aiu_und_aeb_154_142.png' border=0 align=right></a></p><p>Lesen Sie diesen Beitrag und 500 andere sofort im Onlinearchiv, und erhalten Sie alle zwei Monate brandheißes Access-Know-how auf 72 gedruckten Seiten! Plus attraktive Präsente, zum Beispiel das bald erscheinende Buch 'Access 2010 - Das Grundlagenbuch für Entwickler'!</p></td></tr></table></td></tr><tr><td><table><tr valign='top'>    <td><a href='http://twitter.com/home?status=RT+%40andreminhorst+Steuerelemente aktivieren und deaktivieren+http%3A%2F%2Fwww.access-im-unternehmen.de/764' target=_blank><img src='fileadmin/images/2010/twitter24.png' border=0></a></td>    <td style='padding: 0px 10px 10px 10px'><p><a href='http://twitter.com/home?status=RT+%40andreminhorst+Steuerelemente aktivieren und deaktivieren+http%3A%2F%2Fwww.access-im-unternehmen.de/764' target=_blank><b>Diesen Beitrag twittern</b></a></p></td></tr></table></td></tr></table>
+<p class="tabelleungerade">Zusammenfassung</p>
+<p class="tabellegerade">Erfahren Sie, wie Sie Steuerelemente aktivieren und deaktivieren und was dabei zu beachten ist.</p>
+<p class="tabelleungerade">Techniken</p>
+<p class="tabellegerade">Formulare, Steuerelemente, VBA</p>
+<p class="tabelleungerade">Voraussetzungen</p>
+<p class="tabellegerade">Access 2000 und h&ouml;her</p>
+<p class="tabelleungerade">Beispieldateien</p>
+<p class="tabellegerade">SteuerelementeDeaktivieren.mdb</p>
+<p class="tabelleungerade">Shortlink</p>
+<p class="tabellegerade">www.access-im-unternehmen.de/764</p>
+
+
+<p class="titel">Steuerelemente aktivieren und deaktivieren</p>
+<p class="autor">Andr&eacute; Minhorst, Duisburg</p>
+<p class="vorspann">Wenn eine Funktion oder ein Steuerelemente tempor&auml;r nicht zur Verf&uuml;gung steht, haben Sie zwei M&ouml;glichkeiten: Entweder Sie weisen den Benutzer per Meldungsfenster auf diesen Umstand hin, wenn er versucht, das Steuerelemente dennoch zu benutzen. Das ist schlecht, weil dies den Benutzer einen unn&ouml;tigen Klick kostet. Oder Sie deaktivieren das Steuerelement direkt. Das dies manchmal gar nicht so einfach ist und wie Sie es dennoch schaffen, zeigt dieser Beitrag.</p>
+
+<p class="text">Gr&uuml;nde, Steuerelemente zu deaktivieren, gibt es viele:</p>
+<ul>
+<li class="aufz-hlung">Eine Speichern-Schaltfl&auml;che oder eine Abbrechen-Schaltfl&auml;che soll nur aktiviert sein, wenn es &uuml;berhaupt Änderungen gibt, die gespeichert oder verworfen werden k&ouml;nnten.</li>
+<li class="aufz-hlung">Eine OK-Schaltfl&auml;che soll nur aktiviert sein, wenn der Benutzer alle notwendigen Daten eingegeben hat.</li>
+<li class="aufz-hlung">Eine Suchen-Schaltfl&auml;che wird nur aktiviert, wenn der Benutzer einen Suchbegriff eingegeben hat.</li>
+<li class="aufz-hlung">Ein Textfeld steht nicht zur Verf&uuml;gung, weil die entsprechende Option nicht ausgew&auml;hlt ist.</li>
+</ul>
+<p class="text">Schauen wir uns also erstmal an, wie wir Steuerelemente in Abh&auml;ngigkeit bestimmter Bedingungen aktiviern und deaktivieren k&ouml;nnen.</p>
+<p class="zwischenueberschrift">Steuerelemente in Abh&auml;ngigkeit anderer Steuerelemente aktivieren oder deaktivieren</p>
+<p class="text">Das Formular aus <span class="verweis-ohneumbruch"><a href="#anker-anchor">Abb. 1</a></span> besteht aus einem Kombinationsfeld, das die Kundenart festlegt (Firma oder Privatperson) und davon abh&auml;ngig die Textfelder txtFirma, txtVorname und txtNachname aktivieren beziehungsweise deaktivieren soll. Wenn keine Kundenart ausgew&auml;hlt ist, sollen dementsprechend alle Steuerelemente deaktiviert sein.</p>
+<img src="fileadmin/_temp_/2011_02/SteuerelementeDeaktivieren-web-images/pic001.png" alt="pic001.png" />
+<p class="abbildungsunterschrift">Abb. 1: Beispielformular der Datenbank</p>
+
+
+<p class="text">Schauen wir uns erst an, was geschehen soll, wenn der Benutzer eine Kundenart ausw&auml;hlt. Dies l&ouml;st das Ereignis Nach Aktualisierung des Kombinationsfelds aus. Die entsprechende Ereignisprozedur sieht wie folgt aus:</p>
+<p class="quellcodefliesstext">Private Sub cboKundenartID_AfterUpdate()</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;Select Case Me!cboKundenartID</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case 1</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtFirma.Enabled = True</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtVorname.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtNachname.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case 2</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtFirma.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtVorname.Enabled = True</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtNachname.Enabled = True</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Case Else</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtFirma.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtVorname.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Me!txtNachname.Enabled = False</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;End Select</p>
+<p class="quellcodefliesstext">End Sub</p>
+<p class="text">Sie fragt den Wert von <span class="kursiv">cboKundenartID </span>ab und stellt die <span class="kursiv">Enabled</span>-Eigenschaft der folgenden Textfelder entsprechend ein.</p>
+<p class="text">Das Einstellen von Eigenschaften wie <span class="kursiv">Enabled</span>, <span class="kursiv">Locked</span>, <span class="kursiv">Visible </span>et cetera, die abh&auml;ngig von einer oder mehrerer Bedingungen auf <span class="kursiv">True </span>oder <span class="kursiv">False </span>eingestellt werden k&ouml;nnen, ist grunds&auml;tzlich auf zwei Arten m&ouml;glich: Auf die die schreibintensive Art wie oben oder auf eine etwas pfiffigere Weise wie in der folgenden Variante:</p>
+<p class="quellcodefliesstext">Private Sub cboKundenartID_AfterUpdate()</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;Me!txtFirma.Enabled = Nz(Me!cboKundenartID) = 1</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;Me!txtVorname.Enabled = Nz(Me!cboKundenartID) = 2</p>
+<p class="quellcodefliesstext">&nbsp;&nbsp;&nbsp;&nbsp;Me!txtNachname.Enabled = Nz(Me!cboKundenartID) = 2</p>
+<p class="quellcodefliesstext">End Sub</p>
+<p class="text">Genau wie oben soll das Feld <span class="kursiv">txtFirma </span>nur aktiviert sein, wenn das Kombinationsfeld <span class="kursiv">cboKundenartID </span>den Wert <span class="kursiv">1 </span>enth&auml;lt. Beim Wert <span class="kursiv">2 </span>sollen nur die beiden Felder <span class="kursiv">txtVorname </span>und <span class="kursiv">txtNachname </span>aktiviert sein.</p>
+<p class="text">Die zweite Variante l&ouml;st dies etwas eleganter und mit wesentlich weniger Codezeilen. Die erste Zeile sorgt beispielsweise daf&uuml;r, dass die Eigenschaft <span class="kursiv">Enabled </span>des Textfeldes <span class="kursiv">txtFirma </span>nur auf <span class="kursiv">True </span>eingestellt wird, wenn <span class="kursiv">cboKundenartID </span>den Wert <span class="kursiv">1 </span>hat (sollte <span class="kursiv">cboKundenartID </span>den Wert <span class="kursiv">Null </span>aufweisen, was darauf hindeutet, dass gar kein Eintrag ausgew&auml;hlt ist, liefert <span class="kursiv">Nz(Me!cboKundenartID)</span> ersatzweise den Wert <span class="kursiv">0</span>).</p>
+</td></tr>
+        						<tr><td><p><b><font color=red>Sie haben das Ende des frei verfügbaren Teils des Artikels erreicht. Lesen Sie weiter, um zu erfahren, wie Sie den vollständigen Artikel lesen und auf viele hundert weitere Artikel zugreifen können.</font></b></p></td></tr>
+        						<tr>
+        							<td>
+					                    <p><a href="index.php?id=386&BeitragID=764"><img src="fileadmin/images/2006/login1_24.png" height=24 width=24 border=0 align=left style="border-right:5px"></a><b>Sind Sie Abonnent?<a href="index.php?id=386&BeitragID=764">Jetzt einloggen ...</a></b><br>&nbsp;</p>
+              					</tr>
+              					<tr>
+              						<td>
+								    	<form id="subscribe" action="692.0.html" method="post" name="anmeldungAIU" onsubmit="return validierung()">
+											<table border=0 cellspacing=0 cellpadding=2>
+											    <tr>
+											        <td colspan="2">
+											        	<img src="fileadmin/images/2006/mail2_48.png" height=48 width=48 border=0 align=left style="margin-right:10px">
+											        	<h1 style="margin-bottom:0px">Kompletten Artikel lesen?</h1>
+											        	<p>Einfach für den Newsletter anmelden, dann lesen Sie schon in einer Minute den kompletten Artikel und erhalten die Beispieldatenbanken.</p>
+											        </td>
+											    </tr>
+											    <tr>
+											        <td width=52></td>
+											        <td>
+														 <table>
+															 <tr>
+																<td align=left class="text" width="130px"><span class=textbox>E-Mail:</span></span></td>
+																<td class="textbox"><input type="text" name="benutzeremail" size="25" value=""  class="validate[required,custom[email]]"></td>
+															</tr>
+															<tr>
+																<td align=left width="130px"></td>
+																<td class="textbox">		<input type="hidden" name="BeitragID" value="764">
+																<input type="Submit" name="anmelden" value="Anmelden" class="button"></td>
+															</tr>
+														</table>
+											        </td>
+											    </tr>
+											</table>
+										</form>
+									</td>
+              					</tr>
+<!--							    <tr>
+        						<td>
+        							<p><b>Sie haben keine Benutzerdaten? Na, dann aber schnell:</b></p>
+        							<p>Benutzerdaten erhalten Sie auf zwei Arten:</p>
+            						<p><a href="380.0.html"><img src="fileadmin/images/2006/mail2.png" height=24 width=24 border=0 align=left></a>1. Testen Sie das Online-Archiv von 'Access im Unternehmen' für eine Woche. Sie müssen Sie lediglich für den 'Access im Unternehmen'-Newsletter anmelden. <br><a href="380.0.html">Ja, ich will den einwöchigen Testzugang und den Newsletter!</a></p>
+            						<p><a href="http://www.access-im-unternehmen.de/392.0.html" target=_blank><img border=0 src="fileadmin/images/2006/contract.png" height=24 width=24 align=left></a>2. Greifen Sie ein ganzes Jahr auf das Online-Archiv zu und erhalten Sie zusätzlich alle zwei Monate das brandneue "Access im Unternehmen"-Magazin - für nur EUR 108,-* im Jahr! <br><a href="http://www.access-im-unternehmen.de/392.0.html" target=_blank>Ja, ich will Access im Unternehmen bestellen!</a></p>
+            						<p></p>
+            						<p>&nbsp;</p>
+            						<p>* inkl. MwSt., zzgl. Versandkostenpauschale, EUR 140,- inkl. MwSt., zzgl. Versandkostenpauschale ab dem zweiten Jahr</p>
+        						</td>
+    						</tr>
+-->
+            			</table>
+          			</td>
+        		</tr>
+      		</table>
+    	</td>
+  	</tr>
+</table>
+<img src="http://vg02.met.vgwort.de/na/fc40a3d93d5e4ed182711375f64ff8e9" width="1" height="1" alt=""><img src='http://trac.access-im-unternehmen.de/pixel.png?BeitragID=764'>
+
+
+
+
+</td>
+				</tr>
+				<tr valign="top">
+					<td valign="top"></td>
+				</tr>
+				<tr valign="top">
+					<td valign="top"></td>
+				</tr>
+				<tr>
+	   				<td><p>&copy; 2003-2015 Andr&eacute; Minhorst Alle Rechte vorbehalten.</p></td>
+	            </tr>
+		</table>
+    </td>
+    <td valign=top style='border-collapse:collapse; border-left:#cccccc 1px solid;border-right: #cccccc 1px solid;border-bottom: #cccccc 1px solid'>
+		<table style="cell-spacing:10pt">
+			<tr>
+				<td><a href="http://www.access-basics.de/index.php/landingpage_www-aiu-de.html" target=_blank><img src="http://www.access-im-unternehmen.de/fileadmin/images/accessbasics.gif" height=100 width=140 border=0></a></td>
+			</tr>
+			<tr>
+				<td><a href="http://shop.minhorst.com/buecher/281/access-und-sql-server" target=_blank><img src="images/asql_140.png" width=140 border=0></a></td>
+			</tr>
+			<tr>
+				<td><a href="http://shop.minhorst.com/detail/index/sArticle/300" target=_blank><img src="images/aoff_140.jpg" width=140 border=0></a></td>
+			</tr>
+			<tr>
+				<td><a href="http://shop.minhorst.com/buecher/302/das-access-entwicklerbuch" target=_blank><img src="images/aeb_140.png" width=140 border=0></a></td>
+			</tr>
+			<tr>
+				<td><a href="http://shop.minhorst.com/buecher/273/anwendungen-entwickeln-mit-access" target=_blank><img src="images/aema_140.png" width=140 border=0></a></td>
+			</tr>
+		</table>
+    </td>
+  </tr>
+</table>
+<!--Neu Ende-->
+		</td>
+	</tr>
+</table>
+	
+</body>
+</html>

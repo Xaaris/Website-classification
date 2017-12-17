@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<meta name="description" content="Erweiterte Suche von Das &Ouml;rtliche." />
+
+<title>Erweiterte Suche von Das &Ouml;rtliche</title>
+<link rel="canonical" href="http://www.dasoertliche.de/erweiterte-suche/" />	
+<meta name="robots" content="INDEX, FOLLOW, ARCHIVE" />
+<link rel="shortcut icon" href="http://www.oe-static.de/img/favicon.ico" type="image/x-icon" />
+<link rel="image_src" href="../service_assets/img_services/oe_logo_faceb.gif" />
+
+<!-- V2009 -->
+<link href="../service_assets/css_services/default.css" rel="stylesheet" type="text/css" />
+<link href="../service_assets/css_services/search.css" rel="stylesheet" type="text/css" />
+<link href="../service_assets/css_services/header.css" rel="stylesheet" type="text/css" />
+<link href="../service_assets/iconfont/style.css" rel="stylesheet" type="text/css">
+<!--[if IE]><link href="../service_assets/css_services/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lt IE 7]><link href="../service_assets/css_services/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.dasoertliche.de/search/OpenSearch.xml" title="Das Örtliche" />
+
+<script src="../service_assets/js_services/oejs/oe.core.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.core.options.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.plugins.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.accordion.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.sib.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.sc.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.sb.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.hl.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/oejs/oe.evtsc.js" language="javascript" type="text/javascript"></script>
+
+<script src="../service_assets/js_services/oejs/oe.competencebox.js" language="javascript" type="text/javascript"></script>
+
+<script src="../service_assets/js_services/fontSize.js" language="javascript" type="text/javascript"></script>
+
+<script src="../service_assets/js_services/db.js" language="javascript" type="text/javascript"></script>
+<script src="../service_assets/js_services/downloads.js" language="javascript" type="text/javascript"></script>
+
+
+<script src="../service_assets/js_services/services.init.js" language="javascript" type="text/javascript"></script>
+  
+
+<!-- WWA -->
+
+<script type="text/javascript" src="http://wwa.wipe.de/wwa.js"></script>
+<script type="text/javascript"> 
+	try
+    {	
+		var wwa$ = _WWA_.getAnalyzer("OE", { domain: ".dasoertliche.de", trackPagePerf: true, trackClicks: true  }); 
+    }
+	catch (e)
+	{
+	}
+	if (wwa$)
+    	wwa$.setPageAttr({ pageName: "services:/erweiterte-suche/index" , reqHdr: "X-Forwarded-Server:www.dasoertliche.de, X-Forwarding-DC:www"  });	
+    
+</script>
+
+<!-- V2009 --><script language="javascript" type="text/javascript"> 
+	$(document).ready(function () 
+	{
+		$v$.sbHandler.select($oe$.search.SB_TYPES.search_ext);
+	});
+</script>
+</head>
+
+<body id="erweitertesuche">
+<div id="canvas">
+	<div id="oetbcontainer">
+	<a class="logo" href="http://www.dasoertliche.de"></a>
+	<div id="claim">&nbsp;</div>
+	<ul id="tabnav"><li class="on"><a href="#">Suche</a></li></ul>
+
+	<!--########## Inhalt-Container ##########-->
+	<div id="strips">
+		<!--########## Bereich für die Hauptsuchmaske ##########-->
+					
+	<ul id="subnav" class="searchlist ontop">
+		<li><a class="searchmaskbtn" href=""><i class="icon-rewind"></i>R&uuml;ckw&auml;rtssuche</a></li>
+		<li><a href="http://www.dasoertliche.de/Themen/benzinpreise/"><i class="icon-fuel"></i>Benzinpreise</a></li>
+		<li><a class="searchmaskbtn" href=""><i class="icon-cashcard"></i>Geldautomaten</a></li>
+		<li><a class="searchmaskbtn" href=""><i class="icon-aeskulap"></i>Notapotheken</a></li>
+		<li id="subnav_sp_offer"><a href="https://services.dasoertliche.de/services/schnupperpaket/sp/"><i class="icon-tag"></i>Kostenfreier Eintragsservice</a></li>
+
+
+        </ul>
+	<div class="stage">
+		<div class="searcharea clearfix">
+			<div class="searchselect standard"><a href=""></a></div>
+			<ul class="searchdrop gone">
+
+				<li class="standard "><a href="" id="toSearch_Standardsuche"><i class="icon-standard"></i></a></li>
+				<li class="fuel "><a href=""><i class="icon-fuel"></i></a></li>
+				<li class="advanced "><a href="" id="toSearch_ErweiterteSuche"><i class="icon-spyglass"></i></a></li>
+				<li class="atm "><a href="" id="toSearch_Geldautomaten"><i class="icon-cashcard"></i></a></li>
+				<li class="reverse "><a  href="" id="toSearch_Rueckwaertssuche"><i class="icon-rewind"></i></a></li>
+				<li class="pharmacy "><a href=" " id="toSearch_Notapotheken"><i class="icon-aeskulap"></i></a></li>
+				<li class="postal "><a  href="" id="toSearch_PLZ"><i class="icon-horn"></i></a></li>
+				<li class="movies "><a href="" id="toSearch_Filme"><i class="icon-movies"></i></a></li>
+				<li class="prefix "><a  href="" id="toSearch_Vorwahlen"><i class="icon-phone"></i></a></li>
+				<li class="events "><a href="" id="toSearch_Veranstaltungen"><i class="icon-calendar"></i></a></li>
+                    
+                </ul>
+				<!-- Standardsuche-->
+				<form method="get" name="search_nat" action="http://www.dasoertliche.de/Controller" accept-charset="UTF-8">
+					<div class="inputarea">
+						<input id="std_suchwort" name="kw" placeholder="Name (oder Suchwort)">
+						<input id="std_ort" name="ci" placeholder="Ort o. PLZ o. KFZ-Kennzeichen">					
+            </div>
+					<span class="icon-magnify"><input type="submit" class="findbutton" value="Finden"></span>
+				</form>
+        </div>
+    </div>
+	<hr class="searchend">
+
+
+
+		<!--########## end Bereich für die Hauptsuchmaske ##########-->
+		<!--########## whitepage ##########-->
+		<div id="whitepage"><div id="grid_gradient">
+  <div id="grid-2_3"> <div class="services_breadcrumb">
+ <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <a href="http://www.dasoertliche.de/" itemprop="url" title="Das &Ouml;rtliche">
+	<span itemprop="title">Das &Ouml;rtliche</span>
+  </a>
+</div>  &nbsp;&gt;&nbsp;<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">   
+	<span id="bcrumbnotlinked" itemprop="title" >Erweiterte Suche</span> 
+    <a title="Erweiterte Suche" itemprop="url" href="http://www.dasoertliche.de/erweiterte-suche/"></a>
+</div>
+</div>    <h1>Erweiterte Suche in Das &Ouml;rtliche</h1>
+    <div class="grid_in landingpage_content">
+      <h3>Erfolgreiche Recherche nach einer Telefonnummer durch erweiterte Suchfunktionen </h3>
+      <p><strong>Haben Sie auch nicht immer alle Informationen f&uuml;r die Suche nach einer Telefonnummer parat? Dann kann Ihnen die "Erweitere Suche" in Das &Ouml;rtliche ein n&uuml;tzlicher Helfer sein.</strong></p>
+      <p>Bei der Erweiterten Suche steht Ihnen f&uuml;r jedes Element einer Kontaktadresse, wie Vorname, Nachname, Stra&szlig;e, Hausnummer usw. ein Feld zur Verf&uuml;gung. Besitzen Sie nur ungenaue Informationen oder wissen die Schreibweise nicht genau (z. B. Meier und Meyer), k&ouml;nnen Sie bei Vor- und Nachname und/oder dem Stra&szlig;ennamen auch eine Toleranzschwelle bei der Suche anwenden lassen. Das hilft Ihnen, die gesuchte Telefonnummer leichter zu finden.</p>
+      <div id="lp_start_page" class="lp_erweitertesuche"></div>
+      <p>Die Erweitere Suche ist besonders von Nutzen f&uuml;r weniger gel&auml;ufige Namen oder bei versehentlich falsch geschriebenen Adressdaten. Auch bei unvollst&auml;ndigen Angaben, wenn Sie lediglich einen Namen und einen Ort kennen, hilft Ihnen Das &Ouml;rtliche zu einem passenden Resultat zu kommen. Im Ergebnis erhalten Sie mehr Treffer angezeigt, die alphabetisch sortiert sind und zus&auml;tzlich Eintr&auml;ge mit abgek&uuml;rzten Vornamen beinhalten.</p>
+      
+      <p>Haben Sie Ihren Kontakt gefunden, k&ouml;nnen Sie ein Routing von Ihrem Standort zu der gew&auml;hlten Adresse berechnen lassen. Dazu &ouml;ffnet sich beim Klick auf "Route" ein Kartenfenster, in dem Sie alle Angaben f&uuml;r eine optimale Routenplanung eingeben k&ouml;nnen. Ferner besteht die M&ouml;glichkeit, den Kontakt in Ihr elektronisches Adressbuch als vcf-Datei zu &uuml;bernehmen.</p>
+      <p>Die &Uuml;bernahme der Adressdaten in die <a href="/bus-und-bahn/">Bus- und Bahnverbindungssuche</a> ist auch praktisch, wenn Sie gleich eine Zugverbindung zur Zieladresse finden wollen.</p>
+      <div class="clear"></div>
+    </div>
+    <!-- <div id="actions_bottom" class="grid_in landingpage_actions"><ul></ul></div>-->
+    
+   
+  </div>
+  <div id="grid-1_3"> 
+
+    <div class="top_rightnavi">
+      <div class="top_rightnavi_image">&nbsp;</div>
+    </div>
+
+    
+<div class="local_compbox">
+ <div id="inner_local_compbox">
+
+	<a class="head_compbox "><span class="head_content">Downloads</span></a>
+	<div id="content_compbox_01" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <a href="/downloads/partnerprogramm/" title="Partnerprogramm">Partnerprogramm</a><br />Holen Sie sich Das &Ouml;rtliche auf Ihre Website!
+	  </div>
+	 
+	  <!--
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+	  <a href="/downloads/macos/" title="MacOS-App">MacOS-App</a><br />Das &Ouml;rtliche f&uuml;r Apple-Mac!  
+	  </div>
+	  -->	  
+	  <!-- Neuer Link für Browser-Add-Ons -->
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+	  <a href="/downloads/browseraddons/" title="Das &Ouml;rtliche Browser-Add-on">Das &Ouml;rtliche f&uuml;r Ihren Browser</a><br />&Uuml;ber Browser-Add-on direkt im Onlineverzeichnis von Das &Ouml;rtliche suchen!  
+	  </div>
+	  <!--
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+	  <a href="/downloads/wordpress-plugin/" title="WordPress Plugin">WordPress Plugin</a><br />Das &Ouml;rtliche auf Ihrer WordPress-Website! 
+	  </div>
+	  
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+	  <a  href="/downloads/windows8/" title="Windows 8 App">Windows 8 App</a><br />Das &Ouml;rtliche als App f&uuml;r Windows 8
+	  </div>
+	  -->
+	</div>
+	
+	
+	<a class="head_compbox "><span class="head_content">Mobil</span></a>
+	<div id="content_compbox_02" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <a href="/mobil/iphone/" title="iPhone">iPhone &amp; iPad App</a><br />Das &Ouml;rtliche im Apple-Look!
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <a href="/mobil/mobilportal/" title="Mobilportal">Mobilportal</a><br />Das &Ouml;rtliche f&uuml;r unterwegs!
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <a href="/mobil/android/" title="Android-App">Android-App</a><br />Die Umkreissuche f&uuml;r Ihr Android-Handy!
+	  </div>
+	  <!--
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <a href="/mobil/windowsphone/" title="Windows Phone 7 App">Windows Phone 7 App</a><br />Das &Ouml;rtliche im Zune-Marketplace
+	  </div>	  
+	  -->
+	</div>
+	
+	
+	
+	
+	
+	 <!--<a class="head_compbox [#SELFREG]"><span class="head_content">Ihr Eintrag</span></a>
+	<div id="content_compbox_05" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <div><a href="/schnupperpaket/" onclick="OpenSchnupperpaket('/schnupperpaket/'); return false;" title="Schnupperpaket">Schnupperpaket</a><br />3 Monate Gratiswerbung in Das &Ouml;rtliche Online!</div>
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a class="notimplementedlink" href="#" title="Selbsteintrag">Selbsteintrag</a><br />Erg&auml;nzen Sie Ihren privaten Eintrag!</div>
+	  </div>
+	</div>-->
+	
+	
+	<a class="head_compbox "><span class="head_content">Lokale Dienste</span></a>
+	<div id="content_compbox_03" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <div><a href="/geldautomaten/" title="Geldautomaten">Geldautomaten</a><br />Bargeld in Ihrer N&auml;he!</div>
+	  </div>
+	  <!--<hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a class="notimplementedlink" href="#" title="Kinos & Film">Kinos & Film</a><br />Was l&auml;uft im Kino um die Ecke?</div>
+	  </div>-->
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/notapotheken/" title="Notapotheken">Notapotheken</a><br />Schnelle Hilfe in Ihrer Umgebung!</div>
+	  </div>
+	  <!--
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/stellenangebote/" title="Stellenangebote">Stellenangebote</a><br />Jobangebote in Ihrer N&auml;he!</div>
+	  </div>
+	  -->
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/veranstaltungen/" title="Veranstaltungen">Veranstaltungen</a><br />Alle Events in Ihrer Umgebung!</div>
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/bus-und-bahn/" title="Bus und Bahn">Bus und Bahn</a><br />Individuelle  Bus- und Bahnverbindung finden.</div>
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/kinoprogramm/" title="Kinos & Filme">Kinos & Filme</a><br />Kinoprogramm  in Ihrer N&auml;he!</div>
+	  </div>
+	</div>
+	
+	
+	<a class="head_compbox "><span class="head_content">Werben</span></a>
+	<div id="content_compbox_04" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <div><a href="/services/werben/" title="Das &Ouml;rtliche regional">Das &Ouml;rtliche regional</a><br />Ihr kompetenter Werbepartner vor Ort!</div>
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/services/schnupperpaket/" title="Schnupperpaket" >Schnupperpaket</a><br />3 Monate Gratiswerbung in Das &Ouml;rtliche Online</div>
+	  </div>
+	</div>
+	
+	
+	
+	<a class="head_compbox selected active"><span class="head_content">Online Services</span></a>
+	<div id="content_compbox_06" class="cb_content selected">
+	  <div class="inner_content_compbox">
+		 <div><a href="/services/buchbestellung/" title="Buchbestellung">Buchbestellung</a><br />Die aktuelle Buchausgabe f&uuml;r Ihren Ort!</div>
+	  </div>
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/gratisanrufen/" title="Gratis anrufen">Gratis anrufen</a><br />&Uuml;ber 3 Mio. Unternehmen kostenlos anrufen!</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/selbsteintrag/" title="Mein&Ouml;rtliches">Mein&Ouml;rtliches</a><br />Eigenen Eintrag online selbst verwalten</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/postleitzahlen/" title="Postleitzahlen">Postleitzahlen</a><br />Garantiert f&uuml;nf Richtige!</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/umkreissuche/" title="Umkreissuche">Umkreissuche</a><br />Alle Treffer in Ihrer N&auml;he!</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/vorwahl/" title="Vorwahlsuche">Vorwahlsuche</a><br />Die richtige Nummer f&uuml;r jeden Ort finden!</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/rueckwaertssuche/" title="R&uuml;ckw&auml;rtssuche">R&uuml;ckw&auml;rtssuche</a><br />Eintrag zur  Rufnummer finden!</div>
+	  </div> 
+	  <hr class="content_divider" />
+	  <div class="inner_content_compbox">
+		 <div><a href="/erweiterte-suche/" title="Erweiterte Suche">Erweiterte Suche</a><br />Weitere Suchfunktionen in Das &Ouml;rtliche.</div>
+	  </div> 	                 
+	</div>
+	
+ </div>
+</div> 
+
+  </div>
+
+			</div>
+			<!--########## end whitepage ##########-->						
+			</div>
+		<!--########## end Inhalt-Container ##########-->		
+		</div>
+	<!--########## end oetbcontainer-Container ##########-->
+	<!--########## Footer ##########-->    
+	<div id="footerbox" style="">
+    <div id="footer_top">
+        <ul class="footercol01">
+            <li><a href="http://www.dasoertliche.de/">Startseite Deutschland</a></li>
+        </ul>
+        <ul class="footercol02">
+            <li><a href="javascript:bookmark('http://www.dasoertliche.de','Das Örtliche - Ihr lokales Verzeichnis für Deutschland')">Das &Ouml;rtliche zu Favoriten</a></li>
+        </ul>
+        <ul class="footercol03">
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_contact&action=KONTAKT&page=DOWNLOAD&context=DOWNLOAD" target="_blank">Kontakt</a></li>
+        </ul>
+    </div>
+    <ul class="footercol01">
+            <li><a href="http://www.dasoertliche.de/services/schnupperpaket/">Schnupperpaket</a></li>
+            <li><a href="http://www.dasoertliche.de/services/werben/">Werben</a></li>
+            <li><a href="http://www.dasoertliche.de/downloads/partnerprogramm/">Partnerprogramm</a></li>
+            <li><a href="http://www.dasoertliche.de/services/buchbestellung/">Buchbestellung</a></li>
+            <li><a href="http://www.dasoertliche-marketing.de/021_press_list.php" onclick="return wwa$.logOutboundLink('Presse');">Presse</a></li>
+        </ul>
+        <ul class="footercol02">
+            <li><a href="http://www.dasoertliche.de/mobil/">Das &Ouml;rtliche unterwegs</a></li>
+            <li><a href="http://www.dasoertliche.de/downloads/">Downloads </a></li>
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_help">Hilfe</a></li>
+            <li><a href="http://mobil.dasoertliche.de/">Mobil</a></li>
+            <li><a href="http://freemail.t-online.de/" target="_blank">freemail@t-online.de</a></li>
+        </ul>
+        <ul class="footercol03">
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_impressum&la=de&page=&context=&action=BUCHBESTELLUNG&buc=">Impressum</a></li>
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_faq">H&auml;ufig gestellte Fragen (FAQ) </a></li>
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_privacy&la=de&page=&context=&action=DATENSCHUTZ&buc=">Datenschutz </a></li>
+            <li><a href="http://www.dasoertliche.de/?cmd=cmd_nav_termsofuse&la=de&page=&context=&action=NUTZUNG&buc=">Nutzungsbedingungen</a></li>
+            <li><a href="http://www.dasoertliche.de/Themen/index.html" onclick="return wwa$.logOutboundLink('Suchbegriffe');">Suchbegriffe</a></li>
+        </ul>
+        <div id="footer_services">
+            <ul class="footercol01">
+                <li>Serviceangebote:</li>
+                <li><a href="http://www.dasoertliche.de/freibad/" target="_blank">Freib&auml;der finden</a></li>
+				<li><a href="http://www.dasoertliche.de/weihnachtsmarkt/" target="_blank">Weihnachtsm&auml;rkte finden</a></li>
+				<li><a href="http://www.meinoertliches.de/" target="_blank">Mein &Ouml;rtliches</a></li>
+            </ul>
+            <ul class="footercol02">
+                <li><a href="/geldautomaten/" >Geldautomaten</a></li>
+                <li><a href="/notapotheken/" >Notapotheken</a></li>
+            </ul>
+            <ul class="footercol03">
+                <li><a href="/postleitzahlen/" >Postleitzahlen</a></li>
+                <li><a href="/vorwahl/" >Vorwahlen</a></li>
+            </ul>
+        </div>
+        <div id="footer_bottom">
+            <ul class="footercol01">
+               <!-- <li>Unsere Partner:</li>-->
+                <li><a href="http://www.telefonbuch.de" target="_blank" onclick="return wwa$.logOutboundLink('TB');">DasTelefonbuch </a></li>
+                <li><a href="http://www.gelbeseiten.de" target="_blank" onclick="return wwa$.logOutboundLink('GelbeSeiten');">Gelbe Seiten</a></li>
+                
+            </ul>
+            <ul class="footercol02">
+                <li><a href="http://www.golocal.de" target="_blank" onclick="return wwa$.logOutboundLink('GoLocal');">GoLocal</a></li>                
+                <!--<li><a href="http://www.hessenweb.de" target="_blank" onclick="return wwa$.logOutboundLink('Hessenweb');">Hessenweb.de</a></li>
+                <li><a href="http://www.thueringenweb.de" target="_blank" onclick="return wwa$.logOutboundLink('Thueringenweb');">Thueringenweb.de</a></li>
+				<li><a href="http://www.t-online.de/" target="_blank" onclick="return wwa$.logOutboundLink('t-online');">t-online.de</a></li>-->
+            </ul>
+            <ul class="footercol03">
+				<li><a href="http://www.detemedien.de" target="_blank" onclick="return wwa$.logOutboundLink('DeTeMedien');">DeTeMedien</a></li>
+                <!--<li><a href="http://www.christverlag.de/" target="_blank" onclick="return wwa$.logOutboundLink('Christverlag');">Christverlag.de</a></li>
+                <li><a href="http://www.webadress.de/" target="_blank" onclick="return wwa$.logOutboundLink('Webadress');">Webadress.de</a></li>
+                <li><a href="http://www.billiger.de/" target="_blank" onclick="return wwa$.logOutboundLink('Billiger');">Billiger.de</a></li>            -->    
+            </ul>
+        </div>
+        <div class="footer_socialweb">
+            <ul class="footercol01">
+                <li><a target="_blank" href="http://www.facebook.com/dasoertliche" class="facebook" onclick="return wwa$.logOutboundLink('Facebook');">Facebook &ndash; Fan werden</a></li>
+            </ul>
+            <ul class="footercol02">
+                <li><a target="_blank" href="http://twitter.com/dasoertliche" class="twitter" onclick="return wwa$.logOutboundLink('Twitter');">Folge uns auf Twitter @dasoertliche</a></li>
+            </ul>
+			<ul class="footercol03">
+				<li>
+					<a title="Das &Ouml;rtliche auf Google+" class="google" onclick="return wwa$.logOutboundLink(this, 'Google+'); " target="_blank" href="https://plus.google.com/117158801194742107876/posts">Das &Ouml;rtliche auf Google+</a>
+				</li>
+			</ul>
+        </div>
+    </div>
+
+	<!--########## end Footer ##########-->		
+</div>
+<!--########## end CANVAS ##########-->
+<script type="text/javascript"> 	
+	if (wwa$)
+    	wwa$.logPageView();      
+</script>
+<script type="text/javascript" src="https://script.ioam.de/iam.js"></script>
+<!-- SZM VERSION="2.0" -->
+<script type="text/javascript">
+var iam_data = {
+"st":"dasoertl", 
+"cp":"Angebot",
+"sv":"in"
+}
+iom.c(iam_data);
+</script>
+<!--/SZM --></div>
+</body>
+</html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang='de'>
+<head>
+<meta charset='utf-8'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c34e84a66b","applicationID":"4818771","transactionName":"dAlYQxReClRSRB1EHkcJRUMVHhVQWEE=","queueTime":4,"applicationTime":136,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta content='index,follow' name='robots'>
+<meta content='eU5fz4Vd9PZXEMQmC3A7R5UlLIQ7PLYYi_A1y5a2Vn4' name='google-site-verification'>
+<meta content='113898492003289' property='fb:page_id'>
+<meta content='113898492003289' property='fb:admins'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700' rel='stylesheet'>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https://www.absolventa.de/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben",
+    "headline": "Anspruchsvolle Stellenangebote? Trotzdem bewerben!",
+    "datePublished": "2009-06-03T10:31:00Z",
+    "dateModified": "2016-12-12T12:30:00Z",
+    "description": "Große Firmen wie Procter &amp;amp; Gamble erhalten mehrere Tausend Bewerbungen am Tag. Dabei arbeiten dort weltweit &quot;nur&quot; ca. 125.000 Leute. Die Anzahl der Bewerbungen übersteigt den Bedarf also um ein Vielfaches. Manche Betriebe reagieren darauf, indem sie die Anforderungen in Stellenanzeigen aufstocken. Damit wollen sie zwei Ziele erreichen: Nur die qualifiziertesten und insgesamt weniger Personen sollen Bewerbung abschicken, um das Auswahlverfahren einfacher und schneller zu gestalten.",
+
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://absolventa-production.imgix.net/career_pages/507/original1411562100.jpg?fit=crop&auto=format&fm=jpg&q=60&w=384&h=175",
+      "height": "175",
+      "width": "384"
+    },
+
+    "author": {
+      "@type": "Person",
+      "name": "Lukas große Klönne"
+    },
+
+    "publisher": {
+      "@type": "Organization",
+      "name": "Absolventa GmbH",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://d3mdfa9c7hlxb1.cloudfront.net/assets/shared/absolventa_logo_desktop@2x-a05afeff67f6430c345ed108c0c461ca0039253ebb571d3fd9681820ca920480.png",
+        "height": "104",
+        "width": "308"
+      }
+    }
+  }
+</script>
+
+
+
+<link rel="stylesheet" media="all" href="//d3mdfa9c7hlxb1.cloudfront.net/assets/desktop/application-40c7653aceb95b4abf6d8fb24be94e9795c4745eb4c40ff810bac10e51fe279f.css" />
+
+
+
+<script src="//d3mdfa9c7hlxb1.cloudfront.net/assets/desktop/application-fcd73d31a8cd175cbfcc5fe91dec2b0cd3200b984d1f87322b6e22afb9b7f323.js" defer="defer"></script>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/favicon-61cd6d88df46b5d3c1058b9a9080204975dd8c596ca2f1471ceb741e64cf98b0.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-57x57-f3df1842733256112ba332faf077b4adad3caed8b629f2f9ac374ee7f2626573.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-60x60-349cc35feb67afbc0e50943b37285d971ffad765595f3e41bdda023851d3ecfe.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-72x72-e69af5d332807e71c8a1df3ff8080ba59665fd3731c3774c745c780790ec8ffa.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-76x76-04867cd396fd35fd9dc80a3ec99d6af71f68991f35b89344b09974df94cc7ddb.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-114x114-4d41d2b91cddf16e225b0c89e9bfedea07c34e35f6b4e7f4035cc359124d5870.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-120x120-fde4aa0cdbc69ad922c6fdbe3f3b821683f6b0baffa7810b78b5822658014dd8.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-144x144-e8b3342306c296808b953140cf0cb979fb4f751d80918319d145f515d25dfaf3.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-152x152-e20c5118b980dfb4574e1c600803554ec4f0516ace6d970fb85f47f503dc206e.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/apple-icon-180x180-7aa10ac8b809b0ff57bee0dd0fcbe5636f0ad170efdb1b19f5c23c977c1cd03f.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/android-icon-192x192-c9480af4358c08521b77e73eed8ffd6a2a4598d5ecbad437033a4c9a3c030e34.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/favicon-32x32-75d428c9746d3f16b420585a31103bbe0799b2cc816dd4f143fa4f37aa1b83b7.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/favicon-96x96-fb7d5f4cb542aa3bb9b18301cac778d049e4f9551ed991cec872946878dd85f4.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='//d3mdfa9c7hlxb1.cloudfront.net/assets/favicon/favicon-16x16-61cd6d88df46b5d3c1058b9a9080204975dd8c596ca2f1471ceb741e64cf98b0.png' rel='icon' sizes='16x16' type='image/png'>
+
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="BpsXPlNJt5BC3XFNfi+vu5IEejQKExQkcGnclLN7rF4C7ifZJY266gjNTGNsSy76agaNX+gHhGc3hFBwaDzluw==" />
+<title>Anspruchsvolle Stellenangebote? Trotzdem bewerben!</title><meta name="description" content="Wann auf eine Stelle bewerben? Stellenangebote haben hohe Anforderungen. So kannst du dich bewerben, wenn du nicht alle Forderungen für den Job erfüllst." />
+
+<meta property="og:title" content="Anspruchsvolle Stellenangebote? Trotzdem bewerben!" />
+<meta property="og:image" content="https://d3mdfa9c7hlxb1.cloudfront.net/career_pages/507/large1411562100.jpg?1411562100" />
+<meta property="og:description" content="Große Firmen wie Procter &amp; Gamble erhalten mehrere Tausend Bewerbungen am Tag. Dabei arbeiten dort weltweit "nur" ca. 125.000 Leute. Die Anzahl der Bewerbungen übersteigt den Bedarf also um ein Vielfaches. Manche Betriebe reagieren darauf, indem sie die Anforderungen in Stellenanzeigen aufstocken. Damit wollen sie zwei Ziele erreichen: Nur die qualifiziertesten und insgesamt weniger Personen sollen Bewerbung abschicken, um das Auswahlverfahren einfacher und schneller zu gestalten." />
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '273150889828389'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=273150889828389&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+
+
+
+</head>
+<body id='p_posts_show'>
+<div class='top-banner-wrapper'>
+<div class='top-banners'>
+<div class='superbanner-wrapper' data-action='checkSuperbannerPresence'>
+<div class='superbanner'>
+<script src="//absolventa.adspirit.de/adscript.php?pid=32&ord=[timestamp]" type="text/javascript" language="JavaScript"></script>
+<noscript>
+ <a href="http://absolventa.adspirit.de/adnoclick.php?pid=32&ord=[timestamp]" target="_top">
+  <img src="http://absolventa.adspirit.de/adnoscript.php?pid=32&ord=[timestamp]"
+       alt="Hier klicken!" border="0" width="950" height="250" />
+ </a>
+</noscript>
+
+
+</div>
+
+</div>
+<div class='skyscraper-wrapper' data-action='checkSkyscraperPresence'>
+<div class='skyscraper'>
+<script src="//absolventa.adspirit.de/adscript.php?pid=33&ord=[timestamp]" type="text/javascript" language="JavaScript"></script>
+<noscript>
+ <a href="http://absolventa.adspirit.de/adnoclick.php?pid=33&ord=[timestamp]" target="_top">
+  <img src="http://absolventa.adspirit.de/adnoscript.php?pid=33&ord=[timestamp]"
+       alt="Hier klicken!" border="0" width="300" height="600" />
+ </a>
+</noscript>
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class='cookie-note cookie-note--visible'>
+<div class='row'>
+<div class='col12'>
+<div class='cookie-note__text'>
+ABSOLVENTA verwendet Cookies, um dir den bestmöglichen Service zu gewährleisten. Wenn du auf der Seite weitersurfst, stimmst du der
+<a href="/datenschutzbestimmungen#cookies">Cookie-Nutzung</a>
+zu.
+</div>
+<a class="cookie-note__close" data-action="cookie-close" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+
+<noscript>
+<div class='legacy-browser-hint'>
+<div class='row'>
+<div class='col12'>
+<svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1024 1375v-190q0-14-9.5-23.5T992 1152H800q-13 0-22.5 9.5T768 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19-13-11-24-11H786q-11 0-24 11-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126-17 29-46.5 46t-63.5 17H128q-34 0-63.5-17T18 1601q-37-63-2-126L784 67q17-31 47-49t65-18 65 18 47 49z"></path></svg>
+
+JavaScript ist momentan deaktiviert. Bitte JavaScript aktivieren, um alle Funktionen von ABSOLVENTA nutzen zu können.
+</div>
+</div>
+</div>
+</noscript>
+
+
+<div class="spinner" id="spinner"></div>
+<meta data-star-track-action='impression' data-star-track-element-id='645ff1927005d3c509b8f7a2ca1f3525' data-star-track-label='' data-star-track-path='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-child='' data-star-track-resource-id='' data-star-track-resource='header_menu_public_user' data-star-track-value='' data-star-track-version='C(2)'>
+<header class='header' data-action='initMenu'>
+<div class='row'>
+<div class='col12'>
+<div class='header__content'>
+<a class="header__logo" title="ABSOLVENTA Homepage" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Logo" data-star-track-version="A(1)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="15f7d42bffc9754712da2f48cc575734" href="/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="274px" height="47px" viewBox="0 0 274 47" version="1.1" class="icon">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Absolventa_Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo/Absolventa-Blue" fill-rule="nonzero" fill="#118089">
+            <g id="Absolventa_Logo">
+                <path d="M20,34.8 C20.8,38.7 21.4,42.7 21.8,46.4 L29.7,46.4 C27.5,30.1 21,8.6 18,0.5 L12,0.5 C9,8.6 2.5,30.1 0.2,46.4 L8.2,46.4 C8.7,42.7 9.3,38.7 10.1,34.8 L20,34.8 L20,34.8 Z M11,29.7 C12.9,20.7 15,13.4 15,13.4 C15,13.4 17,20.7 19,29.7 L11,29.7 L11,29.7 Z" id="Shape"></path>
+                <path d="M51.1,22.7 C54,20.6 56.3,16.4 56.3,12 C56.3,5.7 49.8,0.5 43.5,0.5 L34.1,0.5 L34.1,46.4 L44.4,46.4 C51,46.4 57.6,41.6 57.6,33.9 C57.6,27.5 53.8,24.3 51.1,22.7 L51.1,22.7 Z M43.6,41.3 L41.9,41.3 L41.9,25.5 L43.6,25.5 C47.1,25.5 49.4,29 49.4,33.4 C49.3,37.3 46.9,41.3 43.6,41.3 L43.6,41.3 Z M43.6,20.8 L41.9,20.8 L41.9,5.7 L43.5,5.7 C46.5,5.7 48,9 48,13.3 C48,16.3 46.6,20.8 43.6,20.8 L43.6,20.8 Z" id="Shape"></path>
+                <path d="M72.6,5.5 C75.1,5.5 77.4,8.6 77.4,8.6 L81.3,4.4 C81.3,4.4 77.9,0.3 72.2,0.3 C66.2,0.3 61.5,3.9 61.5,9.2 C61.5,19.1 75.4,31.9 75.4,38 C75.4,39.9 73.7,41.3 71.1,41.3 C67.2,41.3 64.5,37.2 64.5,37.2 L60.2,41.6 C60.2,41.6 65.1,46.6 71.1,46.6 C77.4,46.6 82.9,43.3 82.9,38 C82.9,29.1 69,17.2 69,9.2 C68.9,7.2 69.8,5.5 72.6,5.5 L72.6,5.5 Z" id="Shape"></path>
+                <path d="M99.4,0.3 C91.4,0.3 85.7,6.6 85.7,23.4 C85.7,40.2 91.4,46.5 99.4,46.5 C107.4,46.5 113.1,40.3 113.1,23.4 C113.1,6.5 107.5,0.3 99.4,0.3 L99.4,0.3 Z M94.1,23.3 C94.1,12 95.7,5.6 99.5,5.6 C103.2,5.6 104.8,12.2 104.8,23.3 C104.8,34.6 103.2,41 99.5,41 C95.7,41.1 94.1,34.6 94.1,23.3 L94.1,23.3 Z" id="Shape"></path>
+                <polygon id="Shape" points="126.5 41.2 126.5 0.5 118.8 0.5 118.8 46.4 137.7 46.4 137.7 41.2"></polygon>
+                <path d="M156,0.5 C154.4,14.6 149.7,33.5 149.7,33.5 C149.7,33.5 145.1,14.6 143.5,0.5 L135.5,0.5 C137.8,16.6 143.7,38.2 146.7,46.4 L152.7,46.4 C155.7,38.2 161.7,16.6 163.9,0.5 L156,0.5 L156,0.5 Z" id="Shape"></path>
+                <polygon id="Shape" points="175.9 41.2 175.9 25.4 185.2 25.4 185.2 20.3 175.9 20.3 175.9 5.6 186.9 5.6 186.9 0.5 168.2 0.5 168.2 46.4 187.4 46.4 187.4 41.2"></polygon>
+                <polygon id="Shape" points="213.8 46.4 218.8 46.4 218.8 0.5 211.6 0.5 211.6 27.6 197.4 0.5 192.4 0.5 192.4 46.4 199.5 46.4 199.5 19.2"></polygon>
+                <polygon id="Shape" points="239 46.4 239 5.6 247.1 5.6 247.1 0.5 223.2 0.5 223.2 5.6 231.3 5.6 231.3 46.4"></polygon>
+                <path d="M264.1,34.8 C264.9,38.7 265.5,42.7 265.9,46.4 L273.8,46.4 C271.6,30.2 265,8.7 262,0.5 L256,0.5 C253,8.7 246.5,30.2 244.2,46.4 L252.2,46.4 C252.6,42.7 253.3,38.7 254,34.8 L264.1,34.8 L264.1,34.8 Z M255.1,29.8 C257,20.8 259.1,13.5 259.1,13.5 C259.1,13.5 261.1,20.8 263.1,29.8 L255.1,29.8 L255.1,29.8 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
+
+</a><div class='header__links'>
+<a title="Jobs finden" class="header__link header__link--main " data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Jobs)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="396f40d23cb13b21333ddbe2d12f056c" href="/stellenangebote"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.966 52.966" class="icon"><path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 0 0 1.414.028 1 1 0 0 0 .028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z"></path></svg>
+
+7.069
+Jobs
+</a><a class="header__link " data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Arbeitgeber)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="e2fa7e6b6ff4e94cd6dd22b40144468f" href="/unternehmen">Arbeitgeber
+</a><a class="header__link header__link--active" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Karriere-Tipps)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="53f135ada477ddb85c4b5804d3ef01f6" href="/karriereguide">Karriere-Tipps
+</a><a class="header__link " data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Interviews)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="b09be13f02b022bff830e120e9195491" href="/interviews">Interviews
+</a><a class="header__link" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Job-Anfragen)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="da345c58afa6f7f1eb8a6e44da217c76" href="/registrieren">Job-Anfragen
+</a></div>
+<div class='header__alternate-links'>
+<a class="header__link header__link--alternate " data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Stellenanzeigen schalten)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="de7429a9f238f078df70e5b0deaac40f" href="/personalsuche">Stellenanzeigen schalten
+</a></div>
+<a title="Menü öffnen" class="header__menu" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Burger Menu)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="4ed4702443836d6a5bc38ae2ec6c9848" data-action="menuBurgerButton" href="#"><div class='header__burger-menu'>
+<div class='header__burger-menu-item'></div>
+</div>
+</a><a title="User" class="header__user-link" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Menu Button non-logged-in user)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="d55ad73accea2f9ab1d4a68d2bde918e" data-action="menuUserButton" href="#"><div class='header__user-link-label'>Anmelden</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z"></path></svg>
+
+</a>
+</div>
+</div>
+</div>
+</header>
+<div class='header__curtain' data-action='menuCurtain'></div>
+
+<nav class='menu' data-action='menuBurger'>
+<div class='row'>
+<div class='col12'>
+<div class='row'>
+<div class='col3'>
+<div class='text-like-h5'>Auf Jobsuche? Über 100.000 junge Akademiker sind bereits registriert!</div>
+<p>Wie du mit ABSOLVENTA exklusive Job-Angebote erhältst.</p>
+<a rel="nofollow" class="btn btn--secondary btn--block" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="db_teaser_burger_menu" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="035d0cd07fca90db766d6dcdee3b1819" data-action="menuUserButton" href="/registrieren">Mehr erfahren</a>
+
+</div>
+<div class='col2 offset1'>
+<div class='text-like-h5 menu__heading'>Karriere-Tipps</div>
+<ul>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/bewerbung">Bewerbung</a>
+</li>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/assessment-center">Assessment Center</a>
+</li>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/vorstellungsgespraech">Vorstellungsgespräch</a>
+</li>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/soft-skills">Soft-Skills</a>
+</li>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/gehalt">Gehalt</a>
+</li>
+<li class='menu__item'>
+<a class="menu__link" href="/karriereguide/gehalt/brutto-netto-rechner">Netto-Rechner</a>
+</li>
+</ul>
+</div>
+<div class='col2'>
+<div class='text-like-h5 menu__heading'>Interviews</div>
+<ul>
+<li class='menu__item'>
+<a class="menu__link" href="/interviews/berufseinsteiger">Berufseinsteiger-Interviews
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/interviews/arbeitgeber">Personaler-Interviews
+</a></li>
+</ul>
+</div>
+<div class='col2'>
+<div class='text-like-h5 menu__heading'>Jobs in Städten</div>
+<ul>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/stadt/berlin">Berlin
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/stadt/frankfurt">Frankfurt
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/stadt/muenchen">München
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/stadt/hamburg">Hamburg
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/stadt/stuttgart">Stuttgart
+</a></li>
+</ul>
+</div>
+<div class='col2'>
+<div class='text-like-h5 menu__heading'>Jobs nach Bereichen</div>
+<ul>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/marketing">Marketing
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/it">IT
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/ingenieure">Ingenieur
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/vertrieb">Vertrieb
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/human-resources">HR
+</a></li>
+<li class='menu__item'>
+<a class="menu__link" href="/jobs/channel/consulting">Consulting
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<nav class='menu menu--user' data-action='menuUser'>
+<div class='row'>
+<div class='col3 offset4'>
+<div class='margin-top25'>
+<div class='text-like-h5'>Auf Jobsuche? Über 100.000 junge Akademiker sind bereits registriert!</div>
+<p>Wie du mit ABSOLVENTA exklusive Job-Angebote erhältst.</p>
+<a rel="nofollow" class="btn btn--secondary btn--block" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="db_teaser_user_menu" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="4d4e47efffd05d306d075075de3d9325" data-action="menuUserButton" href="/registrieren">Mehr erfahren</a>
+
+</div>
+</div>
+<div class='col4 offset1'>
+<form autocomplete="off" class="form" id="user-header-login" action="https://www.absolventa.de/absolventen/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZgO3eyebGmWHm1UyUscfhm1023rndpPVZv2RA2SYDYpidoecUV8XH82LaBxAo57HlXYsEQViA5YhEB3nv99Ebw==" />
+<div class='row'>
+<div class='col12'>
+<label for="email">E-Mail-Adresse</label>
+<input type="email" name="email" id="email" placeholder="E-Mail-Adresse" />
+</div>
+</div>
+<div class='row'>
+<div class='col12'>
+<label for="password">Passwort</label>
+<input type="password" name="password" id="password" placeholder="Passwort" />
+</div>
+</div>
+<div class='row'>
+<div class='col12'>
+<input type="submit" name="commit" value="Anmelden" class="btn" data-disable-with="Anmelden" />
+</div>
+</div>
+<div class='row'>
+<div class='col6'>
+<label class='margin-top0'>
+<input type="checkbox" name="remember_me" id="remember_me" value="1" checked="checked" />
+Eingeloggt bleiben
+</label>
+</div>
+<div class='col6 text-right'>
+<strong>
+<a rel="nofollow" class="padding-top5" href="/g/password_resets/new">Passwort vergessen?</a>
+</strong>
+</div>
+</div>
+<div class='row'>
+<div class='col12'>
+<hr class='margin0'>
+<p class='text-right'>
+Sie sind Arbeitgeber?
+<strong>
+<a rel="nofollow" data-star-track-resource="header_menu_public_user" data-star-track-resource-id="" data-star-track-resource-child="Link (Zum Login als Recruiter)" data-star-track-version="C(2)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="093d8769c3cc91416d90a13af959799d" href="https://www.absolventa.de/personalsuche/login">Zum Login</a>
+</strong>
+</p>
+</div>
+</div>
+</form>
+
+</div>
+</div>
+</nav>
+
+
+
+
+<div class='container container--grey' data-slide-in-overlay-container>
+<div class='row'>
+<div class='col12'>
+<ol class='breadcrumb margin-top5' itemscope itemtype='http://schema.org/BreadcrumbList'>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="/karriereguide"><span itemprop='name'>Karriereguide</span>
+</a><meta content='1' itemprop='position'>
+</li>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="/karriereguide/bewerbung"><span itemprop='name'>Bewerbung</span>
+</a><meta content='2' itemprop='position'>
+</li>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="/karriereguide/ratgeber-bewerbung"><span itemprop='name'>Bewerbungsratgeber</span>
+</a><meta content='3' itemprop='position'>
+</li>
+<li class='current' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<span itemprop='item' itemscope itemtype='http://schema.org/Thing'>
+<span itemprop='name'>Anspruchsvolle Stellenangebote? Trotzdem bewerben!</span>
+</span>
+<meta content='4' itemprop='position'>
+</li>
+</ol>
+</div>
+</div>
+
+<div class='row'>
+<div class='col4' data-channel-teaser-conversion-container>
+<div class='row'>
+<div class='col12' data-star-track-action='sight_impression' data-star-track-element-id='3593a6c82c10582b67fdde804651f6aa' data-star-track-label='' data-star-track-path='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-child='' data-star-track-resource-id='' data-star-track-resource='article_search_form_post_show' data-star-track-value='' data-star-track-version='A(1)'>
+<form id="post-search" data-star-track-resource="article_search_form_post_show" data-star-track-resource-id="" data-star-track-resource-child="" data-star-track-version="A(1)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="submit" data-star-track-element-id="002d0d7709be80a04ca01cb73de5bd6a" action="/karriereguide/suche" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='form__input-icon'>
+<label class="screenreader" for="query">Artikel suchen, z.B. Gehalt</label>
+<svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1216 832q0-185-131.5-316.5T768 384 451.5 515.5 320 832t131.5 316.5T768 1280t316.5-131.5T1216 832zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225T64 832t55.5-273.5 150-225 225-150T768 128t273.5 55.5 225 150 150 225T1472 832q0 220-124 399l343 343q37 37 37 90z"></path></svg>
+
+<input type="text" name="query" id="query" placeholder="Karriereguide durchsuchen" data-action="autocomplete" data-autocomplete-source="/p/post_categories/autocomplete" />
+</div>
+</form>
+
+</div>
+</div>
+
+
+<div class='row' data-star-track-action='sight_impression' data-star-track-element-id='abb3dfb16c2e4bbecb146b1c2373f021' data-star-track-label='' data-star-track-path='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-child='' data-star-track-resource-id='' data-star-track-resource='career_guide_database_teaser' data-star-track-value='' data-star-track-version='D(1)'>
+<div class='col12'>
+<div class='panel panel-big register register--d1'>
+<div class='register__content'>
+<div class='register__headline'>
+Erhalte keine Absagen mehr!
+</div>
+<div class='register__image'>
+<img alt="Lächelnde Frau am Laptop erhält Job-Anfrage" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/career_page_categories/career_page_register_d1-444ad5bf096ab3a3e028a9ee1d181028f39c6891ab3203121af8b040d7e511bd.jpg" />
+</div>
+<div class='register__details'>
+<div class='row'>
+<div class='col9'>
+<div class='register__details-headline'>
+<strong>
+Melde dich kostenlos an
+<br>
+und lass dich von Top-
+<br>
+Unternehmen finden!
+</strong>
+</div>
+</div>
+<div class='col3'>
+<div class='register__details-seal'>
+<img width="45" alt="Focus Money Deutschland-Test: Absolventa ist die beste Jobbörse (Spezialisten)" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/focus_seal/focus_seal_vertical_2017-852950c456f3fe84342a9c72e0292313fd3c59818db631cc6be4965e92c9e46f.png" />
+</div>
+</div>
+</div>
+</div>
+<div class='register__cta'>
+<form class="margin-top20" target="_blank" data-star-track-resource="career_guide_database_teaser" data-star-track-resource-id="" data-star-track-resource-child="" data-star-track-version="D(1)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="submit" data-star-track-element-id="28390116621bcaec1587484b93f5e1f8" action="https://www.absolventa.de/g/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="023JoA6Xq2W8dN9cTGtZMXJYjq7D9/JGIhz1ZR/X0MzXGPlHeFOmH/Zk4nJeD9hwilp5xSHjYgVl8XmBxJCZKQ==" /><label hidden="hidden" for="user_email">E-Mail</label>
+<input tabindex="1" placeholder="Deine E-Mail-Adresse" type="email" name="user[email]" id="user_email" />
+<button name="button" type="submit" class="btn btn--secondary btn--block margin-top10">Jetzt Profil erstellen <svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col12'>
+<h4 class='margin-top0'>Meist gelesene Artikel</h4>
+<div class='panel panel-big'>
+<ul class='list-with-border'>
+<li>
+<a href="/karriereguide/online-bewerben/email-bewerbung">Alle Infos zur E-Mail-Bewerbung</a>
+</li>
+<li>
+<a href="/karriereguide/arbeitsentgelt/durchschnittsgehalt">Durchschnittsgehalt in Deutschland</a>
+</li>
+<li>
+<a href="/karriereguide/vor-und-nachbereitung/vorstellungsgespraech-einladung">Einladung zum Vorstellungsgespräch</a>
+</li>
+<li>
+<a href="/karriereguide/vor-und-nachbereitung/vorstellungsgespraech-tipps">10 Tipps fürs Vorstellungsgespräch</a>
+</li>
+<li>
+<a href="/karriereguide/gespraech/vorstellungsgespraech-fragen">Typische Fragen im Vorstellungsgespräch</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class='row channel-teaser-wrapper' data-action='channel-teaser-conversion' data-star-track-action='sight_impression' data-star-track-element-id='10806009eca46a24f7378e5f392770d6' data-star-track-label='' data-star-track-path='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-child='' data-star-track-resource-id='' data-star-track-resource='career_guide_channel_teaser' data-star-track-value='' data-star-track-version='B(4)'>
+<div class='col12'>
+<h4 class='margin-top0'>Die beliebtesten Jobbereiche</h4>
+<a data-star-track-resource="career_guide_channel_teaser" data-star-track-resource-id="" data-star-track-resource-child="ingenieure_channel_link" data-star-track-version="B(4)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="2f420a9aaead3588a9d632b36844ee57" href="/jobs/channel/ingenieure"><div class='panel channel-teaser'>
+<div class='channel-teaser__image'>
+<img srcset="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_ingenieur-9496d96f76f5b7912ddb993246f36eb1d00b47970a8fd2a555e7a441332326bd.jpg 1x, //d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_ingenieur@2x-84bbd2e7dbd618977e4a5df036981a8e805f027494993ceb341aee363166da3a.jpg 2x" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_ingenieur-9496d96f76f5b7912ddb993246f36eb1d00b47970a8fd2a555e7a441332326bd.jpg" alt="Channelteaser ingenieur" />
+</div>
+<div class='channel-teaser__text'>
+Ob Autos, Flugzeuge oder
+<strong>Maschinen</strong>
+–
+hier entwickelst
+<br>
+du
+<strong>Technik!</strong>
+<div class='channel-teaser__count'>
+<strong>&rarr;</strong>
+2358
+Jobs als Ingenieur
+</div>
+</div>
+</div>
+</a><a data-star-track-resource="career_guide_channel_teaser" data-star-track-resource-id="" data-star-track-resource-child="finance_channel_link" data-star-track-version="B(4)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="49a1b52f19a299bc754d463dacd8113b" href="/jobs/channel/finance"><div class='panel channel-teaser'>
+<div class='channel-teaser__image'>
+<img srcset="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_finance-7a81a24e13b34d58843a8c5487292164de08be875e0e8449bf0d73ce0957dea6.jpg 1x, //d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_finance@2x-c0a573d5fbf6aae6c85150adbc63ef2f7f9c05f843d9dad19434d29f74e14504.jpg 2x" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_finance-7a81a24e13b34d58843a8c5487292164de08be875e0e8449bf0d73ce0957dea6.jpg" alt="Channelteaser finance" />
+</div>
+<div class='channel-teaser__text'>
+Investment-Banker? Finanz-Manager?
+<strong>Jobs mit Geld!</strong>
+<div class='channel-teaser__count'>
+<strong>&rarr;</strong>
+1049
+Jobs in Finance
+</div>
+</div>
+</div>
+</a><a data-star-track-resource="career_guide_channel_teaser" data-star-track-resource-id="" data-star-track-resource-child="hr_channel_link" data-star-track-version="B(4)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="13a69cd74e2b05dfdc983706dc148deb" href="/jobs/channel/human-resources"><div class='panel channel-teaser'>
+<div class='channel-teaser__image'>
+<img srcset="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_HR-e8ff62c127a115ed228c2dd487f639a6119d39489e12bd7a91b2bb901fa0c4b4.jpg 1x, //d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_HR@2x-8debe966459ca51fa02b4024ba3831c15f265eda7b31f708167b2e693e53dd70.jpg 2x" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_HR-e8ff62c127a115ed228c2dd487f639a6119d39489e12bd7a91b2bb901fa0c4b4.jpg" alt="Channelteaser hr" />
+</div>
+<div class='channel-teaser__text'>
+Immer die gleichen Fragen im
+<strong>Bewerbungsgespräch?</strong>
+<br>
+Mach es besser!
+<div class='channel-teaser__count'>
+<strong>&rarr;</strong>
+258
+Jobs im HR
+</div>
+</div>
+</div>
+</a><a data-star-track-resource="career_guide_channel_teaser" data-star-track-resource-id="" data-star-track-resource-child="it_channel_link" data-star-track-version="B(4)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="fc35fd1bbc8cac5f1ea1c61199b71110" href="/jobs/channel/it"><div class='panel channel-teaser'>
+<div class='channel-teaser__image'>
+<img srcset="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_it-84d4f8241364e42a981043fd6a45ddfa8ca3404f3abc6fb4f5b20d009de419b5.jpg 1x, //d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_it@2x-47551afe08c7de41a25ecf79cd0c655ff02b2acf663673b13c8d335aad3d5820.jpg 2x" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_it-84d4f8241364e42a981043fd6a45ddfa8ca3404f3abc6fb4f5b20d009de419b5.jpg" alt="Channelteaser it" />
+</div>
+<div class='channel-teaser__text'>
+<strong>Development oder IT</strong>
+-Administration?
+Hauptsache was mit Daten.
+<div class='channel-teaser__count'>
+<strong>&rarr;</strong>
+2796
+Jobs in der IT
+</div>
+</div>
+</div>
+</a><a data-star-track-resource="career_guide_channel_teaser" data-star-track-resource-id="" data-star-track-resource-child="marketing_channel_link" data-star-track-version="B(4)" data-star-track-label="" data-star-track-path="/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben" data-star-track-value="" data-star-track-action="click" data-star-track-element-id="d84a0f0a57e8a5cc13aa8b953bcfb0c2" href="/jobs/channel/marketing"><div class='panel channel-teaser'>
+<div class='channel-teaser__image'>
+<img srcset="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_marketing-06167e8ce4b21ea68c626a436aac490fec5b35fe0774eb5f8b6e4e3d85c54716.jpg 1x, //d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_marketing@2x-ae577ac4aef9ea68712e8a48a63be3710e462abc0b669e96aaee0305fbb72fec.jpg 2x" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/p/landing_pages/channelteaser_marketing-06167e8ce4b21ea68c626a436aac490fec5b35fe0774eb5f8b6e4e3d85c54716.jpg" alt="Channelteaser marketing" />
+</div>
+<div class='channel-teaser__text'>
+Hier erlebst du
+<strong>Online-Marketing</strong>
+, Werbung und PR hautnah!
+<div class='channel-teaser__count'>
+<strong>&rarr;</strong>
+464
+Jobs im Marketing
+</div>
+</div>
+</div>
+</a></div>
+</div>
+
+</div>
+<div class='col8'>
+<div class='panel panel-big post-post' data-star-track-action='scroll' data-star-track-element-id='19d45d864d8bceff2f05a28a958d5db6' data-star-track-label='' data-star-track-path='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-child='/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben' data-star-track-resource-id='' data-star-track-resource='post_scrolling' data-star-track-value='' data-star-track-version='A(2)'>
+<div class='row'>
+<div class='col12'>
+<span class='text-info'>Mut zur Lücke</span>
+<span class="post__date">aktualisiert am 12. Dezember 2016</span>
+<h1 class='post-post__heading'>Anspruchsvolle Stellenangebote? Trotzdem bewerben!</h1>
+</div>
+</div>
+<p>
+<img alt="Anspruchsvolle Stellenangebote? Trotzdem bewerben!" title="Anspruchsvolle Stellenangebote? Trotzdem bewerben!" srcset="https://absolventa-production.imgix.net/career_pages/507/original1411562100.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=210&amp;q=70&amp;w=660 660w, https://absolventa-production.imgix.net/career_pages/507/original1411562100.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=420&amp;q=70&amp;w=1320 1320w" sizes="100vw" src="https://absolventa-production.imgix.net/career_pages/507/original1411562100.jpg?auto=format&fit=crop&fm=jpg&h=210&q=70&w=660" />
+</p>
+<div class='text-teaser'>Große Firmen wie Procter &amp; Gamble erhalten mehrere Tausend Bewerbungen am Tag. Dabei arbeiten dort weltweit "nur" ca. 125.000 Leute. Die Anzahl der Bewerbungen übersteigt den Bedarf also um ein Vielfaches. Manche Betriebe reagieren darauf, indem sie die Anforderungen in Stellenanzeigen aufstocken. Damit wollen sie zwei Ziele erreichen: Nur die qualifiziertesten und insgesamt weniger Personen sollen Bewerbung abschicken, um das Auswahlverfahren einfacher und schneller zu gestalten.</div>
+<h2>Inhalt</h2>
+
+<ol><li><a data-action="scrollToElement" data-scroll-to-element-offset="60" href="#mut">Mit Selbstbewusstsein und Mut zur Lücke</a></li><li><a data-action="scrollToElement" data-scroll-to-element-offset="60" href="#lesen">Stellenangebote genau lesen</a></li><li><a data-action="scrollToElement" data-scroll-to-element-offset="60" href="#aufgehoben">Aufgeschoben ist nicht aufgehoben</a></li><li><a data-action="scrollToElement" data-scroll-to-element-offset="60" href="#masse">Individuelle Bewerbungen setzen sich von der Masse ab</a></li>
+</ol>
+
+<h2 id="mut">Mit Selbstbewusstsein und Mut zur Lücke</h2>
+
+<p>Auch bei der Arbeitssuche gilt, dass Mut sich auszahlt. Absolventen sollten sich auch auf Stellenangebote bewerben, bei denen <a href="/karriereguide/berufseinsteiger-wissen/berufserfahrung-fundierte-einschlaegige#.U0empuYkGLE">Berufserfahrung</a> erwünscht ist. Selbst wenn keine entsprechenden <a href="/praktikum">Praktika</a> oder Nebenjobs nachweisbar sind, können andere Stärken betont werden. Viele Fragen lassen sich gut durch einen Anruf klären.</p>
+
+<p><a href="/jobs/channel/geisteswissenschaften">Geisteswissenschaftler</a> sollten sich nicht entmutigen lassen, falls sich die Ausschreibung auf einen anderen Studiengang bezieht. Im Zuge der Umstellung auf Bachelor und Master Studiengänge haben sich die Bezeichnungen vervielfacht. Wenn ein Wirtschaftsjournalist gesucht wird, heißt das nicht, dass <a href="/jobs/channel/finance/job/stellenangebote-betriebswirt">Betriebswirte</a> oder Kommunikationswissenschaftler chancenlos sind.</p>
+
+<p>Zwar sollte man keine aussichtslose Bewerbungen verschicken, aber wenn man einen großen Teil der Anforderungen erfüllen kann und seine Motivation für den Job darlegen kann, der sollte die Chance ergreifen. Wer nicht wagt, der nichjt gewinnt! Sicherlich wird man auf viele <a href="/karriereguide/bewerbung">Bewerbungen</a> auch Absagen erhalten, doch davon sollte man sich nicht entmutigen lassen, sondern weiter an seine Chance glauben.</p>
+
+<h2 id="lesen">Stellenangebote genau lesen</h2>
+
+<p>Entscheidend ist, beim Lesen der <a href="/stellenangebote">Stellenangebote</a> darauf zu achten, welche Anforderungen vorausgesetzt, welche erwünscht und welche nur idealerweise nachzuweisen sind. Einige Firmen schreiben unter dem Stichpunkt „Voraussetzung“ großzügig „<em>Dem Aufgabengebiet entsprechend umfassende Kenntnisse.</em>“</p>
+
+<p>Der Text unter dem Stichpunkt „Erwünschte Qualifikationen“ ist oft deutlich länger. Wenn Dein Profil halbwegs passt, sollte man sich trotzdem bewerben. Der ideale Kandidat, der alle erwünschten Kenntnisse mitbringt, existiert vielleicht gar nicht.</p>
+
+<h2 id="aufgehoben">Aufgeschoben ist nicht aufgehoben</h2>
+
+<p>Laut einer vom <a href="http://www.spiegel.de/spiegel/0,1518,625457-3,00.html">Studie</a> der Hochschule Furtwangen und der Personalberatung <a href="/unternehmen/promeritag">Promerit AG</a> plant derzeit jedes zweite Unternehmen aus den besten Bewerbern einen Pool einzurichten, z.B. mittels eines <a href="/karriereguide/online-bewerben/bewerbermanagementsystem">Bewerbermanagementsystems</a>, um nach der Krise auf qualifiziertes Personal zurückgreifen zu können.</p>
+
+<p>Viele Bewerber halten eine entsprechende Anfrage für eine höfliche Absage. Dies ist jedoch keineswegs der Fall. Armin Trost, Leiter der Studie, rät darauf auf jeden Fall einzugehen. Der Suchende sollte die Personaler nur festlegen: "'<em>Freut mich, wenn Sie meine Daten noch aufheben wollen. Wie geht es denn weiter, wann kann ich mich melden?', ist dann die richtige Antwort</em>".</p>
+
+<h2 id="masse">Individuelle Bewerbungen setzen sich von der Masse ab</h2>
+
+<p>Unerlässlich ist es mittlerweile, dass Du Dich vor dem <a href="/karriereguide/bewerbung/bewerbungsschreiben">Bewerbungsschreiben</a> über den entsprechenden Betrieb informierst und jedes Mal ein individuell zugeschnittenes <a href="/karriereguide/bewerbung/anschreiben">Anschreiben</a> verfasst. Begründe, was Deine Qualifikationen mit den Anforderungen der jeweiligen Stelle zu tun haben. Soziale Kompetenzen wie Teamfähigkeit, Organisationstalent und Zuverlässigkeit solltest Du am besten anhand von konkreten Beispielen belegen. Falls keine entsprechenden <a href="/karriereguide/berufseinsteiger-wissen/berufserfahrung-fundierte-einschlaegige">Berufserfahrungen</a> (Praktika, Jobs, Ehrenamtliche Mitarbeit, <a href="/jobs/channel/marketing/job/promotionjobs">Promotionjobs</a>) nachweisbar sind, darf es auch etwas ausgefallener sein, zum Beispiel Planung und Vorbereitungen von Events (Sportfest, Hochzeit, Musikfestival).</p>
+
+<p><strong>Auf Jobsuche?<br />
+&gt;&gt; <a href="/stellenangebote">zu den Stellenangeboten</a></strong></p>
+
+<p><em><strong>Lesetipps:<br />
+&gt;&gt;&nbsp;<a href="/karriereguide/berufseinsteiger-wissen/arbeitslos-nach-dem-studium">Arbeitslos nach dem Studium: Aus der Not eine Tugend machen</a><br />
+&gt;&gt;&nbsp;<a href="/karriereguide/berufseinsteiger-wissen/berufsorientierung-nach-dem-studium">Berufsorientierung: Uni-Abschluss – und dann?</a></strong><br />
+<strong>&gt;&gt;&nbsp;<a href="/karriereguide/ratgeber-bewerbung/roter-faden">Roter Faden im Lebenslauf verliert an Bedeutung</a></strong></em></p>
+</div>
+<div class='row'>
+<div class='col12'>
+<h4>Über den Autor</h4>
+</div>
+</div>
+<div class='author-teaser'>
+<div class='author-teaser__image'>
+<img alt="Lukas große Klönne" srcset="https://absolventa-production.imgix.net/authors/7/original1405689536.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=180&amp;q=70&amp;w=180 180w, https://absolventa-production.imgix.net/authors/7/original1405689536.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=360&amp;q=70&amp;w=360 360w" sizes="100vw" src="https://absolventa-production.imgix.net/authors/7/original1405689536.jpg?auto=format&fit=crop&fm=jpg&h=180&q=70&w=180" />
+</div>
+<div class='author-teaser__description'>
+<strong class='text-main'>Lukas große Klönne</strong>
+<p class='text-info'>Ehem. Redaktionsleiter der Jobbörse ABSOLVENTA und Autor des Buches "<a href="http://www.amazon.de/gp/product/3658017988/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3658017988&linkCode=as2&tag=traineegeflue-21">Trainee-Knigge</a>" – der Ratgeber für Berufseinsteiger.</p>
+</div>
+</div>
+<div class='row'>
+<div class='col12'>
+<div class='panel panel-big sharing'>
+<div class='row'>
+<div class='col6'>
+<div class='margin-top10 margin-bottom10'>
+<span class='text-teaser'>Artikel weiterempfehlen:</span>
+</div>
+</div>
+<div class='col6'>
+<div class='pull-right'>
+<ul class='inline-list'>
+<li>
+<a class="btn btn--single-icon btn--icon btn--fby" href="https://www.facebook.com/sharer/sharer.php?u=https://www.absolventa.de/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759H734V905H479V609h255V391q0-186 104-288.5T1115 0q147 0 228 12z"></path></svg>
+</a>
+</li>
+<li><a class="btn btn--single-icon btn--icon btn--tw" href="https://twitter.com/home?status=Anspruchsvolle Stellenangebote? Trotzdem bewerben! https://www.absolventa.de/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5T1369.5 1125 1185 1335.5t-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5T285 1033q33 5 61 5 43 0 85-11-112-23-185.5-111.5T172 710v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5T884 653q-8-38-8-74 0-134 94.5-228.5T1199 256q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path></svg>
+</a></li>
+<li><a class="btn btn--single-icon btn--icon btn--go" href="https://plus.google.com/share?url=https://www.absolventa.de/karriereguide/ratgeber-bewerbung/anspruchsvolles-stellenangebot-trotzdem-bewerben"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1045 905q0-26-6-64H677v132h217q-3 24-16.5 50t-37.5 53-66.5 44.5T677 1138q-99 0-169-71t-70-171 70-171 169-71q92 0 153 59l104-101Q826 512 677 512q-160 0-272 112.5T293 896t112 271.5T677 1280q165 0 266.5-105T1045 905zm345 46h109V841h-109V731h-110v110h-110v110h110v110h110V951zm274-535v960q0 119-84.5 203.5T1376 1664H416q-119 0-203.5-84.5T128 1376V416q0-119 84.5-203.5T416 128h960q119 0 203.5 84.5T1664 416z"></path></svg>
+</a></li>
+<li>
+<a class="btn btn--single-icon btn--icon btn-mail" href="mailto:?body=https%3A%2F%2Fwww.absolventa.de%2Fkarriereguide%2Fratgeber-bewerbung%2Fanspruchsvolles-stellenangebot-trotzdem-bewerben&amp;subject=Interessanter%20Artikel%20im%20ABSOLVENTA%20Karriereguide"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1792 710v794q0 66-47 113t-113 47H160q-66 0-113-47T0 1504V710q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38T639 1015q-91-64-262-182.5T172 690q-62-42-117-115.5T0 438q0-78 41.5-130T160 256h1472q65 0 112.5 47t47.5 113z"></path></svg>
+
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col12'>
+<h4>Beliebte Artikel aus unserem Karriereguide</h4>
+</div>
+</div>
+<div class='row post-teasers'>
+<div class='col4 post-teaser'>
+<div class='panel panel-big post-teaser__panel'>
+<div class='full-width'>
+<a href="/karriereguide/vor-und-nachbereitung/vorstellungsgespraech-checkliste"><img alt="Vorstellungsgespräch Checkliste" title="Vorstellungsgespräch Checkliste" srcset="https://absolventa-production.imgix.net/career_pages/803/original1409649464.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=200&amp;q=70&amp;w=320 320w, https://absolventa-production.imgix.net/career_pages/803/original1409649464.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=400&amp;q=70&amp;w=640 640w" sizes="100vw" src="https://absolventa-production.imgix.net/career_pages/803/original1409649464.jpg?auto=format&fit=crop&fm=jpg&h=200&q=70&w=320" /></a>
+</div>
+<div class='post-teaser__slogan'>
+<span class='text-info'>Optimal vorbereiten</span>
+</div>
+<h3 class='text-like-h5 post-teaser__title'>
+<a href="/karriereguide/vor-und-nachbereitung/vorstellungsgespraech-checkliste"><strong>Vorstellungsgespräch Checkliste</strong>
+</a></h3>
+<p class='text-small'>
+Dein erstes Bewerbungsgespräch? Klar, dass du nervös bist und alles richtigmachen willst. Je besser du dich vorbereitest, desto leichter wird dir das Bewerbungsgespräch fallen. Eine Checkliste für das Vorstellungsgespräch verschafft dir einen Überblick, an was du alles vor, während und nach dem Vorstellungsgespräch ...
+</p>
+<a class="post-teaser__label label" href="/karriereguide/vor-und-nachbereitung/vorstellungsgespraech-checkliste"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg>
+
+Zum Artikel
+</a></div>
+</div>
+
+<div class='col4 post-teaser'>
+<div class='panel panel-big post-teaser__panel'>
+<div class='full-width'>
+<a href="/karriereguide/kommunikation/soziale-kompetenz"><img alt="Soziale Kompetenz als Karrierefaktor" title="Soziale Kompetenz als Karrierefaktor" srcset="https://absolventa-production.imgix.net/career_pages/924/original1405518672.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=200&amp;q=70&amp;w=320 320w, https://absolventa-production.imgix.net/career_pages/924/original1405518672.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=400&amp;q=70&amp;w=640 640w" sizes="100vw" src="https://absolventa-production.imgix.net/career_pages/924/original1405518672.jpg?auto=format&fit=crop&fm=jpg&h=200&q=70&w=320" /></a>
+</div>
+<div class='post-teaser__slogan'>
+<span class='text-info'>Social Skills im Berufsleben</span>
+</div>
+<h3 class='text-like-h5 post-teaser__title'>
+<a href="/karriereguide/kommunikation/soziale-kompetenz"><strong>Soziale Kompetenz als Karrierefaktor</strong>
+</a></h3>
+<p class='text-small'>
+In vielen Branchen sind die sozialen Kompetenzen fast genauso wichtig wie die fachlichen. Bei Führungspositionen, in denen man Personalverantwortung übernimmt und das eigene Fachwissen weitergibt, sind soziale Kompetenzen sogar ein maßgebliches Einstellungskriterium. Insbesondere Teamfähigkeit und Kommunikationkompe...
+</p>
+<a class="post-teaser__label label" href="/karriereguide/kommunikation/soziale-kompetenz"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg>
+
+Zum Artikel
+</a></div>
+</div>
+
+<div class='col4 post-teaser'>
+<div class='panel panel-big post-teaser__panel'>
+<div class='full-width'>
+<a href="/karriereguide/gehaltsrahmen/gehaltstabelle"><img alt="Die Gehaltstabelle" title="Die Gehaltstabelle" srcset="https://absolventa-production.imgix.net/career_pages/826/original1411120597.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=200&amp;q=70&amp;w=320 320w, https://absolventa-production.imgix.net/career_pages/826/original1411120597.jpg?auto=format&amp;fit=crop&amp;fm=jpg&amp;h=400&amp;q=70&amp;w=640 640w" sizes="100vw" src="https://absolventa-production.imgix.net/career_pages/826/original1411120597.jpg?auto=format&fit=crop&fm=jpg&h=200&q=70&w=320" /></a>
+</div>
+<div class='post-teaser__slogan'>
+<span class='text-info'>Die Gehaltsstrukturen verstehen</span>
+</div>
+<h3 class='text-like-h5 post-teaser__title'>
+<a href="/karriereguide/gehaltsrahmen/gehaltstabelle"><strong>Die Gehaltstabelle</strong>
+</a></h3>
+<p class='text-small'>
+Bevor man in ein Bewerbungsgespräch geht, sollte man eine Vorstellung von seinem zukünftigen Arbeitsentgelt haben. Doch besonders für Berufseinsteiger ist es schwierig, die eigenen Qualifikationen einzuschätzen. ABSOLVENTA erklärt, welche Faktoren in einer Gehaltstabelle berücksichtigt werden und warum man vor einem...
+</p>
+<a class="post-teaser__label label" href="/karriereguide/gehaltsrahmen/gehaltstabelle"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg>
+
+Zum Artikel
+</a></div>
+</div>
+
+</div>
+
+</div>
+<script src="//d3mdfa9c7hlxb1.cloudfront.net/assets/kanyotoku/kanyotoku_tracker-184dc208504da72f255ede85cd288a05f5bea5a394ed718cecfea1dd7c5772ef.js"></script>
+<img id="kanyotoku-tracker" data-kanyotoku-viewable-id="507" data-kanyotoku-model="posts" data-kanyotoku-auth-token="1bf78cb3792139458e" data-kanyotoku-source="show"></img>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){ 
+      if (typeof Kanyotoku !== 'undefined') { 
+          Kanyotoku.track();
+      }
+  });
+</script>
+
+
+<div class='peel-ad'>
+<script src="//absolventa.adspirit.de/adscript.php?pid=12&ord=[timestamp]" type="text/javascript" language="JavaScript"></script>
+<noscript>
+<a href="http://absolventa.adspirit.de/adnoclick.php?pid=12&ord=[timestamp]" target="_top">
+ <img src="http://absolventa.adspirit.de/adnoscript.php?pid=12&ord=[timestamp]"
+      alt="Hier klicken!" border="0" width="600" height="600" />
+</a>
+</noscript>
+
+
+</div>
+
+<footer>
+<div class='container'>
+<div class='row'>
+<div class='col3'>
+<h4>
+<a href="/stellenangebote">7069
+Jobs
+</a></h4>
+<ul class='light-grey'>
+<li><a href="/praktikum">Praktikum</a></li>
+<li><a href="/werkstudentenjobs">Werkstudentenjobs</a></li>
+<li><a href="/berufseinstieg">Berufseinstieg</a></li>
+<li><a href="/trainee">Trainee-Programme</a></li>
+<li><a href="/junior-position">Junior Positionen</a></li>
+<li><a href="/absolventen-jobs">Absolventenjobs</a></li>
+</ul>
+</div>
+<div class='col3'>
+<h4>
+<a href="/karriereguide/bewerbung">Bewerbung</a>
+</h4>
+<ul class='light-grey'>
+<li><a href="/karriereguide/bewerbung/lebenslauf">Lebenslauf</a></li>
+<li><a href="/karriereguide/berufseinsteiger-wissen">Berufseinsteiger-Wissen</a></li>
+<li><a href="/karriereguide/vorstellungsgespraech">Vorstellungsgespräch</a></li>
+<li><a href="/karriereguide/assessment-center">Assessment Center</a></li>
+<li><a href="/karriereguide/einstellungstest">Einstellungstest</a></li>
+<li><a href="/karriereguide/soft-skills">Soft-Skills</a></li>
+<li><a href="/karriereguide/koerpersprache">Körpersprache</a></li>
+</ul>
+</div>
+<div class='col3'>
+<h4>
+<a href="/karriereguide/gehalt">Gehalt</a>
+</h4>
+<ul class='light-grey'>
+<li><a href="/karriereguide/gehalt/einstiegsgehalt">Einstiegsgehalt</a></li>
+<li><a href="/karriereguide/gehalt/gehaltsverhandlung">Gehaltsverhandlung</a></li>
+<li><a href="/gehaltsrechner">Gehaltsvergleich</a></li>
+<li><a href="/karriereguide/gehalt/brutto-netto-rechner">Netto-Rechner</a></li>
+<li><a href="/karriereguide/arbeitgeber-interviews">Arbeitgeber im Interview</a></li>
+<li><a href="/karriereguide/berufseinsteiger-erfahrungen">Berufseinsteiger berichten</a></li>
+<li><a href="/karriereguide/gehalt/urlaubsgeld">Urlaubsgeld</a></li>
+</ul>
+</div>
+<div class='col3'>
+<h4>
+<a href="/unternehmen">Beliebte Unternehmen</a>
+</h4>
+<ul class='light-grey'>
+<li><a title="Gothaer Finanzholding AG" href="/unternehmen/454-p-gothaer-finanzholding-ag">Gothaer Finanzholding AG</a></li>
+<li><a title="IPH - Institut für integrierte Produktion Hannover gGmbH" href="/unternehmen/1867-p-iph-institut-fuer-integrierte-produktion-hannover-ggmbh">IPH - Institut für integrie...</a></li>
+<li><a title="Testbirds GmbH" href="/unternehmen/5295-p-testbirds_gmbh">Testbirds GmbH</a></li>
+<li><a title="Allianz Deutschland" href="/unternehmen/947-p-allianz">Allianz Deutschland</a></li>
+<li><a title="EDEKA Aktiengesellschaft" href="/unternehmen/985-p-edeka-ag">EDEKA Aktiengesellschaft</a></li>
+<li><a title="invenio AG" href="/unternehmen/273-p-invenio-gmbh-engineering-services">invenio AG</a></li>
+</ul>
+</div>
+</div>
+</div>
+<section class='container container--highlight'>
+<div class='row'>
+<div class='col9'>
+<h4>
+<strong>Für Arbeitgeber:</strong>
+<br>
+<small>
+Mit der Spezial-Jobbörse ABSOLVENTA sprechen Sie die richtige
+<strong>Zielgruppe</strong>
+an.
+<br>
+Erfahren Sie jetzt, wie Sie mit uns Talente &
+<strong>Nachwuchskräfte</strong>
+finden und für sich gewinnen.
+</small>
+</h4>
+</div>
+<div class='col3'>
+<a class="btn btn--secondary btn--block margin-top30" href="/personalsuche"><svg xmlns="http://www.w3.org/2000/svg" width="1792" height="1792" viewBox="0 0 1792 1792" class="icon"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z"></path></svg>
+
+Alle Vorteile ansehen
+</a></div>
+</div>
+</section>
+
+<section class='container container--without-shadow'>
+<div class='row'>
+<div class='col1'>
+<img class="margin-top20" height="100" src="//d3mdfa9c7hlxb1.cloudfront.net/assets/focus_seal/focus_seal_vertical_2017-852950c456f3fe84342a9c72e0292313fd3c59818db631cc6be4965e92c9e46f.png" alt="Focus seal vertical 2017" />
+</div>
+<div class='col8'>
+<p class='margin-top15 text-small'>
+Der ABSOLVENTA-Karriereguide unterstützt Studenten, Absolventen und Young Professionals bei Jobsuche, Berufseinstieg und Karriere.
+Das umfassende Angebot umfasst unter anderem Tipps für
+<a href="/karriereguide/bewerbung/kreative-bewerbung">kreative Bewerbungen</a>
+oder die
+<a href="/karriereguide/bewerbung/email-bewerbung">E-Mail-Bewerbung</a>,
+vom
+<a href="/karriereguide/bewerbung/anschreiben">Anschreiben</a>
+über den
+<a href="/karriereguide/bewerbung/tabellarischer-lebenslauf">tabellarischen Lebenslauf</a>
+bis zu allen anderen
+<a href="/karriereguide/bewerbung/bewerbungsunterlagen">Bewerbungsunterlagen</a>.
+Zudem geben wir Tipps fürs
+<a href="/karriereguide/gespraech/tipps-telefoninterview">Telefoninterview</a>,
+und bereiten Berufseinsteiger auf den Besuch von
+<a href="/karriereguide/berufseinstieg/erfolg-jobmesse">Jobmessen</a>
+vor.
+</p>
+</div>
+</div>
+</section>
+<div class='footer footer--with-logo'>
+<div class='row'>
+<div class='col12'>
+<a class="footer__logo" href="/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="125px" height="22px" viewBox="0 0 125 22" version="1.1" class="icon">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Absolventa_Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Global-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-35.000000, -30.000000)" fill="#1A1A1A">
+            <g id="Logo/Absolventa-Black">
+                <g transform="translate(35.000000, 30.000000)">
+                    <g id="Absolventa_Black_Logo">
+                        <path d="M9.12408759,16.2893617 C9.48905109,18.1148936 9.76277372,19.987234 9.94525547,21.7191489 L13.5492701,21.7191489 C12.5456204,14.0893617 9.58029197,4.02553191 8.21167883,0.234042553 L5.47445255,0.234042553 C4.10583942,4.02553191 1.14051095,14.0893617 0.0912408759,21.7191489 L3.74087591,21.7191489 C3.9689781,19.987234 4.24270073,18.1148936 4.60766423,16.2893617 L9.12408759,16.2893617 L9.12408759,16.2893617 Z M5.01824818,13.9021277 C5.8850365,9.6893617 6.84306569,6.27234043 6.84306569,6.27234043 C6.84306569,6.27234043 7.75547445,9.6893617 8.66788321,13.9021277 L5.01824818,13.9021277 L5.01824818,13.9021277 Z" id="Shape" fill-rule="nonzero"></path>
+                        <path d="M23.3120438,10.6255319 C24.6350365,9.64255319 25.6843066,7.67659574 25.6843066,5.61702128 C25.6843066,2.66808511 22.7189781,0.234042553 19.8448905,0.234042553 L15.5565693,0.234042553 L15.5565693,21.7191489 L20.2554745,21.7191489 C23.2664234,21.7191489 26.2773723,19.4723404 26.2773723,15.8680851 C26.2773723,12.8723404 24.5437956,11.3744681 23.3120438,10.6255319 L23.3120438,10.6255319 Z M19.8905109,19.3319149 L19.1149635,19.3319149 L19.1149635,11.9361702 L19.8905109,11.9361702 C21.4872263,11.9361702 22.5364964,13.5744681 22.5364964,15.6340426 C22.4908759,17.4595745 21.3959854,19.3319149 19.8905109,19.3319149 L19.8905109,19.3319149 Z M19.8905109,9.73617021 L19.1149635,9.73617021 L19.1149635,2.66808511 L19.8448905,2.66808511 C21.2135036,2.66808511 21.8978102,4.21276596 21.8978102,6.22553191 C21.8978102,7.62978723 21.2591241,9.73617021 19.8905109,9.73617021 L19.8905109,9.73617021 Z" id="Shape" fill-rule="nonzero"></path>
+                        <path d="M33.120438,2.57446809 C34.2609489,2.57446809 35.310219,4.02553191 35.310219,4.02553191 L37.0894161,2.05957447 C37.0894161,2.05957447 35.5383212,0.140425532 32.9379562,0.140425532 C30.2007299,0.140425532 28.0565693,1.82553191 28.0565693,4.30638298 C28.0565693,8.94042553 34.3978102,14.9319149 34.3978102,17.787234 C34.3978102,18.6765957 33.6222628,19.3319149 32.4361314,19.3319149 C30.6569343,19.3319149 29.4251825,17.412766 29.4251825,17.412766 L27.4635036,19.4723404 C27.4635036,19.4723404 29.6989051,21.812766 32.4361314,21.812766 C35.310219,21.812766 37.8193431,20.2680851 37.8193431,17.787234 C37.8193431,13.6212766 31.4781022,8.05106383 31.4781022,4.30638298 C31.4324818,3.37021277 31.8430657,2.57446809 33.120438,2.57446809 L33.120438,2.57446809 Z" id="Shape" fill-rule="nonzero"></path>
+                        <path d="M45.3467153,0.140425532 C41.6970803,0.140425532 39.0967153,3.0893617 39.0967153,10.9531915 C39.0967153,18.8170213 41.6970803,21.7659574 45.3467153,21.7659574 C48.9963504,21.7659574 51.5967153,18.8638298 51.5967153,10.9531915 C51.5967153,3.04255319 49.0419708,0.140425532 45.3467153,0.140425532 L45.3467153,0.140425532 Z M42.9288321,10.906383 C42.9288321,5.61702128 43.6587591,2.6212766 45.3923358,2.6212766 C47.080292,2.6212766 47.810219,5.7106383 47.810219,10.906383 C47.810219,16.1957447 47.080292,19.1914894 45.3923358,19.1914894 C43.6587591,19.2382979 42.9288321,16.1957447 42.9288321,10.906383 L42.9288321,10.906383 Z" id="Shape" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill-rule="nonzero" points="57.709854 19.2851064 57.709854 0.234042553 54.1970803 0.234042553 54.1970803 21.7191489 62.8193431 21.7191489 62.8193431 19.2851064"></polygon>
+                        <path d="M71.1678832,0.234042553 C70.4379562,6.83404255 68.2937956,15.6808511 68.2937956,15.6808511 C68.2937956,15.6808511 66.1952555,6.83404255 65.4653285,0.234042553 L61.8156934,0.234042553 C62.8649635,7.77021277 65.5565693,17.8808511 66.9251825,21.7191489 L69.6624088,21.7191489 C71.0310219,17.8808511 73.7682482,7.77021277 74.7718978,0.234042553 L71.1678832,0.234042553 L71.1678832,0.234042553 Z" id="Shape" fill-rule="nonzero"></path>
+                        <polygon id="Shape" fill-rule="nonzero" points="80.2463504 19.2851064 80.2463504 11.8893617 84.4890511 11.8893617 84.4890511 9.50212766 80.2463504 9.50212766 80.2463504 2.6212766 85.2645985 2.6212766 85.2645985 0.234042553 76.7335766 0.234042553 76.7335766 21.7191489 85.4927007 21.7191489 85.4927007 19.2851064"></polygon>
+                        <polygon id="Shape" fill-rule="nonzero" points="97.5364964 21.7191489 99.8175182 21.7191489 99.8175182 0.234042553 96.5328467 0.234042553 96.5328467 12.9191489 90.0547445 0.234042553 87.7737226 0.234042553 87.7737226 21.7191489 91.0127737 21.7191489 91.0127737 8.98723404"></polygon>
+                        <polygon id="Shape" fill-rule="nonzero" points="109.032847 21.7191489 109.032847 2.6212766 112.728102 2.6212766 112.728102 0.234042553 101.824818 0.234042553 101.824818 2.6212766 105.520073 2.6212766 105.520073 21.7191489"></polygon>
+                        <path d="M120.483577,16.2893617 C120.84854,18.1148936 121.122263,19.987234 121.304745,21.7191489 L124.908759,21.7191489 C123.905109,14.1361702 120.894161,4.07234043 119.525547,0.234042553 L116.788321,0.234042553 C115.419708,4.07234043 112.45438,14.1361702 111.405109,21.7191489 L115.054745,21.7191489 C115.237226,19.987234 115.556569,18.1148936 115.875912,16.2893617 L120.483577,16.2893617 L120.483577,16.2893617 Z M116.377737,13.9489362 C117.244526,9.73617021 118.202555,6.31914894 118.202555,6.31914894 C118.202555,6.31914894 119.114964,9.73617021 120.027372,13.9489362 L116.377737,13.9489362 L116.377737,13.9489362 Z" id="Shape" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+<ul class='footer__links-right'>
+<li><a href="/ueberuns">Über uns</a></li>
+<li><a target="_blank" href="https://www.jobnet.de/presse">Presse</a></li>
+<li><a href="/personalsuche">Für Arbeitgeber</a></li>
+<li><a href="/karriere">Karriere</a></li>
+<li><a href="/kontakt">Kontakt</a></li>
+<li><a href="/impressum">Impressum</a></li>
+<li><a href="/datenschutzbestimmungen">Datenschutz</a></li>
+<li><a href="/nutzungsbestimmungen">Nutzungsbedingungen</a></li>
+<li><a href="/sitemap">Sitemap</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</footer>
+
+<script src="//d3mdfa9c7hlxb1.cloudfront.net/assets/desktop/modules/p/post_categories-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js" defer="defer"></script>
+
+<script src="//d3mdfa9c7hlxb1.cloudfront.net/packs/application_desktop-697f5172f19bc51e6db1.js" defer="defer"></script>
+<div class='ga' data-script="<script>&#x000A;  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){&#x000A;  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),&#x000A;  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)&#x000A;  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');&#x000A;  &#x000A;  ga('create', 'UA-3064929-1', 'absolventa.de');&#x000A;  ga('require', 'displayfeatures');&#x000A;  ga('require', 'linkid');&#x000A;  // ga('set', 'forceSSL', true);&#x000A;  ga('set', 'anonymizeIp', true);&#x000A;  &#x000A;  &#x000A;  &#x000A;  ga('send', 'pageview', {&#x000A;      'hitCallback' : function() {&#x000A;          if (typeof StarTrackCollector !== 'undefined') {&#x000A;              new StarTrackCollector();&#x000A;          }&#x000A;      }&#x000A;  });&#x000A;</script>"></div>
+
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WP56GN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WP56GN');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
+<!-- Website Information -->
+<script type='application/ld+json'>
+{ "@context": "http://schema.org", "@type": "Organization", "name": "Absolventa GmbH", "telephone": "(0049) 30 240483-100", "url": "https://www.absolventa.de", "logo": "https://d3mdfa9c7hlxb1.cloudfront.net/assets/shared/absolventa_logo_desktop@2x-a05afeff67f6430c345ed108c0c461ca0039253ebb571d3fd9681820ca920480.png", "image": "https://d2zwr453kwsp40.cloudfront.net/assets/public/about/scene-1f389942e9323e318fba0df2f47318886b227d41db75d70289d02a906e7c503c.jpg", "sameAs" : [ "https://www.facebook.com/Absolventa/?fref=ts" ], "description": "Wir unterstützen Studenten aktiv bei ihrer Karrierevorbereitung, bringen Absolventen in den ersten Job und helfen Young Professionals bei ihrem nächsten Schritt auf der Karriereleiter. Unternehmen bieten wir maßgeschneiderte Recruiting- und Employer-Branding Lösungen für die Zielgruppe junger Akademiker. Die Absolventa GmbH beschäftigt rund 50 Mitarbeiter im Herzen von Berlin.", "address": { "@type": "PostalAddress", "streetAddress": "Friedrichstraße 67", "addressLocality": "Berlin", "addressRegion": "Berlin", "postalCode": "10117", "addressCountry": "Deutschland" } } { "@context": "http://schema.org", "@type": "Place", "geo": { "@type": "GeoCoordinates", "latitude": "52.512556", "longitude": "13.390134" }, "name": "Absolventa GmbH" }
+</script>
+
+<!-- Required by adspirit for expendable ads -->
+<script type="text/javascript" language="JavaScript">
+<!--
+if(typeof(asm_initi) != "undefined"){asm_finishwriter();}
+//-->
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,2353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE]>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+<!--[if !IE]> -->
+<html>
+<!-- <![endif]-->
+<head>
+<title>Was ist Ethernet?</title>
+<script type="text/javascript" src="/ruxitagentjs_2fghjqr_10127170907093811.js" data-dtconfig="rid=RID_823412303|rpid=111864973|featureHash=2fghjqr|md=keywords=a[name='keywords']@content|lastModification=1506019306899|dtVersion=10127170907093811|tp=500,50,0,1|reportUrl=/rb_vfo12241|domain=ip-insider.de"></script><link rel="canonical" href="http://www.ip-insider.de/was-ist-ethernet-a-594051/" />
+<meta name="description" content="Von seinen proprietären Anfängen in den 1970er Jahren hat sich das Ethernet zum weltweit verbreiteten IEEE-Standard 802.3 mit atemberaubenden Bandbreiten entwickelt und erschließt mit Industrial Ethernet und Metro Ethernet auch Einsatzfelder außerhalb traditioneller Büroumgebungen."/>
+<meta name="robots" content="INDEX, FOLLOW"/>
+<meta itemprop="image" content="https://images.vogel.de/vogelonline/bdb/1173200/1173277/4.jpg"/>
+<meta property="og:image" content="https://images.vogel.de/vogelonline/bdb/1173200/1173277/44.jpg"/>
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Was ist Ethernet?" />
+<meta property="og:url" content="https://www.ip-insider.de/was-ist-ethernet-a-594051/" />
+<meta property="og:description" content="Von seinen proprietären Anfängen in den 1970er Jahren hat sich das Ethernet zum weltweit verbreiteten IEEE-Standard 802.3 mit atemberaubenden Bandbreiten entwickelt und erschließt mit Industrial Ethernet und Metro Ethernet auch Einsatzfelder außerhalb traditioneller Büroumgebungen." />
+<link rel="image_src" href="//images.vogel.de/vogelonline/bdb/1173200/1173277/4.jpg" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!--[if lt IE 9]>
+<script>document.createElement('video');document.createElement('header');document.createElement('section');document.createElement('article');document.createElement('footer');</script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="CACHE-CONTROL" content="fATE"/>
+<meta http-equiv="EXPIRES" content="0"/>
+<meta http-equiv="content-language" content="de"/>
+<meta name="language" content="de"/>
+<meta name="Copyright" content="Vogel Business Media GmbH & Co. KG"/>
+<meta name="Audience" content="Alle"/>
+<meta name="Publisher" content="Vogel Business Media GmbH & Co. KG"/>
+<meta name="Author" content="Vogel Business Media GmbH & Co. KG"/>
+<meta name="Author-mail" content="info@vogel.de"/>
+<meta name="apple-itunes-app" content="app-id=1033514667">
+<meta property="fb:app_id" content="155336834583571"/>
+<meta property="fb:admins" content="100003533317132"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="/img/bep30/touch/icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/bep30/touch/icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/bep30/touch/icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/bep30/touch/icon-152x152.png">
+<link rel="icon" sizes="192x192" href="/img/bep30/touch/icon-192x192.png">
+<meta name="application-name" content="IP-Insider" />
+<meta name="msapplication-TileColor" content="#000000"/>
+<meta name="msapplication-square70x70logo" content="/img/bep30/touch/icon-152x152.png" />
+<meta name="msapplication-square150x150logo" content="/img/bep30/touch/icon-152x152.png" />
+<meta name="msapplication-wide310x150logo" content="/img/bep30/touch/icon-310x150.png" />
+<meta name="msapplication-square310x310logo" content="/img/bep30/touch/icon-310x310.png" />
+<link href="/favicon.ico" rel="SHORTCUT ICON" />
+<link href="//www.ip-insider.de/shared/vogelonline/opensearch/opensearch.cfm?pid=11498&name=IP-Insider&server=http://www.ip-insider.de" title="IP-Insider" type="application/opensearchdescription+xml" rel="search" />
+<link rel="stylesheet" type="text/css" href="//files.vogel.de/shared/lib/bundle/libraries_v270116.css"/>
+<link rel="stylesheet" type="text/css" href="/shared/vogelonline/css/ionicons/2.0.1/css/ionicons.min.css"/>
+<link rel="stylesheet" type="text/css" href="/shared/vogelonline/css/bep30/global_responsive.css"/>
+<link rel="stylesheet" type="text/css" href="/shared/vogelonline/css/bep30/banner_960.css"/>
+<link rel="stylesheet" type="text/css" href="/shared/vogelonline/css/bep30/sizes.css"/>
+<link rel="stylesheet" type="text/css" href="/css/bep30/screen_basic.css"/>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css"	href="/shared/vogelonline/css/bep30/ie7.css">
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css"	href="/shared/vogelonline/css/bep30/ie7.css">
+<![endif]-->
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async="async"></script>
+<script type="text/javascript" src="//files.vogel.de/shared/lib/bundle/libraries_v070316.js" ></script>
+<script type="text/javascript" src="/shared/vogelonline/js/ads.js" ></script>
+<script type="text/javascript" src="/shared/vogelonline/js/functions.js" async="async"></script>
+<script type="text/javascript" src="//script.ioam.de/iam.js" ></script>
+<script type="text/javascript" src="//files.vogel.de/shared/adt/lib.mini.js" async="async"></script>
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</script>
+<script type='text/javascript'>
+	(function() {
+	var useSSL = 'https:' == document.location.protocol;
+	var src = (useSSL ? 'https:' : 'http:') +
+	'//www.googletagservices.com/tag/js/gpt.js';
+	document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	})();
+</script>
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.sizeMapping != "undefined")
+{
+	var map_15231_960x250_RX0 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [960, 250]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [960, 250], 'ban_15231_960x250_RX0').
+		defineSizeMapping(map_15231_960x250_RX0).setCollapseEmptyDiv(true).addService(googletag.companionAds()).addService(googletag.pubads());
+	var map_15231_728x90_468x60_RX1 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [[728, 90],[468, 60]]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [[728, 90],[468, 60]], 'ban_15231_728x90_468x60_RX1').
+defineSizeMapping(map_15231_728x90_468x60_RX1).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	googletag.defineOutOfPageSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', 'ban_15231_728x90_oop').addService(googletag.pubads());
+	var map_15231_160x600_RX2 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [160, 600]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [160, 600], 'ban_15231_160x600_RX2').
+		defineSizeMapping(map_15231_160x600_RX2).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	var map_15231_161x600_RX3 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [161, 600]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [161, 600], 'ban_15231_161x600_RX3').
+		defineSizeMapping(map_15231_161x600_RX3).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	var map_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4 = googletag.sizeMapping().addSize([0, 0], [[150, 150],[150, 151],[150, 152],[150, 153],[150, 154],[300, 250],[300, 600]]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [[150, 150],[150, 151],[150, 152],[150, 153],[150, 154],[300, 250],[300, 600]], 'ban_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4').
+		defineSizeMapping(map_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4).addService(googletag.pubads());
+	var map_15231_960x600_RX5 = googletag.sizeMapping().addSize([0, 0], [960, 600]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [960, 600], 'ban_15231_960x600_RX5').
+		defineSizeMapping(map_15231_960x600_RX5).addService(googletag.pubads());
+	var map_15231_300x251_RX6 = googletag.sizeMapping().addSize([0, 0], [300, 251]).build();
+	googletag.defineSlot('/2686/ipi.vogel.de/DE_IPI_Homepage', [300, 251], 'ban_15231_300x251_RX6').
+		defineSizeMapping(map_15231_300x251_RX6).addService(googletag.pubads());
+	googletag.pubads().setTargeting('kw', ['wallpaper','Harting_284420','Harting_294344','Zuken_295109','Siemens_303881','Pickering_303330','305509_001','306158','Siemens_307475','Schurter_300268_NEU','Köhler_306591_Pos002_2','Siemens_307538','303330_004','Schneider_308831_2']);
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().enableSyncRendering();
+	googletag.enableServices();
+}
+</script></head>
+<body id="cid_9">
+<div id="iqadtileOOP"></div>
+<script>
+dataLayer = [{"ipadress": ""}];
+$.ajax({
+url: "/getip/ajax/",
+dataType: 'json',
+timeout: 700
+}).done(function( response ) {
+if (response.ip != ''){
+dataLayer.ipadress = response.ip;
+}
+});
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N5DK62"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N5DK62');</script>
+<div id="ivwcode">
+<!-- start ivw-aufruf szm version="2.0" pid 15231 //-->
+<script type="text/javascript">
+var iam_data = {
+"st":"network",
+"cp":"specials/Definitionen/home",
+"co":"15231",
+"sv":"ke"
+}
+if (typeof iom != "undefined")
+{
+iom.c(iam_data, 1);
+}
+</script>
+<!-- ende ivw-aufruf szm version="2.0" //-->
+</div>
+<script type="text/javascript">
+/* SiteCatalyst Variablen setzen */
+var STR_sc_account="";
+var STR_sc_clientshortcut="";
+STR_sc_account="vssearchnetworkingde";
+if(window.location.host.search(/^red\./) >= 0 || window.location.host.search(/^dev\./) >= 0 || window.location.host.search(/^preview\./) >= 0 || window.location.host.search(/^task\./) >= 0)
+{
+STR_sc_account=STR_sc_account + "dev";
+}
+else
+{
+STR_sc_account=STR_sc_account + "prod";
+}
+STR_sc_clientshortcut="snet";
+STR_sc_linkInternalFilters="javascript:,ip-insider.de ";
+STR_sc_cookieDomainPeriods="2";
+STR_sc_fpCookieDomainPeriods="2";
+STR_sc_currencyCode="EUR";
+</script>
+<script type="text/javascript" src="/shared/vogelonline/js/s_code.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+if ($(window).width() >= 520)
+{
+$(".colorbox_imagedetail").colorbox({iframe:true, innerWidth:"20%", innerHeight:"20%", scrolling:false, fastIframe:false});
+}
+else
+{
+$(".colorbox_imagedetail").click(function(e){
+e.preventDefault();
+window.open($(this).find('img').attr('src'), '_blank');
+});
+}
+if (typeof SmartAppBanner === 'function')
+{
+var OBJ_smartbanner = new SmartAppBanner();
+OBJ_smartbanner.init({
+daysAfterClosed: 14,
+title: 'IP-Insider',
+desc: 'Jetzt downloaden!',
+button: 'INSTALLIEREN',
+store: {
+ios: '1033514667',
+android: 'de.vogel.ipinews',
+windows: '9NBLGGH5WR7B'
+}
+});
+}
+if ($('#mobile-header').length)
+{
+var INT_headerpos = $('#mobile-header').offset().top;
+var INT_headerheight = $('#mobile-header').height();
+var BOO_mobileheader = $('#mobile-header').is(":visible");
+$(document).on("scroll", function() {
+var BOO_cookiestatement = ($('#cookie-statement').length == 0 || $('#cookie-statement').is(":visible") == false);
+if ($(window).width() > 1024 && BOO_cookiestatement ) {
+if ($(document).scrollTop() > INT_headerpos && !$('#mobile-header').hasClass("small")) {
+$('#mobile-header').addClass("small");
+if (BOO_mobileheader) {
+$("#website").addClass("fixed-header").css("padding-top",INT_headerheight+'px');
+}
+}
+else if ($(document).scrollTop() <= INT_headerpos && $('#mobile-header').hasClass("small")) {
+$('#mobile-header').removeClass("small");
+if (BOO_mobileheader) {
+$("#website").removeClass("fixed-header").css("padding-top",'0px');
+}
+}
+}
+});
+}
+});
+</script>
+<div id="fb-root"></div>
+<script type="text/javascript">
+$(window).load(function () {
+$.ajax({
+url: "//connect.facebook.net/de_DE/sdk.js",
+cache: true,
+dataType: "script",
+success: function(){
+if (typeof(FB) != 'undefined')
+{
+FB.init({
+appId : '155336834583571',
+status : true,
+xfbml : true,
+version	: 'v2.3'
+});
+}
+}
+});
+});
+</script>
+<div id="website">
+<div id="leaderboard">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_728x90_468x60_RX1 img",""); }});
+</script>
+<div id='ban_15231_728x90_468x60_RX1' class=" " style="position:relative;" >
+<div id="9_leaderboard">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_728x90_468x60_RX1');
+}
+</script>
+</div>
+</div>
+<div id='ban_15231_728x90_oop' >
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_728x90_oop');
+}
+</script>
+</div>
+</div>
+<div id="skyright">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_160x600_RX2 img",""); }});
+</script>
+<div id='ban_15231_160x600_RX2' class=" " style="position:relative;" >
+<div id="9_skyright">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_160x600_RX2');
+}
+</script>
+</div>
+</div>
+</div>
+<div id="skyleft">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_161x600_RX3 img",""); }});
+</script>
+<div id='ban_15231_161x600_RX3' class=" " style="position:relative;" >
+<div id="9_skyleft">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_161x600_RX3');
+}
+</script>
+</div>
+</div>
+</div>
+<!-- Out of Cache-Include: /modules/header/head/mobilenavi.cfm -->
+<div id="mobile-navi">
+<ul id="service-menu">
+<li class="item-login" >
+<a href="/login/" >
+Login
+</a>
+</li>
+<li class="item-reg" >
+<a href="/registrierung/" >
+Registrierung
+</a>
+</li>
+<li class="item-nl" >
+<a href="/newsletter/" >
+Newsletter
+</a>
+</li>
+</ul>
+<ul id="main-navi">
+<li class="menueitemhome">
+<a href="/" target="">Startseite</a>
+</li>
+<li class=" menueitem1" >
+<a href="/themenbereiche/infrastruktur/"
+target="" >
+Infrastruktur
+</a>
+</li>
+<li class=" menueitem2" >
+<a href="/themenbereiche/administration/"
+target="" >
+Administration
+</a>
+</li>
+<li class=" menueitem3" >
+<a href="/themenbereiche/management/"
+target="" >
+Management
+</a>
+</li>
+<li class=" menueitem4" >
+<a href="/themenbereiche/drahtlose-netzwerke/"
+target="" >
+Drahtlos
+</a>
+</li>
+<li class=" menueitem5" >
+<a href="/themenbereiche/design/"
+target="" >
+Design
+</a>
+</li>
+<li class=" menueitem6" >
+<a href="/themenbereiche/vpn/"
+target="" >
+VPN
+</a>
+</li>
+<li class=" menueitem7" >
+<a href="/themenbereiche/unified-communications/"
+target="" >
+UCC
+</a>
+</li>
+<li class=" menueitem8" >
+<a href="/themenbereiche/sicherheit/"
+target="" >
+Sicherheit
+</a>
+</li>
+<li class=" menueitem9" >
+<a href="/themenbereiche/standards-und-protokolle/"
+target="" >
+Standards
+</a>
+</li>
+<li class=" menueitem10" >
+<a href="/themenbereiche/grundlagen/"
+target="" >
+Grundlagen
+</a>
+</li>
+<li class=" menueitem11" >
+<a href="/specials/"
+target="" >
+Specials
+</a>
+</li>
+<li class=" menueitem12" >
+<a href="/forum/"
+target="" >
+Forum
+</a>
+</li>
+<li class=" menueitem13" >
+<a href="/ebooks/"
+target="" >
+eBooks
+</a>
+</li>
+<li class=" menueitem14" >
+<a href="/cio"
+target="" >
+CIO
+</a>
+</li>
+<li class=" menueitem15" >
+<a href="/award/"
+target="" >
+Award
+</a>
+</li>
+<li class=" menueitem16" >
+<a href="/whitepaper/"
+target="" >
+Whitepapers
+</a>
+</li>
+<li class=" menueitem17" >
+<a href="/webcasts/"
+target="" >
+Mediathek
+</a>
+</li>
+<li class=" menueitem18" >
+<a href="/inhalte/firmen/"
+target="" >
+Anbieter
+</a>
+</li>
+<li class=" menueitem19" >
+<a href="https://www.akademie.vogel-it.com/"
+target="_blank" >
+Akademie
+</a>
+</li>
+<li class=" menueitem20" >
+<a href="/kontakt/"
+target="" >
+Kontakt
+</a>
+</li>
+</ul>
+<ul id="footer-navi">
+<li class="footer-impress">
+<a href="/index.cfm?pid=4281">Impressum</a>
+</li>
+<li class="footer-media">
+<a href="/ueber-uns/mediadaten" target="_blank">Media</a>
+</li>
+<li class="footer-privacy">
+<a href="https://privacy.vogel.de/datenschutz.html" target="_blank">Datenschutz</a>
+</li>
+</ul>
+</div>
+<div id="mobile-header">
+<button id="menu"><span>Menü</span></button>
+<button id="searchexpander"><span>Suche</span></button>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#btn_newsletter").click(function(){
+window.location.href = "/newsletter/";
+});
+});
+</script>
+<style>
+#icons_header{
+display:none;
+}
+</style>
+<button id="btn_newsletter">
+<span class="nl_bdi">Newsletter</span>
+</button>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#btn_myaccount").click(function(){
+window.location.href = "/my/profile/";
+});
+});
+</script>
+<style>
+#icons_header{
+display:none;
+}
+</style>
+<button id="btn_myaccount">
+<span class="login_bdi">Mein Account</span>
+</button>
+<a id="mobile-logo" href="/"><img src="/img/bep30/logo.png" alt="logo"></a>
+<button id="mobile-close"><img src="/shared/vogelonline/img/bep30/close_x.png"></button>
+<form method="get" action="/suchergebnis/">
+<input name="keyword" type="text" id="mobile-search" value="">
+<button><span>suchen..</span></button>
+</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#menu').click(function(){
+$('body').toggleClass('open');
+});
+$('#searchexpander').click(function(){
+$('#mobile-header').toggleClass('open');
+if ('' != '')
+{
+// Blur-Effekt auf Suchfeld
+$("#mobile-search").bind("focusin", function(a)
+{
+STR_val = $(this).val();
+if ( a.type == "focusin" && ( STR_val == '' || STR_val == '') )
+{
+$(this).val('');
+}
+});
+}
+else
+{
+$('#mobile-search').focus();
+}
+});
+$('#mobile-close').click(function(){
+$('#mobile-header').toggleClass('open');
+});
+$('#mobile-navi li.gosubnavi a,#mobile-navi li.gosubnavi div').click(function(e){
+e.preventDefault();
+$(this).parent('li').next('li.mob-submenu').toggle();
+});
+$("#service-menu .profilelink").click(function(){
+window.location.href= "/my/publicprofile/#crop-avatar";
+});
+});
+</script>
+<div id="wrapper">
+<div class="head_15231 head" id="head_9">
+<div id="head_top">
+<img class="vbm" src="/img/bep30/vogel_top.png" />
+<div>
+<a href="http://www.ip-insider.de/googleplus" target="_blank" rel="publisher"><img src="/shared/vogelonline/img/google_icon.png" alt="Google+" title="Google+"/></a>
+<a href="http://www.ip-insider.de/facebook" target="_blank" ><img src="/shared/vogelonline/img/facebook.png" alt="Facebook" title="Facebook"/></a>
+<a href="http://www.ip-insider.de/twitter" target="_blank" ><img src="/shared/vogelonline/img/twitter.png" alt="Twitter" title="Twitter"/></a>
+<a href="http://www.ip-insider.de/xing" target="_blank" ><img src="/shared/vogelonline/img/xing.png" alt="XING" title="XING"/></a>
+<a href="http://www.ip-insider.de/linkedin" target="_blank" ><img src="/shared/vogelonline/img/linkedin.png" alt="LinkedIn" title="LinkedIn"/></a>
+<a href="/rss/news.xml" target="_self" ><img src="/shared/vogelonline/img/rss.png" alt="RSS" title="RSS"/></a>
+<a href="http://www.google.com/producer/editions/CAowiNX4Aw/ip_insider" target="_blank" ><img src="/shared/vogelonline/img/google-currents.png" alt="GoogleCurrents" title="GoogleCurrents"/></a>
+<a href="/ueber-uns/impressum" target="_self" >Impressum</a>
+<a href="/ueber-uns/kontakt" target="_self" >Kontakt</a>
+<a href="/ueber-uns/mediadaten" target="_blank" >Media</a>
+</div>
+<div class="clear"></div>
+</div>
+<div id="head_logo">
+<a href="/"><img id="logo" src="/img/bep30/logo.png" alt="logo"/></a>
+<div id="search">
+<form id="quicksearchform" name="quicksearchform" class="quicksearchform" method="get" action="/suchergebnis/">
+<a href="javascript:void(0);" id="searchbutton" class="searchbutton" >
+<span class="button">suchen</span>
+</a>
+<input name="keyword" type="text" class="searchfield" id="searchfield" value="" />
+</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+// Blur-Effekt auf Suchfeld
+$("#searchfield").bind("focusin focusout", function(a)
+{
+STR_val = $(this).val();
+if ( a.type == "focusin" && ( STR_val == '' || STR_val == '') )
+{
+$(this).val('');
+}
+else if ( a.type == "focusout" && STR_val == '' )
+{
+$(this).val('');
+}
+});
+// Suche auf Button-Klick abschicken
+$(".searchbutton").click(function(e){
+var STR_value = $(this).parent().find(".searchfield").val();
+if (STR_value == "" || STR_value == "" || STR_value == "")
+{
+STR_value = "";
+e.preventDefault();
+}
+else
+{
+// Trim
+$(this).parent().find(".searchfield").val($.trim(STR_value));
+$(this).closest(".quicksearchform").submit();
+}
+});
+});
+</script>
+<div class="clear"></div>
+</div>
+</div>
+<div id="main_menu" >
+<ul id="main_nav">
+<li class=" main_nav_first menueitem1"
+>
+<a href="/themenbereiche/infrastruktur/"
+name="Infrastruktur"
+alt=""
+target="" >
+Infrastruktur
+</a>
+</li>
+<li class=" menueitem2"
+>
+<a href="/themenbereiche/administration/"
+name="Administration"
+alt=""
+target="" >
+Administration
+</a>
+</li>
+<li class=" menueitem3"
+>
+<a href="/themenbereiche/management/"
+name="Management"
+alt=""
+target="" >
+Management
+</a>
+</li>
+<li class=" menueitem4"
+>
+<a href="/themenbereiche/drahtlose-netzwerke/"
+name="Drahtlos"
+alt=""
+target="" >
+Drahtlos
+</a>
+</li>
+<li class=" menueitem5"
+>
+<a href="/themenbereiche/design/"
+name="Design"
+alt=""
+target="" >
+Design
+</a>
+</li>
+<li class=" menueitem6"
+>
+<a href="/themenbereiche/vpn/"
+name="VPN"
+alt=""
+target="" >
+VPN
+</a>
+</li>
+<li class=" menueitem7"
+>
+<a href="/themenbereiche/unified-communications/"
+name="UCC"
+alt=""
+target="" >
+UCC
+</a>
+</li>
+<li class=" menueitem8"
+>
+<a href="/themenbereiche/sicherheit/"
+name="Sicherheit"
+alt=""
+target="" >
+Sicherheit
+</a>
+</li>
+<li class=" menueitem9"
+>
+<a href="/themenbereiche/standards-und-protokolle/"
+name="Standards"
+alt=""
+target="" >
+Standards
+</a>
+</li>
+<li class=" main_nav_last menueitem10"
+>
+<a href="/themenbereiche/grundlagen/"
+name="Grundlagen"
+alt=""
+target="" >
+Grundlagen
+</a>
+</li>
+</ul>
+</div>
+<div id="sub_menu" >
+<ul id="sub_nav">
+<li
+id="sub_nav_first"
+class="active"
+>
+<a href="/specials/definitionen/" target="">Definitionen</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/headgeek/" target="">Head Geeks Speech</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/netzwerk-grundlagen/" target="">Netzwerk-Grundlagen</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/tipps/" target="">Tipps, Tricks & Tools</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/sdn-openflow/" target="">SDN/OpenFlow </a>
+</li>
+<li
+class=""
+>
+<a href="/specials/carrier-provider/" target="">Carrier & Provider</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/ucc/" target="">UCC</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/ngn/" target="">NGN</a>
+</li>
+<li
+class=""
+>
+<a href="/specials/research-zone/" target="">IDC Research Zone</a>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div id="breadcrumb_bg">
+<p id="cookietrail">
+<span>Sie befinden sich hier:</span>
+<a class="" href="/specials/">Specials</a>
+&gt;
+<a class="" href="/specials/definitionen/">Definitionen</a>
+</p>
+<!-- Out of Cache-Include: /modules/header/head/mysiteheader.cfm -->
+<p id="login">
+Sie sind noch nicht angemeldet&nbsp;
+<a href="https://www.ip-insider.de/index.cfm?pid=13282&tab=0&cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D594051%26p%3D1&os=3B507E2E50F7FE15A4EF7C6922C4435F" class="colorbox_log" >Login</a>
+&nbsp;|&nbsp;
+<a href="https://www.ip-insider.de/index.cfm?pid=13282&tab=1&cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D594051%26p%3D1&os=3B507E2E50F7FE15A4EF7C6922C4435F" class="colorbox_reg">Registrierung</a>
+&nbsp;|&nbsp;
+<a href="/index.cfm?pid=4166">Newsletter</a>
+</p>
+<!-- Out of Cache-Include: /modules/header/head/usermenue.cfm -->
+</div>
+<div id="resp_container">
+<div class="row3" id="containerobject_410618">
+<div class="teaser_content"><style type="text/css">
+.point_insider {
+height: 24px;
+overflow: hidden;
+width: 170px;
+margin-left: 0 !important;
+}
+.point_insider img {
+right: -185px;
+position: absolute;
+transition: all 0.5s ease-in-out;
+margin-left: 0;
+}
+.point_insider:hover img {
+right: -10px;
+transition: all 0.5s ease-in-out;
+opacity: 1 !important;
+}
+#searchexpander {height:47px}
+#searchexpander {padding-top:12px}</style>
+<div class="crosslink_insider" style="width:170px; position:absolute; right:10px; top:60px; margin-left:0;">
+<div class="point_insider" style="position:absolute; left:0; top:0;"><a href="https://www.bigdata-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/bdi_hover.png" style="border:0 !important;" /></a></div>
+<div class="point_insider" style="position:absolute; left:0; top:27px;"><a href="https://www.cloudcomputing-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/cci_hover.png" style="border:0 !important;" /></a></div>
+<div class="point_insider" style="position:absolute; left:0; top:54px;"><a href="https://www.datacenter-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/dtc_hover.png" style="border:0 !important;" /></a></div>
+<div class="point_insider" style="position:absolute; left:0; top:81px;"><a href="https://www.dev-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/dvi_hover.png" style="border:0 !important;" /></a></div>
+<!-- <div class="point_insider" style="position:absolute; left:0; top:81;">
+<a href="https://www.ip-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/ipi_hover.png" style="border:0 !important;" /></a>
+</div> -->
+<div class="point_insider" style="position:absolute; left:0; top:108px;"><a href="https://www.security-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/sec_hover.png" style="border:0 !important;" /></a></div>
+<div class="point_insider" style="position:absolute; left:0; top:135px;"><a href="https://www.storage-insider.de/" target="_blank"><img alt="" border="0" outline="0" src="/shared/vogelonline/img/bep30/insider_hover/sst_hover.png" style="border:0 !important;" /></a></div>
+</div></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_960x250_RX0 img",""); }});
+</script>
+<div id='ban_15231_960x250_RX0' class=" " style="position:relative;" >
+<div id="containerobject_415625">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_960x250_RX0');
+}
+</script>
+</div>
+</div>
+</div>
+<div id="content_wrap" class="silver-lake">
+<!-- INT_imagestotalgallery:0-->
+<article id="containerobject_417417" class="">
+<header class='page1'><div><h2 class="subhead">Definition</h2><h1 class="headline">Was ist Ethernet?</h1><p id="autor"><time pubdate="pubdate">01.08.17</time> | Autor / Redakteur: <a href="/dirk-srocke/">Dirk Srocke</a> / <a href="/andreas-donner/">Andreas Donner</a></p></div><a class="colorbox_imagedetail" id="topmessageimageurl" href="/index.cfm?pid=10698&pk=1173278&type=article&fk=594051"><div ><img id="topmessageimage" src="//images.vogel.de/vogelonline/bdb/1173200/1173278/41.jpg" alt="" title=""/></div></a></header><div id="topmessageimagetitle" class="bildunterschrift"><span class="picsource">
+(© aga7ta - Fotolia)
+</span></div><div class="rolling-prairie" id="page1"><div class="dog-fish">
+<div class="optionen">
+<!-- Socialmedia Leiste -->
+<script type="text/javascript" src="/shared/vogelonline/js/socialprivacy.js"></script>
+<div id="art_socialmedia_9" class="social_media_art">
+<ul id="socialmedia_privacy_area" class="socialmedia_privacy_area responsive">
+<li class="socialmedia" id="xing"></li>
+<li class="socialmedia" id="facebook"></li>
+<li class="socialmedia" id="twitter"></li>
+<li class="socialmedia" id="linkedin"></li>
+<li class="socialmedia" id="whatsapp"></li>
+</ul>
+</div>
+<div class="clear"></div>
+<script language="javascript">
+$(document).ready(function() {
+var ARR_sharecountsart_socialmedia_9 = new Array();
+ARR_sharecountsart_socialmedia_9['xing'] = "";
+ARR_sharecountsart_socialmedia_9['facebook'] = "";
+ARR_sharecountsart_socialmedia_9['facebooklike'] = "";
+ARR_sharecountsart_socialmedia_9['twitter'] = "";
+ARR_sharecountsart_socialmedia_9['linkedin'] = "";
+ARR_sharecountsart_socialmedia_9['googleplus'] = "";
+ARR_sharecountsart_socialmedia_9['whatsapp'] = "";
+var ARR_sharetxtart_socialmedia_9 = new Array();
+ARR_sharetxtart_socialmedia_9['xing'] = "share me";
+ARR_sharetxtart_socialmedia_9['facebook'] = "share me";
+ARR_sharetxtart_socialmedia_9['facebooklike'] = "like me";
+ARR_sharetxtart_socialmedia_9['twitter'] = "tweet me";
+ARR_sharetxtart_socialmedia_9['linkedin'] = "share me";
+ARR_sharetxtart_socialmedia_9['googleplus'] = "share me";
+ARR_sharetxtart_socialmedia_9['whatsapp'] = "share me";
+createSocialBar(
+layout = "responsive",
+links = "popup",
+privacy = "0",
+sharecounts = ARR_sharecountsart_socialmedia_9,
+sharetxts = ARR_sharetxtart_socialmedia_9,
+url = "https://www.IP-Insider.de/was-ist-ethernet-a-594051/",
+id = "art_socialmedia_9"
+);
+});
+</script>
+<!-- Optionsleiste -->
+<!-- Out of Cache-Include: /modules/bars/dyn_options.cfm -->
+<div id="art_options_9" class="options">
+<ul>
+<li class="option_pdf">
+<a class="" href="https://www.ip-insider.de/index.cfm?pid=13282&st=pdf&iscontent=10&pk=594051&tab=0&cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D594051%26p%3D1&os=3B507E2E50F7FE15A4EF7C6922C4435F">
+<img alt="PDF" src="/shared/vogelonline/img/bep30/options/pdf.svg">
+<span >PDF</span>
+</a>
+</li>
+<li class="option_recommend">
+<a class="colorbox_recommend" href="/index.cfm?pid=4675&pk=594051&ct=10">
+<img alt="Weiterempfehlen" src="/shared/vogelonline/img/bep30/options/mail.svg">
+<span >Weiterempfehlen</span>
+</a>
+</li>
+<li class="option_print">
+<a class="colorbox_print" href="/index.cfm?pid=4637&pk=594051&print=true&printtype=article">
+<img alt="Drucken" src="/shared/vogelonline/img/bep30/options/print.svg">
+<span >Drucken</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div><div class="arkansas"><p class="vortext">Von seinen proprietären Anfängen in den 1970er Jahren hat sich das Ethernet zum weltweit verbreiteten IEEE-Standard 802.3 mit atemberaubenden Bandbreiten entwickelt und erschließt mit Industrial Ethernet und Metro Ethernet auch Einsatzfelder außerhalb traditioneller Büroumgebungen.</p><p>Ethernet beschreibt eine kabelgebundene Netzwerktechnologie. Der mittlerweile als IEEE <a target="_blank" id="nointelliTXT" class="link_article" href="http://www.ip-insider.de/was-ist-8023-a-619996">802.3</a> standardisierte Ansatz war zunächst für lokale Büroumgebungen konzipiert, wird mittlerweile jedoch auch in Produktionsumgebungen und von Carriern verwendet.</p><h3 class="zwiti">ALOHA und die Anfänge am PARC</h3><p>Ursprünglich wurde das Ethernetprotokoll vom drahtlosen Forschungsnetzwerk ALOHA abgeleitet und sollte dazu dienen, die PCs im Xerox Palo Alto Research Center (PARC) mit Internetzgängen und einem Laserdrucker zu verbinden. Das Konzept hierfür hat Bob Metcalfe nach eigenen Angaben am 22. Mai 1973 zuerst in einem internen Memo beschrieben und gut drei Jahre später mit seinem Mitstreiter David Boggs unter dem Titel „Ethernet: Distributed Packet Switching for Local Computer Networks" in den „Communications of the ACM“ öffentlich vorgestellt.</p><p>Als Verbindung des frühen Ethernets diente ein einzelnes Koaxialkabel an der Decke, dessen Anmutung in der Literatur mit der eines Gartenschlauches beschrieben wird. Metcalfe und seine Kollegen beschrieben das Medium derweil nur als „Ether“ zu dem sie Datenpakete hochschickten – in Anlehnung an die im 17. Jahrhundert postulierte hypothetische Substanz eines Lichtäthers.</p><div class="bannerscrollad">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_960x600_RX5 img",""); }});
+</script>
+<div id='ban_15231_960x600_RX5' class="banner row2 " style="position:relative;" >
+<div id="9_banner_article_scrollad">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_960x600_RX5');
+}
+</script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4 img","598_38633"); }});
+</script>
+<div id='ban_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4' class="banner bannerl 9_banner_article_1_alternative_1491" style="position:relative;" >
+<div id="9_banner_article_1">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4');
+}
+</script>
+</div>
+</div>
+<div id="9_banner_article_1_alternative_1491_wrapper" class="repad 9_banner_article_1_alternative_1491" style="display:none;position:relative;">
+<div class="row1l" id="9_banner_article_1_alternative_1491">
+<div class="teaser_titel">
+<p>Das sollten Sie lesen!</p>
+</div>
+<div class="teaser_content_noabstract_small">
+<div class="teaser_content">
+<a href="/ciobriefing-10-2017-v-38633-13275/" onclick="s_objectID='15231_9_banner_article_1_alternative_1491_das sollten sie lesen!';linkTracking('15231_9_banner_article_1_alternative_1491_das sollten sie lesen!')"><img class="art_list_img" title="CIOBRIEFING 10/2017" alt="CIOBRIEFING 10/2017" src="//images.vogel.de/vogelonline/bdb/1295100/1295165/23.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="CIOBRIEFING 10/2017" href="/ciobriefing-10-2017-v-38633-13275/" onclick="s_objectID='15231_9_banner_article_1_alternative_1491_das sollten sie lesen!';linkTracking('15231_9_banner_article_1_alternative_1491_das sollten sie lesen!')" >Technology-Update für IT-Manager</a></span>
+<span class="ar_teaser_title" title="CIOBRIEFING 10/2017<"><a title="CIOBRIEFING 10/2017" href="/ciobriefing-10-2017-v-38633-13275/" onclick="s_objectID='15231_9_banner_article_1_alternative_1491_das sollten sie lesen!';linkTracking('15231_9_banner_article_1_alternative_1491_das sollten sie lesen!')" >CIOBRIEFING 10/2017</a></span>
+<p><a class="read_content" href="/ciobriefing-10-2017-v-38633-13275/" onclick="s_objectID='15231_9_banner_article_1_alternative_1491_das sollten sie lesen!';linkTracking('15231_9_banner_article_1_alternative_1491_das sollten sie lesen!')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<p>Vom „thick Ethernet“ – einem 10 Millimeter dicken Koaxialkabel, das angebohrt und per Vampirklemme angezapft wurde – hat sich das Transportmedium nach und nach weiterentwickelt. Einem dünneren und flexiblere Koaxialkabel mit BNC-Kopplungen („Thin Ethernet“) folgte schließlich eine Topologie, die sich von einem durchgängigen Kabelstrang löste und mit dem Netzwerkverantwortliche defekte Kabelverbindungen einfacher aufspüren konnten. Zunächst kam hierbei ein zentraler Hub zum Einsatz. Die Clients wurden nun direkt am Hub angeschlossen – und das nicht mehr per Koaxialkabel, sondern mit verbreiteten Telefonkabeln aus Kupfer.</p><p>Die Kapazität des Mediums blieb damit freilich unverändert: Im Prinzip verhielt sich die Infrastruktur weiterhin so, als hingen alle Rechner an einem Kabel. Das änderte sich erst mit den <a target="_blank" id="nointelliTXT" class="link_article" href="http://www.ip-insider.de/was-ist-ein-netzwerk-switch-a-581284/">Switches</a> – die Datenpakete gezielt an den jeweiligen Empfänger weiterleiteten.</p>
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_15231_300x251_RX6 img",""); }});
+</script>
+<div id='ban_15231_300x251_RX6' class="banner bannerr txt " style="position:relative;" >
+<div id="9_banner_article_2">
+<script type='text/javascript'>
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_15231_300x251_RX6');
+}
+</script>
+</div>
+</div>
+<h3 class="zwiti">Klassisch versus geswitcht</h3><p>An dieser Stelle muss zwischen einem klassischen und einem geswitchten Ethernet unterschieden werden. Beim klassischen Ethernet kommen CSMA/CD-Algorithmen (Carrier Sense Multiple Access/Collision Detection) eine entscheidende Rolle zu, um Zugriffsrechte auf das Medium zu regeln. Das führt insbesondere bei einer höheren Netzwerknutzung zu Staus respektive Kapazitätsüberlastungen – also einer schlechten Effizienz des gesamten Netzes.</p><p>Mit dem geswitchten Ethernet verteilt dagegen ein <a target="_blank" id="nointelliTXT" class="link_article" href="http://www.ip-insider.de/was-ist-ein-netzwerk-switch-a-581284/">Switch</a> Pakete an die jeweiligen Zielports. Kollisionen könnten damit lediglich zwischen Switch und Client auftreten, und bei einer typischerweise eingesetzten Vollduplex-Verbindung komplett ausgeschlossen werden. Damit kann das geswitchte Ethernet auf eine CSMA/CD verzichten; alternativ benötigt es nun aber ein Verfahren, das die Datenübertragung in überlasteten Netzen zeitweise stoppt: Die Flußkontrolle.</p><p>Nichtsdestotrotz wurde CSMA/CD erst mit 10-Gigabit-Ethernet abgeschafft. Die vorherigen Standards verwendeten derweil noch verschiedene Kniffe um hohe Geschwindigkeiten, Leitungen praktikabler Länge und die Kollisionserkennung unter einen Hut zu bringen. So nutzte Gigabit-Ethernet etwa das Feature „Carrier Extension“, um Frames für die Kollisionserkennung künstlich zu vergrößern. Das resultierte wiederum in einer unnötigen Bandbreitenverschwendung, die per „Frame Bursting“ ausgeglichen werden sollte – das Verfahren ermöglicht es Sendern, mehrere Frames zusammengefasst zu übertragen und so das Verhältnis von Nutz- und Fülldaten zu optimieren. Die mit Gigabit auftauchenden „Jumbo Frames“ mit einer Länge von mehr als 1.500 Byte sind derweil kein Teil des Standards, werden aber von zahlreichen Herstellern unterstützt. Zweck der Datenpakete mit Überlänge ist es, die Arbeitslast für das Verarbeiten einzelner Pakete zu verringern.</p><h3 class="zwiti">Kabel, Kodierungen, PoE</h3><p>Wurden zunächst Koaxialkabel für Ethernet verwendet, haben sich aktuell Twisted-Pair-Kupfer- und Glasfaser-Kabel durchgesetzt. Die zu Beginn genutzte Manchestercodierung wurde mittlerweile durch effizientere Kodierverfahren ersetzt, darunter 4B/5B oder 8B/10B.</p><p>Per Kupfer lassen sich mittlerweile nicht nur mehr Daten übertragen, sondern angeschlossene Geräte auch mit Energie versorgen. Die entsprechenden Verfahren werden in IEEE 802.3af beschrieben und als „Power over Ethernet“ – kurz PoE – bezeichnet.</p><h3 class="zwiti">Standardisierung</h3><p>Ethernet kann weitgehend mit IEEE 802.3 gleichgesetzt werden. Der von DEC, Intel und Xerox definierte DIX-Standard unterscheidet sich jedoch beim Frame-Format von der später als 802.3 veröffentlichten Spezifikation: Dort wo DIX ein „Type“-Feld vorsieht, definiert die IEEE „Length“. Der Konflikt wurde schließlich wie folgt gelöst: Werte kleiner oder gleich 1.536 (0x600) werden als Framelänge interpretiert, Werte darüber als Typ.</p><p>Bei der Diskussion um den Nachfolger des 10 Mbit/s schnellen Ethernets gab es zwei Lager. Als IEEE 802.3u setzte sich schließlich das abwärtskompatible Fast Ethernet durch. Dem neu ins Leben gerufenen und mit 802.3 konkurrierenden Standard 802.12 war derweil kein längeres Leben beschieden.</p><p>In Sachen Geschwindigkeit konzentrieren sich die Standardisierungsbemühungen aktuell auf Ethernet-Varianten mit 200 Gbit/s und 400 Gbit/s (P802.3bs). Der als 802.3by geführte Standard beschreibt Ethernet mit Geschwindigkeiten mit 25 Gbit/s – und soll die Lücke zwischen Infrastrukturen mit zehn und 40 Gbit/s zu vergleichsweise niedrigen Kosten schließen. Als weiterer Zwischenstandard gilt 802.3bz, der über Kupferkabel der Kategorien Cat 5e respektive Cat 6 bis zu fünf Gbit/s überträgt.</p><p>Der voraussichtlich 2018 final verfügbare Standard 802.3cd widmet sich derweil den Durchsätzen von 50, 100 und 200 Gbit/s.</p><h3 class="zwiti">Abseits des Büros</h3><p>Der Terminus „Industrial Ethernet“ beschreibt Bestrebungen, Geräte in der industriellen Fertigung per Ethernet anzubinden. Dem entsprechend müssen dann auch Switches, Hubs und Medienkonverter höhere Anforderungen an Störsicherheit und Schutzart erfüllen, für eine Hutschienenmontage vorgesehen sein oder sich per Gleichspannung betreiben lassen. Für Echtzeitanforderungen sind zudem spezielle Protokolle vorgesehen.</p><p>Das Metro Ethernet soll derweil die Einfachheit und Kostenstruktur des Ethernet auf Wide Area Networks (WAN) Übertragen. Das Modell wurde mittlerweile um das vom Industriekonsortium MEF (vormals Metro Ethernet Forum) vorangetriebene Carrier Ethernet erweitert, das den Markt für Ethernetdienste voranbringen soll und Servicecharakteristika vergleichbar macht.</p></div></div>
+<footer>
+<section>
+<div class="authorbox" id="art_authorinfo_9">
+<div class="a-info">
+<a href="/dirk-srocke/" >
+<img class="a-img" src="//images.vogel.de/vogelonline/bdb//977500/977590/4.jpg" alt="Dirk Srocke">
+</a>
+<div class="a-person">
+<span class="a-about">Über den Autor</span>
+<a href="/dirk-srocke/" ><p class="a-title">Dirk Srocke</p></a>
+<a href="/dirk-srocke/" ><p class="a-name"></p></a>
+</div>
+<div class="a-social">
+</div>
+</div>
+<div class="a-bestarticle">
+<a class="a-name" href="/was-ist-5g-a-611849/">Definition</a>
+<a class="a-title" href="/was-ist-5g-a-611849/">Was ist 5G?</a>
+</div>
+<div class="clear"></div>
+</div>
+</section>
+<section>
+<!--Kommentarbox -->
+<!-- Out of Cache-Include: /modules/teasers/forum/dyn_comments.cfm -->
+<script type="text/javascript" src="//files.vogel.de/shared/lib/ckeditor/4.5.3/ckeditor.js"></script>
+<script type="text/javascript" src="//files.vogel.de/shared/lib/ckeditor/4.5.3/adapters/jquery.js"></script>
+<div class="clear"></div>
+<div class="kommentare" id="art_comments_9">
+<div class="comment-loading-init" data-bind="visible: !initialized" >
+<i class="icon ion-load-c spin" style="font-size:96px;"></i>
+<p>Kommentare werden geladen....	</p>
+</div>
+<div class="boxhead_bg">Kommentar zu diesem Artikel</div>
+<div class="comment-alert" style="display:none">
+Der Kommentar wird durch einen Redakteur geprüft und in Kürze freigeschaltet.
+</div>
+<form name="commentform" id="commentform" style="position:relative">
+<div class="formoverlay"><i class="icon ion-load-c spin" style="font-size:96px;"></i></div>
+<div class="userinfo" style="height:auto;">
+<p>Anonym mitdiskutieren oder einloggen <a class="button" href="https://www.ip-insider.de/index.cfm?pid=13282&tab=0&cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D594051%26p%3D1&os=3B507E2E50F7FE15A4EF7C6922C4435F">Anmelden</a></p>
+<img src="/shared/vogelonline/img/bep30/user_default.jpg" alt="Avatar" class="comment-avatar-preview">
+<input type="text" name="username" id="username" placeholder="Name eingeben..." >
+<div class="clear"></div>
+</div>
+<textarea name="comment" id="comment" style="height:100px; width:100%"></textarea>
+<input type="button" value="Kommentieren" id="postbutton">
+</form>
+<form name="commentform-answer" id="commentform-answer" style="display:none">
+<div class="formoverlay"><i class="icon ion-load-c spin" style="font-size:96px;"></i></div>
+<div class="userinfo">
+<img src="/shared/vogelonline/img/bep30/user_default.jpg" alt="Avatar" class="comment-avatar-preview">
+<input type="text" name="username" id="username-answer" placeholder="Name eingeben...">
+</div>
+<input type="hidden" name="relatedPost" id="relatedPost">
+<textarea name="comment" id="commentanswertext" style="height:100px; width:100%"></textarea>
+<input type="button" value="Kommentieren" id="postbutton-answer">
+</form>
+<div id="comments" data-bind="visible:comments().length > 0">
+<ol class="comment-list" data-bind="foreach: {data:comments, afterRender:checkOverflow}">
+<li class="comment-item" data-bind="if: approved(),style: { display: approved() ? 'block' : 'none' }" >
+<header data-bind="if: userinfo.useruuid().length == 0">
+<img data-bind="attr: { src: userinfo.userimagepath}" alt="Avatar" class="comment-avatar">
+<span class="comment-username" data-bind="text: userinfo.username"></span>
+<span class="comment-time" data-bind="text: moment(created()).format('DD.MM.YYYY HH:mm:ss')"></span>
+<i class="icon ion-alert-circled" data-bind="click: report"></i><span class="clear"></span>
+</header>
+<header data-bind="if: userinfo.useruuid().length > 0">
+<a data-bind="attr: { href: '/index.cfm?pid=13712&uuid=' + userinfo.useruuid()}"><img data-bind="attr: { src: userinfo.userimagepath}" alt="Avatar" class="comment-avatar"></a>
+<a data-bind="attr: { href: '/index.cfm?pid=13712&uuid=' +userinfo.useruuid()}"><span class="comment-username" data-bind="text: userinfo.username"></span></a>
+<span class="comment-time" data-bind="text: moment(created()).format('DD.MM.YYYY HH:mm:ss')"></span>
+<i class="icon ion-alert-circled" data-bind="click: report" style="cursor:pointer"></i><span class="clear"></span>
+</header>
+<div class="comment-content" data-bind="html: comment;"></div>
+<!-- ko if: usermodified -->
+<div class="comment-mod">Bearbeitet von <span class="comment-modname" data-bind="text: userinfo.username"></span> am <span class="comment-modtime" data-bind="text: moment(usermodified()).format('DD.MM.YYYY HH:mm:ss')"></span></div>
+<!-- /ko -->
+<!-- ko if: modmodified -->
+<div class="comment-mod">Bearbeitet von <span class="comment-modname" data-bind="text: mod"></span> am <span class="comment-modtime" data-bind="text: moment(modmodified()).format('DD.MM.YYYY HH:mm:ss')"></span></div>
+<!-- /ko -->
+<ul class="comment-actions">
+<li><span class="comment-likes" data-bind="text: likes"></span><i class="icon ion-thumbsup like" data-bind="click: function(item,event){like($(event.target))}, css: $root.commentLikes.indexOf(id()) > -1?'inactive':''" ></i></li>
+<li><span class="comment-likes" data-bind="text: dislikes"></span><i class="icon ion-thumbsdown like" data-bind="click: function(item,event){dislike($(event.target))}, css: $root.commentLikes.indexOf(id()) > -1?'inactive':''"></i></li>
+<li class="comment-answer">
+<button class="comment-answer-button" data-bind="click: function(item,event){showAnswer($(event.target))}" >Antworten</button></li>
+<!-- ko if: userinfo.useruuid() == $root.loggedUserId() && $root.loggedUserId().length > 0 -->
+<li>
+<button class="comment-edit-button" data-bind="click: function(item,event){showEdit($(event.target))}">Bearbeiten</button>
+</li>
+<!-- /ko -->
+</ul>
+<ol class="comment-subcomments" data-bind="foreach: {data:subcomments, afterRender:$root.checkOverflow}">
+<li class="comment-item" data-bind="if: approved(),style: { display: approved() ? 'block' : 'none' }" >
+<header data-bind="if: userinfo.useruuid().length == 0">
+<img data-bind="attr: { src: userinfo.userimagepath}" alt="Avatar" class="comment-avatar">
+<span class="comment-username" data-bind="text: userinfo.username"></span>
+<span class="comment-time" data-bind="text: moment(created()).format('DD.MM.YYYY HH:mm:ss')"></span>
+<i class="icon ion-alert-circled" data-bind="click: report"></i><span class="clear"></span>
+</header>
+<header data-bind="if: userinfo.useruuid().length > 0">
+<a data-bind="attr: { href: '/index.cfm?pid=13712&uuid=' + userinfo.useruuid()}"><img data-bind="attr: { src: userinfo.userimagepath}" alt="Avatar" class="comment-avatar"></a>
+<a data-bind="attr: { href: '/index.cfm?pid=13712&uuid=' + userinfo.useruuid()}"><span class="comment-username" data-bind="text: userinfo.username"></span></a>
+<span class="comment-time" data-bind="text: moment(created()).format('DD.MM.YYYY HH:mm:ss')"></span>
+<i class="icon ion-alert-circled" data-bind="click: report" style="cursor:pointer"></i><span class="clear"></span>
+</header>
+<div class="comment-content" data-bind="html: comment;"></div>
+<!-- ko if: usermodified -->
+<div class="comment-modified">Bearbeitet von <span class="comment-modname" data-bind="text: userinfo.username"></span> am <span class="comment-modtime" data-bind="text: moment(usermodified()).format('DD.MM.YYYY HH:mm:ss')"></span></div>
+<!-- /ko -->
+<!-- ko if: modmodified -->
+<div class="comment-mod-modified">Bearbeitet von <span class="comment-modname" data-bind="text: mod"></span> am <span class="comment-modtime" data-bind="text: moment(modmodified()).format('DD.MM.YYYY HH:mm:ss')"></span></div>
+<!-- /ko -->
+<ul class="comment-actions">
+<li><span class="comment-likes" data-bind="text: likes "></span><i class="icon ion-thumbsup like" data-bind="click: function(item,event){like($(event.target))}, css: $root.commentLikes.indexOf(id()) > -1?'inactive':''" ></i></li>
+<li><span class="comment-likes" data-bind="text: dislikes"></span><i class="icon ion-thumbsdown like" data-bind="click: function(item,event){dislike($(event.target))}, css: $root.commentLikes.indexOf(id()) > -1?'inactive':''"></i></li>
+<!-- ko if: userinfo.useruuid() == $root.loggedUserId() && $root.loggedUserId().length > 0 -->
+<li>
+<button class="comment-edit-button" data-bind="click: function(item,event){showEdit($(event.target))}">Bearbeiten</button>
+</li>
+<!-- /ko -->
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="comment-more" data-bind="if: hasMore">
+<button id="btnMoreComments" data-bind="click: getComments">Mehr...</button>
+</div>
+<div id="comment-loading" data-bind="visible: commentsLoading">
+<i class="icon ion-load-c spin" style="font-size:96px;"></i>
+<p>Kommentare werden geladen....	</p>
+</div>
+<div style="display:none">
+<div id="comment-report-dialog" >
+<h2>Kommentar melden</h2>
+<p>Melden Sie diesen Kommentar, wenn dieser nicht den Richtlinien entspricht.</p>
+<form>
+<input type="hidden" name="id" id="comment-report-id">
+<textarea rows="5" id="comment-report-text" name="report_text"></textarea>
+<input type="button" class="commentbutton" value="Senden" id="comment-report-send">
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<div style="display:none">
+<div id="comment-approve-dialog" style="margin:10px;">
+<h2>Kommentar Freigeben</h2>
+<p style="color:red;display:none" id="warning-unregistered-approve">unregistrierter Nutzer</p>
+<form>
+<div id="mailform_approve">
+<p> Der untenstehende Text wird an den Kommentator gesendet, falls dieser eine Email-hinterlegt hat.</p>
+<div class="form-group">
+<label>Betreff</label>
+<input type="text" id="comment-approve-subject" name="subject" value="Benachrichtigung zu ihrem Kommentar" style="width: 100%;font-size: 1em;"/>
+</div>
+<div class="form-group">
+<label>Text</label>
+<div contenteditable="true" style="width:100%;height:200px;border:1px solid black;overflow-y: scroll;" id="textdiv_approve"></div>
+</div>
+</div>
+<input type="button" class="commentbutton" value="Freigeben" id="comment-approve-send" style="margin-top:5px;"></input>
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<div style="display:none">
+<div id="comment-unapprove-dialog" style="margin:10px;">
+<h2>Freigabe entfernen</h2>
+<p style="color:red;display:none" id="warning-unregistered-unapprove">unregistrierter Nutzer</p>
+<form>
+<div id="mailform_unapprove">
+<p>Der untenstehende Text wird an den Kommentator gesendet, falls dieser eine Email-hinterlegt hat.</p>
+<div class="form-group">
+<label>Betreff</label>
+<input type="text" id="comment-unapprove-subject" name="subject" value="Benachrichtigung zu ihrem Kommentar" style="width: 100%;font-size: 1em;"/>
+</div>
+<div class="form-group">
+<label>Text</label>
+<div contenteditable="true" style="width:100%;height:200px;border:1px solid black;overflow-y: scroll;" id="textdiv_unapprove"></div>
+</div>
+</div>
+<input type="button" class="commentbutton" value="Freigabe entfernen" id="comment-unapprove-send" style="margin-top:5px;"></input>
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<script>
+var lang ={
+collapse: "Einklappen",
+expand: "Ausklappen"
+}
+var config = {
+sortsetting:'oldest',
+sort:'created',
+sortorder:'asc',
+check :'9dd09145dfad3f0813915138d72bd23dd94ccc67',
+STR_token : '',
+BOO_approveByAdmin: true,
+articleid:594051,
+useruuid: '',
+number:15,
+LST_commentlikes:"",
+length:1500,
+BOO_cutoff:false,
+BOO_commentsAllowed:true,
+BOO_admin:false,
+approved:1,
+clientemail:'beleg@ip-insider.de'
+}
+var comment = {
+approved : false,
+userinfo : {
+useruuid : ""
+},
+articleinfo:{
+pkarticles:594051,
+articlenumber:"44598385",
+articletitle : "Was ist Ethernet?",
+articlelink:"http://www.ip-insider.de/was-ist-ethernet-a-594051/"
+},
+clientinfo:{
+client:9,
+clientname:"IP-Insider"
+},
+contenttype:"comment"
+}
+/*Nur mit Kommentarmodul einsetzbar*/
+/*/uxmodules/teasers/forum/comments.cfm (Auswahl neues Kommentarmodul) */
+/* Config CKE */
+/* Felder die zurückgeliefert werden sollen */
+/* var commentFields = 'pkarticles,approved,articlenumber,id,user,userimagepath,username,useruuid,userlink,created,comment,mod,modmodified,subcomments,likes,dislikes,articletitle,articlelink,relatedComment,modified,mod'; */
+var ckeditorConfig = {
+toolbar: "comment",
+wordcount: {
+/* Whether or not you want to show the Paragraphs Count*/
+showParagraphs: false,
+/* Whether or not you want to show the Word Count*/
+showWordCount: false,
+/* Whether or not you want to show the Char Count*/
+showCharCount: true,
+/* Whether or not you want to count Spaces as Chars*/
+countSpacesAsChars: true,
+/* Whether or not to include Html chars in the Char Count*/
+countHTML: false,
+/* Maximum allowed Word Count, -1 is default for unlimited*/
+maxWordCount: -1,
+/* Maximum allowed Char Count, -1 is default for unlimited */
+maxCharCount: config.length
+},
+startupFocus: false
+};
+/* View Model Kommentar für Knockout EIN KOMMENTAR */
+var CommentViewModel = function (data) {
+var commentMapping = {};
+ko.mapping.fromJS(data, commentMapping, this);
+/* Referenz auf sich selbst anlegen */
+var self = this;
+/*Links bearbeiten
+*
+* Beim initialisieren werden alle Links mit target="_blank" versehen;
+* */
+var commentHtml = $('<div>'+self.comment()+'</div>');
+commentHtml.find('a').each(function(){
+$(this).prop("target",'_blank');
+self.comment(commentHtml.html());
+});
+/* Like Funktion */
+self.like = function (obj) {
+if (!obj.hasClass("inactive")) {
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/like/up/",
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function (data) {
+self.likes(data.likes);
+obj.closest(".comment-actions").find(".like").addClass("inactive");
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+/* DisLike Funktion */
+self.dislike = function (obj) {
+if (!obj.hasClass("inactive")) {
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/like/down/",
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function (data) {
+self.dislikes(data.dislikes);
+obj.closest(".comment-actions").find(".like").addClass("inactive");
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+/* Bearbeiten Funktion Editor öffnen und mit Content befüllen */
+self.showEdit = function (obj) {
+if (obj.hasClass("active")) {
+$("#commentform-edit").hide();
+$(".kommentare button").removeClass("active");
+}
+else {
+$(".kommentare button").removeClass("active");
+obj.addClass("active");
+$("#commentform-answer").hide();
+if (typeof (CKEDITOR.instances.commentedittext) !== 'undefined') {
+CKEDITOR.instances.commentedittext.destroy();
+};
+CKEDITOR.on('instanceReady', function () {
+getUsers(CKEDITOR.instances.commentedittext);
+});
+obj.closest(".comment-actions").after($("#commentform-edit"));
+$("#commentform-edit").show();
+CKEDITOR.replace('commentedittext', ckeditorConfig);
+CKEDITOR.instances.commentedittext.setData(self.comment());
+CKEDITOR.instances.commentedittext.on('focus', function () {
+$("#cke_commentedittext").removeClass("invalid");
+});
+/**/
+$("#postbutton-edit").off("click");
+$("#postbutton-edit").click(function () {
+var STR_comment = CKEDITOR.instances.commentedittext.getData();
+if ($.trim(STR_comment).length == 0) {
+$("#cke_commentedittext").addClass("invalid");
+}
+if ($.trim(STR_comment).length > 0) {
+$(".kommentare button").removeClass("active");
+$("#commentform-edit").hide();
+self.update();
+}
+});
+}
+};
+self.update = function () {
+$("#commentform-edit").find(".formoverlay").show();
+self.comment(CKEDITOR.instances.commentedittext.getData());
+var parsedComment = "<div>" + self.comment + "</div>";
+var ARR_mentions = [];
+$(parsedComment).find("a.mention").each(function () {
+ARR_mentions.push($(this).prop("rel"));
+});
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/",
+data: JSON.stringify({
+data: ko.mapping.toJS(self),
+token: config.STR_token,
+mentions: ARR_mentions,
+sort: config.sort,
+sortorder: config.sortorder,
+check: config.check,
+mod: false,
+usermodified: true
+}),
+dataType: "text",
+contentType: "application/json; charset=utf-8",
+success: function (data) {
+data = jQuery.parseJSON(data);
+$("#commentform-edit").find(".formoverlay").hide();
+if (data.id !== null && typeof (data.id) !== 'undefined') {
+if (config.BOO_approveByAdmin) {
+$(".comment-alert").fadeIn();
+setTimeout(function () {
+$(".comment-alert").fadeOut();
+}, 5000);
+}
+else {
+self.usermodified(data.usermodified);
+}
+}
+else {
+alert("Kommentar wurde nicht aktualisiert!");
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim aktualisieren!");
+console.log(errMsg);
+}
+});
+};
+/**/
+self.showAnswer = function (obj) {
+if (obj.hasClass("active")) {
+$("#commentform-answer").hide();
+$(".kommentare button").removeClass("active");
+}
+else {
+$(".kommentare button").removeClass("active");
+obj.addClass("active");
+if (typeof (CKEDITOR.instances.commentanswertext) !== 'undefined') {
+CKEDITOR.instances.commentanswertext.destroy();
+};
+CKEDITOR.on('instanceReady', function () {
+getUsers(CKEDITOR.instances.commentanswertext);
+});
+$("#commentform-edit").hide();
+obj.closest(".comment-actions").after($("#commentform-answer"));
+$("#relatedPost").val(self.id());
+$("#commentform-answer").show();
+CKEDITOR.replace('commentanswertext', ckeditorConfig);
+CKEDITOR.instances.commentanswertext.setData("");
+CKEDITOR.instances.commentanswertext.on('focus', function () {
+$("#cke_commentanswertext").removeClass("invalid");
+});
+$("#username-answer").on("focus", function () {
+$("#username-answer").removeClass("invalid");
+});
+}
+};
+self.report = function () {
+/**/
+$("#comment-report-id").val(self.id());
+/**/
+$.colorbox({
+inline: true, href: "#comment-report-dialog", width: "450px", overlayClose: false, onClosed: function () {
+$("#comment-report-id").val("");
+$("#comment-report-text").val("");
+}
+});
+/**/
+$("#comment-report-send").off("click");
+$("#comment-report-send").click(function () {
+var STR_message = $("#comment-report-text").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/report/",
+data: JSON.stringify({
+data: ko.mapping.toJS(self),
+message: STR_message,
+token: config.STR_token
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+self.approve = function () {
+var txt = "Hallo " + self.userinfo.username() + ",<br/><br/>" +
+"Ihr Kommentar zum Artikel <a href='" + self.articleinfo.articlelink() + "'>" + self.articleinfo.articletitle() + "</a> wurde freigegeben!<br/><br/>" +
+"Vielen Dank für Ihr Engagement auf " + self.clientinfo.clientname() + "<br/><br/>" +
+"Liebe Grüße,<br/>" +
+"das '" + self.clientinfo.clientname() + "' Team";
+$("#textdiv_approve").html(txt);
+/**/
+$.colorbox({
+inline: true, href: "#comment-approve-dialog", width: "450px", transition: "elastic", overlayClose: false, onClosed: function () {
+$("#textdiv_approve").html("");
+}
+});
+if(self.userinfo.useruuid().length > 0){
+$("#warning-unregistered-approve").hide();
+$("#mailform_approve").show();
+$.colorbox.resize();
+}
+else{
+$("#warning-unregistered-approve").show();
+$("#mailform_approve").hide();
+$.colorbox.resize();
+}
+/**/
+$("#comment-approve-send").off("click");
+$("#comment-approve-send").click(function () {
+var STR_message = $("#textdiv_approve").html();
+var STR_subject = $("#comment-approve-subject").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/approve/",
+data: JSON.stringify({
+message: STR_message,
+subject: STR_subject
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+location.reload();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+self.unapprove = function () {
+var txt = 'Hallo ' + self.userinfo.username() + ', <br/><br/>Ihr Kommentar zum Artikel <a href="' + self.articleinfo.articlelink() + '">' +
+self.articleinfo.articletitle() + '</a> hat leider nicht unseren Richtlinien entsprochen und wurde von unserem Team aktualisiert!<br/><br/>' +
+'Falls Sie Fragen zu unseren Kommentar-Richtlinien haben, schreiben Sie uns einfach eine <a href="mailto: ' + config.clientemail + '">Mail</a><br/><br/>' +
+'Liebe Grüße,<br/> das ' + self.clientinfo.clientname() + ' Team';
+$("#textdiv_unapprove").html(txt);
+/**/
+$.colorbox({
+inline: true, href: "#comment-unapprove-dialog", width: "450px", transition: "elastic", overlayClose: false, onClosed: function () {
+$("#textdiv_unapprove").html("");
+}
+});
+if(self.userinfo.useruuid().length > 0){
+$("#warning-unregistered-unapprove").hide();
+$("#mailform_unapprove").show();
+$.colorbox.resize();
+}
+else{
+$("#warning-unregistered-unapprove").show();
+$("#mailform_unapprove").hide();
+$.colorbox.resize();
+}
+/**/
+$("#comment-unapprove-send").off("click");
+$("#comment-unapprove-send").click(function () {
+var STR_message = $("#textdiv_unapprove").html();
+var STR_subject = $("#comment-unapprove-subject").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/unapprove/",
+data: JSON.stringify({
+message: STR_message,
+subject: STR_subject
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+location.reload();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+}
+/* View Model KOMMENTARMODUL */
+var ViewModel = function () {
+var self = this;
+self.initialized = ko.observable(false);
+self.commentsLoading = ko.observable(false);
+self.cutoff = config.BOO_cutoff;
+self.commentUsers = null;
+self.commentLikes = config.LST_commentlikes;
+self.loggedUserId = ko.observable(config.useruuid);
+self.from = ko.observable(0);
+self.count = ko.observable(config.number);
+self.totalHits = ko.observable(0);
+self.comments = ko.observableArray([]);
+self.hasMore = ko.observable(false);
+self.hasSubscription = ko.observable(false);
+/* Check ob ein Overflow innerhalb des Contents vorliegt*/
+self.checkOverflow = function (element, index, data) {
+var content = $(element).find(".comment-content").first();
+if (content.prop('scrollHeight') > content.height()) {
+content.addClass("expandable");
+}
+else {
+content.addClass("complete");
+$(element).find(".comment-actions .expander").hide();
+$(element).find(".comment-expand").hide();
+}
+};
+self.addComment = function (STR_id, OBJ_comment) {
+if (STR_id !== null && STR_id.length > 0) {
+/* Subkommentar */
+for (x = 0; x < this.comments().length; x++) {
+if (this.comments()[x].id() == STR_id) {
+/*Subkommentar anhängen*/
+this.comments()[x].subcomments.push(OBJ_comment);
+}
+}
+}
+else {
+if (config.sortsetting.indexOf('oldest') > -1 || config.sortsetting.indexOf('top') > -1) {
+this.comments.push(OBJ_comment);
+}
+else {
+this.comments.unshift(OBJ_comment);
+}
+if (this.comments().length > 0) {
+$("#comments").fadeIn();
+}
+}
+};
+self.getComments = function () {
+self.commentsLoading(true);
+$.ajax({
+type: "GET",
+cache: false,
+url: "/api/comments/article/" + config.articleid + "/",
+data: { token: config.STR_token, sort: config.sort, sortorder: config.sortorder, count: self.count(), from: self.from(), uid: config.useruuid, approved: config.approved },
+dataType: "json",
+success: function (commentsfromserver) {
+/*Ladebilder ausblenden*/
+self.commentsLoading(false);
+self.initialized(true);
+if (commentsfromserver.data.length > 0) {
+for (x = 0; x < commentsfromserver.data.length; x++) {
+for (i = 0; i < commentsfromserver.data[x].subcomments.length; i++) {
+/*
+* Subkommentare
+* initialisieren
+*/
+commentsfromserver.data[x].subcomments[i] = new CommentViewModel(commentsfromserver.data[x].subcomments[i]);
+}
+/* Subkommentare immer alt nach neu sortieren sortieren */
+commentsfromserver.data[x].subcomments.sort(function (a, b) { ; return new Date(a.created()) - new Date(b.created()) });
+/* kommentar initialisieren */
+self.comments.push(new CommentViewModel(commentsfromserver.data[x]));
+}
+self.totalHits(commentsfromserver.metainfo.totalHits);
+self.hasMore(commentsfromserver.metainfo.hasMore);
+self.from(self.from() + commentsfromserver.data.length);
+}
+},
+failure: function (errMsg) {
+self.commentsLoading(false);
+console.log(errMsg);
+}
+});
+};
+self.postComment = function (comment, subscribe, overlay) {
+overlay.show();
+var parsedComment = "<div>" + comment.comment + "</div>";
+var ARR_mentions = [];
+$(parsedComment).find("a.mention").each(function () {
+ARR_mentions.push($(this).prop("rel"));
+});
+$.ajax({
+type: "POST",
+url: "/api/comments/",
+cache: false,
+data: JSON.stringify({
+data: comment,
+mentions: ARR_mentions,
+token: config.STR_token,
+sort: config.sort,
+sortorder: config.sortorder,
+check: config.check
+}),
+dataType: "text",
+contentType: "application/json; charset=utf-8",
+success: function (data) {
+data = jQuery.parseJSON(data);
+overlay.hide();
+$(".kommentare button").removeClass("active");
+if (data.id !== null && typeof (data.id) !== 'undefined') {
+if (config.BOO_approveByAdmin) {
+$(".comment-alert").fadeIn();
+setTimeout(function () {
+$(".comment-alert").fadeOut();
+}, 5000);
+}
+else {
+self.addComment(data.relatedComment, new CommentViewModel(data));
+/*Subscribers benachrichtigen über neue Nachricht */
+self.notifySubscribers();
+}
+/* Subscribe */
+if (subscribe && !self.hasSubscription()) {
+self.subscribe(comment);
+}
+}
+else {
+alert("Kommentar wurde nicht angelegt!");
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim anlegen!");
+console.log(errMsg);
+}
+});
+};
+self.expandContent = function (obj) {
+if (obj.closest('.comment-item').find('.comment-content').hasClass("expandable")) {
+var content = obj.closest('.comment-item').find('.comment-content').first();
+content.toggleClass('expanded');
+if (content.hasClass("expanded")) {
+obj.text(lang.collapse);
+} else {
+obj.text(lang.expand);
+}
+}
+return true;
+};
+self.subscribe = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/subscribe/",
+cache: false,
+data: JSON.stringify({
+useruuid: config.useruuid,
+token: config.STR_token,
+articleinfo: comment.articleinfo,
+clientinfo: comment.clientinfo
+}),
+dataType: "json",
+success: function (data) {
+if (data.result) {
+self.hasSubscription(true);
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim Abonnnieren!");
+console.log(errMsg);
+}
+});
+}
+self.unsubscribe = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/unsubscribe/",
+cache: false,
+data: JSON.stringify({
+useruuid: config.useruuid,
+token: config.STR_token
+}),
+dataType: "json",
+success: function (data) {
+if (data.result) {
+self.hasSubscription(false);
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+}
+self.checkSubscription = function () {
+$.ajax({
+type: "GET",
+url: "/api/comments/article/" + config.articleid + "/checksubscription/",
+cache: false,
+data: { useruuid: config.useruuid, token: config.STR_token },
+dataType: "json",
+success: function (data) {
+self.hasSubscription(data.result);
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+};
+self.notifySubscribers = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/notifysubscribers/",
+cache: false,
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function () { },
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+}
+/*Users mit Null initialisieren, um in getUsers darauf prüfen zu können*/
+var commentUsers = null;
+var getUsers = function (OBJ_ckeditor) {
+/**/
+if (commentUsers != null) {
+OBJ_ckeditor.execCommand('reloadSuggestionBox', commentUsers);
+}
+else {
+$.ajax({
+type: "GET",
+cache: false,
+url: "/api/comments/article/" + config.articleid + "/users/",
+data: { token: config.STR_token },
+dataType: "json",
+success: function (users) {
+commentUsers = users.data;
+OBJ_ckeditor.execCommand('reloadSuggestionBox', commentUsers);
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+$(document).ready(function () {
+/* ViewModel initialisieren */
+var viewModel = new ViewModel();
+if (config.BOO_commentsAllowed) {
+/* CKEditor initialisieren */
+/* TriggerKey == @ */
+CKEDITOR.replace('comment', ckeditorConfig);
+CKEDITOR.instances.comment.on('focus', function () {
+$("#cke_comment").removeClass("invalid");
+/* Users laden*/
+getUsers(CKEDITOR.instances.comment);
+});
+CKEDITOR.disableAutoInline = true;
+$("#username").on("focus", function () {
+$("#username").removeClass("invalid");
+});
+$("#comment-report-text").on("focus", function () {
+$("#comment-report-text").removeClass("invalid");
+});
+$("#postbutton").click(function () {
+comment["comment"] = CKEDITOR.instances.comment.getData();
+comment["userinfo"]["username"] = $("#username").val();
+comment["relatedComment"] = "";
+var subscribe = $("#subscribe").prop("checked");
+var valid = true;
+if ($.trim(comment["comment"]).length == 0) {
+$("#cke_comment").addClass("invalid");
+valid = false;
+}
+if ($.trim(comment["userinfo"]["username"]).length == 0) {
+$("#username").addClass("invalid");
+valid = false;
+}
+if (valid) {
+var form = $("#commentform");
+CKEDITOR.instances.comment.setData("");
+var overlay = $("#commentform").find(".formoverlay");
+viewModel.postComment(comment, subscribe, overlay);
+}
+});
+$("#postbutton-answer").click(function () {
+comment["comment"] = CKEDITOR.instances.commentanswertext.getData();
+comment["userinfo"]["username"] = $("#username-answer").val();
+comment["relatedComment"] = $("#relatedPost").val();
+var subscribe = $("#subscribe-answer").prop("checked");
+var valid = true;
+if ($.trim(comment["comment"]).length == 0) {
+$("#cke_commentanswertext").addClass("invalid");
+valid = false;
+}
+if ($.trim(comment["userinfo"]["username"]).length == 0) {
+$("#username-answer").addClass("invalid");
+valid = false;
+}
+if (valid) {
+$("#commentform-answer").hide();
+CKEDITOR.instances.commentanswertext.setData("");
+var overlay = $("#commentform-answer").find(".formoverlay");
+viewModel.postComment(comment, subscribe, overlay);
+}
+});
+}
+/*Data-Binding herstellen*/
+ko.applyBindings(viewModel);
+/*Kommentare laden*/
+viewModel.getComments();
+if (config.useruuid.length > 0) {
+/*Prüfen ob Thread abonniert wurde*/
+viewModel.checkSubscription();
+}
+});
+</script>
+</div>
+<div class="clear"></div>
+</section>
+<img src="https://ssl-vg03.met.vgwort.de/na/3358ce766a0945348bb8453393c4def7" height="1" width="1" border="0">
+<script type="text/javascript">
+var STR_authornames = 'Srocke:Dirk';
+var STR_authornames_globaluserids = '712394:Srocke:Dirk';
+var STR_globaluserids = '712394';
+var STR_shorturl = "";
+//Wenn mobile device unter 700 dann wird das inlineimage vergrößert
+if ($("body").width() < 701 )
+{
+$('.inlineimage img').each(function () {
+$(this).attr('src', jQuery(this).attr('src').replace("27.jpg", "18.jpg"));
+$(this).attr('src', jQuery(this).attr('src').replace("4.jpg", "18.jpg"));
+});
+}
+// Inhalt einer Box verstecken
+function foldKasten(STR_box_id)
+{
+// Inhalt ausblenden
+$('#kasten_untermenu' + STR_box_id).slideUp('fast');
+$('#kasten_minimize' + STR_box_id).hide();
+$('#kasten_maximize' + STR_box_id).show();
+$('#kasten_teaser' + STR_box_id).show();
+} // end function foldBox
+// Inhalt einer Box zeigen
+function unfoldKasten(STR_box_id)
+{
+// Inhalt ausblenden
+$('#kasten_untermenu'+ STR_box_id).slideDown('fast');
+$('#kasten_minimize' + STR_box_id).show();
+$('#kasten_maximize' + STR_box_id).hide();
+$('div#kasten_teaser' + STR_box_id).hide();
+} // end function unfoldBox
+$(document).ready(function(){
+if(STR_shorturl.length > 0 && (window.location.search.indexOf('?exclusive') > -1 || window.location.search.indexOf('&exclusive') > -1)){
+window.location.href = STR_shorturl;
+}
+});
+</script>
+</footer>
+</article>
+<div id="container_seokeywords" class="col3">
+<div class="clear"></div>
+<div class="row3 listing" id="containerobject_439236">
+<div class="teaser_titel"><p>Aktuelle Beiträge zu diesem Thema</p></div>
+<div class="teaser_content_abstract_big">
+<div class="teaser_content">
+<a class="img_preview" href="/netgear-geraete-aus-der-ferne-verwalten-a-648085/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Netgear-Geräte aus der Ferne verwalten" alt="Netgear-Geräte aus der Ferne verwalten" src="//images.vogel.de/vogelonline/bdb/1288300/1288385/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Netgear-Geräte aus der Ferne verwalten" href="/netgear-geraete-aus-der-ferne-verwalten-a-648085/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Netzwerkmanagement per App</a></h3>
+<h2><a title="Netgear-Geräte aus der Ferne verwalten" href="/netgear-geraete-aus-der-ferne-verwalten-a-648085/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Netgear-Geräte aus der Ferne verwalten</a></h2>
+<p>Switches, WLAN-Access-Points und Netzwerkspeichergeräte von Netgear sollen ab sofort mit der App Netgear Insight erkannt, konfiguriert, überwacht und verwaltet werden können. Zudem ermögliche die Lösung ein Plug-and-Play-Setup eines Netzwerks. <a class="read_content" href="/netgear-geraete-aus-der-ferne-verwalten-a-648085/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/sd-wan-fuer-multinationale-firmenkunden-a-648100/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="SD-WAN für multinationale Firmenkunden" alt="SD-WAN für multinationale Firmenkunden" src="//images.vogel.de/vogelonline/bdb/1288300/1288397/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="SD-WAN für multinationale Firmenkunden" href="/sd-wan-fuer-multinationale-firmenkunden-a-648100/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >„ngena“ bietet internationale Reichweite</a></h3>
+<h2><a title="SD-WAN für multinationale Firmenkunden" href="/sd-wan-fuer-multinationale-firmenkunden-a-648100/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >SD-WAN für multinationale Firmenkunden</a></h2>
+<p>Die Deutsche Telekom möchte über ihre Tochter T-Systems mit „Smart SD-WAN powered by ngena“ schnell verfügbare internationale Netzverbindungen und -dienste bereitstellen. Basis sei die Allianz „ngena“, deren Partner ihre Netze zu einem weltweiten standardisierten Netz verbinden. <a class="read_content" href="/sd-wan-fuer-multinationale-firmenkunden-a-648100/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/dedicated-cloud-access-a-645892/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Dedicated Cloud Access" alt="Dedicated Cloud Access" src="//images.vogel.de/vogelonline/bdb/1286900/1286930/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Dedicated Cloud Access" href="/dedicated-cloud-access-a-645892/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Der private Cloud-Zugang unter der Lupe</a></h3>
+<h2><a title="Dedicated Cloud Access" href="/dedicated-cloud-access-a-645892/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Dedicated Cloud Access</a></h2>
+<p>Unternehmen setzen heutzutage mehr und mehr auf Cloud-Services. Selbst bei Standard-Applikationen wie Microsoft Office 365 geht ohne Cloud oft nichts mehr. Doch der Zugriff auf derartige Services über öffentliche Leitungen birgt Risiken in den Bereichen Sicherheit, Performance und Business Continuity. Dedicated Cloud Access kann hier Abhilfe schaffen. <a class="read_content" href="/dedicated-cloud-access-a-645892/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<div class="row3 listing" id="containerobject_439236" style="margin-top:-35px;">
+<div class="teaser_content_abstract_big">
+<div class="teaser_content">
+<a class="img_preview" href="/vpn-router-mit-lte-advanced-wlan-und-gigabit-ethernet-a-643960/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="VPN-Router mit LTE-Advanced, WLAN und Gigabit-Ethernet" alt="VPN-Router mit LTE-Advanced, WLAN und Gigabit-Ethernet" src="//images.vogel.de/vogelonline/bdb/1283700/1283791/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="VPN-Router mit LTE-Advanced, WLAN und Gigabit-Ethernet" href="/vpn-router-mit-lte-advanced-wlan-und-gigabit-ethernet-a-643960/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Ausfallsicherheit und bis zu 300 MBit/s im Mobilfunknetz</a></h3>
+<h2><a title="VPN-Router mit LTE-Advanced, WLAN und Gigabit-Ethernet" href="/vpn-router-mit-lte-advanced-wlan-und-gigabit-ethernet-a-643960/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >VPN-Router mit LTE-Advanced, WLAN und Gigabit-Ethernet</a></h2>
+<p>Mit dem 1780EW-4G+ bietet Lancom seinen nach eigenen Angaben ersten VPN-Router, der LTE-Advanced (CAT6) und 802.11ac-WLAN unterstützt und so im Mobilfunkbetrieb bis zu 300 MBit/s im Download und 50 MBit/s im Upload sowie im WLAN bis zu 867 MBit/s erreichen könne. <a class="read_content" href="/vpn-router-mit-lte-advanced-wlan-und-gigabit-ethernet-a-643960/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/leicht-einzurichtendes-wlan-fuer-kleinunternehmen-a-641214/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Leicht einzurichtendes WLAN für Kleinunternehmen" alt="Leicht einzurichtendes WLAN für Kleinunternehmen" src="//images.vogel.de/vogelonline/bdb/1279100/1279114/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Leicht einzurichtendes WLAN für Kleinunternehmen" href="/leicht-einzurichtendes-wlan-fuer-kleinunternehmen-a-641214/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Netgear Orbi Pro</a></h3>
+<h2><a title="Leicht einzurichtendes WLAN für Kleinunternehmen" href="/leicht-einzurichtendes-wlan-fuer-kleinunternehmen-a-641214/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Leicht einzurichtendes WLAN für Kleinunternehmen</a></h2>
+<p>Das Triband-WLAN-System Orbi Pro SRK60 versorgt laut Hersteller Netgear Büros und Geschäftsräume mit schnellem, zuverlässigem WLAN. Die Lösung erfordere weder IT-Fachkenntnisse oder Expertenwissen noch Verkabelung oder eine professionelle Installation. <a class="read_content" href="/leicht-einzurichtendes-wlan-fuer-kleinunternehmen-a-641214/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/gigabit-switch-fuer-geraeuschempfindliche-umgebungen-a-639770/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Gigabit-Switch für geräuschempfindliche Umgebungen" alt="Gigabit-Switch für geräuschempfindliche Umgebungen" src="//images.vogel.de/vogelonline/bdb/1277000/1277076/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Gigabit-Switch für geräuschempfindliche Umgebungen" href="/gigabit-switch-fuer-geraeuschempfindliche-umgebungen-a-639770/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Erweiterte L2-Funktionen und webbasiertes Management</a></h3>
+<h2><a title="Gigabit-Switch für geräuschempfindliche Umgebungen" href="/gigabit-switch-fuer-geraeuschempfindliche-umgebungen-a-639770/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Gigabit-Switch für geräuschempfindliche Umgebungen</a></h2>
+<p>Der mit 48 Gigabit-Ports und zwei Glasfaser-Uplink-Ports ausgestattete Switch GS750E unterstützt Netgear zufolge VLAN, QoS, LAG und IGMP-Managementfunktionen. Das lüfterlose Design ermögliche den leisen Betrieb in Klassenzimmern, Konferenzräumen, Arztpraxen oder offenen Büros. <a class="read_content" href="/gigabit-switch-fuer-geraeuschempfindliche-umgebungen-a-639770/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<div class="row3 listing" id="containerobject_439236" style="margin-top:-35px;">
+<div class="teaser_content_abstract_big">
+<div class="teaser_content">
+<a class="img_preview" href="/rhel74-mehr-sicherheit-mehr-perfomance-a-632738/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="RHEL 7.4: mehr Sicherheit, mehr Perfomance" alt="RHEL 7.4: mehr Sicherheit, mehr Perfomance" src="//images.vogel.de/vogelonline/bdb/1267800/1267811/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="RHEL 7.4: mehr Sicherheit, mehr Perfomance" href="/rhel74-mehr-sicherheit-mehr-perfomance-a-632738/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Red Hat Enterprise Linux: für Hybrid- und Multi-Cloud-Umgebungen</a></h3>
+<h2><a title="RHEL 7.4: mehr Sicherheit, mehr Perfomance" href="/rhel74-mehr-sicherheit-mehr-perfomance-a-632738/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >RHEL 7.4: mehr Sicherheit, mehr Perfomance</a></h2>
+<p>Red Hat hat bei der Entwicklung der Version 7.4 seines Enterprise Linux die Themen Sicherheit und Performance verstärkt in den Fokus gerückt. Zudem biete die aktuelle Version Container-Features und Automatisierungsfunktionen für komplexe IT-Umgebungen. <a class="read_content" href="/rhel74-mehr-sicherheit-mehr-perfomance-a-632738/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/die-fritzbox-7590-im-wlan-und-usb-speedtest-a-630206/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Die Fritz!Box 7590 im WLAN- und USB-Speedtest" alt="Die Fritz!Box 7590 im WLAN- und USB-Speedtest" src="//images.vogel.de/vogelonline/bdb/1264700/1264764/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Die Fritz!Box 7590 im WLAN- und USB-Speedtest" href="/die-fritzbox-7590-im-wlan-und-usb-speedtest-a-630206/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >AVM-Flaggschiff auf dem Prüfstand</a></h3>
+<h2><a title="Die Fritz!Box 7590 im WLAN- und USB-Speedtest" href="/die-fritzbox-7590-im-wlan-und-usb-speedtest-a-630206/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Die Fritz!Box 7590 im WLAN- und USB-Speedtest</a></h2>
+<p>Das neue AVM-Flaggschiff Fritz!Box 7590 ist ein All-In-One-Feature-Monster mit Internet-Modem-Router für ADSL bis 16 Mbps und VDSL-Super-Vectoring-35b bis 300 Mbps. Dazu kommen WLAN-11ac-Wave-2 bis 1733 Mbps und zwei USB-3.0-Ports bis 5.000 Mbps sowie viele weitere Schnittstellen und Features. Wir haben gemessen, welchen WLAN-Speed die Fritz!Box wirklich erreicht, und was per USB-3.0 am Ende der Leitung rauskommt. <a class="read_content" href="/die-fritzbox-7590-im-wlan-und-usb-speedtest-a-630206/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a class="img_preview" href="/gigabit-switch-mit-24poe-ports-a-632070/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" ><img class="art_list_img" title="Gigabit-Switch mit 24 PoE+-Ports" alt="Gigabit-Switch mit 24 PoE+-Ports" src="//images.vogel.de/vogelonline/bdb/1266600/1266603/44.jpg" /></a>
+<div class="art_preview teaser_headline">
+<h3><a title="Gigabit-Switch mit 24 PoE+-Ports" href="/gigabit-switch-mit-24poe-ports-a-632070/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >190 Watt PoE-Leistungsbudget</a></h3>
+<h2><a title="Gigabit-Switch mit 24 PoE+-Ports" href="/gigabit-switch-mit-24poe-ports-a-632070/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >Gigabit-Switch mit 24 PoE+-Ports</a></h2>
+<p>Der mit 24 Ethernet- und zwei SFP-Ports ausgestattete GS724TPv2 bietet Netgear zufolge konfigurierbare Layer-2-Netzwerkfunktionen wie VLANs und PoE-Scheduling. Mit dem Switch sollen KMUs PoE-basierte VoIP-Telefonie und Geräte zur IP-Überwachung ins Netzwerk einbinden können. <a class="read_content" href="/gigabit-switch-mit-24poe-ports-a-632070/" onclick="s_objectID='15231_containerobject_439236_aktuelle beiträge zu diesem thema';linkTracking('15231_containerobject_439236_aktuelle beiträge zu diesem thema')" >lesen</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div></div>
+<div class="row3 listing" id="containerobject_439236" style="margin-top:-35px;">
+<div class="teaser_content_abstract_big">
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="row3 related" id="containerobject_429678">
+<div class="related">
+<div class="teaser_titel">
+<p>Mehr zum Thema</p>
+</div>
+<div class="teaser_content_noabstract_small">
+<div class="teaser_content">
+<a href="/lokale-netze-nach-ieee-8023-und-iso-88023-mit-csma-cd-system-a-164934/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System" alt="Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System" src="//images.vogel.de/vogelonline/bdb/187500/187514/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System" href="/lokale-netze-nach-ieee-8023-und-iso-88023-mit-csma-cd-system-a-164934/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Grundlagen moderner Netzwerktechnologien im Überblick – Teil 17</a></span>
+<span class="ar_teaser_title" title="Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System<"><a title="Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System" href="/lokale-netze-nach-ieee-8023-und-iso-88023-mit-csma-cd-system-a-164934/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Lokale Netze nach IEEE 802.3 und ISO 8802.3 mit CSMA/CD-System</a></span>
+<p><a class="read_content" href="/lokale-netze-nach-ieee-8023-und-iso-88023-mit-csma-cd-system-a-164934/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="/random-access-zugriffsverfahren-lokaler-netze-a-154753/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Random Access Zugriffsverfahren lokaler Netze" alt="Random Access Zugriffsverfahren lokaler Netze" src="//images.vogel.de/vogelonline/bdb/181000/181026/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Random Access Zugriffsverfahren lokaler Netze" href="/random-access-zugriffsverfahren-lokaler-netze-a-154753/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Grundlagen moderner Netzwerktechnologien im Überblick – Teil 15</a></span>
+<span class="ar_teaser_title" title="Random Access Zugriffsverfahren lokaler Netze<"><a title="Random Access Zugriffsverfahren lokaler Netze" href="/random-access-zugriffsverfahren-lokaler-netze-a-154753/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Random Access Zugriffsverfahren lokaler Netze</a></span>
+<p><a class="read_content" href="/random-access-zugriffsverfahren-lokaler-netze-a-154753/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="/das-ethernet-hat-sein-konkurrenten-eliminiert-und-peilt-die-100-gbit-s-marke-an-a-99828/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an" alt="Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an" src="//images.vogel.de/vogelonline/bdb/93200/93292/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an" href="/das-ethernet-hat-sein-konkurrenten-eliminiert-und-peilt-die-100-gbit-s-marke-an-a-99828/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Netzwerk-Grundlagen – Für lokale Unternehmensnetze gibt es nur eine Technologie</a></span>
+<span class="ar_teaser_title" title="Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an<"><a title="Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an" href="/das-ethernet-hat-sein-konkurrenten-eliminiert-und-peilt-die-100-gbit-s-marke-an-a-99828/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Das Ethernet hat sein Konkurrenten eliminiert und peilt die 100-Gbit/s-Marke an</a></span>
+<p><a class="read_content" href="/das-ethernet-hat-sein-konkurrenten-eliminiert-und-peilt-die-100-gbit-s-marke-an-a-99828/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="teaser_content">
+<a href="/relevante-standards-fuer-das-carrier-ethernet-im-ueberblick-a-233972/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Relevante Standards für das Carrier Ethernet im Überblick" alt="Relevante Standards für das Carrier Ethernet im Überblick" src="//images.vogel.de/vogelonline/bdb/251100/251163/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Relevante Standards für das Carrier Ethernet im Überblick" href="/relevante-standards-fuer-das-carrier-ethernet-im-ueberblick-a-233972/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Grundlagen moderner Netzwerktechnologien im Überblick – Teil 52</a></span>
+<span class="ar_teaser_title" title="Relevante Standards für das Carrier Ethernet im Überblick<"><a title="Relevante Standards für das Carrier Ethernet im Überblick" href="/relevante-standards-fuer-das-carrier-ethernet-im-ueberblick-a-233972/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Relevante Standards für das Carrier Ethernet im Überblick</a></span>
+<p><a class="read_content" href="/relevante-standards-fuer-das-carrier-ethernet-im-ueberblick-a-233972/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="/das-ethernet-basissystem-als-fundament-lokaler-netze-a-164897/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Das Ethernet Basissystem als Fundament lokaler Netze" alt="Das Ethernet Basissystem als Fundament lokaler Netze" src="//images.vogel.de/vogelonline/bdb/187500/187504/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Das Ethernet Basissystem als Fundament lokaler Netze" href="/das-ethernet-basissystem-als-fundament-lokaler-netze-a-164897/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Grundlagen moderner Netzwerktechnologien im Überblick – Teil 16</a></span>
+<span class="ar_teaser_title" title="Das Ethernet Basissystem als Fundament lokaler Netze<"><a title="Das Ethernet Basissystem als Fundament lokaler Netze" href="/das-ethernet-basissystem-als-fundament-lokaler-netze-a-164897/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Das Ethernet Basissystem als Fundament lokaler Netze</a></span>
+<p><a class="read_content" href="/das-ethernet-basissystem-als-fundament-lokaler-netze-a-164897/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="/was-ist-80211-a-605724/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')"><img class="art_list_img" title="Was ist 802.11?" alt="Was ist 802.11?" src="//images.vogel.de/vogelonline/bdb/1225300/1225378/33.jpg" /></a>
+<img class="arrow_left" src="/shared/vogelonline/img/bep30/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Was ist 802.11?" href="/was-ist-80211-a-605724/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Definition</a></span>
+<span class="ar_teaser_title" title="Was ist 802.11?<"><a title="Was ist 802.11?" href="/was-ist-80211-a-605724/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >Was ist 802.11?</a></span>
+<p><a class="read_content" href="/was-ist-80211-a-605724/" onclick="s_objectID='15231_containerobject_429678_mehr zum thema';linkTracking('15231_containerobject_429678_mehr zum thema','related','mehr zum thema_related')" >mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="row3 related" id="containerobject_429680">
+<div class="related">
+<div class="teaser_titel">
+<p>Passende Whitepaper & Webcasts</p>
+</div>
+<div class="teaser_content_noabstract_small">
+<div class="teaser_content">
+<a href="/das-best-of-ip-insider-v-37560-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')"><img src="//images.vogel.de/vogelonline/bdb/1133100/1133101/33.jpg" alt="Das BEST OF IP-Insider"></a>
+<div>
+<span class="vc_teaser_headline"><a href="/das-best-of-ip-insider-v-37560-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">Diese aktuellen Themen bewegen die Netzwerk-Welt</a></span>
+<span class="vc_teaser_title"><a href="/das-best-of-ip-insider-v-37560-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">Das BEST OF IP-Insider</a></span>
+<p><a class="read_content" href="/das-best-of-ip-insider-v-37560-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">mehr...</a></p>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="teaser_content">
+<a href="/routing-switching-in-konvergenten-umgebungen-v-18111-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')"><img src="/shared/vogelonline/img/bep30/fallback_100x100_download.png" alt="Routing & Switching in konvergenten Umgebungen"></a>
+<div>
+<span class="vc_teaser_headline"><a href="/routing-switching-in-konvergenten-umgebungen-v-18111-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">IP-Insider Kompendium</a></span>
+<span class="vc_teaser_title"><a href="/routing-switching-in-konvergenten-umgebungen-v-18111-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">Routing & Switching in konvergenten Umgebungen</a></span>
+<p><a class="read_content" href="/routing-switching-in-konvergenten-umgebungen-v-18111-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">mehr...</a></p>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="teaser_content">
+<a href="/ciobriefing-09-2017-v-38533-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')"><img src="//images.vogel.de/vogelonline/bdb/1276400/1276465/33.jpg" alt="CIOBRIEFING 09/2017"></a>
+<div>
+<span class="vc_teaser_headline"><a href="/ciobriefing-09-2017-v-38533-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">Technology-Update für IT-Manager</a></span>
+<span class="vc_teaser_title"><a href="/ciobriefing-09-2017-v-38533-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">CIOBRIEFING 09/2017</a></span>
+<p><a class="read_content" href="/ciobriefing-09-2017-v-38533-13275/" onclick="s_objectID='15231_containerobject_429680_passende whitepaper & webcasts';linkTracking('15231_containerobject_429680_passende whitepaper & webcasts','related','passende whitepaper & webcasts_related')">mehr...</a></p>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_footer" >
+<div class="link_webcasts">
+<a href="/whitepaper/">Alle Whitepaper</a>
+<a href="/videos/">Alle Webcasts</a>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="contentfactory" class="row2">
+<img src="/shared/vogelonline/img/copy.png" alt="copyright"/>
+<p>
+Dieser Beitrag ist urheberrechtlich geschützt. Sie wollen ihn für Ihre Zwecke verwenden? Infos finden Sie unter
+<a target="_blank" href="http://www.mycontentfactory.de">www.mycontentfactory.de</a> (ID: 44598385 / Definitionen)
+</p>
+</div>
+<div class="clear"></div>
+</div><!-- FileCached | Identifier:agmm/unique/page/205E401E457CCE51A61B079746D87C15 | Timestamp:{ts '2017-10-10 17:19:31'} | Timespan:0m | Unique: unknown --><!-- Coming out of cache -->
+<div id="footer">
+<div id="footer_social">
+<div class="row3" id="containerobject_410643">
+<div class="teaser_content"><style type="text/css">
+#containerobject_410643{text-align:center;}
+.sm_buttons_footer {margin-left:0 !important;}
+.sm_buttons_footer a { margin-right: 10.8px; margin-bottom: 12px;}
+.sm_buttons_footer .last, .sm_footer_ima .last span {margin-right: 0;}
+.sm_buttons_footer img {margin: 0; float: none; border:0 !important; opacity: 1 !important; transition: all 0.5s;}
+.sm_footer_ima {margin-top: 40px;}
+.sm_footer_ima span {display: block; float: left; text-transform:uppercase; font-weight:300; margin-right: 6px; width: 96px; height: 24px; border: 1px solid #CCC; color: #000; text-align: center; font-size: 16px; padding-top: 2px; padding-bottom:2px;}
+.sm_footer_ima span:hover {background-color: rgba(255,255,255,0.3); color: #000;}</style>
+<div class="sm_buttons_footer"><a href="https://google.com/+ip-insiderDe" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_gplus.png'" onmouseover="src='/img/bep30/footer_gplus_hover.png'" src="/img/bep30/footer_gplus.png" /></a> <a href="https://www.facebook.com/ipinsiderde" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_facebook.png'" onmouseover="src='/img/bep30/footer_facebook_hover.png'" src="/img/bep30/footer_facebook.png" /></a> <a href="https://twitter.com/ipinsiderde" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_twitter.png'" onmouseover="src='/img/bep30/footer_twitter_hover.png'" src="/img/bep30/footer_twitter.png" /></a> <a href="https://www.xing.com/news/pages/ip-insider-150" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_xing.png'" onmouseover="src='/img/bep30/footer_xing_hover.png'" src="/img/bep30/footer_xing.png" /></a> <a groups="" href="https://www.linkedin.com/groups?home=&gid=8183846" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_linkedin.png'" onmouseover="src='/img/bep30/footer_linkedin_hover.png'" src="/img/bep30/footer_linkedin.png" /></a> <a class="last" href="/rss/news.xml" target="_blank"><img alt="" onmouseout="src='/img/bep30/footer_rss.png'" onmouseover="src='/img/bep30/footer_rss_hover.png'" src="/img/bep30/footer_rss.png" /></a></div>
+<p style="font-size:17px !important; margin-top:5px">Oder kontaktieren Sie uns <a href="/kontakt/">direkt</a></p>
+</div>
+</div>
+<div class="row3" id="containerobject_439212">
+<div class="teaser_content"><script>
+(function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+})(window, document, '_gscq','script','//widgets.getsitecontrol.com/64609/script.js');
+</script></div>
+</div>
+<div class="clear"></div>
+<div id="footer_copy">
+<p>
+IP-Insider ist eine Marke von Vogel Business Media. Unser gesamtes Angebot finden Sie
+<a href="https://www.vogel.de" target="_blank" >hier </a>
+</p>
+</div>
+</div>
+<div id="footer_network">
+<p>
+<a href="http://privacy.vogel.de/agb_vit.html" target="_blank">AGB</a> |
+<a href="https://privacy.vogel.de" target="_blank">EWG</a> |
+<a href="http://support.vogel.de/de/ipi/9991a3813d5c094309964554c8d15a9e25016aba118390296ad79f8215d1cb01" target="_blank">Hilfe</a> |
+<a href="https://customer.vogel.de" target="_blank">Kundencenter</a> |
+<a href="/ueber-uns/mediadaten" target="_blank">Media</a> |
+<a href="https://privacy.vogel.de/datenschutz.html" target="_blank">Datenschutz</a> |
+<a href="/index.cfm?pid=4281" target="_blank">Impressum</a>
+<br/>Copyright &copy; 2017 Vogel Business Media</p>
+</div>
+<div id="footer_sources">
+Netgear; Deutsche Telekom; Savecall; Lancom; Red Hat; Karcher / AVM; Vogel IT-Medien; © aga7ta - Fotolia; Archiv: Vogel Business Media; vit; IP-Insider.de; Vogel IT;
+</div>
+<!-- START: settings-->
+<!-- START: settings_content_details-->
+<!-- ENDE: settings_content_details-->
+<!-- ENDE: settings-->
+<div id="sitecatalystcode">
+<script language="JavaScript" type="text/javascript">
+//<!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+if(typeof(s) != "undefined")
+{
+s.pageName="snet:artikel:594051 was ist ethernet?";
+s.channel="snet:specials:definitionen:home";
+s.prop1="specials";
+s.prop2="specials:definitionen";
+s.prop3="specials:definitionen:home";
+s.prop12="648085,648100,645892,643960,641214,639770,632738,630206,632070,164934,154753,99828,233972,164897";
+if ($(window).width() > 1024)
+{
+}
+s.prop15="37560,18111,38533";
+s.prop16="10";
+s.prop17="artikel";
+s.prop18="594051";
+s.prop19="Fachbeitrag";
+s.prop20="donner:andreas";
+s.prop21="seite 1";
+s.prop29="15231";
+s.prop31="2017_08_01";
+s.prop32="loggedout";
+if(typeof STR_authornames !== 'undefined' && STR_authornames.length && typeof STR_globaluserids !== 'undefined' && STR_globaluserids.length)
+{
+s.prop47 = STR_authornames;
+s.prop48 = STR_globaluserids;
+}
+else if(typeof STR_trackingauthor !== 'undefined' && STR_trackingauthor.length)
+{
+s.prop47 = STR_trackingauthor;
+}
+/* Conversion Variables */
+s.eVar25="loggedout";
+s.eVar32="loggedout";
+/* Hierarchy Variables */
+s.hier1="snet:specials:definitionen:home";
+//mboxLoadSCPlugin(s);
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)
+//if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+}
+//-->
+</script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst -->
+</div>
+<!-- Facebook Pixel Code --><script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '337772366383480');
+fbq('track', 'PageView');
+// this line of JS code can be populated by server-side
+// code that has the data needed to segment your audience
+fbq('track', 'ViewContent', {
+themechannel: s.prop2
+});
+</script><noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=337772366383480&ev=PageView&noscript=1"
+/></noscript><!-- End Facebook Pixel Code -->
+<div id="googleuniversalcode">
+<script language="JavaScript" type="text/javascript">
+<!--
+var gaProperty = 'UA-1693445-6';
+// Disable tracking if the opt-out cookie exists.
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+window[disableStr] = true;
+}
+// Opt-out function
+function gaOptout() {
+document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+window[disableStr] = true;
+}
+var INT_uid = 'loggout';
+var STR_channel = "none";
+var STR_sprop12 = "none";
+var STR_sprop13 = "none";
+var STR_sprop15 = "none";
+var STR_sprop17 = "none";
+var STR_sprop18 = "none";
+var STR_sprop19 = "none";
+var STR_sprop20 = "none";
+var STR_sprop21 = "none";
+var STR_sprop29 = "none";
+var STR_sprop37 = "none";
+var INT_sprop44 = 0;
+var STR_sprop46 = "none";
+var STR_sevar25 = "none";
+var STR_autoren = "none";
+var STR_pagename = "none";
+if(typeof(STR_trackingarticledate) == "undefined"){STR_trackingarticledate = 'none'}
+if(typeof(STR_fkentrytypetracking) == "undefined"){STR_fkentrytypetracking = 'none'}
+if(STR_fkentrytypetracking == '1'){STR_fkentrytypetracking = 'basic';}
+if(STR_fkentrytypetracking == '2'){STR_fkentrytypetracking = 'premium';}
+if(STR_fkentrytypetracking == '3'){STR_fkentrytypetracking = 'business';}
+if(typeof(s.eVar24) != "undefined"){INT_uid = s.eVar24;}
+if(typeof(s.channel) != "undefined"){STR_channel = s.channel.substr(s.channel.indexOf(":")+1);}
+if(typeof(s.prop12) != "undefined"){STR_sprop12 = s.prop12;}
+if(typeof(s.list1) != "undefined"){STR_sprop13 = s.list1;}
+if(typeof(s.prop15) != "undefined"){STR_sprop15 = s.prop15;}
+if(typeof(s.prop17) != "undefined"){STR_sprop17 = s.prop17;}
+if(typeof(s.prop19) != "undefined"){STR_sprop19 = s.prop19;}
+if(typeof(s.prop20) != "undefined"){STR_sprop20 = s.prop20;}
+if(typeof(s.prop21) != "undefined"){STR_sprop21 = s.prop21;}
+if(typeof(s.prop18) != "undefined"){STR_sprop18 = s.prop18;}
+if(typeof(s.prop16) != "undefined" && STR_sprop18 != "none"){STR_sprop18 = s.prop16 + '_' + STR_sprop18;}
+if(typeof(s.prop31) != "undefined"){STR_trackingarticledate = s.prop31;}
+if(typeof(s.prop37) != "undefined"){STR_sprop37 = s.prop37;}
+if(typeof(s.pageName) != "undefined"){STR_pagename = s.pageName;}
+if(typeof(s.prop7) != "undefined" && STR_pagename != "none"){STR_pagename = STR_pagename + '?keyword=' + s.prop7;}
+if(typeof(s.prop44) != "undefined"){INT_sprop44 = s.prop44;}
+if(typeof(s.prop46) != "undefined"){STR_sprop46 = s.prop46;}
+if(typeof(s.eVar25) != "undefined"){STR_sevar25 = s.eVar25;}
+if(typeof STR_authornames_globaluserids !== 'undefined' && STR_authornames_globaluserids.length)
+{
+STR_autoren = STR_authornames_globaluserids;
+}
+else if(typeof(s.prop47) != "undefined")
+{
+STR_autoren = s.prop47;
+}
+var BOO_gaExists = false;
+if(typeof(ga.getByName) != 'undefined' && ga.getByName('t0') != null)
+{
+BOO_gaExists = true;
+}
+if(!BOO_gaExists)
+{
+ga('create', 'UA-1693445-6', 'auto');
+}
+ga('set', 'dimension1', STR_pagename);
+ga('set', 'dimension2', STR_channel);
+ga('set', 'dimension3', STR_sprop17);
+ga('set', 'dimension4', STR_sprop18);
+ga('set', 'dimension5', STR_trackingarticledate);
+ga('set', 'dimension6', INT_uid);
+ga('set', 'dimension7', STR_sprop37);
+ga('set', 'dimension8', STR_sprop20);
+ga('set', 'dimension9', STR_sprop21);
+ga('set', 'dimension10', STR_sprop19);
+ga('set', 'dimension11', STR_sprop12);
+ga('set', 'dimension12', STR_sprop15);
+ga('set', 'dimension13', STR_sprop13);
+ga('set', 'dimension14', STR_fkentrytypetracking);
+ga('set', 'dimension15', STR_autoren);
+ga('set', 'metric1', INT_sprop44);
+if(typeof adt != "undefined" && adt.cmp.isValid())
+{
+ga('set', 'campaignName', adt.cmp.getCampaignCode()); ga('set', 'campaignMedium', adt.cmp.getMedium() ); ga('set','campaignSource', adt.cmp.getSource());
+}
+ga('set', 'anonymizeIp', true);
+ga('require', 'displayfeatures');
+ga('send', 'pageview', STR_pagename);
+// Called when a link to a product is clicked.
+function onProductClick(INT_contenttype,INT_id,STR_titel,INT_position,STR_category)
+{
+var gaProperty = 'UA-1693445-6';
+var BOO_gaExists = false;
+if(typeof(ga.getByName) != 'undefined' && ga.getByName('t0') != null)
+{
+BOO_gaExists = true;
+}
+if(!BOO_gaExists)
+{
+ga('create', 'UA-1693445-6', 'auto');
+}
+// console.log(STR_category);
+// console.log(STR_category.split(":", 1).toString());
+var STR_sprop17 = STR_category.split(":", 1).toString();
+ga('require', 'ec');
+// The product being viewed.
+ga('ec:addProduct', {
+'id': INT_contenttype + "_" + INT_id,
+'name': "paid_" + INT_contenttype + "_" + INT_id,
+'category': STR_category,
+'position': INT_position
+});
+ga('ec:setAction', 'click', {'list': STR_sprop17});
+// Send click with an event, then send user to product page.
+ga('send', 'event', 'UX', 'click', 'Results', {
+});
+}
+function paidcontent(){}
+//if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+// -->
+</script>
+<!--/DO NOT REMOVE/-->
+<!-- End Google Analytics -->
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<script type='text/javascript'>
+(function() {
+arr_cookie = new Array(1)
+arr_cookie['lang']= "de";
+document.write('<scr' + 'ipt src="//' + document.location.host + '/shared/cookie_note/cookie_note.js"></scr' + 'ipt>');
+})();
+</script>
+</body>
+</html>
+
+
+
+        
+        
+	
+
+
+
+<!-- 472ms -->

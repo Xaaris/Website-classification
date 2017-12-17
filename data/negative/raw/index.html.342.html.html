@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5afc47e56e","applicationID":"29394764","transactionName":"JQ4NQRNeXF4DF00FQAkPF1APVR9ACQoWTFsIBQZN","queueTime":0,"applicationTime":1153,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!-- Start Google Tag Manager -->
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KJGR87');
+</script>
+<!-- End Google Tag Manager -->
+
+<title>Ausbildung finden – Tausende freie Lehrstellen auf Ausbildung.de</title>
+<meta content="index,follow" name="robots"></meta>
+<meta content="Ausbildung finden anhand von tausenden freien Ausbildungsplätzen. Mache jetzt den Berufscheck und finde heraus, welcher Beruf zu dir passt." name="description"></meta>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="f963kx1JeZraYws8ylmFbL/ItzVIIg9moU+BpIn4c4hcg8RZOCehOlrcHzP0YMS3aq8XaP872Ak1W+tTfYTDKg==" />
+<link rel="stylesheet" media="all" href="/assets/frontend-c076c1c3199727c6384e2cb579e3708c50590b5f0ed0056e125b571cfc3108c5.css" data-turbolinks-track="reload" />
+<meta content='Ausbildung finden – Tausende freie Lehrstellen auf Ausbildung.de' name='og:title'>
+<meta content='Ausbildung finden anhand von tausenden freien Ausbildungsplätzen. Mache jetzt den Berufscheck und finde heraus, welcher Beruf zu dir passt.' name='og:description'>
+<meta content='https://www.ausbildung.de/assets/open-graph-ausbildung-f0509aa46f1daac15dec205d4afb81270ee9f1d198c7dc9343e817864af3c0e1.png' name='og:image'>
+
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<!-- Start Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+</script>
+<script>
+  ga('create', 'UA-35403534-2', 'auto', 'kpi');
+</script>
+<script>
+  ga('set', 'anonymizeIp', true);
+</script>
+<!-- End Google Analytics -->
+
+</head>
+<body>
+<!-- Start Google Tag Manager Noscript -->
+
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-KJGR87' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<!-- End Google Tag Manager Noscript -->
+
+<div class='flash-message-wrapper'>
+<div class='flash-messages'>
+</div>
+
+</div>
+<div class='l-wrapper'>
+<nav class='navigation navigation--without-background'>
+<div class='navigation__content'>
+<div class='navigation__register-field-desktop navigation__register-field-desktop--active'>
+<div class='navigation__register-field-desktop--for-companies'>
+<a class="link" href="/dashboard/unternehmen/sign_up/">Für Unternehmen</a>
+</div>
+<div class='navigation__register-field-desktop--login'>
+<a class="link" href="/dashboard/azubi/sign_up/"><i class='icon-user'></i>
+Login | Registrieren
+</a></div>
+</div>
+<a class="navigation__logo" href="/"><div class='logo'>
+<img class="logo__image" src="/assets/components/logo-d4a919e1f9791a6a1f639dd0867b495882d9729c6d57fd5a2b924fbdc75cca89.png" alt="Logo" />
+</div>
+
+</a><div class='navigation__content__search'>
+<div class='navigation-search-bar js-navigation-search-bar'>
+<form class="new_form_main_search" id="new_form_main_search" action="/suche/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><div class='navigation-search-bar__form'>
+<div class='input-field input-field--what'>
+<label class="input-field__label" for="form_main_search_what">Was?</label>
+<input placeholder="Traumberuf" autocomplete="off" class="navigation-search-bar__input" type="text" name="form_main_search[what]" id="form_main_search_what" />
+</div>
+<div class='input-field input-field--where'>
+<label class="input-field__label" for="form_main_search_where">Wo?</label>
+<input placeholder="Ort oder PLZ" autocomplete="off" class="navigation-search-bar__input navigation-search-bar__input--where" type="text" name="form_main_search[where]" id="form_main_search_where" />
+<i class='icon-location-arrow icon-mine-shaft'></i>
+<button name="button" type="submit" class="navigation-search-bar__search-button mobile"><i class='icon-search icon-orange'></i>
+</button></div>
+<button name="button" type="submit" class="navigation-search-bar__search-button filled-button"><i class='icon-search icon-white'></i>
+Suche
+</button></div>
+</form></div>
+
+</div>
+<ul class='navigation__list-desktop'>
+<div class='navigation__list-desktop--list-wrapper'>
+<li class='navigation__list-desktop__item'>
+<a class="navigation__list-desktop--link" href="/berufe/">Berufe entdecken</a>
+<ul class='navigation__list-desktop-dropdown-active'>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/berufe/beliebteste/">Die beliebtesten Berufe</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/berufe/bestbezahlte/">Die bestbezahlten Berufe</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/berufe/themen/">Berufe nach Themen</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/berufe/glossar/">Berufe A-Z</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item navigation__list-desktop-dropdown-active__item--profession-quiz'>
+<div class='title title--size-md title--light title--professionquiz'>Welcher Beruf passt zu dir?</div>
+<ul class='list list--checked'>
+<li class='list__item'>Nur 12 Fragen</li>
+<li class='list__item'>Über 600 Berufe</li>
+<li class='list__item'>Absolut kostenlos</li>
+</ul>
+
+<a class="filled-button filled-button--profession-quiz" href="/berufscheck/fragen/1/">Berufscheck starten
+</a></li>
+</ul>
+</li>
+</div>
+<div class='navigation__list-desktop--list-wrapper'>
+<li class='navigation__list-desktop__item'>
+<a class="navigation__list-desktop--link" href="/suche/">Ausbildungsplatz finden</a>
+<ul class='navigation__list-desktop-dropdown-active'>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ausbildungsplaetze-2017/">Ausbildungsplätze 2017</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/bundeslaender/">Alle Bundesländer</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/staedte/alle/">Alle Städte</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/branchen/">Alle Branchen</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/unternehmen/alle/">Alle Unternehmen</a>
+</li>
+</ul>
+</li>
+</div>
+<div class='navigation__list-desktop--list-wrapper'>
+<li class='navigation__list-desktop__item'>
+<a class="navigation__list-desktop--link" href="/ratgeber/">Rund um die Ausbildung</a>
+<ul class='navigation__list-desktop-dropdown-active'>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ratgeber/ausbildungsarten/">Ausbildungsarten</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ratgeber/bewerbung/">Bewerbung</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ratgeber/gehalt/">Gehalt</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ratgeber/wohnung/">Wohnung</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="https://www.ausbildung.de/ratgeber/downloads/">Downloads</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a target="_blank" class="link" rel="nofollow" href="http://blog.ausbildung.de/">Unser Blog</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/azubi-report/">azubi.report</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item navigation__list-desktop-dropdown-active__item--cv-generator'>
+<div class='title title--size-md title--light title--cv-generator'>Der Lebenslauf-Generator</div>
+<div class='title title--subtitle title--cv-generator-subtitle'>In wenigen Schritten zum perfekten Lebenslauf!</div>
+<a target="_blank" rel="nofollow" class="filled-button filled-button--cv-generator" href="https://lebenslauf.ausbildung.de">Lebenslauf erstellen
+</a></li>
+</ul>
+</li>
+</div>
+<div class='navigation__list-desktop--list-wrapper'>
+<li class='navigation__list-desktop__item'>
+<a class="navigation__list-desktop--link" href="/duales-studium/">Duales Studium</a>
+<ul class='navigation__list-desktop-dropdown-active'>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/duales-studium/studiengaenge/">Alle Studiengänge</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/duales-studium/hochschulen/alle/">Alle Hochschulen</a>
+</li>
+<li class='navigation__list-desktop-dropdown-active__item'>
+<a class="link" href="/duales-studium/unternehmen/">Alle Unternehmen</a>
+</li>
+</ul>
+</li>
+</div>
+</ul>
+<div class='search js-toggle-search-button'></div>
+<div class='navigation__content__burger js-toggle-list-burgerbutton'>
+<div class='burger-button'>
+<i class='icon-burger icon-white'></i>
+<i class='icon-cross icon-white'></i>
+</div>
+
+</div>
+</div>
+</nav>
+<div class='navigation__dropdown-mobile js-toggle-burgerlist'>
+<ul class='navigation__list'>
+<li class='navigation__list__login-out'>
+<a class="navigation__list__login" href="/dashboard/azubi/sign_up/"><i class='icon-user'></i>
+Login
+</a><a class="navigation__list__corporations" href="/dashboard/unternehmen/sign_up/">Für Unternehmen</a>
+</li>
+<li class='navigation__list__logo'>
+<a class="navigation__list__black-logo" href="/"><div class='logo'>
+<img class="logo__image" src="/assets/components/logo_with_black_claim-2e9d9b0d2fa8719b957e60425518805e10b03fa0dc45c3d2e782fb9c7552af5a.png" alt="Logo with black claim" />
+</div>
+
+</a><i class='icon-times js-toggle-list-close'></i>
+</li>
+<li class='navigation__list__item js-toggle-submenu' id='js-discover'>
+<div class='submenu__title'>
+Berufe entdecken
+</div>
+<ul class='submenu'>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/berufe/beliebteste/">Die beliebtesten Berufe</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/berufe/bestbezahlte/">Die bestbezahlten Berufe</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/berufe/themen/">Berufe nach Themen</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/berufe/glossar/">Berufe A-Z</a>
+</li>
+<li class='submenu__listitem submenu__listitem--profession-quiz'>
+<div class='title title--size-md title--light title--professionquiz'>Welcher Beruf passt zu dir?</div>
+<ul class='list list--checked'>
+<li class='list__item'>Nur 12 Fragen</li>
+<li class='list__item'>Über 600 Berufe</li>
+<li class='list__item'>Absolut kostenlos</li>
+</ul>
+
+<a class="filled-button filled-button--profession-quiz" href="/berufscheck/">Berufscheck starten
+</a></li>
+</ul>
+</li>
+<li class='navigation__list__item js-toggle-submenu' id='js-find'>
+<div class='submenu__title'>
+Ausbildungsplatz finden
+</div>
+<ul class='submenu'>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/suche/">Stellensuche</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ausbildungsplaetze-2017/">Ausbildungsplätze 2017</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/bundeslaender/">Alle Bundesländer</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/staedte/alle/">Alle Städte</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/branchen/">Alle Branchen</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/unternehmen/alle/">Alle Unternehmen</a>
+</li>
+</ul>
+</li>
+<li class='navigation__list__item js-toggle-submenu' id='js-about'>
+<div class='submenu__title'>
+Rund um die Ausbildung
+</div>
+<ul class='submenu'>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/ratgeber/">Übersicht</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ratgeber/ausbildungsarten/">Ausbildungsarten</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ratgeber/bewerbung/">Bewerbung</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ratgeber/gehalt">Gehalt</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ratgeber/wohnung">Wohnung</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="https://www.ausbildung.de/ratgeber/downloads">Downloads</a>
+</li>
+<li class='submenu__listitem'>
+<a target="_blank" rel="nofollow" class="submenu__listitem__link" href="http://blog.ausbildung.de/">Unser Blog</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/azubi-report/">azubi.report</a>
+</li>
+<li class='submenu__listitem submenu__listitem--cv-generator'>
+<div class='title title--size-md title--light title--cv-generator'>
+Der Lebenslauf-Generator
+</div>
+<div class='title title--subtitle title--cv-generator-subtitle'>
+In wenigen Schritten zum perfekten Lebenslauf!
+</div>
+<a target="_blank" rel="nofollow" class="filled-button filled-button--cv-generator" href="https://lebenslauf.ausbildung.de">Lebenslauf erstellen
+</a></li>
+</ul>
+</li>
+<li class='navigation__list__item js-toggle-submenu' id='js-studies'>
+<div class='submenu__title'>
+Duales Studium
+</div>
+<ul class='submenu'>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/duales-studium/">Alle Infos</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/duales-studium/studiengaenge/">Alle Studiengänge</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/duales-studium/hochschulen/alle/">Alle Hochschulen</a>
+</li>
+<li class='submenu__listitem'>
+<a class="submenu__listitem__link" href="/duales-studium/unternehmen/">Alle Unternehmen</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<section class='hero-header'>
+<div class='hero-header__content'>
+<div class='hero-header__quiz'>
+<div class='hero-teaser'>
+<div class='title-group'>
+<div class='title title--hero-title'>Welcher Beruf passt zu dir?</div>
+<div class='title title--hero-subtitle'>Eine neue Galaxie an Möglichkeiten</div>
+</div>
+<div class='handdrawn-arrow'></div>
+<a class="glowing-button" href="/berufscheck/fragen/1/">Jetzt Berufscheck starten
+</a><ul class='list list--checked'>
+<li class='list__item'>Nur 12 Fragen</li>
+<li class='list__item'>Über 600 Berufe</li>
+<li class='list__item'>Absolut kostenlos</li>
+</ul>
+
+</div>
+
+</div>
+<div class='hero-header__search'>
+<div class='main-search-bar'>
+<header class='main-search-bar__header'>
+<div class='title title--section'>Du weißt bereits, was du suchst?</div>
+</header>
+<form class="new_form_main_search" id="new_form_main_search" action="/suche/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><div class='main-search-bar__form'>
+<div class='input-field input-field--what js-with-autocomplete search-autocomplete__container'>
+<label class="input-field__label" for="form_main_search_what">Was?</label>
+<input placeholder="Traumberuf oder Unternehmen" autocomplete="off" class="main-search-bar__input" data-autocomplete="{&quot;url&quot;:&quot;/ajax/search_autocomplete/&quot;,&quot;data&quot;:{&quot;limit&quot;:7}}" type="text" name="form_main_search[what]" id="form_main_search_what" />
+<div class='js-autocomplete-container search-autocomplete__field'></div>
+</div>
+<div class='input-field input-field--where js-with-autocomplete search-autocomplete__container'>
+<label class="input-field__label" for="form_main_search_where">Wo?</label>
+<input placeholder="Ort oder PLZ" autocomplete="off" class="main-search-bar__input" data-autocomplete="{&quot;url&quot;:&quot;/ajax/city_autocomplete/&quot;,&quot;data&quot;:{&quot;limit&quot;:5,&quot;unique&quot;:0}}" type="text" name="form_main_search[where]" id="form_main_search_where" />
+<i class='icon-location-arrow icon-mine-shaft'></i>
+<div class='js-autocomplete-container search-autocomplete__field'></div>
+</div>
+<button name="button" type="submit" class="filled-button filled-button--with-icon"><i class='icon-search icon-white'></i>
+Suchen
+</button></div>
+</form><footer class='main-search-bar__links'><div class='top-profession-links'>
+<div class='top-profession-links__intro'>
+Beliebte Berufe:
+</div>
+<div class='top-profession-links__links'>
+<a href="/berufe/buerokaufmann/"><div class='outline-button outline-button--grey'>Kauffrau/-mann für Büromanagement</div>
+
+</a><a href="/berufe/kauffrau-im-einzelhandel/"><div class='outline-button outline-button--grey'>Kauffrau/-mann im Einzelhandel</div>
+
+</a><a href="/berufe/verkaeuferin/"><div class='outline-button outline-button--grey'>Verkäufer/in</div>
+
+</a></div>
+</div></footer>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class='tips-topics-and-megateaser'>
+<div class='tips-topics-and-megateaser__content'>
+<div class='tips-and-topics'>
+<header class='tips-and-topics__title'>
+<div class='title-group'>
+<div class='title title--section'>Tipps &amp; Ratgeber</div>
+<div class='title title--subtitle'>Alles rund um deine Ausbildung</div>
+</div>
+
+</header>
+<div class='tips-and-topics__content'>
+<div class='tips-and-topics-card'>
+<div class='tips-and-topics-card__wrapper'>
+<div class='tips-and-topics-card__image'>
+<a href="https://www.ausbildung.de/ratgeber/bewerbung/"><img class="card-image__image" src="/uploads/image/a5/a58b93b3-ae89-44db-9cf3-9ad88bf6e586/Vorschaubild_Bewerbungstipps.jpg" alt="Vorschaubild bewerbungstipps" />
+</a></div>
+<div class='tips-and-topics-card__content'>
+<div class='title-group--card'>
+<div class='title title--card'>Bewerbungstipps</div>
+<div class='title title--card-subtitle'>So kann nichts mehr schiefgehen.</div>
+</div>
+<ul class='list list--accented list--arrowed'>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/ratgeber/bewerbung/anschreiben/">Das perfekte Anschreiben</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/ratgeber/bewerbung/lebenslauf/">Dein Lebenslauf</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/ratgeber/bewerbung/vorstellungsgespraech/">Tipps fürs Vorstellungsgespräch</a>
+</li>
+</ul>
+
+<a rel="follow" target="_self" href="https://www.ausbildung.de/ratgeber/bewerbung/"><div class='outline-button outline-button--orange'>Alle Bewerbungstipps</div>
+
+</a></div>
+</div>
+</div>
+
+<div class='tips-and-topics-card'>
+<div class='tips-and-topics-card__wrapper'>
+<div class='tips-and-topics-card__image'>
+<a href="https://www.ausbildung.de/duales-studium/"><img class="card-image__image" src="/uploads/image/cf/cfb7d126-8fb5-4796-89be-c139473f7d8a/Vorschaubild_duales-Studium.jpg" alt="Vorschaubild duales studium" />
+</a></div>
+<div class='tips-and-topics-card__content'>
+<div class='title-group--card'>
+<div class='title title--card'>Duales Studium</div>
+<div class='title title--card-subtitle'>2 Abschlüsse, 1 Gehalt, viele Chancen.</div>
+</div>
+<ul class='list list--accented list--arrowed'>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/duales-studium/">Was ist ein duales Studium?</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/duales-studium/stellen/">Stellen für duale Studiengänge</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="https://www.ausbildung.de/duales-studium/hochschulen/alle/">Alle Hochschulen</a>
+</li>
+</ul>
+
+<a rel="follow" target="_self" href="https://www.ausbildung.de/duales-studium/"><div class='outline-button outline-button--orange'>Alles zum dualen Studium</div>
+
+</a></div>
+</div>
+</div>
+
+<div class='tips-and-topics-card'>
+<div class='tips-and-topics-card__wrapper'>
+<div class='tips-and-topics-card__image'>
+<a href="http://blog.ausbildung.de/"><img class="card-image__image" src="/uploads/image/a9/a9d3867d-8f15-4fa0-a279-3ae0956d0963/Vorschaubild_Blog.jpg" alt="Vorschaubild blog" />
+</a></div>
+<div class='tips-and-topics-card__content'>
+<div class='title-group--card'>
+<div class='title title--card'>Unser Blog</div>
+<div class='title title--card-subtitle'>Niemals langweilig, versprochen!</div>
+</div>
+<ul class='list list--accented list--arrowed'>
+<li class='list__item'>
+<a class="list__link" href="http://blog.ausbildung.de/ausbildung-in-deutschland/">Ausbildung in Deutschland finden</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="http://blog.ausbildung.de/was-tun-wenns-nicht-reicht-geldnot-in-der-ausbildung/">Geldnot in der Ausbildung</a>
+</li>
+<li class='list__item'>
+<a class="list__link" href="http://blog.ausbildung.de/bewerbungscheck/">Wir checken deine Bewerbung</a>
+</li>
+</ul>
+
+<a rel="follow" target="_self" href="http://blog.ausbildung.de/"><div class='outline-button outline-button--orange'>Zum Blog</div>
+
+</a></div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='megateaser'>
+<div class='megateaser__main js-megateaser-carousel-main'>
+<div class='carousel-card' corporation_id='5177d7b7f6497bf83a000001' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>PwC</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>59</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/pwc/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/51/5138544b-7433-3b91-a92b-33f83945c09f/corporation_gallery_645x418_Photo_RGB_P_AUS_D11_04290_Studis930_2_ausbildungde_2.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/47/47f7c438-5cff-2a2b-fb22-92c4ad05499c/corporation_logo_PwC_Farbe.jpg" alt="Corporation logo pwc farbe" />
+<a href="/unternehmen/pwc/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='514c595ff6497b56cb000034' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>McDonald&#39;s Deutschland</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>1.122</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/mcdonalds/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/92/92f98e24-6e0d-15cf-2741-d98175cde5e0/corporation_gallery_645x418_McD_Ausbildung_1.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/c3/c35f2d5c-484a-143a-964f-5a37ae7350d4/corporation_logo_McD_flat.jpg" alt="Corporation logo mcd flat" />
+<a href="/unternehmen/mcdonalds/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='5151d07ff6497be27b000001' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Hellweg - Die Profi-Baumärkte GmbH &amp; Co. KG</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>179</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/hellweg/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/65/65af4b95-c2d5-0a7f-e8e8-d9b4ee6321c1/corporation_gallery_645x418_Gruppenfoto_Ausbildung_bei_Hellweg.JPG" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/c9/c9d8a312-8acd-45a5-51a1-917429002fea/corporation_logo_Hell.jpg" alt="Corporation logo hell" />
+<a href="/unternehmen/hellweg/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='5162b342f6497b646a000004' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Currenta GmbH &amp; Co. OHG</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>79</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/currenta-gmbh-co-ohg/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/65/65b0d44c-5a4d-2201-88a9-d8c371812d55/corporation_gallery_645x418_Chempark-Uerdingen_0289_Blicksta.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/9e/9eafecf4-e10c-85b5-5a86-ff23bbce115f/corporation_logo_Logo_beschnitten.png" alt="Corporation logo logo beschnitten" />
+<a href="/unternehmen/currenta-gmbh-co-ohg/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='516d5ac0f6497bf8df00000f' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Deloitte</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>116</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/deloitte/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/6e/6ec9e8a2-77fa-a3e8-2ab8-49c32fab578f/corporation_gallery_645x418_WN4_2039_kopie.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/e8/e8689eb2-63c3-bea5-9db6-e43bb3e8142a/corporation_logo_Logo.png" alt="Corporation logo logo" />
+<a href="/unternehmen/deloitte/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='51533887f6497b5974000009' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>HSH Nordbank AG</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>11</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/hsh-nordbank/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/2c/2c07efe4-b6a9-15df-128c-05f7b82ac373/corporation_gallery_645x418_Foto_Dustin_van_der_Meirschen_4.JPG" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/18/181a7c88-36b0-ddde-8a42-5ad7ceaf63b2/corporation_logo_Logo_HSH_kleiner_Schutzraum.jpg" alt="Corporation logo logo hsh kleiner schutzraum" />
+<a href="/unternehmen/hsh-nordbank/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='517e8b6ff6497b2386000009' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Takko Holding GmbH</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>540</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/takko/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/be/becdc84e-f10d-ff4c-68b2-f9a7f9fc9020/corporation_gallery_645x418_Filialfront_Takko.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/26/26689173-b2df-4061-eece-9b460ee0f294/corporation_logo_TakkoLogo_Curvy_rgb.jpg" alt="Corporation logo takkologo curvy rgb" />
+<a href="/unternehmen/takko/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='514c3aa2f6497b08fa00001b' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Fielmann AG</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>1.600</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/fielmann/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/57/57106ec6-4aed-4922-8b7e-7ef58696a3b4/corporation_gallery_645x418_fills_525x393_Galeriebilder_01.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/10/1021056d-67c2-4933-9b7a-1cc2b67a5362/corporation_logo_160506_Fielmann_LogoNEU_pos_wiki.svg.png" alt="Corporation logo 160506 fielmann logoneu pos wiki.svg" />
+<a href="/unternehmen/fielmann/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='515c5476f6497bcac8000037' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Die Techniker</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>278</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/techniker-krankenkasse/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/84/84c2e1d8-570e-1c97-039f-8c3cba680c3b/corporation_gallery_645x418_Gruppe.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/18/188461ea-a638-3c22-c7c7-798361946f49/corporation_logo_TK-Logo_RGB.jpg" alt="Corporation logo tk logo rgb" />
+<a href="/unternehmen/techniker-krankenkasse/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class='carousel-card' corporation_id='5152bcdaf6497bff71000013' viewed='false'>
+<header class='title-group'>
+<div class='title title--section'>Bundeswehr</div>
+<h2 class='title title--blob'>Insgesamt<span class='blob'>392</span>freie Ausbildungsplätze</h2>
+
+</header>
+<div class='carousel-card__card'>
+<a class="carousel-card__image-link" href="/unternehmen/bundeswehr/stellen/"><div class='card-image'>
+<img data-lazy="/uploads/image/20/2055c632-4ae6-402c-b508-2646e9952236/corporation_gallery_645x418_AGBwPlakat.jpg" class="card-image__carousel-image" src="" />
+</div>
+</a><div class='carousel-card__customer'>
+<img class="carousel-card__customer__logo" src="/uploads/image/23/230a7b6d-8204-8fd7-7ed8-61b7d22c3ca1/corporation_logo_Logo_Bundeswehr_Neu_f._Ausbildung.de_200_x_80.jpg" alt="Corporation logo logo bundeswehr neu f. ausbildung.de 200 x 80" />
+<a href="/unternehmen/bundeswehr/stellen/"><div class='carousel-card__customer__profile'>
+Zum Profil
+</div>
+</a></div>
+<div class='corporation-carousel-controls'>
+<div class='js-carousel-navigation-left white-arrow-button white-arrow-button--left'>
+<i class='icon-angle-left'></i>
+</div>
+
+<div class='js-carousel-navigation-right white-arrow-button white-arrow-button--right'>
+<i class='icon-angle-right'></i>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='megateaser__nav js-megateaser-carousel-nav'>
+<img src="/uploads/image/6d/6dc6732d-1ba7-43f5-9beb-5906ab38f5cc/transparent_corporation_logo_pwc.png" alt="Transparent corporation logo pwc" />
+<img src="/uploads/image/b1/b15c9e06-5e73-4704-99c6-65c4b319f3d6/transparent_corporation_logo_mcdonalds.png" alt="Transparent corporation logo mcdonalds" />
+<img src="/uploads/image/60/60f4d94b-7f88-4689-908e-0697bd3009a5/transparent_corporation_logo_hellweg.png" alt="Transparent corporation logo hellweg" />
+<img src="/uploads/image/50/50ae47ec-6be6-47c8-a12c-92e39c347db4/transparent_corporation_logo_currenta-gmbh-co-ohg.png" alt="Transparent corporation logo currenta gmbh co ohg" />
+<img src="/uploads/image/4d/4d88236d-3d00-4701-8103-0817a365b3ea/transparent_corporation_logo_deloitte.png" alt="Transparent corporation logo deloitte" />
+<img src="/uploads/image/0d/0de3c6d2-94b7-4ab3-a70f-85cc162a4c15/transparent_corporation_logo_hsh-nordbank.png" alt="Transparent corporation logo hsh nordbank" />
+<img src="/uploads/image/23/234090db-ed00-49f0-8136-3d0dcbaad0e9/transparent_corporation_logo_takko.png" alt="Transparent corporation logo takko" />
+<img src="/uploads/image/e5/e5f86f3d-36c3-4ff6-9989-530ff3c99a3f/transparent_corporation_logo_160411_Fielmann_LogoNEU_neg.png" alt="Transparent corporation logo 160411 fielmann logoneu neg" />
+<img src="/uploads/image/86/86540e9a-22fc-4163-9302-59c542a64bd6/transparent_corporation_logo_techniker-krankenkasse.png" alt="Transparent corporation logo techniker krankenkasse" />
+<img src="/uploads/image/96/96e89755-3053-49ee-bb03-647b90dc2822/transparent_corporation_logo_bundeswehr.png" alt="Transparent corporation logo bundeswehr" />
+</div>
+</div>
+
+</section>
+
+<section class='nearby-corporations'>
+<div class='title-group'>
+<div class='title title--section'>Unternehmen aus deiner Region</div>
+<div class='title title--subtitle'>Unternehmen mit freien Stellen in deiner Nähe!</div>
+</div>
+
+<div class='nearby-corporations-carousel js-corporation-carousel'>
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/7f/7f98d505-41e9-5927-7c73-3cc05d64469e/corporation_logo_210x70_Sonderlogo_bonprix_member_4c.png&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/bonprix-handelsgesellschaft-mbh/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+bonprix Handelsgesellschaft mbH 
+</h3>
+
+</a><a href="/unternehmen/bonprix-handelsgesellschaft-mbh/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+8
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/bonprix-handelsgesellschaft-mbh/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/63/63bb977d-c3e0-741d-1b89-7d105b0844c3/corporation_logo_210x70_Ipsos_Logo_200.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/ipsos-gmbh/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+Ipsos GmbH
+</h3>
+
+</a><a href="/unternehmen/ipsos-gmbh/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+1
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstelle
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/ipsos-gmbh/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/44/44d03f38-07e2-38b1-53f2-f2a7c4b02fd2/corporation_logo_210x70_Logo_Gebr_Heinemann.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/gebr-heinemann/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+Gebr. Heinemann SE &amp; Co. KG
+</h3>
+
+</a><a href="/unternehmen/gebr-heinemann/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+13
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/gebr-heinemann/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/94/94c455a5-0ee7-85a2-98a3-b8c3365ac883/corporation_logo_210x70_funk_logo_rgb.png&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/funk-gruppe/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+Funk Versicherungsmakler GmbH
+</h3>
+
+</a><a href="/unternehmen/funk-gruppe/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+2
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/funk-gruppe/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/d2/d2a8c1e5-927e-4710-96a5-93a9312b6e29/corporation_logo_210x70_fits_200x80_HanseMerkurLogohoch_-_Kopie.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/hansemerkur-versicherungsgruppe/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+HanseMerkur Versicherungsgruppe
+</h3>
+
+</a><a href="/unternehmen/hansemerkur-versicherungsgruppe/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+4
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/hansemerkur-versicherungsgruppe/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/7d/7d269381-2fdc-d1d1-b94c-d698315746ca/corporation_logo_210x70_AplifonClaim_2zeilig_re_neg_rgb.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/amplifon-deutschland-gmbh/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+Amplifon Deutschland GmbH
+</h3>
+
+</a><a href="/unternehmen/amplifon-deutschland-gmbh/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+41
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/amplifon-deutschland-gmbh/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/ab/ab304cd4-24fa-4b9d-d35b-a2c4afd174f3/corporation_logo_210x70_EOS_RGB.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/eos-holding-gmbh/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+EOS Gruppe
+</h3>
+
+</a><a href="/unternehmen/eos-holding-gmbh/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+3
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/eos-holding-gmbh/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/6b/6b292463-1a2d-5eb9-a572-e4dfddff7aca/corporation_logo_210x70_STULZ_logo_RGB_200x80px.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/stulz-gmbh/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+STULZ GmbH
+</h3>
+
+</a><a href="/unternehmen/stulz-gmbh/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+7
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/stulz-gmbh/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/4d/4dc0c5a9-e58d-5283-b6cc-2194f7a3c512/corporation_logo_210x70_Still_Logo_RGBpos_S_72dpi.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/still/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+STILL GmbH
+</h3>
+
+</a><a href="/unternehmen/still/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+12
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/still/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+<div class='small-corporation-card'>
+<div class='small-corporation-card__image' style='background-image: url(&#39;/uploads/image/33/330bedf0-b1f9-3af6-21ee-6392f0fad46f/corporation_logo_210x70_logo_htifeldtmann.jpg&#39;);'></div>
+<div class='small-corporation-card__seperator'></div>
+<a class="small-corporation-card__corporation-link" href="/unternehmen/hti-feldtmann-kg/stellen/"><h3 class='section-maintitle section-maintitle--dark section-maintitle--normal'>
+HTI Feldtmann KG
+</h3>
+
+</a><a href="/unternehmen/hti-feldtmann-kg/stellen/"><div class='blob-with-text-after'>
+<div class='blob-with-text-after__blob'>
+2
+</div>
+<div class='blob-with-text-after__text'>
+freie Ausbildungsstellen
+</div>
+</div>
+
+</a><a rel="nofollow" data-method="patch" href="/unternehmen/hti-feldtmann-kg/follow/"><div class='outline-button outline-button--orange'>Unternehmen folgen</div>
+
+</a></div>
+
+</div>
+
+</section>
+
+<section class='professions-to-browse'>
+<header class='professions-to-browse__headlines'>
+<div class='title-group'>
+<div class='title title--section'>Berufe zum stöbern</div>
+<div class='title title--subtitle'>Was soll ich jetzt nur werden?</div>
+</div>
+
+</header>
+<div class='professions-to-browse__content'>
+<div class='profession-carousel'>
+<div class='profession-carousel__carousel js-profession-carousel'>
+<a class="person-with-card" href="/berufe/medizinischer-fachangestellter/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/medizinische_fachangestellte-b1096ac54985280db8871ef9c58ec03cf585a6a2f53bf409e7a8d827cdfd4834.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+126
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Medizinische/r Fachangestellte/r
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1725 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/mechatroniker/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/mechatroniker_in-eee3fc059f0fb4afc31207f63d2b10d99902e0e2bb3e98936684124a73473c36.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+561
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Mechatroniker/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1800 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3,5 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/tischler/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/tischler_in-1b0bd6230cb7411756f09fb8ecaa683b80ff2bca755eb31b3085283d8a6e9749.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+21
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Tischler/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1470 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/krankenpfleger/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/gesundheits_krankenpfleger_in-2bcc95f27cd03209a8a48edcac965048d85271a48336b517136c828bfbddc265.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+67
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Gesundheits- und Krankenpfleger/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 2400 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>Schichtdienst</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/tierpfleger/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/tierpfleger_in-8517d7d512466e4767bf881dceb9e9c7c1ac588b5be573c8caab4854e16c39bd.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+19
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Tierpfleger/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 2160 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>Schichtdienst</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/polizist/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/polizist_in-d3514da3508a375844d22f6363e792729afe552cf9be0f07476f6cd89f9803b4.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+8
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Polizist/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1600 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>2-3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>Schichtdienst</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/erzieherin/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/erzieher_in-7e43fa18ebffc29011ec17b11f071f4bdd9caf81eca4d423e1345104b4e75e6d.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+29
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Erzieher/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1700 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>2-5 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags tagsüber</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/pta/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/pharmazeutisch_technische_angestellte-c9a0d50253beb8c697f98976258f364fea4a2dea234cbf9e2cf729f2e10cc698.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+16
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Pharmazeutisch Technische/r Assistent/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1900 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>2,5 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags, Wochenendarbeit möglich</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/baecker/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/baecker_in-0c2c77e10b27c88c6c478e1895d5a8c0087ecccffe6fa98332c03f75898bf5b3.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+26
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Bäcker/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1700 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>nachts und am Wochenende</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/mediengestalter-digital-print/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/mediengestalter_digital_print-b44e1b1a94d79a6812c4a23dfcbef898eae22ca2a8c18584aaf6046a0138aeaa.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+158
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Mediengestalter/in Digital und Print
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1650 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/forstwirt/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/forstwirt_in-68f7e4c853839865a5ef915471a31ddef5c6b0a7b8b9f28fb288ccde66fd9535.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+18
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Forstwirt/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1500 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>witterungsabhängig</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/ergotherapeut/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/ergotherapeut_in-0c5f62cd4f23f3493cac792aa49bbd414dae1fbfcf260022d57ed92045ee0741.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+26
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Ergotherapeut/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1500 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>unterschiedlich, Schichtdienst möglich</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/friseur/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/friseur_in-692de84cfc09522769d4d8b2b16e81715c6168700ba84d06466759d4a497dc86.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+29
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Friseur/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1300 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/fachinformatiker/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/fachinformatiker_in-df50b5840ea9187732d59eb5ecea2ae5197074232c556afa533c657bdcd37fa9.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+86
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Fachinformatiker/in
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 2300 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>betriebsabhängig</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+<a class="person-with-card" href="/berufe/industriekaufmann/"><div class='person-with-card__image'>
+<img data-lazy="https://www.ausbildung.de/assets/person_with_card/industriekaufmann_frau-cd92a2a0f2f4dcc06ac3d523bb61b3827a73159f79c7be01d83f91b25bbb0a35.jpg" src="" />
+</div>
+<div class='person-with-card__card'>
+<div class='badge'>
+<div class='count'>
+748
+</div>
+<div class='text'>
+freie Stellen
+</div>
+</div>
+
+<div class='card-maintitle'>
+Industriekaufmann/-frau
+</div>
+
+<ul class='list list--bullet list--steel'>
+<li class='list__item'><strong>Ab 1800 €</strong> Startgehalt</li>
+<li class='list__item'>Ausbildungsdauer: <strong>3 Jahre</strong></li>
+<li class='list__item'>Arbeitszeit: <strong>werktags</strong></li>
+</ul>
+
+<div class='outline-button outline-button--orange'>Beruf ansehen</div>
+
+</div>
+</a>
+</div>
+<a href="/berufe/themen/"><div class='outline-button outline-button--orange'>Weitere Berufe</div>
+
+</a><div class='profession-carousel__favorites'>
+oder
+<a class="profession-carousel__favorites__link" href="/berufe/beliebteste/">die beliebtesten ansehen</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class='states-and-cities states-and-cities--detected'>
+<div class='states-and-cities__content'>
+<div class='title-group'>
+<div class='title title--section'>Auch in deiner Stadt</div>
+<div class='title title--subtitle'>Aktuelle Ausbildungsplätze in deiner Stadt</div>
+</div>
+
+<div class='state-and-cities-card-detected-card'>
+<div class='state state--hamburg'></div>
+<div class='card__body'>
+<h2 class='title title--card'><a href="/bundeslaender/hamburg/">Hamburg</a></h2>
+<ul class='list list--accented'>
+<li class='list__item'>
+<a class="list__link" href="/staedte/hamburg/">Hamburg</a>
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+<div class='states-and-cities-footer'></div>
+<div class='state-buttons'>
+<div class='state-buttons__intro'>
+Oder wähle ein anderes Bundesland aus:
+</div>
+<div class='state-buttons__links'>
+<a href="/bundeslaender/baden_wuerttemberg/"><div class='outline-button outline-button--grey'>Baden-Württemberg</div>
+
+</a><a href="/bundeslaender/bayern/"><div class='outline-button outline-button--grey'>Bayern</div>
+
+</a><a href="/bundeslaender/berlin/"><div class='outline-button outline-button--grey'>Berlin</div>
+
+</a><a href="/bundeslaender/brandenburg/"><div class='outline-button outline-button--grey'>Brandenburg</div>
+
+</a><a href="/bundeslaender/bremen/"><div class='outline-button outline-button--grey'>Bremen</div>
+
+</a><a href="/bundeslaender/thueringen/"><div class='outline-button outline-button--grey'>Thüringen</div>
+
+</a><a href="/bundeslaender/hamburg/"><div class='outline-button outline-button--grey'>Hamburg</div>
+
+</a><a href="/bundeslaender/hessen/"><div class='outline-button outline-button--grey'>Hessen</div>
+
+</a><a href="/bundeslaender/mecklenburg_vorpommern/"><div class='outline-button outline-button--grey'>Mecklenburg-Vorpommern</div>
+
+</a><a href="/bundeslaender/niedersachsen/"><div class='outline-button outline-button--grey'>Niedersachsen</div>
+
+</a><a href="/bundeslaender/nrw/"><div class='outline-button outline-button--grey'>Nordrhein-Westfalen</div>
+
+</a><a href="/bundeslaender/rheinland_pfalz/"><div class='outline-button outline-button--grey'>Rheinland-Pfalz</div>
+
+</a><a href="/bundeslaender/saarland/"><div class='outline-button outline-button--grey'>Saarland</div>
+
+</a><a href="/bundeslaender/sachsen/"><div class='outline-button outline-button--grey'>Sachsen</div>
+
+</a><a href="/bundeslaender/sachsen_anhalt/"><div class='outline-button outline-button--grey'>Sachsen-Anhalt</div>
+
+</a><a href="/bundeslaender/schleswig_holstein/"><div class='outline-button outline-button--grey'>Schleswig-Holstein</div>
+
+</a></div>
+</div>
+
+</section>
+
+<div class='top-job-postings-list'>
+<div class='top-job-postings-list__container'>
+<div class='title-group'>
+<div class='title title--section'>Top-Ausbildungsplätze</div>
+<div class='title title--subtitle'>Freie Ausbildungsstellen zum Stöbern</div>
+</div>
+
+<a class="url" href="/unternehmen/zurbrueggen-wohn-zentrum-gmbh/stellen/ausbildung-zum-fachkraft-fuer-moebel-kuechen-und-umzugsservice-1/"><article class='top-job-posting-card'>
+<div class='top-job-posting-card__image-group'>
+<img class="top-job-posting-card__image" src="/uploads/image/5d/5d8ec28d-87e8-5ec4-0451-7c20dbbe1aed/profession_override_image_Umzugsservice.jpg" alt="Profession override image umzugsservice" />
+<img class="top-job-posting-card__customer-logo" src="/uploads/image/55/55712609-7ace-fef4-5aa5-d68c48ea5dc9/corporation_logo_logo.jpg" alt="Corporation logo logo" />
+</div>
+<div class='top-job-posting-card__content'>
+<div class='title-group'>
+<div class='title title--card'>Ausbildung zum Fachkraft für Möbel-, Küchen- und Umzugsservice</div>
+<div class='title title--card-subtitle'>
+<span class='label'>Ausbildungsberuf:</span>
+<span class='value'>Fachkraft für Möbel-, Küchen- und Umzugsservice</span>
+</div>
+</div>
+<div class='top-job-posting-card__facts-link'>
+<ul class='top-job-posting-card__facts'>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Beginn</span>
+<span class='top-job-posting-card__fact-value'>01.08.2018</span>
+</li>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Ort</span>
+<span class='top-job-posting-card__fact-value'>Unna</span>
+</li>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Abschluss</span>
+<span class='top-job-posting-card__fact-value'>Hauptschulabschluss</span>
+</li>
+</ul>
+<div class='top-job-posting-card__link'>
+<div class='outline-button outline-button--orange'>Jetzt zur Stelle</div>
+
+</div>
+</div>
+</div>
+</article>
+</a>
+<a class="url" href="/unternehmen/brunata-waermemesser-gmbh-co-kg/stellen/duales-studium-informatik-in-der-immobilienbranche-1/"><article class='top-job-posting-card'>
+<div class='top-job-posting-card__image-group'>
+<img class="top-job-posting-card__image" src="/uploads/image/77/77214b03-b379-9d20-8096-e7d707cfbe78/sugar_image_Duales_Studium_Wirtschaftsinformatik.jpg" alt="Sugar image duales studium wirtschaftsinformatik" />
+<img class="top-job-posting-card__customer-logo" src="/uploads/image/45/454092dd-e25b-cfe9-554c-f69fff634838/corporation_logo_Logo_BM__2_.jpg" alt="Corporation logo logo bm  2 " />
+</div>
+<div class='top-job-posting-card__content'>
+<div class='title-group'>
+<div class='title title--card'>Duales Studium Wirtschaftsinformatik in der Immobilienbranche</div>
+<div class='title title--card-subtitle'>
+<span class='label'>Ausbildungsberuf:</span>
+<span class='value'>Duales Studium Wirtschaftsinformatik</span>
+</div>
+</div>
+<div class='top-job-posting-card__facts-link'>
+<ul class='top-job-posting-card__facts'>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Beginn</span>
+<span class='top-job-posting-card__fact-value'>15.08.2018</span>
+</li>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Ort</span>
+<span class='top-job-posting-card__fact-value'>München</span>
+</li>
+<li class='top-job-posting-card__fact'>
+<span class='top-job-posting-card__fact-label'>Abschluss</span>
+<span class='top-job-posting-card__fact-value'>(Fach-)Abitur</span>
+</li>
+</ul>
+<div class='top-job-posting-card__link'>
+<div class='outline-button outline-button--orange'>Jetzt zur Stelle</div>
+
+</div>
+</div>
+</div>
+</article>
+</a>
+</div>
+</div>
+
+<a class="cv-image-teaser" target="_blank" href="https://lebenslauf.ausbildung.de"><div class='cv-image-teaser__content'>
+<header class='cv-image-teaser__headlines'>
+<div class='title-group'>
+<div class='title title--section'>Der Lebenslauf-Generator</div>
+<div class='title title--subtitle'>In wenigen Schritten zum perfekten Lebenslauf!</div>
+</div>
+
+</header>
+<div class='glowing-button'>
+Jetzt kostenlos loslegen
+</div>
+
+</div>
+</a>
+<section class='find-apprenticeship'>
+<div class='text-container'>
+<div class='title title--center main-headline'>
+Ausbildung finden
+</div>
+<h1 class='title title--center sub-headline'>
+Finde deinen Ausbildungsplatz für <a href="/ausbildungsplaetze-2018/">2018</a> oder <a href="/ausbildungsplaetze-2019/">2019</a>
+</h1>
+<div class='text-container__content'>
+<p>
+Durchstarten zum Traumjob mit Ausbildung.de – das meinen wir ernst! Wir wissen wie schwierig das ist, sich in der Schule zwischen Ausbildung, Studium und den vielen anderen Möglichkeiten zu entscheiden. Und manchmal weiß man noch nicht mal, was einen überhaupt interessiert. Darum haben wir einen <a href="/berufscheck/">Berufscheck</a> entwickelt, der dir genau die Berufe vorschlägt, die zu deinem Typ passen. Beantworte einfach zwölf Fragen und du erfährst, ob du eher wie James Bond oder Mutter Theresa tickst. Oder du benutzt einfach unsere Suche, wenn du schon ungefähr weißt, welches Unternehmen du suchst und ob du eine <a href="/staedte/berlin/">Ausbildung in Berlin</a> oder eine <a href="/staedte/hamburg/">Ausbildung in Hamburg</a> machen möchtest. Für jeden Beruf haben wir für dich die unterschiedlichsten Infos gesammelt und aufgeschrieben – von „was macht man eigentlich den ganzen Tag“ bis zu „wie viel Geld bekomme ich dafür“. Wenn dich zum Beispiel eine <a href="/berufe/mediengestalter-digital-print/">Ausbildung zum Mediengestalter</a> interessiert, sagt dir das Berufsprofil auch genau, wie du deine Karriere weiter voranbringen kannst. Manchmal kommt man auch durch Zufall auf die besten Sachen, darum haben wir außerdem Berufe nach Themen wie z.B. <a href="/berufe/themen/kaufmaennisch/">kaufmännische Berufe</a> oder soziale Berufe geordnet. Durchstöbere sie doch einfach mal und lass dich inspirieren!
+</p>
+<p>
+Wenn du weißt, was du machen willst, ist natürlich noch lange nicht Schluss. Im Gegenteil, es warten noch jede Menge spannende Entscheidungen auf dich, die deinen Karriereweg beeinflussen können. Sagt dir der Begriff <a href="/duales-studium/">Duales Studium</a> etwas? Wenn du neben einem Ausbildungsabschluss am Ende deiner Azubi-Zeit auch noch einen Hochschulabschluss haben möchtest, dann ist das der richtige Weg für dich. Du verdienst Geld im Betrieb, lernst dort alle Handgriffe und bekommst in der Hochschule die theoretischen Details dazu geliefert. Das Beste von Studium und Ausbildung sozusagen in Einem. Wie viel man so verdient und wo man so ein duales Studium machen kann, findest du natürlich auch hier auf unserer Seite. Neben den vielen Studiengängen, zu denen jedes Jahr noch neue dazu kommen und immer mehr Leute interessieren, haben wir auch Informationen zu den unterschiedlichen <a href="/duales-studium/hochschulen/alle/">Hochschulen für ein duales Studium</a> für dich parat, bei denen du praxisorientiert studieren kannst.
+</p>
+<p>
+Für alle Azubis, ob Student oder nicht, ist eine der wichtigsten Entscheidung die Wahl des Ausbildungsbetriebs. Immerhin verbringst du da bald ziemlich viele Stunden am Tag und möchtest dich mit den Kollegen verstehen und auch etwas Lernen, das du später gebrauchen kannst. Deswegen findest du hier nicht nur Stellenanzeigen auf die du dich bewerben kannst, sondern bei unseren Partner-Unternehmen auch Bilder, Videos und Interviews. Außerdem können ehemalige Auszubildende dort Erfahrungsberichte einstellen, damit du weißt, wie es in dem Betrieb wirklich zugeht und was dich als zukünftigen Azubi so erwartet. Also schau mal rein, eine <a href="/unternehmen/otto/">Ausbildung bei OTTO</a> oder eine <a href="/unternehmen/poco/">Ausbildung bei Poco</a> wartet auf dich.
+</p>
+<p>
+Bevor du in deinem Traumjob durchstarten kannst, gilt es allerdings erst mal einen Ausbildungsvertrag zu ergattern. Keine Sorge, wir texten dich jetzt nicht mit Sachen zu, die du in der Schule schon gelernt hast. Unsere <a href="/ratgeber/bewerbung/">Bewerbungstipps</a> sind so geschrieben, dass man sie direkt umsetzen und etwas mit ihnen anfangen kann. Damit du zum Beispiel weißt, wie ein <a href="/ratgeber/bewerbung/anschreiben/">Anschreiben</a> aussehen sollte, damit du zum <a href="/ratgeber/bewerbung/vorstellungsgespraech/">Vorstellungsgespräch</a> eingeladen wirst und mit was für Fragen du rechnen musst. Aber auch für alles andere Rund um die Ausbildung haben wir etwas vorbereitet, um dir den Einstieg ins Arbeitsleben ein bisschen zu erleichtern. Geld ist ja im Leben nicht gerade unwichtig – auch wenn es wichtigere Dinge gibt – darum sprechen wir mal ein bisschen über das <a href="/ratgeber/gehalt/">Gehalt in der Ausbildung</a> in der Ausbildung. Und vor allem auch darüber, woher du finanzielle Unterstützung bekommst und wie viel nach allen möglichen Abzügen noch übrig bleibt. Wir beantworten auch die Frage „Was ist eigentlich Brutto?“. Wenn du keine Lust hast, viel zu lesen, sondern eine ganz bestimmte Frage hast, dann schreib uns doch über Facebook, Twitter oder Google+ - wir versuchen dir so gut es geht weiterzuhelfen. Und last but not least haben wir ja auch noch unseren Blog für die Ausbildung auf dem wir über die aktuellsten und lustigsten Themen für Azubis schreiben. Wenn du dir das bis hier durchgelesen hast: Dankeschön! Darum wollen wir dir auch nicht vorenthalten, wer das Team hinter Ausbildung.de ist.
+</p>
+</div>
+</div>
+
+</section>
+
+
+<footer class='sidewide-footer'>
+<div class='sidewide-footer__content'>
+<div class='sidewide-footer__logo'>
+<a rel="nofollow" href="/"><img class="logo__image" src="/assets/components/logo_white_with_claim-d86135fd87fc709d7097c8ee005c4b44d022ae36cb34199840b77e611ddc5587.png" alt="Logo white with claim" />
+</a></div>
+<nav class='sidewide-footer__navigation'>
+<ul class='list list--contact'>
+<li class='list__item'><a href="/kontakt/">Kontakt</a></li>
+<li class='list__item'><a href="/karriere/">Karriere</a></li>
+</ul>
+<ul class='list list--login'>
+<li class='list__item'><a href="/dashboard/unternehmen/sign_up/">Inserieren</a></li>
+<li class='list__item'><a href="/dashboard/azubi/sign_up/">Login</a></li>
+</ul>
+<ul class='list list--impress'>
+<li class='list__item'><a href="/impressum/#imprint">Impressum</a></li>
+<li class='list__item'><a href="/impressum/#agb">AGB</a></li>
+<li class='list__item'><a href="/impressum/#datenschutz">Datenschutz</a></li>
+<li class='list__item'><a href="/impressum/#nutzungsbedingungen">Nutzungsbedingungen</a></li>
+</ul>
+</nav>
+<div class='sidewide-footer__social-media'>
+<div class='subtitle subtitle--orange'>zusammen abheben</div>
+<div class='icons'>
+<div class='icons-grouped'><a class="icon-link" target="_blank" rel="nofollow" href="https://www.facebook.com/Ausbildung"><i class='icon-facebook-square'></i>
+</a><a class="icon-link" target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCfTZ5BV0sYIJ8qmsCYyXRfg"><i class='icon-youtube'></i>
+</a><a class="icon-link" target="_blank" rel="nofollow" href="https://twitter.com/ausbildung_de"><i class='icon-twitter'></i>
+</a><a class="icon-link" target="_blank" rel="nofollow" href="https://www.instagram.com/ausbildung/?hl=de"><i class='icon-instagram'></i>
+</a></div>
+<div class='icon-highlighted'><img class="icon-snapchat" src="/assets/containers/snapchat-13f77afeb6498d7b691d243b36eb8577f13b81f833480c6e3be4e2f99540c6aa.png" alt="Snapchat" /></div>
+</div>
+</div>
+<div class='sidewide-footer__territory-platforms'>
+<div class='section-subtitle'>Ein Portal von <b>TERRITORY EMBRACE</b></div>
+<ul class='platform-links'>
+<li class='platform-links__item'><a rel="nofollow" href="/"><div class='portal-button portal-button--active'>
+Ausbildung.de
+</div></a></li>
+<li class='platform-links__item'><a rel="nofollow" href="http://www.meinpraktikum.de/"><div class='portal-button'>
+MeinPraktikum.de
+</div></a></li>
+<li class='platform-links__item'><a rel="nofollow" href="https://careerloft.de/"><div class='portal-button'>
+Careerloft.de
+</div></a></li>
+<li class='platform-links__item'><a rel="nofollow" href="http://www.meineuni.de/"><div class='portal-button'>
+MeineUni.de
+</div></a></li>
+<li class='platform-links__item'><a rel="nofollow" href="http://www.trainee.de/"><div class='portal-button'>
+Trainee.de
+</div></a></li>
+</ul>
+</div>
+</div>
+</footer>
+
+
+</div>
+<script src="/packs/application-7e081ad7b52aeca35ad7.js"></script>
+<link rel="stylesheet" media="screen" href="/packs/application-57b20d6d644309a39efa.css" />
+</body>
+</html>

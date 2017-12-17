@@ -1,0 +1,3266 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- Published Date 10/10/2017 3:49:24 PM UTC -->
+<!-- Transformed Date 10/10/2017 3:49:24 PM UTC -->
+<html lang="de-DE" dir="ltr" class="no-js">
+<head>
+
+	<title>Beispiele f&#252;r Ausdr&#252;cke - Access</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="content-language" name="Language" content="de-DE"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="//www.microsoft.com/favicon.ico?v2">
+	
+	<meta name="twitter:card" value="Dieser Artikel enth&#228;lt Beispiele f&#252;r Ausdr&#252;cke in Access zum Berechnen von Werten, zum &#220;berpr&#252;fen von Daten sowie zum Festlegen eines Standardwerts f&#252;r ein Feld oder Steuerelement." />
+	<meta property="og:title" content="Beispiele f&#252;r Ausdr&#252;cke" />
+
+	<meta property="og:type" content="article" />
+
+
+	<meta property="og:image" content="//support.office.com/Images/SOC_SharingImage_720x405.png" />
+
+	<meta property="og:description" content="Dieser Artikel enth&#228;lt Beispiele f&#252;r Ausdr&#252;cke in Access zum Berechnen von Werten, zum &#220;berpr&#252;fen von Daten sowie zum Festlegen eines Standardwerts f&#252;r ein Feld oder Steuerelement." />
+
+	
+			<link rel="canonical" href="https://support.office.com/de-de/article/Beispiele-f%C3%BCr-Ausdr%C3%BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f" />
+	<meta name="description" content="Dieser Artikel enthält Beispiele für Ausdrücke in Access zum Berechnen von Werten, zum Überprüfen von Daten sowie zum Festlegen eines Standardwerts für ein Feld oder Steuerelement." />
+	<meta name="SupportBridge"/>
+	<meta name="ms.contentlang" content="de"/>
+	<meta name="C3_ENABLED" content="True"/>
+
+			<meta name="intl.version" content="7"/>
+			<meta name="intl.id" content="15817773"/>
+
+
+	
+
+	<meta name="search.applicationSuite" content="Access, Access, Access, Access" />
+	<meta name="search.appverid" content="ZAC150, ZAC120, ZAC140, ZAC160" />
+	<meta name="search.assetid" content="d3901e11-c04e-4649-b40b-8b6ec5aed41f" />
+
+	<meta name="search.audienceType" content="End User" />
+	<meta name="search.contenttype" content="How To" />
+
+	<meta name="search.IsOfficeDoc" content="content" />
+
+	<meta name="search.OCMSasset" content="HA010096295" />
+
+	<meta name="search.sku" content="Access" />
+	<meta name="search.skuid" content="ZAC160" />
+	<meta name="search.softwareVersion" content="15, 12, 14, 16" />
+	<meta name="search.version" content="3" />
+
+<meta name="search.mkt" content="de-DE" />
+
+	
+
+
+
+<meta content="b404d692-7d4d-42b6-a10b-9033791ae505" name="ms.correlationId" />
+
+<meta name="ms.lang" content="de" />
+<meta name="ms.loc" content="DE" />
+<meta content="d3901e11-c04e-4649-b40b-8b6ec5aed41f" name="ms.ocpub.assetID" />
+<meta name="ms.pagetype" content="Article" />
+<meta name="ms.pltfrm" content="OCPub" />
+<meta name="ms.prod" content="Office" />
+
+<meta name="ms.sitesec" content="Support" />
+<meta name="ms.sitever" content="16087057650" />
+<meta name="ms.service" content="office.com" />
+
+
+
+
+	<meta name="contentlocation" content="https://osiprodweuodcspstoa01.blob.core.windows.net"/>
+	
+<script type="text/javascript">
+	var varSegmentation = 0;
+	var varClickTracking = 1;
+	var varCustomerTracking = 1;
+	var varCustomerCookies = ["msresearch"];
+	var varAutoFirePV = 0;
+	var Route = '16000';
+	var Ctrl = '010';
+</script>
+		<meta name="ms.pagescope" content="o365ww" />
+		<link href="/Content/css?v=NqvcwoQ86YK2Z9Ss9h5yyB2Rygknpjn83iccHPXB73c1" rel="stylesheet"/>
+
+	<link href="/Content/articleCss?v=MbCHNjec53Wz7HGgRVkRFmtGhycl9lRZQrxaOU2Epms1" rel="stylesheet"/>
+
+
+<link href="/Content/stickyFeedbackCss?v=QQl6mGE4HGIzUBLmf3MEegBx9rBbNqnCdR52V668uks1" rel="stylesheet"/>
+
+	<link href="/Content/officeShared?v=vFcCGRGwLvmzgcXUJFsDMfLZSD2Fft5-dCVArDPORMU1" rel="stylesheet"/>
+
+	
+<link rel="stylesheet" href="https://statics-uhf-neu.akamaized.net/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/59-bc11b0/dd-86b6b8/a4-a4a73d/a9-795ebf/34-34de2e/4b-2601fd/d6-87d83b?ver=2.0" type="text/css" media="all" /><link rel='stylesheet' href='https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.css' type='text/css' />
+
+<link href="/Content/intl.css" rel="stylesheet"/>
+
+	
+<link href="/Content/topNavCss?v=PzriCQVqJL0bxxgMXN4NC9LJa4GUWoBJHITOoULk_ig1" rel="stylesheet"/>
+
+	<script type="text/javascript">
+		var OOGlobal = {
+			AutoSuggestEndPoint: "//dgps.support.microsoft.com/API/v1/AutoSuggestion",
+			BaseDomain: location.protocol + "//" + location.host,
+			Culture: "de-DE",
+			LCID: "1031",
+			IsAuthenticated: "False",
+			WebAppUrl: "https://office.com/start",
+			GUID: "d3901e11-c04e-4649-b40b-8b6ec5aed41f",
+			Platform: navigator.platform,
+			MixOembedUrl: "https://mix.office.com/oembed/",
+			MixWatchUrl: "https://mix.office.com/watch/",
+			IsCookieConsentRequired: true
+		};
+		
+	</script>
+	
+
+	<script type="text/javascript">
+		var ariaToken = '1b3c419f862842df99f49c661508cc63-88b16260-a8e4-4d5d-8055-a5014e02c560-7464';
+	</script>
+<script src="/bundles/clientlogging?v=VsIyv0nAupsVkK3X7YG8NiKaSJFbKaul-EgDsrfs__o1"></script>
+	<script type="text/javascript">
+		if (typeof ClientSideLogging !== "undefined" && ClientSideLogging !== null) {
+			(function(){
+				var pageProperties = {
+					cultureName: 'de-DE',
+					helpViewer: HelpViewers.web,
+					machineId: 'ODCSUPFRONTEND_IN_3',
+					region: 'WEU-ZZZ',
+					build: '16087057650'
+				}
+
+				ClientSideLogging.setPageProperties(pageProperties);
+				ClientSideLogging.addListeners();
+			})();
+			
+
+		}
+	</script>
+
+		<script type="text/javascript">
+			if (typeof ClientSideLogging !== "undefined" && ClientSideLogging !== null) {
+				ClientSideLogging.addPageProperty(PageProperties.pageType, 'Article');
+			}
+		</script>
+	<script src="/bundles/modernizr?v=Thv7-HpnDcsQ_nXQpu2dolYjKmcDMz6kWOK8JF-PQDM1"></script>
+
+	
+
+<script src="https://az725175.vo.msecnd.net/scripts/jsll-4.2.3.js"></script>
+<script>(window.awa)||document.write('<script src="/bundles/jsll"><\/script>');</script>
+
+
+
+
+<meta name="awa-env" content="Production" />
+<meta name="awa-stv" content="16087057650"/>
+<meta name="awa-market" content="de-DE"/>
+<meta name="awa-asst" content="d3901e11-c04e-4649-b40b-8b6ec5aed41f" />
+
+<meta name="awa-pageType" content="Article" />
+<meta content="o365ww" name="awa-pagescope" />
+<meta content="office.com" name="awa-prdct" />
+
+
+
+
+<meta content="de" name="awa-contentlang" />
+</head>
+
+<body class="supCont ocArticle "  data-scroll-depth-tracking=true>
+	<div id="ocBodyWrapper">
+		
+						
+
+    <section id="headerArea"  data-m='{"cN":"headerArea","cT":"Area_coreuiArea","id":"a1Body","sN":1,"aN":"Body"}'>
+                    <div id="headerRegion"     data-region-key="headerregion" data-m='{"cN":"headerRegion","cT":"Region_coreui-region","id":"r1a1","sN":1,"aN":"a1"}' >
+
+    <div  id="headerUniversalHeader" data-m='{"cN":"headerUniversalHeader","cT":"Module_coreui-universalheader","id":"m1r1a1","sN":1,"aN":"r1a1"}'  data-module-id="Category|headerRegion|headerRegion|headerUniversalHeader|coreui-universalheader">
+        
+
+
+
+        <div id="epb" class="x-hidden x-hidden-vp1 x-hidden-vp2 uhfc-universal-context context-uhf" ms.cmpgrp='epb'>
+
+    <div class="m-alert f-information epb-container epb-default-color" role="alert" ms.pgarea='Epb v2'>
+        <div>        
+            <p class="c-paragraph">
+                    <img alt="Microsoft Edge" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REZlo1?ver=5722" />
+
+                <span class="c-text-group">
+                    <span class="epb-launch">Testen Sie Microsoft Edge</span>
+                    <span class="epb-text">den schnellen und sicheren Browser f&#252;r Windows 10</span>
+                </span>
+                <span class="c-group">
+                    <button id="close-epb" class="c-action-trigger c-action-cancel glyph-cancel" ms.title='EPB-dismiss'  aria-label="Nein, danke">Nein, danke</button>
+                    <a id="epbTryNow" aria-label="den schnellen und sicheren Browser für Windows 10" class="epb-launch c-action-trigger c-action-open" ms.title='EPB-launch'>Erste Schritte</a>
+                </span>
+
+            </p>
+        </div>
+    </div>
+    <style>
+        #epb .m-alert {margin-top: 0 }
+
+        #epb .epb-container.epb-brand-color{background-color:#0078D7;color:#FFF;height:72px}.epb-container.epb-brand-color>div .c-paragraph>img{height:40px;float:left;margin-right:12px;padding:0;width:40px}.epb-container.epb-brand-color .c-text-group{float:left;margin-top:-2px}.epb-container.epb-brand-color .c-text-group .epb-text{display:block;line-height:2}.epb-container.epb-brand-color .c-text-group .epb-launch{font-size:16px;font-weight:700}.epb-container.epb-brand-color .c-group{margin-top:10px;margin-right:-36px}.epb-container.epb-brand-color>div{padding:16px 0}.epb-container.epb-brand-color>div .c-paragraph .c-group .c-action-trigger{min-width:120px;text-align:center}.epb-container.epb-brand-color>div .c-paragraph .c-group .c-action-cancel{text-decoration:underline;color:#FFF}.epb-container.epb-brand-color>div .c-paragraph .c-group .c-action-cancel:hover{background-color:#0060ac}.epb-container.epb-brand-color>div .c-paragraph .c-group .c-action-open{background-color:#FFF;color:#262626}.epb-container.epb-brand-color>div .c-paragraph .c-group .c-action-open:hover{background-color:#ccc}.epb-container.epb-default-color{background-color:#f2f2f2;height:72px}.epb-container.epb-default-color>div .c-paragraph>img{height:40px;float:left;margin-right:12px;padding:0;width:40px}.epb-container.epb-default-color .c-text-group{float:left;margin-top:-2px}.epb-container.epb-default-color .c-text-group .epb-text{color:#262626;display:block;opacity:.7;line-height:2}.epb-container.epb-default-color .c-text-group .epb-launch{color:#262626;font-size:16px;font-weight:700}.epb-container.epb-default-color .c-group{margin-top:10px;margin-right:-36px}.epb-container.epb-default-color>div{padding:16px 0}.epb-container.epb-default-color>div .c-paragraph .c-group .c-action-trigger{min-width:120px;text-align:center}.epb-container.epb-default-color>div .c-paragraph .c-group .c-action-cancel{text-decoration:underline;color:#006CC1}.epb-container.epb-default-color>div .c-paragraph .c-group .c-action-cancel:hover{background-color:#c1c1c1}.epb-container.epb-default-color>div .c-paragraph .c-group .c-action-open{background-color:#0078D7;color:#FFF}.epb-container.epb-default-color>div .c-paragraph .c-group .c-action-open:hover{background-color:#0060ac}html[dir="rtl"] .epb-container.epb-brand-color>div .c-paragraph>img{float:right;margin-right:0;margin-left:12px}html[dir="rtl"] .epb-container.epb-brand-color .c-text-group{float:right}html[dir="rtl"] .epb-container.epb-default-color>div .c-paragraph>img{float:right;margin-right:0;margin-left:12px}html[dir="rtl"] .epb-container.epb-default-color .c-text-group{float:right} .epb-container>div .c-paragraph{display:block!important}
+    </style>
+
+            
+        </div>
+        <style>
+            #epb .m-alert {
+                margin-top: 0;
+            }
+
+            #epb .m-alert {
+                margin-top: 0;
+            }
+
+            @media (min-width: 768px) and (max-width:1084px) {
+                #epb .m-alert[role="alert"] > div {
+                    width: 94%;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (min-width: 1084px) {
+                #epb .m-alert[role="alert"] > div {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    
+        <style>
+            #epb {animation:slidedown .5s ease-in; overflow:hidden;}
+            #epb.epb-rollup {animation:slideup .5s ease-in;}
+            @keyframes slideup {from {height:50px}to{height:0}}
+            @keyframes slidedown {from {height:0}to{height:54px}}
+        </style>
+    
+
+        <div ms.cmpgrp='cookiebanner'>
+
+<div id="uhfCookieAlert">
+    <div id='msccBanner' dir='ltr' data-site-name='Microsoft.OneRenderFramework.Core' data-mscc-version='0.3.6' data-nver='aspnet-2.0.5' data-sver='0.1.2' class='cc-banner' role='alert'><div class='cc-container'><svg class='cc-icon cc-v-center' x='0px' y='0px' viewBox='0 0 44 44' height='30px' fill='none' stroke='currentColor'><circle cx='22' cy='22' r='20' stroke-width='2'></circle><line x1='22' x2='22' y1='18' y2='33' stroke-width='3'></line><line x1='22' x2='22' y1='12' y2='15' stroke-width='3'></line></svg> <span class='cc-v-center cc-text'>Diese Website verwendet Cookies für Analysen, personalisierte Inhalte und Werbung. Indem Sie diese Website nutzen, erklären Sie sich mit dieser Verwendung einverstanden.</span> <a href='https://go.microsoft.com/fwlink/?linkid=845480' aria-label='Weitere Informationen über die Microsoft Cookie-Richtlinie' id='msccLearnMore' class='cc-link cc-v-center cc-float-right' data-mscc-ic='false'>Weitere Informationen</a></div></div>
+</div>
+
+            
+        </div>
+
+
+
+<header role="banner" class="c-universal-header context-uhf no-js " itemscope="itemscope" data-header-footprint="de-de/officesupport/officesupportheader"  itemtype="http://schema.org/Organization">
+    <div class="theme-light js-global-head f-closed " ms.pgarea='Universal Header'>
+        <div>
+            <button class="c-action-trigger c-glyph glyph-global-nav-button" aria-label="Men&#252; umschalten" aria-expanded="false" ms.title='Mobile menu button'></button>
+            <button class="c-action-trigger c-glyph glyph-arrow-htmllegacy" aria-label="Suche schlie&#223;en" aria-expanded="false" ms.title='Close Search'></button>
+                    <a id="uhfLogo" class="c-logo" itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" ms.cmpgrp='GlobalNav_Logo'>
+                        <img itemprop="logo" itemscope="itemscope" class="c-image" alt="Microsoft" src="https://assets.onestore.ms/cdnfiles/external/uhf/long/9a49a7e9d8e881327e81b9eb43dabc01de70a9bb/images/microsoft-gray.png" />
+                        <span>Microsoft</span>
+                    </a>
+            <div class="f-mobile-title">
+                <button class="c-action-trigger c-glyph glyph-chevron-left" aria-label="Weitere Men&#252;optionen anzeigen" ms.title='Mobile back button'></button>
+                <span data-global-title="Microsoft-Homepage" class="js-mobile-title">Office</span>
+                <button class="c-action-trigger c-glyph glyph-chevron-right" aria-label="Weitere Men&#252;optionen anzeigen" ms.title='Mobile forward button'></button>
+            </div>
+            
+                <div ms.cmpgrp='Header actions'>
+                            <form class="c-search" autocomplete="off" id="searchForm" name="searchForm" role="search" action="/de-de/Search/results" method="GET" data-seAutoSuggest='{"queryParams":{"market":"de-de","clientId":"7F27B536-CF6B-4C65-8638-A0F8CBDFCA65","sources":"Microsoft-Terms,Iris-Products,DCatAll-Products","counts":"5,1,5"},"familyNames":{"Apps":"App","Books":"Book","Bundles":"Paket","Devices":"Gerät","Fees":"Fee","Games":"Spiel","MusicAlbums":"Album","MusicTracks":"Lied","MusicVideos":"Video","MusicArtists":"Künstler","OperatingSystem":"Betriebssystem","Software":"Software","Movies":"Film","TV":"TV","CSV":"Geschenkgutschein","VideoActor":"Schauspieler"}}' data-seautosuggestapi="https://www.microsoft.com/services/api/v3/suggest"  aria-expanded="false">
+            <input id="cli_shellHeaderSearchInput" aria-label="In Office-Hilfe suchen" role="combobox" aria-autocomplete="list" aria-controls="universal-header-search-auto-suggest-transparent" aria-owns="universal-header-search-auto-suggest-ul" type="search" name="query" placeholder="In Office-Hilfe suchen" ms.title='SearchBox' />
+            <button id="search" aria-label="Suchen" class="c-glyph" ms.title='Search' data-bi-dnt="true"></button>
+            <div class="m-auto-suggest" id="universal-header-search-auto-suggest-transparent" role="group">
+                <ul class="c-menu" id="universal-header-search-auto-suggest-ul" aria-hidden="true" data-bi-dnt="true" data-js-auto-suggest-position="default" role="listbox" data-tel="wedcs" ms.cmpgrp='search suggestions'></ul>
+                <ul class="c-menu f-auto-suggest-no-results" aria-hidden="true" data-js-auto-suggest-postion="default" data-js-auto-suggest-position="default" tabindex="0">
+                    <li class="c-menu-item"> <span tabindex="-1">Keine Ergebnisse</span></li>
+                </ul>
+            </div>
+            
+        </form>
+
+                            <a id="uhf-shopping-cart" aria-label="0 artikel in einkaufswagen"
+           class="c-action-trigger c-glyph glyph-shopping-cart"
+           href="https://www.microsoft.com/de-de/store/buy"
+           ms.title='GlobalNav_Cart'>
+            <span class="shopping-cart-amount" aria-hidden="true">0</span>
+        </a>
+            <iframe id="shell-cart-count" data-src="//www.microsoft.com/store/buy/cartcount" style="display: none"></iframe>
+
+                    
+                            <div id="meControl" class="c-me" data-signinsettings='{"containerId":"meControl","enabled":true,"headerHeight":48,"debug":false,"extensibleLinks":[],"userData":{"idp":"msa","firstName":"","lastName":"","memberName":"","cid":"","authenticatedState":"3"},"rpData":{"preferredIdp":"msa","msaInfo":{"signInUrl":"https://www.office.com/login?ru=%2f%3fauth%3d1\u0026es=click ","signOutUrl":"","meUrl":"https://login.live.com/me.srf?wa=wsignin1.0"},"aadInfo":{"signOutUrl":"","appId":null,"siteUrl":null,"blockMsaFed":true}}}' ms.cmpgrp='GlobalNav_Account'>
+            <div class="msame_Header">
+                <div class="msame_Header_name">Anmelden</div>
+            </div>
+            
+        </div>
+
+                    
+                </div>
+        </div>
+        
+        
+    </div>
+            <div class="theme-dark brand-neutral js-cat-head" itemprop="brand" itemscope="itemscope" itemtype="http://schema.org/Brand" ms.cmpgrp='UHF category nav'>
+
+<div>
+        <a id="uhfCatLogo" class="c-logo" href="https://www.office.com/" aria-label="Office" itemprop="url" ms.title='Office'>
+                <span>Office</span>
+        </a>
+    <a 
+            class="c-call-to-action c-glyph"
+            
+            data-m='{"cN":"Office 365 kaufen","id":"n1m1r1a1","sN":1,"aN":"m1r1a1"}'
+            href="https://go.microsoft.com/fwlink/?linkid=849747"
+            
+             >
+            <span>Office 365 kaufen</span>
+        </a>
+
+    <button class="c-action-trigger c-glyph glyph-chevron-left" aria-label="Scroll left" title="Scroll left" ms.title='Previous'></button>
+    
+    <button class="c-action-trigger c-glyph glyph-chevron-right" aria-label="Scroll right" title="Scroll right" ms.title='Next'></button>
+            <nav id="uhf-c-nav" role="navigation" aria-labelledby="uhfCatLogo" >
+
+<div class="c-uhf-menu js-nav-menu">
+                    <button id="Products"  aria-expanded="false" aria-haspopup="true" ms.title='Products'>Produkte</button>
+                    <ul class=" f-multi-column f-multi-column-4" aria-labelledby="Products" aria-hidden="true" ms.cmpnm='Products'>
+    <li class="f-sub-menu js-nav-menu" ms.cmpnm='ForHome'>
+
+        <button id="F&#252;rzuHause&gt;-navigation"  aria-expanded="false" ms.title='ForHome' ms.interactiontype='14'>F&#252;r zu Hause &gt;</button>
+        <ul aria-labelledby="F&#252;rzuHause&gt;-navigation" aria-hidden="true">
+    <li ms.cmpnm='HomePlansPricing'>
+        <a id="HomePlansPricing" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/compare-all-microsoft-office-products?tab=1" ms.title='HomePlansPricing'>Pl&#228;ne und Preise</a>
+        
+    </li>
+    <li ms.cmpnm='for-households'>
+        <a id="for-households" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/office-365-home" ms.title='for-households'>F&#252;r Haushalte</a>
+        
+    </li>
+    <li ms.cmpnm='for-individuals'>
+        <a id="for-individuals" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/office-365-personal" ms.title='for-individuals'>F&#252;r Einzelnutzer</a>
+        
+    </li>
+    <li ms.cmpnm='office-online'>
+        <a id="office-online" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/office-online/documents-spreadsheets-presentations-office-online" ms.title='office-online'>Office Online</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" ms.cmpnm='ForBusiness'>
+
+        <button id="F&#252;rUnternehmen&gt;-navigation"  aria-expanded="false" ms.title='ForBusiness' ms.interactiontype='14'>F&#252;r Unternehmen &gt;</button>
+        <ul aria-labelledby="F&#252;rUnternehmen&gt;-navigation" aria-hidden="true">
+    <li ms.cmpnm='PlansPricing'>
+        <a id="PlansPricing" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/compare-all-microsoft-office-products?tab=2" ms.title='PlansPricing'>Pl&#228;ne und Preise</a>
+        
+    </li>
+    <li ms.cmpnm='Smallbusiness'>
+        <a id="SmallBusiness" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/business/explore-office-365-for-business" ms.title='Smallbusiness'>Kleine Unternehmen</a>
+        
+    </li>
+    <li ms.cmpnm='Enterprise'>
+        <a id="Enterprise" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/business/enterprise-productivity-tools" ms.title='Enterprise'>Gro&#223;e Unternehmen</a>
+        
+    </li>
+    <li ms.cmpnm='FrontlineWorkers'>
+        <a id="FrontlineWorkers" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/business/enterprise-firstline-workers" ms.title='FrontlineWorkers'>Mitarbeiter in Service und Produktion</a>
+        
+    </li>
+    <li ms.cmpnm='SeeAllBusiness'>
+        <a id="SeeAllBusiness" class="js-subm-uhf-nav-link" href="https://products.office.com/de-DE/business/office" ms.title='SeeAllBusiness'>Alle Produkte f&#252;r Unternehmen anzeigen</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" ms.cmpnm='ForEducation'>
+
+        <button id="F&#252;rdenBildungsbereich&gt;-navigation"  aria-expanded="false" ms.title='ForEducation' ms.interactiontype='14'>F&#252;r den Bildungsbereich &gt;</button>
+        <ul aria-labelledby="F&#252;rdenBildungsbereich&gt;-navigation" aria-hidden="true">
+    <li ms.cmpnm='Studentsteachers'>
+        <a id="Studentsteachers" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/student/office-in-education" ms.title='Studentsteachers'>F&#252;r Sch&#252;ler/Studierende und Lehrkr&#228;fte</a>
+        
+    </li>
+    <li ms.cmpnm='Schools'>
+        <a id="Schools" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/academic/compare-office-365-education-plans" ms.title='Schools'>F&#252;r Bildungseinrichtungen</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+    <li class="f-sub-menu js-nav-menu" ms.cmpnm='applications'>
+
+        <button id="Anwendungen&gt;-navigation"  aria-expanded="false" ms.title='applications' ms.interactiontype='14'>Anwendungen &gt;</button>
+        <ul aria-labelledby="Anwendungen&gt;-navigation" aria-hidden="true">
+    <li ms.cmpnm='outlook'>
+        <a id="outlook" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/outlook/email-and-calendar-software-microsoft-outlook" ms.title='outlook'>Outlook</a>
+        
+    </li>
+    <li ms.cmpnm='onedrive-for-business'>
+        <a id="onedrive-for-business" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/onedrive-for-business/online-cloud-storage" ms.title='onedrive-for-business'>OneDrive for Business</a>
+        
+    </li>
+    <li ms.cmpnm='word'>
+        <a id="word" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/word" ms.title='word'>Word</a>
+        
+    </li>
+    <li ms.cmpnm='excel'>
+        <a id="excel" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/excel" ms.title='excel'>Excel</a>
+        
+    </li>
+    <li ms.cmpnm='powerpoint'>
+        <a id="powerpoint" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/powerpoint" ms.title='powerpoint'>PowerPoint</a>
+        
+    </li>
+    <li ms.cmpnm='onenote'>
+        <a id="onenote" class="js-subm-uhf-nav-link" href="https://www.onenote.com/" ms.title='onenote'>OneNote</a>
+        
+    </li>
+    <li ms.cmpnm='sharepoint'>
+        <a id="sharepoint" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/sharepoint/collaboration" ms.title='sharepoint'>SharePoint</a>
+        
+    </li>
+    <li ms.cmpnm='microsoft-teams'>
+        <a id="microsoft-teams" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/microsoft-teams/group-chat-software" ms.title='microsoft-teams'>Microsoft Teams</a>
+        
+    </li>
+    <li ms.cmpnm='see-all-office-products'>
+        <a id="see-all-office-products" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/products" ms.title='see-all-office-products'>Alle Office-Produkte anzeigen</a>
+        
+    </li>
+        </ul>
+        
+    </li>   
+                        
+                    </ul>
+                </div><div class="c-uhf-menu js-nav-menu">
+                    <button id="resources"  aria-expanded="false" aria-haspopup="true" ms.title='Resources'>Ressourcen </button>
+                    <ul class="" aria-labelledby="resources" aria-hidden="true" ms.cmpnm='Resources'>
+    <li ms.cmpnm='CustomerStories'>
+        <a id="CustomerStories" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/business/office-365-customer-stories-office-testimonials" ms.title='CustomerStories'>Kundenreferenzen</a>
+        
+    </li>
+    <li ms.cmpnm='FAQ'>
+        <a id="FAQ" class="js-subm-uhf-nav-link" href="https://products.office.com/de-DE/microsoft-office-for-home-and-school-faq" ms.title='FAQ'>H&#228;ufig gestellte Fragen</a>
+        
+    </li>
+    <li ms.cmpnm='InstallOffice'>
+        <a id="InstallOffice" class="js-subm-uhf-nav-link" href="http://go.microsoft.com/fwlink/p/?LinkID=717124" ms.title='InstallOffice'>Office installieren</a>
+        
+    </li>
+    <li ms.cmpnm='ITResources'>
+        <a id="ITResources" class="js-subm-uhf-nav-link" href="https://products.office.com/de-DE/business/office-for-it-pros" ms.title='ITResources'>Ressourcen f&#252;r IT-Experten</a>
+        
+    </li>
+    <li ms.cmpnm='SecurityCompliance'>
+        <a id="SecurityCompliance" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/business/office-365-trust-center-welcome" ms.title='SecurityCompliance'>Sicherheit und Compliance</a>
+        
+    </li>
+    <li ms.cmpnm='SystemRequirements'>
+        <a id="SystemRequirements" class="js-subm-uhf-nav-link" href="https://products.office.com/de-de/office-system-requirements" ms.title='SystemRequirements'>Systemanforderungen</a>
+        
+    </li>
+                        
+                    </ul>
+                </div><a id="shellmenu_32" class="c-uhf-nav-link" href="https://templates.office.com/" ms.title='Templates'>Vorlagen</a><a id="shell-main-tab" class="c-uhf-nav-link" href="/" ms.title='Support'>Support</a>            <a id="mobile-" class="c-uhf-nav-link x-hidden x-visible-vp2-block x-visible-vp1-block" href="https://go.microsoft.com/fwlink/?linkid=849747" ms.title=''>Office 365 kaufen</a>
+        </nav>
+
+</div>
+
+
+            
+        </div>
+
+    
+</header>
+
+
+    </div>
+            </div>
+
+    </section>
+
+
+
+		
+
+
+
+
+
+	<div id="topNav" class="topNav " ms.pgarea="topnav">
+		<div id="topNavMobileDropdown">
+			<div class="topNavMobileCategory" id="topNavMobileDropdownButton">
+				<a class="topNavDropdownTrigger" href="javascript:" aria-expanded="False" aria-label="Support">
+					<span>Support</span>
+					<span class="topNavChevron ms-Icon--chevronThinDown"></span>
+				</a>
+			</div>
+		</div>
+		<ul id="topNavCategories">
+					<li class="topNavCategory" ms.cmpgrp="apps">
+						<a class="topNavDropdownTrigger" href="javascript:" ms.interactiontype="11" aria-expanded="False" aria-label="Anwendungen">
+							<span>Anwendungen</span>
+							<span class="topNavChevron ms-Icon--chevronThinDown"></span>
+						</a>
+						<ul class="topNavDropdownMenu">
+								<li class="topNavDropdownMenuItem"><a href="/de-de/outlook" class="topNavDropdownLink">Outlook</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/onedrive" class="topNavDropdownLink">OneDrive</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/word" class="topNavDropdownLink">Word</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/excel" class="topNavDropdownLink">Excel</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/powerpoint" class="topNavDropdownLink">PowerPoint</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/onenote" class="topNavDropdownLink">OneNote</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/sharepoint" class="topNavDropdownLink">SharePoint</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/teams" class="topNavDropdownLink">Teams</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/yammer" class="topNavDropdownLink">Yammer</a></li>
+								<li class="topNavDropdownMenuItem"><a href="/de-de/access" class="topNavDropdownLink">Access</a></li>
+						</ul>
+					</li>
+					<li class="topNavTopLevelMenuItem topNavDropdownMenuItem">
+						<a href="/de-de/article/4414eaaf-0478-48be-9c42-23adc4716658" class="topNavDropdownLink">Installieren</a>
+					</li>
+					<li class="topNavTopLevelMenuItem topNavDropdownMenuItem">
+						<a href="/de-de/article/b9582171-fd1f-4284-9846-bdd72bb28426" class="topNavDropdownLink">Konto</a>
+					</li>
+					<li class="topNavTopLevelMenuItem topNavDropdownMenuItem">
+						<a href="/de-de/office-training-center" class="topNavDropdownLink">Schulung</a>
+					</li>
+					<li class="topNavTopLevelMenuItem topNavDropdownMenuItem">
+						<a href="/de-de/office365admin" class="topNavDropdownLink">Administrator</a>
+					</li>
+		</ul>
+	</div>
+
+		
+					
+		
+
+
+
+		<section id="ocHelp" dir="ltr">
+			<div id='ocArticle'>
+				
+
+				<div class="grd main-content zero-margin" id="ocMainContent" role="main">
+					<div class="row ocpArticleSizingWrapper">
+						
+
+						<div class="col-5-5 ">
+
+
+
+	<div class="supBreadcrumbContainer" ms.pgarea="breadcrumbs">
+		<div class="supBreadcrumb">
+			<a class="supBreadcrumbLink" href="/de-de/access" ms.cmpgrp="collection">Access</a>
+		</div>
+			<div class="supBreadcrumbPartition">
+			</div>
+			<div class="supBreadcrumb">
+				<a class="supBreadcrumbLink" href="Expressions-684295d0-97c2-443c-8e0a-8c6b635bec56" ms.cmpgrp="primary">Ausdr&#252;cke</a>
+			</div>
+				<div class="supBreadcrumbPartition">
+				</div>
+				<div class="supBreadcrumb">
+					<a class="supBreadcrumbLink" href="Expressions-684295d0-97c2-443c-8e0a-8c6b635bec56#ID0EAABAAA=Creating_expressions" ms.cmpgrp="secondary">Erstellen von Ausdr&#252;cken</a>
+				</div>
+				<div class="supBreadcrumbMobile">
+					<a class="supBreadcrumbLink" href="Expressions-684295d0-97c2-443c-8e0a-8c6b635bec56#ID0EAABAAA=Creating_expressions">
+						<span class="supBreadcrumbMobileChevron"></span>
+						Erstellen von Ausdr&#252;cken
+					</a>
+				</div>
+
+		<div class="supBreadcrumbPartition">
+		</div>
+		<div class="supBreadcrumb">
+			<div class="supBreadcrumbArticleTitle">Beispiele f&#252;r Ausdr&#252;cke</div>
+		</div>
+	</div>
+							<!--If multimedia nav, hide the title and Applies To:-->
+								<section class="ocpArticleTitleSection">
+									<h1>Beispiele für Ausdrücke</h1>
+								</section>
+
+							
+			<section class="supAppliesToSection" ms.cmpgrp="applies_to" aria-label="Dieser Artikel" dir="ltr">
+				<div id="supAppliesToTableContainer">
+					<div id="supAppliesToList" class="appliesTo collapsed">
+						<span>Gilt f&#252;r: </span>
+							<span class="appliesToItem">Access 2016</span>
+							<span class="appliesToItem">Access 2013</span>
+							<span class="appliesToItem">Access&#160;2010</span>
+							<span class="appliesToItem">Access&#160;2007</span>
+						<a tabindex="0" class="appliesToOverflowControl expand ocHidden font-bold " href="javascript:" ms.interactiontype="11" ms.title="Less applies to" aria-label="Dr&#252;cken Sie die EINGABETASTE, um die anderen Office-Versionen zu h&#246;ren, auf die sich dieser Hilfeartikel bezieht.">Mehr...</a>
+						<a tabindex="0" class="appliesToOverflowControl collapse ocHidden font-bold" href="javascript:" ms.interactiontype="11" ms.title="More applies to">Weniger</a>
+					</div>
+				</div>
+			</section>
+
+							
+
+
+
+<article id="ocpArticleContent" class="ocpArticleContent">
+  <a name="__top" aria-hidden="true">	</a>
+  <section class="ocpIntroduction">
+    <p>Dieser Artikel enthält Beispiele für Ausdrücke in Access. Ein Ausdruck ist eine Kombination von mathematischen oder logischen Operatoren, Konstanten, Funktionen, Tabellenfeldern, Steuerelementen und Eigenschaften, die zu einem einzelnen Wert ausgewertet werden. Sie können Ausdrücke in Access zum Berechnen von Werten, zum Überprüfen von Daten sowie zum Festlegen eines Standardwerts für ein Feld oder Steuerelement verwenden.</p>
+    <div class="ocpAlert">
+      <p class="ocpAlertSection">
+        <b class="ocpNote"> Hinweis :</b> Zwar werden in diesem Artikel die grundlegenden Schritte zum Erstellen von Ausdrücken beschrieben, aber auf die Verwendung der Tools, die Access zum Erstellen von Ausdrücken bereitstellt, wird nicht näher eingegangen. Weitere Informationen zum Erstellen von Ausdrücken finden Sie im Artikel <a href="Erstellen-eines-Ausdrucks-893d516c-86f8-43e7-b9c1-d38c02678e5b" class="ocpArticleLink">Erstellen eines Ausdrucks</a>.</p>
+    </div>
+  </section>
+  <section class="ocpSection">
+    <h2>Inhalt dieses Artikels</h2>
+    <a name="___toc___1_l" aria-hidden="true">	</a>
+    <dl class="ocpTOC">
+      <dd>
+        <p>
+          <a href="#bm1" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Grundlegendes zu Ausdrücken">Grundlegendes zu Ausdrücken</a>
+        </p>
+      </dd>
+      <dd>
+        <p>
+          <a href="#bm2" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Beispiele für Ausdrücke, die in Formularen und Berichten verwendet werden">Beispiele für Ausdrücke, die in Formularen und Berichten verwendet werden</a>
+        </p>
+      </dd>
+      <dd>
+        <p>
+          <a href="#bm3" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Beispiele für Ausdrücke, die in Abfragen und Filtern verwendet werden">Beispiele für Ausdrücke, die in Abfragen und Filtern verwendet werden</a>
+        </p>
+      </dd>
+      <dd>
+        <p>
+          <a href="#bm4" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Beispiele für Standardwertausdrücke">Beispiele für Standardwertausdrücke</a>
+        </p>
+      </dd>
+      <dd>
+        <p>
+          <a href="#bm5" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Beispiele für Feldgültigkeitsregel-Ausdrücke">Beispiele für Feldgültigkeitsregel-Ausdrücke</a>
+        </p>
+      </dd>
+      <dd>
+        <p>
+          <a href="#bm6" class="ocpInlineLink" aria-label="Fortfahren mit Abschnitt Beispiele für Makrobedingungsausdrücke">Beispiele für Makrobedingungsausdrücke</a>
+        </p>
+      </dd>
+    </dl>
+  </section>
+  <a name="bm1" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Grundlegendes zu Ausdrücken</h2>
+    <p>In Access wird ein <b class="ocpLegacyBold">Ausdruck</b> auch als <b class="ocpLegacyBold">Formel</b> bezeichnet. Ein Ausdruck besteht aus einer Reihe möglicher Elemente, die Sie allein oder in Kombination verwenden können, um ein Ergebnis zu erzielen. Zu diesen Elementen gehören:</p>
+    <ul>
+      <li>
+        <p>Bezeichner – die Namen von Tabellenfeldern oder Steuerelementen in Formularen oder Berichten oder die Eigenschaften dieser Felder oder Steuerelemente</p>
+      </li>
+      <li>
+        <p>Operatoren wie <b class="ocpLegacyBold">+</b> (Plus) oder <b class="ocpLegacyBold">-</b> (Minus)</p>
+      </li>
+      <li>
+        <p>Funktionen wie <b class="ocpLegacyBold">Summe</b> oder <b class="ocpLegacyBold">Mittelwert</b></p>
+      </li>
+      <li>
+        <p>Konstanten – Werte, die sich nicht ändern, z. B. Zeichenfolgen oder Zahlen, die nicht mithilfe eines Ausdrucks berechnet werden</p>
+      </li>
+    </ul>
+    <p>Für Ausdrücke gibt es eine Vielzahl von Verwendungsmöglichkeiten, z. B. können Sie mit einem Ausdruck eine Berechnung durchführen, den Wert eines Steuerelements abrufen oder Kriterien für eine Abfrage angeben, um nur einige zu nennen.</p>
+    <p>Weitere Informationen zur Verwendung von Ausdrücken finden Sie im Artikel <a href="Erstellen-eines-Ausdrucks-893d516c-86f8-43e7-b9c1-d38c02678e5b" class="ocpArticleLink">Erstellen eines Ausdrucks</a>.</p>
+    <p>
+      <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+    </p>
+  </section>
+  <a name="bm2" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Beispiele für Ausdrücke, die in Formularen und Berichten verwendet werden</h2>
+    <p>Die Tabellen in diesem Abschnitt enthalten Beispiele für Ausdrücke, mit denen ein Wert in einem Steuerelement berechnet wird, das sich in einem Formular oder Bericht befindet. Wenn Sie ein berechnetes Steuerelement erstellen möchten, geben Sie einen Ausdruck in die <b class="ocpLegacyBold">Steuerelementinhalt</b>-Eigenschaft des Steuerelements ein, und nicht in ein Tabellenfeld oder eine Abfrage.</p>
+    <p>In den folgenden Schritten wird erläutert, wie Sie einen Ausdruck in das Textfeld-Steuerelement eines vorhandenen Formulars oder Berichts eingeben.</p>
+    <section class="ocpSection">
+      <h3>Erstellen eines berechneten Steuerelements</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf das zu ändernde Formular oder auf den zu ändernden Bericht, und klicken Sie dann im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b> 
+<img src="https://support.content.office.net/de-de/media/0d30eb28-6217-4ee7-b48d-1c26643a60d5.gif" alt="Schaltflächensymbol" title="Schaltflächensymbol" />
+.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Formular oder Bericht mit der rechten Maustaste auf das Textfeld-Steuerelement, das Sie ändern möchten (nicht auf die mit dem Textfeld verbundene Beschriftung), und klicken Sie dann im Kontextmenü auf <b class="ocpUI">Eigenschaften</b>.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie ggf. auf die Registerkarte <b class="ocpUI">Alle</b> oder auf <b class="ocpUI">Daten</b>. Beide Registerkarten bieten die <b class="ocpUI">Steuerelementinhalt</b>-Eigenschaft.</p>
+          <meta itemprop="position" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie auf das Feld neben der <b class="ocpUI">Steuerelementinhalt</b>-Eigenschaft, und geben Sie den Ausdruck ein. Sie können z. B. im nächsten Abschnitt einen Ausdruck aus der Spalte "Ausdruck" in der Tabelle kopieren und einfügen.</p>
+          <meta itemprop="position" content="4" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Schließen Sie das Eigenschaftenblatt.</p>
+          <meta itemprop="position" content="5" />
+        </li>
+      </ol>
+    </section>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Text kombinieren oder ändern</h2>
+    <p>Bei den Ausdrücken in der folgenden Tabelle werden die Operatoren <b class="ocpLegacyBold">&amp;</b> (kaufmännisches Und-Zeichen) und <b class="ocpLegacyBold">+</b> (Plus) zum Kombinieren von Textzeichenfolgen, integrierte Funktionen zum Ändern einer Textzeichenfolge sowie andere Methoden zum Bearbeiten von Text verwendet. Das Ziel besteht darin, ein berechnetes Steuerelement zu erstellen.</p>
+    <table id="tblID0EAB2AAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>="NV" </p>
+          </td>
+          <td>
+            <p>Es wird "NV" angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Vorname] &amp; " " &amp; [Nachname]</p>
+          </td>
+          <td>
+            <p>Zeigt die Werte an, die in den Tabellenfeldern "Vorname" und "Nachname" gespeichert sind. In diesem Beispiel wird der <b class="ocpLegacyBold">&amp;</b>-Operator verwendet, um das Feld "Vorname", ein Leerzeichen (in Anführungszeichen) und das Feld "Nachname" zu kombinieren. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Links-d5897bf6-91f5-4bf8-853a-b63d7de09681" class="ocpArticleLink">Links</a>([Artikelname]; 1) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Links</b>-Funktion, um das erste Zeichen des Werts in einem Feld oder Steuerelement namens "Artikelname" anzuzeigen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Rechts-c02a18a8-b224-437e-aaba-1b785c6c61bf" class="ocpArticleLink">Rechts</a>([Postencode]; 2) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Rechts</b>-Funktion, um die letzten zwei Zeichen des Werts in einem Feld oder Steuerelement namens "Postencode" anzuzeigen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Glätten-e340ced1-67df-435f-b078-1527a4eddea2" class="ocpArticleLink">Glätten</a>([Adresse]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Glätten</b>-Funktion, um den Wert des Steuerelements "Adresse" anzuzeigen und dabei vorangestellte oder nachfolgende Leerzeichen zu entfernen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Wenn-32436ecf-c629-48a3-9900-647539c764e3" class="ocpArticleLink">Wenn</a>(IstNull([Region]); [Ort] &amp; " " &amp; [PLZ]; [Ort] &amp; " " &amp; [Region] &amp; " " &amp; [PLZ])</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Wenn</b>-Funktion, um die Werte der Steuerelemente "Ort" und "PLZ" anzuzeigen, falls der Wert im Steuerelement "Region" gleich Null ist. Andernfalls werden die Werte der Steuerelemente "Ort", "Region" und "PLZ" angezeigt, getrennt durch Leerzeichen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Ort] &amp; (" " + [Region]) &amp; " " &amp; [PLZ]</p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">+</b>-Operator und die Null-Weitergabe, um die Werte der Steuerelemente "Ort" und "PLZ" anzuzeigen, falls der Wert im Feld oder Steuerelement "Region" gleich Null ist. Andernfalls werden die Werte der Felder oder Steuerelemente "Ort", "Region" und "PLZ" angezeigt, getrennt durch Leerzeichen. </p>
+            <p>Null-Weitergabe bedeutet: Wenn eine beliebige Komponente des Ausdrucks gleich Null ist, ist auch der gesamte Ausdruck gleich Null. Der <b class="ocpLegacyBold">+</b>-Operator unterstützt die Null-Weitergabe, der <b class="ocpLegacyBold">&amp;</b>-Operator unterstützt sie nicht.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <a name="bmforms002" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Ausdrücke in Kopf- und Fußzeilen</h2>
+    <p>Mithilfe der Eigenschaften <b class="ocpLegacyBold">Seite</b> und <b class="ocpLegacyBold">Seiten</b> können Sie Seitenzahlen in Formularen oder Berichten anzeigen oder drucken. Die Eigenschaften <b class="ocpLegacyBold">Seite</b> und <b class="ocpLegacyBold">Seiten</b> sind nur während des Drucks oder während der Vorschau verfügbar. Sie werden also nicht im Eigenschaftenblatt des Formulars oder Berichts angezeigt. In der Regel verwenden Sie diese Eigenschaften, indem Sie ein Textfeld in den Kopf- oder Fußzeilenbereich des Formulars oder Berichts einfügen und dann einen Ausdruck verwenden, z. B. einen aus der folgenden Tabelle.</p>
+    <p>Weitere Informationen zur Verwendung von Kopf- und Fußzeilen in Formularen und Berichten finden Sie im Artikel <a href="Einfügen-von-Seitenzahlen-in-ein-Formular-oder-einen-Bericht-5b712860-6459-455d-8f47-7915d4ce0ffb" class="ocpArticleLink">Einfügen von Seitenzahlen in ein Formular oder einen Bericht</a>.</p>
+    <table id="tblID0EAB1AAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beispielergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=[Seite] </p>
+          </td>
+          <td>
+            <p>1</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>="Seite " &amp; [Seite] </p>
+          </td>
+          <td>
+            <p>Seite 1</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>="Seite " &amp; [Seite] &amp; " von " &amp; [Seiten] </p>
+          </td>
+          <td>
+            <p>Seite 1 von 3</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Seite] &amp; " von " &amp; [Seiten] &amp; " Seiten" </p>
+          </td>
+          <td>
+            <p>1 von 3 Seiten</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Seite] &amp; "/" &amp; [Seiten] &amp; " Seiten" </p>
+          </td>
+          <td>
+            <p>1/3 Seiten</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Land/Region] &amp; " - " &amp; [Seite] </p>
+          </td>
+          <td>
+            <p>GB - 1</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Format-6f29d87b-8761-408d-81d3-63b9cd842530" class="ocpArticleLink">Format</a>([Seite]; "000") </p>
+          </td>
+          <td>
+            <p>001</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>="Gedruckt am: " &amp; Datum()</p>
+          </td>
+          <td>
+            <p>Gedruckt am: 31.12.07</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die arithmetische Operationen durchführen</h2>
+    <p>Sie können Ausdrücke verwenden, um die Werte in zwei oder mehr Feldern oder Steuerelementen zu addieren, zu subtrahieren, zu multiplizieren und zu dividieren. Mithilfe von Ausdrücken können Sie auch arithmetische Operationen an Datumsangaben ausführen. Angenommen, Sie verfügen über ein Tabellenfeld für Datum/Uhrzeit namens "Lieferdatum". In diesem Feld bzw. in einem an das Feld gebundenen Steuerelement wird durch den Ausdruck <b class="ocpLegacyBold">=[Lieferdatum] - 2</b> ein Datums-/Uhrzeitwert zurückgegeben, der zwei Tage vor den aktuellen Werten im Feld "Lieferdatum" liegt.</p>
+    <table id="tblID0ECBZAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=[Zwischensumme]+[Fracht] </p>
+          </td>
+          <td>
+            <p>Zeigt die Summe der Werte aus den Feldern oder Steuerelementen "Zwischensumme" und "Fracht" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Lieferdatum]-[Versanddatum]</p>
+          </td>
+          <td>
+            <p>Stellt das Intervall zwischen den Datumswerten der Felder oder Steuerelemente "Lieferdatum" und "Versanddatum" dar.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Preis]*1,06 </p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Feld oder Steuerelement "Preis" multipliziert mit 1,06 an (addiert 6 % zum Wert im Feld "Preis").</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Anzahl]*[Preis]</p>
+          </td>
+          <td>
+            <p>Zeigt das Produkt der Werte aus den Feldern oder Steuerelementen "Anzahl" und "Preis" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[SummePersonal]/[SummeLandRegion] </p>
+          </td>
+          <td>
+            <p>Zeigt den Quotienten der Werte aus den Feldern oder Steuerelementen "SummePersonal" und "SummeLandRegion" an.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ocpAlert">
+      <p class="ocpAlertSection">
+        <b class="ocpNote"> Hinweis :</b> Wenn Sie einen arithmetischen Operator (<b class="ocpLegacyBold">+</b>, <b class="ocpLegacyBold">-</b>, <b class="ocpLegacyBold">*</b> und <b class="ocpLegacyBold">/</b>) in einem Ausdruck verwenden und der Wert eines der Steuerelemente im Ausdruck gleich Null ist, dann ist das Ergebnis des ganzen Ausdrucks gleich Null. Dies wird als Null-Weitergabe bezeichnet. Enthält ein Datensatz in einem der Steuerelemente, die Sie im Ausdruck verwenden, einen Null-Wert, können Sie eine Null-Weitergabe vermeiden, indem Sie den Null-Wert mithilfe der <b class="ocpLegacyBold">Nz</b>-Funktion zu Null konvertieren, z. B. =<b class="ocpLegacyBold">Nz([Zwischensumme])+Nz([Fracht])</b>.</p>
+    </div>
+    <p>Weitere Informationen zu dieser Funktion finden Sie im Artikel <a href="NzFunktion-8ef85549-cc9c-438b-860a-7fd9f4c69b6c" class="ocpArticleLink">Nz-Funktion</a>.</p>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die auf Werte in anderen Feldern oder Steuerelementen verweisen</h2>
+    <p>Es kommt vor, dass Sie einen Wert benötigen, der an anderer Stelle bereits vorhanden ist, z. B. in einem Feld oder Steuerelement in einem anderen Formular oder Bericht. Mithilfe eines Ausdrucks können Sie den Wert aus einem anderen Feld oder Steuerelement zurückgeben.</p>
+    <p>Die nachstehende Tabelle zeigt Beispiele für Ausdrücke, die Sie in Formularen in berechneten Steuerelementen verwenden können.</p>
+    <table id="tblID0EDBYAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=Formulare![Bestellungen]![Bestell-Nr]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Steuerelement "Bestell-Nr" des Formulars "Bestellungen" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Formulare![Bestellungen]![Bestellungen Unterformular].Formular![Bestellzwischensumme]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Steuerelement "Bestellzwischensumme" im Unterformular "Bestellungen Unterformular" des Formulars "Bestellungen" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Formulare![Bestellungen]![Bestellungen Unterformular]![Artikel-Nr].Spalte(2)</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert der dritten Spalte in "Artikel-Nr", einem mehrspaltigen Listenfeld im Unterformular "Bestellungen Unterformular" des Formulars "Bestellungen", an. (0 bezieht sich auf die erste Spalte, 1 auf die zweite Spalte usw.)</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Formulare![Bestellungen]![Bestellungen Unterformular]![Preis] * 1,06</p>
+          </td>
+          <td>
+            <p>Zeigt das Produkt aus dem Wert im Steuerelement "Preis" im Unterformular "Bestellungen Unterformular" des Formulars "Bestellungen" und dem Wert "1,06" an (addiert 6 % zum Wert im Steuerelement "Preis").</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Hauptobjekt![Bestell-Nr]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Steuerelement "Bestell-Nr" im Hauptformular des aktuellen Unterformulars an.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Die Ausdrücke in der folgenden Tabelle zeigen Möglichkeiten der Verwendung berechneter Steuerelemente in Berichten. Die Ausdrücke verweisen auf die <b class="ocpLegacyBold">Bericht-Eigenschaft</b>.</p>
+    <p>Weitere Informationen zu dieser Eigenschaft finden Sie im Artikel <a href="BerichtEigenschaft-5590ffa3-c87a-4b4a-b71f-95ca5962b1d9" class="ocpArticleLink">Bericht-Eigenschaft</a>.</p>
+    <table id="tblID0EABYAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=Bericht![Rechnung]![Bestell-Nr]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert eines Steuerelements namens "Bestell-Nr" in einem Bericht namens "Rechnung" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Bericht![Übersichtsbericht]![Unterbericht-Übersichtsbericht].Bericht![Umsätze (Gesamt)]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Steuerelement "Umsätze (Gesamt)" aus dem Unterbericht "Unterbericht-Übersichtsbericht" des Berichts "Übersichtsbericht" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Hauptobjekt![Bestell-Nr]</p>
+          </td>
+          <td>
+            <p>Zeigt den Wert aus dem Steuerelement "Bestell-Nr" aus dem Hauptbericht des aktuellen Unterberichts an.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Anzahl, Summe und Mittelwert berechnen</h2>
+    <p>Mit einer sogenannten Aggregatfunktion können Sie Werte für ein oder mehrere Felder oder Steuerelemente berechnen. Sie können beispielsweise eine Gruppensumme für den Gruppenfuß in einem Bericht oder eine Bestellzwischensumme für die Posten in einem Formular berechnen. Sie können auch die Anzahl der Elemente in einem oder mehreren Feldern zählen oder einen Mittelwert berechnen.</p>
+    <p>Die Ausdrücke in der folgenden Tabelle zeigen einige Verwendungsmöglichkeiten für Funktionen wie <b class="ocpLegacyBold">Mittelwert</b>, <b class="ocpLegacyBold">Anzahl</b> und <b class="ocpLegacyBold">Summe</b>.</p>
+    <table id="tblID0EBBXAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=<a href="Mittelwert-8a24e7b2-5483-42ac-835e-907f4341f752" class="ocpArticleLink">Mittelwert</a>([Fracht]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Mittelwert</b>-Funktion zum Anzeigen des Mittelwerts eines Felds oder Steuerelements namens "Fracht".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Anzahl-6923a7b3-aa59-4027-ada6-d774525a4009" class="ocpArticleLink">Anzahl</a>([Bestell-Nr]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Anzahl</b>-Funktion, um die Anzahl der Datensätze im Steuerelement "Bestell-Nr" anzuzeigen. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Summe-ad99511e-b294-44d7-9b8b-7c5f7484fd0b" class="ocpArticleLink">Summe</a>([Umsätze])</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Summe</b>-Funktion, um die Summe der Werte des Steuerelements "Umsätze" anzuzeigen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Summe([Anzahl]*[Preis]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Summe</b>-Funktion, um die Summe des Produkts der Werte aus den Steuerelementen "Anzahl" und "Preis" anzuzeigen. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Umsätze]/Summe([Umsätze])*100 </p>
+          </td>
+          <td>
+            <p>Zeigt den Prozentsatz der Umsätze an, der ermittelt wird, indem der Wert des Steuerelements "Umsätze" durch die Summe aller Werte des Steuerelements "Umsätze" dividiert wird. </p>
+            <div class="ocpAlert">
+              <p class="ocpAlertSection">
+                <b class="ocpNote"> Hinweis :</b> Wenn Sie die <b class="ocpLegacyBold">Format</b>-Eigenschaft des Steuerelements auf <b class="ocpLegacyBold">Prozent</b> festlegen, darf <b class="ocpLegacyBold">*100</b> nicht im Ausdruck enthalten sein.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Weitere Informationen zur Verwendung von Aggregatfunktionen und zum Summieren der Werte in Feldern und Spalten finden Sie in den Artikeln <a href="Summieren-von-Daten-unter-Verwendung-einer-Abfrage-430a669b-e7fd-4c4b-b154-8c8dbbe41c8a" class="ocpArticleLink">Summieren von Daten unter Verwendung einer Abfrage</a>, <a href="Zählen-von-Daten-mithilfe-einer-Abfrage-b84cdfd8-07ba-49a7-b067-e1024ccfcca8" class="ocpArticleLink">Zählen von Daten mithilfe einer Abfrage</a>, <a href="Zählen-der-Zeilen-in-einem-Datenblatt-a39a7b6d-2858-4b0e-8c31-8eca9aaba0e6" class="ocpArticleLink">Zählen der Zeilen in einem Datenblatt</a> und <a href="Anzeigen-von-Spaltensummen-in-einem-Datenblatt-8f1f89c4-7f86-4113-a836-291ac3ea446e" class="ocpArticleLink">Anzeigen von Spaltensummen in einem Datenblatt</a>.</p>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die mithilfe von Domänenaggregatfunktionen Werte selektiv zählen, summieren und nachschlagen</h2>
+    <p>Die sogenannten Domänenaggregatfunktionen bieten sich an, wenn Sie Werte selektiv zählen oder summieren möchten. Eine "Domäne" besteht aus mindestens einem Feld in einer oder mehreren Tabellen bzw. mindestens einem Steuerelement in einem oder mehreren Formularen oder Berichten. Sie können beispielsweise die Werte in einem Tabellenfeld den Werten eines Steuerelements in einem Formular zuordnen.</p>
+    <table id="tblID0EABWAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=<a href="DomWert-8896cb03-e31f-45d1-86db-bed10dca5937" class="ocpArticleLink">DomWert</a>("[Kontaktperson]"; "[Lieferanten]"; "[Lieferanten-Nr] = " &amp; Formulare("Lieferanten")("[Lieferanten-Nr]"))</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DomWert</b>-Funktion, um den Wert des Felds "Kontaktperson" in der Tabelle "Lieferanten" zurückzugeben. Der Wert des Felds "Lieferanten-Nr" in der Tabelle entspricht dabei dem Wert des Steuerelements "Lieferanten-Nr" im Formular "Lieferanten".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=DomWert("[Kontaktperson]"; "[Lieferanten]"; "[Lieferanten-Nr] = " &amp; Formulare![Neue Lieferanten]![Lieferanten-Nr])</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DomWert</b>-Funktion, um den Wert des Felds "Kontaktperson" in der Tabelle "Lieferanten" zurückzugeben. Der Wert des Felds "Lieferanten-Nr" in der Tabelle entspricht dabei dem Wert des Steuerelements "Lieferanten-Nr" im Formular "Neue Lieferanten".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="DomSumme-08f8450e-3bf6-45e2-936f-386056e61a32" class="ocpArticleLink">DomSumme</a>("[Bestellmenge]"; "[Bestellungen]"; "[Kunden-Nr] = 'RATTC'")</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DomSumme</b>-Funktion, um die Gesamtsumme der Werte im Feld "Bestellmenge" in der Tabelle "Bestellungen" zurückzugeben. Der Wert für "Kunden-Nr" ist dabei "RATTC".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="DomAnzahl-f6b5d78b-ad0b-4e42-be7a-11a64acbf3d3" class="ocpArticleLink">DomAnzahl</a>("[Zurückgezogen]";"[Posten]";"[Zurückgezogen]=Ja")</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DomAnzahl</b>-Funktion, um die Anzahl der Ja-Werte im Feld "Zurückgezogen" (ein Ja/Nein-Feld) der Tabelle "Posten" zurückzugeben.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Datumsangaben ändern und berechnen</h2>
+    <p>Das Verfolgen von Datums- und Uhrzeitangaben ist eine wichtige Datenbankaktivität. Sie können beispielsweise berechnen, wie viele Tage seit dem Rechnungsdatum vergangen sind, um zu ermitteln, wann Forderungen fällig werden. Zum Formatieren von Datum und Uhrzeit stehen zahlreiche Optionen zur Verfügung, wie in der folgenden Tabelle gezeigt.</p>
+    <table id="tblID0EABVAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=<a href="Datum-dd7a1f27-d957-4969-ab35-01e0bfbfed76" class="ocpArticleLink">Datum</a>()</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Datum</b>-Funktion, um das aktuelle Datum im Format TT-MM-JJ anzuzeigen. Dabei steht <b class="ocpLegacyBold">TT</b> für den Tag (1 bis 31), <b class="ocpLegacyBold">MM</b> für den Monat (1 bis 12) und <b class="ocpLegacyBold">JJ</b> stellt die letzten zwei Zahlen des Jahres dar (1980 bis 2099).</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="Format-6f29d87b-8761-408d-81d3-63b9cd842530" class="ocpArticleLink">Format</a>(Jetzt(); "WW") </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Format</b>-Funktion, um für das aktuelle Datum die Woche des Jahres anzuzeigen. <b class="ocpLegacyBold">WW</b> steht dabei für die Wochen 1 bis 53.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="DatTeil-26868a79-5505-4e5a-8905-6001372223fa" class="ocpArticleLink">DatTeil</a>("JJJJ"; [Bestelldatum]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DatTeil</b>-Funktion, um die vierstellige Jahresangabe des Steuerelements "Bestelldatum" anzuzeigen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="DatAdd-63befdf6-1ffa-4357-9424-61e8c57afc19" class="ocpArticleLink">DatAdd</a>("J"; -10; [ZugesagtesDatum])</p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DatAdd</b>-Funktion, um ein Datum anzuzeigen, das zehn Tage vor dem Wert des Steuerelements "ZugesagtesDatum" liegt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=<a href="DatDiff-e6dd7ee6-3d01-4531-905c-e24fc238f85f" class="ocpArticleLink">DatDiff</a>("T"; [Bestelldatum]; [Versanddatum]) </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">DatDiff</b>-Funktion, um die Differenz in Tagen anzuzeigen, die zwischen den Werten der Steuerelemente "Bestelldatum" und "Versanddatum" liegen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=[Rechnungsdatum] + 30</p>
+          </td>
+          <td>
+            <p>Führt arithmetische Operationen an Datumsangaben aus, um das Datum zu berechnen, das 30 Tage nach dem Datum im Feld oder Steuerelement "Rechnungsdatum" liegt.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Bedingte Ausdrücke, die einen oder zwei mögliche Werte zurückgeben</h2>
+    <p>Die Beispielausdrücke in der folgenden Tabelle verwenden die <b class="ocpLegacyBold">Wenn</b>-Funktion, um einen oder zwei mögliche Werte zurückzugeben. Sie übergeben der <b class="ocpLegacyBold">Wenn</b>-Funktion drei Argumente: Das erste Argument ist ein Ausdruck, der einen Wert vom Typ <b class="ocpLegacyBold">Wahr</b> oder <b class="ocpLegacyBold">Falsch</b> zurückgeben muss. Das zweite Argument ist der Wert, der zurückgegeben werden soll, wenn der Ausdruck wahr ist, und das dritte Argument ist der Wert, der zurückgegeben werden soll, wenn der Ausdruck falsch ist.</p>
+    <table id="tblID0EBBUAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>=<a href="Wenn-32436ecf-c629-48a3-9900-647539c764e3" class="ocpArticleLink">Wenn</a>([Bestätigt] = "Ja"; "Bestellung bestätigt"; "Bestellung nicht bestätigt") </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Wenn</b>-Funktion, um die Meldung "Bestellung bestätigt" anzuzeigen, wenn das Steuerelement "Bestätigt" den Wert <b class="ocpLegacyBold">Ja</b> hat. Andernfalls wird die Meldung "Bestellung nicht bestätigt" angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Wenn(<a href="IstNull-f963233b-1c1e-4b0c-8bc3-3e8c0ea67c61" class="ocpArticleLink">IstNull</a>([Land/Region]); " "; [Land]) </p>
+          </td>
+          <td>
+            <p>Verwendet die Funktionen <b class="ocpLegacyBold">Wenn</b> und <b class="ocpLegacyBold">IstNull</b>, um eine leere Zeichenfolge anzuzeigen, wenn der Wert des Steuerelements "Land/Region" gleich Null ist. Andernfalls wird der Wert des Steuerelements "Land/Region" angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Wenn(IstNull([Region]); [Ort] &amp; " " &amp; [PLZ]; [Ort] &amp; " " &amp; [Region] &amp; " " &amp; [PLZ]) </p>
+          </td>
+          <td>
+            <p>Verwendet die Funktionen <b class="ocpLegacyBold">Wenn</b> und <b class="ocpLegacyBold">IstNull</b>, um die Werte der Steuerelemente "Ort" und "PLZ" anzuzeigen, wenn der Wert im Steuerelement "Region" gleich Null ist. Andernfalls werden die Werte der Felder oder Steuerelemente "Ort", "Region" und "PLZ" angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>=Wenn(IstNull([Lieferdatum]) Oder IstNull([Versanddatum]); "Auf fehlendes Datum prüfen"; [Lieferdatum] - [Versanddatum]) </p>
+          </td>
+          <td>
+            <p>Verwendet die Funktionen <b class="ocpLegacyBold">Wenn</b> und <b class="ocpLegacyBold">IstNull</b>, um die Meldung "Auf fehlendes Datum prüfen" anzuzeigen, wenn das Ergebnis der Subtraktion der Werte aus "Versanddatum" und "Lieferdatum" gleich Null ist. Andernfalls wird das Intervall zwischen den Datumswerten der Steuerelemente "Lieferdatum" und "Versanddatum" angezeigt.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+    </p>
+  </section>
+  <a name="bm3" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Beispiele für Ausdrücke, die in Abfragen und Filtern verwendet werden</h2>
+    <p>Dieser Abschnitt enthält Beispiele für Ausdrücke, mit deren Hilfe Sie ein berechnetes Feld in einer Abfrage erstellen oder Kriterien für eine Abfrage angeben können. Ein berechnetes Feld ist eine Spalte in einer Abfrage, die das Ergebnis eines Ausdrucks ist. Sie können beispielsweise einen Wert berechnen, Textwerte miteinander kombinieren, z. B. Vor- und Nachnamen, oder einen Teil des Datums formatieren.</p>
+    <p>Sie verwenden Kriterien in einer Abfrage, um die Datensätze, mit denen Sie arbeiten, einzuschränken. Sie können beispielsweise den <b class="ocpLegacyBold">Zwi</b><b class="ocpLegacyBold">schen</b>-Operator verwenden, um ein Start- und Enddatum anzugeben und die Ergebnisse der Abfrage auf Bestellungen zu beschränken, die zwischen diesen Terminen geliefert wurden.</p>
+    <p>In den folgenden Abschnitten wird erläutert, wie Sie ein berechnetes Feld zu einer Abfrage hinzufügen. Außerdem werden Beispiele für Ausdrücke gegeben, die Sie in Abfragen verwenden können.</p>
+    <section class="ocpSection">
+      <h3>Hinzufügen eines berechneten Felds in der Abfrageentwurfsansicht</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf die zu ändernde Abfrage, und klicken Sie dann im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b>.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie auf die Zelle <b class="ocpUI">Feld</b> in der Spalte, in der Sie das berechnete Feld erstellen möchten. Sie können einen Namen für das Feld eingeben, gefolgt von einem Doppelpunkt, oder Sie geben den Ausdruck ein. Wenn Sie keinen Namen eingeben, fügt Access <b class="ocpLegacyBold">Ausdr</b><i class="ocpItalic">N</i><b class="ocpLegacyBold">:</b> hinzu, wobei <i class="ocpItalic">N</i> eine fortlaufende Zahl ist.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Geben Sie den Ausdruck ein. </p>
+          <p>– Oder –</p>
+          <p>Klicken Sie auf der Registerkarte <b class="ocpUI">Entwurf</b> in der Gruppe <b class="ocpUI">Abfragesetup</b> auf <b class="ocpUI">Generator</b>, um denAusdrucks-Generator zu starten.</p>
+          <p>Weitere Informationen zur Verwendung desAusdrucks-Generators finden Sie im Artikel <a href="Erstellen-eines-Ausdrucks-893d516c-86f8-43e7-b9c1-d38c02678e5b" class="ocpArticleLink">Erstellen eines Ausdrucks</a>.</p>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </section>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Text in einer Abfrage oder einem Filter ändern</h2>
+    <p>Bei den Ausdrücken in der folgenden Tabelle werden die Operatoren <b class="ocpLegacyBold">&amp;</b> und <b class="ocpLegacyBold">+</b> zum Kombinieren von Textzeichenfolgen, integrierte Funktionen zum Bearbeiten einer Textzeichenfolge sowie andere Methoden zum Bearbeiten von Text verwendet. Das Ziel besteht darin, ein berechnetes Feld zu erstellen.</p>
+    <table id="tblID0EABSAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>VollständigerName: [Vorname] &amp; " " &amp; [Nachname] </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "VollständigerName", in dem die Werte der Felder "Vorname" und "Nachname" angezeigt werden, getrennt durch ein Leerzeichen. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Adresse2: [Ort] &amp; " " &amp; [Region] &amp; " " &amp; [PLZ]</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Adresse2", in dem die Werte in den Feldern "Ort", "Region" und "PLZ" angezeigt werden, getrennt durch Leerzeichen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Artikelinitialen:<a href="Links-d5897bf6-91f5-4bf8-853a-b63d7de09681" class="ocpArticleLink">Links</a>([Artikelname]; 1)</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Artikelinitialen" und zeigt dann mithilfe der <b class="ocpLegacyBold">Links</b>-Funktion im Feld "Artikelinitialen" das erste Zeichen des Werts im Feld "Artikelname" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Typcode: <a href="Rechts-c02a18a8-b224-437e-aaba-1b785c6c61bf" class="ocpArticleLink">Rechts</a>([Postencode]; 2) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Typcode" und zeigt dann mithilfe der <b class="ocpLegacyBold">Rechts</b>-Funktion die letzten beiden Zeichen der Werte im Feld "Postencode" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Ortskennzahl: <a href="Teil-427e6895-822c-44ee-b34a-564a28f2532c" class="ocpArticleLink">Teil</a>([Telefon];2;3) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Ortskennzahl" und zeigt dann mithilfe der <b class="ocpLegacyBold">Teil</b>-Funktion die drei Zeichen an, beginnend mit dem zweiten Zeichen des Werts im Feld "Telefon".</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die arithmetische Operationen in berechneten Feldern durchführen</h2>
+    <p>Sie können Ausdrücke verwenden, um die Werte in zwei oder mehr Feldern oder Steuerelementen zu addieren, zu subtrahieren, zu multiplizieren und zu dividieren. Sie können auch arithmetische Operationen an Datumsangaben ausführen. Angenommen, Sie verfügen über ein Feld für Datum/Uhrzeit namens "Lieferdatum". Durch den Ausdruck <b class="ocpLegacyBold">=[Lieferdatum]</b><b class="ocpLegacyBold"> - 2</b> wird ein Datums-/Uhrzeitwert zurückgegeben, der zwei Tage vor dem Wert im Feld "Lieferdatum" liegt.</p>
+    <table id="tblID0EBBRAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Primärfracht: [Fracht] * 1,1 </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Primärfracht" und zeigt dort die Frachtkosten zuzüglich 10 Prozent an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestellmenge: [Anzahl] * [Einzelpreis]</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Bestellmenge" und zeigt dann das Produkt der Werte aus den Feldern "Anzahl" und "Einzelpreis" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Entwicklungszeit: [Lieferdatum] - [Versanddatum]</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Entwicklungszeit" und zeigt dann die Differenz der Werte aus den Feldern "Lieferdatum" und "Versanddatum" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>GesamtLagerbestand: [Lagerbestand]+[BestellteEinheiten]</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "GesamtLagerbestand" und zeigt dann die Summe der Werte in den Feldern "Lagerbestand" und "BestellteEinheiten" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>FrachtProzentsatz: <a href="Summe-ad99511e-b294-44d7-9b8b-7c5f7484fd0b" class="ocpArticleLink">Summe</a>([Fracht])/Summe([Zwischensumme]) *100 </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "FrachtProzentsatz" und zeigt dann den Prozentsatz der Frachtkosten pro Zwischensumme an. Dieser Ausdruck verwendet die <b class="ocpLegacyBold">Summe</b>-Funktion zum Addieren der Werte im Feld "Fracht". Anschließend werden diese Summen durch die Summe der Werte aus dem Feld "Zwischensumme" dividiert. </p>
+            <p>Zum Verwenden dieses Ausdrucks müssen Sie die Auswahlabfrage in eine Summenabfrage konvertieren, da Sie die Zeile <b class="ocpUI">Summe</b> im Entwurfsbereich benötigen, und Sie müssen die Zelle <b class="ocpUI">Summe</b> für dieses Feld auf <b class="ocpLegacyBold">Ausdruck</b> festlegen.</p>
+            <p>Weitere Informationen zum Erstellen einer Summenabfrage finden Sie im Artikel <a href="Summieren-von-Daten-unter-Verwendung-einer-Abfrage-430a669b-e7fd-4c4b-b154-8c8dbbe41c8a" class="ocpArticleLink">Summieren von Daten unter Verwendung einer Abfrage</a>.</p>
+            <p>Wenn Sie die <b class="ocpLegacyBold">Format</b>-Eigenschaft des Felds auf <b class="ocpLegacyBold">Prozent</b> festlegen, darf <b class="ocpLegacyBold">*100</b> nicht enthalten sein.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Weitere Informationen zur Verwendung von Aggregatfunktionen und zum Summieren der Werte in Feldern und Spalten finden Sie in den Artikeln <a href="Summieren-von-Daten-unter-Verwendung-einer-Abfrage-430a669b-e7fd-4c4b-b154-8c8dbbe41c8a" class="ocpArticleLink">Summieren von Daten unter Verwendung einer Abfrage</a>, <a href="Zählen-von-Daten-mithilfe-einer-Abfrage-b84cdfd8-07ba-49a7-b067-e1024ccfcca8" class="ocpArticleLink">Zählen von Daten mithilfe einer Abfrage</a>, <a href="Zählen-der-Zeilen-in-einem-Datenblatt-a39a7b6d-2858-4b0e-8c31-8eca9aaba0e6" class="ocpArticleLink">Zählen der Zeilen in einem Datenblatt</a> und <a href="Anzeigen-von-Spaltensummen-in-einem-Datenblatt-8f1f89c4-7f86-4113-a836-291ac3ea446e" class="ocpArticleLink">Anzeigen von Spaltensummen in einem Datenblatt</a>.</p>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Datumsangaben in berechneten Feldern ändern und berechnen</h2>
+    <p>In fast allen Datenbanken werden Datums- und Uhrzeitangaben gespeichert und verfolgt. In Access arbeiten Sie mit Datums- und Uhrzeitangaben, indem Sie die Datums-/Uhrzeitfelder in den Tabellen auf den Datentyp "Datum/Uhrzeit" festlegen. Access kann arithmetische Berechnungen an Datumsangaben ausführen: Sie können beispielsweise berechnen, wie viele Tage seit dem Rechnungsdatum vergangen sind, um zu ermitteln, wann Forderungen fällig werden.</p>
+    <table id="tblID0EABQAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Zeitabstand: =<a href="DatDiff-e6dd7ee6-3d01-4531-905c-e24fc238f85f" class="ocpArticleLink">DatDiff</a>("d"; [Bestelldatum]; [Versanddatum]) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Zeitabstand" und zeigt dann mithilfe der <b class="ocpLegacyBold">DatDiff</b>-Funktion die Anzahl der Tage an, die zwischen Bestelldatum und Versanddatum liegen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Einstellungsjahr: <a href="DatTeil-26868a79-5505-4e5a-8905-6001372223fa" class="ocpArticleLink">DatTeil</a>("JJJJ";[Einstellungsdatum]) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Einstellungsjahr" und zeigt dann mithilfe der <b class="ocpLegacyBold">DatTeil</b>-Funktion für jeden Angestellten das Jahr der Einstellung an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>MinusDreißig: <a href="Datum-dd7a1f27-d957-4969-ab35-01e0bfbfed76" class="ocpArticleLink">Datum</a>( )- 30 </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "MinusDreißig" und zeigt dann mithilfe der <b class="ocpLegacyBold">Datum</b>-Funktion das Datum an, das um 30 Tage vor dem heutigen Datum liegt.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die mithilfe von SQL- oder Domänenaggregatfunktionen Anzahl, Summe und Mittelwert berechnen</h2>
+    <p>Die Ausdrücke in der folgenden Tabelle verwenden SQL-Funktionen (Structured Query Language), die Daten aggregieren oder zusammenfassen. Diese Funktionen (z. B. <b class="ocpLegacyBold">Summe</b>, <b class="ocpLegacyBold">Anzahl</b> und <b class="ocpLegacyBold">Mittelwert</b>) werden häufig als Aggregatfunktionen bezeichnet.</p>
+    <p>Zusätzlich zu den Aggregatfunktionen stellt Access auch Domänenaggregatfunktionen bereit, die Sie zum selektiven Summieren oder Zählen von Werten verwenden. Sie können beispielsweise nur die Werte in einem bestimmten Bereich zählen oder einen Wert aus einer anderen Tabelle nachschlagen. Die Reihe der Domänenaggregatfunktionen umfasst <a href="DomSumme-08f8450e-3bf6-45e2-936f-386056e61a32" class="ocpArticleLink">DomSumme</a>, <a href="DomAnzahl-f6b5d78b-ad0b-4e42-be7a-11a64acbf3d3" class="ocpArticleLink">DomAnzahl</a> und <a href="DomMittelwert-c7270c5d-e3b9-4f26-9615-2133a277066d" class="ocpArticleLink">DomMittelwert</a>.</p>
+    <p>Zum Berechnen von Summen muss häufig eine Summenabfrage erstellt werden. Sie müssen beispielsweise eine Summenabfrage verwenden, um Ergebnisse nach Gruppe zusammenzufassen. Klicken Sie im Menü <b class="ocpUI">Ansicht</b> auf <b class="ocpUI">Summen</b>, um eine Summenabfrage im Entwurfsbereich der Abfrage zu aktivieren.</p>
+    <table id="tblID0EABPAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Zeilenanzahl:<a href="Anzahl-6923a7b3-aa59-4027-ada6-d774525a4009" class="ocpArticleLink">Anzahl</a>(*) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Zeilenanzahl" und zählt dann mithilfe der <b class="ocpLegacyBold">Anzahl</b>-Funktion die Anzahl an Datensätzen in der Abfrage, einschließlich Datensätze mit (leeren) Null-Feldern.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>FrachtProzentsatz: <a href="Summe-ad99511e-b294-44d7-9b8b-7c5f7484fd0b" class="ocpArticleLink">Summe</a>([Fracht])/Summe([Zwischensumme]) *100 </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "FrachtProzentsatz" und berechnet dann den Prozentsatz der Frachtkosten pro Zwischensumme. Dazu wird die Summe der Werte aus dem Feld "Fracht" durch die Summe der Werte aus dem Feld "Zwischensumme" dividiert. (In diesem Beispiel wird die <b class="ocpLegacyBold">Summe</b>-Funktion verwendet.)</p>
+            <div class="ocpAlert">
+              <p class="ocpAlertSection">
+                <b class="ocpNote"> Hinweis :</b> Diesen Ausdruck müssen Sie mit einer Summenabfrage verwenden. Wenn Sie die <b class="ocpLegacyBold">Format</b>-Eigenschaft des Felds auf <b class="ocpLegacyBold">Prozent</b> festlegen, darf <b class="ocpLegacyBold">*100</b> nicht enthalten sein.</p>
+            </div>
+            <p>Weitere Informationen zum Erstellen einer Summenabfrage finden Sie im Artikel <a href="Summieren-von-Daten-unter-Verwendung-einer-Abfrage-430a669b-e7fd-4c4b-b154-8c8dbbe41c8a" class="ocpArticleLink">Summieren von Daten unter Verwendung einer Abfrage</a>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>DurchschnittFrachtkosten: <a href="DomMittelwert-c7270c5d-e3b9-4f26-9615-2133a277066d" class="ocpArticleLink">DomMittelwert</a>("[Fracht]"; "[Bestellungen]") </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "DurchschnittFrachtkosten" und berechnet dann mithilfe der <b class="ocpLegacyBold">DomMittelwert</b>-Funktion die durchschnittlichen Frachtkosten für alle Bestellungen, die in einer Summenabfrage kombiniert werden.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke zum Arbeiten mit Feldern, in denen Daten fehlen (Felder mit Null-Werten)</h2>
+    <p>Die hier gezeigten Ausdrücke werden im Zusammenhang mit Feldern verwendet, in denen potenziell Daten fehlen, z. B. Felder mit Null-Werten (unbekannte bzw. nicht definierte Werte). Null-Werte kommen häufig vor, z. B. wenn ein Preis für einen neuen Artikel nicht bekannt ist oder eine Kollege vergessen hat, einen Wert zu einer Bestellung hinzuzufügen. Das Finden und Verarbeiten von Null-Werten kann ein wichtiger Teil von Datenbankvorgängen sein. Die Ausdrücke in der folgenden Tabelle zeigen gängige Möglichkeiten für den Umgang mit Null-Werten.</p>
+    <table id="tblID0EABOAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>AktuellesLandRegion:<a href="Wenn-32436ecf-c629-48a3-9900-647539c764e3" class="ocpArticleLink">Wenn</a>(<a href="IstNull-f963233b-1c1e-4b0c-8bc3-3e8c0ea67c61" class="ocpArticleLink">IstNull</a>([LandRegion]); " "; [LandRegion]) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "AktuellesLandRegion" und zeigt dann mithilfe der Funktionen <b class="ocpLegacyBold">Wenn</b> und <b class="ocpLegacyBold">IstNull</b> eine leere Zeichenfolge in diesem Feld an, wenn das Feld "LandRegion" einen Null-Wert enthält. Andernfalls wird der Inhalt des Felds "LandRegion" angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Entwicklungszeit: Wenn(IstNull([Lieferdatum] - [Versanddatum]); "Auf fehlendes Datum prüfen"; [Lieferdatum] - [Versanddatum]) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Entwicklungszeit" und zeigt dann mithilfe der Funktionen <b class="ocpLegacyBold">Wenn</b> und <b class="ocpLegacyBold">IstNull</b> die Meldung "Auf fehlendes Datum prüfen" an, wenn der Wert im Feld "Lieferdatum" oder "Versanddatum" gleich Null ist. Andernfalls wird die Differenz zwischen den Datumsangaben angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Halbjahresumsatz: <a href="Nz-8ef85549-cc9c-438b-860a-7fd9f4c69b6c" class="ocpArticleLink">Nz</a>([Quartal1Umsatz]) + Nz([Quartal2Umsatz]) </p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Halbjahresumsatz" und zeigt dann die Summe der Werte aus den Feldern "Quartal1Umsatz" und "Quartal2Umsatz" an. Zu diesem Zweck werden mithilfe der <b class="ocpLegacyBold">Nz</b>-Funktion alle Null-Werte zu Null konvertiert. </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdruck, der zum Erstellen eines berechneten Felds eine Unterabfrage verwendet</h2>
+    <p>Zum Erstellen eines berechneten Felds können Sie eine geschachtelte Abfrage, auch Unterabfrage genannt, verwenden. Der Ausdruck in der folgenden Tabelle ist ein Beispiel eines berechneten Felds, das Ergebnis einer Unterabfrage ist.</p>
+    <table id="tblID0EABNAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Kat: (SELECT [Kategoriename] FROM [Kategorien] WHERE [Artikel].[Kategorie-Nr]=[Kategorien].[Kategorie-Nr])</p>
+          </td>
+          <td>
+            <p>Erstellt ein Feld namens "Kat" und zeigt dann den Kategorienamen an, wenn das Feld "Kategorie-Nr" aus der Tabelle "Kategorien" mit dem Feld "Kategorie-Nr" aus der Tabelle "Artikel" übereinstimmt.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Kriterien definieren und Datensätze im Resultset einschränken</h2>
+    <p>Mit einem Ausdruck können Sie Kriterien für eine Abfrage definieren. Daraufhin werden von Access nur jene Zeilen zurückgegeben, die diesen Kriterien entsprechen. Die Schritte in diesem Abschnitt bieten grundlegende Informationen zum Hinzufügen von Kriterien zu einer Abfrage. Die Tabellen enthalten Beispiele für Kriterien, mit denen sich eine Übereinstimmung von Text- und Datumswerten erzielen lässt.</p>
+    <section class="ocpSection">
+      <h3>Hinzufügen von Kriterien zu einer Abfrage</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf die zu ändernde Abfrage, und klicken Sie dann im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b> 
+<img src="https://support.content.office.net/de-de/media/0d30eb28-6217-4ee7-b48d-1c26643a60d5.gif" alt="Schaltflächensymbol" title="Schaltflächensymbol" />
+.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Entwurfsbereich in der Zeile <b class="ocpUI">Kriterien</b> auf die Zelle in der Spalte, die Sie verwenden möchten, und geben Sie dann die Kriterien ein.</p>
+          <p>Wenn Sie einen größeren Bereich zum Eingeben eines Ausdrucks wünschen, drücken Sie UMSCHALT+F2, um das Feld <b class="ocpUI">Zoom</b> anzuzeigen.</p>
+          <p>– Oder –</p>
+          <p>Klicken Sie auf der Registerkarte <b class="ocpUI">Entwurf</b> in der Gruppe <b class="ocpUI">Abfragesetup</b> auf <b class="ocpUI">Generator</b> 
+<img src="https://support.content.office.net/de-de/media/9a828554-10e1-43bf-831b-d209815dfc83.gif" alt="Schaltflächensymbol" title="Schaltflächensymbol" />
+, um denAusdrucks-Generator zu starten und Ihren Ausdruck zu erstellen.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+      <div class="ocpAlert">
+        <p class="ocpAlertSection">
+          <b class="ocpNote"> Hinweis :</b> Wenn Sie Ausdrücke erstellen, mit denen Kriterien definiert werden, stellen Sie Ausdrücken keinen <b class="ocpLegacyBold">=</b>-Operator voran.</p>
+      </div>
+      <p>Weitere Informationen zur Verwendung desAusdrucks-Generators finden Sie im Artikel <a href="Erstellen-eines-Ausdrucks-893d516c-86f8-43e7-b9c1-d38c02678e5b" class="ocpArticleLink">Erstellen eines Ausdrucks</a>.</p>
+    </section>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die ganzen Textwerten oder Textteilwerten entsprechen</h2>
+    <p>Die in dieser Tabelle verwendeten Beispielausdrücke zeigen Kriterien, die ganzen Textwerten oder Textteilwerten entsprechen.</p>
+    <table id="tblID0EABLAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Lieferort</p>
+          </td>
+          <td>
+            <p>"London"</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen an, die nach London geliefert wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Lieferort </p>
+          </td>
+          <td>
+            <p>"London" Oder "Hedge End" </p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">Oder</b>-Operator, um Bestellungen anzuzeigen, die nach London oder Hedge End geliefert wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestimmungsland/-region </p>
+          </td>
+          <td>
+            <p>In("Kanada"; "GB")</p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">In</b>-Operator, um Bestellungen anzuzeigen, die nach Kanada oder Großbritannien geliefert wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestimmungsland/-region</p>
+          </td>
+          <td>
+            <p>Nicht "USA" </p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">Nicht</b>-Operator, um Bestellungen anzuzeigen, die in andere Länder/Regionen geliefert wurden als die USA.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Artikelname</p>
+          </td>
+          <td>
+            <p>Nicht wie "C*"</p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">Nicht</b>-Operator und den Platzhalter <b class="ocpLegacyBold">*</b>, um Artikel anzuzeigen, deren Namen nicht mit "C" beginnen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Firma</p>
+          </td>
+          <td>
+            <p>&gt;="N" </p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen an, die an Firmen geliefert wurden, deren Namen mit den Buchstaben N bis Z beginnen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Artikelcode</p>
+          </td>
+          <td>
+            <p>
+              <a href="Rechts-c02a18a8-b224-437e-aaba-1b785c6c61bf" class="ocpArticleLink">Rechts</a>([Artikelcode]; 2)="99" </p>
+          </td>
+          <td>
+            <p>Verwendet die <b class="ocpLegacyBold">Rechts</b>-Funktion zum Anzeigen von Bestellungen, deren Artikelcodewerte auf "99" enden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername</p>
+          </td>
+          <td>
+            <p>Wie "S*"</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen, die an Kunden geliefert wurden, deren Namen mit dem Buchstaben "S" beginnen.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Datumsangaben in Übereinstimmungskriterien verwenden</h2>
+    <p>Die Ausdrücke in der folgenden Tabelle veranschaulichen die Verwendung von Datumsangaben und verwandten Funktionen in Kriterienausdrücken.</p>
+    <p>Weitere Informationen zum Eingeben und Verwenden von Datumswerten finden Sie im Artikel <a href="Eingeben-eines-Datums-oder-Uhrzeitwerts-763b9b04-ccf8-46a8-9ee3-6d8f6fb9e2f8" class="ocpArticleLink">Eingeben eines Datums- oder Uhrzeitwerts</a>. Klicken Sie auf die Links zu den unterschiedlichen Funktionen, um sich über die Verwendung dieser Funktionen in den Beispielausdrücken zu informieren.</p>
+    <table id="tblID0EABKAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Versanddatum</p>
+          </td>
+          <td>
+            <p>#02.02.2007#</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen an, die am 2. Februar 2007 versandt wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Versanddatum</p>
+          </td>
+          <td>
+            <p>
+              <a href="Datum-dd7a1f27-d957-4969-ab35-01e0bfbfed76" class="ocpArticleLink">Datum</a>()</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen an, die heute versandt wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Lieferdatum </p>
+          </td>
+          <td>
+            <p>Zwischen Datum( ) Und <a href="DatAdd-63befdf6-1ffa-4357-9424-61e8c57afc19" class="ocpArticleLink">DatAdd</a>("m"; 3; Datum( ))</p>
+          </td>
+          <td>
+            <p>Verwendet den <b class="ocpLegacyBold">Zwischen...Und</b>-Operator sowie die Funktionen <b class="ocpLegacyBold">DatAdd</b> und <b class="ocpLegacyBold">Datum</b>, um Bestellungen anzuzeigen, die zwischen dem heutigen Datum und dem Datum in drei Monaten ab heute geliefert werden sollen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestelldatum </p>
+          </td>
+          <td>
+            <p>&lt; Datum( ) - 30 </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der <b class="ocpLegacyBold">Datum</b>-Funktion Bestellungen an, die mehr als 30 Tage zurückliegen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestelldatum</p>
+          </td>
+          <td>
+            <p>
+              <a href="Jahr-bbdfc30e-7234-43ec-ae59-9c6420ca5c54" class="ocpArticleLink">Jahr</a>([Bestelldatum])=2007 </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der <b class="ocpLegacyBold">Jahr</b>-Funktion Bestellungen mit einem Datum im Jahr 2007 an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestelldatum</p>
+          </td>
+          <td>
+            <p>
+              <a href="DatTeil-26868a79-5505-4e5a-8905-6001372223fa" class="ocpArticleLink">DatTeil</a>("q"; [Bestelldatum])=4 </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der <b class="ocpLegacyBold">DatTeil</b>-Funktion Bestellungen für das vierte Quartal an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestelldatum </p>
+          </td>
+          <td>
+            <p>
+              <a href="DatSeriell-a0128476-83a0-407c-831a-93f2b046f503" class="ocpArticleLink">DatSeriell</a>(Jahr ([Bestelldatum]); <a href="Monat-78182042-7bf0-46e9-829e-c7012f773fc5" class="ocpArticleLink">Monat</a>([Bestelldatum])+1; 1)-1 </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der Funktionen <b class="ocpLegacyBold">DatSeriell</b>, <b class="ocpLegacyBold">Jahr</b> und <b class="ocpLegacyBold">Monat</b> Bestellungen für den letzten Tag jedes Monats an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestelldatum </p>
+          </td>
+          <td>
+            <p>Jahr([Bestelldatum])= Jahr(Jetzt()) Und Monat([Bestelldatum])= Monat(Jetzt())</p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der Funktionen <b class="ocpLegacyBold">Jahr</b> und <b class="ocpLegacyBold">Monat</b> und des <b class="ocpLegacyBold">Und</b>-Operators Bestellungen für das aktuelle Jahr und den aktuellen Monat an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Versanddatum </p>
+          </td>
+          <td>
+            <p>Zwischen #05.01.2007# Und #10.01.2007# </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe des <b class="ocpLegacyBold">Zwischen...Und</b>-Operators Bestellungen an, die im Zeitraum zwischen dem 5. Januar 2007 und dem 10. Januar 2007 versandt wurden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Lieferdatum</p>
+          </td>
+          <td>
+            <p>Zwischen Datum() Und DatAdd("M"; 3; Datum()) </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe des <b class="ocpLegacyBold">Zwischen...Und</b>-Operators Bestellungen an, die zwischen dem heutigen Datum und dem Datum in drei Monaten ab heute geliefert werden sollen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Geburtsdatum</p>
+          </td>
+          <td>
+            <p>Monat([Geburtsdatum])=Monat(Datum())</p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der Funktionen <b class="ocpLegacyBold">Monat</b> und <b class="ocpLegacyBold">Datum</b> die Angestellten an, die in diesem Monat Geburtstag haben.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die einem fehlenden Wert (Null-Wert) oder einer Zeichenfolge der Länge Null entsprechen</h2>
+    <p>Die Ausdrücke in der folgenden Tabelle werden im Zusammenhang mit Feldern verwendet, in denen potenziell Daten fehlen, z. B. Felder mit Null-Werten oder Zeichenfolgen der Länge Null. Ein Null-Wert gibt an, dass keine Daten vorhanden sind. Er stellt weder eine Null noch einen anderen Wert dar. Access unterstützt dieses Konzept von fehlenden Daten, da es wichtig für die Integrität einer Datenbank ist. In der Praxis kommt es häufig vor, dass Daten fehlen, wenn auch nur zeitweise (z. B. wenn der Preis für ein neues Produkt noch nicht feststeht). Daher müssen in einer Datenbank, mit der eine reale Entität modelliert wird, z. B. ein Unternehmen, fehlende Daten erfasst werden können. Mithilfe der <b class="ocpLegacyBold">IstNull</b>-Funktion können Sie bestimmen, ob ein Feld oder Steuerelement einen Null-Wert enthält. Die <b class="ocpLegacyBold">Nz</b>-Funktion ermöglicht das Konvertieren eines Null-Werts zu Null.</p>
+    <table id="tblID0EABJAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Lieferregion </p>
+          </td>
+          <td>
+            <p>Ist Null</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen für Kunden an, bei denen das Feld "Lieferregion" gleich Null ist (fehlender Wert).</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Lieferregion </p>
+          </td>
+          <td>
+            <p>Ist Nicht Null</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen für Kunden an, bei denen das Feld "Lieferregion" einen Wert enthält.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Fax </p>
+          </td>
+          <td>
+            <p>""</p>
+          </td>
+          <td>
+            <p>Zeigt Bestellungen für Kunden an, die über kein Faxgerät verfügen. Dies wird nicht durch einen Null-Wert (fehlend), sondern durch eine Zeichenfolge der Länge Null im Feld "Fax" angegeben.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Datensätze mithilfe von Mustern zuordnen</h2>
+    <p>Der <b class="ocpLegacyBold">Wie</b>-Operator bietet ein hohes Maß an Flexibilität, wenn Sie versuchen, Zeilen zuzuordnen, die einem Muster entsprechen. Sie können den <b class="ocpLegacyBold">Wie</b>-Operator mit Platzhalterzeichen verwenden sowie Muster definieren, mit denen in Access eine Übereinstimmung erzielt werden soll. Der Platzhalter <b class="ocpLegacyBold">*</b> (Sternchen) entspricht einer Abfolge von Zeichen beliebigen Typs und erleichtert die Suche nach Namen, die mit einem Buchstaben beginnen. Sie können z. B. mit dem Ausdruck <b class="ocpLegacyBold">Wie "S*"</b> alle Namen finden, die mit "S" beginnen.</p>
+    <p>Weitere Informationen finden Sie im Artikel <a href="WieOperator-b2f7ef03-9085-4ffb-9829-eef18358e931" class="ocpArticleLink">Wie-Operator</a>.</p>
+    <table id="tblID0EABIAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Liefername </p>
+          </td>
+          <td>
+            <p>Wie "S*" </p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die mit "S" beginnen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername</p>
+          </td>
+          <td>
+            <p>Wie "*Importe" </p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die auf "Importe" enden.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername</p>
+          </td>
+          <td>
+            <p>Wie "[A-D]*"</p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die mit den Buchstaben A, B, C oder D beginnen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername</p>
+          </td>
+          <td>
+            <p>Wie "*ar*"</p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die die Buchstabenfolge "ar" enthalten.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername</p>
+          </td>
+          <td>
+            <p>Wie "Maison Dewe?"</p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die im ersten Teil des Werts das Wort "Maison" enthalten und darüber hinaus eine fünfstellige Zeichenfolge, deren erste vier Buchstaben "Dewe" lauten und deren letztes Zeichen unbekannt ist.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Liefername </p>
+          </td>
+          <td>
+            <p>Nicht wie "A*"</p>
+          </td>
+          <td>
+            <p>Ruft alle Datensätze im Feld "Liefername" ab, die nicht mit "A" beginnen.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Zeilen auf Grundlage des Ergebnisses einer Domänenaggregatfunktion zuordnen</h2>
+    <p>Sie verwenden eine Domänenaggregatfunktion, wenn Sie für Werte selektiv eine Summe, die Anzahl oder einen Mittelwert berechnen möchten. Sie können beispielsweise nur die Werte zählen, die in einem bestimmten Bereich liegen oder die zu "Ja" ausgewertet werden. Eine andere Möglichkeit wäre, einen Wert in einer anderen Tabelle nachzuschlagen, um ihn anzeigen zu können. Bei den Beispielausdrücken in der folgenden Tabelle wird mithilfe der Domänenaggregatfunktionen eine Berechnung für eine Gruppe von Werten durchgeführt und das Ergebnis als Abfragekriterium verwendet.</p>
+    <table id="tblID0EABHAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Beschreibung</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Fracht </p>
+          </td>
+          <td>
+            <p>&gt; (DomStAbw("[Fracht]"; "Bestellungen") + <a href="DomMittelwert-c7270c5d-e3b9-4f26-9615-2133a277066d" class="ocpArticleLink">DomMittelwert</a>("[Fracht]"; "Bestellungen"))</p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der Funktionen <b class="ocpLegacyBold">DomStAbw</b> und <b class="ocpLegacyBold">DomMittelwert</b> alle Bestellungen an, bei denen die Frachtkosten den Mittelwert überstiegen haben. Außerdem wird die Standardabweichung der Frachtkosten angezeigt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Anzahl </p>
+          </td>
+          <td>
+            <p>&gt; DomMittelwert("[Anzahl]"; "[Bestelldetails]") </p>
+          </td>
+          <td>
+            <p>Zeigt mithilfe der <b class="ocpLegacyBold">DomMittelwert</b>-Funktion Artikel an, deren Anzahl bei Bestellungen die durchschnittliche Bestellmenge übersteigt.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die Zeilen auf Grundlage der Ergebnisse von Unterabfragen zuordnen</h2>
+    <p>Mit einer Unterabfrage, auch als geschachtelte Abfrage bezeichnet, berechnen Sie einen Wert, um ihn als Kriterium zu verwenden. Die Beispielausdrücke in der folgenden Tabelle ordnen Zeilen auf Grundlage der Ergebnisse zu, die von einer Unterabfrage zurückgegeben werden.</p>
+    <table id="tblID0EABGAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Anzeige</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Einzelpreis </p>
+          </td>
+          <td>
+            <p>(SELECT [Einzelpreis] FROM [Artikel] WHERE [Artikelname] = "Anissirup") </p>
+          </td>
+          <td>
+            <p>Artikel, deren Preis dem Preis von Anissirup entspricht.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Einzelpreis </p>
+          </td>
+          <td>
+            <p>&gt;(SELECT AVG([Einzelpreis]) FROM [Artikel]) </p>
+          </td>
+          <td>
+            <p>Artikel, deren Einzelpreis über dem Durchschnittspreis liegt.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Gehalt </p>
+          </td>
+          <td>
+            <p>&gt; ALL (SELECT [Gehalt] FROM [Personal] WHERE ([Position] LIKE "*Leitender Angestellter*") OR ([Position] LIKE "*Stellv. Vorsitzender*")) </p>
+          </td>
+          <td>
+            <p>Gehalt jedes Vertriebsmitarbeiters, dessen Gehalt höher ist als das Gehalt der Mitarbeiter, deren Position die Angaben "Leitender Angestellter" oder "Stellv. Vorsitzender" enthält.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Bestellsumme: [Einzelpreis] * [Anzahl]</p>
+          </td>
+          <td>
+            <p>&gt; (SELECT AVG([Einzelpreis] * [Anzahl]) FROM [Bestelldetails]) </p>
+          </td>
+          <td>
+            <p>Bestellungen, deren Summen den durchschnittlichen Bestellwert übersteigen.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke für Aktualisierungsabfragen</h2>
+    <p>Mit einer Aktualisierungsabfrage können Sie die Daten in einem oder mehreren vorhandenen Feldern in einer Datenbank ändern. Sie können beispielsweise Werte ersetzen oder vollständig löschen. In dieser Tabelle werden einige Verwendungsmöglichkeiten für Ausdrücke in Aktualisierungsabfragen gezeigt. Sie verwenden diese Ausdrücke in der Zeile <b class="ocpUI">Aktualisieren</b> im Abfrageentwurfsbereich für das Feld, das Sie aktualisieren möchten.</p>
+    <p>Weitere Informationen zum Erstellen von Aktualisierungsabfragen finden Sie im Artikel <a href="Erstellen-und-Ausführen-einer-Aktualisierungsabfrage-9dddc97c-f17d-43f4-a729-35e5ee1e0514" class="ocpArticleLink">Erstellen und Ausführen einer Aktualisierungsabfrage</a>.</p>
+    <table id="tblID0EABFAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Feld</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ausdruck</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>Position</p>
+          </td>
+          <td>
+            <p>"Verkaufsberater/in"</p>
+          </td>
+          <td>
+            <p>Ändert einen Textwert in "Verkaufsberater/in".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Projektbeginn</p>
+          </td>
+          <td>
+            <p>#10.08.07#</p>
+          </td>
+          <td>
+            <p>Ändert einen Datumswert in den 10. August 2007.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Zurückgezogen</p>
+          </td>
+          <td>
+            <p>Ja</p>
+          </td>
+          <td>
+            <p>Ändert in einem Feld vom Datentyp "Ja/Nein" einen Wert "Nein" in "Ja".</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Teilenummer</p>
+          </td>
+          <td>
+            <p>"TN" &amp; [Teilenummer]</p>
+          </td>
+          <td>
+            <p>Fügt "TN" am Anfang jeder angegebenen Teilenummer hinzu.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Postensumme</p>
+          </td>
+          <td>
+            <p>[Einzelpreis] * [Anzahl]</p>
+          </td>
+          <td>
+            <p>Berechnet das Produkt aus Einzelpreis und Anzahl.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Fracht</p>
+          </td>
+          <td>
+            <p>[Fracht] * 1,5</p>
+          </td>
+          <td>
+            <p>Erhöht die Frachtkosten um 50 Prozent.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Umsatz</p>
+          </td>
+          <td>
+            <p>
+              <a href="DomSumme-08f8450e-3bf6-45e2-936f-386056e61a32" class="ocpArticleLink">DomSumme</a>("[Anzahl] * [Einzelpreis]";<br />"Bestelldetails"; "[Artikel-Nr]=" &amp; [Artikel-Nr])</p>
+          </td>
+          <td>
+            <p>Wo die Werte für "Artikel-Nr" in der aktuellen Tabelle den Werten für "Artikel-Nr" in der Tabelle "Bestelldetails" entsprechen, wird der Gesamtumsatz auf Basis des Produkts aus Anzahl und Einzelpreis aktualisiert.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>BestimmungsortPLZ</p>
+          </td>
+          <td>
+            <p>
+              <a href="Rechts-c02a18a8-b224-437e-aaba-1b785c6c61bf" class="ocpArticleLink">Rechts</a>([BestimmungsortPLZ]; 5)</p>
+          </td>
+          <td>
+            <p>Schneidet die linken Zeichen ab und belässt die fünf rechten Zeichen.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Einzelpreis</p>
+          </td>
+          <td>
+            <p>
+              <a href="Nz-8ef85549-cc9c-438b-860a-7fd9f4c69b6c" class="ocpArticleLink">Nz</a>([Einzelpreis])</p>
+          </td>
+          <td>
+            <p>Ändert einen Null-Wert (nicht definiert oder unbekannt) im Feld "Einzelpreis" in eine Null (0).</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="ocpSection">
+    <h2>Ausdrücke, die in SQL-Anweisungen verwendet werden</h2>
+    <p>SQL (Structured Query Language) ist die von Access verwendete Abfragesprache. Jede Abfrage, die Sie in der Abfrageentwurfsansicht erstellen, kann auch in SQL ausgedrückt werden. Klicken Sie im Menü <b class="ocpUI">Ansicht</b> auf <b class="ocpUI">SQL-Ansicht</b>, um die SQL-Anweisung für eine Abfrage anzuzeigen. In der folgenden Tabelle werden Beispiele für SQL-Anweisungen angezeigt, die einen Ausdruck verwenden.</p>
+    <table id="tblID0EBBEAAA" class="banded">
+      <thead>
+        <tr>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">SQL-Anweisung, die einen Ausdruck verwendet</b>
+            </p>
+          </td>
+          <td>
+            <p>
+              <b class="ocpLegacyBold">Ergebnis</b>
+            </p>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>SELECT [Vorname],[Nachname] FROM [Personal] WHERE [Nachname]="Danseglio"</p>
+          </td>
+          <td>
+            <p>Zeigt die Werte in den Feldern "Vorname" und "Nachname" für Angestellte an, deren Nachname Danseglio lautet.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>SELECT [Artikel-Nr],[Artikelname] FROM [Artikel] WHERE [Kategorie-Nr]=Formulare![Neue Artikel]![Kategorie-Nr];</p>
+          </td>
+          <td>
+            <p>Zeigt die Werte aus den Feldern "Artikel-Nr" und "Artikelname" in der Tabelle "Artikel" für die Datensätze an, bei denen der Wert im Feld "Kategorie-Nr" mit dem Wert übereinstimmt, der im Feld "Kategorie-Nr" eines geöffneten Formulars "Neue Artikel" angegeben ist.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>SELECT Avg([Erweiterter Preis]) AS [Durchschnittlicher erweiterter Preis] FROM [Erweiterte Bestelldetails] WHERE [Erweiterter Preis]&gt;1000; </p>
+          </td>
+          <td>
+            <p>Berechnet den durchschnittlichen erweiterten Preis für Bestellungen, bei denen der Wert im Feld "Erweiterter Preis" die Zahl 1000 übersteigt, und zeigt ihn in einem Feld namens "Durchschnittlicher erweiterter Preis" an.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>SELECT [Kategorie-Nr], Anzahl([Artikel-Nr]) AS [AnzahlArtikel-Nr] FROM [Artikel] GROUP BY [Kategorie-Nr] HAVING Anzahl([Artikel-Nr])&gt;10; </p>
+          </td>
+          <td>
+            <p>Zeigt in einem Feld namens "AnzahlArtikel-Nr" die Gesamtanzahl der Artikel für Kategorien an, die mehr als zehn Artikel enthalten.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+    </p>
+  </section>
+  <a name="bm4" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Beispiele für Standardwertausdrücke</h2>
+    <p>Beim Entwerfen einer Datenbank haben Sie die Möglichkeit, einem Feld oder Steuerelement einen Standardwert zuzuweisen. Access stellt dann diesen Wert bereit, sobald ein neuer Datensatz mit dem Feld bzw. ein Objekt mit dem Steuerelement erstellt wird. Die Ausdrücke in der folgenden Tabelle stellen Beispielstandardwerte für ein Feld oder Steuerelement dar.</p>
+    <section class="ocpSection">
+      <h3>Hinzufügen eines Standardwerts für ein Feld in einer Tabelle</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf die Tabelle, die Sie ändern möchten, und klicken Sie im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b>.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie auf das Feld, das Sie ändern möchten, und klicken Sie dann auf der Registerkarte <b class="ocpUI">Allgemein</b> auf das Feld für die Eigenschaft <b class="ocpUI">Standardwert</b>.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Geben Sie den Ausdruck ein, oder klicken Sie auf die Schaltfläche <b class="ocpUI">Generator</b> 
+<img src="https://support.content.office.net/de-de/media/d5f9f47b-bca3-42bd-9772-96ff011602bd.gif" alt="Schaltfläche &quot;Generator&quot;" title="Schaltfläche &quot;Generator&quot;" /> 
+ rechts vom Eigenschaftenfeld, um einen Ausdruck mithilfe des Ausdrucks-Generators zu erstellen.</p>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+      <p>Wenn ein Steuerelement an ein Feld in einer Tabelle gebunden ist und das Feld über einen Standardwert verfügt, hat der Standardwert des Steuerelements Vorrang.</p>
+      <table id="tblID0EBBAADAAA" class="banded">
+        <thead>
+          <tr>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Feld</b>
+              </p>
+            </td>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Ausdruck</b>
+              </p>
+            </td>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Standardfeldwert</b>
+              </p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>Anzahl </p>
+            </td>
+            <td>
+              <p>1</p>
+            </td>
+            <td>
+              <p>1</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Region</p>
+            </td>
+            <td>
+              <p>"MT"</p>
+            </td>
+            <td>
+              <p>MT</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Region</p>
+            </td>
+            <td>
+              <p>"New York, N.Y."</p>
+            </td>
+            <td>
+              <p>New York, N.Y. (Beachten Sie, dass Sie den Wert in Anführungszeichen setzen müssen, wenn er Satzzeichen enthält.)</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Fax </p>
+            </td>
+            <td>
+              <p>""</p>
+            </td>
+            <td>
+              <p>Eine Zeichenfolge der Länge Null , die angibt, dass das Feld leer sein soll, statt einen Null-Wert zu enthalten.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Bestelldatum </p>
+            </td>
+            <td>
+              <p>
+                <a href="Datum-dd7a1f27-d957-4969-ab35-01e0bfbfed76" class="ocpArticleLink">Datum</a>( ) </p>
+            </td>
+            <td>
+              <p>Aktuelles Datum</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Fälligkeitsdatum</p>
+            </td>
+            <td>
+              <p>Datum() + 60</p>
+            </td>
+            <td>
+              <p>Das Datum 60 Tage ab heute.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+      </p>
+    </section>
+  </section>
+  <a name="bm5" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Beispiele für Feldgültigkeitsregel-Ausdrücke</h2>
+    <p>Mithilfe eines Ausdrucks können Sie eine Gültigkeitsregel für ein Feld oder ein Steuerelement erstellen. Die Regel wird von Access erzwungen, wenn Daten in das Feld oder Steuerelement eingegeben werden. Zum Erstellen einer Gültigkeitsregel ändern Sie die <b class="ocpLegacyBold">Gültigkeitsregel</b>-Eigenschaft des Felds oder Steuerelements. Es empfiehlt sich außerdem, die <b class="ocpLegacyBold">Gültigkeitsmeldung</b>-Eigenschaft festzulegen, die den Text enthält, der bei einer Verletzung der Gültigkeitsregel in Access angezeigt wird. Wenn Sie die <b class="ocpLegacyBold">Gültigkeitsmeldung</b>-Eigenschaft nicht festlegen, zeigt Access eine Standardfehlermeldung an.</p>
+    <section class="ocpSection">
+      <h3>Hinzufügen einer Gültigkeitsregel zu einem Feld</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf die Tabelle, die Sie ändern möchten, und klicken Sie im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b>.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie auf das Feld, das Sie ändern möchten.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie auf das Feld der <b class="ocpUI">Gültigkeitsregel</b>-Eigenschaft im unteren Abschnitt des Tabellen-Designers.</p>
+          <meta itemprop="position" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Geben Sie den Ausdruck ein, oder klicken Sie auf die Schaltfläche <b class="ocpUI">Generator</b> 
+<img src="https://support.content.office.net/de-de/media/d5f9f47b-bca3-42bd-9772-96ff011602bd.gif" alt="Schaltfläche &quot;Generator&quot;" title="Schaltfläche &quot;Generator&quot;" /> 
+ rechts vom Eigenschaftenfeld, um einen Ausdruck mithilfe desAusdrucks-Generators zu erstellen.</p>
+          <div class="ocpAlert">
+            <p class="ocpAlertSection">
+              <b class="ocpNote"> Hinweis :</b> Stellen Sie dem Ausdruck nicht den Operator <b class="ocpLegacyBold">=</b> voran, wenn Sie eine Gültigkeitsregel erstellen.</p>
+          </div>
+          <meta itemprop="position" content="4" />
+        </li>
+      </ol>
+      <p>Die Beispiele in der folgenden Tabelle veranschaulichen die Gültigkeitsregelausdrücke für die <b class="ocpLegacyBold">Gültigkeitsregel</b>-Eigenschaft und den zugehörigen Text für die <b class="ocpLegacyBold">Gültigkeitsmeldung</b>-Eigenschaft.</p>
+      <table id="tblID0ECBAACAAA" class="banded">
+        <thead>
+          <tr>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Gültigkeitsregel-Eigenschaft</b>
+              </p>
+            </td>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Gültigkeitsmeldung-Eigenschaft</b>
+              </p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>&lt;&gt; 0 </p>
+            </td>
+            <td>
+              <p>Bitte geben Sie einen Wert ungleich Null ein.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>0 Oder &gt; 100 </p>
+            </td>
+            <td>
+              <p>Der Wert muss gleich 0 oder größer als 100 sein.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <a href="Wie-b2f7ef03-9085-4ffb-9829-eef18358e931" class="ocpArticleLink">Wie</a> "K???" </p>
+            </td>
+            <td>
+              <p>Der Wert muss 4 Zeichen lang sein und mit dem Buchstaben K beginnen.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>&lt; #01.01.2007# </p>
+            </td>
+            <td>
+              <p>Geben Sie ein Datum ein, das vor dem 01.01.2007 liegt.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>&gt;= #01.01.2007# Und &lt; #01.01.2008# </p>
+            </td>
+            <td>
+              <p>Geben Sie ein Datum aus dem Jahr 2007 ein.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Weitere Informationen zum Überprüfen von Daten finden Sie im Artikel <a href="Erstellen-einer-Gültigkeitsregel-zum-Überprüfen-von-Daten-in-einem-Feld-b91c6b15-bcd3-42c1-90bf-e3a0272e988d" class="ocpArticleLink">Erstellen einer Gültigkeitsregel zum Überprüfen von Daten in einem Feld</a>.</p>
+      <p>
+        <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+      </p>
+    </section>
+  </section>
+  <a name="bm6" aria-hidden="true">	</a>
+  <section class="ocpSection">
+    <h2>Beispiele für Makrobedingungsausdrücke</h2>
+    <p>Sie möchten möglicherweise in einigen Fällen eine Aktion oder eine Reihe von Aktionen in einem Makro nur dann ausführen, wenn eine bestimmte Bedingung erfüllt ist. Angenommen, eine Aktion soll nur dann ausgeführt werden, wenn der Wert im Feld "Zähler" gleich "10" ist. Zum Definieren der Bedingung in der Spalte <b class="ocpUI">Bedingung</b> des Makros verwenden Sie einen Ausdruck: <b class="ocpLegacyBold">[Zähler]=10</b>.</p>
+    <section class="ocpSection">
+      <h3>Hinzufügen einer Bedingung für eine Makroaktion</h3>
+      <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie im Navigationsbereich mit der rechten Maustaste auf das zu ändernde Makro, und klicken Sie im Kontextmenü auf <b class="ocpUI">Entwurfsansicht</b>.</p>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Wenn die Spalte <b class="ocpUI">Bedingung</b> nicht im Makro-Designer angezeigt wird, klicken Sie auf der Registerkarte <b class="ocpUI">Entwurf</b> in der Gruppe <b class="ocpUI">Einblenden/Ausblenden</b> auf <b class="ocpUI">Bedingungen</b>.</p>
+          <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Klicken Sie für die Makroaktion, die Sie ändern möchten, auf die Zelle <b class="ocpUI">Bedingung</b>, und geben Sie dann den bedingten Ausdruck ein.</p>
+          <meta itemprop="position" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <p itemprop="name">Speichern Sie die Änderungen, und schließen Sie das Makro.</p>
+          <meta itemprop="position" content="4" />
+        </li>
+      </ol>
+      <p>Wie die <b class="ocpLegacyBold">Gültigkeitsregel</b>-Eigenschaft ist auch der Spaltenausdruck <b class="ocpUI">Bedingung</b> ein bedingter Ausdruck, der den Wert "Wahr" oder "Falsch" ergeben muss. Die Aktion wird nur ausgeführt, wenn die Bedingung erfüllt ist.</p>
+      <table id="tblID0ECBAABAAA" class="banded">
+        <thead>
+          <tr>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Zum Ausführen der Aktion verwendender Ausdruck</b>
+              </p>
+            </td>
+            <td>
+              <p>
+                <b class="ocpLegacyBold">Bedingung</b>
+              </p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <p>[Ort]="Paris" </p>
+            </td>
+            <td>
+              <p>Führt die Aktion aus, wenn "Paris" der Wert im Feld "Ort" des Formulars ist, aus dem das Makro ausgeführt wird.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <a href="DomAnzahl-f6b5d78b-ad0b-4e42-be7a-11a64acbf3d3" class="ocpArticleLink">DomAnzahl</a>("[Bestell-Nr]"; "Bestellungen") &gt; 35 </p>
+            </td>
+            <td>
+              <p>Führt die Aktion aus, wenn das Feld "Bestell-Nr" in der Tabelle "Bestellungen" mehr als 35 Einträge enthält.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>DomAnzahl("*"; "[Bestelldetails]"; "[Bestell-Nr]=" &amp; Formulare![Bestellungen]![Bestell-Nr]) &gt; 3 </p>
+            </td>
+            <td>
+              <p>Führt die Aktion aus, wenn im Feld "Bestell-Nr" der Tabelle "Bestelldetails" mehr als drei Einträge enthalten sind, für die es im Feld "Bestell-Nr" im Formular "Bestellungen" identische Einträge gibt.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>[Versanddatum] Zwischen #2-Feb-2007# Und #2-Mrz-2007# </p>
+            </td>
+            <td>
+              <p>Führt die Aktion aus, wenn der Wert im Feld "Versanddatum" des Formulars, aus dem das Makro ausgeführt wird, nicht vor dem 2. Februar 2007 und nicht nach dem 2. März 2007 liegt.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Formulare![Artikel]![Lagerbestand] &lt; 5 </p>
+            </td>
+            <td>
+              <p>Führt die Aktion aus, wenn der Wert im Feld "Lagerbestand" des Formulars "Artikel" kleiner als 5 ist.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <a href="IstNull-f963233b-1c1e-4b0c-8bc3-3e8c0ea67c61" class="ocpArticleLink">IstNull</a>([Vorname]) </p>
+            </td>
+            <td>
+              <p>Der Wert im Feld "Vorname" des Formulars, aus dem das Makro ausgeführt wird, ist gleich Null (d. h. das Feld enthält keinen Wert). Dieser Ausdruck entspricht dem Ausdruck "[Vorname] Ist Null".</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>[LandRegion]="GB" Und Formulare![Gesamtumsatz]![Gesamtbestellungen] &gt; 100 </p>
+            </td>
+            <td>
+              <p>Der Wert im Feld "LandRegion" des Formulars, aus dem das Makro ausgeführt wird, lautet "GB", und der Wert im Feld "Gesamtbestellungen" des Formulars "Gesamtumsatz" ist größer als 100.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>[LandRegion] In ("Frankreich"; "Italien"; "Spanien") Und <a href="Länge-8282adcf-4e26-4ebd-87ed-73af04b0cf36" class="ocpArticleLink">Länge</a>([PLZ])&lt;&gt;5 </p>
+            </td>
+            <td>
+              <p>Der Wert im Feld "LandRegion" des Formulars, aus dem das Makro ausgeführt wird, lautet entweder "Frankreich", "Italien" oder "Spanien", und der Wert im Feld "PLZ" ist keine 5 Zeichen lang.</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Meldung("Änderungen bestätigen?";1)=1 </p>
+            </td>
+            <td>
+              <p>Sie klicken in einem Dialogfeld auf <b class="ocpUI">OK</b>, in dem die <b class="ocpLegacyBold">Meldung</b>-Funktion angezeigt wird. Wenn Sie in dem Dialogfeld auf <b class="ocpUI">Abbrechen</b> klicken, ignoriert Access die Aktion.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ocpAlert">
+        <p class="ocpAlertSection">
+          <b class="ocpNote"> Hinweis :</b> Um zu erzwingen, dass Access eine Aktion vorübergehend ignoriert, geben Sie <b class="ocpLiteral">Falsch</b> als eine Bedingung ein. Das vorübergehende Ignorieren einer Aktion kann hilfreich sein, wenn Sie versuchen, Probleme in einem Makro zu ermitteln.</p>
+      </div>
+      <p>
+        <a href="#top" class="ocpTopOfPage">Seitenanfang</a>
+      </p>
+    </section>
+  </section>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+		</section>
+
+		<div id="ocFooterWrapper">
+			
+
+
+	<section class="">
+		<div class="">
+			<div class=""></div>
+			<div class="ocNoLeftNavArticleFooter">
+					<div class="ocArticleFooterShareContainer">
+						<div class="ocArticleFooterShareLinksWrapper">
+							<a id="ocFacebookButton" class="ocShareButton" target="_blank" href="https://www.facebook.com/sharer.php?u=https://support.office.com/de-de/article/Beispiele-f%25C3%25BCr-Ausdr%25C3%25BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f" ms.interactiontype="1" ms.ea_offer="SOC" data-bi-bhvr="SOCIALSHARE">
+								<img class="ocArticleFooterImage" src="/Images/SOC-Facebook.png" alt="Facebook" />
+							</a>
+							<a id="ocTwitterButton" class="ocShareButton" target="_blank" href="https://linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fsupport.office.com%2fde-de%2farticle%2fBeispiele-f%2525C3%2525BCr-Ausdr%2525C3%2525BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f&amp;title=Beispiele+f%c3%bcr+Ausdr%c3%bccke" ms.interactiontype="1" ms.ea_offer="SOC" data-bi-bhvr="SOCIALSHARE">
+								<img class="ocArticleFooterImage" src="/Images/SOC-Linkedin.png" alt="LinkedIn" />
+							</a>
+							<a id="ocEmailButton" class="ocShareButton" data-name="Ich glaube, dass Sie dies interessieren k&#246;nnte: Beispiele f&#252;r Ausdr&#252;cke" href="mailto://?subject=Ich glaube, dass Sie dies interessieren k&#246;nnte: Beispiele f&#252;r Ausdr&#252;cke&amp;body=Beispiele f&#252;r Ausdr&#252;cke%0Ahttps://support.office.com/de-de/article/Beispiele-f%25C3%25BCr-Ausdr%25C3%25BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f" ms.interactiontype="1" ms.ea_offer="SOC" data-bi-bhvr="SOCIALSHARE">
+								<img class="ocArticleFooterImage" src="/Images/SOC-Mail.png" alt="E-Mail" />
+							</a>
+						</div>
+					</div>
+				<div class="ocArticleFooterSection">
+					<div class="ocArticleFooterElementContainer">
+													<div class="ocArticleFooterElement">
+								<div class="ocArticleFooterElementTitle">
+									Ihre F&#228;higkeiten erweitern
+								</div>
+								<a class="ocArticleFooterElementCallToAction" href="/de-DE/article/b8f02f81-ec85-4493-a39b-4c48e6bc4bfb">Schulung erkunden</a>
+							</div>
+													<div class="ocArticleFooterElement">
+								<div class="ocArticleFooterElementTitle">
+									Neue Funktionen als Erster erhalten
+								</div>
+								<a class="ocArticleFooterElementCallToAction" href="/de-DE/article/f4208185-b63a-4b68-9c7a-9a32d2411c16">An Office Insider teilnehmen</a>
+							</div>
+						<div class="ocArticleFooterElement ocArticleFooterClearfix">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+				<div id="supWrapperToPreventFeedbackFlickering">
+					<section id="supFeedbackWrapper">
+						<div id="supColumnWrapper">
+							
+	
+
+<div id="supFeedBackContainer">
+	<section id="supFB" class="ocFB">
+		<div id="supFBCont">
+			<form name="smartFeedbackForm" class="smartFeedbackForm supStickyFeedbackMarginBottom" data-sentiment-analysis=true data-support-available=true>
+				<input name="__RequestVerificationToken" type="hidden" value="B-LPjRQUJDvz3co7IMtdFTnLR4d_nKJLqa6hcCpTZ_w9Ey-ia9aJdvN1bkAhaxvWsvTDdafKYphpXG95HRLttlpcUmkO3LJbCXA4Xt8T82M1" />
+				<div class="ocSmartFeedbackBegin" role="region">
+					<div id="beginFeedbackHeader" class="supStickyFeedbackHeader">
+						<h2>War diese Information hilfreich?</h2>
+					</div>
+					<div class="feedbackButtons">
+						<button class="ocFeedbackButton supStickyFeedbackButton feedbackSelection" name="buttonYes" type="button" data-bi-dnt>Ja</button>
+						<button class="ocFeedbackButton supStickyFeedbackButton feedbackSelection" name="buttonNo" type="button" data-bi-dnt>Nein</button>
+					</div>
+				</div>
+				<div class="ocSmartFeedbackReply ocHidden">
+					<div class="supStickyFeedbackHeader">
+						<label for="feedbackText" class="ocFeedbackHeaderIfArticleHelpful ocHidden">Sehr gut. Noch anderes Feedback?</label>
+						<label for="feedbackText" class="ocFeedbackHeaderIfArticleNotHelpful ocHidden">Was k&#246;nnen wir verbessern?</label>
+					</div>
+					<textarea class="ocSmartFeedbackTextArea" name="feedbackText" rows="6" cols="40" maxlength="250" required></textarea>
+					<div class="feedbackButtons">
+						<button class="ocFeedbackButton supStickyFeedbackButton ocButtonSendComment" type="submit" data-bi-dnt>Senden</button>
+						<button class="ocFeedbackButton supStickyFeedbackButton ocButtonSendNoComment" type="button" data-bi-dnt>Nein, danke.</button>
+					</div>
+				</div>
+			</form>
+			<div class="ocFeedbackFinalThankYouMessage ocHidden supStickyFeedbackHeader supStickyFeedbackMarginBottom">
+				<h2>Vielen Dank f&#252;r Ihr Feedback!</h2>
+			</div>
+			<div class="ocFeedbackToChat ocHidden supStickyFeedbackHeader supStickyFeedbackMarginBottom">
+				<h2>Vielen Dank f&#252;r Ihr Feedback. Es klingt, als ob es hilfreich sein k&#246;nnte, Sie mit einem unserer Office-Supportmitarbeiter zu verbinden.</h2>
+				<div class="feedbackButtons">
+					<a class="smartFeedbackChatLink ocFeedbackButton" target="_top">Support kontaktieren</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+							<a href='javascript:' id="supDisableStickyFeedbackButton" class="ocHidden" ms.interactiontype="11" aria-label="Klicken Sie, um Haftbanner f&#252;r Feedback zu deaktivieren.">&times;</a>
+						</div>
+					</section>
+				</div>
+
+			
+						
+
+    <section id="footerArea"  data-m='{"cN":"footerArea","cT":"Area_coreuiArea","id":"a2Body","sN":2,"aN":"Body"}'>
+                    <div id="footerRegion"     data-region-key="footerregion" data-m='{"cN":"footerRegion","cT":"Region_coreui-region","id":"r1a2","sN":1,"aN":"a2"}' >
+
+    <div  id="footerUniversalFooter" data-m='{"cN":"footerUniversalFooter","cT":"Module_coreui-universalfooter","id":"m1r1a2","sN":1,"aN":"r1a2"}'  data-module-id="Category|footerRegion|footerRegion|footerUniversalFooter|coreui-universalfooter">
+        
+
+
+
+<footer id="uhf-footer" class="c-universal-footer context-uhf" data-uhf-green-id="false" data-footer-footprint="de-de/officesupport/officesupportfooter" ms.pgarea='Uhf footer' >
+        <nav role="navigation" aria-label="Fu&#223;zeile" ms.cmpgrp='Footer nav'>
+            
+                <div>
+                        <div ms.cmpnm='Neuigkeiten'>
+                            <h6 class="c-heading-4">Neuigkeiten</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/surface/devices/surface-pro/overview" ms.title='Footer_WhatsNew_NewSurfacePro'>Das neue Surface Pro</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.xbox.com/de-de/xbox-one-x" ms.title='Footer_WhatsNew_XboxOneX'>Xbox One X</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.xbox.com/de-de/xbox-one-s?xr=shellnav" ms.title='Footer_WhatsNew_XboxOneS'>Xbox One S</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/surface/devices/surface-laptop/overview" ms.title='Footer_WhatsNew_SurfaceLaptop'>Surface Laptop</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/windows/windows-10-apps" ms.title='Footer_WhatsNew_Windows_10_apps'>Windows 10-Apps</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://store.office.com/de-de/appshome.aspx?" ms.title='Footer_WhatsNew_OfficeApps'>Office-Anwendungen</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.xbox.com/de-de/mixer" ms.title='Footer_WhatsNew_Mixer'>Mixer</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div ms.cmpnm='Store & Support'>
+                            <h6 class="c-heading-4">Store &amp; Support</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://account.microsoft.com/" ms.title='Footer_StoreandSupport_AccountProfile'>Kontoprofil</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/download" ms.title='Footer_StoreandSupport_DownloadCenter'>Download Center</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkID=824761&amp;clcid=0x407" ms.title='Footer_StoreandSupport_SalesAndSupport'>Vertrieb &amp; Support</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x407" ms.title='MicrosoftStore_Returns'>R&#252;ckgaben</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://account.microsoft.com/orders" ms.title='Footer_StoreandSupport_OrderTracking'>Bestellnachverfolgung</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/store/b/recycling?icid=GlobalFooterNav" ms.title='Footer_Recyclying'>Abfallverwertung</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/store/b/aboutwarranties?icid=GlobalFooterNav" ms.title='Footer_Warranties'>Weitere Informationen</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div ms.cmpnm='Bildungswesen
+'>
+                            <h6 class="c-heading-4">Bildungswesen
+</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/education" ms.title='Footer_Education_MicrosoftInEducation'>Microsoft Bildung</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/education/products/office/default.aspx" ms.title='Footer_Education_OfficeForStudents'>Office f&#252;r Studenten</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://products.office.com/de-de/academic/compare-office-365-education-plans" ms.title='Footer_Education_Office365ForSchools'>Office 365 f&#252;r Schulen</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/store/b/student" ms.title='Footer_Education_DealsForStudentsandEducators'>Angebote f&#252;r Studenten &amp; Lehrkr&#228;fte </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://azure.microsoft.com/de-de/community/education/" ms.title='Footer_MicrosoftAzureInEducation'>Microsoft Azure f&#252;r Bildung </a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                </div>
+                <div>
+                        <div ms.cmpnm='Unternehmen
+'>
+                            <h6 class="c-heading-4">Unternehmen
+</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://azure.microsoft.com/" ms.title='Footer_Enterprise_MicrosoftAzure '>Microsoft Azure </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://enterprise.microsoft.com/de-de/" ms.title='Footer_Enterprise_Enterprise'>Unternehmen</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/sql-server/" ms.title='Footer_Enterprise_DataPlatform'>Datenplattform</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://partner.microsoft.com/de-de/" ms.title='Footer_Enterprise_MicrosoftPartnerResources'>Ressourcen f&#252;r Microsoft Partner </a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://enterprise.microsoft.com/de-de/industries/discrete-manufacturing/" ms.title='Footer_Enterprise_ManufacturingAndResources'>Diskrete Fertigung</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://enterprise.microsoft.com/de-de/industries/banking-and-capital-markets/" ms.title='Footer_Enterprise_FinanciaServices'>Finanzdienstleistungen</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div ms.cmpnm='Entwickler
+'>
+                            <h6 class="c-heading-4">Entwickler
+</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.visualstudio.com/" ms.title='Footer_Developer_MicrosoftVisualStudio'>Microsoft Visual Studio</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://developer.microsoft.com/de-de/windows" ms.title='Footer_Developer_WindowsDevCenter'>Windows Dev Center</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://msdn.microsoft.com/de-de" ms.title='Footer_Developer_MicrosoftDeveloperNetwork'>Microsoft Developer Network</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://technet.microsoft.com/de-de" ms.title='Footer_Developer_TechNet'>TechNet</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://mva.microsoft.com/" ms.title='Footer_Developer_MicrosoftVirtualAcademy'>Microsoft Virtual Academy</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://developer.microsoft.com/de-de/store/register" ms.title='Footer_Developer_MicrosoftDeveloperProgram'>Microsoft Entwickler-Programm</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://channel9.msdn.com/" ms.title='Footer_Developer_Channel9'>Channel 9</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://dev.office.com/" ms.title='Footer_Developer_OfficeDevCenter'>Office Dev Center</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                        <div ms.cmpnm='Im Unternehmen
+'>
+                            <h6 class="c-heading-4">Im Unternehmen
+</h6>
+                            <ul class="c-list f-bare">
+                                        <li>
+                                            <a class="c-hyperlink" href="https://careers.microsoft.com/" ms.title='Footer_Company_Careers'>Jobs &amp; Karriere</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/about" ms.title='Footer_Company_AboutMicrosoft'>Das Unternehmen Microsoft</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://news.microsoft.com/de-de" ms.title='Footer_Company_CompanyNews'>Unternehmensnachrichten</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://privacy.microsoft.com/de-de" ms.title='Footer_Company_PrivacyAtMicrosoft'>Datenschutz bei Microsoft</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/investor/default.aspx" ms.title='Footer_Company_Investors'>Investoren</a>
+                                        </li>
+                                        <li>
+                                            <a class="c-hyperlink" href="https://www.microsoft.com/de-de/security/default.aspx" ms.title='Footer_Company_Security'>Sicherheit</a>
+                                        </li>
+
+                            </ul>
+                            
+                        </div>
+                </div>
+        </nav>
+    <section>
+                <a id="locale-picker-link" class="c-hyperlink c-glyph glyph-world" href="https://store.office.com/worldwide.aspx?rs=de-de&amp;cmapid=1" ms.title='locale_picker(DE)'>Deutsch (Deutschland)</a>
+
+        <ul role="contentinfo" class="c-list f-bare" ms.cmpgrp='Corp links'>
+                            <li>
+                    <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkID=321166" data-mscc-ic="false" ms.title='Impressum'>Impressum</a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="/home/contact" data-mscc-ic="false" ms.title='Contact Us'>Kontakt</a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/?LinkId=248681" data-mscc-ic="false" ms.title='PrivacyandCookies '>Datenschutz und Cookies </a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkId=530144" data-mscc-ic="false" ms.title='Termsofuseandsale '>Nutzungsbedingungen und Weiterverkauf </a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="http://go.microsoft.com/?LinkId=9851308" data-mscc-ic="false" ms.title='Trademarks '>Marken </a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkId=316963" data-mscc-ic="false" ms.title='Accessibility'>Office-Barrierefreiheit</a>
+                </li>
+                <li>
+                    <a class="c-hyperlink" href="https://go.microsoft.com/fwlink/p/?LinkId=530144" data-mscc-ic="false" ms.title='Legal'>Rechtliche Hinweise</a>
+                </li>
+
+            <li>&#169; Microsoft 2017</li>
+            
+        </ul>
+    </section>
+    
+</footer>
+
+
+
+<style>
+    .c-modal-link{cursor: pointer;}
+</style>
+    </div>
+            </div>
+
+    </section>
+
+
+
+		</div>
+	</div>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+<script>(window.jQuery)||document.write('<script src="/bundles/jquery"><\/script>');</script>
+
+	
+<script defer src="/bundles/stickyFeedback?v=qYxhlPy0GYklna7WWv2KsrzRFaLXgOGyagzbFN3Ovjs1"></script>
+
+<script defer src="/bundles/TopNav?v=z9s7SFY3351t9NXCquUcIgsFddS53VhYW0vhn0ByuV41"></script>
+
+
+	<script src="/bundles/support?v=tQA6E1K5Yn5ZrqHPkXyLvAjeBIvVTsz1pM3PDRsOSIE1"></script>
+
+	
+						
+
+<script src="https://statics-uhf-neu.akamaized.net/shell/_scrf/js/themes=default/87-0bce27/f8-3b6b36/ea-962395/79-8a148a/f2-1d184e/90-1e650e/64-5bbd4a/5d-f9c916/e8-497be9/fb-9086e3/d7-748562/71-cabf1b/45-ab2026/65-eb25b1/21-de971d/df-f8d789/ea-955802/8b-daf680/7d-dec6ac/21-0be778/4a-4774eb/8c-131ebd/1f-2c26b9/75-61dbdc/fe-16c6b5/fe-7734a7/7a-6864d5/53-234da1/e2-5d02cf/6e-aaef0a?ver=2.0&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=officesupport&market=de-de"></script><script src="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.js"></script>			<script type="text/javascript">
+				$(function() {
+					var msPageAreaValue = "Header";
+					var msSignInInteractionValue = "11";
+					var wcsSignInTextValue = "Sign in";
+
+					var shellOptions = function() {
+						return {
+							currentMenuItemId: 'shell-main-tab',
+							meControlOptions: {
+								rpData: {
+									msaInfo: {
+										signInUrl: "https://login.live.com/login.srf?wa=wsignin1.0\u0026rpsnv=13\u0026ct=1507650564\u0026rver=6.7.6655.0\u0026wp=MBI_SSL\u0026wreply=https:%2F%2Fsupport.office.com%2Fauthredir%3Furl%3Dhttps%253a%252f%252fsupport.office.com%253a443%252fde-de%252farticle%252fBeispiele-f%252525C3%252525BCr-Ausdr%252525C3%252525BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f%253fui%253dde-DE%2526rs%253dde-DE%2526ad%253dDE%26hurl%3DFY6nlhKzeKJN7%252bSUOh3Oq4TislNoddZf%252fom8%252bbbfnps%253d.lRUy2DtzAYLekCr3q%252fG9N58HQ2wL60OpncV7sCILAv8%253d%26ipt%3D0%26si%3D1%26wctx%3D09994242-5b03-4c57-88b9-6fbda25ba0c2\u0026lc=1033\u0026id=290950\u0026aadredir=1",
+										signOutUrl: "https://login.live.com/logout.srf?ct=1507650565\u0026rver=6.7.6655.0\u0026lc=1033\u0026id=290950\u0026ru=https:%2F%2Fsupport.office.com%2Fauthredir%3Furl%3Dhttps%253a%252f%252fsupport.office.com%253a443%252fde-de%252farticle%252fBeispiele-f%252525C3%252525BCr-Ausdr%252525C3%252525BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f%253fui%253dde-DE%2526rs%253dde-DE%2526ad%253dDE%26hurl%3DFY6nlhKzeKJN7%252bSUOh3Oq4TislNoddZf%252fom8%252bbbfnps%253d.lRUy2DtzAYLekCr3q%252fG9N58HQ2wL60OpncV7sCILAv8%253d%26ipt%3D0%26so%3D1"
+									},
+									aadInfo: {
+										signInUrl: "https://login.microsoftonline.com/common/oauth2/authorize?response_mode=form_post\u0026response_type=id_token\u0026scope=openid\u0026nonce=1b74504e-ebb0-4070-afd4-af0db72beb9b.636432473648411836\u0026state=https:%2f%2fsupport.office.com%2fde-de%2farticle%2fBeispiele-f%2525C3%2525BCr-Ausdr%2525C3%2525BCcke-d3901e11-c04e-4649-b40b-8b6ec5aed41f%3fui%3dde-DE%26rs%3dde-DE%26ad%3dDE\u0026client_id=4b233688-031c-404b-9a80-a4f3f2351f90\u0026redirect_uri=https:%2f%2fsupport.office.com%2fauth%2fsignin",
+										signOutUrl: ""
+									},
+									preferredIdp: window.msCommonShell.SupportedAuthIdp.MSA
+								},
+								userData: {
+								},
+								events: {
+									onEventLog: function (eventId) {
+										if (eventId.toLowerCase() === "signin") {
+											occe.SendWedcsCustom({
+												"ms.interactiontype": msSignInInteractionValue,
+												"ms.pgarea": msPageAreaValue,
+												"wcs.cn": wcsSignInTextValue
+											});
+										}
+									}
+								}
+							},
+							events: {
+								onSearch: function (searchForm) {
+									occe.AutoSuggestSearchEvent(searchForm, msPageAreaValue);
+								}
+							},
+							as: {
+								callback: function () {}
+							}
+						};
+					};
+
+					// If msCommonShell already exists, load it
+					if (window.msCommonShell) {
+						window.msCommonShell.load(shellOptions());
+					}
+
+					// If msCommonShell doesn't yet exist...
+					else {
+
+						// Load the me control once msCommonShell is ready
+						window.onShellReadyToLoad = function () {
+							window.onShellReadyToLoad = null;
+							window.msCommonShell.load(shellOptions());
+						};
+					}
+
+					// Append returnURL query param to change language control on footer
+					// Add returnURL to click instead of updating the URL to hide the encoded return url on hover over change language control
+					(function () {
+						var returnUrlForChangeLanguageHref = window.location.href;
+						var $idOfChangeLanguageonFooter = $('#locale-picker-link');
+						var hrefOfChangeLanguageOnFooter = $idOfChangeLanguageonFooter.attr('href');
+
+						if (hrefOfChangeLanguageOnFooter) {
+							$idOfChangeLanguageonFooter.on('click keypress', function (e) {
+								e.preventDefault();
+								if (occe.eventHelpers.eventIsClick(e) || occe.eventHelpers.eventIsEnterKeypress(e)) {
+									var newChangeLanguageOnFooterUrl = occe.updateQueryStringParameter('returnURL', encodeURIComponent(returnUrlForChangeLanguageHref), hrefOfChangeLanguageOnFooter);
+									window.location.href = newChangeLanguageOnFooterUrl;
+								}
+							});
+						}
+					})();
+				});
+			</script>
+				<iframe src="https://login.microsoftonline.com/common/oauth2/authorize?response_mode=form_post&amp;response_type=id_token&amp;scope=openid&amp;nonce=1b74504e-ebb0-4070-afd4-af0db72beb9b.636432473648411836&amp;state=https:%2f%2fsupport.office.com%2fde-de%2fHome%2fBackgroundAuth%3fprovider%3dAAD%26end%3dFalse&amp;client_id=4b233688-031c-404b-9a80-a4f3f2351f90&amp;redirect_uri=https:%2f%2fsupport.office.com%2fauth%2fsignin&amp;prompt=none" width="1" height="1" style="display: none"></iframe>
+
+
+						<script src="https://statics-uhf-neu.akamaized.net/shell/_scrf/js/themes=default/87-0bce27/f8-3b6b36/ea-962395/79-8a148a/f2-1d184e/90-1e650e/64-5bbd4a/5d-f9c916/e8-497be9/fb-9086e3/d7-748562/71-cabf1b/45-ab2026/65-eb25b1/21-de971d/df-f8d789/ea-955802/8b-daf680/7d-dec6ac/21-0be778/4a-4774eb/8c-131ebd/1f-2c26b9/75-61dbdc/fe-16c6b5/fe-7734a7/7a-6864d5/53-234da1/e2-5d02cf/6e-aaef0a?ver=2.0&iife=1"></script><script src="https://mem.gfx.ms/meversion?partner=officesupport&market=de-de"></script><script src="https://uhf.microsoft.com/mscc/statics/mscc-0.3.6.min.js"></script>			<script type="text/javascript">
+				$(function() {
+				})
+			</script>
+
+
+	<script defer src="/bundles/article?v=UzZ2cjGhob7i6oZhfGXpfaYeiSBzoWMtLwLY8msNx5Q1"></script>
+
+
+	
+
+	
+
+
+	<script id="supResourcesScript" type="text/javascript">
+			$(function() {
+				if (occe && occe.Resources) {
+					occe.Resources.addLocalizedStrings({"L_TabControl_AriaLabel_FirstTab":"Liste der Registerkarten. Es sind {0} Registerkarten verfügbar.","L_TabControl_AriaLabel_TabCollapsed":"{0}. Reduziert.","L_TabControl_AriaLabel_TabExpanded":"{0}. Erweitert.","L_TabControl_AriaLabel_TabsOverflowDropdownIcon_Collapsed":"Dropdown für weitere Registerkarten. Reduziert. Drücken Sie die EINGABETASTE, um das Dropdown zu erweitern.","L_TabControl_AriaLabel_TabsOverflowDropdownIcon_Expanded":"Dropdown für weitere Registerkarten. Erweitert. Drücken Sie die TAB-TASTE, um in den verfügbaren Registerkarten zu navigieren.","L_CardControl_AriaLabel_DescriptiveCard_FooterText":"Katalog mit Schulungskursen. {0} von {1} Schulungskursen. {2}. Kurs {3} enthält Videos. Drücken Sie die EINGABETASTE, um den Kurs zu starten, und drücken Sie die TAB-TASTE, um den nächsten Kurs zu hören.","L_CardControl_AriaLabel_DescriptiveCard_MinutesSeconds":"Katalog der Schulungskurse. {0} von {1} Schulungskursen. {2}. Dieser Kurs dauert {3} Minuten und {4} Sekunden. Drücken Sie die EINGABETASTE, um den Kurs zu starten, und drücken Sie die TAB-TASTE, um den nächsten Kurs zu hören.","L_CardControl_AriaLabel_DescriptiveCard_MinuteSeconds":"Katalog der Schulungskurse. {0} von {1} Schulungskursen. {2}. Dieser Kurs dauert {3} Minute und {4} Sekunden. Drücken Sie die EINGABETASTE, um den Kurs zu starten, und drücken Sie die TAB-TASTE, um den nächsten Kurs zu hören.","L_CardControl_AriaLabel_DescriptiveCard_MinutesSecond":"Katalog der Schulungskurse. {0} von {1} Schulungskursen. {2}. Dieser Kurs dauert {3} Minuten und {4} Sekunde. Drücken Sie die EINGABETASTE, um den Kurs zu starten, und drücken Sie die TAB-TASTE, um den nächsten Kurs zu hören.","L_CardControl_AriaLabel_DescriptiveCard_MinuteSecond":"Katalog der Schulungskurse. {0} von {1} Schulungskursen. {2}. Dieser Kurs dauert {3} Minute und {4} Sekunde. Drücken Sie die EINGABETASTE, um den Kurs zu starten, und drücken Sie die TAB-TASTE, um den nächsten Kurs zu hören.","L_CardControl_AriaLabel_Card_FooterText":"Kurs {0} von {1}. {2}. Es gibt {3} Videos. Drücken Sie die EINGABETASTE, um Videos zu starten.","L_CardControl_AriaLabel_Card_MinutesSeconds":"Kurs {0} von {1}. {2}. Kursdauer: {3} Minuten und {4} Sekunden.","L_CardControl_AriaLabel_Card_MinuteSeconds":"Kurs {0} von {1}. {2}. Kursdauer: {3} Minute und {4} Sekunden.","L_CardControl_AriaLabel_Card_MinutesSecond":"Kurs {0} von {1}. {2}. Kursdauer: {3} Minuten und {4} Sekunde.","L_CardControl_AriaLabel_Card_MinuteSecond":"Kurs {0} von {1}. {2}. Kursdauer: {3} Minute und {4} Sekunde.","L_CardControl_AriaLabel_PreviousButton":"Drücken Sie die EINGABETASTE, um vorherige Kurse zu hören.","L_CardControl_AriaLabel_NextButton":"Drücken Sie die EINGABETASTE, um weitere verfügbare Kurse zu hören.","L_EditInC3":"edit","L_IA_Feedback_Recorded":"Vielen Dank für Ihr Feedback.","L_TrainingTips_AriaLabel_NextArrow":"Drücken Sie die EINGABETASTE, um den nächsten Tipp zu hören.","L_TrainingTips_AriaLabel_PrevArrow":"Drücken Sie die EINGABETASTE, um den vorherigen Tipp zu hören.","L_TrainingTips_AriaLabel_Close":"Schaltfläche zum Schließen des Dialogfelds. Drücken Sie die EINGABETASTE, um das Tippdialogfeld zu reduzieren."});
+					occe.Resources.addSettings({"OdcSup_C3EntryPoint_Enabled":"True","OdcSup_C3EntryPoint_UrlFormat":"https://c3web.azurewebsites.net/topics/{0}/edit?revisionNumber=current\u0026referrer=SOC"});
+				}
+			});
+	</script>
+
+
+
+	
+					
+
+<script src="/bundles/angular?v=pA0AeTm4mRONCLbteXmFfGcgWwIKhottN_ohV8AFTZ01"></script>
+<script defer src="/bundles/autoSuggest?v=b2Wmdnn6Q27xvT0HzuFD5hu3Tr8RJcZSVx2gATFfosI1"></script>
+
+	<script src="/bundles/wedcsWrapper?v=DFRhC70iVmI8DXy_6SpTJsPCATmD2SYnDUwknbaFKpM1"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+	var config = {
+		syncMuid: (typeof OOGlobal === "undefined" || typeof OOGlobal.IsCookieConsentRequired  === "undefined")
+			? true : (!OOGlobal.IsCookieConsentRequired || (typeof(mscc) != "undefined" && mscc.hasConsent())),
+		autoCapture: {
+			scroll: false,
+			resize: true
+		},
+		coreData: {
+			appId: 'support.office.com',
+			pageTags: {}
+		},
+		isLoggedIn: false,
+		shareAuthStatus: true,
+		authMethod: Number(0),
+		callback: {
+			pageViewPageTags: returnPageInfo,
+			pageActionPageTags: returnPageInfo,
+			contentUpdatePageTags: returnPageInfo
+		}
+	};
+
+	if (occe.experimentRunningOnPage()) {
+		occe.updateAwaExperimentTags(config);
+	};
+
+	if (occe.elementIsOnPage('.ocpEditArticleLink')) {
+		config.coreData.pageTags['ver'] = 'editShown';
+	}
+
+	awa.init(config);
+
+	function returnPageInfo() {
+		return config.coreData.pageTags;
+	};
+</script></body>
+</html>

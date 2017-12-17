@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+
+        <!-- App Indexing for Google Search -->
+        <link href="android-app://com.quoord.tapatalkpro.activity/tapatalk/forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=google-indexing" rel="alternate" />
+        <link href="ios-app://307880732/tapatalk/forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=google-indexing" rel="alternate" />
+        
+        <meta property="al:android:package" content="com.quoord.tapatalkpro.activity" />
+        <meta property="al:android:url" content="tapatalk://forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=facebook-indexing" />
+        <meta property="al:android:app_name" content="Tapatalk" />
+        <meta property="al:ios:url" content="tapatalk://forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=facebook-indexing" />
+        <meta property="al:ios:app_store_id" content="307880732" />
+        <meta property="al:ios:app_name" content="Tapatalk" />
+        
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tapatalk" />
+        <meta name="twitter:title" content="Placeholder Template - Library \'CAADTUtil\' cannot be resolved" />
+        <meta name="twitter:description" content="CODESYS - the IEC 61131-3 automation software" />
+        
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://forum.codesys.com/?location=topic&amp;fid=20&amp;tid=7461&amp;page=1&amp;perpage=15&amp;channel=twitter-indexing" />
+        <!-- twitter app card -->
+        
+<title>Placeholder Template - Library 'CAADTUtil' cannot be resolved - CODESYS - the IEC 61131-3 automation software</title>
+
+
+	<link rel="canonical" href="https://forum.codesys.com/viewtopic.php?t=7461" />
+
+<link rel="stylesheet" href="./styles/subsilver2/theme/stylesheet.css?assets_version=4" type="text/css" />
+<link rel="stylesheet" href="./styles/subsilver2/theme/en/stylesheet.css?assets_version=4" type="text/css" />
+
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Enter the page number you wish to go to:', '1');
+	var per_page = '15';
+	var base_url = '.\x2Fviewtopic.php\x3Ff\x3D20\x26amp\x3Bt\x3D7461\x26amp\x3Bsid\x3D9d0ee93f80e76a4d0f00749114e5a23f';
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id) || document[id];
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+// ]]>
+</script>
+
+
+
+
+
+</head>
+<body class="ltr ">
+
+
+<a name="top" class="anchor"></a>
+
+<ul id="sidebarHorizontal">
+	<li><a href="http://store.codesys.com/" target="_blank"><i class="icon-shop"></i>CODESYS Store</a></li>
+	<li><a href="http://devices.codesys.com/" target="_blank"><i class="icon-components"></i><div>CODESYS<br />Device Directory</div></a></li>
+	<li><a href="http://de.codesys.com/job-karriere/stellenangebote.html" target="_blank"><i class="icon-board"></i>Jobs</a></li>
+	<li><a href="http://de.codesys.com/aktuelles/codesys-rss-feeds.html" target="_blank"><i class="icon-rss"></i>RSS</a></li>
+	<li><a href="http://clips.codesys.com" target="_blank"><i class="icon-youtube"></i>CODESYS Clips</a></li>
+</ul>
+
+<a name="top"></a>
+
+<div id="wrapheader">
+
+	<div id="logodesc">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td><a href="./index.php?sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset site_logo"></span></a></td>
+			<td width="60%" align="center">
+				<h1>CODESYS - the IEC 61131-3 automation software</h1><span class="gen">Welcome to the official CODESYS Forum</span>
+			</td>
+			<td width="40%" align="right" valign="top"><a href="http://forum-de.codesys.com"><img src="./styles/subsilver2/theme/images/flag_germany.gif" border="0" alt="Deutsche Version"></a>&nbsp;<a href="http://forum.codesys.com"><img src="./styles/subsilver2/theme/images/flag_english.gif" border="0" alt="English version"></a>&nbsp;<a href="http://forum-ru.codesys.com"><img src="./styles/subsilver2/theme/images/flag_russia.gif" border="0" alt="russian version"></a>&nbsp;</td>
+		</tr>
+		</table>
+	</div>
+		<div id="menubar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="genmed dropdown-container">
+								 &nbsp;<a href="./ucp.php?mode=login&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f"><img src="./styles/subsilver2/theme/images/icon_mini_login.gif" width="12" height="13" alt="*" /> Login</a>&nbsp;																	 &nbsp;<a href="./ucp.php?mode=register&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f"><img src="./styles/subsilver2/theme/images/icon_mini_register.gif" width="12" height="13" alt="*" /> Register</a>
+												</td>
+			<td class="genmed" align="right">
+								<a href="./faq.php?sid=9d0ee93f80e76a4d0f00749114e5a23f" rel="help"><img src="./styles/subsilver2/theme/images/icon_mini_faq.gif" width="12" height="13" alt="*" /> FAQ</a>
+				&nbsp; &nbsp;<a href="./search.php?sid=9d0ee93f80e76a4d0f00749114e5a23f"><img src="./styles/subsilver2/theme/images/icon_mini_search.gif" width="12" height="13" alt="*" /> Search</a>																									</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id="datebar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="gensmall"></td>
+			<td class="gensmall" align="right">It is currently Tue Oct 10, 2017 4:48 pm<br /></td>
+		</tr>
+		</table>
+	</div>
+
+</div>
+
+
+<div id="wrapcentre">
+
+		<p class="searchbar">
+		<span style="float: left;"><a href="./search.php?search_id=unanswered&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f">Unanswered topics</a> | <a href="./search.php?search_id=active_topics&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f">Active topics</a></span>
+			</p>
+	
+	<br style="clear: both;" />
+
+					<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+						<p class="breadcrumbs"><span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="./index.php?sid=9d0ee93f80e76a4d0f00749114e5a23f" data-navbar-reference="index" itemprop="url"><span itemprop="title">Board index</span></a></span> &#187; <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="13"><a href="./viewforum.php?f=13&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" itemprop="url"><span itemprop="title">CODESYS V3</span></a></span> &#187; <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="" data-forum-id="20"><a href="./viewforum.php?f=20&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" itemprop="url"><span itemprop="title">Add-on products from the CODESYS Store</span></a></span>			</p>
+									<p class="datetime">All times are <abbr title="UTC+1">UTC+01:00</abbr></p>
+					</td>
+	</tr>
+	</table>
+		
+	<br />
+	
+
+<div id="pageheader">
+	<h2><a class="titles" href="./viewtopic.php?f=20&amp;t=7461&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f">Placeholder Template - Library 'CAADTUtil' cannot be resolved</a></h2>
+	
+</div>
+
+<br clear="all" /><br />
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		
+					<a href="./posting.php?mode=post&amp;f=20&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset button_topic_new" title="Post new topic">Post new topic</span></a>&nbsp;			<a href="./posting.php?mode=reply&amp;f=20&amp;t=7461&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset button_topic_reply" title="Reply to topic">Reply to topic</span></a>		
+				</td>
+					<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 3 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+			</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+																			<a href="./viewtopic.php?f=20&amp;t=7461&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f&amp;view=print" title="Print view">Print view</a>																		</td>
+				<td class="nav" align="right" nowrap="nowrap"><a href="./viewtopic.php?f=20&amp;t=7461&amp;view=previous&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f">Previous topic</a> | <a href="./viewtopic.php?f=20&amp;t=7461&amp;view=next&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f">Next topic</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+
+		<table class="tablebg x-posting-single" width="100%" cellspacing="1">
+			<tr>
+			<th>Author</th>
+			<th>Message</th>
+		</tr>
+		<tr class="row1">
+	
+			<td align="center" valign="middle">
+								<a name="p16775" class="anchor"></a>
+								<b class="postauthor">Bahrt</b>
+							</td>
+									<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> <a href="#p16775">Placeholder Template - Library 'CAADTUtil' cannot be resolved</a></div><div style="float: right;"><a href="./viewtopic.php?p=16775&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f#p16775" class="imageset"><span class="imageset icon_post_target" title="Post">Post</span></a><b>Posted:</b> <span data-date="Tue Dec 20, 2016 12:07 pm">Tue Dec 20, 2016 12:07 pm</span>&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+					</tr>
+
+		<tr class="row1">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><span class="imageset icon_user_offline" title="Offline">Offline</span></td>
+				</tr>
+															
+									
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Thu Dec 15, 2016 3:32 pm					<br /><b>Posts:</b> 2					
+					
+																			</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody">After adding the SMS Service package - Please explain how to resolve library CAADTUtil.<br /><br />Thank you!</div>
+
+					
+											<span class="gensmall error"><br /><br />You do not have the required permissions to view the files attached to this post.</span>
+										
+										
+										
+					
+					<br clear="all" /><br />
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+																																																					</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+						<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+						<td>
+				<div class="gensmall" style="float: left;">
+					&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=83802&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_user_profile" title="Profile">Profile</span></a>														&nbsp;</div>
+				<div class="gensmall" style="float: right;">
+																						<a href="./posting.php?mode=quote&amp;f=20&amp;p=16775&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_post_quote" title="Reply with quote">Reply with quote</span></a>														&nbsp;</div>
+			</td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+			<table class="tablebg x-posting-single" width="100%" cellspacing="1">
+		<tr class="row2">
+	
+			<td align="center" valign="middle">
+								<a name="p16793" class="anchor"></a>
+								<b class="postauthor">Bahrt</b>
+							</td>
+									<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> <a href="#p16793">Re: Placeholder Template - Library 'CAADTUtil' cannot be resolved</a></div><div style="float: right;"><a href="./viewtopic.php?p=16793&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f#p16793" class="imageset"><span class="imageset icon_post_target" title="Post">Post</span></a><b>Posted:</b> <span data-date="Thu Dec 22, 2016 2:06 pm">Thu Dec 22, 2016 2:06 pm</span>&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+					</tr>
+
+		<tr class="row2">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><span class="imageset icon_user_offline" title="Offline">Offline</span></td>
+				</tr>
+															
+									
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Thu Dec 15, 2016 3:32 pm					<br /><b>Posts:</b> 2					
+					
+																			</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody">Please look at the pictures – Identifier ‘DTU’ not defined… I have searched every corner of the 3S-Systems documentation, without finding any kind of hint regarding this issue.<br /><br />Google have helped a little, guiding me to understand that this ‘CAADTUtil’ library provides “FUNCTIONS FOR HANDLING DATE AND TIME”… In this case, related to the ‘SMS Service’ add-on. It is not working – that is a fact and absolutely no official guidance are available – shame on you ‘3S-Systems’.<br /><br />It would be of great assistance if anyone, with any level of experience in the 'SMS Service' would make a comment/remark.<br /><br />I will not be surprised if none of you users are familiar with this issue – how could you be? This is a specific developer software flaw, which 3S-Systems should address, soon… My guess is though - 3S-Systems do not find this important, due to a very limited distribution sale of the ‘SMS Service’ library (yes, it actually costs money). What benefit will 3S-Systems gain, from helping me…? I have only spent €150 in their CodeSys store… Why should they care? How much noise can I make?<br /><br />Library ’CAADTUtil’ is a 3S-Systems product, so I would certainly expect them to involve some resources in this issue… Does anyone in here have experience with the 3S-Systems support level – do they provide any support. With all respect, I find the ‘CODESYS Development System V3’ documentation availability, very poor – I cannot find one single match when I search for ‘DTU.ERROR’ or ‘DTU.DTConcat’, in the CODESYS V3 online help.<br /><br />How does a 3S-systems customer solve a problem like this, without help from the vendor…?<br /><br />Thank you!</div>
+
+					
+											<span class="gensmall error"><br /><br />You do not have the required permissions to view the files attached to this post.</span>
+										
+										
+										
+					
+					<br clear="all" /><br />
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+																																																					</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+						<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+						<td>
+				<div class="gensmall" style="float: left;">
+					&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=83802&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_user_profile" title="Profile">Profile</span></a>														&nbsp;</div>
+				<div class="gensmall" style="float: right;">
+																						<a href="./posting.php?mode=quote&amp;f=20&amp;p=16793&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_post_quote" title="Reply with quote">Reply with quote</span></a>														&nbsp;</div>
+			</td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+			<table class="tablebg x-posting-single" width="100%" cellspacing="1">
+		<tr class="row1">
+	
+			<td align="center" valign="middle">
+								<a name="p16815" class="anchor"></a>
+								<b class="postauthor">Edwin Schwellinger</b>
+							</td>
+									<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+									<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Post subject:</b> <a href="#p16815">Re: Placeholder Template - Library 'CAADTUtil' cannot be resolved</a></div><div style="float: right;"><a href="./viewtopic.php?p=16815&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f#p16815" class="imageset"><span class="imageset icon_post_target" title="Post">Post</span></a><b>Posted:</b> <span data-date="Wed Dec 28, 2016 6:47 am">Wed Dec 28, 2016 6:47 am</span>&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+					</tr>
+
+		<tr class="row1">
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+							<tr>
+					<td><span class="imageset icon_user_offline" title="Offline">Offline</span></td>
+				</tr>
+													<tr>
+					<td class="postdetails">Site Admin</td>
+				</tr>
+									
+									
+							</table>
+
+				<span class="postdetails">
+					<br /><b>Joined:</b> Mon Sep 05, 2005 9:42 am					<br /><b>Posts:</b> 2152					
+					
+																			</span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+						<div class="postbody">Hi,<br />this should not happen in general (this store examples should work and I have verified it with Raspberry PI it does)<br />If I use it with 3.5.10.0 CODESYS and 3.5.10.0 Raspberry Pi package everything seems to be ok.<br />Could you update to current Version - both CODESYS and Pi Package?<br /><br />In general if you are missng a placeholder somewhere you could Redirect them in the placeholder dialog.<br /><br /><br />BR<br />Edwin</div>
+
+					
+											<span class="gensmall error"><br /><br />You do not have the required permissions to view the files attached to this post.</span>
+										
+										
+										
+					
+					<br clear="all" /><br />
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+																																																					</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+						<td class="profile"><strong><a href="#wrapheader">Top</a></strong></td>
+						<td>
+				<div class="gensmall" style="float: left;">
+					&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=153&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_user_profile" title="Profile">Profile</span></a>														&nbsp;</div>
+				<div class="gensmall" style="float: right;">
+																						<a href="./posting.php?mode=quote&amp;f=20&amp;p=16815&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset icon_post_quote" title="Reply with quote">Reply with quote</span></a>														&nbsp;</div>
+			</td>
+			</tr>
+
+	<tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	</table>
+	
+		<table width="100%" cellspacing="1" class="tablebg">
+	<tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="./viewtopic.php?f=20&amp;t=7461&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f"><span class="gensmall">Display posts from previous:</span> <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select>&nbsp;<span class="gensmall">Sort by</span> <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select> <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select>&nbsp;<input class="btnlite" type="submit" value="Go" name="sort" /></form></td>
+	</tr>
+	</table>
+	
+	
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		
+					<a href="./posting.php?mode=post&amp;f=20&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset button_topic_new" title="Post new topic">Post new topic</span></a>&nbsp;			<a href="./posting.php?mode=reply&amp;f=20&amp;t=7461&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" class="imageset"><span class="imageset button_topic_reply" title="Reply to topic">Reply to topic</span></a>		
+				</td>
+					<td class="nav" valign="middle" nowrap="nowrap">&nbsp;Page <strong>1</strong> of <strong>1</strong><br /></td>
+			<td class="gensmall" nowrap="nowrap">&nbsp;[ 3 posts ]&nbsp;</td>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"></td>
+			</tr>
+	</table>
+
+</div>
+
+<div id="pagefooter"></div>
+
+<br clear="all" />
+
+		<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+						<p class="breadcrumbs"><span><a href="./index.php?sid=9d0ee93f80e76a4d0f00749114e5a23f" data-navbar-reference="index" itemprop="url"><span itemprop="title">Board index</span></a></span> &#187; <span data-forum-id="13"><a href="./viewforum.php?f=13&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" itemprop="url"><span itemprop="title">CODESYS V3</span></a></span> &#187; <span data-forum-id="20"><a href="./viewforum.php?f=20&amp;sid=9d0ee93f80e76a4d0f00749114e5a23f" itemprop="url"><span itemprop="title">Add-on products from the CODESYS Store</span></a></span>			</p>
+									<p class="datetime">All times are <abbr title="UTC+1">UTC+01:00</abbr></p>
+					</td>
+	</tr>
+	</table>
+
+	<br clear="all" />
+
+	<table class="tablebg stat-block online-list" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat"><h4>Who is online</h4></td>
+	</tr>
+	<tr>
+		<td class="row1"><p class="gensmall">Users browsing this forum: No registered users and 1 guest</p></td>
+	</tr>
+	</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="1">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left">
+		</td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">You <strong>cannot</strong> post new topics in this forum<br />You <strong>cannot</strong> reply to topics in this forum<br />You <strong>cannot</strong> edit your posts in this forum<br />You <strong>cannot</strong> delete your posts in this forum<br />You <strong>cannot</strong> post attachments in this forum<br /></span></td>
+</tr>
+</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="0">
+<tr>
+	<td><form method="get" name="search" action="./search.php?sid=9d0ee93f80e76a4d0f00749114e5a23f"><span class="gensmall">Search for:</span> <input class="post" type="text" name="keywords" size="20" /> <input class="btnlite" type="submit" value="Go" /><input type="hidden" name="t" value="7461" />
+<input type="hidden" name="sf" value="msgonly" />
+<input type="hidden" name="sid" value="9d0ee93f80e76a4d0f00749114e5a23f" />
+</form>
+</td>
+	<td align="right">
+	<form method="get" name="jumpbox" action="./viewforum.php?sid=9d0ee93f80e76a4d0f00749114e5a23f" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><input type="hidden" name="sid" value="9d0ee93f80e76a4d0f00749114e5a23f" />
+<span class="gensmall">Jump to:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+								<option value="-1">Select a forum</option>
+					<option value="-1">------------------</option>			<option value="13">CODESYS V3</option>
+								<option value="11">&nbsp; &nbsp;CODESYS V3 - the new IEC 61131-3 programming system</option>
+								<option value="22">&nbsp; &nbsp;CODESYS V3 FAQs</option>
+								<option value="18">&nbsp; &nbsp;Script language Python in CODESYS V3</option>
+								<option value="20" selected="selected">&nbsp; &nbsp;Add-on products from the CODESYS Store</option>
+								<option value="24">&nbsp; &nbsp;CODESYS V3 - Control RTE / Control Win / Control SL</option>
+								<option value="6">&nbsp; &nbsp;CODESYS SoftMotion</option>
+								<option value="25">&nbsp; &nbsp;CODESYS Visualisation</option>
+								<option value="21">&nbsp; &nbsp;CODESYS V3 Raspberry Pi Teaching Platform</option>
+								<option value="23">&nbsp; &nbsp;CODESYS V3 Raspberry Pi  share your devices &amp; libraries &amp; applications</option>
+								<option value="26">&nbsp; &nbsp;CODESYS V3 BeagleBone SL</option>
+								<option value="12">CoDeSys V2.3 Products</option>
+								<option value="1">&nbsp; &nbsp;General</option>
+								<option value="2">&nbsp; &nbsp;CoDeSys - the IEC 61131-3 programming system</option>
+								<option value="4">&nbsp; &nbsp;CoDeSys SP RTE</option>
+								<option value="5">&nbsp; &nbsp;CoDeSys Visualisation</option>
+								<option value="7">&nbsp; &nbsp;CoDeSys Add-On products</option>
+								<option value="16">CODESYS OPC Server</option>
+								<option value="17">&nbsp; &nbsp;CODESYS OPC Server / Client connection</option>
+		
+		</select>&nbsp;<input class="btnlite" type="submit" value="Go" /></td>
+	</tr>
+	</table>
+
+	</form>
+</td>
+</tr>
+</table>
+
+	
+	</div>
+
+
+<div id="wrapfooter">
+		<span class="copyright">
+		Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+			</span>
+</div>
+
+<script type="text/javascript" src="./assets/javascript/jquery.min.js?assets_version=4"></script>
+<script type="text/javascript" src="./assets/javascript/core.js?assets_version=4"></script>
+
+
+
+
+
+</body>
+</html>

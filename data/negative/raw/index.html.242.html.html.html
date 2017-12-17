@@ -1,0 +1,1427 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <title>Stellenangebote aktuell - Testsieger</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"30792100","errorBeacon":"bam.nr-data.net","transactionName":"ZldUNxMAWktWV0BfWl8dcBYPAkBRWFobT1pEQFAKEwwaSgVQBhhDWFdBEFs1XFFZeFVYUVhcUSUIDUBdRWdRV0dSWmAKBBYaX1JA","licenseKey":"2b5720f18e","agent":"","beacon":"bam.nr-data.net","applicationTime":313,"queueTime":0}</script>
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="language" content="DE" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="Stellenangebote für jede Branche tagesaktuell finden und direkt online auf die Stellenanzeigen bewerben." />
+
+    <meta property="og:title" content="Stellenangebote aktuell - Testsieger" />
+    <meta property="og:description" content="Stellenangebote für jede Branche tagesaktuell finden und direkt online auf die Stellenanzeigen bewerben." />
+    <meta name="r2d2:search_str" content="Campaign=6&amp;o=score&amp;name=&amp;plz=&amp;dist=50&amp;switch=S" />
+    <meta name="apple-itunes-app" content="app-id=1055723005, affiliate-data=myAffiliateData, app-argument=myURL" />
+    <meta name="google-play-app" content="app-id=com.phonegap.yourfirm" />
+
+    <link rel="canonical" href="http://www.yourfirm.de/stellenangebote/" />
+    <link rel="shortcut icon" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/favicon.png" type="image/ico" />
+
+    
+
+
+    <link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/0f5b391accf5.css" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/css/IE6.css?v=fc4ba33" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/css/IE7.css?v=fc4ba33" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/css/IE8.css?v=fc4ba33" /><![endif]-->
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/css/IE9.css?v=fc4ba33" /><![endif]-->
+
+    
+    
+
+    
+    <script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-17208829-3', 'auto');
+    ga('set', 'anonymizeIp', true);
+
+    ga('send', 'pageview');
+
+    function recordOutboundLink(link, category, action, newwin, redir) {
+
+        if (link.attributes.target && link.getAttribute('target') == '_blank') { newwin = true ;}
+        if (newwin === undefined) { newwin = false ;}
+        if (redir === undefined) { redir = true ;}
+        try {
+            ga('send', 'event', category, link.href)
+        } catch(err) {}
+        if (redir) {
+            if (newwin) {
+                window.open(link.href,"_blank");
+            } else {
+                location.href = link.href;
+            }
+        }
+    }
+
+</script>
+
+    
+
+      </head>
+
+      <body>
+
+    <div id="wrapper">
+    <div class="container-fluid" id="landing_thin">
+
+      
+          <div class="navbar">
+
+    	<div class="navbar-header">
+        	<img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/arrow_back3.png" class="back_arrow visible-xs" id="m-back-btn" width="39" height="33" title="Back" alt="Back" onclick="history.go(-1)" />
+    		<a href="/" title="Yourfirm"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/logo_mobi_big.png" class="navbar-toggle logo_mob" title="Yourfirm" alt="Yourfirm" /></a>
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+         	<span class="icon-bar first"></span>
+         	<span class="icon-bar second"></span>
+         	<span class="icon-bar third"></span>
+      		</button>
+
+    	<a class="navbar-brand collapse navbar-collapse" href="/" title="Wir lieben Jobs im Mittelstand. | YOURFIRM"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/yf_logo_main.svg" width="300" height="75" title="Wir lieben Jobs im Mittelstand. | YOURFIRM" alt="Wir lieben Jobs im Mittelstand. | YOURFIRM" /></a>
+      	</div><!-- navbar-header end -->
+
+      	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    		<ul class="nav nav-tabs hidden-xs">
+        		<li title="Anzeige schalten"><a class="anzeige" href="/recruiting/">Anzeige <br /> schalten <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue4.png" width="41" height="41" title="Anzeige schalten" alt="Anzeige schalten" /></a></li>
+                <li title="Regionale Jobportale"><a class="portale" href="/regionale-jobportale/">Regionale <br /> Jobportale <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue5.png" width="41" height="41" title="Regionale Jobportale" alt="Regionale Jobportale" /></a></li>
+        		<li title="Karriere Ratgeber"><a class="ratgeber" href="/karriere/">Karriere <br /> Ratgeber <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue3.png" width="41" height="41" title="Karriere Ratgeber" alt="Karriere Ratgeber" /></a></li>
+        		<li title="Firma suchen"><a class="firma" href="/arbeitgebersuche/">Firma <br /> suchen <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue2.png" width="41" height="41" title="Firma suchen" alt="Firma suchen" /></a></li>
+        		<li title="Job suchen"><a class="job" href="/suche/all/">Job <br /> suchen <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue1.png" width="41" height="41" title="Job suchen" alt="Job suchen" /></a></li>
+			</ul><!-- nav nav-tabs end -->
+
+        	<ul class="nav nav-tabs mobi hidden-lg hidden-md hidden-sm">
+                	<li><a title="Startseite" href="/">Startseite</a></li>
+                 	<li><a title="Job suchen" href="/suche/all/">Job suchen</a></li>
+                 	<li><a title="Firma suchen" href="/arbeitgebersuche/">Firma suchen</a></li>
+                 	<li><a title="Karriere-Ratgeber" href="/karriere-ratgeber/">Karriere-Ratgeber</a></li>
+                    <li><a title="Regionale Jobportale" href="/regionale-jobportale/">Regionale Jobportale</a></li>
+                 	<li><a title="Anzeige schalten" href="/recruiting/">Anzeige schalten</a></li>
+                 	
+                 	<li><a href="#" title="Login" onclick="openPopup('login');">Login</a></li>
+       	 	</ul><!-- nav nav-tabs mobi hidden-lg hidden-md hidden-sm end -->
+
+		</div><!-- collapse navbar-collapse end -->
+
+    </div><!-- navbar end -->
+
+    <div class="login_area hidden-xs">
+       <div class="login_area_inner">
+
+             
+             
+
+                        
+                        
+                            
+                                
+
+
+
+<div class="user_profile_login" id="id_user_profile_login">
+    <a title="Login"
+      
+         target="_blank"
+         href="https://www.yourfirm.de/account/signin/">
+      
+      <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/login_home.png" alt="login" title="login" class="register_login_home" width="61" height="19" />
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+                            
+                            
+                        
+
+         </div><!-- login_area_inner end -->
+     </div><!-- login_area end -->
+
+          
+
+          
+          
+          <!--End Header-->
+
+         
+
+         
+
+    		
+          		<div id="search_box">
+  <div class="container-fluid search_box__container">
+    <form class="form-inline" action="/suche/all/" method="get" id="search-form-input" name="SucheForm"
+          onsubmit="return redirect();" autocomplete="off">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="input-group">
+            <span class="input-group-addon" id="lupe">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            
+              <input autocomplete="off" class="input autocomplete ui-autocomplete-input" id="word" name="name" placeholder="Jobtitel, Stichwort" type="text" />
+            
+          </div><!-- input-group end -->
+        </div><!-- col-sm-5 end -->
+
+        <div class="col-sm-5">
+          <div class="input-group">
+            <span class="input-group-addon" id="pin">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            
+              <input autocomplete="off" class="input autocomplete ui-autocomplete-input" id="location" name="plz" placeholder="Ort, PLZ, Region" style="border-radius:0 4px 4px 0" type="text" />
+            
+            <div class="input-group-addon" id="pfeile">
+              <select id="distanceSelect" name="dist">
+                <option value="15">15 km</option>
+                <option value="30">30 km</option>
+                <option value="45">45 km</option>
+                <option value="60">60 km</option>
+                <option value="75">75 km</option>
+                <option value="90" selected="selected">90 km</option>
+              </select>
+            </div><!-- input-group-addon pfeile end -->
+          </div><!-- input-group end -->
+        </div><!-- col-sm-5 end -->
+
+        <div class="col-sm-2" id="job_such_button1">
+          <button class="btn btn-success btn-submit-mobile span12 yfinput no_mob_btn" title="Job suchen" type="submit">
+            Job suchen
+          </button>
+        </div><!-- col-sm-2 end -->
+      </div>
+
+      <!-- only mobile -->
+      
+        <div title="Erweiterte Suche" class="mobsuch_erweit2 visible-xs">
+          Erweiterte Suche
+        </div><!-- mobsuch_erweit2 end -->
+      
+      <!-- only mobile end -->
+
+      <div id="staticlistContainer" class="row">
+
+        <!-- only mobile -->
+        
+          <div id="mobsuch_hidden">
+        <!-- only mobile end -->
+
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Taetigkeitsbereich">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  Tätigkeitsfeld
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Taetigkeitsbereich" name="Taetigkeitsbereich" value="">
+                  <ul class="dropdown-menu" id="id_Taetigkeitsbereich">
+                    <li data-value="34">Architektur, Bauwesen</li>
+                    <li data-value="35">Assistenz, Sekretariat</li>
+                    <li data-value="36">Banken, Finanzdienstleister</li>
+                    <li data-value="37">Bildung, Soziales</li>
+                    <li data-value="38">Einkauf, Logistik</li>
+                    <li data-value="39">Finanzen</li>
+                    <li data-value="40">Forschung, Wissenschaft</li>
+                    <li data-value="41">Führungskraft, Management</li>
+                    <li data-value="42">Gastronomie, Tourismus</li>
+                    <li data-value="43">Handwerk, Gewerbe</li>
+                    <li data-value="44">HR, Personalwesen</li>
+                    <li data-value="45">Ingenieur, Technik</li>
+                    <li data-value="46">IT, Softwareentwicklung</li>
+                    <li data-value="47">Journalismus, Medien</li>
+                    <li data-value="48">Kaufleute, Verwaltung</li>
+                    <li data-value="49">Marketing, PR</li>
+                    <li data-value="50">Medizin, Pflege</li>
+                    <li data-value="24">Rechtswesen</li>
+                    <li data-value="51">Verkauf, Vertrieb</li>
+                  </ul>
+                
+              </div> <!-- /#Taetigkeitsbereich -->
+
+            </div><!-- col-sm-4 end -->
+
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Vertragsart">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  <!--<span class="search_filter2 dropdown-name" data-l10n-singular="Vertragsart" data-l10n-plural="Vertragsarten">Anstellungsart</span>-->
+                  Anstellungsart
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Vertragsart" name="Vertragsart" value="">
+                  <ul class="dropdown-menu" id="id_Vertragsart">
+                    <li data-value="">Alle Anstellungsarten</li>
+                    <li data-value="10">Festanstellung Vollzeit</li>
+                    <li data-value="26">Festanstellung Teilzeit</li>
+                    <li data-value="18">Trainee</li>
+                    <li data-value="25">Ausbildung</li>
+                    <li data-value="20">Duales Studium</li>
+                    <li data-value="19">Praktikum</li>
+                    <li data-value="28">Werkstudent</li>
+                    <li data-value="27">Abschlussarbeit</li>
+                    <li data-value="30">Aushilfe</li>
+                    <li data-value="29">Freiberuflich</li>
+                  </ul>
+                
+              </div> <!-- /#Vertragsart -->
+
+            </div><!-- col-sm-4 end -->
+
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Branche">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  <!--<span class="search_filter3 dropdown-name" data-l10n-singular="Branche" data-l10n-plural="Branchen">Branche</span>-->
+                  Branche
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Branche" name="Branche" value="">
+                  <ul class="dropdown-menu" id="id_Branche">
+                    <li data-value="39">Automobil- &amp; Fahrzeugbau</li>
+                    <li data-value="21">Bauindustrie</li>
+                    <li data-value="30">Bergbau, Rohstoffe &amp; Material</li>
+                    <li data-value="22">Chemie, Pharma &amp; Medizin</li>
+                    <li data-value="23">Dienstleistungen</li>
+                    <li data-value="26">Druck, Papier &amp; Verpackung</li>
+                    <li data-value="28">Elektronik, High-Tech &amp; Optik</li>
+                    <li data-value="29">Energie, Versorgung &amp; Umwelt</li>
+                    <li data-value="24">Finanzdienstleistungen</li>
+                    <li data-value="31">Forst- &amp; Agrarwirtschaft</li>
+                    <li data-value="41">Getriebe- &amp; Komponentenfertigung</li>
+                    <li data-value="34">Handel</li>
+                    <li data-value="32">IT, Internet &amp; Telekom</li>
+                    <li data-value="33">Konsum- &amp; Gebrauchsgüter</li>
+                    <li data-value="27">Logistik, Transport &amp; Verkehr</li>
+                    <li data-value="40">Luft-, Raum- &amp; Schifffahrt</li>
+                    <li data-value="36">Marketing &amp; PR</li>
+                    <li data-value="37">Maschinen- &amp; Anlagenbau</li>
+                    <li data-value="35">Medien &amp; Verlag</li>
+                    <li data-value="42">Sonstige Branchen</li>
+                    <li data-value="44">Unternehmensberatung</li>
+                    <li data-value="38">Werkzeugbau</li>
+                    <li data-value="25">Wirtschaftsprüfung, Recht, Steuern</li>
+                  </ul>
+                
+              </div> <!-- /#Branche -->
+
+            </div><!-- col-sm-4 end -->
+          </div>
+        </div>
+
+        <div class="col-sm-2" id="search_reset1">
+
+          <a href="/suche/all/" title="Suche zurücksetzen"
+             class="search_reset ">Suche zurücksetzen</a>
+
+        </div><!-- col-sm-2 end -->
+
+        <!-- only mobile -->
+        </div><!-- mobsuch_hidden end -->
+        <!-- only mobile end -->
+
+        <!-- only mobile -->
+        <div class="onl_mob">
+          <a href="/suche/all/" title="Suche zurücksetzen" class="search_reset">Suche zurücksetzen</a>
+          <button id="submit" class="btn btn-success btn-submit-mobile span12 yfinput mob_btn" title="Job suchen">
+            Job suchen
+          </button>
+        </div>
+        <!-- only mobile end -->
+      </div> <!-- /#staticlistContainer -->
+    </form>
+  </div>
+</div><!-- search_box end -->
+
+          	
+
+    <script type="text/javascript" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/js/a747ba37bbef.js"></script>
+<script type="text/javascript" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/js/3907da35ae0a.js" defer></script>
+<script type="text/javascript" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/js/a8deedcb829a.js"></script>
+    <script  type='text/javascript'>var dajaxice_endpoint = '/kundeninterface/dajax/'</script>
+<script src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/dajaxice/dajaxice.core.js" type="text/javascript" charset="utf-8"></script>
+<div id="container" class="row" style="margin-top:20px">
+
+   <div id="resultsPage">
+
+        
+
+        <!-- Start linke Seite -->
+        
+         <div id="upperResultContainer" class="col-sm-8">
+
+         <div class="landing_page">
+
+
+
+    
+    	
+       		<div class="link_line">
+    			<a href="/" title="Startseite">Startseite</a> > <a href="/jobs/" title="Jobs">Jobs</a> >  <a href="/stellenangebote/" title=""></a> 
+    		</div><!-- link_line end -->
+        
+
+        <img width="47" height="47" title="" alt="Stellenangebote" title="Stellenangebote" class="lp_suchen" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/jobsuchen2.png">
+
+        <h1 class="cms_h1_only">Stellenangebote </h1>
+
+        <div class="cms_descLeftRight" style="margin-bottom:10px; float:none; margin-left:18px;">
+            <div class="tinywrap" style="">
+              Suche: Stellenangebote , Stellenanzeigen , Jobangebote  ,
+              <a href="/stellenangebote/" title="Jobs ">Jobs </a>
+            </div><!-- tinywrap end -->
+        </div><!-- cms_descLeftRight end -->
+    
+
+	
+        <div class="cms_descLeftRight" style="margin-left:18px; margin-top:0px;">
+            <h2 class="cms_h2">Jobs in ganz Deutschland finden</h2>
+            <div class="tinywrap"><p>Yourfirm ist der Nr. 1 Stellenmarkt f&uuml;r Bewerber mit Fokus auf den Mittelstand. Das Jobportal vermittelt Stellenangebote, aber z.B. auch duale Studienpl&auml;tze. Mit der Suchfunktion k&ouml;nnen Sie schnell und zuverl&auml;ssig passende Stellenangebote in Deutschland finden.</p>
+<p>Aus dem Ranking "Deutschlands beste Jobportale 2014" ging Yourfirm wiederholt als bester Stellenmarkt mit Fokus auf Stellenangebote im Mittelstand hervor. Die Stellenangebote bei Yourfirm sind handverlesen und exklusiv von f&uuml;hrenden Unternehmen des deutschen Mittelstands f&uuml;r jeden Beruf zusammengetragen. Bei Yourfirm finden Sie den besten Job von Deutschlands besten Unternehmen f&uuml;r den gew&uuml;nschten Fachbereich. Unsere Stellenangebote haben Methode: Bei uns finden Sie die Stars des Mittelstands, die sogenannten Hidden Champions!</p>
+<p>Dabei handelt es sich um Unternehmen, die die Marktf&uuml;hrerschaft in einem Wirtschaftssektor erlangt haben, aber gleichzeitig immer noch eher unbekannt sind, aber in jedem Lebenslauf eine gute Figur machen. Daher sind die Hidden Champions echte Geheimtipps f&uuml;r die Bewerber! Dabei spielt es auch keine Rolle, ob sie Positionen als Manager, Professionals oder Trainee suchen. Bei unseren Stellenanzeigen finden Sie aus allen Berufsfeldern den passenden Job und k&ouml;nnen sich von den Ergebnissen &uuml;berzeugen lassen.</p>
+<p>Mittelst&auml;ndler finden sie nicht zwingend in gro&szlig;en St&auml;dten wie Berlin, Bremen oder Hamburg, sondern gelegentlich auch in kleineren St&auml;dten wie Oldenburg, Bielefeld oder Freiburg. Viele Kandidaten suchen immer noch in der &ouml;rtlichen Zeitung. Doch gerade bei der Suche nach Stellen f&uuml;r F&uuml;hrungskr&auml;fte oder nach Jobs wie beispielsweise als Entwickler, sind das Stellenanzeigen, die die Unternehmen online aufgeben. In unserem Karriere-Ratgeber finden Kandidaten Bewerbungstipps, Gehaltsrechner, Weiterbildung und Muster Dateien wie Anschreiben oder Lebensl&auml;ufe f&uuml;r alle Berufsfelder.</p></div>
+        </div>
+	
+
+	
+
+   	   </div><!-- landing_page end -->
+
+	<div class="clear"></div>
+
+	  <div id="results-container" class="landing_thin">
+          
+
+                          
+                          
+
+          
+
+        <div id="jobs-list-container">
+          
+                  <div id="result-snippet-container">
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999639">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/PERI/business-development-manager-construction-components-mf-kowloon---999639/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Business Development Manager (Construction Components) (m/f)     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/PERI_logo_Stellenanzeigen.png" title="PERI GmbH" alt="PERI GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="PERI GmbH">
+                      PERI GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">PERI GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/PERI/business-development-manager-construction-components-mf-kowloon---999639/" target="_blank" title="Business Development Manager (Construction Components) (m/f)" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999639', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Business Development Manager (Construction Components) (m/f)">Business Development Manager (Construction Components) (m/f)</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Business Development Manager (Construction Components) (m/f) Kowloon, Hong Kong Your responsibilities Acquiring new clients groups and application fields and deepening business at existing clients Commercial responsibility for the business unit Establish relationships to key accounts and create necessary network Coordination and support of sales... ..."  itemprop="description" content="Business Development Manager (Construction Components) (m/f) Kowloon, Hong Kong Your responsibili...">
+                	Business Development Manager (Construction Components) (m/f) Kowloon, Hong Kong Your responsibilities Acquiring new clients groups and application fields and deepening business at existing clients Commercial responsibility for the business unit Establish relationships to key accounts and create necessary network Coordination and support of sales...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Kowloon</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-10">Heute</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere :</p> <a href="/jobs/bergkirchen/" title="Stellenangebote Bergkirchen">Stellenanzeigen Bergkirchen</a><br />
+          			
+                
+          			
+            			<p>Mehr Jobs:</p> <a href="/jobs/business-development/" title="Business Development"> Business Development</a><br />
+          			
+                
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999561">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/CGI/service-delivery-manager-mit-dem-schwerpunkt-applikationsmanagement-mw-bremen---999561/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Service Delivery Manager mit dem Schwerpunkt Applikationsmanagem...     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/CGI_Logo_100x45_IsGTvFy.png" title="CGI Deutschland Ltd. &amp; Co. KG" alt="CGI Deutschland Ltd. &amp; Co. KG" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="CGI Deutschland Ltd. &amp; Co. KG">
+                      CGI Deutschland Ltd. &amp; Co. KG
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">CGI Deutschland Ltd. &amp; Co. KG</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/CGI/service-delivery-manager-mit-dem-schwerpunkt-applikationsmanagement-mw-bremen---999561/" target="_blank" title="Service Delivery Manager mit dem Schwerpunkt Applikationsmanagement (m/w)" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999561', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Service Delivery Manager mit dem Schwerpunkt Applikationsmanagement (m/w)">Service Delivery Manager mit dem Schwerpunkt Applikationsmanagem...</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Alle Stellenangebote Unsere Standorte Arbeiten bei CGI Entwicklung und Förderung von Mitarbeitern Wir sind der fünftgrößte unabhängige IT-Dienstleister weltweit mit 68.000 Mitarbeitern in 40 Ländern. In Deutsch- land beschäftigen wir an 13 Standorten mehr als 2.300 motivierte Kollegen und Kolleginnen.Trotz unserer Größe sind wir ein famili- enge... ..."  itemprop="description" content="Alle Stellenangebote Unsere Standorte Arbeiten bei CGI Entwicklung und Förderung von Mitarbeitern...">
+                	Alle Stellenangebote Unsere Standorte Arbeiten bei CGI Entwicklung und Förderung von Mitarbeitern Wir sind der fünftgrößte unabhängige IT-Dienstleister weltweit mit 68.000 Mitarbeitern in 40 Ländern. In Deutsch- land beschäftigen wir an 13 Standorten mehr als 2.300 motivierte Kollegen und Kolleginnen.Trotz unserer Größe sind wir ein famili- enge...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Bremen</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-10">Heute</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Stellenanzeigen:</p> <a href="/jobs/bremen/" title="Stellenangebote Bremen">Jobs Bremen</a><br />
+          			
+                
+          			
+                
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999557">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/softwareentwickler-mw-ms-accessvba-region-potsdam---999557/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Softwareentwickler (m/w) MS Access/VBA     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/softwareentwickler-mw-ms-accessvba-region-potsdam---999557/" target="_blank" title="Softwareentwickler (m/w) MS Access/VBA" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999557', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Softwareentwickler (m/w) MS Access/VBA">Softwareentwickler (m/w) MS Access/VBA</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Herr Matthias Speidel PersonalreferentFon +49 331 505743-0potsdam@ferchau.com www.ferchau.com Job-Kennziffer YF77-86588-P Ihr Einsatzort Region Potsdam Adresse FERCHAU Engineering GmbH Niederlassung PotsdamZeppelinstraße 13614471 Potsdam Sie sind bereit für eine neue Herausforderung? Möchten Ihre Talente in einem innovativen ... ..."  itemprop="description" content="Ihr Ansprechpartner Herr Matthias Speidel PersonalreferentFon +49 331 505743-0potsdam@ferchau.com...">
+                	Ihr Ansprechpartner Herr Matthias Speidel PersonalreferentFon +49 331 505743-0potsdam@ferchau.com www.ferchau.com Job-Kennziffer YF77-86588-P Ihr Einsatzort Region Potsdam Adresse FERCHAU Engineering GmbH Niederlassung PotsdamZeppelinstraße 13614471 Potsdam Sie sind bereit für eine neue Herausforderung? Möchten Ihre Talente in einem innovativen ...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Region Potsdam</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-10">Heute</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere :</p> <a href="/jobs/potsdam/" title="Jobs Potsdam"> Potsdam</a><br />
+          			
+                
+          			
+            			<p>Mehr :</p> <a href="/jobs/softwareentwicklung/" title="Softwareentwicklung"> Softwareentwicklung</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/potsdam/softwareentwicklung/" title="Potsdam Softwareentwicklung">Potsdam Softwareentwicklung</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999556">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/kaufm-sachbearbeiter-mw-grundstuckswesen-gerne-auch-quereinsteiger-mw-bayreuth---999556/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Kaufm. Sachbearbeiter (m/w) Grundstückswesen - gerne auch Querei...     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/kaufm-sachbearbeiter-mw-grundstuckswesen-gerne-auch-quereinsteiger-mw-bayreuth---999556/" target="_blank" title="Kaufm. Sachbearbeiter (m/w) Grundstückswesen - gerne auch Quereinsteiger (m/w)" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999556', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Kaufm. Sachbearbeiter (m/w) Grundstückswesen - gerne auch Quereinsteiger (m/w)">Kaufm. Sachbearbeiter (m/w) Grundstückswesen - gerne auch Querei...</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Frau Grit Degel Recruiting AssistantFon +49 921 289917 -44bayreuth@ferchau.com www.ferchau.com Job-Kennziffer YF65-02118-BT Ihr Einsatzort Bayreuth Adresse FERCHAU Engineering GmbH Niederlassung BayreuthFriedrich-von-Schiller-Str. 3595444 Bayreuth Sie sind bereit für eine neue Herausforderung? Möchten Ihre Talente in einem in... ..."  itemprop="description" content="Ihr Ansprechpartner Frau Grit Degel Recruiting AssistantFon +49 921 289917 -44bayreuth@ferchau.co...">
+                	Ihr Ansprechpartner Frau Grit Degel Recruiting AssistantFon +49 921 289917 -44bayreuth@ferchau.com www.ferchau.com Job-Kennziffer YF65-02118-BT Ihr Einsatzort Bayreuth Adresse FERCHAU Engineering GmbH Niederlassung BayreuthFriedrich-von-Schiller-Str. 3595444 Bayreuth Sie sind bereit für eine neue Herausforderung? Möchten Ihre Talente in einem in...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Bayreuth</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-09">Gestern</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Stellenanzeigen:</p> <a href="/jobs/bayreuth/" title="Stellenangebote Bayreuth">Stellenangebote Bayreuth</a><br />
+          			
+                
+          			
+            			<p>Mehr Stellenanzeigen:</p> <a href="/jobs/sachbearbeitung/" title="Sachbearbeitung"> Sachbearbeitung</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/bayreuth/sachbearbeitung/" title="Bayreuth Sachbearbeitung">Bayreuth Sachbearbeitung</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999421">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/ingenieur-mw-arbeitsvorbereitungproduktionsplanung-berlin---999421/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Ingenieur (m/w) Arbeitsvorbereitung/Produktionsplanung     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/ingenieur-mw-arbeitsvorbereitungproduktionsplanung-berlin---999421/" target="_blank" title="Ingenieur (m/w) Arbeitsvorbereitung/Produktionsplanung" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999421', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Ingenieur (m/w) Arbeitsvorbereitung/Produktionsplanung">Ingenieur (m/w) Arbeitsvorbereitung/Produktionsplanung</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Frau Denise Bayer Manager RecruitmentFon +49 30 3974799-0berlin@ferchau.com www.ferchau.com Job-Kennziffer YF83-21589-B Ihr Einsatzort Berlin Adresse FERCHAU Engineering GmbH Niederlassung BerlinBayerischer Platz 110779 Berlin Sie interessieren sich für spannende Projekte? In den unterschiedlichsten Branchen? Dann sind Sie be... ..."  itemprop="description" content="Ihr Ansprechpartner Frau Denise Bayer Manager RecruitmentFon +49 30 3974799-0berlin@ferchau.com w...">
+                	Ihr Ansprechpartner Frau Denise Bayer Manager RecruitmentFon +49 30 3974799-0berlin@ferchau.com www.ferchau.com Job-Kennziffer YF83-21589-B Ihr Einsatzort Berlin Adresse FERCHAU Engineering GmbH Niederlassung BerlinBayerischer Platz 110779 Berlin Sie interessieren sich für spannende Projekte? In den unterschiedlichsten Branchen? Dann sind Sie be...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Berlin</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-09">Gestern</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Jobs:</p> <a href="/jobs/berlin/" title=" Berlin">Stellenangebote Berlin</a><br />
+          			
+                
+          			
+            			<p>Mehr Stellenangebote:</p> <a href="/jobs/ingenieur/" title="Ingenieur"> Ingenieur</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/berlin/ingenieur/" title="Berlin Ingenieur">Berlin Ingenieur</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999420">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/prozessingenieur-feinwerktechnik-optoelektronik-berlin---999420/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Prozessingenieur Feinwerktechnik/ Optoelektronik     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/prozessingenieur-feinwerktechnik-optoelektronik-berlin---999420/" target="_blank" title="Prozessingenieur Feinwerktechnik/ Optoelektronik" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999420', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Prozessingenieur Feinwerktechnik/ Optoelektronik">Prozessingenieur Feinwerktechnik/ Optoelektronik</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Frau Catrin Gerullis PersonalreferentinFon +49 30 3974799-0berlin@ferchau.com www.ferchau.com Job-Kennziffer YF84-54639-B Ihr Einsatzort Berlin Adresse FERCHAU Engineering GmbH Niederlassung BerlinBayerischer Platz 110779 Berlin Technische Projekte, die es in sich haben. Das ist FERCHAU. Als Marktführer im Engineering bieten ... ..."  itemprop="description" content="Ihr Ansprechpartner Frau Catrin Gerullis PersonalreferentinFon +49 30 3974799-0berlin@ferchau.com...">
+                	Ihr Ansprechpartner Frau Catrin Gerullis PersonalreferentinFon +49 30 3974799-0berlin@ferchau.com www.ferchau.com Job-Kennziffer YF84-54639-B Ihr Einsatzort Berlin Adresse FERCHAU Engineering GmbH Niederlassung BerlinBayerischer Platz 110779 Berlin Technische Projekte, die es in sich haben. Das ist FERCHAU. Als Marktführer im Engineering bieten ...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Berlin</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-09">Gestern</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Stellenangebote:</p> <a href="/jobs/berlin/" title="Stellenangebote Berlin"> Berlin</a><br />
+          			
+                
+          			
+            			<p>Mehr Stellenanzeigen:</p> <a href="/jobs/feinwerktechnik/" title="Feinwerktechnik"> Feinwerktechnik</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/berlin/feinwerktechnik/" title="Berlin Feinwerktechnik">Berlin Feinwerktechnik</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999393">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/qualitatsingenieur-mw-im-automobilumfeld-groraum-freiburgoffenburglorrach---999393/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Qualitätsingenieur (m/w) im Automobilumfeld     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/qualitatsingenieur-mw-im-automobilumfeld-groraum-freiburgoffenburglorrach---999393/" target="_blank" title="Qualitätsingenieur (m/w) im Automobilumfeld" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999393', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Qualitätsingenieur (m/w) im Automobilumfeld">Qualitätsingenieur (m/w) im Automobilumfeld</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com www.ferchau.com Job-Kennziffer YF85-13402-FR Ihr Einsatzort Großraum Freiburg/Offenburg/Lörrach Adresse FERCHAU Engineering GmbH Niederlassung FreiburgEngelbergerstraße 2179106 Freiburg Neue Technologien. Vielfältige Projektfelder. In den unterschie... ..."  itemprop="description" content="Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com...">
+                	Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com www.ferchau.com Job-Kennziffer YF85-13402-FR Ihr Einsatzort Großraum Freiburg/Offenburg/Lörrach Adresse FERCHAU Engineering GmbH Niederlassung FreiburgEngelbergerstraße 2179106 Freiburg Neue Technologien. Vielfältige Projektfelder. In den unterschie...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Großraum Freiburg/Offenburg/Lörrach</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-09">Gestern</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Stellenangebote:</p> <a href="/jobs/freiburg-im-breisgau/" title="Stellenanzeigen Freiburg im Breisgau">Stellenanzeigen Freiburg im Breisgau</a><br />
+          			
+                
+          			
+            			<p>Mehr Jobs:</p> <a href="/jobs/qualitaetsingenieur/" title="Qualitätsingenieur"> Qualitätsingenieur</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/freiburg-im-breisgau/qualitaetsingenieur/" title="Freiburg im Breisgau Qualitätsingenieur">Freiburg im Breisgau Qualitätsingenieur</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999389">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/FERCHAU/prozessingenieur-mw-in-der-produktion-groraum-freiburgoffenburglorrach---999389/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Prozessingenieur (m/w) in der Produktion     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/FERCHAU_neu_Logo_100x45.png" title="FERCHAU Engineering GmbH" alt="FERCHAU Engineering GmbH" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="FERCHAU Engineering GmbH">
+                      FERCHAU Engineering GmbH
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">FERCHAU Engineering GmbH</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/FERCHAU/prozessingenieur-mw-in-der-produktion-groraum-freiburgoffenburglorrach---999389/" target="_blank" title="Prozessingenieur (m/w) in der Produktion" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999389', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Prozessingenieur (m/w) in der Produktion">Prozessingenieur (m/w) in der Produktion</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com www.ferchau.com Job-Kennziffer YF83-98808-FR Ihr Einsatzort Großraum Freiburg/Offenburg/Lörrach Adresse FERCHAU Engineering GmbH Niederlassung FreiburgEngelbergerstraße 2179106 Freiburg Technische Projekte, die es in sich haben. Das ist FERCHAU. Als... ..."  itemprop="description" content="Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com...">
+                	Ihr Ansprechpartner Frau Hannah Müller PersonalreferentinFon +49 761 292813-0freiburg@ferchau.com www.ferchau.com Job-Kennziffer YF83-98808-FR Ihr Einsatzort Großraum Freiburg/Offenburg/Lörrach Adresse FERCHAU Engineering GmbH Niederlassung FreiburgEngelbergerstraße 2179106 Freiburg Technische Projekte, die es in sich haben. Das ist FERCHAU. Als...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Großraum Freiburg/Offenburg/Lörrach</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-09">Gestern</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere :</p> <a href="/jobs/freiburg-im-breisgau/" title=" Freiburg im Breisgau">Stellenanzeigen Freiburg im Breisgau</a><br />
+          			
+                
+          			
+            			<p>Mehr :</p> <a href="/jobs/produktion/" title="Produktion"> Produktion</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/freiburg-im-breisgau/produktion/" title="Freiburg im Breisgau Produktion">Freiburg im Breisgau Produktion</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999242">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/exxeta/java-jee-integrationslosungen-associate-consultant-mw-karlsruhe-frankfurt-stuttgart-mannheim---999242/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Java / JEE Integrationslösungen - Associate Consultant (m/w)     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/Logo_Exxeta_100x45.jpg" title="EXXETA AG" alt="EXXETA AG" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="EXXETA AG">
+                      EXXETA AG
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">EXXETA AG</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/exxeta/java-jee-integrationslosungen-associate-consultant-mw-karlsruhe-frankfurt-stuttgart-mannheim---999242/" target="_blank" title="Java / JEE Integrationslösungen - Associate Consultant (m/w)" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999242', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Java / JEE Integrationslösungen - Associate Consultant (m/w)">Java / JEE Integrationslösungen - Associate Consultant (m/w)</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999242 Startseite Job suchen Firma suchen Karriere-Ratgeber Regionale Jobportale Anzeige schalten Mein Account Logout Standort Karlsruhe, Frankfurt, Stuttgart, Mannheim Wir ermöglichen Ihnen einen schnellen und erfolgreichen Berufseinstieg. Als Absolvent fördern wir Ihre Karriere un... ..."  itemprop="description" content="Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999242 Startseite Job suchen Firm...">
+                	Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999242 Startseite Job suchen Firma suchen Karriere-Ratgeber Regionale Jobportale Anzeige schalten Mein Account Logout Standort Karlsruhe, Frankfurt, Stuttgart, Mannheim Wir ermöglichen Ihnen einen schnellen und erfolgreichen Berufseinstieg. Als Absolvent fördern wir Ihre Karriere un...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Karlsruhe, Frankfurt, Stuttgart, Mannheim</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-04">Vor 6 Tagen</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere :</p> <a href="/jobs/karlsruhe/" title="Stellenangebote Karlsruhe">Stellenangebote Karlsruhe</a><br />
+          			
+                
+          			
+            			<p>Mehr Jobs:</p> <a href="/jobs/java/" title="JAVA"> JAVA</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/karlsruhe/java/" title="Karlsruhe JAVA">Karlsruhe JAVA</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+                      				
+
+<div class="job-container " itemscope itemtype="http://schema.org/JobPosting" >
+
+	<div class="such_erg4" id="stelle-999237">
+    
+    <!-- only mobile -->
+    <a href="http://www.yourfirm.de/job/exxeta/mobile-development-consultant-mw-frankfurt-karlsruhe-stuttgart-mannheim---999237/" target="_blank" title="" class="fe_stelle_suche mob visible-xs" onclick="recordOutboundLink(this,'stellen_link','', false, false);return true;">
+         Mobile Development - Consultant (m/w)     	
+    </a>
+    <div class="clear_mob"></div>
+    <!-- only mobile end -->
+    
+    <div class="v-karte">
+    
+	        
+            <img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/Logo_Exxeta_100x45.jpg" title="EXXETA AG" alt="EXXETA AG" width="100" height="45" class="profil_karte" itemprop="image" />
+            	<div class="visitenkarte hidden-xs">
+		    		<span itemprop="hiringOrganization" content="EXXETA AG">
+                      EXXETA AG
+            		</span>
+            	</div><!-- visitenkarte end -->
+            
+            
+        </div><!-- v-karte end -->
+    
+    
+    <div class="ueber_suche3 col-sm-9">
+    
+    	<!-- only mobile -->
+        <p class="descr_mob visible-xs">EXXETA AG</p>
+        <!-- only mobile end -->
+    
+	    <a href="/job/exxeta/mobile-development-consultant-mw-frankfurt-karlsruhe-stuttgart-mannheim---999237/" target="_blank" title="Mobile Development - Consultant (m/w)" class="fe_stelle_suche hidden-xs" onclick="recordOutboundLink(this,'stellen_link','999237', false, false);return true;" itemprop="url">
+		    <span itemprop="title" content="Mobile Development - Consultant (m/w)">Mobile Development - Consultant (m/w)</span>
+        </a>
+          	
+            <div class="clear10 non_mobile"></div>
+            
+        	<div class="short_text3">
+            
+				<span class="hidden-xs" title="Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999237 Startseite Job suchen Firma suchen Karriere-Ratgeber Regionale Jobportale Anzeige schalten Mein Account Logout Standort Karlsruhe, Frankfurt, Stuttgart, Mannheim Als Mobile-Specialist (m/w) beraten und entwickeln Sie Strategien und Lösungen im mobilen Bereich. Dabei verstehen... ..."  itemprop="description" content="Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999237 Startseite Job suchen Firm...">
+                	Bitte in Ihrer Bewerbung die folgende Referenznummer angeben: YF999237 Startseite Job suchen Firma suchen Karriere-Ratgeber Regionale Jobportale Anzeige schalten Mein Account Logout Standort Karlsruhe, Frankfurt, Stuttgart, Mannheim Als Mobile-Specialist (m/w) beraten und entwickeln Sie Strategien und Lösungen im mobilen Bereich. Dabei verstehen...
+            	</span>
+            	
+                <div class="clear10 non_mobile hidden-xs"></div>
+                
+            	<p class="city" itemprop="jobLocation">Frankfurt, Karlsruhe, Stuttgart, Mannheim</p>
+            
+				<p class="date hidden-xs" itemprop="datePosted" content="2017-10-04">Vor 6 Tagen</p>
+            
+            	<div class="progress_bar hidden-xs" title="100%" style="width:10%"></div><!-- progress_bar end -->
+				
+                <div class="more_info hidden-xs">
+                
+                	<div class="clear10"></div>
+                
+                	
+            			<p>Weitere Stellenangebote:</p> <a href="/jobs/karlsruhe/" title=" Karlsruhe">Stellenanzeigen Karlsruhe</a><br />
+          			
+                
+          			
+            			<p>Mehr Stellenanzeigen:</p> <a href="/jobs/beratung/" title="Beratung"> Beratung</a><br />
+          			
+                
+          			
+           			 	 <a href="/jobs/karlsruhe/beratung/" title="Karlsruhe Beratung">Karlsruhe Beratung</a>
+          			
+                
+                </div><!-- more_info hidden-xs end -->
+                
+         	</div><!-- short_text3 end -->
+          
+        </div><!-- ueber_suche3 end -->
+
+	</div><!-- such_erg4 end -->
+
+</div><!-- job-container end -->
+
+                    		
+
+                    
+
+
+                  </div>
+          
+		  </div>
+
+        <div id="spinner-container"></div>
+
+        <div id="pageLoadAnimation" class="spinner-container" style="z-index:0; padding-bottom:20px; text-align:center; margin:auto">
+                 <div class="spin"></div>
+          </div>
+
+
+          
+
+          <div id="pagination-container" class="input-prepend">
+          
+          
+           	 	<button type="button" id="loadMoreBtn" onclick="redirect();" title="mehr Ergebnisse anzeigen">mehr Ergebnisse anzeigen</button><a class="btn" href="#" id="btnScrollUp" title="Zurück zum Seitenanfang"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/rja_pfeil.png" width="22" height="24" alt="Nach oben" title="Nach oben" /></a>
+        	</div><!-- pagination-container end -->
+
+          
+	  </div><!-- end results-container -->
+
+          
+          <div class="landing_page_bottom">
+            
+                <div class="cms_descLeftRight">
+
+
+    
+        <h2 class="cms_h2">
+    
+      Exklusive Stellenangebote der Top-Unternehmen aus dem Mittelstand 
+    </h2>
+
+
+
+
+
+<div class="tinywrap">
+    <p>Die Stellenangebote bei yourfirm sind handverlesen und exklusiv von den besten Unternehmen des deutschen Mittelstandes zusammengetragen. Bei yourfirm finden Sie die Stellen von Deutschlands besten Unternehmen.</p>
+<br />
+<h3>Kein Massenprodukt - Stellenangebote Deutschland</h3>
+<p>Um die Suche so einfach und erfolgreich wie m&ouml;glich zu gestalten, k&ouml;nnen Sie <strong>verschiedene Suchkriterien anpassen</strong>, die es Ihnen erm&ouml;glichen, die besten Stellenangebote f&uuml;r Sie zu finden. Filtern Sie die Suche beispielsweise nach Ihren Qualifikationen: beispielsweise k&ouml;nnen die Stellenangebote in Deutschland <strong>nach T&auml;tigkeit, favorisierten Vertragsart, Branche oder Region</strong> filtern. Oder alles gleichzeitig!</p>
+<p>Dar&uuml;ber hinaus haben wir f&uuml;r Sie die einzige Stellenangebote-Suche, die ausschlie&szlig;lich auf gute Firmen ausgerichtet ist: Egal f&uuml;r welche Stellenangebote Sie sich aus den verschiedenen Wirtschaftssektoren oder M&auml;rkten interessieren, die <strong>Hidden Champions aus allen Bereichen</strong> finden Sie mit ihren aktuellen Angeboten bei uns. Sie w&uuml;nschen sich ein internationales Unternehmen mit attraktiven Auslandsstandorten und Ausschreibungen weltweit? Mit yourfirm ist das kein Problem! Egal welche Vorstellung Sie von Ihrer beruflichen Zukunft haben, yourfirm hilft Ihnen, Ihre Tr&auml;ume mit den passenden Stellenangeboten zu verwirklichen.</p>
+<p>Suchen Sie nicht lange bei Jobb&ouml;rsen, die jedes, noch so dubiose Stellenangebot inserieren. Hier gibt es <strong>nur ausgew&auml;hlte Stellenangebote von Top-Unternehmen</strong> aus dem deutschen Mittelstand - erfolgreich und als Arbeitgeber ausgezeichnet!</p>
+<br />
+<h3>Starke Unternehmen aus dem Mittelstand</h3>
+<p>Bei yourfirm finden Sie z.B. Stellenangebote der <a href="../../../../firmenprofile/JUNGHEINRICH/">Jungheinrich AG</a>, einer der gr&ouml;&szlig;ten Anbieter in den Bereichen Flurf&ouml;rderzeug- und Materialflusstechnik weltweit. In der Lagertechnik ist Jungheinrich europ&auml;ischer Marktf&uuml;hrer. Bei Interesse k&ouml;nnen Sie sich dort f&uuml;r ein Praktikum oder eine Festanstellung bewerben. Das Spektrum der Stellenangebote reicht dabei vom Werkstatt-Techniker &uuml;ber den Webentwickler bis hin zum Entwicklungsingenieur.</p>
+<p>Auch f&uuml;r den kaufm&auml;nnischen Bereich bietet das Unternehmen Stellen an. Sollte einmal kein passendes Stellenangebot f&uuml;r Sie dabei sein, dann bewerben Sie sich doch einfach initiativ! Ein weiteres Top-Unternehmen mit zahlreichen Stellenangeboten bei yourfirm ist die ifm electronic GmbH. Mehrfach als TOP-Arbeitgeber ausgezeichnet, ist das Unternehmen einer der weltweit f&uuml;hrenden Anbieter von Automatisierungstechnik. Die ifm electronic GmbH f&ouml;rdert den Berufseinstieg bereits f&uuml;r Studenten im Rahmen von Praktika und Abschlussarbeiten.</p>
+<br />
+<h3>Jetzt direkt online bewerben</h3>
+<p>Stellenangebote gibt es aber auch f&uuml;r gestandene Professionals mit mehrj&auml;hriger Berufserfahrung. Jedes Unternehmen mit Stellenangeboten in der Jobb&ouml;rse von yourfirm ist ein ausgew&auml;hlter Partner und Top-Arbeitgeber - nicht ein Betrieb unter vielen. Entdecken Sie exklusive Stellenangebote der Hidden Champions mit yourfirm. Hier finden Sie Stellenangebote von Top-Unternehmen, die Ihnen bisher unbekannt waren. Starten Sie Ihre individuelle Stellensuche und finden Sie jetzt Ihre Traum-Stelle. yourfirm er&ouml;ffnet Ihnen eine neue Perspektive f&uuml;r Ihre berufliche Zukunft. Nutzen Sie das Angebot von yourfirm - kostenlos und ohne Registrierung - und bewerben Sie sich auf unsere aktuellen Stellenangebote!</p>
+</div>
+
+
+
+
+</div>
+
+            
+            </div>
+        
+
+		<div class="clear"></div>
+
+        </div>
+
+        
+
+<!-- Start rechte Seite -->
+        <div id="right_col_suche" class="col-sm-4 hidden-xs hidden-sm hidden-md">
+
+        
+
+        
+
+        
+
+        
+
+        
+
+		
+
+		<a href="/arbeitgebersuche/"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/banner_firma.jpg" width="300" height="250" alt="Top-Arbeitgeber" title="Top-Arbeitgeber" /></a>
+
+        <div class="clear25"></div>
+
+        <div class="similar_stellen_lp">
+
+        <h3>Quicklinks</h3>
+
+        <div style="padding:5px 20px 0px 5px">
+
+              <div style="background-image:url('https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/yf_lp1.png'); background-repeat:no-repeat; background-position:0px 0px; padding:0px 0px 5px 30px; margin-bottom:10px">
+
+              <a href="/" class="fe_stelle_suche" title="Stellenanzeigen">Stellenanzeigen</a>, <br />
+              <a href="/jobboerse/" class="fe_stelle_suche" title="Jobbörse">Jobbörse</a>, <br />
+              <a class="fe_stelle_suche" href="/stellenangebote/" title="Stellenangebote">Stellenanangebote</a>, <br />
+                    
+                      <a class="fe_stelle_suche" href="/jobs/kiel/finanzberatung/" title="Finanzberatung Kiel">Finanzberatung Kiel</a> <br />
+                    
+              </div>
+
+			  <div style="">
+
+          
+              
+              
+          
+
+			  </div>
+
+
+			  <div style="">
+
+			  
+              
+
+			  </div>
+
+			  <div style="">
+
+          
+              
+              
+          
+
+			  </div>
+
+           </div>
+
+           <div class="clear"></div>
+
+          </div>
+
+         </div>
+
+       <div class="clear"></div>
+<!-- Ende rechte Seite -->
+
+            
+
+            
+
+          </div>
+	</div>
+
+    <div class="footer row">
+    		<div class="col-sm-12 footer_inner visible-xs visible-sm visible-md visible-lg">
+
+            <p class="footer_text no_home">
+            	<span class="hidden-xs">
+                <a href="/ueber-yourfirm/" title="Über Yourfirm">Über Yourfirm</a>
+            	<a href="/kontakt/" title="Kontakt">Kontakt</a>
+            	<a href="/nutzungsbedingungen/" title="Nutzungsbedingungen">Nutzungsbedingungen</a>
+                </span><!-- hidden-xs end -->
+            	<a href="/datenschutz/" title="Datenschutz">Datenschutz</a>
+            	<a href="/agb/" title="AGB">AGB</a>
+            	<a href="/impressum/" title="Impressum">Impressum</a> <span class="hidden-xs"></span>
+            	<span class="hidden-xs">
+                Fotocredit: Shutterstock
+                </span><!-- hidden-xs end -->
+            </p>
+
+        </div><!-- footer_inner end -->
+
+        <div class="cookie_bar col-sm-12" id="cookie_bar">
+    			<p>Cookies helfen uns bei der Erbringung unserer Dienste. Durch die Nutzung unserer Angebote erklären Sie sich mit dem Setzen von Cookies einverstanden.
+            		<span class="clear_footer"></span>
+        			&nbsp; <button id="cookie_bar_button" title="OK">OK</button>
+                	<span class="clear_footer no_cl"></span>
+        			&nbsp; <a href="/datenschutz/" title="Mehr erfahren">Mehr erfahren</a>
+                </p>
+            </div><!-- col-sm-2 end -->
+		</div><!-- cookie_bar_home end -->
+
+	</div><!-- footer end -->
+
+</div><!-- wrapper end -->
+</div><!-- wrapper end -->
+
+
+            
+
+            <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.yourfirm.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.yourfirm.de/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+            
+
+   </body>
+</html>

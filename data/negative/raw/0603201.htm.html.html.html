@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+<meta property="og:image" content="https://www.elektronik-kompendium.de/res/thumbs/net-eth-1024.jpg" />
+<meta itemprop="image" content="https://www.elektronik-kompendium.de/res/thumbs/net-eth-1024.jpg" />
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/res/assets/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/res/assets/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/res/assets/js/bootstrap.min.js"></script>
+<title>IEEE 802.3 / Ethernet-Grundlagen</title>
+</head>
+<body class="page">
+
+<div id="page" class="hfeed site">
+
+<div class="container header-area">
+<header id="masthead" class="site-header col-sm-12" role="banner">
+
+<div class="site-branding col-md-4">
+<div id="logo"><a href="/"><img src="/res/assets/img/logo.png" height="86" width="275" /></a></div>
+<div class="hidden-lg hidden-md">
+<form method="get" action="/service/suchen/suchen.php" target="_top" name="suchen"><input type="text" name="q" maxlength="255" placeholder="Suchen"><button type="submit" name="sa" class="btn" aria-label="Left Align"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></form>
+</div>
+</div>
+
+<div class="site-search col-md-4 hidden-xs hidden-sm">
+<form method="get" action="/service/suchen/suchen.php" target="_top" name="suchen" class="form-inline"><input type="text" name="q" maxlength="255" placeholder="Suchen"> <button type="submit" name="sa" class="btn" aria-label="Left Align"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></form>
+</div>
+
+<div class="social-header col-md-4 hidden-xs hidden-sm">
+</div>
+
+</header>
+</div><!-- header-area -->
+
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+
+<div class="collapse navbar-collapse navbar-ex1-collapse"><ul class="nav navbar-nav">
+<li><a href="/" title="Startseite">Startseite</a></li>
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Themen <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/sites/grd/index.htm">Elektronik Grundlagen</a></li>
+<li><a href="/sites/bau/index.htm">Bauelemente</a></li>
+<li><a href="/sites/slt/index.htm">Schaltungstechnik</a></li>
+<li><a href="/public/schaerer/index.htm">Elektronik Minikurse</a></li>
+<li><a href="/sites/praxis/index.htm">Elektronik Praxis</a></li>
+<li><a href="/sites/dig/index.htm">Digitaltechnik</a></li>
+<li><a href="/sites/com/index.htm">Computertechnik</a></li>
+<li><a href="/sites/kom/index.htm">Kommunikationstechnik</a></li>
+<li><a href="/sites/net/index.htm">Netzwerktechnik</a></li>
+<li><a href="/sites/sic/index.htm">Sicherheitstechnik</a></li>
+<li><a href="/sites/raspberry-pi/index.htm">Raspberry Pi</a></li>
+</ul></li>
+<li><a href="/news/" title="News">News</a></li>
+<li><a href="/forum/" title="Forum">Forum</a></li>
+<li><a href="/shop/" title="Online-Shop">Online-Shop</a></li>
+<li><a href="/ebooks/" title="eBooks">eBooks</a></li>
+</ul></div>
+
+</div>
+</nav><!-- navigation -->
+
+<div id="content" class="site-content container">
+<div class="row">
+
+<div id="primary" class="content-area col-sm-12 col-md-8">
+<main id="main" class="site-main" role="main">
+
+<!-- google_ad_section_start -->
+
+
+<h1>IEEE 802.3 / Ethernet-Grundlagen</h1>
+<p>Ethernet ist eine Familie von Netzwerktechniken, die vorwiegend in lokalen Netzwerken (LAN), aber auch zum Verbinden gro&szlig;er Netzwerke zum Einsatz kommt (WAN).<br>
+  F&uuml;r Ethernet gibt es eine Vielzahl an Standards, f&uuml;r die das Institute of Electrical and Electronics Engineers (IEEE) verantwortlich ist. Seit der Einrichtung einer Arbeitsgruppe f&uuml;r den Standard eines lokalen Netzwerks ist der Name &quot;Ethernet&quot; das Synonym f&uuml;r alle unter der Arbeitsgruppe 802.3 vorgeschlagenen und standardisierten Spezifikationen.</p>
+<table border="1" cellpadding="5" cellspacing="0" bgcolor="#EEEEEE" bordercolor="#000000" bordercolordark="#000000" bordercolorlight="#000000">
+  <tr>
+    <th align="left" rowspan="2">2</th>
+    <td rowspan="3"><b>802.1</b><br>
+      Internet-Working</td>
+    <td colspan="4"><b>802.2<br>
+      </b>Logical Link
+      Control (LLC)</td>
+    </tr>
+  <tr>
+    <td colspan="4"><b>802.1<br>
+      </b>Media Access
+      Control (MAC)</td>
+    </tr>
+  <tr>
+    <th align="left">1</th>
+    <td valign="top"><b>802.3</b><br>
+      Ethernet</td>
+    <td valign="top"><b>802.4</b><br>
+      Token-Bus</td>
+    <td valign="top"><b>802.5</b><br>
+      Token-Ring</td>
+    <td valign="top"><b>802.11</b><br>
+      Wireless LAN</td>
+    </tr>
+</table>
+<p>Bei Ethernet spricht man von einer paketvermittelnden Netzwerktechnik, deren Standards auf den Schichten 1 und 2 des OSI-Schichtenmodells die Adressierung und die Zugriffskontrolle auf unterschiedliche &Uuml;bertragungsmedien definieren. Die Nutzdaten kommen bereits in Datenpaketen von den dar&uuml;berliegenden Protokollen. Zum Beispiel von TCP/IP. Diese Datenpakete werden mit einem Header versehen und anschlie&szlig;en im Ethernet-Netzwerk &uuml;bertragen.<br>
+  Die Ethernet-Standards auf der OSI-Schicht 2 sind die LLC- und MAC-Teilschichten (IEEE 802.2 und 802.1). Sie sind unabh&auml;ngig von Ethernet und werden auch f&uuml;r andere &Uuml;bertragungstechniken verwendet. Zum Beispiel Bluetooth (IEEE 802.15) oder WLAN (IEEE 802.11).</p>
+<h3>Geschichtlicher Hintergrund</h3>
+<p>Urspr&uuml;nglich wurde Ethernet in den siebziger Jahren im PARC (Palo Alto Research Center), im Forschungslabor der Firma Xerox entwickelt. In Zusammenarbeit mit den Firmen DEC und Intel wurde Ethernet sp&auml;ter zu einem offenen Standard. Dieser Standard bildete dann die Grundlage f&uuml;r den offiziellen 802.3-Standard des IEEE (Institute of Electrical and Electronics Engineers).<br>
+  Einer der Vorl&auml;ufer von Ethernet war ein Funknetz mit dem Namen ALOHA, das die Hawaii-Inseln miteinander verbunden hat. Hier war das &Uuml;bertragungsmedium die Luft. Genauso wie ALOHA wurde Ethernet f&uuml;r die gemeinsame Nutzung eines &Uuml;bertragungsmediums durch viele Stationen entwickelt. W&auml;hrend es f&uuml;r ALOHA die Luft war, wurde f&uuml;r Ethernet als &Uuml;bertragungsmedium ein Koaxialkabel gew&auml;hlt, das die Rechner in einer Bus-Topologie miteinander verbunden hat.<br>
+  Angefangen hat es in den 1980er Jahren beim 10-MBit-Ethernet &uuml;ber Koaxialkabel. Es folgten verschiedene Weiterentwicklungen f&uuml;r Twisted-Pair-Kabel und Glasfaserkabel mit h&ouml;heren &Uuml;bertragungsraten.<br>
+  Alle Ethernet-Varianten haben eines gemeinsam: Sie basieren auf denselben Prinzipien, die urspr&uuml;nglich in den Standards 802.1, 802.2 und 802.3 festgelegt wurden. Ethernet ist unter 802.3 standardisiert und baut auf 802.1 und 802.2 auf.</p>
+<p><object width="340" height="285">
+    <param name="movie" value="http://www.youtube.com/v/g5MezxMcRmk&hl=en&fs=1&border=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+    <embed src="http://www.youtube.com/v/g5MezxMcRmk&hl=en&fs=1&border=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="340" height="285"></embed>
+  </object></p>
+<p>Irgendwann in den 1990er Jahren hat sich Ethernet gegen&uuml;ber Token Ring (auf Basis von Koaxialkabel) und FDDI (auf Basis von Glasfaserkabel) durchgesetzt. Insbesondere der einfache und kosteng&uuml;nstige Aufbau eines Ethernet-Netzwerks sorgte f&uuml;r die rasche Verbreitung auf der ganzen Welt. Von Token Ring, FDDI oder gar ATM und SDH spricht man heute fast nicht mehr. Im Prinzip werden heute fast alle Vernetzungen im LAN und WAN mit Ethernet-Technik realisiert.</p>
+<h3>&Uuml;bertragungsmedium und Netzwerk-Topologie</h3>
+<p><img src="bilder/06032011.gif" alt="Vom Bus zum Stern" width="414" height="89" hspace="5" vspace="5"><br>
+  Das urspr&uuml;ngliche Ethernet basiert auf einem Koaxialkabel als &Uuml;bertragungsmedium. Dabei wurde mit einem Kabel hintereinander mehreren anderen Stationen zu einer Kette verbunden. Die Netzwerk-Topologie hat man dann als Bus bezeichnet.<br>
+  Stetige Verbesserungen haben dann zu einem Anstieg der Netzwerkleistung gef&uuml;hrt. Der entscheidende Durchbruch von Ethernet im LAN kam durch den Umstieg von Shared- auf Switched-Media (von Bus zu Stern-Topologie) in Verbindung mit einer strukturierten Verkabelung. Gleichzeitig hat die konsequente R&uuml;ckw&auml;rtskompatibilit&auml;t dazu gef&uuml;hrt, dass Investitionen bis zu einem gewissen Grad zukunftsf&auml;hig blieben. Im Prinzip lassen sich auch heute noch die alten Komponenten f&uuml;r 10 und 100 MBit/s mit Komponenten f&uuml;r 1 GBit/s kombinieren. Im Zweifelsfall bedarf es nur eines Medienkonverters.</p>
+<h3>&Uuml;bertragungstechnik</h3>
+<p>Ethernet transportiert Daten paketweise ohne festes Zugriffsraster. Damit unterscheidet sich Ethernet von anderen paketorientierten Systemen, wie zum Beispiel ATM oder SDH/Sonet, die mit einem festen Zeitraster jedem Teilnehmer eine Mindestbandbreite garantieren k&ouml;nnen. Deshalb bereitet Ethernet Probleme bei allen Arten von zeitkritischen Anwendungen. Bei Ethernet gibt es keine Garantie, dass die Daten innerhalb einer bestimmten Zeit den Empf&auml;nger erreichen. Das bedeutet, der Erfolg einer &Uuml;bertragung ist nicht sicher. Er unterliegt nur einer gewissen Wahrscheinlichkeit. So verwerfen Ethernet-Komponenten Datenpakete, wenn nicht genug Bandbreite zur Verf&uuml;gung steht.<br>
+  Wegen der unzuverl&auml;ssigen &Uuml;bertragungstechnik ist Ethernet auf die Intelligenz h&ouml;herer Protokolle und Anwendungen angewiesen. Das ist auch ein Grund, warum in bestimmten Bereichen heute noch andere Vernetzungstechniken bevorzugt werden. Im Vergleich dazu ist Ethernet eine einfach zu implementierende Vernetzungstechnik, die sich &uuml;ber die Jahrzehnte hinweg in lokalen Netzwerken bew&auml;hrt und durchgesetzt hat.</p>
+<h3>&Uuml;bersicht: Ethernet-Technik</h3>
+<ul>
+  <li><a href="1406171.htm">Ethernet-Standards von IEEE 802.3</a></li>
+  <li><a href="1406181.htm">CSMA/CD und Kollisionen</a></li>
+  <li><a href="1406191.htm">Ethernet-Frame</a></li>
+  <li><a href="1406201.htm">MAC-Adresse</a></li>
+</ul>
+<h3>&Uuml;bersicht: Standards und &Uuml;bertragungsgeschwindigkeit</h3>
+<table border="1" cellpadding="5" cellspacing="0" bordercolor="#000000">
+  <tr>
+    <th colspan="4" bgcolor="#CCCCCC">Ethernet mit</th>
+  </tr>
+  <tr>
+    <th bgcolor="#CCCCCC">10 MBit/s</th>
+    <th bgcolor="#CCCCCC">100 MBit/s</th>
+    <th bgcolor="#CCCCCC">1000 MBit/s</th>
+    <th bgcolor="#CCCCCC">10 GBit/s</th>
+  </tr>
+  <tr>
+    <td>10Base5</td>
+    <td>100Base-TX</td>
+    <td>1000Base-T</td>
+    <td>10GBase-T</td>
+  </tr>
+  <tr>
+    <td>10Base2</td>
+    <td>100Base-T4</td>
+    <td>1000Base-SX</td>
+    <td>10GBase-CX4</td>
+  </tr>
+  <tr>
+    <td>10Base-T</td>
+    <td>100Base-T2</td>
+    <td>1000Base-LX</td>
+    <td>10GBase-LX4</td>
+  </tr>
+  <tr>
+    <td>10Base-FL</td>
+    <td>100Base-FX</td>
+    <td>1000Base-LH</td>
+    <td>10GBase-LW4</td>
+  </tr>
+  <tr>
+    <td>10Base-FB</td>
+    <td>&nbsp;</td>
+    <td>1000Base-ZX</td>
+    <td>10GBase-SR</td>
+  </tr>
+  <tr>
+    <td>10Base-FP</td>
+    <td>&nbsp;</td>
+    <td>1000Base-CX</td>
+    <td>10GBase-LR</td>
+  </tr>
+  <tr>
+    <td>10Base-SX</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>10GBase-ER</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>10GBase-SW</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>10GBase-LW</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>10GBase-EW</td>
+  </tr>
+</table>
+<ul>
+  <li><a href="1404191.htm">IEEE 802.3u / Fast-Ethernet</a></li>
+  <li><a href="1404201.htm">IEEE 802.3z / IEEE 802.3ab / Gigabit-Ethernet</a></li>
+  <li><a href="1107311.htm">IEEE 802.3an / 10-Gigabit-Ethernet</a></li>
+  <li><a href="1406261.htm">IEEE 802.3ba / 40- und 100-Gigabit-Ethernet</a></li>
+  </ul>
+<h3>Weitere Ethernet-Standards:</h3>
+<ul>
+  <li><a href="0807021.htm">IEEE 802.3af / Power-over-Ethernet (PoE)</a></li>
+  <li><a href="0907091.htm">IEEE 802.1d / STP - Spanning Tree Protocol</a></li>
+  <li><a href="0907131.htm">IEEE 802.3ad / Link Aggregation</a></li>
+  <li><a href="0906221.htm">IEEE 802.1q / VLAN - Virtual Local Area Network</a></li>
+</ul>
+<h3>Weitere verwandte Themen:</h3>
+<ul>
+<li><a href="0509111.htm">IEEE 802</a></li>
+<li><a href="../kom/0301201.htm">ISO/OSI-7-Schichtenmodell</a></li>
+<li><a href="0510091.htm">Netzwerk-Kabel</a></li>
+<li><a href="0603191.htm">Twisted-Pair-Kabel</a></li>
+</ul>
+
+<div class="panel panel-success">
+<div class="panel-heading"><h4 class="panel-title">Teilen:</h4></div>
+<div class="panel-body">
+<ul class="nav nav-pills">
+<noscript>
+<li role="presentation"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.elektronik-kompendium.de"><span class="fa fa-facebook fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.elektronik-kompendium.de"><span class="fa fa-google fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="https://twitter.com/home?status=Elektronik-Kompendium+-+http%3A%2F%2Fwww.elektronik-kompendium.de"><span class="fa fa-twitter fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="mailto:?&subject=Link-Tipp:+Elektronik-Kompendium.de&body=http%3A%2F%2Fwww.elektronik-kompendium.de"><span class="fa fa-envelope fa-2x"></span></a></li>
+</noscript>
+<script>document.write ('<li role="presentation"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=' + location.href + '"><span class="fa fa-facebook fa-2x"></span></a></li>');</script>
+<script>document.write ('<li role="presentation"><a target="_blank" href="https://plus.google.com/share?url=' + location.href + '"><span class="fa fa-google fa-2x"></span></a></li>');</script>
+<script>document.write ('<li role="presentation"><a target="_blank" href="https://twitter.com/home?status=' + document.title + ' ' + location.href + '"><span class="fa fa-twitter fa-2x"></span></a></li>');</script>
+<script>document.write ('<li role="presentation"><a target="_blank" href="mailto:?&subject=Link-Tipp: ' + document.title + '&body=' + location.href + '"><span class="fa fa-envelope fa-2x"></span></a></li>');</script>
+<script>if (navigator.userAgent.match(/iPhone|Android/i)) { document.write ('<li role="presentation"><a href="watsapp://send?text=Link-Tipp: ' + document.title + ' ' + location.href + '"><span class="fa fa-whatsapp fa-2x"></span></a></li>') };</script>
+</ul>
+</div>
+</div>
+
+<h3>Produktempfehlungen</h3>
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-4">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=DE&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=eonline&marketplace=amazon&region=DE&placement=B00A128S24&asins=B00A128S24&linkId=c92281533db6a151d38aba8b752f081f&show_border=true&link_opens_in_new_window=true"></iframe>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=DE&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=eonline&marketplace=amazon&region=DE&placement=B00A121WN6&asins=B00A121WN6&linkId=e93062e14c37708010265cb42e384d59&show_border=true&link_opens_in_new_window=true"></iframe>
+</div>
+<div class="col-md-4 col-sm-4 col-xs-4">
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=DE&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=eonline&marketplace=amazon&region=DE&placement=B00FQM2G1I&asins=B00FQM2G1I&linkId=357e5c656a513706c3c8f8d2204a05df&show_border=true&link_opens_in_new_window=true"></iframe>
+</div>
+</div>
+
+<div id="adg1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Netzwerktechnik, InArticle -->
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-7453653573550802"
+     data-ad-slot="4764905982"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="row">
+<div class="col-md-6 col-sm-6">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Netzwerktechnik, responsive -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7453653573550802"
+     data-ad-slot="6846896380"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div class="col-md-6 col-sm-6">
+
+<h4 class="text-center">Netzwerktechnik-Fibel</h4>
+<p class="text-center"><a href="/shop/buecher/netzwerktechnik-fibel"><img src="/shop/bilder/produkt/114.jpg" alt="Netzwerktechnik-Fibel" border="0"></a></p>
+<p class="text-center"><a href="/shop/buecher/netzwerktechnik-fibel" class="btn btn-success">Das will ich haben!</a></p>
+
+</div>
+</div><!-- /.row -->
+
+<script>
+$('#adg1').insertBefore(document.getElementsByTagName('h3')[0]);
+</script>
+
+
+<!-- google_ad_section_end -->
+
+</main><!-- #main -->
+</div><!-- #primary -->
+
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+
+<aside class="widget">
+<h3 class="widget-title">Folge uns</h3>
+<ul class="nav nav-pills">
+<li role="presentation"><a target="_blank" href="https://www.facebook.com/ElektronikKompendium"><span class="fa fa-facebook fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="https://www.google.com/+elektronikkompendium"><span class="fa fa-google fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="https://www.twitter.com/dasELKO"><span class="fa fa-twitter fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="/news/feed/"><span class="fa fa-rss fa-2x"></span></a></li>
+<li role="presentation"><a target="_blank" href="/service/newsletter/index.htm"><span class="fa fa-envelope fa-2x"></span></a></li>
+</ul>
+</aside>
+
+<aside class="widget">
+<h3 class="widget-title">Das Buch zu dieser Webseite</h3>
+<h4 class="text-center">Netzwerktechnik-Fibel</h4>
+<p class="text-center"><a href="/shop/buecher/netzwerktechnik-fibel"><img src="/res/bilder/buch-nfibel2.jpg" alt="Die Netzwerktechnik-Fibel" vspace="3" border="0" title="Die Netzwerktechnik-Fibel"></a></p>
+<p><strong>Kundenmeinung:</strong><br><img src="/shop/bilder/editor/image/kunde10.jpg" alt="K&auml;ufer der Netzwerktechnik-Fibel" title="K&auml;ufer der Netzwerktechnik-Fibel" border="0" vspace="3" hspace="5" align="left">
+<i>"Da B&uuml;cher, die einfach zu verstehen sind, schwer zu finden sind, habe ich die Investition in die Netzwerktechnik-Fibel nicht bereut."</i></p>
+<p class="text-center"><a class="btn btn-success" href="/shop/buecher/netzwerktechnik-fibel">Netzwerktechnik-Fibel jetzt bestellen!</a></p>
+<p class="text-center"><a target="_blank" href="https://itunes.apple.com/de/book/netzwerktechnik-fibel/id587746690?mt=11"><img src="/res/bilder/button_ebook_apple.png" alt="Die Netzwerktechnik-Fibel ist im iBookstore erh&auml;ltlich"></a></p>
+<p class="text-center"><a target="_blank" href="https://www.amazon.de/gp/product/B00AO19SYY/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00AO19SYY&linkCode=as2&tag=eonline"><img src="/res/bilder/button_ebook_amazon.png" alt="Die Netzwerktechnik-Fibel f&uuml;r Amazon Kindle erh&auml;ltlich"></a></p>
+<p class="text-center"><a target="_blank" href="https://play.google.com/store/books/details/Patrick_Schnabel_Netzwerktechnik_Fibel?id=HTAyCwAAQBAJ"><img src="/res/bilder/button_ebook_google.png" alt="Die Netzwerktechnik-Fibel bei Google Play erh&auml;ltlich"></a></p>
+<p class="text-center"><a target="_blank" href="/ebooks/netzwerktechnik-fibel/"><img src="/res/bilder/button_ebook_pdf.png" alt="Netzwerktechnik-Fibel als PDF-Datei ohne DRM"></a></p>
+</aside>
+
+<aside class="widget">
+<h3 class="widget-title">Das Buch zu dieser Webseite</h3>
+<h4 class="text-center">Kommunikationstechnik-Fibel</h4>
+<p class="text-center"><a href="/shop/buecher/kommunikationstechnik-fibel"><img src="/res/bilder/buch-kfibel2.jpg" alt="Die Kommunikationstechnik-Fibel" vspace="3" border="0" title="Die Kommunikationstechnik-Fibel"></a></p>
+<p><strong>Kundenmeinung:</strong><br><img src="/shop/bilder/editor/image/kunde5.jpg" alt="K&auml;ufer der Kommunikationstechnik-Fibel" title="K&auml;ufer der Kommunikationstechnik-Fibel" border="0" vspace="3" hspace="5" align="left">
+<i>"Die Kommunikationstechnik-Fibel ist sehr informativ und verst&auml;ndlich. Genau das habe ich schon seit langem gesucht. Endlich mal ein Buch, das kurz und b&uuml;ndig die moderne Informationstechnik beleuchtet."</i></p>
+<p class="text-center"><a class="btn btn-success" href="/shop/buecher/kommunikationstechnik-fibel">Kommunikationstechnik-Fibel jetzt bestellen!</a></p>
+<p class="text-center"><a target="_blank" href="https://itunes.apple.com/de/book/kommunikationstechnik-fibel/id583021041?mt=11"><img src="/res/bilder/button_ebook_apple.png" alt="Die Kommunikationstechnik-Fibel ist im iBookstore erh&auml;ltlich"></a></p>
+<p class="text-center"><a target="_blank" href="https://www.amazon.de/gp/product/B00AFCYUXG/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00AFCYUXG&linkCode=as2&tag=eonline"><img src="/res/bilder/button_ebook_amazon.png" alt="Die Kommunikationstechnik-Fibel f&uuml;r Amazon Kindle erh&auml;ltlich"></a></p>
+<p class="text-center"><a target="_blank" href="https://play.google.com/store/books/details/Patrick_Schnabel_Kommunikationstechnik_Fibel?id=t57nCgAAQBAJ"><img src="/res/bilder/button_ebook_google.png" alt="Kommunikationstechnik-Fibel als eBook von Google Play Store"></a></p>
+<p class="text-center"><a target="_blank" href="/ebooks/kommunikationstechnik-fibel/"><img src="/res/bilder/button_ebook_pdf.png" alt="Kommunikationstechnik-Fibel als PDF-Datei ohne DRM"></a></p>
+</aside>
+
+</div><!-- #secondary -->
+
+</div><!-- row -->
+
+</div><!-- #content -->
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+<div class="site-info container">
+
+<div class="row">
+<div class="copyright col-md-6">Elektronik-Kompendium.de <a rel="author" href="https://plus.google.com/109664037498785340413?rel=author" style="display:none;">Google+</a></div>
+<nav role="navigation" class="col-md-6"><ul class="nav footer-nav clearfix">
+<li><a href="/service/impressum.htm">Impressum</a></li>
+<li><a href="/service/datenschutz.htm">Datenschutz</a></li>
+</ul></nav>
+</div>
+
+</div><!-- .site-info -->
+</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<div class="scroll-top-wrapper"><span class="scroll-top-inner"><span class="fa fa-2x fa-arrow-circle-up"></span></span></div>
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-533288-1']);
+_gaq.push(['_gat._anonymizeIp']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script');
+ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<script language="javascript" type="text/javascript">
+document.getElementById("content").insertBefore(document.getElementById("content").getElementsByTagName("ins")[0].cloneNode(true), document.getElementById("content").getElementsByTagName("h3")[0]);
+</script>
+
+
+</body>
+</html>

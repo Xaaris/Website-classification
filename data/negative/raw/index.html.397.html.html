@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang=de>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="https://www.erziehung-online.de/pics/allgemein/favicon.png" /><link rel="preload" href="https://www.erziehung-online.de/forum/Themes/EO/css/index.min.css" as="style" onload="this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://www.erziehung-online.de/forum/Themes/EO/css/index.min.css"></noscript>
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+</script>
+<style type=text/css>
+body{background-image:url(https://www.erziehung-online.de/pics/allgemein/background.jpg);background-color:rgb(255,255,255);margin:0;padding:0;font-family:"Roboto Condensed",Arial,Helvetica,sans-serif;font-size:12pt;line-height:16pt;height:auto;background-repeat:repeat no-repeat}.container{position:relative;top:0;left:0;margin:0;width:1000px;background-image:url(https://erziehung-online.de/pics/allgemein/back.jpg);background-color:transparent;height:auto;min-height:100%;background-repeat:repeat repeat}.main{position:relative;margin:0;background-image:url(https://www.erziehung-online.de/pics/allgemein/backmain.jpg);background-color:transparent;width:1000px;height:auto;z-index:7;background-repeat:no-repeat no-repeat}#superbanner{position:absolute;top:7px;left:255px;height:90px;width:728px;background-color:transparent;z-index:9;text-align:right}#widesky{position:fixed;top:7px;left:1000px;height:600px;width:300px;padding-left:0;overflow:visible;z-index:8;text-align:left}.suche{text-align:left;position:absolute;top:135px;left:521px;border:0;background-color:transparent;width:320px;z-index:5}.logo{text-align:left;position:relative;top:17px;left:10px;border:0;background-color:transparent;width:230px;z-index:5}.adv-partner{text-align:left;position:absolute;top:8px;left:145px;border:0;background-color:transparent;width:90px;z-index:5}.clear{clear:both}.dhidden{display:none}.menu{position:relative;top:60px;left:0;background-color:transparent;height:500px;width:160px;overflow:visible;padding:0;margin:0;z-index:9}.menu h4{margin:7px 0 3px 12px;color:rgb(170,170,170);font-weight:700}.menu img{margin-left:0}.menu ul{top:12px;left:0;width:160px;list-style:none;padding:0;margin:0}.menu li{width:160px;position:relative;padding:0;margin:0}.menu ul li a{width:149px;display:block;line-height:15px;font-size:10pt;font-weight:400;text-decoration:none;text-transform:uppercase;background-color:transparent;border:0;padding:4px 0 4px 8px;color:rgb(119,119,119)}.menu ul ul li a{width:180px;line-height:15px;font-size:9pt;font-weight:400;text-decoration:none;text-transform:uppercase;background-color:rgb(255,255,255);border:0;padding:5px 0 5px 11px;color:rgb(102,102,102)}.menu ul li a.active{background-image:url(https://erziehung-online.de/pics/allgemein/menu-aktiv.gif);color:rgb(153,0,0);padding:5px 0 3px 11px;width:149px;margin:0;background-position:100% 50%;background-repeat:no-repeat no-repeat}.menu ul ul{z-index:2;position:absolute;top:0;left:160px;width:191px;height:auto;margin:1px -155px 0 -1px;padding:0;background-color:rgb(255,255,255);border-right-width:1px;border-right-style:solid;border-right-color:rgb(238,238,238);border-top-width:1px;border-top-style:solid;border-top-color:rgb(238,238,238);border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(238,238,238);-webkit-box-shadow:rgba(190,190,190,.6) 3px 1px 3px 3px;box-shadow:rgba(190,190,190,.6) 3px 1px 3px 3px}.menu ul ul li{position:relative;margin:0;padding:0;background-color:rgb(255,255,255);width:191px}.menu ul ul{display:none}.partner ul li a{width:149px;display:block;line-height:14px;font-size:10pt;font-weight:300;text-decoration:none;text-transform:uppercase;background-color:transparent;border:0;padding:3px 0 3px 11px;color:rgb(102,102,102)}.forum{position:relative;margin:-437px 0 0 -10px;top:0;left:185px;background-color:transparent;height:auto;width:800px;padding:0;z-index:7}#forumbox{width:800px;z-index:7}h3{display:block;clear:both;color:rgb(153,0,0)}#nachoben{visibility:hidden;z-index:77;bottom:85px;position:fixed;left:0;right:auto;margin:0;width:160px;color:rgb(204,204,204)url(https://erziehung-online.de/pics/allgemein/back1.png);background-color:transparent;height:35px;overflow:hidden;text-align:left;background-repeat:repeat repeat}#nachoben a{width:146px;display:block;line-height:15px;font-size:9pt;font-weight:400;text-decoration:none;text-transform:uppercase;background-color:transparent;border:0;padding:4px 0 4px 47px;color:rgb(102,102,102);margin:0}@media only screen and (max-width:1100px) and (min-width:785px){#widesky{display:none}}@media only screen and (max-width:784px) and (min-width:280px){body{background-image:none;background-color:rgb(102,0,0);margin:0;padding:0;font-family:"Roboto Condensed",sans-serif;font-weight:300;font-size:16pt!important;line-height:20pt;height:auto}.container{position:relative;margin:0;padding:0;width:100%;background-image:none!Important;background-color:rgb(255,255,255);height:auto}.main{position:relative;margin:0;padding:0;background-image:none!important;width:100%;height:auto;text-align:center}#superbanner,#widesky{display:none}.suche,.adv-partner,#nachoben{display:none}.logo{position:fixed;margin:0;padding:0;top:0;left:0;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgb(153,153,153);width:100%;height:48px;background-color:rgb(255,255,255);z-index:10}.logo img{position:absolute;width:50%;min-width:230px;max-width:260px;right:5px;margin-top:9px}.dhidden{display:block}.forum{position:relative;left:0;background-color:transparent;height:auto;width:100%;padding:10px;float:none;font-size:75%;line-height:105%}#forumbox{width:100%;text-align:left;margin:40px 0 0;padding:0}#boardindex_table table.table_list tbody.content td.stats{display:none}.menu{width:100%;height:auto;top:0;left:0;padding-bottom:15px}.mhidden,.menu .mhidden,ul#menu{display:none!important}}a:link,a:visited{color:rgb(51,68,102);text-decoration:none}table{empty-cells:show}body{font-style:normal;font-variant:normal;font-weight:400;font-size:90%;line-height:125%;font-family:"Roboto Condensed",Arial,Helvetica,sans-serif;margin:0 auto;padding:0;background-position:0 0;background-repeat:initial initial}body,td,tr{color:rgb(68,68,68)}b{font-weight:700}form{padding:0;margin:0}input,select{font-style:normal;font-variant:normal;font-weight:400;font-size:110%;line-height:115%;font-family:"Roboto Condensed",Arial,Helvetica,sans-serif;color:rgb(0,0,0);background-color:rgb(255,255,255);border:1px solid rgb(127,157,185);padding:2px;background-position:initial initial;background-repeat:initial initial}select{padding:0}select option{padding:1px}.button_submit{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/submit_bg.png);background-color:rgb(205,231,255);border:1px solid rgb(170,170,170);font-weight:300;background-position:initial initial;background-repeat:no-repeat no-repeat}h1,h3,h4{color:rgb(0,0,0);font-size:1em;margin:0;padding:0}a img{border:0}strong{font-weight:400}.clear{clear:both}.middletext{font-size:.95em;line-height:1em;font-family:"Roboto Condensed",sans-serif}.normaltext{font-size:1em;line-height:1.2em}.catbg{color:rgb(255,255,255);font-family:"Roboto Condensed",helvetica,sans-serif;font-size:1em;font-weight:400;background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/main_block.png);background-position:-10px -160px;background-repeat:no-repeat no-repeat}.catbg a{color:rgb(255,255,255)}.windowbg{color:rgb(0,0,0);background-color:rgb(231,234,239)}.windowbg2{color:rgb(0,0,0);background-color:rgb(240,244,247)}.table_list tbody.header td,h3.catbg{overflow:hidden;height:31px;line-height:32px;font-size:1.1em;font-weight:400}.table_list tbody.header td,.table_list tbody.header td a,h3.catbg,h3.catbg a{color:rgb(255,255,255)}h3.catbg img.icon{vertical-align:middle;margin:-2px 5px 0 0}h3.catbg{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/main_block.png);padding-right:9px;background-position:100% -160px;background-repeat:no-repeat no-repeat}div.cat_bar{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/main_block.png);padding-left:9px;overflow:hidden;background-position:0 -160px;background-repeat:no-repeat no-repeat}img#upshrink_ic{float:right;margin:10px 5px 0 0}.content{padding:.5em 1.2em;margin:0;border:none}.content p{margin:0 0 .5em}#main_menu{padding:0 0 0 .5em;float:left;margin:0;width:98%}.dropmenu{list-style:none;line-height:1em;padding:0;margin:0}.dropmenu{padding:0 .5em}.dropmenu a{display:block;color:rgb(0,0,0);text-decoration:none}.dropmenu a span{display:block;padding:0 0 0 5px;font-size:.9em}.dropmenu li a.firstlevel{margin-right:8px}.dropmenu li a.firstlevel span.firstlevel{display:block;position:relative;left:-5px;padding-left:5px;height:22px;line-height:19px;padding-top:1px}.dropmenu li{float:left;padding:0;margin:0;position:relative}.dropmenu li a.active{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/menu_gfx.png);color:rgb(255,255,255);font-weight:400;background-position:100% 0;background-repeat:no-repeat no-repeat}.dropmenu li a.active span.firstlevel{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/menu_gfx.png);background-position:initial initial;background-repeat:no-repeat no-repeat}#header{background:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/main_block.png) 0 -240px no-repeat #fefefe;padding-left:20px}#header div.frame{background:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/main_block.png) 100% -240px no-repeat;display:block;padding:5px 20px 0 0}#content_section{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/frame_repeat.png);background-color:rgb(255,255,255);padding-left:20px;background-position:0% 0%;background-repeat:no-repeat repeat}#content_section div.frame{background-image:url(https://www.erziehung-online.de/forum/Themes/EO/images/theme/frame_repeat.png);display:block;padding:0 20px 0 0;background-position:100% 0%;background-repeat:no-repeat repeat}#main_content_section{width:100%;min-height:200px}h1.forumtitle{line-height:30px;font-size:1.2em;font-family:"Roboto Condensed",Geneva,verdana,sans-serif;margin:0;padding:12px 0 0;float:left;font-weight:400}h3,h4{padding-bottom:3px}img#upshrink{float:right;margin:1em}#upper_section{padding:5px;margin-bottom:1.5em}#upper_section div.news{width:50%;float:right;text-align:right}div#upper_section div.user{width:50%;float:left;overflow:auto}div#upper_section div.news form{padding-bottom:10px}#top_section{min-height:65px;overflow:hidden;margin-bottom:3px}#upper_section{overflow:hidden}.navigate_section{padding:.5em;margin:1em 0 0}.navigate_section ul{display:block;margin:0;font-size:.9em;padding:1em 0 .5em;border-top-width:1px;border-top-style:solid;border-top-color:rgb(204,204,204);overflow:hidden;list-style:none;clear:both;width:100%}.navigate_section ul li{float:left;padding:0 .5em 0 0;font-size:.95em}table.table_list{width:100%}table.table_list p{padding:0;margin:0}table.table_list td{padding:5px}table.table_list tbody.header td{padding:0}table.table_list tbody.content td.stats{font-size:90%;width:15%;text-align:center}table.table_list tbody.content td.lastpost{line-height:1.3em;font-size:85%;width:24%}table.table_list tbody.content td.icon{text-align:center;width:6%}.table_list tbody.content td.info a.subject{font-weight:400;font-size:110%;color:rgb(153,0,0)}tr.windowbg2 td{padding:.3em .7em}@media screen and (max-width:640px){#header{background:0 0;padding-left:3px}#header div.frame{background:0 0;display:block;padding:2px 3px 0 0}b{font-weight:400}#content_section{background-color:rgb(255,255,255);padding-left:3px;background-position:initial initial;background-repeat:initial initial}#content_section div.frame{display:block;padding:0 3px 0 0;background-position:0 0;background-repeat:initial initial}table.table_list tbody.content td.icon{display:none}input,select{font-style:normal;font-variant:normal;font-size:125%;line-height:135%;font-family:"Roboto Condensed",Helvetica,sans-serif;font-weight:300}.table_list tbody.content td.info a.subject{line-height:175%}h1.forumtitle{padding:12px 0 0 10px}}
+</style>
+	<script type="text/javascript" src="https://www.erziehung-online.de/forum/Themes/EO/scripts/smf-theme-script.min.js?fin20"></script>
+	<script type="text/javascript"><!-- // --><![CDATA[
+		var smf_theme_url = "https://www.erziehung-online.de/forum/Themes/EO";
+		var smf_default_theme_url = "https://www.erziehung-online.de/forum/Themes/default";
+		var smf_images_url = "https://www.erziehung-online.de/forum/Themes/EO/images";
+		var smf_scripturl = "https://www.erziehung-online.de/forum/index.php";
+		var smf_iso_case_folding = false;
+		var smf_charset = "UTF-8";
+		var ajax_notification_text = "Lade...";
+		var ajax_notification_cancel_text = "Abbrechen";
+	// ]]></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Mein Mann ist ja zur Zeit arbeitslos (also zumindest hat er keine volle Stelle, sucht aber eine!).Nun fahren wir im Juni 2 Wochen in Urlaub und ich frage mic..." />
+	<meta name="keywords" content="erziehung, kinder, familie, kindergarten, schule" />
+	<title>Neuer Job und schon Urlaub gebucht - Erfahrungen? - Allgemein - ERZIEHUNG-ONLINE - Forum</title>
+	<link rel="help" href="https://www.erziehung-online.de/forum/help/" />
+	<link rel="search" href="https://www.erziehung-online.de/forum/search/" />
+	<link rel="contents" href="https://www.erziehung-online.de/forum/index.php" />
+	<link rel="prev" href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=prev" />
+	<link rel="next" href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=next" />
+	<link rel="index" href="https://www.erziehung-online.de/forum/allgemein/" /><link rel="canonical" href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-36599844-1"]);
+  _gaq.push(["_trackPageview"]);
+  _gaq.push(["_gat._anonymizeIp"]);
+
+  (function() {
+    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 	
+
+<!-- AdSense neue Mobile Ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1180963613459466",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- End AdSense neue Mobile Ads -->
+
+</head>
+<body><div class="container">
+
+<div class="main">
+<a id="oben"></a>
+<div class="logo"><a href="https://www.erziehung-online.de"><img src="https://www.erziehung-online.de/pics/allgemein/logo-erziehung-online.png" alt="erziehung-online" title="erziehung-online" height="120" width="240" class="mhidden" /><img src="https://www.erziehung-online.de/pics/allgemein/mobile-logo.png" alt="erziehung-online" title="erziehung-online" class="dhidden" /></a></div>
+<div class="menu">
+  <ul id="menu">
+	<li><a  class="active"  href="https://www.erziehung-online.de/forum/index.php">ERZIEHUNGS-FORUM</a></li>
+    <li><a  href="https://www.erziehung-online.de/service-fuer-eltern">SERVICE F&Uuml;R ELTERN</a>
+      <ul>
+      	<li><a href="https://www.erziehung-online.de/service-fuer-eltern/elterngeld">ELTERNGELD</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/elternzeit">ELTERNZEIT</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/betreuungsgeld">BETREUUNGSGELD</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/rechtsanspruch-kitaplatz-2013">KITAPLATZ AB 2013</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/fruehfoerderung">FRÜHFÖRDERUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/babykurse">BABY-KURSE</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/familien-urlaub">FAMILIEN-URLAUB</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/familienversicherung">FAMILIEN-VERSICHERUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-eltern/risikolebensversicherung">RISIKO-LEBENS-VERSICHERUNG</a></li>
+         <li><a href="https://www.erziehung-online.de/service-fuer-eltern/patchwork-familien">PATCHWORK-FAMILIEN</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/service-fuer-kids">SERVICE F&Uuml;R KIDS</a>
+      <ul>
+      	<li><a href="https://www.erziehung-online.de/service-fuer-kids/ausmalen-und-spielen">AUSMALEN &amp; SPIELEN</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-kids/spielen-schulalter">DENK- &amp; KNOBELSPIELE</a></li>
+        <li><a href="https://www.erziehung-online.de/service-fuer-kids/kostenlose-maerchen-hoerbuecher">M&Auml;RCHEN H&Ouml;RB&Uuml;CHER</a></li>
+      </ul>
+    </li>
+    <li><a  href="https://www.erziehung-online.de/gesundheit-ernaehrung">GESUNDHEIT</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/u1-bis-u9">U1 bis U9</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/entwicklungsstufen">ENTWICKLUNGSSTUFEN</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/zahnen">DAS ZAHNEN</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/zahngesundheit">DIE ZAHNGESUNDHEIT</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/infekte-im-winter">INFEKTE / ERKÄLTUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/masern-mumps-roeteln">KINDERKRANKHEITEN</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/impfung-kinderkrankheiten">IMPFEN, ODER NICHT?</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/kinder-gesunde-ernaehrung">GESUNDE ERNÄHRUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/kein-honig">KEIN HONIG</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/vegetarische-babynahrung">VEGETARISCHES BABY?</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/uv-strahlung-babyhaut">SONNE &amp; BABY</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/die-richtige-schlafunterlage">DIE RICHTIGE SCHLAFUMGEBUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/gesundheit-ernaehrung/sportorthopaedische-untersuchung">SPORTORTHOPÄDISCHE UNTERSUCHUNG</a></li>
+      </ul>
+    </li>
+    
+    <li><a  href="https://www.erziehung-online.de/richtiger-umgang-mit-medien">KINDER UND MEDIEN</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/richtiger-umgang-mit-medien/kinder-im-internet">Kinder und Internet</a></li>
+        <li><a href="https://www.erziehung-online.de/richtiger-umgang-mit-medien/computerspiele">Computerspiele</a></li>
+        <li><a href="https://www.erziehung-online.de/richtiger-umgang-mit-medien/film-fernsehen">Film und Fernsehen</a></li>
+        <li><a href="https://www.erziehung-online.de/richtiger-umgang-mit-medien/smartphone-fuer-kinder">Kinder und Handys</a></li>
+        <li><a href="https://www.erziehung-online.de/richtiger-umgang-mit-medien/medien-contra-schule">Medien contra Schule</a></li>  
+      </ul>
+    </li>
+    
+	<li><a  href="https://www.erziehung-online.de/einschlafen">SCHLAFEN / EINSCHLAFEN</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/einschlafen/schlaf-rhythmus">SCHLAF-RHYTHMUS</a></li>
+        <li><a href="https://www.erziehung-online.de/einschlafen/schlaf-stoehrungen">SCHLAF-ST&Ouml;RUNGEN</a></li>
+        <li><a href="https://www.erziehung-online.de/einschlafen/schlaf-hilfen">SCHLAF-HILFEN</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/sauberkeitserziehung">SAUBERKEITSERZIEHUNG</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/sauberkeitserziehung/sauberkeit-allgemein">ALLGEMEIN</a></li>
+        <li><a href="https://www.erziehung-online.de/sauberkeitserziehung/sauberkeit-tipps-tricks">TIPPS UND TRICKS</a></li>
+        <li><a href="https://www.erziehung-online.de/sauberkeitserziehung/ohne-windel">OHNE WINDEL</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/trotzphase">TROTZPHASE</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/trotzphase/trotzphase-allgemein">ALLGEMEIN</a></li>
+        <li><a href="https://www.erziehung-online.de/trotzphase/trotzphase-reagieren">WIE DARAUF REAGIEREN</a></li>
+        <li><a href="https://www.erziehung-online.de/trotzphase/pubertaet">DIE PUBERTÄT</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/kindergarten">KINDERGARTEN</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/kindergarten/kindergarten-eingewoehnung">EINGEW&Ouml;HNUNG</a></li>
+        <li><a href="https://www.erziehung-online.de/kindergarten/kindergarten-systeme">KINDERGARTEN-SYSTEME</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/schule">SCHULE</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/schule/schulfaehigkeit">SCHULF&Auml;HIGKEIT</a></li>
+        <li><a href="https://www.erziehung-online.de/schule/schul-systeme">SCHUL-SYSTEME</a></li>
+        <li><a href="https://www.erziehung-online.de/schule/inklusion">INKLUSION</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/trennung">TRENNUNG</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/trennung/trennung-allgemein">ALLGEMEIN</a></li>
+        <li><a href="https://www.erziehung-online.de/trennung/trennung-folgen">FOLGEN</a></li>
+        <li><a href="https://www.erziehung-online.de/trennung/trennung-chancen">CHANCEN</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/erziehungsfehler">ERZIEHUNGSFEHLER</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/erziehungsfehler/erziehungsfehler-allgemein">ALLGEMEIN</a></li>
+        <li><a href="https://www.erziehung-online.de/erziehungsfehler/erziehungsfehler-charts">DIE CHARTS</a></li>
+      </ul>
+    </li>
+    <li><a  href="https://www.erziehung-online.de/gastbeitraege">GASTBEITR&Auml;GE</a>
+      <ul>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/zahnputz-tipps">ZAHNPUTZ-TIPPS</a></li>
+       	<li><a href="https://www.erziehung-online.de/gastbeitraege/laufen-lernen">LAUFEN LERNEN</a></li>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/oma-opa-als-babysitter">OMA &amp; OPA ALS BABYSITTER</a></li>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/holzspielzeug">HOLZSPIELZEUG</a></li>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/ueberlebenstraining-spielzeugabteilung">SPIELZEUG</a></li>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/leselust-bei-kindern-wecken">LESELUST</a></li>
+        <li><a href="https://www.erziehung-online.de/gastbeitraege/weihnachten-mit-kindern">KINDER-WEIHNACHTEN</a></li>
+      </ul>
+    </li>
+	<li><a  href="https://www.erziehung-online.de/spass-und-spiel">SPASS &amp; SPIEL</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/spass-und-spiel/witze">WITZE</a></li>
+        <li class="mhidden"><a href="https://www.erziehung-online.de/memory/memory.php">EO MEMORY</a></li>
+        <li><a href="https://www.erziehung-online.de/spass-und-spiel/hangman-das-spiel">HANGMAN - DAS SPIEL</a></li>
+      </ul>
+    </li>
+    <li><a  href="https://www.erziehung-online.de/buchtipps">BUCH-TIPPS &amp; CO.</a></li>
+	<li><a  href="https://www.erziehung-online.de/links">ANDERE INTERNET-SEITEN</a>
+      <ul>
+       	<li><a href="https://www.erziehung-online.de/links/eltern-links">RUND UM DIE ELTERN</a></li>
+        <li><a href="https://www.erziehung-online.de/links/kinder-links">RUND UMS KIND</a></li>
+        <li><a href="https://www.erziehung-online.de/links/online-shops">ONLINE-SHOPS</a></li>
+      </ul>
+    </li>
+   </ul>
+  
+  <div class="mhidden">
+   <img src="https://www.erziehung-online.de/pics/allgemein/menu-trenner.jpg" alt="Trenner" style="margin-top:15px;" height="11" width="160" />
+   <div class="partner">
+   <h4>Partner-Seiten:</h4>
+		<ul>
+        	<li><a href="https://www.schwanger-online.de" style="color:#006;">SCHWANGER-ONLINE</a></li>
+            <li><a href="https://kuscheltiere-online.de" style="color:#630;">KUSCHELTIERE-ONLINE</a></li>
+            <li><a href="https://ruhestand-online.de" style="color:#060;">RUHESTAND-ONLINE</a></li></ul>
+   </div>
+   <img src="https://www.erziehung-online.de/pics/allgemein/menu-trenner.jpg" alt="Trenner" height="11" width="160" />
+  </div>
+</div><div class="forum" id="forumbox">
+
+
+
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">
+				<a href="https://www.erziehung-online.de/forum/index.php">ERZIEHUNG-ONLINE - Forum</a>
+			</h1>
+			<img id="upshrink" src="https://www.erziehung-online.de/forum/Themes/EO/images/upshrink.png" alt="*" title="Ein- oder Ausklappen der Kopfzeile" style="display: none;" />
+			
+		</div>
+		<div id="upper_section" class="middletext">
+			<div class="user">
+			</div>
+			<div class="news normaltext">
+				<form id="search_form" style="margin: 0;" action="https://www.erziehung-online.de/forum/search2/" method="post" accept-charset="UTF-8">
+					<input type="text" name="search" value="" class="input_text" />&nbsp;
+					
+					<input type="hidden" name="brd[15]" value="15" />
+					<select name="search_focus" id="search_focus">
+						<option value="topic" selected="selected">Dieses Thema</option>
+						<option value="board">Dieses Forum</option>
+						<option value="all">Gesamtes Forum</option>
+						<option value="google">Google</option>
+					</select>
+					<input type="submit" name="submit" value="Suche" class="button_submit" />
+					<input type="hidden" name="advanced" value="0" />
+					<input type="hidden" name="topic" value="42053" /></form>
+			</div>
+		</div>
+		<br class="clear" />
+		<script type="text/javascript"><!-- // --><![CDATA[
+			var oMainHeaderToggle = new smc_Toggle({
+				bToggleEnabled: true,
+				bCurrentlyCollapsed: false,
+				aSwappableContainers: [
+					'upper_section'
+				],
+				aSwapImages: [
+					{
+						sId: 'upshrink',
+						srcExpanded: smf_images_url + '/upshrink.png',
+						altExpanded: 'Ein- oder Ausklappen der Kopfzeile',
+						srcCollapsed: smf_images_url + '/upshrink2.png',
+						altCollapsed: 'Ein- oder Ausklappen der Kopfzeile'
+					}
+				],
+				oThemeOptions: {
+					bUseThemeSettings: false,
+					sOptionName: 'collapse_header',
+					sSessionVar: 'd58ddab2c6',
+					sSessionId: '6764602abdf34583c1afb7f577901172'
+				},
+				oCookieOptions: {
+					bUseCookie: true,
+					sCookieName: 'upshrink'
+				}
+			});
+		// ]]></script>
+		<div id="main_menu">
+			<ul class="dropmenu" id="menu_nav">
+				<li id="button_home">
+					<a class="active firstlevel" href="https://www.erziehung-online.de/forum/index.php">
+						<span class="last firstlevel">Übersicht</span>
+					</a>
+				</li>
+				<li id="button_help">
+					<a class="firstlevel" href="https://www.erziehung-online.de/forum/help/">
+						<span class="firstlevel">Hilfe</span>
+					</a>
+				</li>
+				<li id="button_login">
+					<a class="firstlevel" href="https://www.erziehung-online.de/forum/login/">
+						<span class="firstlevel">Einloggen</span>
+					</a>
+				</li>
+				<li id="button_register">
+					<a class="firstlevel" href="https://www.erziehung-online.de/forum/register/">
+						<span class="last firstlevel">Registrieren</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+			<br class="clear" />
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/index.php"><span>ERZIEHUNG-ONLINE - Forum</span></a> &#187;
+			</li>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/index.php#c4"><span>Allgemeines</span></a> &#187;
+			</li>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/allgemein/"><span>Allgemein</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/"><span>Neuer Job und schon Urlaub gebucht - Erfahrungen?</span></a>
+			</li>
+		</ul>
+	</div>
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_section">
+			<a id="top"></a>
+			<a id="msg1183907"></a>
+			<div class="pagesection">
+				<div class="nextlinks"><a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=prev#new">« vorheriges</a> <a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=next#new">nächstes »</a></div>
+				<div class="pagelinks floatleft">Seiten: [<strong>1</strong>]   &nbsp;&nbsp;<a href="#lastPost"><strong>Nach unten</strong></a></div>
+			</div>
+			<div id="forumposts">
+				<div class="cat_bar">
+					<h3 class="catbg">
+						<img src="https://www.erziehung-online.de/forum/Themes/EO/images/topic/hot_post.gif" align="bottom" alt="" />
+						<span id="author">Autor</span>
+						Thema: Neuer Job und schon Urlaub gebucht - Erfahrungen? &nbsp;(Gelesen 17450 mal)
+					</h3>
+				</div>
+				<form action="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?action=quickmod2" method="post" accept-charset="UTF-8" name="quickModForm" id="quickModForm" style="margin: 0;" onsubmit="return oQuickModify.bInEditMode ? oQuickModify.modifySave('6764602abdf34583c1afb7f577901172', 'd58ddab2c6') : false">
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1183907_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/question.gif" alt="" />
+									</div>
+									<h5 id="subject_1183907">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183907/#msg1183907" rel="nofollow">Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong> am:</strong> 03. Januar 2010, 08:40:58 &#187;</div>
+									<div id="msg_1183907_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183907">Mein Mann ist ja zur Zeit arbeitslos (also zumindest hat er keine volle Stelle, sucht aber eine!).<br /><br />Nun fahren wir im Juni 2 Wochen in Urlaub und ich frage mich, wie ein neuer AG reagiert, wenn man schon bestimmte Wochen Urlaub &quot;verlangen&quot; muss (quasi ja schon am ersten Arbeitstag), weil man gebucht hat? Aber andererseits MUSS man ja irgendwann buchen. Und was danach mit dem Job passiert kann man ja nie wissen, leider. &nbsp;<img src="https://www.erziehung-online.de/forum/Smileys/extra/undecided.gif" alt="&#58;-\" title="Unentschlossen" class="smiley" /><br /><br />Noch dazu würd ich in der Osterwoche (weil eh Ferien im KiGa und in der KiTa) gern mit den 3en nach Holland in den Ponypark fahren ... <br /><br />... aber ich frage mich eben, ob ein AG da meistens Verständnis hat (mein neuer Chef hat gleich am ersten Tag gefragt, wann ich frei brauche wegen evtl. Urlaubsplanung). <br /><br /><span style="color: red;" class="bbc_color">Dass man das nicht so pauschal sagen kann is mir klar. Deshalb frage ich ja nach euren Erfahrungen.</span><br /><br />Wie sind eure Erfahrungen, habt ihr das schonmal durch, dass ihr schon Urlaub geplant hattet und dann nen neuen Job angefangen habt? <br /><br /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183907">
+								&#171; <em>Letzte Änderung: 03. Januar 2010, 09:05:56 von Klärchen</em> &#187;
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1183907_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183912"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								alles-nicht-so-einfach
+							</h4>
+							<ul class="reset smalltext" id="msg_1183912_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183912">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183912/#msg1183912" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #1 am:</strong> 03. Januar 2010, 08:51:17 &#187;</div>
+									<div id="msg_1183912_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183912">wie ein neuer chef reagiert kann man pauschal nicht sagen. allerdings muss der neue chef den urlaub auch nicht genehmigen, denn man hat wenn man einen neuen job anfängt erst nach einem halben jahr anspruch auf urlaub. alles andere ist völliges entgegenkommen des arbeitgebers &nbsp;<img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" />.<br /><br />besonders toll sieht das auch nicht aus wenn man anfängt und gleich urlaub einreicht. <br /><br />zumal die anderen kollegen die schon länger in der firma arbeiten als erstes dann den urlaub bekommen, die haben vielleicht auch schon gebucht und vor langer zeit den urlaub eingereicht.<br /><br />musst halt überlegen wo die prioritäten sind, beim job oder beim urlaub. <br /><br />persönlich würd ich erstmal auf den urlaub verzichten und wäre froh wenn mein mann einen festen job hätte. in den urlaub kann man immer noch fahren.<br /><br />aber hat denn dein mann jetzt schon einen neuen festen job? oder was in aussicht? oder gibts da noch gar nichts?<br /><br />erfahrungen über einen längeren urlaub bei neuem job hab ich nicht, da ich in der zeit wo ich nicht voll gearbeitet habe mir keinen längeren urlaub leisten konnte. einzelne tage waren nie ein problem. allerdings wär ich auch nie auf die idee gekommen direkt bei beginn eines neuen jobs nach ein zwei wochen urlaub zu fragen. da hab ich erstmal immer abgewartet wie die allgemeine stimmung im unternehmen und unter den kollegen war und hab dann die zeit genommen die übrig geblieben ist. <br /><br /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183912">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+	
+					<div align="center"><ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1180963613459466"
+     data-ad-slot="7948866208"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+	
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+			
+				<a id="msg1183916"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								zmhe
+							</h4>
+							<ul class="reset smalltext" id="msg_1183916_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183916">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183916/#msg1183916" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #2 am:</strong> 03. Januar 2010, 08:56:10 &#187;</div>
+									<div id="msg_1183916_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183916">Hallo und guten Morgen,<br /><br />die Erfahrung habe ich auch schon gemacht. Ist schon ne blöde Situation, dieses Thema anschneiden zu müssen aber dem muss man sich dann stellen.<br />Ich hatte nicht direkt am Anfang sondern im Laufe des Gespräches den neuen Chef auf die Urlaubsplanung angesprochen, ich wollte mir erst einmal ein Bild von dem Menschen machen.<br /><br />Und dem Chef immer das Gefühl geben &quot;erst Job, dann Urlaub&quot;. <br /><br />Bei mir hatte es geholfen und es war kein Problem.<br /><br />Wünsche euch viel Glück... <img src="https://www.erziehung-online.de/forum/Smileys/extra/smiley.gif" alt="&#58;&#41;" title="Smiley" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183916">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183922"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1183922_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183922">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183922/#msg1183922" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #3 am:</strong> 03. Januar 2010, 09:05:05 &#187;</div>
+									<div id="msg_1183922_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183922">Also bei meinem Chef war das diesmal auch kein Problem. Nach Holland würde ich auch allein fahren an Ostern, aber Italien is schon 1 1/2 Jahre gebucht, da gings seiner alten Firma noch nichtmal schlecht.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/undecided.gif" alt="&#58;-\" title="Unentschlossen" class="smiley" />&nbsp; Geschweige denn war abzusehen, dass er dann nen neuen Job suchen könnte. <img src="https://www.erziehung-online.de/forum/Smileys/extra/undecided.gif" alt="&#58;-\" title="Unentschlossen" class="smiley" /><br /><br /><strong>@ Liadan</strong>: Du musst auch mal bedenken, dass es durchaus Urlaub gibt, der schon lnage gebucht ist, bevor man überhaupt nen neuen Job sucht! Also wenn man seinen alten Job noch hat! So ist es nämlich bei uns.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183922">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1183922_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183928"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=3192" title="Profil anzeigen von Alexa">Alexa</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1183928_extra_info">
+								<li class="postgroup">Twen</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="postcount">Beiträge: 470</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183928">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183928/#msg1183928" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #4 am:</strong> 03. Januar 2010, 09:12:29 &#187;</div>
+									<div id="msg_1183928_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183928">Mein Mann hatte letztes Jahr so eine Situation, allerdings hat der Chef von sich aus gefragt ob und wann Sommerurlaub geplant ist. Vielleicht wäre das bei Deinem Mann genau so?<br /><br />Fragt der Chef nicht, würde ich ihn darauf hinweisen. Meistens plant man den Urlaub ja nicht erst 2 Tage vorher.<br /><br />LG</div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183928">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183930"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=853" title="Profil anzeigen von Claudi">Claudi</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1183930_extra_info">
+								<li class="postgroup">Mama</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=853">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_853_1297976629.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 2500</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183930">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183930/#msg1183930" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #5 am:</strong> 03. Januar 2010, 09:12:40 &#187;</div>
+									<div id="msg_1183930_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183930">Normalerweise haben viele AGs Verständnis dafür wenn ein Familienvater schon lange Urlaub gebucht hat. Vieles im Leben läßt sich einfach nicht vorhersehen, ich hoffe dein Mann findet bald was Neues und auch einen verständnisvollen AG&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/kiss.gif" alt="&#58;-*" title="Küsschen" class="smiley" /><br /><br />Als ich vor 5 Jahren bei meinem AG angefangen habe (im März) hatte er auch Verständnis für meinen 2,5 - wöchigen Urlaub im April/Mai (kirchliche Hochzeit + anschließende Flitterwochen).</div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183930">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1183930_signature"><div align="center">Claudi mit 2 Räubern an der Hand und Anton im Herzen<br /><img src="http://lbym.lilypie.com/JVmWp1.png" alt="" class="bbc_img" /> <img src="http://lbym.lilypie.com/E2Dxp1.png" alt="" class="bbc_img" /></div></div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183974"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								alles-nicht-so-einfach
+							</h4>
+							<ul class="reset smalltext" id="msg_1183974_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183974">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183974/#msg1183974" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #6 am:</strong> 03. Januar 2010, 10:06:53 &#187;</div>
+									<div id="msg_1183974_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183974">@klärchen, habe nur geschrieben wie es rein rechtlich aussieht (soweit mir bekannt ist, anspruch hat man halt erst nach einem halben jahr firmenzugehörigkeit) und wie ich es machen würde. <br /><br />das heißt doch nicht das dies auch für euch gelten sollte. <br /><br />wenn der chef z.b. sagt ne es gibt keinen urlaub oder aber die anderen kollegen in der neuen firma haben da auch schon urlaub eingereicht, dann kann man da wohl nichts machen. aber das sind ja ungelegte eier&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/grin.gif" alt=";D" title="Grinsend" class="smiley" />.<br /><br />deswegen schrieb ich ja ich würde erstmal abwarten wie die stimmung im unternehmen ist und wie die kollegen drauf sind.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /> bevor noch nichts neues in sicht ist würd ich mir da auch keinen kopf machen. <br /><br />wenn ein vorstellungsgespräch ansteht das thema erst später im gespräch anschneiden und dann gucken was passiert. nehmen wir an dein mann bekommt eine neue stelle zum 01.06. dann wäre es nicht besonders schlau da gleich nach urlaub zu fragen bzw. es sieht schon komisch aus (bzw. ich persönlich würd das komisch finden), selbst wenn der urlaub schon gebucht ist. nachfragen kann man ja.<br /><br />würd es aber vom allgemeinen gefühl abhängig machen wie der chef so drauf ist und es hängt ja auch davon ab in welcher branche man arbeitet und warum die stelle vergeben wird oder ausgeschrieben ist. bei nem kleinen handwerksbetrieb z.b. wird das sicher schwieriger werden als in einer großen firma mit hunderten mitarbeitern.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /><br /><br />dann kommt ja noch die einarbeitungszeit hinzu. planen kann man sowas sowieso nicht. da man nicht in die zukunft blicken kann. man kann nur hoffen das man einen chef hat der sagt ok und das die kollegen nicht gleich einen &quot;hals&quot; auf jemanden haben.<br /><br />bei mir war das bislang halt immer so das ich längeren urlaub erst nach einem halben jahr genommen habe. einzelne tage kein problem aber keinen längeren zusammen hängenden urlaub.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /> bei uns in der abteilung ist das halt so das wir kollegen unseren urlaub untereinander absprechen bei uns im bereich und kommt ein kollege später hinzu dann hat er <strong>leider</strong> erstmal die a.-karte gezogen. das ist ja nicht böse gemeint wenn man das sagt. aber du hast ja gefragt wie wir das sehen und wie unsere erfahrungen sind. natürlich hoffe ich für euch das alles klappt mit neuem job und urlaub, das wäre doch das idealste. aber es kann halt nunmal auch anders laufen. darauf wollte ich eigentlich nur hinweisen.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/smiley.gif" alt="&#58;&#41;" title="Smiley" class="smiley" /><br /><br /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183974">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183978"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1183978_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183978">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183978/#msg1183978" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #7 am:</strong> 03. Januar 2010, 10:09:49 &#187;</div>
+									<div id="msg_1183978_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183978">Mir is schon klar, dass es &quot;schlecht&quot; laufen kann und er grade zum 1.6. nen neuen Job findet, dann würde ich wohl allein nach Italien fahren (meine Eltern fahren ja mit). Andererseits hab ich schon zu Männe gesagt, wenn das so sein sollte, dann haben wir auch genug Geld (aus unserem Ersparten, was wir dann nicht aufbrauchen müssen wegen nur ALG), dass wir im Herbst oder WInter nochmal wegfliegen in die Sonne. Mit ihm.<br /><br />Also ich warts mal ab, ich hoffe dass er vorher was findet, aber man weiß ja nie. Evtl. hat er auch bis dahin nichts, dann hat es sich eh erledigt, ach das is alles doof.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/undecided.gif" alt="&#58;-\" title="Unentschlossen" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183978">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1183978_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1183984"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								alles-nicht-so-einfach
+							</h4>
+							<ul class="reset smalltext" id="msg_1183984_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1183984">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183984/#msg1183984" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #8 am:</strong> 03. Januar 2010, 10:14:13 &#187;</div>
+									<div id="msg_1183984_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1183984">naja wenn er bis kurz vor dem urlaub noch nichts hat, dann würd ich bei einem vorstellungsgespräch vielleicht einfach sagen das er ab dem datum nach dem gebuchten urlaub anfangen kann. kündigungsfrist hat dein mann ja auch noch.<br /><br />nu warte doch erstmal ab vielleicht geht das mit dem neuen job ja jetzt ganz schnell, du weißt ja wieviele bewerbungen dein mann laufen hat.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /> oder wo er zum gespräch eingeladen ist. ich drück euch natürlich die daumen das das alles reibungslos klappt.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/kiss.gif" alt="&#58;-*" title="Küsschen" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1183984">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184001"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184001_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184001">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184001/#msg1184001" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #9 am:</strong> 03. Januar 2010, 10:29:31 &#187;</div>
+									<div id="msg_1184001_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184001"><div class="quoteheader"><div class="topslice_quote"><a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1183984/#msg1183984">Zitat von: Liadan am 03. Januar 2010, 10:14:13</a></div></div><blockquote class="bbc_standard_quote">kündigungsfrist hat dein mann ja auch noch.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Also das, was er jetzt macht, is eh nur stundenweise bei meinem Cousin, mehr als Aushilfe. Das wäre nicht das große Problem. Aber ich denke mal, er würde es im Gespräch ansprechen, dann aber klarmachen, dass wenn davon der Job abhängt (weil der Chef den Urlaub nicht mitmachen würde), der Job natürllich vorgeht. <br /><br />Ich meine, Job is Job und Urlaub können wir notfalls nochmal im Herbst oder nach der Probezeit machen. Da meine Eltern mit nach Italien fahren, wäre also ein Urlaub allein auch kein Problem, außer für meinen daheim gebliebenen Mann.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184001">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184001_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184101"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=3189" title="Profil anzeigen von Bella32">Bella32</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184101_extra_info">
+								<li class="postgroup">Schulkind</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-baby.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-baby.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-baby.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-baby.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-baby.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=3189">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_3189.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 129</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184101">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184101/#msg1184101" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #10 am:</strong> 03. Januar 2010, 11:43:14 &#187;</div>
+									<div id="msg_1184101_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184101">Ich hab letztes Jahr zum 1.4. ne neue Stelle angefangen. <br /><br />Hochzeit war Mitte Mai geplant, Flitterwochen schon gebucht.<br /><br />War mir sehr unangenehm, aber ich hab das schon beim Vorstellungsgespräch gesagt.<br /><br />War glücklicherweise kein Problem.<br /><br />Aber ich muss zugeben: Ich hätte die Stelle nicht genommen, wenn sie nein gesagt hätten.<br /><br />Dazu muss ich aber auch sagen, dass ich finanziell nicht voll drauf angewiesen war (aber kein Geld vom&nbsp; Staat hatte). </div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184101">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184101_signature">*mit Nicolas fest im Herzen<br /><br /><a href="http://lilypie.com" class="bbc_link" target="_blank"><img src="http://lb3f.lilypie.com/QKFMp2.png" alt="" class="bbc_img" /></a></div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184112"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=696" title="Profil anzeigen von Laurine+Pascal+Jonas">Laurine+Pascal+Jonas</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184112_extra_info">
+								<li class="postgroup">Oma</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="postcount">Beiträge: 5364</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184112">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184112/#msg1184112" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #11 am:</strong> 03. Januar 2010, 11:47:29 &#187;</div>
+									<div id="msg_1184112_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184112">Mein Mann hat bis jetzt 2 mal den AG gewechselt und wir hatten beide Male Urlaub gebucht. Es war jedes Mal absolut kein Problem. <br />Auch bei mir war es beim letzten Job (zwar nur Mini-Job) auch kein Problem.<br /><br />Auch jetzt hat er wieder ne Bewerbung (zwar nur intern) laufen und wir haben schon 2 Urlaube gebucht. Klar muss der AG nicht zustimmen, aber unsere Erfahrungen sind bisher positiv, der AG war immer froh, daß er direkt planen konnte.</div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184112">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184112_signature">“Das größte Geschenk, das mir jemand machen kann, ist, mich zu sehen und zu hören,<br />mich zu verstehen und zu berühren.” (Virginia Satir)</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184129"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184129_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184129">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184129/#msg1184129" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #12 am:</strong> 03. Januar 2010, 11:54:08 &#187;</div>
+									<div id="msg_1184129_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184129">Also bei ner Hochzeit finde ich es auch heftig, wenn ein AG da nicht zustimmen würde, aber es geht ja &quot;nur&quot; um nen Urlaub und wie gesagt, rein theoretisch können wir auch ohne Probleme ohne Papa fahren. Dafür haben wir dann später Geld, nochmal toll mit ihm ni Urlaub zu fahren. <br /><br /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184129">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184129_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184260"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=707" title="Profil anzeigen von bellami">bellami</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184260_extra_info">
+								<li class="postgroup">Oma</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="postcount">Beiträge: 7058</li>
+								<li class="blurb">vorerst mal bellami statt bellisa</li>
+								<li class="profile">
+									<ul>
+										<li><a href="https://www.erziehung-online.de/forum/emailuser/?sa=email;msg=1184260" rel="nofollow"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/email_sm.gif" alt="Mail" title="Mail" /></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184260">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184260/#msg1184260" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #13 am:</strong> 03. Januar 2010, 13:27:06 &#187;</div>
+									<div id="msg_1184260_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184260">ich habe letztes jahr auch den job gewechselt und da ich in einer guten position war und sie mich unbedingt schon im august wollten, konnte ich gleich zur bedingug machen, dass ich september 2 wochen urlaub bekomme! <br /><br />ich wuerde es zumindest versuchen und erwaehnen, wenn es passt. meist machen die unternehmen ja eh in den ferien zu (oder wann wollt ihr fahren?).</div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184260">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184260_signature">mit flo 24.06.05 und fay 02.11.07</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184274"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								brittchen
+							</h4>
+							<ul class="reset smalltext" id="msg_1184274_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184274">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184274/#msg1184274" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #14 am:</strong> 03. Januar 2010, 13:32:37 &#187;</div>
+									<div id="msg_1184274_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184274">also, ich würde den urlaub bereits im bewerbungsgespräch mit ansprechen. so kann der chef von vornherein sagen, ob das mit dem urlaub ok ist oder nicht. bisher gab es da bei uns keine probleme.<br /><br />mein mann hat vor 1,5 jahren auch den job gewechselt. da dieser beginnen sollte, als anton zur welt kam, musste mein mann bereits beim bewerbungsgespräch das thema elternezti anbringen. denn er wollte mind. 1 monat elternzeit nehmen.<br />sein chef hat gesagt, dass das kein problem sei. sie haben also von vornherein ausgemacht, dass mein mann seinen job mit der elternzeit beginnt. <img src="https://www.erziehung-online.de/forum/Smileys/extra/grin.gif" alt=";D" title="Grinsend" class="smiley" /> hat auch alles gut geklappt. <img src="https://www.erziehung-online.de/forum/Smileys/extra/smiley.gif" alt="&#58;&#41;" title="Smiley" class="smiley" /><br /><br />ich denke, sofern die chefs rechtzeitig bescheid wissen, können sie alles irgendwie einplanen. auch bereits gebuchten urlaub. <img src="https://www.erziehung-online.de/forum/Smileys/extra/smiley.gif" alt="&#58;&#41;" title="Smiley" class="smiley" /><br /><br />viel glück! <img src="https://www.erziehung-online.de/forum/Smileys/extra/kiss.gif" alt="&#58;-*" title="Küsschen" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184274">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184306"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=362" title="Profil anzeigen von Nipa">Nipa</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184306_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=362">
+										<img class="avatar" src="http://foto.arcor-online.net/palb/alben/19/4906619/400_3338656666316632.jpg" width="75" height="75" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 27514</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184306">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184306/#msg1184306" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #15 am:</strong> 03. Januar 2010, 14:00:08 &#187;</div>
+									<div id="msg_1184306_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184306">Bei uns in der Firma ist es so, dass es in der Probezeit EIGENTLICH keinen Urlaub gibt.<br />Aber: Es sind schon einige Mitarbeiter eingestellt worden, die eben doch Urlaub bekamen, weil er eben schon gebucht war. <br /><br />Ich würde es einfach etwas flexibel halten. Ist es DER Job schlechthin und die brauchen ihn unbedingt sofort, dann fährste halt ohne Deinen Mann. Wenn die aber sagen ein Monat hin oder her, dann kann man ja den Vertrag erst nach dem Urlaub starten. Oder oder oder....<br /><br />Ich denke man muss da einfach offen und ehrlich sein. Und zwar von beiden Seiten aus.... </div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184306">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184306_signature"><a href="http://www.hebamme4u.net" class="bbc_link" target="_blank"><img src="http://www.hebamme4u.net/babyTicker/bT_pics/1231968262_Der_Schlawutzi.gif" alt="" class="bbc_img" /></a><br /><br /><a href="http://www.hebamme4u.net" class="bbc_link" target="_blank"><img src="http://www.hebamme4u.net/babyTicker/bT_pics/19998.gif" alt="" class="bbc_img" /></a></div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184322"></a>
+				<div class="windowbg">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								Enid
+							</h4>
+							<ul class="reset smalltext" id="msg_1184322_extra_info">
+								<li class="membergroup">Gast</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184322">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184322/#msg1184322" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #16 am:</strong> 03. Januar 2010, 14:08:48 &#187;</div>
+									<div id="msg_1184322_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184322">Habe jetzt nur den Eingangspost gelesen und kann kurz meine Erfahrungen berichten: <br />Mein Männe hatte das Problem bei gleich 2 Jobwechseln und hat immer schon im ersten Bewerbungsgespräch, wenn&#39;s interessanter wurde, gesagt, dass er bereits Urlaub gebucht hat und dannunddann also frei bräuchte, wenn&#39;s geht. <br />Einmal ging es auch um die Geburt unserer Tochter, die in die Probezeit gefallen ist. <br /><br />Beide Male war das mit dem Urlaub kein Problem. Ich denke, es kommt auch darauf an, wie man das sagt, und man sollte auch nicht bis zum ersten Arbeitstag warten, finde ich. <br />Wenn ein Arbeitgeber Dich bzw Deinen Mann einstellen will, wird es nicht am Urlaub scheitern.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/wink.gif" alt=";&#41;" title="Zwinkernd" class="smiley" /></div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184322">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				<a id="msg1184325"></a>
+				<div class="windowbg2">
+					<span class="topslice"><span></span></span>
+					<div class="post_wrapper">
+						<div class="poster">
+							<h4>
+								<a href="https://www.erziehung-online.de/forum/profile/?u=225" title="Profil anzeigen von Klärchen">Klärchen</a>
+							</h4>
+							<ul class="reset smalltext" id="msg_1184325_extra_info">
+								<li class="postgroup">Dino</li>
+								<li class="stars"><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /><img src="https://www.erziehung-online.de/forum/Themes/EO/images/eo-user.gif" alt="*" /></li>
+								<li class="avatar">
+									<a href="https://www.erziehung-online.de/forum/profile/?u=225">
+										<img class="avatar" src="https://www.erziehung-online.de/forum/avs/avatar_225_1325516025.png" alt="" />
+									</a>
+								</li>
+								<li class="postcount">Beiträge: 16519</li>
+								<li class="profile">
+									<ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="postarea">
+							<div class="flow_hidden">
+								<div class="keyinfo">
+									<div class="messageicon">
+										<img src="https://www.erziehung-online.de/forum/Themes/EO/images/post/xx.gif" alt="" />
+									</div>
+									<h5 id="subject_1184325">
+										<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/msg1184325/#msg1184325" rel="nofollow">Re: Neuer Job und schon Urlaub gebucht - Erfahrungen?</a>
+									</h5>
+									<div class="smalltext">&#171; <strong>Antwort #17 am:</strong> 03. Januar 2010, 14:10:39 &#187;</div>
+									<div id="msg_1184325_quick_mod"></div>
+								</div>
+							</div>
+							<div class="post">
+								<div class="inner" id="msg_1184325">Also bis zum ersten Arbeitstag warten will er eh auf keinen Fall, so ein Überfall bedeutet nachher nur das sofortige ende der Probezeit oder so.&nbsp; <img src="https://www.erziehung-online.de/forum/Smileys/extra/undecided.gif" alt="&#58;-\" title="Unentschlossen" class="smiley" /><br /><br />Mal sehen, erstmal muss er ein Vorstellungsgespräch kriegen ... </div>
+							</div>
+						</div>
+						<div class="moderatorbar">
+							<div class="smalltext modified" id="modified_1184325">
+							</div>
+							<div class="smalltext reportlinks">
+								<img src="https://www.erziehung-online.de/forum/Themes/EO/images/ip.gif" alt="" />
+								Gespeichert
+							</div>
+							<div class="signature" id="msg_1184325_signature">LG, Manu <br />mit<br />Janek *21.07.2005<br />Lina *07.08.2008</div>
+						</div>
+					</div>
+					<span class="botslice"><span></span></span>
+				</div>
+				<hr class="post_separator" />
+				</form>
+			</div>
+			<a id="lastPost"></a>
+			<div class="pagesection">
+				
+				<div class="pagelinks floatleft">Seiten: [<strong>1</strong>]   &nbsp;&nbsp;<a href="#top"><strong>Nach oben</strong></a></div>
+				<div class="nextlinks_bottom"><a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=prev#new">« vorheriges</a> <a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/?prev_next=next#new">nächstes »</a></div>
+			</div>
+	<div class="navigate_section">
+		<ul>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/index.php"><span>ERZIEHUNG-ONLINE - Forum</span></a> &#187;
+			</li>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/index.php#c4"><span>Allgemeines</span></a> &#187;
+			</li>
+			<li>
+				<a href="https://www.erziehung-online.de/forum/allgemein/"><span>Allgemein</span></a> &#187;
+			</li>
+			<li class="last">
+				<a href="https://www.erziehung-online.de/forum/allgemein/neuer-job-und-schon-urlaub-gebucht-erfahrungen/"><span>Neuer Job und schon Urlaub gebucht - Erfahrungen?</span></a>
+			</li>
+		</ul>
+	</div>
+			<div id="moderationbuttons"></div>
+			<div class="plainbox" id="display_jump_to">&nbsp;</div>
+		<br class="clear" />
+				<script type="text/javascript" src="https://www.erziehung-online.de/forum/Themes/default/scripts/topic.js"></script>
+				<script type="text/javascript"><!-- // --><![CDATA[
+					if ('XMLHttpRequest' in window)
+					{
+						var oQuickModify = new QuickModify({
+							sScriptUrl: smf_scripturl,
+							bShowModify: true,
+							iTopicId: 42053,
+							sTemplateBodyEdit: '\n\t\t\t\t\t\t\t\t<div id="quick_edit_body_container" style="width: 90%">\n\t\t\t\t\t\t\t\t\t<div id="error_box" style="padding: 4px;" class="error"><' + '/div>\n\t\t\t\t\t\t\t\t\t<textarea class="editor" name="message" rows="12" style="width: 100%; margin-bottom: 10px;" tabindex="1">%body%<' + '/textarea><br />\n\t\t\t\t\t\t\t\t\t<input type="hidden" name="d58ddab2c6" value="6764602abdf34583c1afb7f577901172" />\n\t\t\t\t\t\t\t\t\t<input type="hidden" name="topic" value="42053" />\n\t\t\t\t\t\t\t\t\t<input type="hidden" name="msg" value="%msg_id%" />\n\t\t\t\t\t\t\t\t\t<div class="righttext">\n\t\t\t\t\t\t\t\t\t\t<input type="submit" name="post" value="Speichern" tabindex="2" onclick="return oQuickModify.modifySave(\'6764602abdf34583c1afb7f577901172\', \'d58ddab2c6\');" accesskey="s" class="button_submit" />&nbsp;&nbsp;<input type="submit" name="cancel" value="Abbrechen" tabindex="3" onclick="return oQuickModify.modifyCancel();" class="button_submit" />\n\t\t\t\t\t\t\t\t\t<' + '/div>\n\t\t\t\t\t\t\t\t<' + '/div>',
+							sTemplateSubjectEdit: '<input type="text" style="width: 90%;" name="subject" value="%subject%" size="80" maxlength="80" tabindex="4" class="input_text" />',
+							sTemplateBodyNormal: '%body%',
+							sTemplateSubjectNormal: '<a hr'+'ef="https://www.erziehung-online.de/forum/index.php'+'?topic=42053.msg%msg_id%#msg%msg_id%" rel="nofollow">%subject%<' + '/a>',
+							sTemplateTopSubject: 'Thema: %subject% &nbsp;(Gelesen 17450 mal)',
+							sErrorBorderStyle: '1px solid red'
+						});
+
+						aJumpTo[aJumpTo.length] = new JumpTo({
+							sContainerId: "display_jump_to",
+							sJumpToTemplate: "<label class=\"smalltext\" for=\"%select_id%\">Gehe zu:<" + "/label> %dropdown_list%",
+							iCurBoardId: 15,
+							iCurBoardChildLevel: 0,
+							sCurBoardName: "Allgemein",
+							sBoardChildLevelIndicator: "==",
+							sBoardPrefix: "=> ",
+							sCatSeparator: "-----------------------------",
+							sCatPrefix: "",
+							sGoButtonLabel: "Los"
+						});
+
+						aIconLists[aIconLists.length] = new IconList({
+							sBackReference: "aIconLists[" + aIconLists.length + "]",
+							sIconIdPrefix: "msg_icon_",
+							sScriptUrl: smf_scripturl,
+							bShowModify: true,
+							iBoardId: 15,
+							iTopicId: 42053,
+							sSessionId: "6764602abdf34583c1afb7f577901172",
+							sSessionVar: "d58ddab2c6",
+							sLabelIconList: "Nachrichten Icon",
+							sBoxBackground: "transparent",
+							sBoxBackgroundHover: "#ffffff",
+							iBoxBorderWidthHover: 1,
+							sBoxBorderColorHover: "#adadad" ,
+							sContainerBackground: "#ffffff",
+							sContainerBorder: "1px solid #adadad",
+							sItemBorder: "1px solid #ffffff",
+							sItemBorderHover: "1px dotted gray",
+							sItemBackground: "transparent",
+							sItemBackgroundHover: "#e0e0f0"
+						});
+					}
+				// ]]></script>
+		</div>
+	</div></div>
+	<div id="footer_section"><div class="frame">
+		<ul class="reset">
+			<li class="copyright">
+			<span class="smalltext"><a href="https://www.erziehung-online.de/forum/credits/" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.14</a> |
+<a href="http://www.simplemachines.org/about/smf/license.php" title="Lizenz" target="_blank" class="new_win">SMF &copy; 2011</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span></li>
+			
+			<li><a id="button_xhtml" href="http://validator.w3.org/check/referer" target="_blank" class="new_win" title="Prüfe XHTML 1.0"><span>XHTML</span></a></li>
+			
+			<li class="last"><a id="button_wap2" href="https://www.erziehung-online.de/forum/index.php?wap2" class="new_win"><span>WAP2</span></a></li>
+			<li><a href="https://www.erziehung-online.de/forum/index.php?action=sitemap"><span>Sitemap</span></a></li>
+		</ul>
+	</div></div>
+	</div></div></div>
+
+	<div id="nachoben"><a href="#oben">NACH OBEN</a></div><div id="superbanner">
+<!-- EO Super Banner -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1180963613459466" data-ad-slot="8952630373"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+<div id="widesky">
+<!-- EO WideSky -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-1180963613459466" data-ad-slot="2176691009"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="unten">
+  <div class="impressum">
+    <a href="https://www.erziehung-online.de/kontakt">Kontakt</a> 
+    <a href="https://www.erziehung-online.de/impressum">Impressum</a> 
+    <a href="https://www.erziehung-online.de/datenschutz">Datenschutzerklärung</a>         
+  </div>
+</div>
+<!-- JQuery für Mobile Menu -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<!-- Mobile Menu -->    
+<script src="https://www.erziehung-online.de/js/jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#menu').slicknav();
+});
+</script>
+
+<!-- Cookie Consent Silktide -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#0f0505"},"button":{"background":"#800000"}},"theme":"edgeless","content":{"message":"erziehung-online nutzt Cookies damit alle Funktionen des Forums gewährleistet werden und für statistische Zwecke.","dismiss":"Einverstanden!","link":"Weitere Infos","href":"https://www.erziehung-online.de/datenschutz"}})})</script> 
+
+<!-- Google Font -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>WebFont.load({google:{families:['Roboto Condensed:400,700:latin-ext']}})</script>
+   
+<!-- Conative Werbung -->        
+
+<!-- SCROLL FUNKTIONEN -->
+<script type="text/javascript">
+!function(o){o(document).ready(function(){o(window).scroll(function(){o(window).scrollTop()>125?o("#nachoben").addClass("fixed"):o(window).scrollTop()<125&&o("#nachoben").removeClass("fixed")})})}(jQuery);
+</script> 
+</body></html>

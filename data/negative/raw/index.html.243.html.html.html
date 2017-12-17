@@ -1,0 +1,1638 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+
+<!-- feincms_page__head_tag cached on 10th Oktober 2017 13:52:38 is_secure: True -->
+
+
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","agent":"","transactionName":"ZldUNxMAWktWV0BfWl8dcBYPAkBRWFobT1pEQFAKEwwaW1pHGkBcVEVFWQIMR2dARlVGRVRA","licenseKey":"2b5720f18e","applicationID":"30792100","applicationTime":169,"queueTime":0,"beacon":"bam.nr-data.net"}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stellenanzeigen-Analyse: So interpretiert man richtig</title>
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="language" content="DE" />
+    <link rel="canonical" href="https://www.yourfirm.de/stellenanzeigen-analysieren/" />
+    
+        
+            <meta property="og:image" content="//yourfirm-prod-data.s3.amazonaws.com/crops/2012/06/a85883e6-2af2-4c0a-a823-a42b5af0e8e7.jpg" />
+        
+
+        <meta name="keywords" content="Stellenanzeigen analysieren, Stellenanzeige analysieren, Stellenanzeigen interpretieren, Stellenanzeigen Analyse, Stellenanzeige Bewerbung, Stellenanzeige" />
+        <meta name="description" content="Leider gibt es viele Stellenanzeigen, die sehr ungenau formuliert sind. Mit unserer Anleitung können Bewerber auch Stellenanzeigen analysieren, die viel Interpretationsspielraum lassen." />
+		<meta name="apple-itunes-app" content="app-id=1055723005, affiliate-data=myAffiliateData, app-argument=myURL">
+        <meta name="google-play-app" content="app-id=com.phonegap.yourfirm">
+        <meta property="og:title" content="Stellenanzeigen-Analyse: So interpretiert man richtig" />
+        <meta property="og:description" content="Leider gibt es viele Stellenanzeigen, die sehr ungenau formuliert sind. Mit unserer Anleitung können Bewerber auch Stellenanzeigen analysieren, die viel Interpretationsspielraum lassen." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <link rel="shortcut icon" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/favicon.png" type="image/ico" />
+
+    
+
+      <link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/9a6eaf45cedf.css" type="text/css" /><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/4d13f3bf9b95.css" type="text/css" media="screen" /><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/addc2a23e362.css" type="text/css" />
+    
+
+    
+      <link rel="alternate" type="application/atom+xml" title="Stellenangebote von Stellenanzeigen-Analyse: So interpretiert man richtig als Atom Feed" href="/s/atom/?cur_page=1&amp;p_id=679" />
+      <link rel="alternate" type="application/rss+xml" title="Stellenangebote von Stellenanzeigen-Analyse: So interpretiert man richtig als RSS Feed" href="/s/rss/?cur_page=1&amp;p_id=679" />
+      <link rel="alternate" type="application/rss+xml" title="RSS Feed des Yourfirm Karriere-Blog" href=" http://blog.yourfirm.de/feed/" />
+    
+
+    
+      
+          <!--[if IE 6]><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/caceb5d989ea.css" type="text/css" /><![endif]-->
+          <!--[if IE 7]><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/9f0fc5bfedd1.css" type="text/css" /><![endif]-->
+          <!--[if IE 8]><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/f47abdc63879.css" type="text/css" /><![endif]-->
+          <!--[if IE 9]><link rel="stylesheet" href="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/css/73b917cb3916.css" type="text/css" /><![endif]-->
+      
+    
+
+
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-17208829-3', 'auto');
+    ga('set', 'anonymizeIp', true);
+
+    ga('send', 'pageview');
+
+    function recordOutboundLink(link, category, action, newwin, redir) {
+
+        if (link.attributes.target && link.getAttribute('target') == '_blank') { newwin = true ;}
+        if (newwin === undefined) { newwin = false ;}
+        if (redir === undefined) { redir = true ;}
+        try {
+            ga('send', 'event', category, link.href)
+        } catch(err) {}
+        if (redir) {
+            if (newwin) {
+                window.open(link.href,"_blank");
+            } else {
+                location.href = link.href;
+            }
+        }
+    }
+
+</script>
+
+
+
+<!-- feincms_page__head_tag cached on 10th Oktober 2017 13:52:38 -->
+
+
+
+</head>
+
+<body>
+
+
+<div id="wrapper">
+<div class="container-fluid">
+
+
+
+        
+
+    <div class="navbar">
+
+    	<div class="navbar-header">
+        	
+        		<img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/arrow_back3.png" class="back_arrow visible-xs" id="m-back-btn" width="39" height="33" title="Back" alt="Back" onclick="history.go(-1)" />
+          	
+    		<a href="/" title="Yourfirm"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/logo_mobi_big.svg" class="navbar-toggle logo_mob" title="Yourfirm" alt="Yourfirm" /></a>
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+         	<span class="icon-bar first"></span>
+         	<span class="icon-bar second"></span>
+         	<span class="icon-bar third"></span>
+      		</button>
+
+    	<a class="navbar-brand collapse navbar-collapse" href="/" title="Wir lieben Jobs im Mittelstand. | YOURFIRM"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/yf_logo_main.svg" width="300" height="75" title="Wir lieben Jobs im Mittelstand. | YOURFIRM" alt="Wir lieben Jobs im Mittelstand. | YOURFIRM" /></a>
+      	</div><!-- navbar-header end -->
+
+      	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+    		<ul class="nav nav-tabs hidden-xs">
+        		<li title="Anzeige schalten"><a class="anzeige" href="/recruiting/">Anzeige <br /> schalten <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue4.png" width="41" height="41" title="Anzeige schalten" alt="Anzeige schalten" /></a></li>
+                <li title="Regionale Jobportale"><a class="portale" href="/regionale-jobportale/">Regionale <br /> Jobportale <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue5.png" width="41" height="41" title="Regionale Jobportale" alt="Regionale Jobportale" /></a></li>
+        		<li title="Karriere Ratgeber"><a class="ratgeber" href="/karriere/">Karriere <br /> Ratgeber <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue3.png" width="41" height="41" title="Karriere Ratgeber" alt="Karriere Ratgeber" /></a></li>
+        		<li title="Firma suchen"><a class="firma" href="/arbeitgebersuche/">Firma <br /> suchen <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue2.png" width="41" height="41" title="Firma suchen" alt="Firma suchen" /></a></li>
+        		<li title="Job suchen"><a class="job" href="/suche/all/">Job <br /> suchen <br /> <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/menue1.png" width="41" height="41" title="Job suchen" alt="Job suchen" /></a></li>
+			</ul><!-- nav nav-tabs end -->
+
+        	<ul class="nav nav-tabs mobi hidden-lg hidden-md hidden-sm">
+                	<li><a title="Startseite" href="/">Startseite</a></li>
+                 	<li><a title="Job suchen" href="/suche/all/">Job suchen</a></li>
+                 	<li><a title="Firma suchen" href="/arbeitgebersuche/">Firma suchen</a></li>
+                 	<li><a title="Karriere-Ratgeber" href="/karriere-ratgeber/">Karriere-Ratgeber</a></li>
+                    <li><a title="Regionale Jobportale" href="/regionale-jobportale/">Regionale Jobportale</a></li>
+                 	<li><a title="Anzeige schalten" href="/recruiting/">Anzeige schalten</a></li>
+                 	
+                 	<li><a href="#" title="Login" onclick="openPopup('login');">Login</a></li>
+       	 	</ul><!-- nav nav-tabs mobi hidden-lg hidden-md hidden-sm end -->
+
+		</div><!-- collapse navbar-collapse end -->
+
+    	
+
+    </div><!-- navbar end -->
+
+    <div class="login_area hidden-xs">
+       <div class="login_area_inner">
+
+             
+             
+
+                        
+                        
+                            
+                                
+
+
+
+<div class="user_profile_login" id="id_user_profile_login">
+    <a title="Login"
+      
+         href="#" onclick="openPopup('login');">
+      
+      <img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/login_home.png" alt="login" title="login" class="register_login_home" width="61" height="19" />
+    </a>
+</div>
+
+
+
+
+
+
+  
+
+<div id="mm_signin_popup" class="popUpMiddle popUpMiddleSmall" title="Jobs per E-Mail erhalten" style="display:none">
+    <p id="id_msg_jobmail">Bitte melden Sie sich an, um Ihre persönliche Jobmail zu abonnieren.</p>
+    <p style="margin-top:35px; font-size:10px">Sie sind noch nicht registriert? &nbsp; <a href="#" class="register_login_home_popup" onclick="openPopup('signup');" title="Jetzt registrieren">Jetzt registrieren</a></p>
+</div>
+
+<div id="mm_jobmail_popup" class="popUpMiddle popUpMiddleSmall" title="Jobs per E-Mail erhalten" style="display:none">
+    <div id="jobagent-add-popup" class="jobagent-add-popup">
+        <p>Erhalten Sie die neuesten Jobs für diese Suchanfrage kostenlos per E-Mail</p>
+        <input placeholder="Meine E-Mail-Adresse" class="job_mail" autocomplete="off" value="" type="text">
+        <a class="" href="#" title="Jetzt abonnieren">Jetzt abonnieren</a>
+    </div>
+</div>
+
+<div id="mm_signup_popup" class="popUpMiddle popUpMiddleSmall" title="Registrierung" style="display:none">
+  <div class="form-group">
+    <form id="id_registration_form" action="https://www.yourfirm.de/account/signup/" method="post">
+        <fieldset>
+            <input type='hidden' name='csrfmiddlewaretoken' value='vkPvHh2D3bYOf6FZQcFueHDd2DwFyC82' />
+            <!--<legend style="margin:10px 0px 10px 0px; color:#275C72; font-size:15px; line-height:19px; font-weight:700">Registrierung</legend>-->
+            <label for="id_email">E-Mail-Adresse</label>
+            <input id="id_email" type="text" class="required form-control" name="email" maxlength="" />
+
+            <label for="id_password1">Passwort</label>
+            <input id="id_password1" type="password" class="required form-control" name="password1" />
+
+            <label for="id_password2">Passwort wiederholen</label>
+            <input id="id_password2" type="password" class="required form-control" name="password2" />
+
+            <p>
+                <label for="id_newsletter"></label>
+                <input id="id_newsletter" type="checkbox" value="yes" name="newsletter" /> &nbsp;Karriere-Newsletter kostenfrei erhalten
+            </p>
+            <p>
+                <label for="id_accept_terms"></label>
+                <input id="id_accept_terms" type="checkbox" value="yes" name="accept_terms" /> &nbsp;Ich bin mit den <a href="/nutzungsbedingungen" class="forget_pass_login_home" target="_blank" title="Nutzungsbedingungen">Nutzungsbedingungen</a>  und den <a href="/datenschutz" class="forget_pass_login_home" target="_blank" title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> der yourfirm GmbH einverstanden.
+            </p>
+        </fieldset>
+
+        <!--<input id="id_registration_submit" type="submit" value="  Registrieren  " style="height:22px; padding-bottom:2px;" />-->
+        <img id="id_registration_spinner" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/spinner.gif" style="padding-bottom:2px; display:none" alt="loading..." />
+    </form>
+  </div>  
+</div>
+
+
+<div id="mm_forgotpw_popup" class="popUpMiddle popUpMiddleSmall" style="margin-top:10px; margin-bottom:5px; display:none" title="Passwort vergessen">
+   <div class="form-group">
+    <p>Bitte geben Sie hier Ihre E-Mail-Adresse ein und wir senden Ihnen Informationen zu, mit denen Sie Ihr Passwort rücksetzen können.</p>
+    <form action="/account/password/reset/" method="post">
+        <input type='hidden' name='csrfmiddlewaretoken' value='vkPvHh2D3bYOf6FZQcFueHDd2DwFyC82' />
+        
+        <p>
+        
+        <label for="id_email">Ihre E-Mail-Adresse</label>
+        <input class="form-control" id="id_email" type="text" name="email" maxlength="75" />
+        </p>
+      <!--<input type="submit" value="  Passwort senden  " style="margin-top:25px" />-->
+    </form>
+   </div>
+</div>
+
+
+<div id="mm_login_popup" class="popUpMiddle popUpMiddleSmall" title="Login" style="display:none">
+<div class="form-group">
+    <form id="id_login_form" class="fake-form" action="https://www.yourfirm.de/account/signin/" method="post">
+        <input type='hidden' name='csrfmiddlewaretoken' value='vkPvHh2D3bYOf6FZQcFueHDd2DwFyC82' />
+        <!--<input id="id_submit" type="image" title="login" value="login" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/login_home.png" style="position:absolute; right:50px; top:1px">-->
+        <div class="login_error_message" id="id_login_error_message">
+            <p style="margin:0px; height:0px">&nbsp;</p>
+        </div>
+
+        <label class="loginform_label" style="display:inline; margin:0px; font-size:11px; line-height:16px" for="id_identification">E-Mail</label>
+        <input class="form-control" id="id_identification" type="text" class="required" name="identification" maxlength="75" title="Bitte Ihre E-Mail-Adresse eingeben" />
+
+        <label class="loginform_label" style="display:inline; margin:0px; font-size:11px; line-height:16px" for="id_password">Passwort</label>
+        <input class="form-control" id="id_password" type="password" class="required" name="password" title="Bitte Ihr Passwort eingeben" />
+
+        <!-- <input id="id_submit" type="submit" title="Anmelden" value="Anmelden" style="padding:0px 5px; overflow:visible; font-size:13px; line-height:16px; width:83px" /> -->
+        <img id="id_submit_spinner" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/spinner.gif" style="display:none" alt="loading..." />
+
+        <div class="checkbox">
+            <input class="form-control" id="id_remember_me" type="checkbox" class="required" name="remember_me" style="width:15px; height:15px; margin:0px 5px 0px 0px" />
+            <label for="id_remember_me" style="font-size:10px; line-height:16px">Angemeldet bleiben</label>
+        </div>
+
+        <div class="forgot-password" style="width:155px; height:20px">
+            <a href="#" title="Passwort vergessen?" class="forget_pass_login_home" onclick="openPopup('forgotpw');">Passwort vergessen? </a>
+            <a href="#" title="Registrieren" class="" onclick="openPopup('signup');">Registrieren</a>
+        </div>
+    </form>
+   </div>
+</div>
+
+
+
+
+
+
+                            
+                            
+                        
+
+         </div><!-- login_area_inner end -->
+     </div><!-- login_area hidden-xs end -->
+
+        
+
+
+        
+        
+
+        
+
+    
+    <div class="cms_new">
+    	<div id="search_box">
+  <div class="container-fluid search_box__container">
+    <form class="form-inline" action="/suche/all/" method="get" id="search-form-input" name="SucheForm"
+          onsubmit="return redirect();" autocomplete="off">
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="input-group">
+            <span class="input-group-addon" id="lupe">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            
+              <input class="form-control autocomplete ui-autocomplete-input" type="text" id="word"
+                     name="name"
+                     autocomplete="off" placeholder="Jobtitel, Stichwort"/>
+            
+          </div><!-- input-group end -->
+        </div><!-- col-sm-5 end -->
+
+        <div class="col-sm-5">
+          <div class="input-group">
+            <span class="input-group-addon" id="pin">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+            
+              <input class="form-control autocomplete ui-autocomplete-input" type="text" id="location"
+                     name="plz"
+                     autocomplete="off" role="textbox" placeholder="Ort, PLZ, Region"
+                     value=""/>
+            
+            <div class="input-group-addon" id="pfeile">
+              <select id="distanceSelect" name="dist">
+                <option value="15">15 km</option>
+                <option value="30">30 km</option>
+                <option value="45">45 km</option>
+                <option value="60">60 km</option>
+                <option value="75">75 km</option>
+                <option value="90" selected="selected">90 km</option>
+              </select>
+            </div><!-- input-group-addon pfeile end -->
+          </div><!-- input-group end -->
+        </div><!-- col-sm-5 end -->
+
+        <div class="col-sm-2" id="job_such_button1">
+          <button class="btn btn-success btn-submit-mobile span12 yfinput no_mob_btn" title="Job suchen" type="submit">
+            Job suchen
+          </button>
+        </div><!-- col-sm-2 end -->
+      </div>
+
+      <!-- only mobile -->
+      
+        <div title="Erweiterte Suche" class="mobsuch_erweit2 visible-xs">
+          Erweiterte Suche
+        </div><!-- mobsuch_erweit2 end -->
+      
+      <!-- only mobile end -->
+
+      <div id="staticlistContainer" class="row">
+
+        <!-- only mobile -->
+        
+          <div id="mobsuch_hidden">
+        <!-- only mobile end -->
+
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Taetigkeitsbereich">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  Tätigkeitsfeld
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Taetigkeitsbereich" name="Taetigkeitsbereich" value="">
+                  <ul class="dropdown-menu" id="id_Taetigkeitsbereich">
+                    <li data-value="34">Architektur, Bauwesen</li>
+                    <li data-value="35">Assistenz, Sekretariat</li>
+                    <li data-value="36">Banken, Finanzdienstleister</li>
+                    <li data-value="37">Bildung, Soziales</li>
+                    <li data-value="38">Einkauf, Logistik</li>
+                    <li data-value="39">Finanzen</li>
+                    <li data-value="40">Forschung, Wissenschaft</li>
+                    <li data-value="41">Führungskraft, Management</li>
+                    <li data-value="42">Gastronomie, Tourismus</li>
+                    <li data-value="43">Handwerk, Gewerbe</li>
+                    <li data-value="44">HR, Personalwesen</li>
+                    <li data-value="45">Ingenieur, Technik</li>
+                    <li data-value="46">IT, Softwareentwicklung</li>
+                    <li data-value="47">Journalismus, Medien</li>
+                    <li data-value="48">Kaufleute, Verwaltung</li>
+                    <li data-value="49">Marketing, PR</li>
+                    <li data-value="50">Medizin, Pflege</li>
+                    <li data-value="24">Rechtswesen</li>
+                    <li data-value="51">Verkauf, Vertrieb</li>
+                  </ul>
+                
+              </div> <!-- /#Taetigkeitsbereich -->
+
+            </div><!-- col-sm-4 end -->
+
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Vertragsart">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  <!--<span class="search_filter2 dropdown-name" data-l10n-singular="Vertragsart" data-l10n-plural="Vertragsarten">Anstellungsart</span>-->
+                  Anstellungsart
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Vertragsart" name="Vertragsart" value="">
+                  <ul class="dropdown-menu" id="id_Vertragsart">
+                    <li data-value="">Alle Anstellungsarten</li>
+                    <li data-value="10">Festanstellung Vollzeit</li>
+                    <li data-value="26">Festanstellung Teilzeit</li>
+                    <li data-value="18">Trainee</li>
+                    <li data-value="25">Ausbildung</li>
+                    <li data-value="20">Duales Studium</li>
+                    <li data-value="19">Praktikum</li>
+                    <li data-value="28">Werkstudent</li>
+                    <li data-value="27">Abschlussarbeit</li>
+                    <li data-value="30">Aushilfe</li>
+                    <li data-value="29">Freiberuflich</li>
+                  </ul>
+                
+              </div> <!-- /#Vertragsart -->
+
+            </div><!-- col-sm-4 end -->
+
+            <div class="col-sm-4 col--force-bootstrap">
+
+              <div class="btn-group " id="Branche">
+                <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                  <!--<span class="search_filter3 dropdown-name" data-l10n-singular="Branche" data-l10n-plural="Branchen">Branche</span>-->
+                  Branche
+                  <span class="caret"></span>
+                </button>
+                
+                  <input type="hidden" id="v_Branche" name="Branche" value="">
+                  <ul class="dropdown-menu" id="id_Branche">
+                    <li data-value="39">Automobil- &amp; Fahrzeugbau</li>
+                    <li data-value="21">Bauindustrie</li>
+                    <li data-value="30">Bergbau, Rohstoffe &amp; Material</li>
+                    <li data-value="22">Chemie, Pharma &amp; Medizin</li>
+                    <li data-value="23">Dienstleistungen</li>
+                    <li data-value="26">Druck, Papier &amp; Verpackung</li>
+                    <li data-value="28">Elektronik, High-Tech &amp; Optik</li>
+                    <li data-value="29">Energie, Versorgung &amp; Umwelt</li>
+                    <li data-value="24">Finanzdienstleistungen</li>
+                    <li data-value="31">Forst- &amp; Agrarwirtschaft</li>
+                    <li data-value="41">Getriebe- &amp; Komponentenfertigung</li>
+                    <li data-value="34">Handel</li>
+                    <li data-value="32">IT, Internet &amp; Telekom</li>
+                    <li data-value="33">Konsum- &amp; Gebrauchsgüter</li>
+                    <li data-value="27">Logistik, Transport &amp; Verkehr</li>
+                    <li data-value="40">Luft-, Raum- &amp; Schifffahrt</li>
+                    <li data-value="36">Marketing &amp; PR</li>
+                    <li data-value="37">Maschinen- &amp; Anlagenbau</li>
+                    <li data-value="35">Medien &amp; Verlag</li>
+                    <li data-value="42">Sonstige Branchen</li>
+                    <li data-value="44">Unternehmensberatung</li>
+                    <li data-value="38">Werkzeugbau</li>
+                    <li data-value="25">Wirtschaftsprüfung, Recht, Steuern</li>
+                  </ul>
+                
+              </div> <!-- /#Branche -->
+
+            </div><!-- col-sm-4 end -->
+          </div>
+        </div>
+
+        <div class="col-sm-2" id="search_reset1">
+
+          <a href="/suche/all/" title="Suche zurücksetzen"
+             class="search_reset ">Suche zurücksetzen</a>
+
+        </div><!-- col-sm-2 end -->
+
+        <!-- only mobile -->
+        </div><!-- mobsuch_hidden end -->
+        <!-- only mobile end -->
+
+        <!-- only mobile -->
+        <div class="onl_mob">
+          <a href="/suche/all/" title="Suche zurücksetzen" class="search_reset">Suche zurücksetzen</a>
+          <button id="submit" class="btn btn-success btn-submit-mobile span12 yfinput mob_btn" title="Job suchen">
+            Job suchen
+          </button>
+        </div>
+        <!-- only mobile end -->
+      </div> <!-- /#staticlistContainer -->
+    </form>
+  </div>
+</div><!-- search_box end -->
+
+    </div>
+    
+
+    
+    <!--Start Container-->
+    <div id="container_cms_new" class="row">
+
+        
+        <!-- feincms_page__content cached on 10th Oktober 2017 13:52:38 -->
+        <!--Start rechte Seite-->
+        
+            <div class="col-sm-8" id="left_cms_lp">
+				<div class="add_border_mob">
+		
+                
+                <!-- feincms_page__header cached on 10th Oktober 2017 13:52:38 -->
+		
+		    <div class="head_cms head_landing_page">
+
+    <h1 class="cms_h1_only h1_landing_page">Stellenanzeigen analysieren</h1>
+
+</div>
+
+		
+                <!-- feincms_page__header cached on 10th Oktober 2017 13:52:38 -->
+                
+
+                
+                    <div class="cms_descLeftRight">
+
+
+    
+        <h2 class="cms_h2">
+    
+      Stellenanzeigen richtig interpretieren
+    </h2>
+
+
+
+<div class="profil_image_border_cms2">
+    <img   src="//yourfirm-prod-data.s3.amazonaws.com/crops/2012/06/a85883e6-2af2-4c0a-a823-a42b5af0e8e7.jpg"
+            class="profil_image_cms2 links left"
+            width="180"
+            height="180"
+            title=""
+            alt=""
+    />
+    
+</div>
+
+
+
+<div class="tinywrap">
+    <p>Idealerweise sollte eine Stellenanzeige m&ouml;glichst eindeutige Informationen zu der ausgeschriebenen Position und auch zum Unternehmen beinhalten.</p>
+<p>&nbsp;</p>
+<p>Doch leider gibt es viele Stellenanzeigen, die sehr ungenau formuliert sind. Deshalb haben viele Bewerber gro&szlig;e Schwierigkeiten, auf Anhieb herauszufinden, ob sie den in einer Stellenanzeige genannten Anforderungen auch tats&auml;chlich entsprechen.</p>
+<p>&nbsp;</p>
+<p>Mit unserer Anleitung k&ouml;nnen Bewerber herausfinden, ob sie den Anforderungen f&uuml;r die Position entsprechen und wie die passende Bewerbung aussehen muss.</p>
+</div>
+
+
+
+
+</div>
+
+                
+                    <div class="cms_descLeftRight">
+
+
+    
+        <h3 class="cms_h3">
+    
+      Die Stellenanzeigen-Analyse
+    </h3>
+
+
+
+
+
+<div class="tinywrap">
+    <p>Der <strong>erste Schritt</strong> ist das sorgf&auml;ltige Lesen der Stellenausschreibung. Ist die Stellenanzeigen vor mehr als zwei Wochen ver&ouml;ffentlicht worden? Falls kein Bewerbungsschluss genannt wurde, lohnt es sich, telefonisch nachzufragen, ob die Anzeige noch aktuell ist.</p>
+<ul>
+</ul>
+<ul>
+</ul>
+<p>Im<strong> zweiten Schritt</strong> analysiert man die Informationen zur ausgeschriebenen Position. Dabei ist es wichtig, herauszufinden, bei welchen Anforderungen es sich um zwingend notwendige Qualifikationen handelt und welche Kompetenzen hilfreich, aber kein "Muss" sind.</p>
+<p>&nbsp;</p>
+<p><strong>Beispielformulierungen f&uuml;r notwendige Qualifikationen:</strong></p>
+<ul>
+<li>Sie bringen ein abgeschlossenes Hochschulstudium mit.</li>
+</ul>
+<ul>
+<li>Sie besitzen Expertenkenntnisse im Bereich XY.</li>
+</ul>
+<ul>
+<li>Sehr gute Deutschkenntnisse werden vorausgesetzt.</li>
+</ul>
+<p><strong>Beispielformulierungen f&uuml;r hilfreiche Qualifikationen:</strong></p>
+<ul>
+<li>Gute Russischkenntnisse sind von Vorteil.</li>
+</ul>
+<ul>
+<li>Im Idealfall bringen sie bereits Kenntnisse in XY mit.</li>
+</ul>
+<ul>
+<li>Erfahrungen in der Kundenbetreuung sind erw&uuml;nscht.</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+                
+                    <div class="cms_descLeftRight">
+
+
+    
+        <h3 class="cms_h3">
+    
+      Soft Skills entschlüsseln
+    </h3>
+
+
+
+
+
+<div class="tinywrap">
+    <p>In neun von zehn Stellenanzeigen werden auch sogenannte <strong>Soft Skills</strong>,  also "weiche" F&auml;higkeiten thematisiert, die sich direkt auf die Person  des Bewerbers beziehen. Genannt werden hier beispielsweise Eigenschaften  wie "Probleml&ouml;sungskompetenz" und "Durchsetzungsverm&ouml;gen".</p>
+<p>&nbsp;</p>
+<p>Erst einmal  sollte der Bewerber analysieren, was diese Eigenschaften mit der  ausgeschriebenen Stelle zu tun haben (k&ouml;nnten). Wer gerne f&uuml;r sich  alleine arbeitet, sollte sich genau &uuml;berlegen, ob die Stelle wirklich  f&uuml;r ihn geeignet ist, wenn im Anforderungsprofil Vokabeln wie "Teamf&auml;higkeit" auftauchen. Wichtig ist es, die geforderten Soft Skills auch belegen k&ouml;nnen, beispielsweise anhand von Zeugnissen f&uuml;r praktische  Erfahrungen wie z.B. ehrenamtliches Engagement.</p>
+</div>
+
+
+
+
+</div>
+
+                
+                    <div class="cms_descLeftRight">
+
+
+    
+        <h3 class="cms_h3">
+    
+      Vorsicht bei Chiffreanzeigen
+    </h3>
+
+
+
+
+
+<div class="tinywrap">
+    <p>Wenn es sich bei Stellenanzeigen um Chiffreanzeigen handelt, bei der der Arbeitgeber anonym bleibt, sollte man einen  sogenannten Sperrvermerk im separaten Umschlag mitschicken. Auf diesem  wird notiert, bei welchem Unternehmen man sich keinesfalls bewerben  m&ouml;chte (z.B. beim aktuellen Arbeitgeber).</p>
+<p>&nbsp;</p>
+<p>Auch wenn die Bewerbungen bereits abgeschickt wurden, sollte man die  dazugeh&ouml;rigen Stellenanzeigen sowie die Informationen zum Unternehmen  unbedingt sammeln und abheften. So hat man alle Informationen  griffbereit, um sie sich vor einem Vorstellungsgespr&auml;ch noch einmal  anzusehen oder um eventuell sp&auml;ter Initiativbewerbungen an diese  Unternehmen zu verschicken.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Schon eine passende Stellenanzeige gefunden? Tipps zur Formulierung des Bewerbungsschreibens findest du <a title="Das Bewerbungsschreiben" href="/bewerbungsschreiben/" target="_self">hier</a>.</p>
+<p>&nbsp;</p>
+</div>
+
+
+
+
+</div>
+
+                
+                    
+<div class="clear"></div>
+<div class="cms_jobs">
+  <h2 class="cms_h2">Aktuelle Stellenangebote</h2>
+  <div class="clear10"></div>
+     <ul class="links">
+       
+           <li style="float:left; width:130px" class="link1">
+                      <a target="_blank" rel="nofollow" title="New Business Sales Manager/in für Talent Management" href="/job/lumesse/new-business-sales-managerin-fur-talent-management-dusseldorf---1474454/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1474454', false, false);return true;"><img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/lumesse_100x45.png" title="Lumesse GmbH" alt="Lumesse GmbH" width="100" height="45" class="profil_karte"/></a>
+       </li>
+
+                    <li style="padding-top:2px" class="link2">
+                      <a target="_blank" rel="nofollow" style="font-weight:500; font-size:21px; line-height:22px; color:#000000" title="New Business Sales Manager/in für Talent Management" href="/job/lumesse/new-business-sales-managerin-fur-talent-management-dusseldorf---1474454/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1474454', false, false);return true;">
+                        
+                            New Business Sales Manager/in für Talent Ma...
+                        
+                      </a>
+                    </li>
+
+                    <li style="padding-top:6px" class="link3">
+                      
+                          Lumesse GmbH
+                      
+                    </li>
+
+					<li style="padding-top:9px" class="link4">
+                      <span style="font-weight:700; line-height:13px; color:#315274">
+                        
+                            Düsseldorf
+                        
+                      </span>
+
+		      <!--
+                      <br />
+                      40474
+		      -->
+
+					</li>
+
+					<li style="clear:both; height:10px; line-height:10px" class="link5"></li>
+
+
+           <li style="float:left; width:130px" class="link1">
+                      <a target="_blank" rel="nofollow" title="Entwicklungsingenieur Elektronik Hardware (m/w)" href="/job/Eugen-Forschner/entwicklungsingenieur-elektronik-hardware-mw-spaichingen---1354611/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1354611', false, false);return true;"><img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/EugenForschner_Logo_100x45.png" title="Eugen Forschner GmbH" alt="Eugen Forschner GmbH" width="100" height="45" class="profil_karte"/></a>
+       </li>
+
+                    <li style="padding-top:2px" class="link2">
+                      <a target="_blank" rel="nofollow" style="font-weight:500; font-size:21px; line-height:22px; color:#000000" title="Entwicklungsingenieur Elektronik Hardware (m/w)" href="/job/Eugen-Forschner/entwicklungsingenieur-elektronik-hardware-mw-spaichingen---1354611/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1354611', false, false);return true;">
+                        
+                            Entwicklungsingenieur Elektronik Hardware (...
+                        
+                      </a>
+                    </li>
+
+                    <li style="padding-top:6px" class="link3">
+                      
+                          Eugen Forschner GmbH
+                      
+                    </li>
+
+					<li style="padding-top:9px" class="link4">
+                      <span style="font-weight:700; line-height:13px; color:#315274">
+                        
+                            Spaichingen
+                        
+                      </span>
+
+		      <!--
+                      <br />
+                      78549
+		      -->
+
+					</li>
+
+					<li style="clear:both; height:10px; line-height:10px" class="link5"></li>
+
+
+           <li style="float:left; width:130px" class="link1">
+                      <a target="_blank" rel="nofollow" title="Kraftfahrer CE m/w als Aushilfsfahrer" href="/job/ahrens-transport/kraftfahrer-ce-mw-als-aushilfsfahrer-bremen---343360/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','343360', false, false);return true;"><img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/ahrens_Logo_100x45_jobsadvision.png" title="Ahrens Transport und Handel  GmbH &amp; Co. KG" alt="Ahrens Transport und Handel  GmbH &amp; Co. KG" width="100" height="45" class="profil_karte"/></a>
+       </li>
+
+                    <li style="padding-top:2px" class="link2">
+                      <a target="_blank" rel="nofollow" style="font-weight:500; font-size:21px; line-height:22px; color:#000000" title="Kraftfahrer CE m/w als Aushilfsfahrer" href="/job/ahrens-transport/kraftfahrer-ce-mw-als-aushilfsfahrer-bremen---343360/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','343360', false, false);return true;">
+                        
+                            Kraftfahrer CE m/w als Aushilfsfahrer
+                        
+                      </a>
+                    </li>
+
+                    <li style="padding-top:6px" class="link3">
+                      
+                          Ahrens Transport und Handel  GmbH &amp; Co. KG
+                      
+                    </li>
+
+					<li style="padding-top:9px" class="link4">
+                      <span style="font-weight:700; line-height:13px; color:#315274">
+                        
+                            Bremen
+                        
+                      </span>
+
+		      <!--
+                      <br />
+                      28237
+		      -->
+
+					</li>
+
+					<li style="clear:both; height:10px; line-height:10px" class="link5"></li>
+
+
+           <li style="float:left; width:130px" class="link1">
+                      <a target="_blank" rel="nofollow" title="Mitarbeiter/-in für unser Team Leasing/Spezialisten" href="/job/rolandgruppe/mitarbeiter-in-fur-unser-team-leasingspezialisten-koln---1515375/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1515375', false, false);return true;"><img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/Roland_Gruppe_Vorlage_100x45.png" title="ROLAND-Gruppe" alt="ROLAND-Gruppe" width="100" height="45" class="profil_karte"/></a>
+       </li>
+
+                    <li style="padding-top:2px" class="link2">
+                      <a target="_blank" rel="nofollow" style="font-weight:500; font-size:21px; line-height:22px; color:#000000" title="Mitarbeiter/-in für unser Team Leasing/Spezialisten" href="/job/rolandgruppe/mitarbeiter-in-fur-unser-team-leasingspezialisten-koln---1515375/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','1515375', false, false);return true;">
+                        
+                            Mitarbeiter/-in für unser Team Leasing/Spez...
+                        
+                      </a>
+                    </li>
+
+                    <li style="padding-top:6px" class="link3">
+                      
+                          ROLAND-Gruppe
+                      
+                    </li>
+
+					<li style="padding-top:9px" class="link4">
+                      <span style="font-weight:700; line-height:13px; color:#315274">
+                        
+                            Köln
+                        
+                      </span>
+
+		      <!--
+                      <br />
+                      50679
+		      -->
+
+					</li>
+
+					<li style="clear:both; height:10px; line-height:10px" class="link5"></li>
+
+
+           <li style="float:left; width:130px" class="link1">
+                      <a target="_blank" rel="nofollow" title="Vertriebsmitarbeiter / International Sales Consultant (m/w)" href="/job/Fenchem-Germany/vertriebsmitarbeiter-international-sales-consultant-mw-koln---647283/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','647283', false, false);return true;"><img src="//yourfirm-prod-data.s3-eu-west-1.amazonaws.com/uploads/stellenanzeigen/fenchem_Logo_100x45.png" title="Fenchem  Germany GmbH" alt="Fenchem  Germany GmbH" width="100" height="45" class="profil_karte"/></a>
+       </li>
+
+                    <li style="padding-top:2px" class="link2">
+                      <a target="_blank" rel="nofollow" style="font-weight:500; font-size:21px; line-height:22px; color:#000000" title="Vertriebsmitarbeiter / International Sales Consultant (m/w)" href="/job/Fenchem-Germany/vertriebsmitarbeiter-international-sales-consultant-mw-koln---647283/" class="popItUp" onclick="recordOutboundLink(this,'stellen_link','647283', false, false);return true;">
+                        
+                            Vertriebsmitarbeiter / International Sales ...
+                        
+                      </a>
+                    </li>
+
+                    <li style="padding-top:6px" class="link3">
+                      
+                          Fenchem  Germany GmbH
+                      
+                    </li>
+
+					<li style="padding-top:9px" class="link4">
+                      <span style="font-weight:700; line-height:13px; color:#315274">
+                        
+                            Köln
+                        
+                      </span>
+
+		      <!--
+                      <br />
+                      50829
+		      -->
+
+					</li>
+
+					<li style="clear:both; height:10px; line-height:10px" class="link5"></li>
+
+
+
+     </ul>
+     <a href="/stellenangebote/" title="Weitere Stellenangebote aktuell - Testsieger" style="margin:1px 0px 5px 0px; display:block">Weitere Stellenangebote aktuell - Testsieger</a>
+</div>
+
+                
+                </div>
+            </div>
+        
+        <!--End rechte Seite-->
+        <!-- feincms_page__content cached on 10th Oktober 2017 13:52:39 -->
+        
+
+        <!--Start linke Seite-->
+        
+            <div class="col-sm-4 hidden-xs hidden-sm hidden-md" id="right_cms_lp">
+
+            
+            
+
+                
+
+                    
+                        <!--<a href="/jobboerse/" title="Direkt zur Jobbörse!" class="lp_button"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/blank.gif" height="45" width="150" alt="Direkt zur Jobbörse!" /></a>-->
+                    
+                
+
+        
+        <!-- feincms_page__navi_tree cached on 10th Oktober 2017 13:52:39 -->
+                
+
+<div class="trennlinie_cms_navi"></div>
+
+
+    
+        
+    
+
+
+<a href="/karriere-ratgeber/" title="Karriere-Ratgeber" class="navi_tree_themenkomplex_rootline">
+    <h2 class="navi_tree_themenkomplex"> Karriere-Ratgeber </h2>
+</a>
+
+
+<ul class="navi_tree">
+    
+      <li class="navi_tree"> <a href="/karriere/" title="Übersicht" >Übersicht</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/firmenvorstellung/" title="Firmen im Interview" >Firmen im Interview</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/karriere-im-mittelstand/" title="Karriere im Mittelstand" >Karriere im Mittelstand</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/bewerbung/" title="Bewerbung" class="navi_tree_rootline">Bewerbung</a>
+        
+        
+        <ul>
+        
+            <li> <a href="/bewerbungsschreiben/" title="Bewerbungsschreiben" > Bewerbungsschreiben</a>
+                
+            </li>
+        
+            <li> <a href="/lebenslauf/" title="Lebenslauf" > Lebenslauf</a>
+                
+            </li>
+        
+            <li> <a href="/bewerbung-dritte-seite/" title="Bewerbung Dritte Seite" > Bewerbung Dritte Seite</a>
+                
+            </li>
+        
+            <li> <a href="/bewerbung-muster/" title="Vorlagen und Musterbewerbungen" > Vorlagen und Musterbewerbungen</a>
+                
+            </li>
+        
+            <li> <a href="/online-bewerbung/" title="Online-Bewerbung" > Online-Bewerbung</a>
+                
+            </li>
+        
+            <li> <a href="/interne-bewerbung/" title="Interne Bewerbung" > Interne Bewerbung</a>
+                
+            </li>
+        
+            <li> <a href="/bewerbungsmappe/" title="Bewerbungsmappe" > Bewerbungsmappe</a>
+                
+            </li>
+        
+            <li> <a href="/initiativbewerbung/" title="Initiativbewerbung" > Initiativbewerbung</a>
+                
+            </li>
+        
+            <li> <a href="/vorstellungsgespraech/" title="Vorstellungsgespräch" > Vorstellungsgespräch</a>
+                
+            </li>
+        
+        </ul>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/jobmessen/" title="Jobmessen" >Jobmessen</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/frauenkarriere/" title="Frauenkarriere" >Frauenkarriere</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/berufsorientierung/" title="Berufsorientierung" >Berufsorientierung</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/gehalt/" title="Gehalt" >Gehalt</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/studien/" title="Yourfirm-Studien" >Yourfirm-Studien</a>
+        
+      </li>
+    
+      <li class="navi_tree"> <a href="/karriere-atlas/" title="Karriere-Atlas" >Karriere-Atlas</a>
+        
+      </li>
+    
+</ul>
+
+
+        <!-- feincms_page__navi_tree cached on 10th Oktober 2017 13:52:39 -->
+        
+
+        <div class="clear"></div>
+
+            
+                <div style="margin-bottom:10px">
+        			
+        		</div>
+            
+
+			<!--
+
+ 				<div style="padding:0px 0px 30px 0px">
+					<object type="application/x-shockwave-flash" data="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/ESG_banner.swf" width="300" height="250" onclick="recordOutboundLink(this,'banner_click','esg_cms', false, false);">
+ 					<param name="movie" value="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/ESG_banner.swf" />
+ 					<a href="http://www.esg.de/karriere" target="_blank" rel="nofollow" onclick="recordOutboundLink(this,'banner_click','esg_cms_gif', false, false);"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/ESG_banner.gif" width="300" height="250" alt="" /></a>
+ 					</object>
+ 				</div>
+
+ 			-->
+
+        
+    	
+        	<a href="/arbeitgebersuche"><img src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/images/banner_firma.jpg" width="300" height="250" alt="" title="Top-Arbeitgeber" class="right_banner" /></a>
+    	
+
+        <div class="clear25"></div>
+
+        <!--[if gt IE 7]><!-->
+        <div class="fb-like-box" data-href="https://www.facebook.com/Yourfirm" data-width="300" data-height="555" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>
+        <!--<![endif]-->
+
+       </div>
+        
+        <!--End linke Seite-->
+
+        <div class="clear"></div>
+
+
+    </div>
+
+    
+
+
+
+
+		
+        	<div class="button-links hidden-xs hidden-sm hidden-md">
+        		<a class="facebook" title="Facebook" target="_blank" href="http://www.facebook.com/YOURFIRM">&nbsp;</a>
+        		
+        		
+        		<a class="blog" title="YOURFIRM-Blog" target="_blank" href="http://blog.yourfirm.de/">&nbsp;</a>
+                <a class="gp" title="Google Play App" target="_blank" href="https://play.google.com/store/apps/details?id=com.phonegap.yourfirm">&nbsp;</a>
+                <a class="as" title="Apple Store" target="_blank" href="https://itunes.apple.com/ch/app/yourfirm/id1055723005">&nbsp;</a>
+       	 		<a class="feedBack" title="Feedback" href="#">&nbsp;</a>
+        	</div><!-- button-links end -->
+        
+
+
+		
+			<div class="preload_bld">
+			</div><!-- preload_bld end -->
+		
+
+
+        
+
+
+        <div class="footer  row">
+    		<div class="col-sm-12 footer_inner  visible-xs visible-sm visible-md visible-lg">
+
+      		
+
+
+            <p class="footer_text no_home">
+            	<span class="hidden-xs">
+                <a href="/ueber-yourfirm/" title="Über Yourfirm">Über Yourfirm</a>
+            	<a href="/kontakt/" title="Kontakt">Kontakt</a> 
+            	<a href="/nutzungsbedingungen/" title="Nutzungsbedingungen">Nutzungsbedingungen</a> 
+                </span><!-- hidden-xs end -->
+            	<a href="/datenschutz/" title="Datenschutz">Datenschutz</a> 
+            	<a href="/agb/" title="AGB">AGB</a> 
+            	<a href="/impressum/" title="Impressum">Impressum</a> <span class="hidden-xs"></span>
+            	<span class="hidden-xs">
+                Fotocredit: Shutterstock
+                </span><!-- hidden-xs end -->
+            </p>
+
+            
+
+        </div><!-- footer_inner end -->
+
+        <div class="cookie_bar  col-sm-12" id="cookie_bar">
+    			<p>Cookies helfen uns bei der Erbringung unserer Dienste. Durch die Nutzung unserer Angebote erklären Sie sich mit dem Setzen von Cookies einverstanden.
+            		<span class="clear_footer"></span>
+        			&nbsp; <button id="cookie_bar_button" title="OK">OK</button>
+                	<span class="clear_footer no_cl"></span>
+        			&nbsp; <a href="/datenschutz/" title="Mehr erfahren">Mehr erfahren</a>
+                </p>
+            </div><!-- col-sm-2 end -->
+		</div><!-- cookie_bar_home end -->
+
+	</div><!-- footer end -->
+
+
+        
+
+</div><!-- container-fluid end -->
+</div><!-- wrapper end -->
+
+
+    
+
+    
+
+      
+      
+      <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.yourfirm.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.yourfirm.de/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+      
+
+
+      <script type="text/javascript" src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/CACHE/js/11f85b31dae3.js"></script>
+
+    
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          // staticlistContainer mobile toggle
+
+          $(".mobsuch_erweit2").click(function () {
+            $("#mobsuch_hidden").toggle("slow");
+          });
+        });
+	</script>
+
+    <script type="text/javascript">
+$(document).ready(function() {
+    function elementResize() {
+        var browserWidth = $(window).width();
+        if ((browserWidth) < '767'){
+           $('#mobsuch_hidden').addClass('schmal');
+           $('#mobsuch_hidden').removeClass('breit');
+        } else {
+           $('#mobsuch_hidden').addClass('breit');
+           $('#mobsuch_hidden').removeClass('schmal');
+        }
+    }
+
+    elementResize();
+
+    $(window).bind("resize", function(){
+        elementResize();
+    });
+});
+</script>
+
+    
+
+
+    
+        
+
+<!-- Google Code for Conversion Tracking -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1021712443;
+var google_conversion_language = "de";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "zqCgCKW8gwQQu7CY5wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt=""   src="//www.googleadservices.com/pagead/conversion/1021712443/?label=zqCgCKW8gwQQu7CY5wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+    
+
+
+    <!-- needed for autocomplete, include after jquery -->
+
+   <script type="text/javascript" defer src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/js/lib/jquery.placeholder.min.js"></script>
+
+    <!-- autocomplete working -->
+    <script type="text/javascript" defer>
+
+      window.r2d2_url = '/suche/njson/s/';
+      var isFormDirty = false;
+
+      jQuery(document).ready( function($) {
+
+        $('input').placeholder();
+        
+        var $autocompleteEl = $('.autocomplete');
+        if ($autocompleteEl.length) {
+            setupAutocomplete($autocompleteEl);
+        }
+
+      });
+
+
+        function setupAutocomplete($autocompleteEl) {
+            var autocompleteSettings = {
+              source: getAutocompletions,
+              delay: 0,
+              minLength: 2,
+              autoFocus: false,
+              select: function(event, ui) {
+                var input = event.target;
+                input.value = ui.item.label;
+                if (input.name === "plz") {
+                    toggleInputLenghtClass(input, " top_input2a", 17);
+                }
+                $('.autocomplete').autocomplete('close');
+                $(event.target).blur();
+                $('#search-form-input').submit();
+              }
+            };
+
+            var $wordInput = $('#word');
+            if ($wordInput.length) {
+                $wordInput.autocomplete(autocompleteSettings);
+                $wordInput.data("ui-autocomplete")._renderItem = function( ul, item ) {
+                    return $( "<li>" ).html( item.labelHTML ).appendTo( ul );
+                };
+            }
+
+            var $locationInput = $('#location');
+            if ($locationInput.length) {
+                autocompleteSettings.autoFocus = true;
+                $locationInput.autocomplete(autocompleteSettings);
+                $locationInput.data("ui-autocomplete")._renderItem = function( ul, item ) {
+                    return $( "<li>" ).html( item.labelHTML ).appendTo( ul );
+                };
+            }
+
+            $autocompleteEl.keypress(function(e) {
+                var textField = e.target;
+                if(textField.value.length == 1) {
+                    textField.value = textField.value.charAt(0).toUpperCase() + textField.value.slice(1);
+                }
+                isFormDirty = true;
+            });
+        }
+
+        function getAutocompletions(query, callback) {
+            query.type = this.element.attr('id');
+            $.get('/suche/ajax/autocomplete', query, function(collection) {
+                successHandler(query, collection, callback)
+            });
+        }
+
+        function successHandler(query, collection, callback) {
+            var reStr = query.term.split(' ').join('|'),
+                tagsRegEx = new RegExp(reStr, 'gi'),
+                tags = [],
+                tag = {},
+                arrPush = Array.prototype.push;
+
+            for (var i = 0, len = collection.length; i < len; i++) {
+                tag = highlight(collection[i], tagsRegEx);
+                arrPush.call(tags, tag);
+            }
+
+            callback(tags);
+        }
+
+        function highlight(str, regEx) {
+            var label = str.replace(regEx, function(match) {
+                return '<span class="highlight-tag">' + match + '</span>';
+            });
+
+            return {
+                labelHTML: label,
+                value: str
+            };
+        }
+
+        function toggleInputLenghtClass(element, lenClass, changePoint) {
+            var str = element.value,
+                elClass = element.className;
+            if (str.length >= 17 && elClass.indexOf(lenClass) === -1) {
+                element.className += lenClass;
+            } else if (str.length < 17 && elClass.indexOf(lenClass) > -1) {
+                element.className = elClass.replace(lenClass, '');
+            }
+        }
+
+    </script>
+
+
+<!-- redirect -->
+<script type="text/javascript" defer>
+//<![CDATA[
+
+var getValue = (function() {
+    if (typeof jQuery === 'undefined') {
+        return function(id) {
+            var el = document.getElementById(id);
+            if (el) {
+                return el.value;
+            } else {
+                var els = document.getElementsByName(id);
+                if (els) {
+                    var vals = [];
+                    for (var i=0; i<els.length; i++) {
+                        if (els[i].checked) {
+                            vals.append(els[i].value);
+                        }
+                    }
+                    if (vals.length > 0) {
+                        return vals;
+                    }
+                    return null;
+                }
+                return null;
+            }
+        }
+    } else {
+        return function(id) {
+	    var el = jQuery(id);
+	    if (el.length > 0) {
+		return jQuery(el).val();
+	    } else  {
+		var els = jQuery('[name="' + id  + '"]:checked');
+		if (els.length > 0) {
+		    return jQuery(els).map(
+			function (i, el) {
+			    var elem = jQuery(el);
+			    return elem.val();
+			}).get();
+		}
+		return null;
+	    }
+        }
+    }
+})();
+
+function redirect(event) {
+
+    if (event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false; // IE shit
+        }
+    }
+
+    var urlParamsArr = [];
+
+    var term = getValue("#word") || getValue("#id_name") || window.DEFAULT_TERM || '';
+    //var term_placeholder = document.getElementById("word").placeholder;
+    var loc = getValue("#location") || getValue("#id_plz") || window.DEFAULT_LOCATION || '';
+
+    if (loc) {
+        //var loc_placeholder = document.getElementById("location").placeholder;
+        var distance = getValue("#distanceSelect") || '';
+        distance && (distance = ":" + distance);
+        urlParamsArr.push("plz=" + encodeURIComponent(loc) + distance);
+    }
+
+    // IE shit fix
+    if (!(history.pushState)) {
+        if (term === '' || term === window.DEFAULT_TERM) {
+            term = window.DEFAULT_TERM || '';
+        }
+        if (loc === '' || loc === window.DEFAULT_LOCATION) {
+            loc = window.DEFAULT_LOCATION || '';
+        }
+    }
+
+    var dirty = 1;
+    if (typeof(isFormDirty) !== "undefined") {
+        dirty = isFormDirty;
+    }
+    if (dirty) {
+        urlParamsArr.push("msearch=1");
+    }
+
+    var redirect_prefix = window.REDIRECT_PREFIX || "/suche/all/",
+        redirect_campaign = window.REDIRECT_CAMPAIGN || "6",
+        campaignParam = "Campaign=" + redirect_campaign;
+
+    urlParamsArr.push("Campaign=" + redirect_campaign);
+    urlParamsArr.push("name=" + encodeURIComponent(term));
+    urlParamsArr.push("limit=10");
+
+    var taetigkeitsbereich = getValue(document.getElementById("v_Taetigkeitsbereich"));
+    if (taetigkeitsbereich) {
+        urlParamsArr.push("Taetigkeitsbereich="+taetigkeitsbereich);
+    }
+
+    var vertragsart = getValue(document.getElementById("v_Vertragsart"));
+    if (vertragsart) {
+        urlParamsArr.push("Vertragsart="+vertragsart);
+    }
+
+    var branche = getValue(document.getElementById("v_Branche"));
+    if (branche) {
+        urlParamsArr.push("Branche="+branche);
+    }
+
+    var mitarbeiteranzahl = getValue("Mitarbeiteranzahl") || [];
+    for (var i=0; i<mitarbeiteranzahl.length; i++) {
+        urlParamsArr.push("Mitarbeiteranzahl="+mitarbeiteranzahl[i]);
+    }
+    var auslandsstandorte = getValue("Auslandsstandorte") || [];
+    for (var i=0; i<auslandsstandorte.length; i++) {
+        urlParamsArr.push("Auslandsstandorte="+auslandsstandorte[i]);
+    }
+
+    var urlParams = urlParamsArr.join('&');
+
+    var rjaSelect = document.getElementById('rjaSelect');
+    if (rjaSelect) {
+        var rjaUrl = rjaSelect.value;
+        if (rjaUrl) {
+            window.location = rjaUrl + "&" + urlParams;
+        } else if (noty) {
+            // The search is not triggered and notify the user why.
+            noty({text: 'Ungültige Suchbegriffe: Bitte wählen Sie eine Stadt / Region aus.'});
+        }
+    } else {
+        window.location.href = redirect_prefix + '?' + urlParams;
+    }
+
+    return false;
+}
+
+//]]>
+</script>
+
+
+    <script type="text/javascript" defer src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/lp/js/filter-dropdown.js"></script>
+    <script type="text/javascript" defer>
+        $(document).ready( function() {
+            var taetFilter = new DropdownFilter("Taetigkeitsbereich");
+            taetFilter.onChange = function(data) {
+                onFilterChange("Taetigkeitsbereich", data);
+            }
+
+            var vertFilter = new DropdownFilter("Vertragsart");
+            vertFilter.onChange = function(data) {
+                onFilterChange("Vertragsart", data);
+            }
+
+            var brancheFilter = new DropdownFilter("Branche");
+            brancheFilter.onChange = function(data) {
+                onFilterChange("Branche", data);
+            }
+
+            function onFilterChange(id, data) {
+                $("#v_" + id).val(data.value);
+                redirect();
+            }
+        });
+    </script>
+
+
+    
+        <!--<div id="fb-root"></div>-->
+        <!--[if gt IE 7]><!-->
+        <script type="text/javascript">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!--<![endif]-->
+    
+
+    <script>
+var $buoop = {
+  vs:{
+    i:9,  // warn for IE <=9
+    f:25, // warn for FF <=25
+    o:25, // warn for Opera <=25
+    s:7}, // warn for Safari <=7
+  c:2,
+  reminder: 48,
+  newwindow: true
+};
+function $buo_f(){
+   var e = document.createElement("script");
+    e.src = "//browser-update.org/update.js";
+     document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script>
+
+    
+        <!-- Facebook Pixel Code -->
+	<script type="text/javascript">
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','//connect.facebook.net/en_US/fbevents.js');
+	
+	fbq('init', '1504777943149630');
+	fbq('track', "PageView");</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1504777943149630&ev=PageView&noscript=1"
+	/></noscript>
+<!-- End Facebook Pixel Code -->
+    
+
+
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $.noty.defaultOptions.layout = 'top';
+          $.noty.defaultOptions.timeout = 4000;
+          $.noty.defaultOptions.speed = 200;
+
+          if (shoudShowBackBtn()) {
+            $('#m-back-btn').show();
+          }
+      });
+
+      function shoudShowBackBtn() {
+          return !!(document.referrer.indexOf(window.location.host) > -1);
+      }
+    </script>
+    
+
+    
+      <script  type='text/javascript'>var dajaxice_endpoint = '/kundeninterface/dajax/'</script>
+<script src="https://yourfirm-prod-static.s3-eu-west-1.amazonaws.com/dajaxice/dajaxice.core.js" type="text/javascript" charset="utf-8"></script>
+    
+
+    
+      
+        
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#mm_feedbackdialog').dialog({
+                    modal : true,
+                    autoOpen: false,
+                    width: 600,
+                    buttons: {
+                        "Feedback absenden": function() {
+                            var txt = escape($("#feedback_desc").val());
+                            var title = escape($("#feedback_title").val());
+                            var cat = $("#feedback_cat").val();
+
+                            if (title == '') {
+                                alert('Bitte einen Titel eingeben!');
+                                return false;
+                            }
+                            if (txt == '') {
+                                alert('Bitte eine Beschreibung eingeben!');
+                                return false;
+                            }
+
+                            Dajaxice.yourfirm.errortrac.report_error(ajax_callback,
+                                {'url':location.href,
+                                'text':txt,
+                                'title':title,
+                                'cat':cat }
+                            );
+                            //Dajaxice.yourfirm.report_error(ajax_callback,location.href, txt )
+
+                            $(this).dialog('close');
+                            $("#feedback_desc").val("");
+                            $("#feedback_title").val("");
+                            $("#feedback_cat").val("");
+                        }
+                    }
+                });
+
+                // Dialog Link
+                $('.feedBack, .feedBack-link').click(function(){
+                    $('#mm_feedbackdialog').dialog('open');
+                    return false;
+                });
+
+    });
+    var ticket_created = false;
+    //window.onerror=function(sMessage, sUrl, sLine){
+    //    var txt = 'JS On-Error von Seite ' + sUrl;
+    //    var title = sMessage + ' in Zeile ' + sLine;
+        // because of piles of weird tickets
+        //if(!ticket_created){
+            //always tecnical bug
+          // Dajaxice.yourfirm.errortrac.report_error(ajax_callback,{'url':location.href,'text':txt,'title':title,'cat':'t'  } )
+          // ticket_created = true;
+          // }
+    //    return true;
+    //    }
+   </script>
+
+        <div id="mm_feedbackdialog" class="popUpMiddle popUpMiddleSmall" title="Feedback">
+		<div class="form-group">
+            <form name="name" action="#" >
+                <fieldset>
+					<label for="feedback_title">Titel</label>
+					<input type="text" class="fields form-control" id="feedback_title"/>
+				</fieldset>
+				
+                <fieldset>
+				<label for="feedback_cat">Kategorie</label>
+                <select class="form-control" id="feedback_cat" name="Kategorie">
+                    <option value="t">Technischer Fehler/Verbesserung</option>
+                    <option value="i">Inhaltlicher Fehler/Verbesserung</option>
+                    <option value="u">Usability Verbesserung</option>
+                    <option value="s">sonstige Anregung</option>
+                </select>
+                </fieldset>
+				
+                <fieldset>
+				<label for="feedback_desc">Ihr Feedback</label>
+				<textarea id="feedback_desc" class="fields fieldstextArea form-control" rows="" cols=""></textarea>
+				</fieldset>
+            </form>
+			</div>
+        </div>
+    
+      
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    <script type="text/javascript">
+        function debug_mobile_app() {
+            if (window.IS_MOBILE_APP ) {
+                var elem = document.getElementById("is_mobile");
+                elem.innerHTML = "mobile";
+            }
+        }
+        setTimeout(debug_mobile_app, 5000);
+    </script>
+
+
+
+
+</body>
+</html>

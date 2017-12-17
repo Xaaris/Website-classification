@@ -1,0 +1,2454 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<base href="http://www.unix.com/" /><!--[if IE]></base><![endif]-->
+	<link rel="canonical" href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html" />
+
+<meta name="alexaVerifyID" content="62rdpUkEhJIA-A9UWZGy3zhmEwY" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="content-language" content="en" />
+<meta name="verify-v1" content="d7KL/EoqLaqXsOmNGKAC9m73MuzJYton6RNp7Wecu14=" />
+<meta name="verify-v1" content="l8CHnoxZ0N4dXZLnZIz9DCY8WaZdgh5O0EwSUZKPpsM=" />
+<meta name="msvalidate.01" content="FEF742F1D7A4EBB42E768EC90A76AE28" />
+<meta name="p:domain_verify" content="ff6103cb828d784a92626bfcce271562"/>
+<meta name="y_key" content="347c78bea09a90d1" /> 
+<meta name="robots" content="noodp" >
+<meta property="og:title" content="Unix and Linux Forums" >
+<meta property="og:site_name" content="unix.com" >
+<meta property="og:url" content="http://www.unix.com/" >
+<meta property="og:description" content="Unix and Linux are operating systems that originated at Bell Labs in 1969 as an interactive time-sharing system." >
+<meta property="fb:app_id" content="870327132989388" >
+<meta property="og:type" content="article" >
+<meta property="og:locale" content="en_US" >
+<meta property="article:publisher" content="https://www.facebook.com/unixlinuxhq" >
+<meta itemprop="name" content="Unix and Linux Forums" >
+<meta itemprop="description" content="Unix and Linux are operating systems that originated at Bell Labs in 1969 as an interactive time-sharing system." >
+<meta name="twitter:card" content="summary" >
+<meta name="twitter:site" content="@unixlinux" >
+<meta name="twitter:title" content="Unix Linux" >
+<meta name="twitter:domain" content="www.unix.com"/>
+<meta name="twitter:description" content="Unix Linux" >
+<meta property="og:type" content="website" />
+<meta property="og:image" content="http://www.unix.com/images/unix.jpg" >
+<meta itemprop="image" content="http://www.unix.com/images/unix.jpg" >
+<meta content="@unixlinux" name="twitter:creator" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" type="text/css" href="http://www.unix.com/clientscript/vbulletin_css/static_neo_2014n.css" />
+
+
+<style>
+form{margin:0px;}
+label{cursor:default;}
+.normal{font-weight:normal;}
+.inlineimg{vertical-align:middle;}
+.underline{text-decoration:underline;}
+.vbmenu_hilite *{cursor:pointer;}
+.floatcontainer:after, .block_row:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.floatcontainer, .block_row{display:inline-block;}
+* html .floatcontainer, * html .block_row{height:1%;}
+.floatcontainer, .block_row{display:block;}
+</style>
+
+<!-- / CSS Stylesheet -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js?v=387"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/yui/2.9.0/build/connection/connection-min.js?v=387"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1734842-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+<meta name="keywords" content="print,question,wc,datafile,statement,awk,gt,var,equal,if,size,advise,make" />
+
+<meta name="description" content="I have this short statement: size=1 VAR=` wc -c datafile | awk -F' ' '{print \\\<meta name="description" content=}' ` if [ \\\$VAR -gt size ] then dowhatIeed Question: How can I make my if statement greater than 1 and less"/>
+
+ 
+
+
+
+
+<script>
+googletag.pubads().collapseEmptyDivs(true);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+<!--
+var SESSIONURL = "s=f102c2c23bee3733c36a0530f995a0d7&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "http://www.unix.com/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="http://www.unix.com/clientscript/vbulletin_global.js?v=387"></script>
+
+
+
+
+
+
+
+
+    <link rel="alternate" type="application/rss+xml" title="UNIX & Linux Forums RSS Feed" href="http://www.unix.com/external.php?type=RSS2" />
+    
+        <link rel="alternate" type="application/rss+xml" title="UNIX & Linux Forums - UNIX for Dummies Questions &amp; Answers - RSS Feed" href="http://www.unix.com/external.php?type=RSS2&amp;forumids=2" />
+    
+
+
+
+
+
+
+
+
+
+
+<!--BEGIN VBSTATUS-->
+
+<!--END VBSTATUS-->
+
+
+
+
+<script async type="text/javascript" src="//cdn.fancybar.net/ac/fancybar.js?zoneid=1502&serve=C6ADVKE&placement=unixdotcom" id="_fancybar_js"></script>
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "http://www.unix.com/",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "http://www.unix.com/search.php?do=process&query={search_term_string}",
+		"query-input": "required name=search_term_string"
+	}
+}
+</script>
+        <!-- App Indexing for Google Search -->
+        <link href="http://www.unix.com/android-app://com.quoord.tapatalkpro.activity/tapatalk/www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=google-indexing" rel="alternate" />
+        <link href="ios-app://307880732/tapatalk/www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=google-indexing" rel="alternate" />
+        
+        <meta property="al:android:package" content="com.quoord.tapatalkpro.activity" />
+        <meta property="al:android:url" content="tapatalk://www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=facebook-indexing" />
+        <meta property="al:android:app_name" content="Tapatalk" />
+        <meta property="al:ios:url" content="tapatalk://www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=facebook-indexing" />
+        <meta property="al:ios:app_store_id" content="307880732" />
+        <meta property="al:ios:app_name" content="Tapatalk" />
+        
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tapatalk" />
+        <meta name="twitter:title" content="IF stategreat than 1 and less than 20" />
+        <meta name="twitter:description" content="UNIX & Linux Forums" />
+        <meta name="twitter:image" content="http://www.unix.com/mobiquo/smartbanner/images/tapatalk-banner-logo.png" />
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://www.unix.com?location=topic&amp;fid=2&amp;tid=24837&amp;channel=twitter-indexing" />
+        <!-- twitter app card -->
+        
+	<title> IF stategreat than 1 and less than 20 | Unix Linux Forums | UNIX for Dummies Questions &amp; Answers</title>
+	<script type="text/javascript" src="http://www.unix.com/clientscript/vbulletin_post_loader.js?v=387"></script>
+	<style type="text/css" id="tcat">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+
+
+googletag.defineSlot('/3662747/UNIX_ZONE_1_300x250', [300, 250], 'div-gpt-ad-1356748021945-6').addService(googletag.pubads());
+googletag.defineSlot('/3662747/UNIX_ZONE_2_300x250', [300, 250], 'div-gpt-ad-1356748021945-7').addService(googletag.pubads());
+
+
+googletag.defineSlot('/3662747/UNIX4_ZONE_FOOTER', [970, 30], 'div-gpt-ad-1365666580782-7').addService(googletag.pubads());
+
+
+
+
+
+
+
+
+googletag.defineSlot('/3662747/UNIX_ZONE_3_300x250', [300, 250], 'div-gpt-ad-1356748021945-8').addService(googletag.pubads());
+googletag.defineSlot('/3662747/UNIX_ZONE_4_300x250', [300, 250], 'div-gpt-ad-1356748021945-9').addService(googletag.pubads());
+
+
+
+
+googletag.defineSlot('/3662747/UNIX_ZONE_5_300x250', [300, 250], 'div-gpt-ad-1356748021945-10').addService(googletag.pubads());
+googletag.defineSlot('/3662747/UNIX_ZONE_6_300x250', [300, 250], 'div-gpt-ad-1356748021945-11').addService(googletag.pubads());
+
+
+
+googletag.defineSlot('/3662747/UNIX3_ZONE_95_728X90', [728, 90], 'div-gpt-ad-1356748021945-2').addService(googletag.pubads());
+
+
+
+
+
+
+
+googletag.defineSlot('/3662747/UNIX_ZONE_7_300x250', [300, 250], 'div-gpt-ad-1356748021945-12').addService(googletag.pubads());
+googletag.defineSlot('/3662747/UNIX_ZONE_8_300x250', [300, 250], 'div-gpt-ad-1356748021945-13').addService(googletag.pubads());
+
+
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+
+
+	<style type="text/css">
+		span.sortarrow {position:absolute;}
+		span.sortarrow img {border:0;}
+		a.sortheader {text-decoration:none; display:block; width:100%;}
+	</style>
+	<script type="text/javascript">
+		var IMGDIR_BUTTON = "http://www.unix.com/images/buttons";
+	</script>
+	<script type="text/javascript" src="http://www.unix.com/clientscript/sorttable.js"></script>
+</head>
+<body onload="">
+
+<!-- Tapatalk Detect body start -->
+<script type="text/javascript">if (typeof(tapatalkDetect) == "function") tapatalkDetect()</script>
+<!-- Tapatalk Detect banner body end -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+
+
+
+
+
+
+
+<br />
+<!-- / PAGENAV POPUP -->
+
+</table>
+ 	
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+
+<tr  border="0">
+
+
+
+
+        
+       
+	
+	<td class="alt1" width="100%" border="0">
+       
+
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="center">
+         <td>&nbsp;</td>
+
+				<td>
+
+<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#" onclick="history.back(1); return false;"><img src="http://www.unix.com/images/unix.jpg" alt="Unix/Linux Go Back" border="0" height="48" width="48" /></a></td>
+
+				<td>&nbsp;</td>
+                                <td>&nbsp;</td>
+				<td width="100%"><div class="navbar" style="font-size:14pt"><a href="http://www.unix.com?s=f102c2c23bee3733c36a0530f995a0d7" accesskey="1">UNIX & Linux Forums</a></div> <div class="navbar" style="font-size:10pt">
+<span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+	<span class="navbar">&gt; <a href="http://www.unix.com/top-forums/?s=f102c2c23bee3733c36a0530f995a0d7" itemprop="url"><span itemprop="title">Top Forums</span></a></span>
+</span>
+
+<span itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+	<span class="navbar">&gt; <a href="http://www.unix.com/unix-for-dummies-questions-and-answers/?s=f102c2c23bee3733c36a0530f995a0d7" itemprop="url"><span itemprop="title">UNIX for Dummies Questions &amp; Answers</span></a></span>
+</span>
+</div> 
+</td>
+
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3">
+
+<!--
+<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html">
+<img class="inlineimg" src="http://www.unix.com/images/misc/navbits_finallink_ltr.gif" alt="Reload this Page" border="0" /></a>
+
+-->
+
+
+ <!-- <strong>
+	<span itemprop="title"> IF stategreat than 1 and less than 20</span>
+</strong> -->
+</td>
+			</tr>
+			</table>
+		
+
+	</td>
+
+
+
+
+
+
+
+
+
+
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="http://www.unix.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="http://www.unix.com/clientscript/vbulletin_md5.js?v=387" async></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">Member Name</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Member Name" onfocus="if (this.value == 'Member Name') this.value = '';" /></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Remember Me?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Password</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" /></td>
+		</tr>
+
+		</table>
+		<input type="hidden" name="s" value="f102c2c23bee3733c36a0530f995a0d7" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+	</td>
+
+
+
+
+
+
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div class="tborder" style="padding:1px; border-top-width:0px">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+                <td class="vbmenu_control"><a href="http://www.unix.com/">Home</a></td>         
+
+<!-- added by neo -->
+
+<td class="vbmenu_control"><a href="http://www.unix.com/search.php" rel="nofollow">Search Forums</a></td>
+
+
+
+                
+		
+			<td class="vbmenu_control"><a href="http://www.unix.com/register.php?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Register</a></td>
+		
+
+<!-- Neo's bitsclub link code 
+
+-->
+
+<!-- Neo's  blog code   - disabled
+<td class="vbmenu_control"><a href="http://www.unix.com/blog/">Blog</a></td>
+-->
+
+		<td class="vbmenu_control"><a rel="nofollow" href="http://www.unix.com/misc.php?do=cfrules">Forum Rules</a></td><td class="vbmenu_control"><a href="http://www.unix.com/man-page/opensolaris/1/man/">Man Pages</a></td><td class="vbmenu_control"><a href="http://www.unix.com/unix-commands.php?s=f102c2c23bee3733c36a0530f995a0d7">Unix Commands</a></td>
+<td class="vbmenu_control"><a href="http://www.unix.com/linux-commands.php?s=f102c2c23bee3733c36a0530f995a0d7">Linux Commands</a></td>
+		<td class="vbmenu_control"><a href="http://www.unix.com/faq.php?s=f102c2c23bee3733c36a0530f995a0d7" accesskey="5">FAQ</a></td>
+		
+			<td class="vbmenu_control"><a rel="nofollow" href="http://www.unix.com/members/list/?sort=lastvisit&amp;pp=30&amp;s=f102c2c23bee3733c36a0530f995a0d7?order=DESC">Members</a></td>
+		
+
+
+
+		
+			
+				<td class="vbmenu_control"><a href="http://www.unix.com/search.php?s=f102c2c23bee3733c36a0530f995a0d7" accesskey="4" rel="nofollow">Search</a></td>
+				
+				<td class="vbmenu_control"><a href="http://www.unix.com/search.php?do=getdaily&amp;s=f102c2c23bee3733c36a0530f995a0d7" accesskey="2" >Today's Posts</a></td>
+				
+			
+			<td class="vbmenu_control"><a href="http://www.unix.com/forumdisplay.php?do=markread&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Mark Forums Read</a></td>
+			
+		
+		
+		
+
+		</tr>
+	</table>
+</div>
+<!-- / nav buttons bar --><div align="center">
+<br />
+<div id="navbar_adcode">
+<table width="100%">
+<tr >
+<td align="center">
+<!-- UNIX_ZONE_1_300x250 -->
+<div id='div-gpt-ad-1356748021945-6' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-6'); });
+</script>
+</div>
+</td>
+<td width="50%" align="center">
+<!-- UNIX_ZONE_2_300x250 -->
+<div id='div-gpt-ad-1356748021945-7' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-7'); });
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+<!--
+
+<div class="smallfont">
+<a href="http://www.unix.com/register.php">Remove advertisements</a>
+</div>
+
+-->
+</div>	
+
+
+<br />
+
+
+
+
+	<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+	<tr>
+		<td class="alt1" width="100%"><strong>UNIX for Dummies Questions &amp; Answers</strong> <span class="smallfont">This forum is closed for new posts.  Please post beginner questions to learn unix and learn linux in this forum <a href="http://www.unix.com/unix-for-beginners-questions-and-answers/">
+UNIX for Beginners Questions &amp; Answers</a></span></td>
+
+	</tr>
+	</table>
+	<br />
+
+
+
+
+
+
+
+
+
+<center>
+
+<h1>IF stategreat than 1 and less than 20</h1>
+
+<h2>UNIX for Dummies Questions &amp; Answers</h2>
+
+
+</center>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+<div  class="addthis_toolbox addthis_floating_style addthis_16x16_style" addthis:url="" style="left:5px;top:210px;>
+
+<a class="addthis_button_pinterest_share"></a>
+<a class="addthis_button_reddit"></a>	 
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_linkedin"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+</div>
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+
+<td>
+<tr valign="bottom">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+
+
+</tr>
+
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+        
+
+
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#goto_threadtools">Thread Tools</a>
+		
+	</td>
+
+	
+		<td class="vbmenu_control" id="threadsearch" nowrap="nowrap">
+			<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#goto_threadsearch">Search this Thread</a>
+			
+		</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#goto_displaymodes">Display Modes</a>
+		
+	</td>
+	
+
+	
+
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #97477 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit97477" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post97477" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="thead" >
+
+
+		<div class="normal" style="float:right">
+
+			&nbsp;&nbsp;&nbsp;
+                        #<a href="http://www.unix.com/97477-post1.html?s=f102c2c23bee3733c36a0530f995a0d7"  target="new"  id="postcount97477" name="1"><strong>1</strong></a> &nbsp;
+
+			
+                       
+<!--
+ 
+-->
+
+
+
+
+
+
+			
+  
+
+
+
+
+
+
+
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post97477"><img class="inlineimg" src="http://www.unix.com/images/statusicon/post_old.gif" alt="Old Unix and Linux" border="0" /></a>
+
+
+			
+				01-30-2006
+			
+			
+			<!-- / status icon and date -->
+ 
+
+
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_97477">
+					
+					<a class="bigusername" href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><span style="color:#22229C;">bobo</span></a>
+
+					<img class="inlineimg" src="http://www.unix.com/images/statusicon/user_offline.gif" alt="bobo is offline" border="0" />
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_97477", true); </script>
+					
+				</div>
+
+
+
+				<div class="smallfont">Registered User</div>
+
+<!--BEGIN VBSTATUS-->
+
+
+
+
+<!--END VBSTATUS-->
+                              <div class="smallfont"></div>
+				
+				
+
+
+                              
+				
+
+
+			</td>
+			<td width="100%">&nbsp;</td>
+
+                     
+			<td  valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Join Date: Jan 2006</div>
+                                        <div>Last Activity: 22 December 2015, 2:19 PM EST</div>
+					
+					
+					<div>
+						Posts: 161
+					</div>
+
+
+
+
+					 
+	<div>Thanks: 1</div>
+	<div>
+		
+			
+				Thanked 0 Times in 0 Posts
+			
+		
+	</div>
+
+
+
+					
+<!-- moved this to the top
+                        
+-->
+					
+					<div>    </div>
+				</div>
+<!--VBSEO_BOOKMARKS-->
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_97477">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				<img class="inlineimg" src="http://www.unix.com/images/icons/datashowchart.png" alt="Data" border="0" height="16" width="16" />
+				<strong>IF stategreat than 1 and less than 20</strong>
+			</div>
+			<hr size="1" style="color:#D1D1E1; background-color:#D1D1E1" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+
+
+
+		<div id="post_message_97477">I have this short statement:<br />
+<br />
+<br />
+size=1<br />
+VAR=` wc -c datafile | awk -F&quot; &quot; '{print $1}' ` <br />
+if [ $VAR -gt size ]<br />
+then<br />
+dowhatIeed<br />
+<br />
+Question: <br />
+<br />
+How can I make my if statement greater than 1 and less than 20? <br />
+<br />
+How can I make my if statement greater than 1 and equal to 20?<br />
+<br />
+Please advise!</div>
+		<!-- / message -->
+               
+                
+		
+  
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+ 
+
+                
+			
+			
+			
+			
+			
+			
+<!-- hidden posts by scottn -->
+
+			
+			
+			
+				
+			
+                        <!-- NEO WORK -->
+			
+			<!-- / controls -->           
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+<!-- conf post marker -->
+
+
+
+
+
+</table>
+ <div id="post_thanks_box_97477"></div><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="margin-top:6px;">
+<tr>
+	<td class="thead" style="line-height:1.5em;">
+		
+			<div>
+				<span style="float:right;font-weight:normal;"><a href="http://www.unix.com/register.php">Remove advertisements</a></span>
+			</div>
+		
+		Sponsored Links
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<div class="postbit_adcode">
+			<table width="100%">
+<tr >
+<td width="50%" align="center">
+<!-- UNIX_ZONE_3_300x250 -->
+<div id='div-gpt-ad-1356748021945-8' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-8'); });
+</script>
+</div>
+
+</td>
+<td width="50%" align="center" >
+<!-- UNIX_ZONE_4_300x250 -->
+<div id='div-gpt-ad-1356748021945-9' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-9'); });
+</script>
+</div>
+</td>
+</tr>
+</table>
+		</div>
+	</td>
+</tr>
+</table>
+
+
+<!-- post 97477 popup menu -->
+<div class="vbmenu_popup" id="postmenu_97477_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">bobo</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/search.php?do=finduser&amp;u=47300&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Find all posts by bobo</a></td></tr>
+	
+	
+        
+
+	
+	</table>
+</div>
+<!-- / post 97477 popup menu -->
+
+<div id="award97477" style="padding:6px 0px 0px 0px;">
+
+</div>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #97477 --><!-- post #97478 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit97478" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post97478" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="thead" >
+
+
+		<div class="normal" style="float:right">
+
+			&nbsp;&nbsp;&nbsp;
+                        #<a href="http://www.unix.com/97478-post2.html?s=f102c2c23bee3733c36a0530f995a0d7"  target="new"  id="postcount97478" name="2"><strong>2</strong></a> &nbsp;
+
+			
+                       
+<!--
+ 
+-->
+
+
+
+
+
+
+			
+  
+
+
+
+
+
+
+
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post97478"><img class="inlineimg" src="http://www.unix.com/images/statusicon/post_old.gif" alt="Old Unix and Linux" border="0" /></a>
+
+
+			
+				01-30-2006
+			
+			
+			<!-- / status icon and date -->
+ 
+
+
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2">
+
+
+<a href="http://www.unix.com/members/38463.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><img src="http://www.unix.com/customavatars/avatar38463_1.gif"   alt="vino's Unix or Linux Image" border="0" /></a>
+
+
+</td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_97478">
+					
+					<a class="bigusername" href="http://www.unix.com/members/38463.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><span style="color:#22229C;">vino</span></a>
+
+					<img class="inlineimg" src="http://www.unix.com/images/statusicon/user_offline.gif" alt="vino is offline" border="0" />
+
+
+
+
+
+
+ 
+
+ <img class="inlineimg" src="http://www.unix.com/images/icons/knot.png" alt="Forum Advisor" border="0" /> &nbsp;
+
+ 
+
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_97478", true); </script>
+					
+				</div>
+
+
+
+				<div class="smallfont">Supporter (in vino veritas)</div>
+
+<!--BEGIN VBSTATUS-->
+
+
+
+
+<!--END VBSTATUS-->
+                              <div class="smallfont"></div>
+				
+				
+
+
+                              
+				
+
+
+			</td>
+			<td width="100%">&nbsp;</td>
+
+                     
+			<td  valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Join Date: Feb 2005</div>
+                                        <div>Last Activity: 8 February 2016, 5:12 PM EST</div>
+					<div>Location: Sydney, Down Under</div>
+					
+					<div>
+						Posts: 2,848
+					</div>
+
+
+
+
+					 
+	<div>Thanks: 0</div>
+	<div>
+		
+			
+				Thanked 13 Times in 13 Posts
+			
+		
+	</div>
+
+
+
+					
+<!-- moved this to the top
+                        
+-->
+					
+					<div>    </div>
+				</div>
+<!--VBSEO_BOOKMARKS-->
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_97478">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+
+		<!-- message -->
+
+
+
+		<div id="post_message_97478"><!--bbcode_quote_begin-->
+<div style="margin:20px; margin-top:5px; ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Originally Posted by <strong>bobo</strong>
+					
+				</div>
+				<div style="font-style:italic">I have this short statement:<br />
+<br />
+<br />
+size=1<br />
+VAR=` wc -c datafile | awk -F&quot; &quot; '{print $1}' ` <br />
+if [ $VAR -gt size ]<br />
+then<br />
+dowhatIeed<br />
+<br />
+Question: <br />
+<br />
+How can I make my if statement greater than 1 and less than 20? <br />
+<br />
+How can I make my if statement greater than 1 and equal to 20?<br />
+<br />
+Please advise!</div>
+			
+		</td>
+	</tr>
+	</table>
+</div>
+<!--bbcode_quote_end--><br />
+<div class="smallfont" style="margin-bottom:2px">Code:</div>
+
+<pre class="alt2" style="margin:0px; padding:6px;  border:1px inset;  overflow:auto">How can I make my if statement greater than 1 and less than 20? 
+size=1
+VAR=` wc -c datafile | awk -F&quot; &quot; '{print $1}' ` 
+if [[ $VAR -gt $size &amp;&amp; $VAR -lt 20 ]] ; then
+dowhatIeed
+fi ;</pre></div><br />
+
+<!-- width:820px; height:114px;--><br />
+<div class="smallfont" style="margin-bottom:2px">Code:</div>
+
+<pre class="alt2" style="margin:0px; padding:6px;  border:1px inset;  overflow:auto">How can I make my if statement greater than 1 and equal to 20?
+size=1
+VAR=` wc -c datafile | awk -F&quot; &quot; '{print $1}' ` 
+if [[ $VAR == 20 ]] ; then
+dowhatIeed
+fi ;</pre></div><br />
+
+<!-- width:820px; height:114px;--></div>
+		<!-- / message -->
+               
+                
+		
+  
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+ 
+
+                
+			
+			
+			
+			
+			
+			
+<!-- hidden posts by scottn -->
+
+			
+			
+			
+				
+			
+                        <!-- NEO WORK -->
+			
+			<!-- / controls -->           
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+<!-- conf post marker -->
+
+
+
+
+
+</table>
+ <div id="post_thanks_box_97478"></div><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="margin-top:6px;">
+<tr>
+	<td class="thead" style="line-height:1.5em;">
+		
+			<div>
+				<span style="float:right;font-weight:normal;"><a href="http://www.unix.com/register.php">Remove advertisements</a></span>
+			</div>
+		
+		Sponsored Links
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<div class="postbit_adcode">
+			<table width="100%">
+<tr >
+<td width="50%" align="center">
+<!-- UNIX_ZONE_5_300x250 -->
+<div id='div-gpt-ad-1356748021945-10' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-10'); });
+</script>
+</div>
+</td>
+<td width="50%" align="center" >
+<!-- UNIX_ZONE_6_300x250 -->
+<div id='div-gpt-ad-1356748021945-11' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-11'); });
+</script>
+</div>
+</td>
+</tr>
+</table>
+		</div>
+	</td>
+</tr>
+</table>
+
+
+<!-- post 97478 popup menu -->
+<div class="vbmenu_popup" id="postmenu_97478_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">vino</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/members/38463.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/search.php?do=finduser&amp;u=38463&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Find all posts by vino</a></td></tr>
+	
+	
+        
+
+	
+	</table>
+</div>
+<!-- / post 97478 popup menu -->
+
+<div id="award97478" style="padding:6px 0px 0px 0px;">
+
+</div>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #97478 --><!-- post #97708 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit97708" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post97708" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="thead" >
+
+
+		<div class="normal" style="float:right">
+
+			&nbsp;&nbsp;&nbsp;
+                        #<a href="http://www.unix.com/97708-post3.html?s=f102c2c23bee3733c36a0530f995a0d7"  target="new"  id="postcount97708" name="3"><strong>3</strong></a> &nbsp;
+
+			
+                       
+<!--
+ 
+-->
+
+
+
+
+
+
+			
+  
+
+
+
+
+
+
+
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post97708"><img class="inlineimg" src="http://www.unix.com/images/statusicon/post_old.gif" alt="Old Unix and Linux" border="0" /></a>
+
+
+			
+				02-01-2006
+			
+			
+			<!-- / status icon and date -->
+ 
+
+
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_97708">
+					
+					<a class="bigusername" href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><span style="color:#22229C;">bobo</span></a>
+
+					<img class="inlineimg" src="http://www.unix.com/images/statusicon/user_offline.gif" alt="bobo is offline" border="0" />
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_97708", true); </script>
+					
+				</div>
+
+
+
+				<div class="smallfont">Registered User</div>
+
+<!--BEGIN VBSTATUS-->
+
+
+
+
+<!--END VBSTATUS-->
+                              <div class="smallfont"></div>
+				
+				
+
+
+                              
+				
+
+
+			</td>
+			<td width="100%">&nbsp;</td>
+
+                     
+			<td  valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Join Date: Jan 2006</div>
+                                        <div>Last Activity: 22 December 2015, 2:19 PM EST</div>
+					
+					
+					<div>
+						Posts: 161
+					</div>
+
+
+
+
+					 
+	<div>Thanks: 1</div>
+	<div>
+		
+			
+				Thanked 0 Times in 0 Posts
+			
+		
+	</div>
+
+
+
+					
+<!-- moved this to the top
+                        
+-->
+					
+					<div>    </div>
+				</div>
+<!--VBSEO_BOOKMARKS-->
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_97708">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+
+		<!-- message -->
+
+
+
+		<div id="post_message_97708">My data file has 15 characters:<br />
+<br />
+<br />
+VAR=` wc -c datafile | awk -F&quot; &quot; '{print $1}' `<br />
+if [[ $VAR -gt 1 &amp;&amp; $VAR -lt 20 ]]<br />
+then<br />
+echo &quot;great than 1 &quot;<br />
+else<br />
+echo &quot;less than 1&quot;<br />
+fi<br />
+<br />
+When I run this program, I got this message:<br />
+<br />
+&gt; ./if<br />
+./if: [[: not found<br />
+less than 1<br />
+<br />
+Please tell me what do I do wrong here!</div>
+		<!-- / message -->
+               
+                
+		
+  
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+ 
+
+                
+			
+			
+			
+			
+			
+			
+<!-- hidden posts by scottn -->
+
+			
+			
+			
+				
+			
+                        <!-- NEO WORK -->
+			
+			<!-- / controls -->           
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+<!-- conf post marker -->
+
+
+
+
+
+</table>
+ <div id="post_thanks_box_97708"></div>
+
+<!-- post 97708 popup menu -->
+<div class="vbmenu_popup" id="postmenu_97708_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">bobo</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/search.php?do=finduser&amp;u=47300&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Find all posts by bobo</a></td></tr>
+	
+	
+        
+
+	
+	</table>
+</div>
+<!-- / post 97708 popup menu -->
+
+<div id="award97708" style="padding:6px 0px 0px 0px;">
+
+</div>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #97708 --><!-- post #97730 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit97730" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post97730" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="thead" >
+
+
+		<div class="normal" style="float:right">
+
+			&nbsp;&nbsp;&nbsp;
+                        #<a href="http://www.unix.com/97730-post4.html?s=f102c2c23bee3733c36a0530f995a0d7"  target="new"  id="postcount97730" name="4"><strong>4</strong></a> &nbsp;
+
+			
+                       
+<!--
+ 
+-->
+
+
+
+
+
+
+			
+  
+
+
+
+
+
+
+
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post97730"><img class="inlineimg" src="http://www.unix.com/images/statusicon/post_old.gif" alt="Old Unix and Linux" border="0" /></a>
+
+
+			
+				02-02-2006
+			
+			
+			<!-- / status icon and date -->
+ 
+
+
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			<td class="alt2">
+
+
+<a href="http://www.unix.com/members/37053.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><img src="http://www.unix.com/customavatars/avatar37053_1.gif"   alt="blowtorch's Unix or Linux Image" border="0" /></a>
+
+
+</td>
+			<td nowrap="nowrap">
+
+				<div id="postmenu_97730">
+					
+					<a class="bigusername" href="http://www.unix.com/members/37053.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><span style="color:#0000FF;">blowtorch</span></a>
+
+					<img class="inlineimg" src="http://www.unix.com/images/statusicon/user_offline.gif" alt="blowtorch is offline" border="0" />
+
+
+
+
+
+
+ 
+
+ <img class="inlineimg" src="http://www.unix.com/images/icons/knot.png" alt="Forum Advisor" border="0" /> &nbsp;
+
+ 
+
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_97730", true); </script>
+					
+				</div>
+
+
+
+				<div class="smallfont">AFK</div>
+
+<!--BEGIN VBSTATUS-->
+
+
+
+
+<!--END VBSTATUS-->
+                              <div class="smallfont"></div>
+				
+				
+
+
+                              
+				
+
+
+			</td>
+			<td width="100%">&nbsp;</td>
+
+                     
+			<td  valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Join Date: Dec 2004</div>
+                                        <div>Last Activity: 1 July 2016, 6:18 AM EDT</div>
+					<div>Location: UK</div>
+					
+					<div>
+						Posts: 2,351
+					</div>
+
+
+
+
+					 
+	<div>Thanks: 0</div>
+	<div>
+		
+			
+				Thanked 6 Times in 6 Posts
+			
+		
+	</div>
+
+
+
+					
+<!-- moved this to the top
+                        
+-->
+					
+					<div>    </div>
+				</div>
+<!--VBSEO_BOOKMARKS-->
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_97730">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+
+		<!-- message -->
+
+
+
+		<div id="post_message_97730">What shell are you using? Vino's syntax (the [[..]]) will work only with ksh or bash. From the error message it looks like you are using sh. Try using ksh/bash.</div>
+		<!-- / message -->
+               
+                
+		
+  
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+ 
+
+                
+			
+			
+			
+			
+			
+			
+<!-- hidden posts by scottn -->
+
+			
+			
+			
+				
+			
+                        <!-- NEO WORK -->
+			
+			<!-- / controls -->           
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+<!-- conf post marker -->
+
+
+
+
+
+</table>
+ <div id="post_thanks_box_97730"></div><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="margin-top:6px;">
+<tr>
+	<td class="thead" style="line-height:1.5em;">
+		
+			<div>
+				<span style="float:right;font-weight:normal;"><a href="http://www.unix.com/register.php">Remove advertisements</a></span>
+			</div>
+		
+		Sponsored Links
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<div class="postbit_adcode">
+			<table width="100%">
+<tr ><td>
+<center>
+<!-- UNIX3_ZONE_95_728X90 -->
+<div id='div-gpt-ad-1356748021945-2' style='width:728px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-2'); });
+</script>
+</div>
+
+</center>
+</td>
+</tr>
+</table>
+		</div>
+	</td>
+</tr>
+</table>
+
+
+<!-- post 97730 popup menu -->
+<div class="vbmenu_popup" id="postmenu_97730_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">blowtorch</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/members/37053.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/search.php?do=finduser&amp;u=37053&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Find all posts by blowtorch</a></td></tr>
+	
+	
+        
+
+	
+	</table>
+</div>
+<!-- / post 97730 popup menu -->
+
+<div id="award97730" style="padding:6px 0px 0px 0px;">
+
+</div>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #97730 --><!-- post #97735 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+	<div id="edit97735" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post97735" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="thead" >
+
+
+		<div class="normal" style="float:right">
+
+			&nbsp;&nbsp;&nbsp;
+                        #<a href="http://www.unix.com/97735-post5.html?s=f102c2c23bee3733c36a0530f995a0d7"  target="new"  id="postcount97735" name="5"><strong>5</strong></a> &nbsp;
+
+			
+                       
+<!--
+ 
+-->
+
+
+
+
+
+
+			
+  
+
+
+
+
+
+
+
+			
+			
+			
+		</div>
+
+		<div class="normal">
+			<!-- status icon and date -->
+			<a name="post97735"><img class="inlineimg" src="http://www.unix.com/images/statusicon/post_old.gif" alt="Old Unix and Linux" border="0" /></a>
+
+
+			
+				02-02-2006
+			
+			
+			<!-- / status icon and date -->
+ 
+
+
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="alt2" style="padding:0px">
+		<!-- user info -->
+		<table cellpadding="0" cellspacing="6" border="0" width="100%">
+		<tr>
+			
+			<td nowrap="nowrap">
+
+				<div id="postmenu_97735">
+					
+					<a class="bigusername" href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow"><span style="color:#22229C;">bobo</span></a>
+
+					<img class="inlineimg" src="http://www.unix.com/images/statusicon/user_offline.gif" alt="bobo is offline" border="0" />
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+					<script type="text/javascript"> vbmenu_register("postmenu_97735", true); </script>
+					
+				</div>
+
+
+
+				<div class="smallfont">Registered User</div>
+
+<!--BEGIN VBSTATUS-->
+
+
+
+
+<!--END VBSTATUS-->
+                              <div class="smallfont"></div>
+				
+				
+
+
+                              
+				
+
+
+			</td>
+			<td width="100%">&nbsp;</td>
+
+                     
+			<td  valign="top" nowrap="nowrap">
+
+				<div class="smallfont">
+					<div>Join Date: Jan 2006</div>
+                                        <div>Last Activity: 22 December 2015, 2:19 PM EST</div>
+					
+					
+					<div>
+						Posts: 161
+					</div>
+
+
+
+
+					 
+	<div>Thanks: 1</div>
+	<div>
+		
+			
+				Thanked 0 Times in 0 Posts
+			
+		
+	</div>
+
+
+
+					
+<!-- moved this to the top
+                        
+-->
+					
+					<div>    </div>
+				</div>
+<!--VBSEO_BOOKMARKS-->
+
+			</td>
+		</tr>
+		</table>
+		<!-- / user info -->
+	</td>
+</tr>
+<tr>
+	
+	<td class="alt1" id="td_post_97735">
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		
+
+		<!-- message -->
+
+
+
+		<div id="post_message_97735">thanks! I will try</div>
+		<!-- / message -->
+               
+                
+		
+  
+		
+
+		
+
+		
+
+		
+
+		<div style="margin-top: 10px" align="right">
+			<!-- controls -->
+ 
+
+                
+			
+			
+			
+			
+			
+			
+<!-- hidden posts by scottn -->
+
+			
+			
+			
+				
+			
+                        <!-- NEO WORK -->
+			
+			<!-- / controls -->           
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+<!-- conf post marker -->
+
+
+
+
+
+</table>
+ <div id="post_thanks_box_97735"></div><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="margin-top:6px;">
+<tr>
+	<td class="thead" style="line-height:1.5em;">
+		
+			<div>
+				<span style="float:right;font-weight:normal;"><a href="http://www.unix.com/register.php">Remove advertisements</a></span>
+			</div>
+		
+		Sponsored Links
+	</td>
+</tr>
+<tr>
+	<td class="alt1">
+		<div class="postbit_adcode">
+			<table width="100%">
+<tr >
+<td width="50%" align="center">
+<!-- UNIX_ZONE_7_300x250 -->
+<div id='div-gpt-ad-1356748021945-12' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-12'); });
+</script>
+</div>
+</td>
+<td width="50%" align="center" >
+<!-- UNIX_ZONE_8_300x250 -->
+<div id='div-gpt-ad-1356748021945-13' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1356748021945-13'); });
+</script>
+</div>
+</tr>
+</table>
+		</div>
+	</td>
+</tr>
+</table>
+
+
+<!-- post 97735 popup menu -->
+<div class="vbmenu_popup" id="postmenu_97735_menu" style="display:none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">bobo</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/members/47300.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">View Public Profile</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="http://www.unix.com/search.php?do=finduser&amp;u=47300&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Find all posts by bobo</a></td></tr>
+	
+	
+        
+
+	
+	</table>
+</div>
+<!-- / post 97735 popup menu -->
+
+<div id="award97735" style="padding:6px 0px 0px 0px;">
+
+</div>
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #97735 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 25px 0px 25px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tr valign="top">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+
+
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+
+<!-- orig thread tag box location -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<br />
+	<div class="smallfont" align="center">
+		<strong>&laquo;</strong>
+			<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a-prev-thread.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a-next-thread.html?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Next Thread</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+
+
+<!-- controls for non-popup browsers -->
+
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-top-width:0px">
+<tr>
+	<td class="thead" >Thread Tools<a name="goto_threadtools"></a></td>
+	<td class="thead">Search this Thread<a name="goto_threadsearch"></a></td>
+</tr>
+<tr valign="top">
+	<td class="alt1" >
+
+	<!-- thread tools -->
+	<div class="smallfont">
+		
+
+			<div><img class="inlineimg" src="http://www.unix.com/images/buttons/printer.gif" alt="Show Printable Version" vspace="1" /> <a href="http://www.unix.com/printthread.php?t=24837&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Show Printable Version</a></div>
+			<div><img class="inlineimg" src="http://www.unix.com/images/buttons/sendtofriend.gif" alt="Email this Page" vspace="1" /> <a href="http://www.unix.com/sendmessage.php?do=sendtofriend&amp;t=24837&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Email this Page</a></div>
+		
+		
+			<div><img class="inlineimg" src="http://www.unix.com/images/buttons/subscribe.gif" alt="Subscription" vspace="1" />
+				
+					<a href="http://www.unix.com/subscription.php?do=addsubscription&amp;t=24837&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Subscribe to this Thread</a>
+				
+			</div>
+		
+		
+	</div>
+	<!-- / thread tools -->
+
+	</td>
+	
+	<td class="alt1">
+
+	<!-- search this thread -->
+	<form action="http://www.unix.com/search.php?do=process&amp;searchthreadid=24837" method="post">
+	<div class="smallfont">
+		<input type="hidden" name="s" value="f102c2c23bee3733c36a0530f995a0d7" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="process" />
+		<input type="hidden" name="searchthreadid" value="24837" />
+		<strong>Search this Thread</strong>:<br />
+		<input type="text" class="bginput" name="query" size="20" style="width:175px" /><input type="submit" class="button" value="Go"  /><br />
+		<a href="http://www.unix.com/search.php?searchthreadid=24837&amp;s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow">Advanced Search</a>
+	</div>
+	</form>
+	<!-- /  search this thread -->
+
+	</td>
+	
+</tr>
+
+<tr>
+	<td class="thead" colspan="2">Display Modes<a name="goto_displaymodes"></a></td>
+	
+</tr>
+<tr valign="top">
+	
+	<td class="alt2" colspan="2">
+
+	<!-- thread display modes -->
+
+	<div class="smallfont">
+		<div><img class="inlineimg" src="http://www.unix.com/images/buttons/mode_linear.gif" alt="Linear Mode" vspace="1" /> <strong>Linear Mode</strong></div>
+		<div><img class="inlineimg" src="http://www.unix.com/images/buttons/mode_hybrid.gif" alt="Hybrid Mode" vspace="1" /> <a rel="nofollow" href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html?mode=hybrid&amp;s=f102c2c23bee3733c36a0530f995a0d7">Switch to Hybrid Mode</a></div>
+		<div><img class="inlineimg" src="http://www.unix.com/images/buttons/mode_threaded.gif" alt="Threaded Mode" vspace="1" /> <a rel="nofollow" href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a-post97477.html?mode=threaded&amp;s=f102c2c23bee3733c36a0530f995a0d7#post97477">Switch to Threaded Mode</a></div>
+	</div>
+
+	<!-- / thread display modes -->
+
+	</td>
+	
+	
+</tr>
+
+</table>
+<br />
+
+
+<!-- / controls for non-popup browsers -->
+
+
+
+
+
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+
+<!-- 
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="210">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="http://www.unix.com/images/buttons/collapse_thead.gif" alt="Linux" border="0" /></a>
+		Posting Rules
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may not</strong> post new threads</div>
+		<div>You <strong>may not</strong> post replies</div>
+		<div>You <strong>may not</strong> post attachments</div>
+		<div>You <strong>may not</strong> edit your posts</div>
+		<hr />
+		
+		<div><a rel="nofollow" href="http://www.unix.com/misc.php?do=bbcode&amp;s=f102c2c23bee3733c36a0530f995a0d7" target="_blank">BB code</a> is <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.unix.com/misc.php?do=showsmilies&amp;s=f102c2c23bee3733c36a0530f995a0d7" target="_blank">Smilies</a> are <strong>On</strong></div>
+		<div><a rel="nofollow" href="http://www.unix.com/misc.php?do=bbcode&amp;s=f102c2c23bee3733c36a0530f995a0d7#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></div>
+		<div>HTML code is <strong>Off</strong></div>
+		<hr />
+		<div><a rel="nofollow" href="http://www.unix.com/misc.php?do=showrules&amp;s=f102c2c23bee3733c36a0530f995a0d7" target="_blank">Forum Rules</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+-->
+	</td>
+
+
+
+
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			
+                        </td>
+
+
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52c2ba073b658f6f"></script><br />
+
+
+<br />
+<div class="smallfont" align="center">All times are GMT -4. The time now is <span class="time">11:46 AM</span>.</div>
+<br />
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<form action="http://www.unix.com/index.php" method="get">
+	
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+
+
+
+	
+	
+	<td class="tfoot" align="right" width="100%">
+
+		<div class="smallfont"
+			<strong>
+				<a href="http://www.unix.com/cv_rss_feeds.php" target="_self" title="UNIX & Linux - unix commands, linux commands, linux server, linux ubuntu, shell script, linux distros. RSS Feeds"><img src="http://www.unix.com/images/cinvin_forum_feed_listing/rss2.png" border="0" alt="UNIX & Linux - unix commands, linux commands, linux server, linux ubuntu, shell script, linux distros. RSS Feeds" style="vertical-align:  middle" height="32" width="32"/></a> - <a href="http://www.unix.com/sendmessage.php?s=f102c2c23bee3733c36a0530f995a0d7" rel="nofollow" accesskey="9">Contact Us</a> -
+				<a href="http://www.unix.com/">UNIX & Linux - unix commands, linux commands, linux server, linux ubuntu, shell script, linux distros.</a> -
+
+<a href="http://buysellads.com/buy/detail/215189" rel="nofollow" accesskey="9">Advertising</a> - 
+
+				
+				
+				
+
+                                
+				
+				<a href="http://www.unix.com/unix-for-dummies-questions-and-answers/24837-if-stategreat-than-1-less-than-20-a.html#top" onclick="self.scrollTo(0, 0); return false;">Top</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+</form>
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init(); 
+-->
+</script>
+
+<div class="footer" style="padding:8px;font-size:9px ">
+<!--
+<div align="right">UNIX® is a registered trademark of The Open Group</div>
+-->
+	<div style="float:right"> 
+<!-- <div><a rel="nofollow" href="http://www.vbcredits.com/">vBCredits</a> v1.4 Copyright &copy;2007 - 2008, <a rel="nofollow" href="http://www.pixelfxstudios.ca/">PixelFX Studios</a></div>   -->
+UNIX and Linux Forums
+	</div>
+	<div align="left">Search Engine Optimisation provided by 
+			<a rel="nofollow" href="http://www.dragonbyte-tech.com/vbecommerce.php?productid=303&do=product&utm_source=unix.com&utm_campaign=product&utm_medium=DragonByte%2BSEO&utm_content=Pro" target="_blank">DragonByte SEO v2.0.32 (Pro)</a> - 
+			<a rel="nofollow" href="http://www.dragonbyte-tech.com/?utm_source=unix.com&utm_campaign=site&utm_medium=DragonByte%2BSEO&utm_content=Pro" target="_blank">vBulletin Mods &amp; Addons</a> Copyright &copy; 2017 DragonByte Technologies Ltd.<br />Unix & Linux Forums Content Copyright&copy;1993-2017.  All Rights Reserved. <br/>  Forum Operations by <a href="http://www.unix.com/" rel="nofollow">The UNIX and Linux Forums</a></div>
+        
+        
+        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>

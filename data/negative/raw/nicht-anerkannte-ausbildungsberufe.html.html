@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang='de'>
+<head>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"f8b61897e7","applicationID":"11423266","transactionName":"IlteRhRXWAlRE0pCTgBEQEADVkAMVwQWWggRa0BdFUxHSkcJCkU=","queueTime":5,"applicationTime":244,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1059.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<link rel="stylesheet" media="all" href="//d18hxbabqchrh0.cloudfront.net/assets/desktop/application-c14f2ebe4a1bc75780a57fadc3e2d847587b6e9221452e2a5a74b3ad43a1117b.css" />
+<meta content='index,follow' name='robots'>
+<title>Nicht-anerkannte Ausbildung | AZUBI.DE</title><meta name="description" content="Was staatlich nicht anerkannte Berufe sind, wie sie sich zu staatlich anerkannten unterscheiden und wieso sie trotzdem eine gute Idee sind – hier mehr dazu!" /><meta property="og:title" content="Staatlich nicht-anerkannte Ausbildung" />
+<meta property="og:url" content="https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe" />
+<meta property="og:image" content="https://d18hxbabqchrh0.cloudfront.net/metta/entries/99/original-.jpg?1484746969" />
+<meta property="og:description" content="Das klingt nach Betrug und Abzocke. Keine Sorge, AZUBI.DE verrät dir, was es tatsächlich bedeutet und warum diese Ausbildungsform für dich von Interesse sein kann." />
+
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ef0K588+AoRaqaf8lwdN6tmMYpsuJxzLTMBbYnt8S0RT8YQCI+wDHbtm56vh7nSE1bg7cHXeFo3bDzwebUNnPQ==" />
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/favicon-daf1809a1f17e838882fd05418cd86ff3ab51c221d8a0bc1234749bf1bd1e01b.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-57x57-7f135cdf4580ad86f62d3be28259405e06669104e87f34d5b40c183951fa050a.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-60x60-ba5389e57eaae783248806c163c6e075f27459f4d680b6dd4b72b81156a01db2.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-72x72-81c74447d4e402d14603256e1a2a10a049c32f4b9d588536a5dee3deee7783d8.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-76x76-aa1fd58e46c71255e6f1c9551920a83ce30c54871e4133400bc0a510d11acaf3.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-114x114-2a015343a96cb793891fcec948cc4d2b14c64fc3218011ed2a1155177612e53d.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-120x120-316910b821c6a15788a765ac3bd30c99b31ff19e7dbedbd4d537c0cf92931400.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-144x144-8ee58fa8efd4fda25c78da048e26cf5d6240cb2e6bee99514df2aa31be8847b5.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-152x152-c8fb9f5963804c7d6c826feb276294188298f1408bbc0bcab07a78af032db108.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/apple-icon-180x180-3e771ac9c7a4f139708f52b8f5f96cc03f7d16b4477e6d184a432ffd4ead431d.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/android-icon-192x192-9c5180379c71c792131c53ef50ce7f0d0efa3ff08b5e1db15d31323f25a24d8d.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/favicon-32x32-fa6d43ff2e3d915fc3bc79c06d323a95f80b85710a2bde79952cf35560f49c4d.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/favicon-96x96-f7f04ef6f0fc0bbde564c8360e2c56dc3c7ac5d059ad41dc40e35ca7f3424e37.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='//d18hxbabqchrh0.cloudfront.net/assets/favicon/favicon-16x16-daf1809a1f17e838882fd05418cd86ff3ab51c221d8a0bc1234749bf1bd1e01b.png' rel='icon' sizes='16x16' type='image/png'>
+
+<script src="//d18hxbabqchrh0.cloudfront.net/assets/desktop/application-1c3c16e0307bbc70f19b5cad15f8e53e79f6826270bdcf9130c454c424fee305.js" defer="defer"></script>
+
+
+<link href='https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe' rel='canonical'>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": "https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe",
+    "headline": "Staatlich nicht-anerkannte Ausbildung",
+    "datePublished": "2016-10-20T11:49:00Z",
+    "dateModified": "2016-10-21T12:01:00Z",
+    "description": "Im Dschungel der Berufsausbildung gibt es viele verschiedene Berufe. Einige Berufe sind staatlich nicht anerkannt. Das klingt nach Heimlichtuern und Betrügern. Was es tatsächlich bedeutet und warum diese Berufe trotzdem von Interesse für dich sein können, verrät dir AZUBI.DE hier.",
+
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://azubi-production.imgix.net/posts/79/original1477044022.jpg?fit=crop&auto=format&fm=jpg&q=60&w=384&h=175",
+      "height": "175",
+      "width": "384"
+    },
+
+    "author": {
+      "@type": "Person",
+      "name": "Marie-Luise Peters"
+    },
+
+    "publisher": {
+      "@type": "Organization",
+      "name": "Absolventa GmbH",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://d18hxbabqchrh0.cloudfront.net/assets/logo@2x-1b82e1f2470dad32a0a25918e8f4ae8bc5ec85da9b422f70809e6a682b2ebb7a.png",
+        "height": "104",
+        "width": "308"
+      }
+    }
+  }
+</script>
+
+
+
+
+<!-- wmt verification -->
+<meta content='WN91wuye1qopkHl5rHTctWSvrOp57GNDsOQwcw7iVLo' name='google-site-verification'>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '273150889828389'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=273150889828389&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+
+
+</head>
+<body data-field-check-passed='false' data-gender='neutral'>
+<div class='cookie-note cookie-note--visible'>
+<div class='row'>
+<div class='col12'>
+<div class='cookie-note__text'>
+AZUBI.DE verwendet Cookies, um dir den bestmöglichen Service zu gewährleisten. Wenn du auf der Seite weitersurfst, stimmst du der
+<a href="/datenschutz#cookies">Cookie-Nutzung</a>
+zu.
+</div>
+<a class="cookie-note__close" data-action="cookie-close" href="#"><i class="fa fa-times"></i></a>
+</div>
+</div>
+</div>
+
+<noscript>
+<div class='noscript-message'>
+<div class='row'>
+<div class='col12'>
+<i class="fa fa-warning"></i>
+JavaScript ist momentan deaktiviert. Bitte JavaScript aktivieren, um alle Funktionen von AZUBI.DE nutzen zu können.
+</div>
+</div>
+</div>
+</noscript>
+
+<div class='header header--dark' role='navigation'>
+<nav class='header__top-nav'></nav>
+<div class='row header__row'>
+<div class='col12'>
+<nav class='header__nav' data-action='fixedHeader'>
+<div class='header__nav-logo'>
+<a title="AZUBI.DE" href="https://www.azubi.de/"><img alt="AZUBI.DE Logo" src="//d18hxbabqchrh0.cloudfront.net/assets/dummy_logo_transparent-orange-32e489e06537dc68a5da1b67220f6442c0c11cefbe0874e055a95787aaefbef4.png" /></a>
+</div>
+<div class='header__spinner'>
+<div class='spinner' data-action='initAjaxSpinner'>
+<div class='rect1'></div>
+<div class='rect2'></div>
+<div class='rect3'></div>
+<div class='rect4'></div>
+<div class='rect5'></div>
+</div>
+
+</div>
+<div class='header__gender-switch'>
+<a class="header__gender-switch-link" title="Werde als Mann angesprochen" rel="nofollow" data-method="post" href="/p/gender_switches?gender=male"><i class="fa fa-male"></i>
+</a><a class="header__gender-switch-link" title="Werde als Frau angesprochen" rel="nofollow" data-method="post" href="/p/gender_switches?gender=female"><i class="fa fa-female"></i>
+</a></div>
+<ul class='inline-list header__nav-list'>
+<li class='header__nav-list-item'>
+<a class="header__nav-list-item-link" colorHover="#ffba24" active="false" onMouseOver="this.style.color=&#39;#e6a720&#39;" onMouseOut="this.style.color=&#39;#f2f2f2&#39;" style="color: #f2f2f2" href="/ausbildungsplatz">Ausbildungsplätze</a>
+<div class='header__favorites'>
+<div data-react-class="Favorites" data-react-props="{&quot;color&quot;:&quot;#FFBA24&quot;,&quot;field_check_url&quot;:&quot;https://www.azubi.de/berufcheck&quot;,&quot;favorites&quot;:&quot;[]&quot;}"><div class="favorites" data-reactroot="" data-reactid="1" data-react-checksum="1327643525"><a href="#" class="favorites__switch-link" data-reactid="2"><span class="favorites__switch-link-count" style="background-color:#FFBA24;" data-reactid="3"><i class="fa fa-heart" data-reactid="4"></i></span><span class="favorites__switch-link-label" style="color:;" data-reactid="5">Deine Merkliste</span><span class="favorites__link-icon" style="color:;" data-reactid="6"><i class="fa fa-caret-down" data-reactid="7"></i></span></a><div class="favorites__list" data-reactid="8"><ul data-reactid="9"><li class="favorites__list-hint" data-reactid="10"><p class="favorites__list-hint-description" data-reactid="11">Deine Merkliste ist noch leer. Aber das muss nicht so bleiben: Entdecke jetzt Berufe, die zu dir passen!</p><a href="https://www.azubi.de/berufcheck" class="btn btn--inverted btn--full" data-reactid="12">Zum Beruf-Check</a></li></ul></div></div></div>
+</div>
+</li>
+<li class='header__nav-list-item'>
+<a class="header__nav-list-item-link" colorHover="#ffba24" active="false" onMouseOver="this.style.color=&#39;#e6a720&#39;" onMouseOut="this.style.color=&#39;#f2f2f2&#39;" style="color: #f2f2f2" href="/beruf">Berufe</a>
+</li>
+<li class='header__nav-list-item'>
+<a class="header__nav-list-item-link" colorHover="#ffba24" active="false" onMouseOver="this.style.color=&#39;#e6a720&#39;" onMouseOut="this.style.color=&#39;#f2f2f2&#39;" style="color: #f2f2f2" href="/duales-studium">Duales Studium</a>
+</li>
+<li class='header__nav-list-item'>
+<a class="header__nav-list-item-link" colorHover="#ffba24" active="false" onMouseOver="this.style.color=&#39;#e6a720&#39;" onMouseOut="this.style.color=&#39;#f2f2f2&#39;" style="color: #f2f2f2" href="/unternehmen">Unternehmen</a>
+</li>
+<li class='header__nav-list-item'>
+<a class="header__nav-list-item-link" colorHover="#ffba24" active="true" style="color: #ffba24" href="/tipps">Tipps</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+
+
+<div class='content'>
+<div itemscope itemtype='http://schema.org/Article'>
+<div class='container container--blog container--blog-scene container--mesh' style="background-image: url('https://azubi-production.imgix.net/posts/79/original1477044022.jpg?h=415&amp;fit=clip');">
+<div class='row'>
+<div class='col12'>
+<div class='post-header'>
+<h1 class='post-header__title text-primary'>Staatlich nicht-anerkannte Ausbildung</h1>
+</div>
+<div class='post__text-teaser margin-top30 text-white'>
+<p>Im Dschungel der Berufsausbildung gibt es viele verschiedene Berufe. Einige Berufe sind staatlich nicht anerkannt. Das klingt nach Heimlichtuern und Betrügern. Was es tatsächlich bedeutet und warum diese Berufe trotzdem von Interesse für dich sein können, verrät dir AZUBI.DE hier.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id='post-79'>
+<div class='breadcrumb hide-sm-only'>
+<div class='row'>
+<div class='col9'>
+<ol class='breadcrumb__items' itemscope itemtype='http://schema.org/BreadcrumbList'>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="/tipps"><span itemprop='name'>Tipps</span>
+</a></li>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="https://www.azubi.de/beruf/tipps"><span itemprop='name'>Ausbildung</span>
+</a></li>
+<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<a title="Ausbildungsarten" itemscope="itemscope" itemtype="http://schema.org/Thing" itemprop="item" href="https://www.azubi.de/beruf/tipps/kategorie/ausbildungsarten"><span itemprop='name'>Ausbildungsarten</span>
+</a></li>
+<li class='current' itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+<span itemprop='item' itemscope itemtype='http://schema.org/Thing'>
+<span itemprop='name'>Staatlich nicht-anerkannte Ausbildung</span>
+</span>
+</li>
+</ol>
+</div>
+<div class='col3 col12-sm'>
+<form action="/tipps/suche" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<div class='right-inner-addon post-search'>
+<i class="fa fa-search"></i>
+<input type="text" name="s" id="s" placeholder="Tipps durchsuchen" class="margin-top0 margin-top20-md" />
+</div>
+</form>
+
+
+</div>
+</div>
+</div>
+<div class='container container--alternate'>
+<div class='row'>
+<div class='col9 col12-sm'>
+<div class='panel panel--post'>
+<div class='panel__content' data-star-track-action='scroll' data-star-track-element-id='dcf441a75cff244a4b4353fae602282c' data-star-track-label='' data-star-track-path='/beruf/tipps/nicht-anerkannte-ausbildungsberufe' data-star-track-resource-child='https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe' data-star-track-resource-id='' data-star-track-resource='post_show_scrolling' data-star-track-value='' data-star-track-version='A(1)'>
+<span class="post__date">aktualisiert am 21. Oktober 2016</span>
+<div class='row' id='post_content_456'>
+<div class='col12'>
+<h2>Anerkannt vs. nicht-anerkannt</h2>
+<p><strong>Staatlich nicht-anerkannte Ausbildung</strong>. Das klingt erstmal nach etwas Negativem. Welche Ausbildungsberufe anerkannt sind und welche nicht sowie die <strong><a href="/beruf/tipps/auszubildende-rechte-und-pflichten">Rechte und Pflichten</a></strong> als Auszubildender regelt das Berufsbildungsgesetz, kurz <strong><a href="/beruf/tipps/berufsbildungsgesetz">BBiG</a></strong>. Auf Basis dieses Gesetzes gibt es wiederum Ausbildungsordnungen für derzeit etwa 350 Berufe. Diese regeln die sachliche und zeitliche Gliederung. </p>
+
+<p>Das klingt schon alles sehr <strong>bürokratisch</strong> und genau das ist manchmal das Problem. Vor allem wegen der <strong>Digitalisierung</strong> wandelt sich die Arbeitswelt schnell. Neue Kenntnisse und Fähigkeiten werden gebraucht, wodurch <strong>neue Berufsbilder</strong> entstehen. Werden diese Berufe längerfristig benötigt, werden Ausbildungsordnungen für entsprechende Ausbildungsberufe erlassen. Bis das passiert, werden aber bereits <strong>Fachkräfte</strong> gebraucht. Und da kommen die nicht-anerkannten Ausbildungen ins Spiel.</p>
+
+<h3>Gründe für eine staatlich nicht-anerkannte Ausbildung</h3>
+
+<p>Es gibt also gute <strong>Gründe</strong> für Unternehmen, nicht-anerkannte Ausbildungen anzubieten. Einige davon haben wir hier aufgelistet:</p>
+
+<ul>
+<li><p><strong>Neues Berufsfeld</strong>: Bereits jetzt gibt es Berufe, die wir uns noch gar nicht als solche vorstellen können. Zum Beispiel ist eine Ausbildung zum/zur Yogalehrer/in staatlich nicht geregelt und somit auch kein anerkannter Ausbildungsberuf. Dennoch wird Yoga immer beliebter und Yogalehrer/innen werden verstärkt gebraucht.</p></li>
+<li><p><strong>Veraltetes Berufsfeld</strong>: Manche Berufe sind fast ausgestorben – oder kennst du heute noch viele Schriftsetzer/innen? Für solche Berufe gibt es keine Ausbildungsordnung mehr, aber manche Betriebe bilden noch in diesen seltenen Handwerken aus.  </p></li>
+<li><p><strong>Extrem speziell</strong>: Außerdem kann es sein, dass die Aufgaben und Anforderungen eines Betriebs an sich sehr speziell sind. Auch dann kommt eher eine nicht-anerkannte Ausbildung infrage, um dir die speziellen Aufgaben zu vermitteln.</p></li>
+</ul>
+
+<p><strong>Achtung!</strong> Eine Ausbildung in einem nicht anerkannten Beruf kannst du <strong>erst ab 18 Jahren</strong> machen!</p>
+
+</div>
+</div>
+<div class='row' id='post_content_457'>
+<div class='col12'>
+<h2>Ablauf einer nicht-anerkannten Ausbildung</h2>
+<p>Im Prinzip funktioniert eine nicht-anerkannte Ausbildung wie eine <strong><a href="/beruf/tipps/duale-ausbildung">duale Ausbildung</a></strong>: Die Kollegen bringen dir das notwendige <strong>Know-how</strong> bei, damit du schnell im Tagesgeschäft des Unternehmens Aufgaben übernimmst. Jedoch besuchst du <strong>keine Berufsschule</strong>. Stattdessen kann es sein, dass das Unternehmen dich zu Schulungen und Seminaren schickt, um deine Fertigkeiten zu verbessern. </p>
+
+<p>Zudem brauchst du bei einer nicht-anerkannten Ausbildung auch <strong>keine Abschlussprüfung</strong> vor einer Kammer ablegen. Das bedeutet aber auch, es gibt kein offizielles <strong><a href="/beruf/tipps/ausbildungszeugnis">Ausbildungszeugnis</a></strong>. Manche Unternehmen stellen aber ein betriebliches Zeugnis aus. Damit kannst du in deiner Branche deine Kenntnisse nachweisen.</p>
+
+</div>
+</div>
+<div class='row' id='post_content_458'>
+<div class='col12'>
+<h2>Akzeptanz einer nicht-anerkannten Ausbildung</h2>
+<p>Innerhalb deiner <strong>gewählten Branche</strong> wird auch eine nicht-anerkannte Ausbildung akzeptiert. So haben zum Beispiel Make-up-Artists in der Kosmetikbranche in der Regel nichts zu befürchten. Problematisch kann es erst werden, wenn du mal <strong>arbeitslos</strong> wirst. Du giltst dann als <strong>ungelernt</strong>. Es kann deswegen länger dauern, bis du wieder eine Stelle findest. Außerdem setzen einige Weiterbildungen und Umschulungen einen <strong>anerkannten Berufsabschluss</strong> voraus.   </p>
+
+<p>Wenn du also überlegst, eine nicht-anerkannte Ausbildung zu machen, dann schau dir vor allem die <strong>Ausbildungsinhalte</strong> und die <strong><a href="/beruf/tipps/liste-beste-ausbildungsberufe">Zukunftschancen</a></strong> genau an.</p>
+
+</div>
+</div>
+<div class='row' id='post_content_459'>
+<div class='col12'>
+<h2>Und jetzt?</h2>
+<p><strong><em><a href="/beruf/tipps/welche-ausbildung-passt-zu-mir">» Du fragst dich, welche Ausbildung zu dir passt? Hier lang zur Orientierungshilfe!</a></em></strong></p>
+
+<p><strong><em><a href="/beruf">» Du möchtest mehr über die einzelnen Ausbildungsberufe erfahren? Dann klick dich hier durch!</a></em></strong></p>
+
+<p><strong><em><a href="/berufcheck">» Du bist nicht sicher, welcher Beruf dich überhaupt interessiert? Mach den Beruf-Check!</a></em></strong></p>
+
+</div>
+</div>
+</div>
+</div>
+<div class='panel panel--beige margin-top5'>
+<div class='panel__content'>
+<h5>Artikel teilen:</h5>
+<ul class='inline-list post__sharing-list'>
+<li>
+<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe"><i class="fa fa-facebook"></i>
+<span class='hide-sm-only'>Facebook</span>
+</a></li>
+<li>
+<a target="_blank" href="https://plus.google.com/share?url=https://www.azubi.de/beruf/tipps/nicht-anerkannte-ausbildungsberufe"><i class="fa fa-twitter"></i>
+<span class='hide-sm-only'>Twitter</span>
+</a></li>
+<li>
+<a href="mailto:?body=https%3A%2F%2Fwww.azubi.de%2Fberuf%2Ftipps%2Fnicht-anerkannte-ausbildungsberufe&amp;subject=Interessanter%20Artikel%20bei%20AZUBI.DE"><i class="fa fa-envelope"></i>
+<span class='hide-sm-only'>E-Mail</span>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class='col3 col12-sm field-check-teaser__mobile-wrapper'>
+<h2>Inhalt</h2>
+<ul class='list-arrow-right margin-top10'>
+<li>
+<a data-action="scrollToLink" data-scroll-link-offset="120" href="#post_content_456">Unterschiede</a>
+</li>
+<li>
+<a data-action="scrollToLink" data-scroll-link-offset="120" href="#post_content_457">Ablauf</a>
+</li>
+<li>
+<a data-action="scrollToLink" data-scroll-link-offset="120" href="#post_content_458">Nach der Ausbildung</a>
+</li>
+<li>
+<a data-action="scrollToLink" data-scroll-link-offset="120" href="#post_content_459">Und jetzt?</a>
+</li>
+</ul>
+<div class='field-check-image--col3'>
+<div data-react-class="FieldCheckTeaser" data-react-props="{}"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container container--highlight'>
+<div class='row'>
+<div class='col12'>
+<h3 class='text-center'>
+Ähnliche Artikel, die interessant
+<br>
+für dich sein könnten
+</h3>
+</div>
+</div>
+<div class='row'>
+<div class='col4 col12-sm'>
+<a class="post-teaser" href="https://www.azubi.de/beruf/tipps/ausbildung-mit-hauptschulabschluss"><div class='post-teaser__image' style="background-image: url('https://azubi-production.imgix.net/posts/22/original1448294271.jpg?h=276&amp;fit=clip');"></div>
+<h3 class='post-teaser__title'>Ausbildung mit Hauptschulabschluss</h3>
+</a></div>
+<div class='col4 col12-sm'>
+<a class="post-teaser" href="https://www.azubi.de/beruf/tipps/abi-und-dann"><div class='post-teaser__image' style="background-image: url('https://azubi-production.imgix.net/posts/40/original1452523069.jpg?h=276&amp;fit=clip');"></div>
+<h3 class='post-teaser__title'>Abi und dann…?</h3>
+</a></div>
+<div class='col4 col12-sm'>
+<a class="post-teaser" href="https://www.azubi.de/beruf/tipps/verbundausbildung"><div class='post-teaser__image' style="background-image: url('https://azubi-production.imgix.net/posts/85/original1479820652.jpg?h=276&amp;fit=clip');"></div>
+<h3 class='post-teaser__title'>Verbundausbildung</h3>
+</a></div>
+
+</div>
+</div>
+
+
+</div>
+<footer class='footer'>
+<div class='row--large'>
+<div class='col12'>
+<ul class='footer_list footer__list--left'>
+<li><a class="btn--white" href="/personalsuche">Für Arbeitgeber</a></li>
+</ul>
+<ul class='footer__list footer__list--middle'>
+<li><a href="/ueberuns">Über AZUBI.DE</a></li>
+<li><a href="/kontakt">Kontakt</a></li>
+<li><a href="/sitemap">Sitemap</a></li>
+<li><a href="/datenschutz">Datenschutz</a></li>
+<li><a href="/agb">AGB</a></li>
+<li><a target="_blank" href="https://www.jobnet.de/presse">Presse</a></li>
+<li><a href="/impressum">Impressum</a></li>
+</ul>
+</div>
+</div>
+</footer>
+
+<div class='ga' data-script="<script>&#x000A;  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){&#x000A;  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),&#x000A;  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)&#x000A;  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');&#x000A;  &#x000A;  ga('create', 'UA-67141328-1', 'auto');&#x000A;  ga('require', 'displayfeatures');&#x000A;  ga('require', 'linkid');&#x000A;  ga('set', 'forceSSL', true);&#x000A;  ga('set', 'anonymizeIp', true);&#x000A;  &#x000A;  &#x000A;  &#x000A;  ga('send', 'pageview', {&#x000A;      'hitCallback' : function() {&#x000A;          var StarTrackCollector = modulejs.require('StarTrackCollector');&#x000A;          new StarTrackCollector();&#x000A;      }&#x000A;  });&#x000A;</script>"></div>
+<!-- Google Tag Manager -->
+<noscript>
+<iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-MM9G6N' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MM9G6N');
+</script>
+<!-- End Google Tag Manager -->
+
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '55ad06f192c6ac3d0e00018b');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://track.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+
+<!-- Website Information -->
+<script type='application/ld+json'>
+{ "@context" : "http://schema.org", "@type" : "Organization", "logo": "https://d18hxbabqchrh0.cloudfront.net/assets/dummy_logo_transparent-orange-32e489e06537dc68a5da1b67220f6442c0c11cefbe0874e055a95787aaefbef4.png", "name" : "AZUBI.DE", "url" : "https://www.azubi.de", "sameAs" : [ "https://www.facebook.com/Azubide-855989767813353/?fref=ts", "https://www.instagram.com/azubi.de/" ], "contactPoint" : [{ "@type" : "ContactPoint", "telephone" : "+4930240483100", "contactType" : "customer service", "areaServed" : "DE" }] }
+</script>
+
+</body>
+</html>

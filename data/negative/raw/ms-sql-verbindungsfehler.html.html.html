@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SQL Server existiert nicht oder Zugriff verweigert</title>
+<meta name="keywords" content="SQL-Server,Office Manager,Fehlermeldung">
+<meta name="description" content="Checkliste bei Verbingsfehlern zu Microsoft SQL, Fehlermeldung &quot;SQL Server existiert nicht oder Zugriff verweigert&quot;.">
+<meta name="robots" content="index,follow">
+<meta name="copyright" content="Softwarebüro Krekeler">
+<link rel="alternate" type="application/rss+xml" title="Office Manager RSS-Feed" href="https://www.officemanager.de/rss.xml">
+<link rel="stylesheet" type="text/css" title="CSS" href="../../styles/responsive.css" media="all">
+</head>
+
+<body>
+<header>
+<a href="../../">
+<img src="../../images/head-om-dms.gif" height="36" width="220" alt="Office Manager Dokumentenmanagementsystem"></a>
+<div id="header-nav">
+<label for="show-menu" id="show-menu-label">Menü und Suche</label>
+<input type="checkbox" id="show-menu">
+<nav id="menu"><ul>
+<li><a title="Startseite" href="../../">&nbsp;Home &nbsp;</a></li>
+<li><a title="Dokumenten-Management-System" href="../../dokumentenverwaltung/">&nbsp;DMS &nbsp;</a></li>
+<li><a title="Testversion laden und Ordnung schaffen" href="../../downloads/">&nbsp;Downloads &nbsp;</a></li>
+<li><a title="Produkte kaufen" href="../../forms/shop.html">&nbsp;Shop &nbsp;</a></li>
+<li><a title="Aktuelles und Social Media" href="../../neuigkeiten.html">&nbsp;Neuigkeiten &nbsp;</a></li>
+<li><a title="Unsere Kunden" href="../../referenzen.html">&nbsp;Referenzen &nbsp;</a></li>
+<li><a title="Hilfestellung und FAQ" href="../">&nbsp;Support &nbsp;</a></li>
+<li><a title="Hier erreichen Sie uns" href="../../impressum/">&nbsp;Impressum&nbsp;</a></li>
+</ul></nav>
+<form action="../../search/search.php" method="get" accept-charset="utf-8" id="suche-form"><input type="text" placeholder="Volltextsuche" name="zoom_query" value=""></form>
+</div>
+</header>
+
+<div id="content">
+<article id="page">
+<p class="breadcrumb">[ <a href="../../">Home</a> &gt; <a href="../">Support</a> &gt; <a title="Archive auf SQL-Servern" href="./">SQL-Server</a> &gt; Fehler &quot;SQL-Server existiert nicht&quot; ]</p>
+<h1>Office Manager DMS-Support</h1>
+<h2>Mit MS SQL-Server verbinden</h2>
+<p>Office Manager Enterprise ermöglicht die Speicherung von Dokumentenarchiven auf dem SQL-Server von Microsoft. Beachten Sie für eine 
+Einrichtung bitte die <a title="Office Manager-Archiv auf MS SQL" href="ms-sql.pdf">PDF-Anleitung</a>.</p>
+<h2>Checkliste bei Verbindungsfehlern</h2>
+<p><img alt="Fehlermeldung beim Öffnen der Server-Datenbank" src="../images/sq-server-existiert-nicht.png" width="376" height="219"></p>
+<p>Führen Sie bitte folgende Prüfungen durch, wenn Sie die Fehlermeldung</p>
+<ul>
+<li><b>SQL Server existiert nicht oder Zugriff verweigert</b></li>
+<li><b>Zeitlimit abgelaufen</b><br></li>
+<li>oder <b>Anmeldungstimeout abgelaufen</b></li>
+</ul>
+<p>erhalten:</p>
+<h3 id="name">1. Server und Datenbankname</h3>
+<p>Haben Sie den Servernamen bzw. die IP korrekt angegeben? Bei benannten Instanzen geben Sie bitte &quot;<var>Servername\Instanzname</var>&quot; ein.</p>
+<h3 id="dienste">2. Erforderliche Dienste</h3>
+<p>Starten Sie auf dem Server das Programm &quot;SQL Server-Konfiguration-Manager&quot; (bzw. &quot;Configuration Manager&quot;) und öffnen Sie links den Knoten &quot;SQL Server-Dienste&quot;:</p>
+<ul>
+<li>&quot;SQL Server (<var>Name</var>)&quot; muss gestartet sein.</li>
+<li>&quot;SQL Server Browser&quot; muss für benannte Instanzen gestartet sein.</li>
+</ul>
+<p>Starten Sie die Dienste bitte, falls diese nicht ausgeführt werden. Ändern Sie auch den <span class="uilabel">Startmodus</span> in <a title="Bei Startproblemen ev. &quot;Automatisch (Verzögerter Start)&quot;" href="https://blog.officemanager.de/2014/10/sqlserver-dienst-start/">&quot;Automatisch&quot;</a>.</p>
+<h3 id="remotezugriff">3. Remotezugriff zulassen</h3>
+<p>Starten Sie bitte &quot;Microsoft SQL Server Management Studio&quot; und markieren Sie links im Objekt-Explorer den obersten Knoten bzw. den Hauptknoten 
+des gewünschten Servers. Klicken Sie diesen mit der rechten Maustaste an und wählen Sie den Befehl <span class="menuebefehl">Eigenschaften</span>.</p>
+<p>Im Dialogfenster &quot;Servereigenschaften - <var>Name</var>&quot; klicken Sie links auf die Seite <span class="uitabsh">Verbindungen</span>. Stellen Sie 
+sicher, dass die Option <span class="uilabel">Remoteverbindungen mit diesem Server zulassen</span> aktiviert ist. <span class="uilabel">
+Maximale Anzahl von gleichzeitigen Verbindungen</span> muss auf 0 oder auf eine ausreichende Anzahl eingestellt sein. Starten Sie den 
+SQL-Serverdienst bitte neu, wenn Sie Einstellungen geändert haben.</p>
+<h3 id="firewall">4. Firewall des Servers</h3>
+<h4>Standard ohne Instanzen</h4>
+<p>Microsoft SQL-Server verwendet standardmäßig den Port 1433. Prüfen Sie, ob dieser durch eine Firewall oder Antiviren-Programm blockiert ist. Zum 
+Test können Sie &quot;telnet <var>servername</var> 1433&quot; in der Eingabeaufforderung verwenden, sofern Telnet installiert ist. Wenn Sie keine Fehlermeldung erhalten, dann ist 
+der Port geöffnet. Zur Freigabe können Sie eine eingehende Ausnahmeregel in der Firewall des Servers 
+<a title="Wie Sie mit Telnet testen und den Port freigeben können" href="https://blog.officemanager.de/2011/05/sql-server-port-telnet/">definieren</a>.</p>
+<h4>Mit benannter Instanz</h4>
+<p>Benannte Instanzen des SQL-Servers verwenden auch andere Ports. Insbesondere wenn die verwendete Instanz nicht die erste ist, sollten Sie 
+Firewall-Ausnahmen (eingehende Regeln) für die <a href="#dienste">erforderlichen Dienste</a> definieren. Die Portfreigabe für 1433 ist dann nicht erforderlich.</p>
+<p>Siehe hierzu <a title="Microsoft Technet" target="_blank" href="https://technet.microsoft.com/de-de/library/cc646023.aspx">Konfigurieren einer Windows-Firewall für SQL Server-Zugriff</a></p>
+<p>Kurzfassung</p>
+<ul>
+<li>Systemsteuerung | Windows-Firewall | Erweiterte Einstellungen</li>
+<li>Eingehende Regeln | Neue Regel</li>
+<li>Regeltyp = &quot;Programm&quot;</li>
+<li>Programmpfad zum Beispiel &quot;C:\Program Files\Microsoft SQL Server\MSSQL11.SQLEXPRESS\MSSQL\Binn\sqlservr.exe&quot;</li>
+<li>Aktion = &quot;Verbindung zulassen&quot; oder besser &quot;Verbindung zulassen, wenn sie sicher ist&quot;.</li>
+<li>Profil: In der Regel nur Domäne und/oder Privat.</li>
+<li>Der Name ist beliebig, beispielweise &quot;Für SQL-Server zugelassen&quot;.</li>
+</ul>
+<p>Die Schritte bitte für den Browser-Dienst wiederholen, Programmpfad ist z. B. &quot;C:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe&quot;. 
+Den jeweiligen Pfad können Sie ermitteln, indem Sie in der &quot;Verwaltung | Dienste&quot; die Eigenschaften der Dienste öffnen. Dort finden Sie 
+&quot;<a title="Screenshot" href="../images/sql-dienst-eigenschaften.png">Pfad zur EXE-Datei</a>&quot;.</p>
+<h3 id="protokoll">5. Netzwerk-Protokoll</h3>
+<p>Starten Sie bitte &quot;SQL Server-Konfiguration-Manager&quot;, öffnen Sie links den Knoten &quot;SQL Server-Netzwerkkonfiguration&quot; 
+und markieren Sie &quot;Protokolle für <var>Name</var>&quot;. Aktivieren Sie das TCP/IP-Protokoll und ev. auch &quot;Named Pipes&quot;. Starten Sie 
+den Dienst &quot;SQL Server (<var>Instanzname</var>)&quot;bitte neu, falls das Protokoll noch nicht aktiviert war.</p>
+<h3 id="zugriffsrechte">6. Benutzer-Berechtigungen</h3>
+<p>Stellen Sie sicher, dass der Windows-Benutzer, mit dem Sie eine Verbindung zur Datenbank aufnehmen möchten, über ausreichende Zugriffsberechtigungen verfügt. 
+Siehe hierzu <a target="_blank" title="Microsoft Technet" href="https://technet.microsoft.com/de-de/library/aa337562.aspx">Erstellen eines Anmeldenamens</a>.</p>
+<p>Hinweise und einen Lösungsvorschlag zur Fehlermeldung &quot;Die Anmeldung stammt aus einer nicht vertrauenswürdigen Domäne&quot;
+<a href="https://blog.officemanager.de/2013/03/ms-sql-domaenen-benutzer/">finden Sie im Blog</a>. Dieser Fehler wird in der Regel durch einen 
+Anmeldeversuch von einem Nicht-Domänen-Benutzer verursacht.</p>
+<h3 id="av">7. Sicherheits-Software</h3>
+<p>Eher selten, aber gelegentlich die Ursache: Auch eine Antiviren-Software auf dem Client kann die Verbindung blockieren.</p>
+<h3 id="log">8. Error-Log überprüfen</h3>
+<p>Das Fehler-Log kann Hinweise beinhalten, wenn eine Verbindung abgelehnt wurde. Die Logdatei können Sie im Management Studio über den 
+Knoten &quot;<var>Server</var>\Verwaltung\SQL Server-Protokolle&quot; einsehen oder die Text-Datei ERRORLOG direkt in &quot;C:\Program Files\Microsoft SQL 
+Server\MSSQL<var>Version</var>.MSSQLSERVER\MSSQL\Log\&quot; öffnen.</p>
+<h2>Siehe auch</h2>
+<p><a href="../dms-menue.php?omname=TopicSqlServer-MSSQL#searchresult">Supportrecherche zum MS SQL Server</a><br>
+<a target="_blank" href="https://support.microsoft.com/de-de/kb/328306">
+Microsoft-Support zu möglichen Ursachen für diese Fehlermeldung</a></p>
+</article>
+
+<aside id="infobox">
+<p class="infoboxtitle">SQL-Fehler</p>
+<p>Verbindungsprobleme zum MS SQL-Server beheben.</p>
+<p>Die häufigsten Ursachen sind:<br>
+- <a href="#firewall">Durch Firewall blockiert</a><br>
+- <a href="#dienste">Browser-Dienst nicht gestartet</a><br>
+- <a href="#protokoll">TCP/IP nicht aktiviert</a></p>
+</aside>
+</div>
+
+<footer>
+<nav>
+<div class="sitelinks-col">
+<h3><a title="Softwarelösung für Dokumentenverwaltung und -Archivierung" href="../../dokumentenverwaltung/">DMS-Software</a></h3>
+<ul>
+<li><a href="../../dokumentenverwaltung/beispiele.html">Anwendungsbeispiele</a></li>
+<li><a href="../../dokumentenverwaltung/screenshotsomp/">Screenshots</a></li>
+<li><a href="../../zeichnungsverwaltung/">Zeichnungsverwaltung</a></li>
+<li><a rel="glossary" href="../../glossar/dokumentenmanagement.html">DMS-Fachbegriffe</a></li>
+<li><a href="../../downloads/">Testversion laden</a></li>
+</ul>
+</div>
+<div class="sitelinks-col">
+<h3><a title="Bestellmöglichkeiten für Office Manager und Zubehör" href="../../forms/shop.html">Bestellen</a></h3>
+<ul>
+<li><a href="https://shop.officemanager.de/">Onlineshop</a></li>
+<li><a href="../../downloads/preise.pdf">Preisliste Neukauf</a></li>
+<li><a href="../../downloads/preiseupdate.pdf">Preisliste Upgrade</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+<div class="sitelinks-col">
+<h3><a title="Aktuelles und Social Media" href="../../neuigkeiten.html">Neuigkeiten</a></h3>
+<ul>
+<li><a href="../../neu.html">Office Manager-Updates</a></li>
+<li><a href="../../social-media.html">Social Media</a></li>
+<li><a href="../../rss.php">RSS-Feeds</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+</ul>
+</div>
+<div class="sitelinks-col">
+<h3><a title="Hilfe und Anwender-Unterstützung" href="../">Support</a></h3>
+<ul>
+<li><a href="../dms-menue.php" class="dmsmenuelink">Lösungen finden</a></li>
+<li><a href="https://blog.officemanager.de/">Hotline-Blog</a></li>
+<li><a href="../../scansnap/">Fujitsu ScanSnap</a></li>
+<li><a href="../../handbuch/">Benutzerhandbuch</a></li>
+<li><a href="../../entwickler/">Skriptentwicklung</a></li>
+</ul>
+</div>
+</nav>
+<div id="footer">
+<p>Copyright © <!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%Y" startspan -->2017<!--webbot bot="Timestamp" endspan i-checksum="782" --> Softwarebüro Krekeler
+, Letzte Änderung: 
+<!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%d.%m.%Y" startspan -->03.03.2017<!--webbot bot="Timestamp" endspan i-checksum="12509" -->
+<br><a href="../../impressum/">Impressum</a> | <a href="../../impressum/datenschutz.php">Datenschutz</a> | <a href="mailto:mail@krekeler.de">E-Mail</a>
+</p>
+</div>
+</footer>
+</body>
+</html>

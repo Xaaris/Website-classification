@@ -1,0 +1,2094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Hamburger Wochenblatt</title>
+<link rel="shortcut icon" href="/_em_oas/_locals/hwb/images/favicon.ico" type="image/ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+<meta http-equiv="Reply-to" content="" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="copyright" content="Evolver Media" />
+<meta name="creation_date" content="Wed, 18 July 2007" />
+<meta name="description" content="HWB Anzeigenportal" />
+<meta name="keywords" content="" />
+<meta name="robots" content="ALL" />
+<link rel="stylesheet" href="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/do_styles.php?em_client=hwb&amp;em_verlag=hwb" type="text/css" />
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/globals/js_global.php?em_session_id=f284845fc1f2cd911ce7bba1f4b6f025&amp;em_session_name=em_sid&amp;em_client=hwb&amp;em_verlag=hwb&em_is_seo_url=0"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery-ui-1.7.1.custom.min.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jqueryScrollable1.0.2.pack.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jqueryMousewheel.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.alerts.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/ui.datepicker.packed.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/ui.datepicker-de.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.roundabout.min.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/flashdetect.js"></script>
+<script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/jquery.inputmask.bundle.min.js"></script><script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/prototype.js"></script><script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/scriptaculous.js"></script><script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/effects.js"></script><script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/controls.js"></script><script type="text/javascript" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/jslibs/em_controls.js"></script></head>
+<body onload="if(typeof em_init == 'function')em_init(); if(typeof resizeIt == 'function')resizeIt();"><!-- header lk v.0.1 -->
+<div class="em_wrapper">
+    <div class="header">
+        <div class="em_logo_links">
+            <a href="http://www.hamburger-wochenblatt.de/">
+                <img src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/logo_hwb.png" width="206" height="42" />
+            </a>
+
+        </div>
+        
+        <div class="em_logo_rechts">
+            <div class="em_mandant_icons">
+                <a href="http://www.bergedorfer-zeitung.de/" target="_blank">
+                    <img src="https://anzeigen-neu.abendblatt.de/_em_oas/_locals/hab/images/mandant-icons/favicon-BGZ.png" width="16" height="16"/>
+                </a>
+                <a href="http://www.morgenpost.de/" target="_blank">
+                    <img src="https://anzeigen-neu.abendblatt.de/_em_oas/_locals/hab/images/mandant-icons/favicon-BM.png" width="16" height="16"/>
+                </a>
+                <a href="http://www.abendblatt.de/" target="_blank">
+                    <img src="https://anzeigen-neu.abendblatt.de/_em_oas/_locals/hab/images/mandant-icons/favicon-ha.png" width="16" height="16"/>
+                </a>
+                <a href="http://www.hamburger-wochenblatt.de/" target="_blank">
+                    <img src="https://anzeigen-neu.abendblatt.de/_em_oas/_locals/hab/images/mandant-icons/favicon-WBV.png" width="16" height="16"/>
+                </a>
+            </div>
+            <ul>
+                <li>
+                    <a target="_self" href="/?em_mask=aufgabe">Anzeige schalten</a>
+                </li>
+                <li>
+                    <a target="_self" href="/?em_mask=service">Anzeigenservice</a>
+                </li>
+                <li class="em_last">
+                    <a target="_blank" href="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/Anzeigenschluss_Wochenblatt_HH.pdf">Schlusszeiten</a>
+                </li>
+            </ul>
+            <div class="clr"><br /></div>
+        </div>
+    </div>
+
+
+<!--
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+
+em_oas version 7.0 - copyrights: � evolver media GmbH & Co. KG 2017
+
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+-->
+
+
+<form name="em_form" id="em_form" action="" method="post" target="_top" onsubmit="return false;">
+<input type="hidden" name="em_session_name"			value="em_sid" />
+<input type="hidden" name="em_sid" value="f284845fc1f2cd911ce7bba1f4b6f025" />
+<input type="hidden" name="em_client" value="hwb" />
+<input type="hidden" name="em_verlag" value="hwb" />
+<input type="hidden" name="em_mask" value="aufgabe" />
+<input type="hidden" name="em_server_addr" value="" />
+<input type="hidden" name="em_server_secure" value="off" />
+<input type="hidden" name="em_aufgabe_step" value="1" />
+<input type="hidden" name="em_action" value="" />
+<div class="em_left">
+             <div class="em_cnt_left">
+                
+
+                <div class="clr"><br /></div>
+
+                <div  class="em_aufgabe_tpl">
+                    <div>
+                        <div>
+                            
+<div id="em_steps">
+        	         <a class="buttonblu" href="javascript: void(0);">
+            	         <span class="normal">
+            	               1. Rubrik
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               2. Ausgabe
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               3. Termin
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               4. Inhalt
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               5. Layout
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               6. Daten
+                         </span>
+                     </a>
+        	         
+        	         <a class="buttongrau_steps" href="javascript: void(0);">
+            	         <span class="normal">
+            	               7. Auftrag
+                         </span>
+                     </a>
+        	         
+
+    <script type="text/javascript">
+    /* <![CDATA[ */
+        jQuery("#em_steps a:last").css("margin-right", "0px");
+    /* ]]> */
+    </script>
+
+</div>
+
+
+                            <div class="clr"><br /></div>
+                        </div>
+                        <div class="em_info_space">
+                           <span class="em_txt_normal">Sehr geehrte Damen und Herren,
+<br>
+<br>
+Hier können Sie Ihre Zeilenanzeigen online rund um die Uhr aufgeben. 
+Zudem erreichen Sie unsere telefonische Anzeigenannahme von montags bis freitags zwischen 8:00 und 18:00 Uhr: Tel. 040/554472770.
+<br><br>
+Mit freundlichen Grüßen
+<br>
+Ihr Team vom Hamburger Wochenblatt</b>
+<br><br>
+</font><br/>
+<font color="#F90A15" size="2" face="Verdana, Arial, Helvetica, sans-serif">
+Bitte beachten Sie geänderte Anzeigenschlüsse in Wochen mit oder vor Feiertagen!<br/
+</font color>
+</font></span>
+                        </div>
+                        <div class="em_txt_head em_txt_head_step">1. Rubrikenauswahl
+				            <div class="clr"><br /></div>
+
+                        </div>
+				        <div class="clr"><br /></div>
+                    </div>
+    <noscript>
+        <div class="em-no-js">In Ihrem Browser ist Javascript deaktiviert. In diesem Fall funktioniert die Anzeigenaufgabe nicht. Die Ausführung von Javascript kann auch durch die Sicherheitseinstellungen diverser Antivirenprogramme beeinflusst werden.</div>
+    </noscript>
+<div id="emModulDealTypeHead" class="categories">
+	<span class="em_txt_normalbold">
+		Möchten Sie eine private oder gewerbliche Anzeige aufgeben?
+	</span>
+</div>
+<div id="emModulDealTypeBody" class="em_art">
+	<div class="em_art_priv">
+		<input type="radio" id="art_privat" name="em_az[art]" value="p" 
+       onclick="emToggleModulCategory();if(typeof em_loaded != 'undefined'
+		&amp;&amp; em_loaded
+		&amp;&amp; em_sel_art != this.value
+		){
+			em_sel_art = this.value;
+
+			if(typeof em_choice_struktur != 'undefined'){
+				em_choice_struktur(0);
+			}
+
+		}" />
+
+		<span class="em_txt_normal"><label for="art_privat">private Anzeige</label></span>
+	</div>
+    <div  class="em_art_gew">
+	  <input type="radio" id="art_gewerblich" name="em_az[art]" value="g" 
+	   onclick="emToggleModulCategory();if(typeof em_loaded != 'undefined'
+		&amp;&amp; em_loaded
+		&amp;&amp; em_sel_art != this.value
+		){
+			em_sel_art = this.value;
+
+			if(typeof em_choice_struktur != 'undefined'){
+				em_choice_struktur(0);
+			}
+
+		}" />
+	   <span class="em_txt_normal"><label for="art_gewerblich">gewerbliche Anzeige</label></span>
+	</div>
+    <div class="clr"><br /></div>
+</div>
+<script type="text/javascript">
+<!--
+
+var	em_sel_art = "";
+
+function em_check_art(_emBolAlert) {
+    if ("undefined" == typeof(_emBolAlert)) {
+        _emBolAlert = true;
+    }
+	var em_form = document.em_form;
+	if (em_form["em_az[art]"]) {
+		for (var x=0; x < em_form["em_az[art]"].length; x++) {
+			if (em_form["em_az[art]"][x]
+			&&  em_form["em_az[art]"][x].checked
+			) {
+                jQuery("#emModulCategoryHead").show();
+                jQuery("#emModulCategoryBody").show();
+				return true;
+			}
+		}
+        if (true == _emBolAlert) {
+            alert("Bitte wählen Sie die Art der Anzeige!");
+        }
+        jQuery("#emModulCategoryHead").hide();
+        jQuery("#emModulCategoryBody").hide();
+		return false;
+	}
+	return true;
+}
+
+function emToggleModulCategory() {
+    if (em_check_art(false)) {
+        jQuery("#emModulCategoryHead").show();
+        jQuery("#emModulCategoryBody").show();
+    } else {
+        jQuery("#emModulCategoryHead").hide();
+        jQuery("#emModulCategoryBody").hide();
+    }
+}
+
+jQuery(document).ready(function(){
+    emToggleModulCategory();
+});
+
+-->
+</script>
+<div id="emModulCategoryHead" class="categories" style="display:none;">
+	<span class="em_txt_normalbold">
+		In welcher Rubrik soll Ihre Anzeige veröffentlicht werden?
+	</span>
+</div>
+<div id="emModulCategoryBody" class="em_rubrik" style="display:none;">
+<!---Rubrikwahl-->
+    <div id="div_level_0" class="em_advert_rubrik_wahl">
+        <div class="em_advert_rubrik_wahl_label">
+            <span class="em_txt_normal">
+                im Markt:&nbsp;
+            </span>
+        </div>
+    	<div class="em_select em_advert_rubrik_wahl_select">
+            <span class="em_txt_normal">
+                <select id="level_0" name="level_0" size="1" class="em_advert_rubrik_wahl_select"
+                    onchange="if(typeof em_loaded != 'undefined' &amp;&amp; em_loaded){em_sel_rub[0] = this.options[this.selectedIndex].value; em_choice_struktur(1,this.options[this.selectedIndex].value);getCampaigns(this.options[this.selectedIndex].value);emGetInfoText(this.options[this.selectedIndex].value);}"
+                    disabled="disabled" class="em_field">
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                </select>
+            </span>
+        </div>
+        <div class="em_clear"><br /></div>
+    </div>
+    <div id="div_level_1" class="em_advert_rubrik_wahl">
+        <div class="em_advert_rubrik_wahl_label">
+            <span class="em_txt_normal">
+                in der Rubrik:&nbsp;
+            </span>
+        </div>
+    	<div class="em_select em_advert_rubrik_wahl_select">
+            <span class="em_txt_normal">
+                <select id="level_1" name="level_1" size="1" class="em_advert_rubrik_wahl_select"
+                    onchange="if(typeof em_loaded != 'undefined' &amp;&amp; em_loaded){em_sel_rub[1] = this.options[this.selectedIndex].value; em_choice_struktur(2,this.options[this.selectedIndex].value);getCampaigns(this.options[this.selectedIndex].value);}"
+                    disabled="disabled" class="em_field">
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                </select>
+            </span>
+        </div>
+        <div class="em_clear"><br /></div>
+    </div>
+    <div id="div_level_2" class="em_advert_rubrik_wahl">
+        <div class="em_advert_rubrik_wahl_label">
+            <span class="em_txt_normal">
+                in der Unterrubrik:&nbsp;
+            </span>
+        </div>
+    	<div class="em_select em_advert_rubrik_wahl_select">
+            <span class="em_txt_normal">
+                <select id="level_2" name="level_2" size="1" class="em_advert_rubrik_wahl_select"
+                    onchange="if(typeof em_loaded != 'undefined' &amp;&amp; em_loaded){em_sel_rub[2] = this.options[this.selectedIndex].value; em_choice_struktur(3,this.options[this.selectedIndex].value);getCampaigns(this.options[this.selectedIndex].value);}"
+                    disabled="disabled" class="em_field">
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                    <option value="_">___________________________</option>
+                </select>
+            </span>
+        </div>
+        <div class="em_clear"><br /></div>
+    </div>
+<!---end Rubrikwahl-->
+    <div id="emCategoryInfo" class="em_loading" style="display:none;"></div>
+    <div class="clr"><br /></div>
+</div>
+<input type="hidden" name="em_az[rubrik]" id="em_az_rubrik" value="" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var em_sel_rub = new Array();
+
+var em_rub_s = new Array();
+em_rub_s[0] = new Array(1,23,44,52,60,145,195,206,263,393);
+em_rub_s[1] = new Array(2,12);
+em_rub_s[2] = new Array(3,4,11);
+em_rub_s[12] = new Array(13,14);
+em_rub_s[23] = new Array();
+em_rub_s[23][em_rub_s[23].length] = 24; 
+em_rub_s[24] = new Array(25,28,29);
+em_rub_s[44] = new Array(45,49);
+em_rub_s[45] = new Array();
+em_rub_s[45][em_rub_s[45].length] = 46; 
+em_rub_s[49] = new Array(50,51);
+em_rub_s[52] = new Array(54,55,58,59);
+em_rub_s[60] = new Array(61,74);
+em_rub_s[61] = new Array(62,63,64,67,68,69,70,71,72);
+em_rub_s[74] = new Array(76,79,82,85,90,94,95,103,113,117,118,122,137);
+em_rub_s[145] = new Array(147,148,149,150,151,152,154,156,157,158,159,161,162,163,165,166,169,472);
+em_rub_s[195] = new Array(196,201,205,202,203);
+em_rub_s[201] = new Array();
+em_rub_s[201][em_rub_s[201].length] = 204; 
+em_rub_s[206] = new Array(207,222);
+em_rub_s[207] = new Array(208,221);
+em_rub_s[222] = new Array(227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249);
+em_rub_s[263] = new Array(265,383,346,349,314);
+em_rub_s[265] = new Array(277,278,280,363);
+em_rub_s[314] = new Array(315,470,364);
+em_rub_s[346] = new Array(347,348);
+em_rub_s[349] = new Array(350,353,354);
+em_rub_s[393] = new Array(394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469);
+
+var em_rub_w = new Array();
+em_rub_w[1] = new Array("Stellenanzeigen (Job)",0,0);
+em_rub_w[23] = new Array("Kultur",1,0);
+em_rub_w[44] = new Array("Familien",1,0);
+em_rub_w[52] = new Array("Einzelhandel",1,0);
+em_rub_w[60] = new Array("Kfz (Automarkt)",0,0);
+em_rub_w[145] = new Array("Verschiedenes",0,0);
+em_rub_w[195] = new Array("Bekanntschaften",0,0);
+em_rub_w[206] = new Array("Reise",0,0);
+em_rub_w[263] = new Array("Immobilien",0,0);
+em_rub_w[393] = new Array("Branchenspiegel Wochenblätter",1,0);
+em_rub_w[2] = new Array("Stellenangebote",0,1);
+em_rub_w[12] = new Array("Stellengesuche",0,1);
+em_rub_w[3] = new Array("Stellenangebote Fließtext",2,2);
+em_rub_w[4] = new Array("Stellenangebote",1,2);
+em_rub_w[11] = new Array("Kinderbetreuung",0,2);
+em_rub_w[13] = new Array("Stellengesuche Fließtext",2,12);
+em_rub_w[14] = new Array("Stellengesuche",1,12);
+em_rub_w[24] = new Array("Kultur-Angebot",1,23);
+em_rub_w[25] = new Array("Veranstaltungen",1,24);
+em_rub_w[28] = new Array("Kino",1,24);
+em_rub_w[29] = new Array("Gastronomie",1,24);
+em_rub_w[45] = new Array("Trauer",1,44);
+em_rub_w[49] = new Array("Freude",1,44);
+em_rub_w[46] = new Array("private Trauer",1,45);
+em_rub_w[50] = new Array("Familienanzeigen",1,49);
+em_rub_w[51] = new Array("Grüße/Glückwünsche",1,49);
+em_rub_w[54] = new Array("Beerdigungsinstitute",1,52);
+em_rub_w[55] = new Array("Bauen und Wohnen",0,52);
+em_rub_w[58] = new Array("Geschäftsanzeigen (reg.)",1,52);
+em_rub_w[59] = new Array("Kultur, caritativ, gemeinnützig",1,52);
+em_rub_w[61] = new Array("Automarkt",0,60);
+em_rub_w[74] = new Array("PKW Verkauf (Angebot)",0,60);
+em_rub_w[62] = new Array("Automarkt allgemein",0,61);
+em_rub_w[63] = new Array("Ankäufe allgemein",0,61);
+em_rub_w[64] = new Array("Wohnmobile und Wohnwagen",0,61);
+em_rub_w[67] = new Array("Motorräder und Motorroller",0,61);
+em_rub_w[68] = new Array("Leasing, Vermietungen, Mietgesuche, Tausch",0,61);
+em_rub_w[69] = new Array("Verschiedenes",0,61);
+em_rub_w[70] = new Array("Abschleppdienst",0,61);
+em_rub_w[71] = new Array("Kraftfahrzeuge Verkauf allgemein",0,61);
+em_rub_w[72] = new Array("Kleinanzeigen Autoverkauf",0,61);
+em_rub_w[76] = new Array("Kfz-Verk. allg.",0,74);
+em_rub_w[79] = new Array("Audi",0,74);
+em_rub_w[82] = new Array("BMW",0,74);
+em_rub_w[85] = new Array("Cabrio",0,74);
+em_rub_w[90] = new Array("Daewoo",0,74);
+em_rub_w[94] = new Array("Fiat",0,74);
+em_rub_w[95] = new Array("Ford",0,74);
+em_rub_w[103] = new Array("Kia",0,74);
+em_rub_w[113] = new Array("Mercedes",0,74);
+em_rub_w[117] = new Array("Oldtimer",0,74);
+em_rub_w[118] = new Array("Opel",0,74);
+em_rub_w[122] = new Array("Renault",0,74);
+em_rub_w[137] = new Array("Volkswagen",0,74);
+em_rub_w[147] = new Array("Ankauf",0,145);
+em_rub_w[148] = new Array("Verkauf",0,145);
+em_rub_w[149] = new Array("Bauen und Wohnen",0,145);
+em_rub_w[150] = new Array("Tiermarkt",0,145);
+em_rub_w[151] = new Array("Verschiedenes (Diverses)",0,145);
+em_rub_w[152] = new Array("Geschäftliche Empfehlung",3,145);
+em_rub_w[154] = new Array("Gesundheit",0,145);
+em_rub_w[156] = new Array("Versicherungen (Insurance)",0,145);
+em_rub_w[157] = new Array("Die gute Tat",1,145);
+em_rub_w[158] = new Array("Verloren und Gefunden",0,145);
+em_rub_w[159] = new Array("Veranstaltungen",3,145);
+em_rub_w[161] = new Array("Seniorenbetreuung",0,145);
+em_rub_w[162] = new Array("Rechtsanwälte",3,145);
+em_rub_w[163] = new Array("Sport",0,145);
+em_rub_w[165] = new Array("Unterricht (Bildung)",3,145);
+em_rub_w[166] = new Array("Kleinanzeigen Nachbarschaft",1,145);
+em_rub_w[169] = new Array("Beteiligungen",3,145);
+em_rub_w[472] = new Array("Geldmarkt",2,145);
+em_rub_w[196] = new Array("Herzklopfen",2,195);
+em_rub_w[201] = new Array("Nette-Leute-Treff/Kontakte",1,195);
+em_rub_w[205] = new Array("Von Herz zu Herz",4,195);
+em_rub_w[202] = new Array("Bekanntschaften",0,195);
+em_rub_w[203] = new Array("Kontakte",0,195);
+em_rub_w[204] = new Array("Telefonservice",1,201);
+em_rub_w[207] = new Array("Fremdenverkehr (Angebot)",0,206);
+em_rub_w[222] = new Array("Europa und Welt",0,206);
+em_rub_w[208] = new Array("Reise und Freizeit",0,207);
+em_rub_w[221] = new Array("Deutschland",0,207);
+em_rub_w[227] = new Array("Afrika",0,222);
+em_rub_w[228] = new Array("Asien",0,222);
+em_rub_w[229] = new Array("Camping",0,222);
+em_rub_w[230] = new Array("Dänemark",0,222);
+em_rub_w[231] = new Array("Frankreich",0,222);
+em_rub_w[232] = new Array("Griechenland",0,222);
+em_rub_w[233] = new Array("Italien",0,222);
+em_rub_w[234] = new Array("Karibik",0,222);
+em_rub_w[235] = new Array("Kroatien",0,222);
+em_rub_w[236] = new Array("Last Minute",0,222);
+em_rub_w[237] = new Array("Norwegen",0,222);
+em_rub_w[238] = new Array("Österreich",0,222);
+em_rub_w[239] = new Array("Polen",0,222);
+em_rub_w[240] = new Array("Portugal",0,222);
+em_rub_w[241] = new Array("Russland",0,222);
+em_rub_w[242] = new Array("Schweden",0,222);
+em_rub_w[243] = new Array("Schweiz",0,222);
+em_rub_w[244] = new Array("Sonstiges",0,222);
+em_rub_w[245] = new Array("Spanien",0,222);
+em_rub_w[246] = new Array("Türkei",0,222);
+em_rub_w[247] = new Array("Ungarn",0,222);
+em_rub_w[248] = new Array("USA",0,222);
+em_rub_w[249] = new Array("Wassersport",0,222);
+em_rub_w[265] = new Array("Hamburg und Umland Angebot",0,263);
+em_rub_w[383] = new Array("Weiteres Bundesgebiet, Ausland",0,263);
+em_rub_w[346] = new Array("Kaufgesuche",0,263);
+em_rub_w[349] = new Array("Mietgesuche",0,263);
+em_rub_w[314] = new Array("Vermietungen",0,263);
+em_rub_w[277] = new Array("Immobilien Verschiedenes",0,265);
+em_rub_w[278] = new Array("Angebote Freizeitobjekte und Kleingärten",0,265);
+em_rub_w[280] = new Array("Angebote Grundstücke/Bauplätze",0,265);
+em_rub_w[363] = new Array("Verkäufe Gewerbeflächen",3,265);
+em_rub_w[315] = new Array("Vermietungen Wohnungen",0,314);
+em_rub_w[470] = new Array("Angebote Garagen/Stellpl",2,314);
+em_rub_w[364] = new Array("Gewerbeflächen, Vermietungen",3,314);
+em_rub_w[347] = new Array("Immobilien",0,346);
+em_rub_w[348] = new Array("Grundstücke",0,346);
+em_rub_w[350] = new Array("Mietgesuche Häuser",0,349);
+em_rub_w[353] = new Array("Mietgesuche Wohnungen",0,349);
+em_rub_w[354] = new Array("Wohnungstausch",0,349);
+em_rub_w[394] = new Array("Abdichtungen",1,393);
+em_rub_w[395] = new Array("Abfallbeseitigung",1,393);
+em_rub_w[396] = new Array("Abfluss",1,393);
+em_rub_w[397] = new Array("Abriss/Abfuhr",1,393);
+em_rub_w[398] = new Array("Alles aus einer Hand",1,393);
+em_rub_w[399] = new Array("Altbausanierung",1,393);
+em_rub_w[400] = new Array("Ausbildung / Unterricht",1,393);
+em_rub_w[401] = new Array("Autolackiererei",1,393);
+em_rub_w[402] = new Array("Automarkt",1,393);
+em_rub_w[403] = new Array("Autoreparaturen",1,393);
+em_rub_w[404] = new Array("Bäder",1,393);
+em_rub_w[405] = new Array("Bauausführungen/Bautenschutz",1,393);
+em_rub_w[406] = new Array("Baumfällung",1,393);
+em_rub_w[407] = new Array("Bauschlosser",1,393);
+em_rub_w[408] = new Array("Bekleidung",1,393);
+em_rub_w[409] = new Array("Beschilderung",1,393);
+em_rub_w[410] = new Array("Bestattungen",1,393);
+em_rub_w[411] = new Array("Betten",1,393);
+em_rub_w[412] = new Array("Bodenbeläge",1,393);
+em_rub_w[413] = new Array("Büroservice",1,393);
+em_rub_w[414] = new Array("Computer",1,393);
+em_rub_w[415] = new Array("Containerdienst",1,393);
+em_rub_w[416] = new Array("Dacharbeiten",1,393);
+em_rub_w[417] = new Array("Dienstleistungen",1,393);
+em_rub_w[418] = new Array("Einbruchschutz",1,393);
+em_rub_w[419] = new Array("Elektroarbeiten",1,393);
+em_rub_w[420] = new Array("Elektroservice",1,393);
+em_rub_w[421] = new Array("Energieberatung",1,393);
+em_rub_w[422] = new Array("Entsorgung",1,393);
+em_rub_w[423] = new Array("Fenster",1,393);
+em_rub_w[424] = new Array("Fernsehdienst",1,393);
+em_rub_w[425] = new Array("Fliesenarbeiten",1,393);
+em_rub_w[426] = new Array("Fußböden",1,393);
+em_rub_w[427] = new Array("Fußpflege",1,393);
+em_rub_w[428] = new Array("Garagentore",1,393);
+em_rub_w[429] = new Array("Gardinen",1,393);
+em_rub_w[430] = new Array("Gartenarbeiten",1,393);
+em_rub_w[431] = new Array("Garten- und Landschaftsbau",1,393);
+em_rub_w[432] = new Array("Gebäudereinigung",1,393);
+em_rub_w[433] = new Array("Gesundheitspflege",1,393);
+em_rub_w[434] = new Array("Glasereien",1,393);
+em_rub_w[435] = new Array("Hausgeräte Kundendienst",1,393);
+em_rub_w[436] = new Array("Hausmeisterservice",1,393);
+em_rub_w[437] = new Array("Haustechnik",1,393);
+em_rub_w[438] = new Array("Heizöl",1,393);
+em_rub_w[439] = new Array("Heizung",1,393);
+em_rub_w[440] = new Array("Inneneinrichtung",1,393);
+em_rub_w[441] = new Array("Klempnerarbeiten",1,393);
+em_rub_w[442] = new Array("Küchen",1,393);
+em_rub_w[443] = new Array("Malerarbeiten",1,393);
+em_rub_w[444] = new Array("Markisen",1,393);
+em_rub_w[445] = new Array("Maurer & Fliesenarbeiten",1,393);
+em_rub_w[446] = new Array("Möbel",1,393);
+em_rub_w[447] = new Array("Montage & Metallbau",1,393);
+em_rub_w[448] = new Array("Orthopädie-Technik",1,393);
+em_rub_w[449] = new Array("Parkett",1,393);
+em_rub_w[450] = new Array("Polsterarbeiten",1,393);
+em_rub_w[451] = new Array("Raumausstatter",1,393);
+em_rub_w[452] = new Array("Reifenservice",1,393);
+em_rub_w[453] = new Array("Reinigungsservice",1,393);
+em_rub_w[454] = new Array("Rohr- u. Kanalreinigung",1,393);
+em_rub_w[455] = new Array("Rolladen/Markisen",1,393);
+em_rub_w[456] = new Array("Sanitärinstallation",1,393);
+em_rub_w[457] = new Array("Schlosserarbeiten",1,393);
+em_rub_w[458] = new Array("Schlüsseldienst",1,393);
+em_rub_w[459] = new Array("Schornsteinsanierung",1,393);
+em_rub_w[460] = new Array("Schuhmacher",1,393);
+em_rub_w[461] = new Array("Sonstiges",1,393);
+em_rub_w[462] = new Array("Stempeldienst",1,393);
+em_rub_w[463] = new Array("Telefonanlagen",1,393);
+em_rub_w[464] = new Array("Tischler/Zimmerer",1,393);
+em_rub_w[465] = new Array("Umzüge/Transporte",1,393);
+em_rub_w[466] = new Array("Wärmedämmung",1,393);
+em_rub_w[467] = new Array("Winterdienst",1,393);
+em_rub_w[468] = new Array("Zeitarbeit",1,393);
+em_rub_w[469] = new Array("Zimmerei",1,393);
+
+var em_rub_w_index=new Array();
+em_rub_w_index[0]=new Array("1","1","1","1","1","1","0","0","0","0","1","1","0","0","0","0");
+em_rub_w_index[1]=new Array("0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0");
+em_rub_w_index[2]=new Array("1","1","1","1","0","0","0","0","0","0","1","1","0","0","0","0");
+em_rub_w_index[3]=new Array("0","1","0","1","0","1","0","0","0","0","0","1","0","0","0","0");
+em_rub_w_index[4]=new Array("0","1","0","1","0","0","0","0","0","0","0","1","0","0","0","0");
+
+
+var em_rub_i = new Array();
+em_rub_i["std"] = new Array("https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_kleinanzeige.jpg","https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_upload.png","https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_kleinanzeigefoto.jpg","https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_gestaltet.jpg","https://anzeigen.hamburger-wochenblatt.de/no.gif","https://anzeigen.hamburger-wochenblatt.de/no.gif","https://anzeigen.hamburger-wochenblatt.de/no.gif");
+em_rub_i[2] = new Array("20150303_105648_578.jpg","","","","20150303_110153_440.jpg","","");
+em_rub_i[12] = new Array("20150303_105711_569.jpg","","","","20150303_110124_425.jpg","","");
+em_rub_i[24] = new Array("20150303_104448_362.jpg","","","","","","");
+em_rub_i[52] = new Array("20150303_110458_805.jpg","","","","20150303_110508_255.jpg","","");
+em_rub_i[61] = new Array("20150303_112026_930.jpg","","","","20150303_112035_784.jpg","","");
+em_rub_i[74] = new Array("20150303_112059_218.jpg","","","","20150303_112109_451.jpg","","");
+em_rub_i[145] = new Array("20150303_112333_612.jpg","","","","20150303_112344_191.jpg","","");
+em_rub_i[195] = new Array("20150303_113402_722.jpg","","","","20150303_113419_546.jpg","","");
+em_rub_i[201] = new Array("20150303_113450_484.jpg","","","","20150303_113500_524.jpg","","");
+em_rub_i[207] = new Array("20150303_113541_525.jpg","","","","20150303_113603_114.jpg","","");
+em_rub_i[265] = new Array("20150303_113633_743.jpg","","","","20150303_113643_888.jpg","","");
+em_rub_i[314] = new Array("20150303_113840_892.jpg","","","","20150303_113849_839.jpg","","");
+em_rub_i[346] = new Array("20150303_113718_349.jpg","","","","20150303_113742_127.jpg","","");
+em_rub_i[349] = new Array("20150303_113807_886.jpg","","","","20150303_113817_178.jpg","","");
+em_rub_i[393] = new Array("20150303_113928_802.jpg","","","","","","");
+
+var emIntLastValidLevel = 0;
+function em_choice_struktur(level, wert) {
+	var em_form = document.em_form;
+	var em_level = em_form["level_"+level];
+
+	if(wert > 0){
+        emIntLastValidLevel = wert;
+	}
+
+	if(!wert){wert=0;}
+    if(typeof em_level == "object") {
+        var w_art = 0;
+        var w_sel = -1;
+        if(em_form["em_az[art]"]){
+            if(em_form["em_az[art]"][0] && em_form["em_az[art]"][0].checked){w_art=0;}
+            if(em_form["em_az[art]"][1] && em_form["em_az[art]"][1].checked){w_art=1;}
+        }
+        for(x=em_level.length-1;x>=0;x--){ em_level.options[x] = null; }
+        x=0;
+
+        em_level.options[x] = new Option("bitte wählen",'');
+        em_level.selectedIndex = 0;
+        x++;
+
+        var intBefore = 0;
+        if (level > 0) {
+            intBefore = jQuery('select[name=level_' + (level - 1) + '] option:selected').val();
+        }
+
+        if (em_rub_s[wert]
+         && (intBefore > 0
+          || level == 0
+            )
+        ) {
+            for(i=0;i<em_rub_s[wert].length;i++){
+                if(parseInt(em_rub_w_index[em_rub_w[em_rub_s[wert][i]][1]][w_art])>0){
+                    em_level.options[x] = new Option(em_rub_w[em_rub_s[wert][i]][0],em_rub_s[wert][i]);
+
+                    // if(em_sel_rub && em_sel_rub[level] && em_rub_s[wert][i] == em_sel_rub[level]){
+                        // 
+                        // w_sel = em_rub_s[wert][i];
+                        // if(w_sel<0){em_sel_rub[level] = em_rub_s[wert][i];}
+                    // }
+
+                    if(em_sel_rub && em_sel_rub[level] && em_rub_s[wert][i] == em_sel_rub[level]){
+                        em_level.options[x].selected = true;
+                        w_sel = em_rub_s[wert][i];
+                        if(w_sel<0){em_sel_rub[level] = em_rub_s[wert][i];}
+                    }
+                    x++;
+                }
+            }
+        }
+
+        if (x==1) {
+            em_level.options[x] = new Option('keine Auswahl','');
+            em_level.selectedIndex = 1;
+            jQuery("#div_level_"+level).hide();
+        }
+        if (typeof(em_level.disabled)!="undefined") {
+          if (x==1) {
+            em_level.disabled=true;
+            jQuery("#div_level_"+level).hide();
+          } else {
+            em_level.disabled=false;
+            jQuery("#div_level_"+level).show();
+          }
+        }
+
+        
+
+        em_choice_struktur(level+1,w_sel);
+  } else {
+        em_set_rubrik();
+       	if(typeof em_enable_typ != 'undefined'){
+      		em_enable_typ(em_form["em_az[rubrik]"].value);
+        }
+        if (typeof(em_change_gallery) != "undefined") {
+            var emSelRubrik = "";
+            if (jQuery('select[name=level_0] option:selected').val()) {
+                emSelRubrik = jQuery('select[name=level_0] option:selected').val();
+            }
+            if (jQuery('select[name=level_1] option:selected').val()) {
+                emSelRubrik += "|" + jQuery('select[name=level_1] option:selected').val();
+            }
+            if (jQuery('select[name=level_2] option:selected').val()) {
+                emSelRubrik += "|" + jQuery('select[name=level_2] option:selected').val();
+            }
+            if (jQuery('select[name=level_3] option:selected').val()) {
+                emSelRubrik += "|" + jQuery('select[name=level_3] option:selected').val();
+            }
+            em_change_gallery(emSelRubrik,emIntLastValidLevel,0,jQuery('input[name=em_az[art]]:checked').val());
+        }
+        if (typeof(em_load_expose) != "undefined") {
+            em_load_expose();
+        }
+        if (typeof(em_check_is_checked) != "undefined") {
+            em_check_is_checked();
+        }
+  }
+  em_set_bsp_img(level,wert);
+}
+
+function em_set_rubrik(){
+	var em_form = document.em_form;
+	if(em_form["level_0"]
+	&& !em_form["level_0"].disabled
+	&& em_form["level_0"].selectedIndex >= 0
+	){
+		em_form["em_az[rubrik]"].value = em_form["level_0"].options[em_form["level_0"].selectedIndex].value;
+	}
+	if(em_form["level_1"]
+	&& !em_form["level_1"].disabled
+	&& em_form["level_1"].selectedIndex >= 0
+	){
+		em_form["em_az[rubrik]"].value = em_form["level_1"].options[em_form["level_1"].selectedIndex].value;
+	}
+	if(em_form["level_2"]
+	&& !em_form["level_2"].disabled
+	&& em_form["level_2"].selectedIndex >= 0
+	){
+		em_form["em_az[rubrik]"].value = em_form["level_2"].options[em_form["level_2"].selectedIndex].value;
+	}
+    if ("" != em_form["em_az[rubrik]"].value) {
+        emGetInfoText(em_form["em_az[rubrik]"].value);
+    }
+}
+
+function emGetInfoText(_id) {
+    jQuery("#emCategoryInfo").html("").removeClass("em_success").addClass("em_loading").show();
+    jQuery("#emAdvertCategoryBanner").html("").removeClass("em_success").addClass("em_loading").show();
+    jQuery.ajax({
+        type:     "POST",
+        url:      "/_em_oas/ajax/categoryInfo.php",
+        dataType: "json",
+        data:     {
+            "em_session_name"       : "em_sid",
+            "em_sid": "f284845fc1f2cd911ce7bba1f4b6f025",
+            "em_client"             : "hwb",
+            "em_verlag"             : "hwb",
+            "emCategoryId"          : _id
+        },
+        success: function(objData, strStatus, jqXHR) {
+            if (objData.error != "") {
+                alert(objData.error);
+                jQuery("#emCategoryInfo").hide();
+                jQuery("#emCategoryInfo").html("");
+            } else if ("" != objData.data) {
+                if ("" != objData.data.infoText) {
+                    jQuery("#emCategoryInfo").removeClass("em_loading").addClass("em_success");
+                    jQuery("#emCategoryInfo").html(objData.data.infoText);
+                } else {
+                    jQuery("#emCategoryInfo").hide();
+                    jQuery("#emCategoryInfo").html("");
+                }
+                
+                if ("" != objData.data.bannerImg) {
+                    jQuery("#emAdvertCategoryBanner").removeClass("em_loading");
+                    jQuery("#emAdvertCategoryBanner").html(objData.data.bannerImg);
+                } else {
+                    jQuery("#emAdvertCategoryBanner").hide();
+                    jQuery("#emAdvertCategoryBanner").html("");
+                }
+            } else {
+                jQuery("#emCategoryInfo").hide();
+                jQuery("#emCategoryInfo").html("");
+                jQuery("#emAdvertCategoryBanner").hide();
+                jQuery("#emAdvertCategoryBanner").html("");
+            }
+        }
+    });
+}
+
+function getCampaigns(_categoryId) {
+    if (jQuery("#emCampaignContainer").html() == "") {
+        jQuery("#emCampaignContainer").html("").addClass("em_loading").show();
+    }
+    jQuery.ajax({
+        type:     "POST",
+        url:      "/_em_oas/ajax/oasCampaign.php",
+        dataType: "html",
+        data:     {
+            "em_session_name"       : "em_sid",
+            "em_sid": "f284845fc1f2cd911ce7bba1f4b6f025",
+            "em_client"             : "hwb",
+            "em_verlag"             : "hwb",
+            "emCategory"            : _categoryId,
+            "emStep"                : 1,
+            "emCallOverOas"         : 1
+        },
+        success: function(strData, strStatus, jqXHR) {
+            if (strData != "") {
+                jQuery("#emCampaignContainer").removeClass("em_loading").html(strData).show();
+            } else {
+                jQuery("#emCampaignContainer").html("").hide();
+            }
+        }
+    });
+}
+
+function em_set_bsp_img(level,w_sel) {
+  if ( w_sel > 0 && (em_rub_i[w_sel] || level<=1)) {
+
+    var em_arr_img_bsp = new Array("em_img_bsp_fliess","em_img_bsp_upload","em_img_bsp_foto","em_img_bsp_adfrend","em_img_bsp_cicero","em_img_bsp_tabelle","em_img_bsp_expose");
+    for(var i=0;i<em_arr_img_bsp.length;i++){
+      var em_img_typ = 0;
+
+      if(document.all && document.all[em_arr_img_bsp[i]]){
+         em_img_typ = document.all[em_arr_img_bsp[i]];
+      }
+      if(document.getElementById && document.getElementById(em_arr_img_bsp[i])){
+         em_img_typ = document.getElementById(em_arr_img_bsp[i]);
+      }
+		if(em_img_typ){
+			var emStrImgSelSrc = "";
+			if(em_rub_i[w_sel] && em_rub_i[w_sel][i]){
+				emStrImgSelSrc = em_rub_i[w_sel][i];
+			} else {
+				// hochhangeln
+				var emIntBelong = em_rub_w[w_sel][2];
+				for (var tLevel=level-1;tLevel>=1;tLevel--) {
+					if(em_rub_i[emIntBelong] && em_rub_i[emIntBelong][i]){
+						emStrImgSelSrc = em_rub_i[emIntBelong][i];
+						break;
+					} else {
+						if (em_rub_w[emIntBelong]) {
+							emIntBelong = em_rub_w[emIntBelong][2];
+						}
+					}
+				}
+			}
+
+			if(emStrImgSelSrc){
+				 em_img_typ.src = "https://anzeigen.hamburger-wochenblatt.de/_em_daten/logos/" + emStrImgSelSrc;
+			} else {
+				// Standardbild setzen
+				for (var tLevel=level-1;tLevel>=1;tLevel--) {
+					if (em_rub_i["std"] && em_rub_i["std"][i]){
+						em_img_typ.src = em_rub_i["std"][i];
+					}
+					if(document.em_form["level_"+tLevel] && !document.em_form["level_"+tLevel].disabled && document.em_form["level_"+tLevel].selectedIndex >= 0){
+						var tW_Sel = document.em_form["level_"+tLevel].options[document.em_form["level_"+tLevel].selectedIndex].value;
+						if(em_rub_i[tW_Sel] && em_rub_i[tW_Sel][i]){
+							 em_img_typ.src = "https://anzeigen.hamburger-wochenblatt.de/_em_daten/logos/" + em_rub_i[tW_Sel][i];
+							break;
+						}
+					}
+				} // for
+			}
+		}
+    }
+  }
+}
+
+function emShowIssue(_wert) {
+    jQuery(document).ready(function(){
+        jQuery("#emIssuesPreview").load("https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/doLoadIssuePreview.php" + "?rubrik=" + _wert + "&art=" + jQuery("input[name='em_az[art]']:checked").val() + "&typ=" + jQuery("input[name='em_az[typ]']:checked").val() + "&emMusterID=");
+        //for issue preview
+        em_set("em_az[rubrik]",_wert);
+        //reset when other category is choosen
+        em_set("em_az[mustertyp_id]","");
+    });
+}
+
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+function em_check_rubrik(){
+	var em_form = document.em_form;
+	if(parseInt(em_form["em_az[rubrik]"].value)
+	&& !em_form["em_az[rubrik]"].value.match(/_dis/)
+	){
+		 return true;
+	}
+	alert("Bitte wählen Sie eine Rubrik!");
+	return false;
+}
+/* ]]> */
+</script>
+        <div id="emModulTypeHead" class="categories">
+            <span class="em_txt_normalbold">
+                Welche Anzeigenart möchten Sie veröffentlichen?
+            </span>
+        </div>
+<!-- Auswahl Anzeigentypen -->
+    <div class="em_anzeigentyp">
+                        <div class="em_typ_normal" id="typ_bsp_fliess" style="">
+
+                        <div id="typ_bg_fliess_4" class="buttonaktiv_right_i" >
+                            <div class="overlay" onclick="emOverlayOpen('overlay_fliess',400,300,'Info');"><br /></div></div>
+
+                <div id="typ_bg_fliess_2" class="buttonaktiv_middle">
+                                    <input type="radio" id="typ_fliess"
+                                     name="em_az[typ]"  value="fliess" checked="checked"
+                                                onclick="
+                                                    if(typeof em_loaded != 'undefined'
+                                                    &amp;&amp; em_loaded
+                                                    &amp;&amp; em_sel_typ != this.value
+                                                    ){
+                                                        em_sel_typ = this.value;
+                                                        em_set_typ(em_sel_typ,false);
+                                                        emChangeIssuePreview();
+                                                       }
+                                                " />
+                        <span id="typ_span_fliess" class="em_txt_headbold">
+                            <label for="typ_fliess" >Fließsatz-Auftrag
+                            </label>
+                        </span>
+                </div><br />
+                <img src="https://anzeigen.hamburger-wochenblatt.de/no.gif" width="150" height="1" alt="" /><br /><img id="em_img_bsp_fliess" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_kleinanzeige.jpg" vspace="5" alt=""
+            style="cursor:pointer;" onClick="em_set_typ('fliess',true); emChangeIssuePreview();
+            this.blur();if(typeof em_loaded != 'undefined' && em_loaded ){ if(!(em_check_art() && em_check_rubrik() && em_check_typ())){ return false;} }else{ return false; }"
+                        /><br /></div>
+                        <div class="em_typ_normal" id="typ_bsp_foto" style="margin-left:0px;">
+
+                        <div id="typ_bg_foto_4" class="buttoninaktiv_right_i" >
+                            <div class="overlay" onclick="emOverlayOpen('overlay_foto',400,300,'Info');"><br /></div></div>
+
+                <div id="typ_bg_foto_2" class="buttoninaktiv_middle">
+                                    <input type="radio" id="typ_foto"
+                                     name="em_az[typ]"  value="foto"
+                                                onclick="
+                                                    if(typeof em_loaded != 'undefined'
+                                                    &amp;&amp; em_loaded
+                                                    &amp;&amp; em_sel_typ != this.value
+                                                    ){
+                                                        em_sel_typ = this.value;
+                                                        em_set_typ(em_sel_typ,false);
+                                                        emChangeIssuePreview();
+                                                       }
+                                                " />
+                        <span id="typ_span_foto" class="em_txt_headbold">
+                            <label for="typ_foto" >Fotoanzeige
+                            </label>
+                        </span>
+                </div><br />
+                <img src="https://anzeigen.hamburger-wochenblatt.de/no.gif" width="150" height="1" alt="" /><br /><img id="em_img_bsp_foto" src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/muster/bsp_kleinanzeigefoto.jpg" vspace="5" alt=""
+            style="cursor:pointer;" onClick="em_set_typ('foto',true); emChangeIssuePreview();
+            this.blur();if(typeof em_loaded != 'undefined' && em_loaded ){ if(!(em_check_art() && em_check_rubrik() && em_check_typ())){ return false;} }else{ return false; }"
+                        /><br /></div>
+                        <div class="em_typ_normal" id="typ_bsp_cicero" style="margin-left:0px;">
+
+                        <div id="typ_bg_cicero_4" class="buttoninaktiv_right" ><br /></div>
+
+                <div id="typ_bg_cicero_2" class="buttoninaktiv_middle">
+                                    <input type="radio" id="typ_cicero"
+                                     name="em_az[typ]"  value="cicero"
+                                                onclick="
+                                                    if(typeof em_loaded != 'undefined'
+                                                    &amp;&amp; em_loaded
+                                                    &amp;&amp; em_sel_typ != this.value
+                                                    ){
+                                                        em_sel_typ = this.value;
+                                                        em_set_typ(em_sel_typ,false);
+                                                        emChangeIssuePreview();
+                                                       }
+                                                " />
+                        <span id="typ_span_cicero" class="em_txt_headbold">
+                            <label for="typ_cicero" >Cicero-Auftrag
+                            </label>
+                        </span>
+                </div><br />
+                <img src="https://anzeigen.hamburger-wochenblatt.de/no.gif" width="150" height="1" alt="" /><br /><img id="em_img_bsp_cicero" src="https://anzeigen.hamburger-wochenblatt.de/no.gif" vspace="5" alt=""
+            style="cursor:pointer;" onClick="em_set_typ('cicero',true); emChangeIssuePreview();
+            this.blur();if(typeof em_loaded != 'undefined' && em_loaded ){ if(!(em_check_art() && em_check_rubrik() && em_check_typ())){ return false;} }else{ return false; }"
+                        /><br /></div>
+                        <div class="em_typ_normal" id="typ_bsp_tabelle" style="margin-left:0px;">
+
+                        <div id="typ_bg_tabelle_4" class="buttoninaktiv_right" ><br /></div>
+
+                <div id="typ_bg_tabelle_2" class="buttoninaktiv_middle">
+                                    <input type="radio" id="typ_tabelle"
+                                     name="em_az[typ]"  value="tabelle"
+                                                onclick="
+                                                    if(typeof em_loaded != 'undefined'
+                                                    &amp;&amp; em_loaded
+                                                    &amp;&amp; em_sel_typ != this.value
+                                                    ){
+                                                        em_sel_typ = this.value;
+                                                        em_set_typ(em_sel_typ,false);
+                                                        emChangeIssuePreview();
+                                                       }
+                                                " />
+                        <span id="typ_span_tabelle" class="em_txt_headbold">
+                            <label for="typ_tabelle" >Tabellen-Auftrag
+                            </label>
+                        </span>
+                </div><br />
+                <img src="https://anzeigen.hamburger-wochenblatt.de/no.gif" width="150" height="1" alt="" /><br /><img id="em_img_bsp_tabelle" src="https://anzeigen.hamburger-wochenblatt.de/no.gif" vspace="5" alt=""
+            style="cursor:pointer;" onClick="em_set_typ('tabelle',true); emChangeIssuePreview();
+            this.blur();if(typeof em_loaded != 'undefined' && em_loaded ){ if(!(em_check_art() && em_check_rubrik() && em_check_typ())){ return false;} }else{ return false; }"
+                        /><br /></div><div class="em_spacer_3"><br /></div>
+            <div class="em_typ_adfrend" id="typ_bsp_adfrend">
+             <div id="typ_bg_adfrend_3" class="buttoninaktiv_middle">
+                <div id="typ_bg_adfrend_4" class="buttoninaktiv_right_i" style="margin-top:0px;"><div class="overlay" onclick="emOverlayOpen('overlay_adfrend',400,300,'Info');"><br /></div></div>
+                                        <input type="radio" id="typ_adfrend" name="em_az[typ]"  value="adfrend"
+                                                    onclick="
+                                                        if(typeof em_loaded != 'undefined'
+                                                        &amp;&amp; em_loaded
+                                                        &amp;&amp; em_sel_typ != this.value
+                                                        ){
+                                                            em_sel_typ = this.value;
+                                                            em_set_typ(em_sel_typ,false);
+                                                            if(typeof em_change_gallery=='function'){
+                                                                //em_change_gallery(jQuery('input[name=em_az[rubrik]]').val(),0,jQuery('input[name=em_az[art]]:checked').val());
+                                                            }
+                                                        }
+                                                    " />
+                     <span id="typ_span_adfrend" class="em_txt_headbold">
+                        <label for="typ_adfrend" >Gestalteter Auftrag</label>
+                     </span>
+                </div>
+
+
+            	<div id="em_muster_search">
+   	           	    <div class="em_muster_search_label" onclick="emFindMusterReset('#em_muster_search_input', '#thumbs', '#em_muster_search_overlay');">
+						<img border="0" alt="" src="/_em_oas/_locals/hwb/images/arrow_white.gif"/>Muster Suche</div>
+                    <div id="em_muster_search_overlay">
+                        <span>Geben Sie nachfolgend die ID oder Musterbuchname des gew&uuml;nschten Musters ein</span>
+                        <div class="em_left">
+                            <input type="text" class="em_field" value="Suche" id="em_muster_search_input" onclick="jQuery(this).val('');" onkeyup="emFindMuster('#em_muster_search_input','#thumbs');" />
+                        </div>
+                    </div>
+            	</div>
+
+
+                <script type="text/javascript">
+                /* <![CDATA[ */
+
+                intMustersucheAktiv = 0;
+
+                function emFindMuster(_strInpuField, _strParentContainer) {
+                    var strInputVal = "muster_" + jQuery(_strInpuField).val();
+                    var strPatterName = jQuery(_strInpuField).val();
+                    
+                    jQuery(_strParentContainer).children("div").show();
+                    jQuery(_strParentContainer).children("div:not([id^='" + strInputVal + "'])").hide();
+                    jQuery(_strParentContainer).children("div[ad_pattern_name^='" + strPatterName + "']").show();
+                    em_anzeige_zoom();
+                    jQuery("div.scrollable").scrollable().begin();
+                    intMustersucheAktiv = 1;
+                }
+
+
+
+                function emFindMusterReset(_strInpuField, _strParentContainer, _strOverlayContainer) {
+                    jQuery(_strInpuField).val("Suche");
+                    jQuery(_strParentContainer).children("div").show();
+                    jQuery(_strOverlayContainer).slideToggle(500);
+                    jQuery("div.scrollable").scrollable().begin();
+                    intMustersucheAktiv = 0;
+                    emToggleImage();
+
+                }
+
+                function emToggleImage() {
+                   if(jQuery("#em_muster_search").find("img:first").hasClass("active")) {
+                        jQuery("#em_muster_search").find("img:first").attr("src", "/_em_oas/_locals/hwb/images/arrow_white.gif").removeClass("active");
+                   } else {
+                        jQuery("#em_muster_search").find("img:first").attr("src", "/_em_oas/_locals/hwb/images/arrow_white_down.gif").addClass("active");
+                   }
+                }
+
+                /* ]]> */
+                </script>
+                <div class="em_typ_adfrend" id="typ_bsp_fixedAd"><div id="typ_bg_fixedAd_2" class="buttoninaktiv_middle">
+                    <div id="typ_bg_fixedAd_4" class="buttoninaktiv_right"><br /></div>
+                                        <input type="radio" id="typ_fixedAd" name="em_az[typ]"  value="fixedAd"
+                                                    onclick="
+                                                        if(typeof em_loaded != 'undefined'
+                                                        &amp;&amp; em_loaded
+                                                        &amp;&amp; em_sel_typ != this.value
+                                                        ){
+                                                            em_sel_typ = this.value;
+                                                            em_set_typ(em_sel_typ,false);
+                                                            if(typeof em_change_gallery=='function'){
+                                                                //em_change_gallery(jQuery('input[name=em_az[rubrik]]').val(),1,jQuery('input[name=em_az[art]]:checked').val());
+                                                            }
+                                                        }
+                                                    " />
+                                    <span id="typ_span_fixedAd" class="em_txt_headbold">
+            <label for="typ_fixedAd" >???</label></span></div>
+
+            </div><div class="clr"><br /></div>
+            <div id="em_container_adfrend" class="em_container_vv">
+                <div class="em_container_vv_box">
+                    <input type="hidden" name="em_az[mustertyp_id]" value="" />
+            <input type="hidden" name="em_az[adfrend][platzierung]" value="" />
+            <div id="em_scrollable_container"><br /></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+function em_anzeige_zoom(){
+var em_img_height;
+var posTop;
+var posTop2;
+var em_height;
+
+jQuery(".em_anzeige_zoom").mouseover(function (_objEvent)
+                {
+
+                    objHit = jQuery(this);
+                    arrSize = objHit.attr("rel").split("x");
+                    posTop = jQuery("#em_art").offset();
+                    posTop2 = jQuery("#em_container_adfrend").offset();
+                    emImmoRemoveListOverlay();
+                    em_height = 430;//posTop2.top - 84;
+
+                   if(document.getElementById("em_art")){
+                    jQuery("select").css("visibility","hidden");
+                    var em_top = posTop2.top - em_height - 30;
+                    var objOverlayCon = jQuery("<div style=\"width:525px;\"><\/div>")
+                        .attr("id", "em_anzeige_overlay_container")
+                        .css({
+                            "position" : "absolute",
+                            "left" : posTop2.left + "px",
+                            "top" : em_top + "px",
+                            "z-index" : 7999,
+                            "display":"none"
+                        });
+                    var objOverlay = jQuery("<div style=\"height:"+ em_height +"px;\"><\/div>")
+                        .attr("id", "em_anzeige_overlay");
+
+                    }else{
+                    var em_top = posTop2.top - 435;
+                    var objOverlayCon = jQuery("<div style=\"width:525px;\"><\/div>")
+                        .attr("id", "em_anzeige_overlay_container")
+                        .css({
+                            "position" : "absolute",
+                            "left" : posTop2.left + "px",
+                            "top" : em_top + "px",
+                            "z-index" : 7999,
+                            "display":"none"
+                        });
+                         var objOverlay = jQuery("<div style=\"height:430px;\"><\/div>")
+                        .attr("id", "em_anzeige_overlay");
+
+
+                    }
+
+                    var objOverlayLeft = jQuery("<div style=\"width:49%; float:left;\"><\/div>")
+                        .attr("id", "em_anzeige_overlay_left")
+                        .html("<div class=\"em_txt_normalbold em_info_space\">Vorschau des Anzeigenmusters<\/div>");
+
+                    var objOverlayRight = jQuery("<div><\/div>")
+                        .attr("id", "em_anzeige_overlay_right")
+                        .html("<div class=\"em_anzeige_overlay_right_head\">Muster in Ihrem Anzeigenblatt<\/div><div id=\"em_vorlage_zeitung\"><\/div>");
+
+        var objOverlayImg = jQuery("<img/>")
+            .attr("src", objHit.attr("rev"))
+            .attr("id", "em_anzeige_img")
+            .addClass("em_info_space");
+            
+        objOverlayImg.removeAttr("width").removeAttr("height");
+
+        var objOverlayImgSmall = jQuery("<img/>")
+            .attr("src", objHit.attr("rev"))
+            .attr("id", "em_anzeige_img_small")
+            .attr("style", "width:" + objHit.attr("ad_tplPrev") + "px;");
+
+        var intColumn = objHit.attr("ad_column");
+        var intColumnSize = 100;
+        var intHeight = objHit.attr("ad_height");
+
+        switch (intColumn) {
+            case "1":
+                intOrigWidth = 45;
+                intColumnSize = 25;
+                intHeight = objHit.attr("ad_height") * 25 / 45;
+                break;
+            case "2":
+                intOrigWidth = 90;
+                intColumnSize = 54;
+                intHeight = objHit.attr("ad_height") * 54 / 90;
+                break;
+            case "3":
+                intOrigWidth = 136;
+                intColumnSize = 83;
+                intHeight = objHit.attr("ad_height") * 83 / 136;
+                break;
+            case "4":
+                intOrigWidth = 181;
+                intColumnSize = 111;
+                intHeight = objHit.attr("ad_height") * 111 / 181;
+                break;
+        }
+
+        var objOverlayImgRightSmall = jQuery("<img/>")
+            .attr("src", objHit.attr("rev"))
+            .attr("id", "em_anzeige_img_right_small")
+            .css({
+                "width" : intColumnSize + "px"
+            })
+            .css({
+                "height" : intHeight + "px"
+            })
+            ;
+
+        objOverlayCon.append(objOverlay);
+
+        objOverlay.append(objOverlayLeft);
+        objOverlay.append(objOverlayRight);
+
+        objOverlayLeft.append(objOverlayImg);
+
+        var adSupp = "";
+        if(objHit.attr("ad_supp") != ""
+        && objHit.attr("ad_supp") != "undefined"
+        && objHit.attr("ad_supp") != "0,00"
+        && objHit.attr("ad_supp") != "0.00") {
+            adSupp = " <b>Zuschlag:<\/b> " + objHit.attr("ad_supp");
+        }
+
+                    objOverlayLeft.append("<div class=\"em_info_space\">"
+                                            + " <b>Höhe der Anzeige:<\/b> " + objHit.attr("ad_height") + " mm<br />"
+                                            + " <b>Anzahl der Spalten:<\/b> " + objHit.attr("ad_column") + " <br />"
+                                            + " <b>Muster-ID:<\/b> " + objHit.attr("ad_pId") + " <br />"
+                                            + adSupp
+                                            + "<\/div>");
+
+                    jQuery("body:first").append(objOverlayCon);
+
+                    if(objHit.attr("ad_pubPrev") != ""
+                    || !objHit.attr("ad_tplPrev")) {
+                        jQuery("#em_vorlage_zeitung").css("background-image", "url(" + objHit.attr("ad_pubPrev") + ")");
+                        jQuery("#em_vorlage_zeitung").html("<div id=\"emBorderImgSmall\"><\/div>");
+                        jQuery("#emBorderImgSmall").append(objOverlayImgSmall);
+                        jQuery("#emBorderImgSmall").attr("style", "border:2px solid #2f6da6; float:right; margin-right:0px; margin-top:268px;");
+
+                    }
+
+        jQuery("#em_vorlage_zeitung").append('<div id="emRightImgSmall"><\/div>');
+        jQuery("#emRightImgSmall").append(objOverlayImgRightSmall);
+        
+                    objOverlayCon.fadeIn(300);
+                }
+            )
+
+            .mouseout(function (_objEvent)
+                {
+                    var objOverlay = jQuery("#em_anzeige_overlay_container");
+                    objOverlay.stop(true, false);
+                    objOverlay.fadeOut(300, emImmoRemoveListOverlay);
+                    jQuery("select").css("visibility","visible");
+                }
+            );
+
+            function emImmoRemoveListOverlay()
+            {
+                var objOverlay = jQuery("#em_anzeige_overlay_container");
+                if (objOverlay.length) {
+                    objOverlay
+                        .stop()
+                        .remove();
+                }
+            }
+}
+
+
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var em_objMuster = [{"id":"1","art":"g","rubriken":"","ausgaben":"","campaign":"","platzierung":0,"fractionflag":0,"spalten":"1","hoehe":"23","previewHight":"271.00","gp_id":"","farbigkeit":"SW","description":"1 spaltig - 22 mm hoch","bereich":"e,i","musterbuch_nr":"","berechungsart":"MM","gestaltungsart":"R","formatvorgabe":"","sonderbehandlung":""}];
+
+function em_change_gallery(_strSelRubrik,_intRubrik,_intFoP,_emStrArt)
+{
+    var strHtml = "";
+    var bolFoP = false;
+    var strFoPId = "";
+    var strPubPrev = "";
+    var strSignForArea = "e";
+
+    var objRegExp = new RegExp("(^|,|;)(" + _strSelRubrik + ")(;|,|$)");
+    
+    var objRegExpArt = new RegExp("(^|;|,)" + _emStrArt + "(;|,|$)");
+    var objRegExpArea = new RegExp("(^|;|,)" + strSignForArea + "(;|,|$)");
+    
+    
+
+
+    jQuery.post("https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/doAdfrendActions.php?action=geometry",
+                {'rubrik' : _intRubrik},
+                function(data){
+                    //continue when callback
+                    for (var mixIdx in em_objMuster) {
+                        strPubPrev = "";
+                        var intId = em_objMuster[mixIdx]["id"];
+                        var objRegExpGeo = new RegExp("(^|,)" + em_objMuster[mixIdx]["platzierung"] + "(,|$)");
+                        if (objRegExpArea.test(em_objMuster[mixIdx]["bereich"])
+                        && objRegExp.test(em_objMuster[mixIdx]["rubriken"])
+                        
+                        && em_objMuster[mixIdx]["gp_id"] == ""
+                         
+                        && em_objMuster[mixIdx]["fractionflag"] == _intFoP
+                        && objRegExpGeo.test(data)
+                        && objRegExpArt.test(em_objMuster[mixIdx]["art"])
+                        ) {
+                            if(document.em_form["em_az[mustertyp_id]"] &&
+                            (!document.em_form["em_az[mustertyp_id]"].value || document.em_form["em_az[mustertyp_id]"].value == 0)) {
+                                document.em_form["em_az[mustertyp_id]"].value = "muster_" + intId;
+                                //document.em_form["em_az[mustertyp_id]"].value = intId;
+                                if(document.em_form["em_az[adfrend][platzierung]"] && em_objMuster[mixIdx]["platzierung"]) {
+                                    document.em_form["em_az[adfrend][platzierung]"].value = em_objMuster[mixIdx]["platzierung"];
+                                }
+                            }
+
+                            if(em_objMuster[mixIdx]["imgPublicationPreview"]) {
+                                strPubPrev = "https://anzeigen.hamburger-wochenblatt.de/_em_daten/logos/" + em_objMuster[mixIdx]["imgPublicationPreview"];
+                            }
+
+                            strHtml += "<div id=\"muster_" + intId + "\" ad_geometry=\"" + em_objMuster[mixIdx]["platzierung"] + "\" ad_pattern_name=\"" + em_objMuster[mixIdx]["musterbuch_nr"] + "\">"
+                                    + "<div style=\"position:absolute;background: url(https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/gal_overlay.png) repeat-x left top; margin-left:0px;\"><br /><\/div>"
+                                    + "<div rev=\"https://anzeigen.hamburger-wochenblatt.de/_em_daten/gallery/muster/hwb" + intId + ".jpg\""
+                                    + " ad_pubPrev=\"" + strPubPrev + "\""
+                                    + " ad_tplPrev=\"" + em_objMuster[mixIdx]["tplPreview"] + "\""
+                                    + " class=\"em_anzeige_zoom\""
+                                    + " rel=\"600x400\""
+                                    + " ad_height=\"" + em_objMuster[mixIdx]["hoehe"] + "\""
+                                    + " ad_column=\"" + em_objMuster[mixIdx]["spalten"] + "\""
+                                    + " ad_supp=\"" + em_objMuster[mixIdx]["supplement"] + "\""
+                                    + " ad_pId=\"" + intId + "\""
+                                    + " previewHeight=\"" + em_objMuster[mixIdx]["previewHeight"] + "\""
+                                    + " previewWidth=\"" + em_objMuster[mixIdx]["previewWidth"] + "\""
+                                    + " style=\"height:16px;margin-left:6px;position:absolute;z-index:7000;color:#aaa;margin-right:24px;margin-top:114px;background:transparent url(https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/view_large.gif) no-repeat top left;text-align:left;padding-left:22px;\">preview | info<\/div>"
+                                    + "<img src=\"https://anzeigen.hamburger-wochenblatt.de/_em_daten/gallery/muster/thumb_hwb" + intId + ".jpg\" style=\"padding:7px;margin:auto;\" />"
+                                    + "<\/div>";
+
+                        }
+
+                        //if exists a fixedAd
+                        if (objRegExp.test(em_objMuster[mixIdx]["rubriken"])
+                        && em_objMuster[mixIdx]["fractionflag"] == 1
+                        && objRegExpGeo.test(data)
+                        && objRegExpArt.test(em_objMuster[mixIdx]["art"])
+                        ) {
+                            bolFoP = true;
+                            strFoPId += intId + ",";
+                        }
+
+                    }
+
+                    //turn on/off FoP
+                    if(!bolFoP){
+                        jQuery("#typ_bsp_fixedAd").css({"display" : "none"});
+                        jQuery("#typ_fixedAd").attr("disabled",true);
+                    } else {
+                        jQuery("#typ_bsp_fixedAd").css({"display" : "block"});
+                        jQuery("#typ_fixedAd").attr("disabled",false);
+                    }
+
+                    jQuery("#em_scrollable_container").html("<div class=\"scrollable\"><div id=\"thumbs\">" + strHtml + "<\/div><\/div><a class=\"prev\"><\/a><a class=\"next\"><\/a>");
+                    jQuery("div.scrollable").scrollable({
+
+                        "size" : 2,
+                        "items" : "#thumbs",
+                        "hoverClass" : "hover"
+
+                    });
+if(document.em_form["em_az[mustertyp_id]"] && document.em_form["em_az[mustertyp_id]"].value) {
+                                            jQuery("div.scrollable div[id="+document.em_form["em_az[mustertyp_id]"].value+"]").addClass("active");
+                        }
+                     jQuery("div.scrollable div[id^=muster_]").click(function() {
+
+                        if(typeof em_set_typ == "function"){
+                            var emIntPatternId = jQuery(this).attr("id").replace("muster_","");
+                            var objRegExpFoP = new RegExp("(^|,)" + emIntPatternId + "(,|$)");
+                            if(bolFoP
+                            && objRegExpFoP.test(strFoPId)){
+                                em_set_typ("fixedAd",true);
+                            }else{
+                                em_set_typ("adfrend",true);
+                            }
+                        }
+
+                        em_set("em_az[mustertyp_id]",jQuery(this).attr("id"));
+                        em_set("em_az[adfrend][platzierung]",jQuery(this).attr("ad_geometry"));
+
+                        
+                            jQuery("#emIssuesPreview").load("https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/doLoadIssuePreview.php" + "?rubrik=" + jQuery("input[name='em_az[rubrik]']").val() + "&art=" + jQuery("input[name='em_az[art]']:checked").val() + "&typ=" + jQuery("input[name='em_az[typ]']:checked").val() + "&emMusterID=" + jQuery(this).attr("id"));
+
+                        if (typeof(intMustersucheAktiv) != "undefined"
+                         && intMustersucheAktiv == 1
+                        ) {
+                             jQuery("div.scrollable").scrollable().begin();
+                        }
+
+                     });
+                     em_anzeige_zoom();
+
+
+                });
+}
+/* ]]> */
+</script>
+
+                    <div class="clr"><br />
+                </div>
+          </div>
+        </div>
+      </div>
+            <input type="hidden" name="em_az[expose_id]" id="em_expose_id" value="" />
+            <div class="em_spacer_3"><br /></div>
+            <div class="em_typ_expose" id="typ_bsp_expose">
+             <div id="typ_bg_expose_3" class="buttoninaktiv_middle">
+                <div id="typ_bg_expose_4" class="buttoninaktiv_right" style="margin-top:0px;"><br /></div>
+                        <input type="radio" id="typ_expose" name="em_az[typ]"  value="expose"
+                                    onclick="
+                                        if(typeof em_loaded != 'undefined'
+                                        &amp;&amp; em_loaded
+                                        &amp;&amp; em_sel_typ != this.value
+                                        ){
+                                            em_sel_typ = this.value;
+                                            em_set_typ(em_sel_typ,false);
+                                        }
+                                    " />
+                     <span id="typ_span_expose" class="em_txt_headbold">
+                        <label for="typ_expose" >Exposé-Auftrag</label>
+                     </span>
+                </div>
+
+            	<div id="em_expose_search">
+   	           	    <div class="em_expose_search_label" onclick="emFindExposeReset('#em_expose_search_input', '#thumbs', '#em_expose_search_overlay');">
+						<img border="0" alt="" src="/_em_oas/_locals/hwb/images/arrow_white.gif"/>Expos&eacute; Suche</div>
+                    <div id="em_expose_search_overlay">
+                        <span>Geben Sie nachfolgend die ID des gew&uuml;nschten Musters ein</span>
+                        <div class="em_left">
+                            <input type="text" class="em_field" value="Muster-ID" id="em_expose_search_input" onclick="jQuery(this).val('');" onkeyup="emFindExpose('#em_expose_search_input','#em_scrollable_exposecontainer #thumbs');" />
+                        </div>
+                    </div>
+            	</div>
+
+
+                <script type="text/javascript">
+                /* <![CDATA[ */
+
+                var intExposesucheAktiv = 0;
+
+                function emFindExpose(_strInpuField, _strParentContainer) {
+                    var strInputVal = "expose_" + jQuery(_strInpuField).val();
+                    jQuery(_strParentContainer).children("div").show();
+                    jQuery(_strParentContainer).children("div:not([id^='" + strInputVal + "'])").hide();
+                    em_anzeige_exposezoom();
+                    jQuery(_strParentContainer + " div.scrollable").scrollable().begin();
+                    intExposesucheAktiv = 1;
+                }
+
+
+
+                function emFindExposeReset(_strInpuField, _strParentContainer, _strOverlayContainer) {
+                    jQuery(_strInpuField).val("Muster ID");
+                    jQuery(_strParentContainer).children("div").show();
+                    jQuery(_strOverlayContainer).slideToggle(500);
+                    if (jQuery(_strParentContainer + " div.scrollable").scrollable().length) {
+                        jQuery(_strParentContainer + " div.scrollable").scrollable().begin();
+                    }
+                    intExposesucheAktiv = 0;
+                    emToggleExposeImage();
+                }
+
+                function emToggleExposeImage() {
+                   if(jQuery("#em_expose_search").find("img:first").hasClass("active")) {
+                        jQuery("#em_expose_search").find("img:first").attr("src", "/_em_oas/_locals/hwb/images/arrow_white.gif").removeClass("active");
+                   } else {
+                        jQuery("#em_expose_search").find("img:first").attr("src", "/_em_oas/_locals/hwb/images/arrow_white_down.gif").addClass("active");
+                   }
+                }
+
+                function em_load_expose() {
+                    jQuery("#em_container_expose_content").html("").addClass("em_loading").show();
+                    if (jQuery("#em_expose_search_overlay").css("display") == "block") {
+                        emFindExposeReset('#em_expose_search_input', '#thumbs', '#em_expose_search_overlay');
+                    }
+                    jQuery.ajax({
+                        type:     "POST",
+                        url:      "/_em_oas/ajax/exposeGallery.php",
+                        dataType: "json",
+                        data:     {
+                            "em_session_name"       : "em_sid",
+                            "em_sid": "f284845fc1f2cd911ce7bba1f4b6f025",
+                            "em_client"             : "hwb",
+                            "em_verlag"             : "hwb",
+                            "em_category"           : jQuery("#em_az_rubrik").val(),
+                            "em_art"                : jQuery("input[name=em_az[art]]:checked").val(),
+                            "em_customer"           : ""
+                        },
+                        success: function(objData, strStatus, jqXHR) {
+                            if (objData.error != "") {
+                                jQuery("#em_container_expose_content").removeClass("em_loading").html(objData.error);
+                                jQuery("#em_expose_id").val("");
+                            } else if ("" != objData.html) {
+                                jQuery("#em_container_expose_content").removeClass("em_loading").html(objData.html);
+                                em_anzeige_exposezoom();
+                                jQuery("#em_container_expose_content div.scrollable").scrollable().begin();
+                                
+                            } else {
+                                jQuery("#em_container_expose_content").hide().html("");
+                            }
+                        }
+                    });
+                }
+
+                function em_check_expose() {
+                    if (jQuery("#typ_expose:checked").length > 0
+                     && jQuery("#em_expose_id").val().length == 0
+                    ) {
+                        alert("Bitte wählen Sie ein Exposé-Muster.");
+                        return false;
+                    }
+                    return true;
+                }
+
+                /* ]]> */
+                </script>
+                <div class="clr"><br /></div>
+            <div id="em_container_expose" class="em_container_vv">
+                <div class="em_container_vv_box">
+                    <div id="em_container_expose_content"></div>
+                    <div class="clr"><br />
+                </div>
+            </div>
+        </div>
+      </div><div class="clr"><br /></div></div><div id="overlay_fliess" style="display:none">
+        <span class="txt_headbold">Kleinanzeigen schnell und günstig aufgeben. Wählen sie diese Anzeigenart, wenn Sie eine einfache Textanzeige aufgeben wollen.</span></div><div id="overlay_foto" style="display:none">
+        <span class="txt_headbold">Fotoanzeige</span></div><div id="overlay_adfrend" style="display:none">
+        <span class="txt_headbold">Gestaltete Anzeigen
+
+
+Gestaltete Anzeigen schnell und günstig aufgeben.</span></div><div id="overlay_expose_error" style="display:none">
+        <span class="txt_headbold">Bitte wählen Sie ein Exposé-Muster.</span></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+var em_sel_typ = "fliess";
+
+function em_set_typ(typ,weiter){
+    var emForm = document.em_form;
+    if(emForm["em_az[typ]"]){
+        for(var x=0; x<emForm["em_az[typ]"].length; x++){
+            if(emForm["em_az[typ]"][x]){
+                if(emForm["em_az[typ]"][x].value==typ){
+                    emForm["em_az[typ]"][x].checked=true;
+                    em_set_aktiv(emForm["em_az[typ]"][x].value, true);
+                } else {
+                    emForm["em_az[typ]"][x].checked=false;
+                    em_set_aktiv(emForm["em_az[typ]"][x].value, false);
+                }
+            }
+        }//for
+    }
+
+    if(typeof em_loaded != 'undefined'
+    && em_loaded
+    && em_sel_typ != typ
+    ){
+        em_sel_typ = typ;
+    }
+    if(typeof em_show_platzierung != 'undefined'){
+        em_show_platzierung(typ);
+  }
+}
+
+function em_enable_typ(w_rubrik) {
+    var emForm = document.em_form;
+    var em_typ = new Array();
+  em_typ["fliess"] = 0;
+  em_typ["upload"] = 0;
+  em_typ["foto"] = 0;
+  em_typ["adfrend"] = 0;
+  em_typ["cicero"] = 0;
+  em_typ["tabelle"] = 0;
+  em_typ["expose"] = 0;
+
+
+  var w_art = 0;
+  if(emForm["em_az[art]"]){
+    if(emForm["em_az[art]"][0] && emForm["em_az[art]"][0].checked){w_art=0;}
+    if(emForm["em_az[art]"][1] && emForm["em_az[art]"][1].checked){w_art=1;}
+  }
+  if(w_rubrik && em_rub_w[w_rubrik]){
+    jQuery("#emModulTypeHead").show();
+    em_typ["fliess"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][2+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][2+w_art]))?1:0;
+    em_typ["upload"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][4+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][4+w_art]))?1:0;
+    em_typ["foto"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][6+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][6+w_art]))?1:0;
+    em_typ["adfrend"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][8+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][8+w_art]))?1:0;
+    em_typ["cicero"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][10+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][10+w_art]))?1:0;
+    em_typ["tabelle"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][12+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][12+w_art]))?1:0;
+    em_typ["expose"] = (em_rub_w_index[em_rub_w[w_rubrik][1]][14+w_art] && parseInt(em_rub_w_index[em_rub_w[w_rubrik][1]][14+w_art]))?1:0;
+
+  } else {
+    jQuery("#emModulTypeHead").hide();
+  }
+  var w_typ_cnt = em_typ["fliess"] + em_typ["upload"] + em_typ["foto"] + em_typ["adfrend"] + em_typ["cicero"] + em_typ["tabelle"] + em_typ["expose"];
+    if(emForm["em_az[typ]"]){
+        for(var x=0; x<emForm["em_az[typ]"].length; x++){
+            if(emForm["em_az[typ]"][x]){
+                if(em_typ[emForm["em_az[typ]"][x].value]){
+                    if(typeof(emForm["em_az[typ]"][x].disabled)!="undefined"){
+                        emForm["em_az[typ]"][x].disabled = false;
+                    }
+                } else {
+                    if(typeof(emForm["em_az[typ]"][x].disabled)!="undefined"){
+                        emForm["em_az[typ]"][x].disabled = true;
+                    }
+                }
+                var em_zeige_typ = 0;
+                if(document.all && document.all["typ_bsp_"+emForm["em_az[typ]"][x].value]){
+                    em_zeige_typ = document.all["typ_bsp_"+emForm["em_az[typ]"][x].value];
+                }
+                if(document.getElementById && document.getElementById("typ_bsp_"+emForm["em_az[typ]"][x].value)){
+                    em_zeige_typ = document.getElementById("typ_bsp_"+emForm["em_az[typ]"][x].value);
+                }
+                if(em_zeige_typ){
+                    em_zeige_typ.style.display = em_typ[emForm["em_az[typ]"][x].value] ? "block" : "none";
+                    if(w_typ_cnt==1 && em_typ[emForm["em_az[typ]"][x].value]){
+                      em_set_typ(emForm["em_az[typ]"][x].value,false);
+                    }
+                }
+            }
+        }//for
+
+        var display_fliess = jQuery("#typ_bsp_fliess").css("display");
+        var display_upload = jQuery("#typ_bsp_upload").css("display");
+        var display_foto = jQuery("#typ_bsp_foto").css("display");
+        var display_modul = jQuery("#typ_bsp_modul").css("display");
+
+        if (display_fliess == "none"){
+          if(display_upload == "none"){
+              jQuery("#typ_bsp_foto").css("marginLeft", "0px");
+          }else{
+              jQuery("#typ_bsp_upload").css("marginLeft", "0px");
+          }
+        }else{
+          jQuery("#typ_bsp_upload").css("marginLeft", "3px");
+          jQuery("#typ_bsp_foto").css("marginLeft", "3px");
+          jQuery("#typ_bsp_modul").css("marginLeft", "3px");
+        }
+
+    }
+}
+
+function em_set_aktiv(em_typ, em_on) {
+
+    if(em_typ == "adfrend" && em_on == true) {
+        jQuery("#em_muster_search").show();
+    } else if(em_typ == "adfrend" && em_on == false) {
+        jQuery("#em_muster_search").hide();
+    }
+    if(em_typ == "expose" && em_on == true) {
+        jQuery("#em_expose_search").show();
+    } else if(em_typ == "expose" && em_on == false) {
+        jQuery("#em_expose_search").hide();
+    }
+
+    if(document.getElementById && document.getElementById("em_container_"+ em_typ)){
+        if(em_on) {
+            jQuery("#em_container_"+ em_typ).addClass("active");
+        } else {
+            jQuery("#em_container_"+ em_typ).removeClass("active");
+        }
+    }
+    if(document.getElementById && document.getElementById("typ_bsp_"+ em_typ)){
+        document.getElementById("typ_bsp_"+em_typ).style.borderColor = em_on ? "#006ab3" : "#d0e3f4";
+    }
+    if(document.getElementById && document.getElementById("typ_bg_"+ em_typ +"_2")){
+       document.getElementById("typ_bg_"+em_typ+"_2").className = em_on ? "buttonaktiv_middle" : "buttoninaktiv_middle";
+       document.getElementById("typ_span_"+em_typ).style.color = em_on ? "#FFFFFF" : "#000000";
+    }
+    if(document.getElementById && document.getElementById("typ_bg_"+ em_typ +"_3")){
+       document.getElementById("typ_bg_"+em_typ+"_3").className = em_on ? "buttonaktiv_middle" : "buttoninaktiv_middle";
+    }
+    if(document.getElementById && document.getElementById("typ_bg_"+ em_typ +"_4")){
+       var em_ext = (document.getElementById("typ_bg_"+ em_typ +"_4").className.match(/_i/) ? "_i" : "");
+       document.getElementById("typ_bg_"+ em_typ +"_4").className = em_on ? "buttonaktiv_right" + em_ext : "buttoninaktiv_right" + em_ext;
+    }
+
+}
+
+function em_check_is_checked() {
+    var strCurSel = "";
+    var objNewSel = null;
+
+    jQuery("input[id^=typ_]")
+        .each(function ()
+            {
+                if (jQuery(this).attr("checked")) {
+                    strCurSel = jQuery(this).attr("id");
+                }
+                em_set_aktiv(jQuery(this).attr("id").replace("typ_", ""), false);
+            }
+        )
+        .attr("checked", false);
+
+    //einblenden wenn checked da unten auf none gepr�ft wird
+    if(strCurSel == "typ_fixedAd"){
+        jQuery("#typ_bsp_fixedAd").css({"display" : "block"});
+        jQuery("#typ_fixedAd").attr("disabled",false);
+
+        //fop gallerie einblenden
+        if(typeof em_change_gallery=='function'){
+            //em_change_gallery(jQuery('input[name=em_az[rubrik]]').val(),1,jQuery('input[name=em_az[art]]:checked').val());
+        }
+    }
+
+    jQuery("div[id^=typ_bsp_]").each(function ()
+        {
+            var objCurrent = jQuery(this);
+            if (objCurrent.css("display") != "none") {
+                if (!objNewSel) {
+                    objNewSel = objCurrent;
+                }
+
+                if (jQuery("#" + objCurrent.attr("id") + " input").attr("id") == strCurSel) {
+                    objNewSel = objCurrent;
+                    return false;
+                }
+            }
+        }
+    );
+
+    if (objNewSel) {
+        jQuery("#" + objNewSel.attr("id").replace("bsp_","")).attr("checked", true);
+        em_set_aktiv(objNewSel.attr("id").replace("typ_bsp_", ""), true);
+        emChangeIssuePreview();
+    }
+}
+
+function emChangeIssuePreview() {
+    jQuery(document).ready(function(){
+        jQuery("#emIssuesPreview").load("https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/doLoadIssuePreview.php" + "?rubrik=" + jQuery("input[name='em_az[rubrik]']").val() + "&art=" + jQuery("input[name='em_az[art]']:checked").val() + "&typ=" + jQuery("input[name='em_az[typ]']:checked").val() + "&emMusterID=");
+        //reset when other adtype is chosen
+        em_set("em_az[mustertyp_id]","");
+    });
+
+}
+
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function em_check_typ(){
+	var em_form = document.em_form;
+    var em_return = false;
+	if(em_form["em_az[typ]"]
+	&& em_form["em_az[typ]"].length > 1
+	){
+		for(var x=0; x<em_form["em_az[typ]"].length; x++){
+			if(em_form["em_az[typ]"][x]
+			&& em_form["em_az[typ]"][x].checked
+			) {
+				em_return = true;
+            }
+		}
+        if (!em_return) {
+            alert("Bitte wählen Sie eine Anzeigenart aus!");
+            return false;
+        }
+	}
+    if (typeof(em_check_expose) != "undefined") {
+        return em_check_expose();
+    }
+	return em_return;
+}
+
+function em_init_typ(){
+	var em_form = document.em_form;
+	if(em_form["em_az[typ]"]
+	&& em_form["em_az[typ]"].length > 1
+	&& window.em_set_aktiv
+	){
+	    em_sel_typ = "";
+		for(var x=0; x<em_form["em_az[typ]"].length; x++){
+			if(em_form["em_az[typ]"][x]) {
+			    if (em_form["em_az[typ]"][x].checked) {
+                    em_set_aktiv(em_form["em_az[typ]"][x].value,true);
+                    em_sel_typ = em_form["em_az[typ]"][x].value;
+			    } else {
+			        em_set_aktiv(em_form["em_az[typ]"][x].value,false);
+			    }
+			}
+	     }
+	}
+    if (typeof(em_load_expose) != "undefined") {
+        em_load_expose();
+    }
+}
+/* ]]> */
+</script></div><div class="em_bg0">
+					<div id="em_aufgabe_back" class="em_left">
+                        
+                    </div>
+					<div id="em_aufgabe_next">
+                        
+<a  class="buttonred" onmouseover="window.status='weiter zu Schritt 2';return true;" onmouseout="window.status='';return true;" onclick="this.blur();if(typeof em_loaded != 'undefined'
+                                                                    &amp;&amp; em_loaded
+                                                                    ){
+                                                                        if(!(em_check_art() && em_check_rubrik() && em_check_typ())){ return false;}
+                                                                        em_set('em_aufgabe_step',2);
+                                                                    }else{
+
+                                                                        return false;
+                                                                    }
+                                                                em_submit();">
+		<span class="txt_normal" style="width:150px;">
+		<img src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/arrow_white.gif"  border="0" alt="" style="float:left;margin:3px 0px 0px 2px;" />
+			weiter zu Schritt 2
+		</span></a>
+                    </div>
+                    <div class="clr"><br /></div>
+                </div></div>
+		</div>
+
+
+	<!-- Login Box rechte Seite hier -->
+		<div class="em_advert_login em_advert_login_right">
+			<div>
+			<div class="em_bg0 em_advert_login">
+
+					<div class="categories">
+						<span class="em_txt_head">Login</span>
+					</div>
+
+	<!-- Login-Maske -->
+	<table border="0" cellpadding="0" cellspacing="0" summary="">
+
+	<!-- Ohne Label
+								<tr>
+									<td ' . $tdLabelCss . '>
+										<span class="em_txt_normalbold_head">
+										<label for="input_em_login">
+										E-Mail/Benutzername:</label></span>
+									</td>
+
+								</tr> -->
+								<tr>
+	<!-- Input Login -->
+									<td style="padding:1px;">
+										<input name="em_login" id="input_em_login" tabindex="1" value="Benutzername/ Kundennummer" size="20" maxlength="120"
+										onKeyup="if(em_check_enter(event) && em_check_login())em_do_login(1);"
+										onFocus="if(this.value=='Benutzername/ Kundennummer')this.value='';"
+                                        onBlur="if(this.value=='')this.value='Benutzername/ Kundennummer';" class="em_field" />
+									</td>
+
+								</tr>
+
+	<!-- Ohne Label
+								<tr>
+									<td ' . $tdLabelCss . '>
+									<span class="em_txt_normalbold_head">
+									<label for="input_em_passwd">
+									Passwort:</label></span>
+									</td>
+
+								</tr> -->
+								<tr>
+
+									<td style="padding:1px;">
+										<input type="password" name="em_passwd" id="input_em_passwd"  value="Passwort" tabindex="2" value="" size="11" maxlength="20"
+										onKeyup="if(em_check_enter(event) && em_check_login())em_do_login(1);"
+										onFocus="if(this.value=='Passwort')this.value='';"
+                                        onBlur="if(this.value=='')this.value='Passwort';" class="em_field" />
+									</td>
+
+								</tr>
+								<tr>
+
+									<td>
+									<div class="em_advert_login_btn">
+    									<div class="em_left">
+<a  class="buttonblu" onmouseover="window.status='anmelden';return true;" onmouseout="window.status='';return true;" onclick="this.blur();if(em_check_login())em_do_login(1);">
+		<span class="txt_normal" style="width:90px;">
+		<img src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/arrow_white.gif"  border="0" alt="" style="float:left;margin:3px 0px 0px 2px;" />
+			anmelden
+		</span></a></div>
+    									<div class="em_forgot_password">
+    									   <a href="#" onclick="em_login_senden()">Passwort vergessen</a>
+                                        </div>
+    									<div class="clr"><br /></div>
+									</div>
+									</td>
+
+								</tr>
+							</table>
+
+					<div>
+                    
+						<div>
+
+							<div class="clr"><br /></div>
+                        </div>
+                    </div>
+
+
+	
+
+					<div>
+					
+						<div>
+							<div class="em_txt_normalbold">Für eine einmalige Anzeigenaufgabe ist eine Registrierung nicht erforderlich!</div>
+						</div>
+                        <div class="em_spacer_2"><br /></div>
+					
+					<div>
+						
+<a href="javascript:em_submit();" class="buttonblu" onmouseover="window.status='Jetzt registrieren!';return true;" onmouseout="window.status='';return true;" onclick="this.blur();em_set('em_mask','service'); em_set('em_aufgabe_step','register'); em_submit();">
+		<span class="txt_normal" style="width:200px;">
+		<img src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/arrow_white.gif"  border="0" alt="" style="float:left;margin:3px 0px 0px 2px;" />
+			Jetzt registrieren!
+		</span></a></div>
+					</div>
+                    <div class="clr"><br /></div>
+
+               </div>
+
+	
+      
+<script type="text/javascript">
+/* <![CDATA[ */
+
+var emForm = document.em_form;
+
+if(em_browser && em_browser.match(/ns/)
+&& emForm["em_login"]
+&& emForm["em_pass"]
+){
+	if (document.all) {
+		emForm["em_login"].onkeydown = em_check_enter;
+		emForm["em_pass"].onkeydown = em_check_enter;
+	}
+}
+
+var key_code = 0;
+function em_check_enter(e){
+	if(!e && window.event) {
+	    key_code = window.event.keyCode;
+	} else if(e && e.which) {
+	    key_code = e.which;
+	} else if(e && e.keyCode) {
+	    key_code = e.keyCode;
+	}
+	if(key_code == 13) return true;
+	return false;
+}
+
+function em_check_login(){
+	key_code = 0;
+	var emForm = document.em_form;
+	if(emForm["em_login"]){
+		if(emForm["em_login"].value.length < 6){
+			alert("Bitte geben Sie Ihren Benutzernamen (mind. 6 Zeichen) ein!"); emForm["em_login"].focus(); return false;
+		}
+	}
+	if(emForm["em_passwd"]){
+	    if(emForm["em_passwd"].value == "Passwort") {
+	       emForm["em_passwd"].focus(); return false;
+	    } else if(emForm["em_passwd"].value.length < 6){
+			alert("Bitte geben Sie Ihr Passwort (mind. 6 Zeichen) ein!"); emForm["em_passwd"].focus(); return false;
+		}
+	}
+	return true;
+}
+
+function em_do_login(login){
+	var emForm = document.em_form;
+	 emForm["em_action"].value = login ? "login" : "logout";
+	em_submit();
+}
+
+/* ]]> */
+</script><div class="clr"><br /></div>
+			</div>
+			<div class="em_advert_login_help">
+                
+<a  class="buttongrau" onmouseover="window.status='Benutzerhilfe';return true;" onmouseout="window.status='';return true;" onclick="this.blur();em_help('aufgabe','art,rubrik,typ,login')">
+		<span class="txt_normal" style="width:200px;">
+        		<img  src="https://anzeigen.hamburger-wochenblatt.de/_em_oas/_locals/hwb/images/benutzerhilfe.gif"  border="0" alt="" style="float:left;margin:2px 0px 0px 2px;" />Benutzerhilfe
+		</span></a>
+                <div class="clr"><br /></div>
+            </div>
+
+            <!-- Summary Frame -->
+			<div class="em_advert_summary">
+			
+			</div>
+            <!-- Campaign Frame -->
+            <div id="emCampaignContainer"><!-- @holger: die ID muss bleiben! Brauch ich f�r ajax-call. Kommentar kannst du l�schen. -->
+            
+            </div>
+            <!-- CategoryBanner Frame -->
+            <div id="emAdvertCategoryBanner" class="em_loading" style="display:none;"></div>
+
+            <!-- secondary partners-->
+            <div class="em_secondary_partners" style="display:none;">
+                <div class="categories">
+                    <span class="em_txt_head"><b></b></span>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+
+			<div class="clr"><br /></div>
+		</div>
+    <div class="clr"><br /></div>
+<script language="JavaScript" type="text/javascript">
+/* <![CDATA[ */
+
+var em_loaded   = 0;
+var em_proof_init_timer;
+
+function em_init() {
+    if (!em_loaded) {
+        em_loaded = 1;
+        window.clearTimeout(em_proof_init_timer);
+        jQuery(window).on("beforeunload", function() {
+            return "Sie nutzen vermutlich eine Navigationsmöglichkeit außerhalb der Anzeigenannahme. Dadurch könnten die von Ihnen getätigten Angaben verworfen werden.";
+        });
+        em_choice_struktur(0);em_init_typ();
+    }
+}
+
+function em_proof_init(){
+    if(document.em_form.em_action)
+        em_init();
+    else
+        em_proof_init_timer = window.setTimeout("em_proof_init()",100);
+}
+
+em_proof_init();
+
+/* ]]> */
+</script></form>
+
+<!--
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+
+em_oas
+
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+-->
+
+
+
+<!--
+/*////////////////////////////////////////////////////////////////////////////////////////////////////
+
+em_oas
+
+////////////////////////////////////////////////////////////////////////////////////////////////////*/
+-->
+
+<!-- header lk v.0.1 -->
+    <div class="em_footer">
+        <div class="em_footer_links">
+            <ul>
+                <li>
+                    <a target="_blank" href="http://www.hamburger-wochenblatt.de/impressum/">Impressum</a>  
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.hamburger-wochenblatt.de/datenschutz/">Datenschutz</a>
+                </li>
+                <li>
+                    <a target="_blank" href="http://www.hamburgerwochenblatt.de/agbdatenschutz.html">AGB Print</a>
+                </li>
+            </ul>
+            <div class="clr"><br /></div>
+        </div>
+        <div class="em_footer_copyright">
+            &copy; Hamburger Wochenblatt 2016 - Alle Rechte vorbehalten
+        </div>
+        <div class="clr"><br /></div>
+    </div>
+</div>
+</body></html>

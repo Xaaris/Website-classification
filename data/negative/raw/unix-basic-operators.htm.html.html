@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<head>
+<!-- Basic -->
+<meta charset="utf-8">
+<title>Unix / Linux Shell Basic Operators</title>
+<meta name="description" content="Unix / Linux Shell Basic Operators - Learning fundamentals of UNIX in simple and easy steps : A beginner's tutorial containing complete knowledge of Getting Started, Unix Korn and Bourne Shell and Programming, File Permission / Access Modes, Environment, Utilities, Pipes and Filters, Network Communication Utilities, File System, Directories, Memory Management, Special Variables, vi editor, What is Shell?, Using Shell Variables, Arrays, Basic Operators, Decision Making, Loop Types, Control, Substitution, Quoting Mechanisms, Input / Output Redirections, Functions, Man Page Help, Regular Expressions with SED, User Administration, System Performance, Logging, Signals and Traps, Processes." />
+<meta name="keywords" content="Unix, Linux, Tutorials, Learning, Operating, System, OS, Beginners, Basics, Korn, Bourne, Shell,Programming, Getting Started, File Permission / Access Modes, Environment, Utilities, Pipes and Filters, Network Communication Utilities, File System, Directories, Memory Management, Special Variables, vi editor, What is Shell?, Using Shell Variables, Arrays, Basic Operators, Decision Making, Loop Types, Control, Substitution, Quoting Mechanisms, Input / Output Redirections, Functions, Man Page Help, Regular Expressions with SED, User Administration, System Performance, Logging, Signals and Traps, Processes." />
+<base href="https://www.tutorialspoint.com/" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="fb:app_id" content="471319149685276" />
+<meta property="og:site_name" content="www.tutorialspoint.com" />
+<meta name="robots" content="index, follow"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="https://www.tutorialspoint.com/theme/js/script-min-v4.js"></script>
+<link rel="stylesheet" href="https://www.tutorialspoint.com/theme/css/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+pre.prettyprint.tryit {min-height:37px; background: #eee url(/unix/images/try-it.jpg) top right no-repeat !important}select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
+ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #01adb9 url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #01adb9 !important;}
+.submenu-item{ border-bottom: 2px solid #01adb9 !important; border-top: 2px solid #01adb9 !important }
+.ace_scroller{overflow: auto!important;}
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img  src="/images/loading-cg.gif" alt="" width="70" height="70" />
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="/unix/images/logo.png">
+      </a>
+      </h1>			
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a href="/about/about_careers.htm" style="background: #fffb09; font-weight: bold;"><i class="icon icon-suitcase"></i> Jobs</a></li>
+            <li> <a href="http://www.sendfiles.net"><i class="fa fa-send"></i> &nbsp;SENDFiles</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/whiteboard.htm"><img src="theme/css/icons/image-editor.png" alt="Whiteboard" title="Whiteboard"> &nbsp;Whiteboard</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/netmeeting.php"><i class="fa-camera"></i> &nbsp;Net Meeting</a> </li>
+            <li> <a href="/online_dev_tools.htm"> <i class="dev-tools-menu" style="opacity:.5"></i> Tools </a> </li>
+            <li> <a href="/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>            
+            <li class="top-icons">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="https://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" data-placement="bottom" title="tutorialspoint YouTube">YouTube</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 24px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+  
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="videotutorials/index.htm"><i class="fa-toggle-right"></i> Videos </a></li>
+               <li class="dropdown no-sub-menu">
+                  <div class="searchform-popup">
+                     <input class="header-search-box" type="text" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off">
+                     <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+                 </div>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+         
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<style>
+.ts{
+   vertical-align:middle !important;
+   text-align:center !important;   
+}
+</style>
+<div class="mini-logo">
+<img src="/unix/images/unix-mini-logo.jpg" alt="UNIX Tutorial" />
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Unix / Linux for Beginners</li>
+<li><a href="/unix/index.htm">Unix / Linux - Home</a></li>
+<li><a href="/unix/unix-getting-started.htm">Unix / Linux - Getting Started</a></li>
+<li><a href="/unix/unix-file-management.htm">Unix / Linux - File Management</a></li>
+<li><a href="/unix/unix-directories.htm">Unix / Linux - Directories</a></li>
+<li><a href="/unix/unix-file-permission.htm">Unix / Linux - File Permission</a></li>
+<li><a href="/unix/unix-environment.htm">Unix / Linux - Environment</a></li>
+<li><a href="/unix/unix-basic-utilities.htm">Unix / Linux - Basic Utilities</a></li>
+<li><a href="/unix/unix-pipes-filters.htm">Unix / Linux - Pipes &amp; Filters</a></li>
+<li><a href="/unix/unix-processes.htm">Unix / Linux - Processes</a></li>
+<li><a href="/unix/unix-communication.htm">Unix / Linux - Communication</a></li>
+<li><a href="/unix/unix-vi-editor.htm">Unix / Linux - The vi Editor</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Unix / Linux Shell Programming</li>
+<li><a href="/unix/unix-what-is-shell.htm">Unix / Linux - What is Shell?</a></li>
+<li><a href="/unix/unix-using-variables.htm">Unix / Linux - Using Variables</a></li>
+<li><a href="/unix/unix-special-variables.htm">Unix / Linux - Special Variables</a></li>
+<li><a href="/unix/unix-using-arrays.htm">Unix / Linux - Using Arrays</a></li>
+<li><a href="/unix/unix-basic-operators.htm">Unix / Linux - Basic Operators</a></li>
+<li><a href="/unix/unix-decision-making.htm">Unix / Linux - Decision Making</a></li>
+<li><a href="/unix/unix-shell-loops.htm">Unix / Linux - Shell Loops</a></li>
+<li><a href="/unix/unix-loop-control.htm">Unix / Linux - Loop Control</a></li>
+<li><a href="/unix/unix-shell-substitutions.htm">Unix / Linux - Shell Substitutions</a></li>
+<li><a href="/unix/unix-quoting-mechanisms.htm">Unix / Linux - Quoting Mechanisms</a></li>
+<li><a href="/unix/unix-io-redirections.htm">Unix / Linux - IO Redirections</a></li>
+<li><a href="/unix/unix-shell-functions.htm">Unix / Linux - Shell Functions</a></li>
+<li><a href="/unix/unix-manpage-help.htm">Unix / Linux - Manpage Help</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Advanced Unix / Linux</li>
+<li><a href="/unix/unix-regular-expressions.htm">Unix / Linux - Regular Expressions</a></li>
+<li><a href="/unix/unix-file-system.htm">Unix / Linux - File System Basics</a></li>
+<li><a href="/unix/unix-user-administration.htm">Unix / Linux - User Administration</a></li>
+<li><a href="/unix/unix-system-performance.htm">Unix / Linux - System Performance</a></li>
+<li><a href="/unix/unix-system-logging.htm">Unix / Linux - System Logging</a></li>
+<li><a href="/unix/unix-signals-traps.htm">Unix / Linux - Signals and Traps</a></li>
+</ul>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Unix / Linux Useful Resources</li>
+<li><a href="/unix/unix_questions_answers.htm">Unix / Linux - Questions &amp; Answers</a></li>
+<li><a href="/unix/unix-useful-commands.htm">Unix / Linux - Useful Commands</a></li>
+<li><a href="/unix/unix-quick-guide.htm">Unix / Linux - Quick Guide</a></li>
+<li><a href="/unix/unix-builtin-functions.htm">Unix / Linux - Builtin Functions</a></li>
+<li><a href="/unix_system_calls/index.htm">Unix / Linux - System Calls</a></li>
+<li><a href="/unix_commands/index.htm">Unix / Linux - Commands List</a></li>
+<li><a href="/unix/unix-useful-resources.htm">Unix / Linux - Useful Resources</a></li>
+<li><a href="/unix/unix-discussion.htm">Unix / Linux - Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>Unix / Linux - Shell Basic Operators</h1>
+<div class="topgooglead">
+<hr />
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+</script>
+</div>
+<hr />
+<div class="pre-btn">
+<a href="/unix/unix-using-arrays.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/unix/unix-decision-making.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr />
+<p>There are various operators supported by each shell. We will discuss in detail about Bourne shell (default shell) in this chapter.</p>
+<p>We will now discuss the following operators &minus;</p>
+<ul class="list">
+<li>Arithmetic Operators</li>
+<li>Relational Operators</li>
+<li>Boolean Operators</li>
+<li>String Operators</li>
+<li>File Test Operators</li>
+</ul>
+<p>Bourne shell didn't originally have any mechanism to perform simple arithmetic operations but it uses external programs, either <b>awk</b> or <b>expr</b>.</p>
+<p>The following example shows how to add two numbers &minus;</p>
+<pre class="prettyprint notranslate tryit">
+#!/bin/sh
+
+val=`expr 2 + 2`
+echo "Total value : $val"
+</pre>
+<p>The above script will generate the following result &minus;</p>
+<pre class="result notranslate">
+Total value : 4
+</pre>
+<p>The following points need to be considered while adding &minus;</p>
+<ul class="list">
+<li><p>There must be spaces between operators and expressions. For example, 2&plus;2 is not correct; it should be written as 2 &plus; 2.</p></li>
+<li><p>The complete expression should be enclosed between <b>‘ ‘</b>, called the inverted commas.</p></li>
+</ul>
+<h2>Arithmetic Operators</h2>
+<p>The following arithmetic operators are supported by Bourne Shell.</p>
+<p>Assume variable <b>a</b> holds 10 and variable <b>b</b> holds 20 then &minus;</p>
+<p><a href="/unix/unix-arithmetic-operators.htm">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;width:23%">Operator</th>
+<th style="text-align:center;width:50%">Description</th>
+<th style="text-align:center;width:40%">Example</th>
+</tr>
+<tr>
+<td class="ts">&plus; (Addition)</td>
+<td>Adds values on either side of the operator</td>
+<td>`expr $a &plus; $b` will give 30</td>
+</tr>
+<tr>
+<td class="ts">- (Subtraction)</td>
+<td>Subtracts right hand operand from left hand operand</td>
+<td>`expr $a - $b` will give -10</td>
+</tr>
+<tr>
+<td class="ts">* (Multiplication)</td>
+<td>Multiplies values on either side of the operator</td>
+<td>`expr $a \* $b` will give 200</td>
+</tr>
+<tr>
+<td class="ts">/ (Division)</td>
+<td>Divides left hand operand by right hand operand</td><td>`expr $b / $a` will give 2</td>
+</tr>
+<tr>
+<td class="ts">% (Modulus)</td>
+<td>Divides left hand operand by right hand operand and returns remainder</td>
+<td>`expr $b % $a` will give 0</td>
+</tr>
+<tr>
+<td class="ts">= (Assignment)</td>
+<td style="vertical-align:middle;">Assigns right operand in left operand</td>
+<td>a = $b would assign value of b into a</td>
+</tr>
+<tr>
+<td class="ts">== (Equality)</td>
+<td>Compares two numbers, if both are same then returns true.</td>
+<td>[ $a == $b ] would return false.</td>
+</tr>
+<tr>
+<td class="ts">!= (Not Equality)</td>
+<td>Compares two numbers, if both are different then returns true.</td>
+<td>[ $a != $b ] would return true.</td>
+</tr>
+</table>
+<p>It is very important to understand that all the conditional expressions should be inside square braces with spaces around them, for example <b>[ $a == $b ]</b> is correct whereas, <b>[$a==$b]</b> is incorrect.</p>
+<p>All the arithmetical calculations are done using long integers.</p>
+<h2>Relational Operators</h2>
+<p>Bourne Shell supports the following relational operators that are specific to numeric values. These operators do not work for string values unless their value is numeric.</p>
+<p>For example, following operators will work to check a relation between 10 and 20 as well as in between "10" and "20" but not in between "ten" and "twenty".</p>
+<p>Assume variable <b>a</b> holds 10 and variable <b>b</b> holds 20 then &minus;</p>
+<p><a href="/unix/unix-relational-operators.htm">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Operator</th>
+<th style="text-align:center;">Description</th>
+<th style="text-align:center;width:25%">Example</th>
+</tr>
+<tr>
+<td class="ts"><b>-eq</b></td>
+<td>Checks if the value of two operands are equal or not; if yes, then the condition becomes true.</td>
+<td>[ $a -eq $b ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-ne</b></td>
+<td>Checks if the value of two operands are equal or not; if values are not equal, then the condition becomes true.</td>
+<td style="vertical-align:middle;">[ $a -ne $b ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-gt</b></td>
+<td>Checks if the value of left operand is greater than the value of right operand; if yes, then the condition becomes true.</td>
+<td style="vertical-align:middle;">[ $a -gt $b ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-lt</b></td>
+<td>Checks if the value of left operand is less than the value of right operand; if yes, then the condition becomes true.</td>
+<td style="vertical-align:middle;">[ $a -lt $b ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-ge</b></td>
+<td>Checks if the value of left operand is greater than or equal to the value of right operand; if yes, then the condition becomes true.</td>
+<td style="vertical-align:middle;">[ $a -ge $b ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-le</b></td>
+<td>Checks if the value of left operand is less than or equal to the value of right operand; if yes, then the condition becomes true.</td>
+<td style="vertical-align:middle;">[ $a -le $b ] is true.</td>
+</tr>
+</table>
+<p>It is very important to understand that all the conditional expressions should be placed inside square braces with spaces around them. For example, <b>[ $a &lt;= $b ]</b> is correct whereas, <b>[$a &lt;= $b]</b> is incorrect.</p>
+<h2>Boolean Operators</h2>
+<p>The following Boolean operators are supported by the Bourne Shell. </p>
+<p>Assume variable <b>a</b> holds 10 and variable <b>b</b> holds 20 then &minus;</p>
+<p><a href="/unix/unix-boolean-operators.htm">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Operator</th>
+<th style="text-align:center;">Description</th>
+<th style="text-align:center;width:25%">Example</th>
+</tr>
+<tr>
+<td class="ts"><b>!</b></td>
+<td>This is logical negation. This inverts a true condition into false and vice versa.</td>
+<td style="vertical-align:middle;">[ ! false  ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-o</b></td>
+<td>This is logical <b>OR</b>. If one of the operands is true, then the condition becomes true.</td>
+<td>[  $a -lt 20  -o $b -gt 100 ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-a</b></td>
+<td>This is logical <b>AND</b>. If both the operands are true, then the condition becomes true otherwise false.</td>
+<td style="vertical-align:middle;">[  $a -lt 20  -a $b -gt 100 ] is false. </td>
+</tr>
+</table>
+<h2>String Operators</h2>
+<p>The following string operators are supported by Bourne Shell.</p>
+<p>Assume variable <b>a</b> holds "abc" and variable <b>b</b> holds "efg" then &minus;</p>
+<p><a href="/unix/unix-string-operators.htm">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Operator</th>
+<th style="text-align:center;">Description</th>
+<th style="text-align:center;width:30%">Example</th>
+</tr>
+<tr>
+<td class="ts"><b>=</b></td>
+<td>Checks if the value of two operands are equal or not; if yes, then the condition becomes true.</td>
+<td class="ts">[ $a = $b ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>!=</b></td>
+<td>Checks if the value of two operands are equal or not; if values are not equal then the condition becomes true.</td>
+<td class="ts">[ $a != $b ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-z</b></td>
+<td>Checks if the given string operand size is zero; if it is zero length, then it returns true.</td>
+<td class="ts">[ -z $a ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-n</b></td>
+<td>Checks if the given string operand size is non-zero; if it is nonzero length, then it returns true.</td>
+<td class="ts">[ -n $a ] is not false.</td>
+</tr>
+<tr>
+<td class="ts"><b>str</b></td>
+<td>Checks if <b>str</b> is not the empty string; if it is empty, then it returns false.</td>
+<td class="ts">[ $a ] is not false.</td>
+</tr>
+</table>
+<h2>File Test Operators</h2>
+<p>We have a few operators that can be used to test various properties associated with a Unix file.</p>
+<p>Assume a variable <b>file</b> holds an existing file name "test" the size of which is 100 bytes and has <b>read</b>, <b>write</b> and <b>execute</b> permission on &minus;</p>
+<p><a href="/unix/unix-file-operators.htm">Show Examples</a></p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">Operator</th>
+<th style="text-align:center;">Description</th>
+<th style="text-align:center;width:29%">Example</th>
+</tr>
+<tr>
+<td class="ts"><b>-b file</b></td>
+<td>Checks if file is a block special file; if yes, then the condition becomes true.</td>
+<td class="ts">[ -b $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-c file</b></td>
+<td>Checks if file is a character special file; if yes, then the condition becomes true.</td>
+<td class="ts">[ -c $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-d file</b></td>
+<td>Checks if file is a directory; if yes, then the condition becomes true.</td>
+<td class="ts">[ -d $file ] is not true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-f file</b></td>
+<td>Checks if file is an ordinary file as opposed to a directory or special file; if yes, then the condition becomes true.</td>
+<td class="ts">[ -f $file ] is  true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-g file</b></td>
+<td>Checks if file has its set group ID (SGID) bit set; if yes, then the condition becomes true.</td>
+<td class="ts">[ -g $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-k file</b></td>
+<td>Checks if file has its sticky bit set; if yes, then the condition becomes true.</td>
+<td class="ts">[ -k $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-p file</b></td>
+<td>Checks if file is a named pipe; if yes, then the condition becomes true.</td>
+<td class="ts">[ -p $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-t file</b></td>
+<td>Checks if file descriptor is open and associated with a terminal; if yes, then the condition becomes true.</td>
+<td class="ts">[ -t $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-u file</b></td>
+<td>Checks if file has its Set User ID (SUID) bit set; if yes, then the condition becomes true.</td>
+<td class="ts">[ -u $file ] is  false.</td>
+</tr>
+<tr>
+<td class="ts"><b>-r file</b></td>
+<td>Checks if file is readable; if yes, then the condition becomes true.</td>
+<td class="ts">[ -r $file ] is  true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-w file</b></td>
+<td>Checks if file is writable; if yes, then the condition becomes true.</td>
+<td class="ts">[ -w $file ] is  true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-x file</b></td>
+<td>Checks if file is executable; if yes, then the condition becomes true.</td>
+<td class="ts">[ -x $file ] is  true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-s file</b></td>
+<td>Checks if file has size greater than 0; if yes, then condition becomes true.</td>
+<td class="ts">[ -s $file ] is true.</td>
+</tr>
+<tr>
+<td class="ts"><b>-e file</b></td>
+<td>Checks if file exists; is true even if file is a directory but exists.</td>
+<td class="ts">[ -e $file ] is true.</td>
+</tr>
+</table>
+<h2>C Shell Operators</h2>
+<p>Following link will give you a brief idea on C Shell Operators &minus;</p>
+<p><a href="/unix/unix-c-shell-operators.htm">C Shell Operators</a></p>
+<h2>Korn Shell Operators</h2>
+<p>Following link helps you understand Korn Shell Operators &minus;</p>
+<p><a href="/unix/unix-korn-shell-operators.htm">Korn Shell Operators</a></p>
+<hr />
+<div class="pre-btn">
+<a href="/unix/unix-using-arrays.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="nxt-btn">
+<a href="/unix/unix-decision-making.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr />
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/unix/unix-basic-operators.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/facebookIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?url=' + 'http://www.tutorialspoint.com/unix/unix-basic-operators.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/twitterIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/unix/unix-basic-operators.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/linkedinIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/unix/unix-basic-operators.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/googlePlusIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/unix/unix-basic-operators.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/StumbleUponIcon.jpg" alt="img" />
+</a>
+<a  href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://reddit.com/submit?url=http://www.tutorialspoint.com/unix/unix-basic-operators.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
+<img src="/images/reddit.jpg" alt="img" />
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="/scripts/img/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="/about/faq.htm">FAQ's</a></li>
+         <li><a href="/about/about_helping.htm">Helping</a></li>
+         <li><a href="/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>&copy; Copyright 2017. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input type="text" class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="/theme/js/custom-min.js?v=5"></script>
+<script src="https://www.google-analytics.com/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+<script type="text/javascript" src="/theme/js/jquery.colorbox-min.js"></script>
+<script type="text/javascript">
+   var tryit = new $.TryIt('/unix/try_unix.php');
+   tryit.compile();
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Unix / Linux Shell Basic Operators",
+    "name": "Unix / Linux Shell Basic Operators",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.tutorialspoint.com/unix/unix-basic-operators.htm"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.tutorialspoint.com/unix/images/unix-mini-logo.jpg",
+        "width": 255,
+        "height": 194
+    },
+    "author": {
+        "@type": "Organization",
+        "name": "Tutorials Point",
+        "url": "https://www.tutorialspoint.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tutorialspoint.com/images/logo60.png",
+            "width": 210,
+            "height": 60
+        }
+    },
+    "datePublished": "August 16 2017 09:37:23.",
+    "dateModified": "August 16 2017 00:17:36.",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Tutorials Point",
+        "url": "https://www.tutorialspoint.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tutorialspoint.com/images/logo60.png",
+            "width": 210,
+            "height": 60
+        }
+    },
+    "description": "There are various operators supported by each shell. We will discuss in detail about Bourne shell (default shell) in this chapter...."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "name": "www.tutorialspoint.com",
+                "@id": "https://www.tutorialspoint.com"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "name": "Unix",
+                "@id": "https://www.tutorialspoint.com/unix"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "name": "Unix / Linux - Basic Operators"
+            }
+        }
+    ]
+}
+</script>
+</div>
+</body>
+</html>

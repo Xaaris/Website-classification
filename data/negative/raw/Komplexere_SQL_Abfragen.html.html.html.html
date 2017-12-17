@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Komplexere SQL-Abfragen</TITLE>
+<META NAME="description" CONTENT="Komplexere SQL-Abfragen">
+<META NAME="keywords" CONTENT="database-administration">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="database-administration.css">
+
+<LINK REL="next" HREF="Data_Definition_Language.html">
+<LINK REL="previous" HREF="Single_Row_Functions.html">
+<LINK REL="up" HREF="Einfuhrung_in_PL.html">
+<LINK REL="next" HREF="Data_Definition_Language.html">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" 
+	TEXT="BLACK" 
+	LINK="BLACK" 
+	ALINK="BLUE"
+	VLINK="GRAY">
+<!--Navigation Panel-->
+
+<A NAME="tex2html688"
+  HREF="Data_Definition_Language.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://rowa.giso.de/latexicons//next.png"></A> <A NAME="tex2html689"
+  HREF="Data_Definition_Language.html">Data Definition Language (DDL)</A>
+<BR>
+
+<A NAME="tex2html682"
+  HREF="Einfuhrung_in_PL.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://rowa.giso.de/latexicons//up.png"></A> <A NAME="tex2html683"
+  HREF="Einfuhrung_in_PL.html">Einführung in PL / SQL Oracle 8i/9i</A>
+<BR>
+
+<A NAME="tex2html676"
+  HREF="Single_Row_Functions.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://rowa.giso.de/latexicons//prev.png"></A> <A NAME="tex2html677"
+  HREF="Single_Row_Functions.html">Single Row Functions</A>
+<BR>
+ &nbsp <STRONG>  <A NAME="tex2html685"
+  HREF="Contents.html">Contents</A></STRONG>
+  &nbsp <STRONG>  <A NAME="tex2html687"
+  HREF="Index.html">Index</A></STRONG>
+ 
+<HR>
+<BR>
+
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html690"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231000000000000000">JOIN - Verbinden von Tabellen</A>
+<UL>
+<LI><A NAME="tex2html691"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231100000000000000">Arten</A>
+<LI><A NAME="tex2html692"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231200000000000000">EQUIJOIN über zwei Tabellen</A>
+<LI><A NAME="tex2html693"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231300000000000000">EQUIJOIN über mehr als zwei Tabellen</A>
+<LI><A NAME="tex2html694"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231400000000000000">Non-Equijoins</A>
+<LI><A NAME="tex2html695"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231500000000000000">OUTER JOIN</A>
+<LI><A NAME="tex2html696"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231600000000000000">OUTER JOIN Anwendungen</A>
+<LI><A NAME="tex2html697"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231700000000000000">Kreuzprodukt</A>
+<LI><A NAME="tex2html698"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00231800000000000000">SELF JOIN</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html699"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00232000000000000000">Mengenoperationen</A>
+<UL>
+<LI><A NAME="tex2html700"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00232100000000000000">MINUS</A>
+<LI><A NAME="tex2html701"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00232200000000000000">INTERSECT</A>
+<LI><A NAME="tex2html702"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00232300000000000000">UNION</A>
+<LI><A NAME="tex2html703"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00232400000000000000">UNION ALL</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html704"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00233000000000000000">Übungen 04</A>
+<LI><A NAME="tex2html705"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234000000000000000">Gruppierungen</A>
+<UL>
+<LI><A NAME="tex2html706"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234100000000000000">SUM()</A>
+<LI><A NAME="tex2html707"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234200000000000000">MIN()</A>
+<LI><A NAME="tex2html708"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234300000000000000">MAX()</A>
+<LI><A NAME="tex2html709"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234400000000000000">AVG()</A>
+<LI><A NAME="tex2html710"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234500000000000000">COUNT()</A>
+<LI><A NAME="tex2html711"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234600000000000000">GROUP BY - Gruppen bilden</A>
+<LI><A NAME="tex2html712"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234700000000000000">HAVING - Einschränkungen nach Gruppenfunktionen</A>
+<LI><A NAME="tex2html713"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00234800000000000000">Besonderheiten bei NULL und AVG</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html714"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00235000000000000000">Übungen 03</A>
+<LI><A NAME="tex2html715"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00236000000000000000">Unterabfragen</A>
+<UL>
+<LI><A NAME="tex2html716"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00236100000000000000">Inline View</A>
+<LI><A NAME="tex2html717"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00236200000000000000">IN</A>
+<LI><A NAME="tex2html718"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00236300000000000000">ANY</A>
+<LI><A NAME="tex2html719"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00236400000000000000">ALL</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html720"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00237000000000000000">Top-N Analyse</A>
+<LI><A NAME="tex2html721"
+  HREF="Komplexere_SQL_Abfragen.html#SECTION00238000000000000000">Übungen 05</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+
+<H1><A NAME="SECTION00230000000000000000">
+Komplexere SQL-Abfragen</A>
+</H1>
+
+<H2><A NAME="SECTION00231000000000000000"></A>
+<A NAME="844"></A>
+<A NAME="845"></A>
+<BR>
+JOIN - Verbinden von Tabellen
+</H2>
+Unter einem Join versteht man das mathematische Mittel der Projektion.
+Dies bedeutet, dass die Ergebnismenge sich aus Spalten verschiedener Tabellen zusammensetzt.
+Nehmen wir einmal an, es gebe die Tabellen Kunden, Bestellungen und Produkte. 
+Nun wollen Sie wissen, welcher Kunde (Kundenname) welches Produkt (Produktname) bestellt hat.
+Da diese Informationen sich in diesem Fall &#252;ber drei Tabellen verteilen, ist eine Abfrage &#252;ber alle beteiligten Tabellen notwendig.
+
+<H3><A NAME="SECTION00231100000000000000"></A>
+<A NAME="847"></A>
+<A NAME="848"></A>
+<A NAME="849"></A>
+<A NAME="850"></A>
+<A NAME="851"></A>
+<BR>
+Arten
+</H3>
+
+<P>
+Es gibt zwei Hauptarten:
+
+<UL>
+<LI>EQUIJOIN
+</LI>
+<LI>NON-EQUIJOIN
+</LI>
+</UL> 
+Weiterhin gibt es noch JOIN-Methoden:
+
+<UL>
+<LI>outer join
+</LI>
+<LI>self join
+</LI>
+<LI>set operators
+</LI>
+</UL> 
+Beachte den Unterschied zwischen full outer join und cross join (Kreuzprodukt, kartesisches Produkt).
+Ein cross join entsteht durch Angabe einer zu geringen Anzahl von Join-Bedingungen (mind. Tabellenanzahl-1).
+Ein full outer join  liefert zus&#228;tzlich nichtverkn&#252;pfte Zeilen aus beiden Tabellen.
+
+<H3><A NAME="SECTION00231200000000000000"></A>
+<A NAME="857"></A>
+<A NAME="858"></A>
+<BR>
+EQUIJOIN &#252;ber zwei Tabellen
+</H3>
+Bei einem EQUIJOIN wird auf Gleichheit getestet.
+Anhand des Beispiels Mitarbeiter (emp) und Abteilung (dept) soll dieser Sachverhalt dargestellt werden.
+Als Ergebnis wird eine Menge gew&#252;nscht, in der in der ersten Spalte der Mitarbeitername (ename aus emp) und in der zweiten Spalte der Abteilungsname (dname aus dept) angezeigt wird.
+Nat&#252;rlich soll immer der zu diesem Mitarbeiter geh&#246;rende korrekte Abteilungsname angezeigt werden.
+Schauen wir uns die beiden beteiligten Tabellen etwas genauer an
+
+<P>
+In der Tabelle emp gibt es eine Spalte deptno, die der Abteilungsnummer entspricht.
+Diese Spalte entspricht der Spalte deptno in der Tabelle dept.
+Diese Entsprechung muss innerhalb der Abfrage durch einen entsprechenden Ausdruck in einer Where-Klausel kenntlich gemacht werden (emp.deptno=dept.deptno).
+Die gew&#252;nschte Abfrage hierf&#252;r k&#246;nnte folgenderma&#223;en lauten:
+<PRE>
+select e.ename, d.dname 
+  from emp e, dept d 
+  where e.deptno = d.deptno
+;
+ENAME       DNAME
+------------------------
+SMITH       RESEARCH
+ALLEN       SALES
+WARD        SALES
+JONES       RESEARCH
+MARTIN      SALES
+BLAKE       SALES
+CLARK       ACCOUNTING
+SCOTT       RESEARCH
+KING        ACCOUNTING
+TURNER      SALES
+ADAMS       RESEARCH
+JAMES       SALES
+FORD        RESEARCH
+MILLER      ACCOUNTING
+</PRE>
+Betrachten wir dies Anweisung etwas genauer.
+Als erstes f&#228;llt auf, dass hier mit Aliasnamen f&#252;r die Tabellennamen gearbeitet wurde. 
+Das ist vor allem bei Abfragen &#252;ber mehrere Tabellen bzw. sehr langen Tabellennamen angenehmer und mit weniger Schreibarbeit verbunden.
+Aliasnamen werden vergeben, indem hinter den Tabellennamen in der From-Klausel einfach der Aliasname geschrieben wird.
+Da Abfragen nicht 'von links nach rechts' abgearbeitet werden, sondern ein konkreter Ausf&#252;hrungsplan erstellt wird, also die Abfrage als Ganzes ausgef&#252;hrt wird, k&#246;nnen die Aliasnamen &#252;berall in der Abfrage verwendet werden.
+Anstelle von der obigen Abfrage k&#246;nnten Sie hier auch die folgende Abfrage schreiben.
+<PRE>
+select ename, dname from emp e, dept d where e.deptno = d.deptno;
+</PRE>
+schreiben, da die Spaltennamen in der Menge der verbundenen Tabellen eindeutig sind.
+Das hei&#223;t, es gibt in allen an diesem JOIN beteiligten Tabellen nur eine Spalte namens ename und auch nur eine Spalte namens dname.
+In der Praxis hat es sich jedoch prim&#228;r aus Gr&#252;nden der &#220;bersichtlichkeit eingeb&#252;rgert, auch bei eindeutigen Spaltennamen den jeweiligen Aliasnamen voranzustellen.
+Die Lesbarkeit wird hierdurch stark gesteigert.
+W&#252;rden Sie keine Aliasnamen f&#252;r die beteiligten Tabellen verwenden, so k&#246;nnte die Abfrage folgenderma&#223;en aussehen:
+<PRE>
+select emp.ename, dept.dname from emp, dept 
+  where emp.deptno = dept.deptno
+;
+</PRE>
+Auch hierbei k&#246;nnten Sie aus den oben beschriebenen Gr&#252;nden zwischen SELECT und FROM den Tabellennamen weglassen. 
+Schauen wir uns den internen Ablauf der Abfrage etwas ausf&#252;hrlicher an.
+Zuerst wird der erste Datensatz aus der Tabelle emp extrahiert:
+<PRE>
+Empno ename ...  deptno
+7369  Smith ...  20
+</PRE>
+Nun wird in der Tabelle dept nach der deptno 20 gesucht.
+Wird in der Tabelle der Datensatz mit der deptno 20 gefunden, so werden diese beiden Datens&#228;tze in der Ergebnismenge verbunden.
+
+<P>
+Tabelle emp 
+<BR>
+Tabelle dept 
+<BR>
+Empno ename ... deptno deptno dname loc 
+<BR>
+7369 Smith ... 20 20 research dallas 
+<BR>
+<P>
+Da deptno der Prim&#228;rschl&#252;ssel der Tabelle dept ist, braucht nicht weiter gesucht zu werden.
+Als n&#228;chsten Schritt wird der zweite Datensatz aus der Tabelle emp extrahiert.
+<PRE>
+Empno ename ...  deptno
+7499 Allan ...  30
+</PRE>
+Nun wird in der Tabelle dept nach der deptno 30 gesucht.
+Wird in der Tabelle der Datensatz mit der deptno 30 gefunden, so werden diese beiden Datens&#228;tze in der Ergebnismenge verbunden.
+
+<P>
+Tabelle emp 
+<BR>
+Tabelle dept 
+<BR>
+Empno ename ... deptno deptno dname loc 
+<BR>
+7369 Smith ...  20 20 research dallas 
+<BR>
+7499 Allan ...  30 30 sales Chicago 
+<BR>
+<P>
+Dieser Prozess durchl&#228;uft alle Datens&#228;tze der Tabelle emp. 
+Wichtig hierbei ist, dass nur Datens&#228;tze, die tats&#228;chlich in Beziehung stehen, in der Ergebnismenge auftauchen.
+In unserem Beispiel f&#252;hrt das dazu, dass die Abteilung mit der Nummer 40 in der Ergebnismenge gar nicht auftaucht, da es hierf&#252;r keinen Mitarbeiter gibt. Eine leere Abteilung sozusagen.
+
+<H3><A NAME="SECTION00231300000000000000"></A>
+<A NAME="870"></A>
+<BR>
+EQUIJOIN &#252;ber mehr als zwei Tabellen
+</H3>
+Nehmen wir einmal an, es g&#228;be eine weitere Tabelle, welche die Dienstwagentypen in Abh&#228;ngigkeit der Position bzw. des Jobs darstellt.
+
+<P>
+Als Ergebnis wollen Sie den Namen des Mitarbeiters und der Abteilung, in der er arbeitet und zus&#228;tzlich noch den Dienstwagentyp ermitteln. Die Daten der Ergebnismenge erstrecken sich demnach &#252;ber die drei Tabellen Mitarbeiter (emp), Abteilung (dept) und Dienstwagen (official_car).
+Die beiden Tabellen Mitarbeiter (emp) und Abteilung (dept) sind &#252;ber die jeweilige Abteilungsnummer (deptno), die in beiden Tabellen steht, verbunden.
+Die beiden Tabellen Mitarbeiter (emp) und Dienstwagen (official_car) sind &#252;ber den Job auf Seiten der Tabelle Mitarbeiter (emp) und &#252;ber Position auf Seiten der Tabelle official_car. 
+Wir haben folglich zwei WHERE-Kriterien, die beide gelten m&#252;ssen.
+Infolgedessen werden diese beiden WHERE-Kriterien durch ein AND verbunden.
+Die Anweisung k&#246;nnte folgenderma&#223;en aussehen.
+<PRE>
+select d.dname,e.ename,e.job,oc.typ 
+  from official_car oc,emp e, dept d 
+  where oc.position=e.job and e.deptno=d.deptno
+;
+DNAME       ENAME       JOB         TYP
+---------- ---------- ---------- --------------------
+RESEARCH    JONES       MANAGER     BMW 7er
+ACCOUNTING  CLARK       MANAGER     BMW 7er
+SALES       BLAKE       MANAGER     BMW 7er
+ACCOUNTING  KING        PRESIDENT   Mercedes SL
+SALES       ALLEN       SALESMAN    BMW 3er
+SALES       MARTIN      SALESMAN    BMW 3er
+SALES       TURNER      SALESMAN    BMW 3er
+SALES       WARD        SALESMAN    BMW 3er
+</PRE>
+Auch hier wird wieder ein Aliasname f&#252;r die beteiligten Tabellen benutzt.
+Die Ergebnismenge k&#246;nnte in unserem Beispiel folgenderma&#223;en aussehen:
+
+<P>
+Vereinfacht kann man sagen, dass in der Regel eine Abfrage, die auf Daten von X verschiedenen Tabellen zugreift, X-1 verschiedene WHERE-Kriterien vonn&#246;ten sind.
+Zu beachten ist auch hier, dass die Jobs, denen keine Dienstwagen zustehen (Clerk etc.), auch nicht in der Ergebnismenge auftauchen.
+
+<P>
+<A NAME="873"></A>
+<A NAME="874"></A>
+Hinweis: 
+<BR>
+Bei der Anzahl der WHERE-Kriterien ist nicht entscheidend, wie viel Spalten ausgegeben werden.
+Nehmen wir uns das obere Beispiel.
+Angenommen, sie wollen lediglich wissen, welche Dienstwagen in welchen Abteilungen zur Verf&#252;gung stehen, nicht jedoch die Mitarbeiter.
+Auch in diesem Fall ist ein Join &#252;ber alle drei Tabellen notwendig, um die richtige Ergebnismenge zu erhalten.
+Zwischen der Tabelle Abteilung und Dienstwagen allein gibt es kein zutreffendes WHERE-Kriterium.
+Somit w&#252;rde auch in diesem Falle die Abfrage so aussehen:
+<PRE>
+select d.dname,oc.typ 
+  from official_car oc,emp e, dept d 
+  where oc.position = e.job and e.deptno = d.deptno
+;
+</PRE>
+Der lieben Ordnung wegen w&#228;re hier noch, um Duplikate bei der Ausgabe auszuschlie&#223;en, ein DISTINCT das Mittel der Wahl:
+<PRE>
+select DISTINCT d.dname,oc.typ 
+  from official_car oc,emp e, dept d 
+  where oc.position = e.job and e.deptno = d.deptno
+;
+DNAME       TYP
+-------------------------
+ACCOUNTING  BMW 7er
+ACCOUNTING  Mercedes SL
+RESEARCH    BMW 7er
+SALES       BMW 3er
+SALES       BMW 7er
+</PRE>
+<H3><A NAME="SECTION00231400000000000000"></A>
+<A NAME="880"></A>
+<A NAME="881"></A>
+<BR>
+Non-Equijoins
+</H3>
+Wenn keine Spalte einer Tabelle mit einer Spalte einer anderen Tabelle direkt korrespondiert, dann ist nur ein Non-Equijoin m&#246;glich.
+
+<H3><A NAME="SECTION00231500000000000000"></A>
+<A NAME="883"></A>
+<A NAME="884"></A>
+<A NAME="885"></A>
+<A NAME="886"></A>
+<A NAME="887"></A>
+<BR>
+OUTER JOIN
+</H3>
+Bei einem OUTER JOIN werden nicht nur die Datens&#228;tze angezeigt, die in direkter Beziehung zueinander stehen, sondern auch Datens&#228;tze, die keinen direkten Bezug zu Datens&#228;tzen der anderen Tabelle haben.
+Als Beispiel betrachten wir die Tabellen Mitarbeiter (emp) und Abteilung (dept).
+Wie wir im vorigen Beispiel gesehen haben, gibt es keinen Mitarbeiter, der zur Abteilung Nummer 40 geh&#246;rt.
+Dieser wird daher auch bei einem normalen JOIN nicht in der Ergebnismenge angezeigt.
+Es kann jedoch durchaus sein, dass Sie auch die Abteilung / Abteilungen in der Ergebnismenge sehen wollen, die keine direkte Beziehung zu einem Mitarbeiter haben, also die zur Zeit leeren Abteilungen.
+Genau hier kommt der OUTER JOIN zum Einsatz.
+<PRE>
+select e.ename,d.dname 
+  from emp e,dept d 
+  where e.deptno(+) = d.deptno
+;
+ENAME       DNAME
+----------  ----------
+CLARK       ACCOUNTING
+KING        ACCOUNTING
+MILLER      ACCOUNTING
+SMITH       RESEARCH
+ADAMS       RESEARCH
+FORD        RESEARCH
+SCOTT       RESEARCH
+JONES       RESEARCH
+ALLEN       SALES
+BLAKE       SALES
+MARTIN      SALES
+JAMES       SALES
+TURNER      SALES
+WARD        SALES
+            OPERATIONS
+</PRE>
+Durch das PLUS-Zeichen wird erreicht, dass alle Datens&#228;tze der dem PLUS gegen&#252;berliegenden Tabelle in die Ergebnismenge aufgenommen werden, egal, ob es eine direkte Verbindung gibt oder nicht.
+Im Ergebnis k&#246;nnen Sie hier erkennen, dass die Abteilung OPERATIONS keine Mitarbeiter hat.
+W&#252;rde sich das PLUS-Zeichen an der gegen&#252;berliegenden Seite befinden, so w&#252;rden auch die Mitarbeiter angezeigt werden, die zu keiner Abteilung geh&#246;ren.
+
+<P>
+<PRE>
+select e.ename,d.dname 
+  from emp e,dept d 
+  where e.deptno = d.deptno(+)
+;
+</PRE>
+Mitarbeiter, die zu keiner Abteilung geh&#246;ren, gibt es in unserem Beispiel jedoch nicht.
+
+<H3><A NAME="SECTION00231600000000000000"></A>
+<A NAME="893"></A>
+<BR>
+OUTER JOIN Anwendungen
+</H3>
+Angenommen, Sie wollen herausfinden, in zu welcher Abteilung keine Mitarbeiter geh&#246;ren.
+Es sollten jedoch nur diese Datens&#228;tze in der Ergebnismenge erscheinen.
+Folgende Abfrage w&#252;rde das gew&#252;nschte Resultat bringen:
+<PRE>
+select e.ename,d.dname from emp e,dept d 
+  where e.deptno(+) = d.deptno AND 
+        e.empno IS NULL
+;
+ENAME     DNAME
+--------------------
+          OPERATIONS
+</PRE>
+Wenn wir uns die Abfrage etwas genauer anschauen, so erkennen wir, dass zuerst alle Datens&#228;tze aus der Tabelle Abteilung (dept) in die Ergebnismenge aufgenommen werden, egal, ob es eine direkte Verbindung zu Mitarbeitern gibt oder nicht. 
+
+<P>
+<PRE>
+ENAME       DNAME
+------------------------
+CLARK       ACCOUNTING
+KING        ACCOUNTING
+MILLER      ACCOUNTING
+SMITH       RESEARCH
+ADAMS       RESEARCH
+FORD        RESEARCH
+SCOTT       RESEARCH
+JONES       RESEARCH
+ALLEN       SALES
+BLAKE       SALES
+MARTIN      SALES
+JAMES       SALES
+TURNER      SALES
+WARD        SALES
+NULL        OPERATIONS
+</PRE>
+<A NAME="898"></A>
+<A NAME="899"></A>
+<A NAME="900"></A>
+<A NAME="901"></A>
+<A NAME="902"></A>
+F&#252;r die Abteilungen, die keine Verbindung zu einem Mitarbeiter haben, sind alle dazugeh&#246;rigen Spalten der Tabelle Mitarbeiter (emp) NULL.
+Somit m&#252;ssen wir lediglich noch nach IS NULL bei den geeigneten Spalten der Tabelle Mitarbeiter (emp) einschr&#228;nken.
+Als geeignete Spalten gelten alle Spalten, die nicht NULL sein k&#246;nnen (als NOT NULL definiert wurden, siehe sp&#228;tere Kapitel).
+
+<H3><A NAME="SECTION00231700000000000000"></A>
+<A NAME="904"></A>
+<A NAME="905"></A>
+<A NAME="906"></A>
+<A NAME="907"></A>
+<A NAME="908"></A>
+<BR>
+Kreuzprodukt
+</H3>
+Unter einem Kreuzprodukt, auch Cartesian Product genannt, versteht man das Verbinden mehrerer Tabellen ohne Verbindungskriterium.
+Obgleich dies in den meisten F&#228;llen 'sinnlos' erscheint, wollen wir hier ein kleines Beispiel vorstellen.
+Angenommen, sie veranstalten eine Schachrunde, in der jeder Mitarbeiter gegen jeden antreten muss.
+Folgende Abfrage, mit Hilfe eines Kreuzproduktes oder im englischen CROSS JOIN, w&#252;rde die Partien ermitteln:
+<PRE>
+select e1.ename,e2.ename from emp e1, emp e2;
+</PRE>
+Diese Abfrage w&#252;rde jeden Namen aus der Tabelle e1 (entspricht emp) mit jedem Namen aus der Tabelle e2(entspricht ebenfalls emp) verbinden und in der Ergebnismenge aufnehmen.
+Da die Tabelle emp 14 Datens&#228;tze hat, werden in der Ergebnismenge 14 * 14 Datens&#228;tze erscheinen, also 196.
+Da die Mitarbeiter schlecht gegen sich selbst spielen k&#246;nnen, muss dieser Fakt noch ausgeschlossen werden.
+<PRE>
+select e1.ename,e2.ename from emp e1, emp e2 
+  where e1.ename &lt;&gt; e2.ename
+;
+</PRE>
+Folglich sollten 196 weniger 14 Datens&#228;tze in der Ergebnismenge erscheinen.
+Jeder gegen jeden - mit Hin- und R&#252;ckrunde!
+
+<P>
+<B>ACHTUNG</B>: 
+<BR>
+Oftmals benutzt man auch versehentlich ein Kreuzprodukt - wenn Sie zum Beispiel vergessen haben, ein WHERE-Kriterium zu definieren und es mehr als eine Tabelle hinter FROM gibt.
+Sollten Sie zwei Tabellen mit beispielsweise 10000 Datens&#228;tzen verbinden (Kreuzprodukt), so hat die Ergebnismenge 10000 * 10000 Datens&#228;tze, also 100 Millionen.
+&#220;brigens auch ein gutes Mittel zum Erzeugen von gro&#223;en Datenbest&#228;nden!
+
+<H3><A NAME="SECTION00231800000000000000"></A>
+<A NAME="915"></A>
+<A NAME="916"></A>
+<BR>
+SELF JOIN
+</H3>
+Unter einem SELF JOIN versteht man eine Verbindung einer Tabelle mit sich selbst.
+Dieser Join ist wohl der am schwersten zu verstehende JOIN, da eine Tabelle mit sich selbst verkn&#252;pft ist.
+
+<P>
+Um diesen SELF JOIN verst&#228;ndlich zu machen, benutzen wir das Beispiel der Tabelle Mitarbeiter (emp).
+In der Tabelle Mitarbeiter (emp) hat jeder Mitarbeiter eine Mitarbeiternummer empno und daneben noch die Mitarbeiternummer des Vorgesetzten (mgr). 
+
+<P>
+Schauen wir uns hierf&#252;r die Tabelle etwas genauer an.
+Herr Smith hat die Mitarbeiternummer(empno) 7369.
+Sein Vorgesetzter ist der Herr mit der Mitarbeiternummer 7902 (entspricht der Spalte MGR), also der Herr Ford.
+Herr ALLAN hat die Mitarbeiternummer(empno) 7499.
+Sein Vorgesetzter ist der Herr mit der Mitarbeiternummer 7698 (entspricht der Spalte MGR), also der Herr Blake.
+Auf diese Weise wird die gesamte Hierarchie der Firma abgebildet.
+Soll nun in einer Abfrage ermittelt werden, welcher Mitarbeiter welchen Vorgesetzten (jeweils den Namen) hat, so ist die eine Verbindung der Spalten Mitarbeiternummer (empno) und der Spalte Manager (mgr) ein und derselben Tabelle:
+<PRE>
+select mitarbeiter.ename as "Mitarbeiter",
+       vorgesetzter.ename as "Vorgesetzter" 
+  from 
+       emp mitarbeiter,
+       emp vorgesetzter 
+  where mitarbeiter.mgr = vorgesetzter.empno
+;
+Mitarbeiter Vorgesetzt
+-----------------------
+SMITH       FORD
+ALLEN       BLAKE
+WARD        BLAKE
+JONES       KING
+MARTIN      BLAKE
+BLAKE       KING
+CLARK       KING
+SCOTT       JONES
+TURNER      BLAKE
+ADAMS       SCOTT
+JAMES       BLAKE
+FORD        JONES
+MILLER      CLARK
+</PRE>
+Die Ergebnismenge w&#252;rde folgenderma&#223;en aussehen:
+Das einzige Manko ist, dass der Chef des Ganzen nat&#252;rlich keine MGR hat - und demnach auch nicht angezeigt wird.
+Aber auch hier kann man sich leicht helfen.
+Wir nutzen einfach das Konzept der Outer Joins.
+<PRE>
+SELECT mitarbeiter.ename  AS "Mitarbeiter", 
+       vorgesetzter.ename AS "Vorgesetzter" 
+   FROM emp Mitarbeiter, emp vorgesetzter 
+   WHERE mitarbeiter.mgr = vorgesetzter.empno(+)
+;
+Mitarbeiter  Vorgesetzter
+----------  ----------
+SMITH       FORD
+ALLEN       BLAKE
+WARD        BLAKE
+JONES       KING
+MARTIN      BLAKE
+BLAKE       KING
+CLARK       KING
+SCOTT       JONES
+KING
+TURNER      BLAKE
+ADAMS       SCOTT
+JAMES       BLAKE
+FORD        JONES
+MILLER      CLARK
+</PRE>
+Hierdurch wird erreicht, dass alle Mitarbeiter angezeigt werden, egal, ob diese auch einen Manager (Vorgesetzten) haben.
+Die Ergebnismenge w&#252;rde nunmehr folgenderma&#223;en ausschauen:
+
+<H2><A NAME="SECTION00232000000000000000"></A>
+<A NAME="922"></A>
+<A NAME="923"></A>
+<BR>
+Mengenoperationen
+</H2>
+
+<H3><A NAME="SECTION00232100000000000000"></A>
+<A NAME="925"></A>
+<A NAME="926"></A>
+<A NAME="927"></A>
+<A NAME="928"></A>
+<BR>
+MINUS
+</H3>
+Von der ersten Menge wird die zweite Menge abgezogen.
+MINUS verwendet DISTINCT.
+<PRE>
+select field1, field2, ... field_n from tables
+  MINUS
+select field1, field2, ... field_n from tables;
+</PRE>
+<PRE>
+select d.deptno from scott.dept d
+  minus
+select e.deptno from scott.emp e;
+</PRE>
+<H3><A NAME="SECTION00232200000000000000"></A>
+<A NAME="934"></A>
+<A NAME="935"></A>
+<A NAME="936"></A>
+<A NAME="937"></A>
+<BR>
+INTERSECT
+</H3>
+INTERSECT ergibt die &#220;berschneidungsmenge von Elementen, die zu beiden Mengen geh&#246;ren.
+<PRE>
+select field1, field2, ... field_n from tables
+  INTERSECT
+select field1, field2, ... field_n from tables;
+</PRE>
+<PRE>
+select distinct city from customers   
+  intersect  
+select distinct city from suppliers;
+</PRE>
+<H3><A NAME="SECTION00232300000000000000"></A>
+<A NAME="943"></A>
+<A NAME="944"></A>
+<A NAME="945"></A>
+<A NAME="946"></A>
+<BR>
+UNION
+</H3>
+Ergibt die Gesamtmenge beider Mengen.
+UNION verwendet DISTINCT.
+<PRE>
+select field1, field2, ... field_n from tables
+  UNION
+select field1, field2, ... field_n from tables;
+</PRE>
+<PRE>
+select supplier_id from suppliers
+  UNION
+select supplier_id from orders;
+</PRE>
+<H3><A NAME="SECTION00232400000000000000"></A>
+<A NAME="952"></A>
+<A NAME="953"></A>
+<A NAME="954"></A>
+<A NAME="955"></A>
+<BR>
+UNION ALL
+</H3>
+Ergibt die Gesamtmenge beider Mengen. 
+Im Gegensatz zu UNION wird kein DISTINCT verwendet.
+<PRE>
+select field1, field2, ... field_n from tables
+  UNION ALL
+select field1, field2, ... field_n from tables;
+</PRE>
+<PRE>
+select supplier_id from suppliers
+  UNION ALL
+select supplier_id from orders;
+</PRE>
+<H2><A NAME="SECTION00233000000000000000">
+&#220;bungen 04</A>
+</H2>
+&#220;bungen siehe Seite&nbsp;<A HREF="SQL_PL_Ubungen.html#_SQL-04_"><IMG  ALIGN="BOTTOM" BORDER="0" ALT="[*]"
+ SRC="http://rowa.giso.de/latexicons//crossref.png"></A>.
+
+<H2><A NAME="SECTION00234000000000000000"></A>
+<A NAME="963"></A>
+<BR>
+Gruppierungen
+</H2>
+Oftmals sollen nicht einzelne Werte zur&#252;ckgegeben werden, sondern Berechnungen &#252;ber Gruppen von Werten hinweg.
+
+<H3><A NAME="SECTION00234100000000000000"></A>
+<A NAME="965"></A>
+<BR>
+SUM()
+</H3>
+<PRE>
+SELECT sum(sal) AS "Summe der Gehälter" FROM emp;
+Summe der Gehälter
+------------------
+             29025
+</PRE>
+Ermittelt wird die Summe der Geh&#228;lter aller Mitarbeiter.
+
+<H3><A NAME="SECTION00234200000000000000"></A>
+<A NAME="969"></A>
+<BR>
+MIN()
+</H3>
+<PRE>
+select min(sal) AS "Kleinstes Gehalt" from emp;
+Kleinstes Gehalt
+----------------
+             800
+</PRE>
+Ermittelt wird das kleinste Gehalt aller Mitarbeiter.
+
+<H3><A NAME="SECTION00234300000000000000"></A>
+<A NAME="973"></A>
+<BR>
+MAX()
+</H3>
+<PRE>
+SELECT max(sal) AS "Größtes Gehalt" FROM emp;
+Größtes Gehalt
+--------------
+         5000
+</PRE>
+Ermittelt wird das gr&#246;&#223;te Gehalt aller Mitarbeiter.
+
+<H3><A NAME="SECTION00234400000000000000"></A>
+<A NAME="977"></A>
+<BR>
+AVG()
+</H3>
+<PRE>
+SELECT avg(sal) AS "Durchschnittsgehalt" FROM emp;
+Durchschnittsgehalt
+-------------------
+         2073,21429
+</PRE>
+Ermittelt wird das Durchschnittsgehalt aller Mitarbeiter.
+
+<H3><A NAME="SECTION00234500000000000000"></A>
+<A NAME="981"></A>
+<BR>
+COUNT()
+</H3>
+<PRE>
+SELECT COUNT(EMPNO) AS "Mitarbeiteranzahl" FROM emp;
+MITARBEITERANZAHL
+-----------------
+               14
+</PRE>
+Ermittelt wird die Anzahl der Eintr&#228;ge in der Spalte empno.
+Es wird also die Mitarbeiteranzahl ermittelt.
+Zu beachten ist hierbei, dass als COUNT-Kriterium eine Spalte genommen werden sollte, die nicht leer sein kann.
+Wird als COUNT-Kriterium eine NULL-Spalte benutzt, wird diese nicht mitgez&#228;hlt.
+Wenn diese Abfrage z.B. wie folgt w&#228;re, so w&#228;re das Ergebnis lediglich 4:
+
+<P>
+<PRE>
+SELECT COUNT(comm) AS "Mitarbeiteranzahl" FROM emp;
+MITARBEITERANZAHL
+-----------------
+                4
+</PRE>
+In 10 Datens&#228;tzen steht n&#228;mlich NULL in der Spalte comm.
+
+<H3><A NAME="SECTION00234600000000000000"></A>
+<A NAME="987"></A>
+<A NAME="988"></A>
+<BR>
+GROUP BY - Gruppen bilden
+</H3>
+Mit der SQL-Anweisung GROUP BY werden Datens&#228;tze zu Gruppen zusammengefasst.
+Die Gruppenfunktionen gelten dann lediglich f&#252;r die einzelnen Gruppen.
+Eine Gruppe ist durch die Identit&#228;t der Inhalte gekennzeichnet.
+Das bedeutet, wenn nach der Abteilungsnummer deptno in der Tabelle Mitarbeiter (emp) mit GROUP BY gruppiert wird, so werden jeweils Gruppen mit den gleichen Abteilungsnummern gebildet und die entsprechende Gruppenfunktion auf die gebildeten Gruppen angewendet.
+<PRE>
+SELECT deptno,avg(sal) as "Durchschnittsgehalt je Abt" 
+  FROM EMP group by deptno
+;
+DEPTNO  Durchschnittsgehalt je Abt
+----------------------------------
+10              2916,66667
+20              2175
+30              1566,66667
+</PRE>
+Durch die Gruppierung GROUP BY deptno werden jeweils Gruppen mit identischen Abteilungsnummern gebildet.
+&#220;ber diese Gruppen wird nun die Funktion ausgef&#252;hrt, also der Durchschnitt der Geh&#228;lter ermittelt.
+
+<H3><A NAME="SECTION00234700000000000000"></A>
+<A NAME="992"></A>
+<A NAME="993"></A>
+<A NAME="994"></A>
+<BR>
+HAVING - Einschr&#228;nkungen nach Gruppenfunktionen
+</H3>
+H&#228;ufig sollen nicht alle Gruppen ausgegeben werden.
+Wenn Sie nach Gruppenfunktionen einschr&#228;nken wollen, so ben&#246;tigen Sie die Anweisung HAVING.
+<PRE>
+SELECT deptno,avg(sal) as "Durchschnittsgehalt je Abt" 
+  FROM EMP group by deptno 
+    HAVING avg(sal) &gt; 2000
+;
+DEPTNO  Durchschnittsgehalt je Abt
+------------------------------------
+   10              2916,66667
+   20               2175
+</PRE>
+Auch hier wird das Durchschnittsgehalt je Abteilung ermittelt.
+Jedoch nur die Durchschnittsgeh&#228;lter, die &#252;ber 2000 liegen, werden ausgegeben.
+
+<H3><A NAME="SECTION00234800000000000000"></A>
+<A NAME="998"></A>
+<A NAME="999"></A>
+<A NAME="1000"></A>
+<A NAME="1001"></A>
+<BR>
+Besonderheiten bei NULL und AVG
+</H3>
+Die Funktion AVG zieht in die Berechnung des Durchschnittes lediglich die Zeilen ein, die nicht NULL in der entsprechenden Spalte sind. Dies f&#252;hrt zu folgendem Ergebnis:
+<PRE>
+select avg(comm) from emp;
+AVG(COMM)
+---------
+   550
+</PRE>
+Es gibt jedoch nur 4 Datens&#228;tze, in denen die Spalte Comm nicht NULL ist.
+In diesen Datens&#228;tzen ist die Spalte Comm 300, 500, 1400 und 0. Das Ergebnis von 550 ergibt sich demnach aus (300+500+1400+0) / 4. Sollen jedoch auch die Datens&#228;tze einbezogen werden, in denen Comm NULL ist, so k&#246;nnen Sie diese mit der Funktion NVL durch eine 0 ersetzen lassen.
+<PRE>
+select avg(nvl(comm,0)) from emp;
+AVG(NVL(COMM,0))
+----------------
+   157,142857
+</PRE>
+Durch die Funktion NVL(comm,0) werden NULL-Werte in der Spalte comm als 0 interpretiert.
+Demnach wird nun (300+500+1400+0+0+0+0+0+0+0+0+0+0+0) / 14 gerechnet.
+
+<H2><A NAME="SECTION00235000000000000000">
+&#220;bungen 03</A>
+</H2>
+&#220;bungen siehe Seite&nbsp;<A HREF="SQL_PL_Ubungen.html#_SQL-03_"><IMG  ALIGN="BOTTOM" BORDER="0" ALT="[*]"
+ SRC="http://rowa.giso.de/latexicons//crossref.png"></A>.
+
+<H2><A NAME="SECTION00236000000000000000"></A>
+<A NAME="1009"></A>
+<A NAME="1010"></A>
+<A NAME="1011"></A>
+<BR>
+Unterabfragen
+</H2>
+H&#228;ufig wollen Sie nicht das geringste Gehalt als Ergebnismenge, sondern den oder die Mitarbeiter, die das geringste Gehalt erhalten. 
+Hierf&#252;r leistet eine Unterabfrage gute Dienste.
+<PRE>
+select ename from emp where sal = 
+  (
+    select min(sal) from emp
+  )
+;
+</PRE>
+In der in Klammern eingeschlossenen Unterabfrage wird zuerst  das geringste Gehalt ermittelt (z.B. 800).
+Nun wird f&#252;r die Unterabfrage der ermittelte Wert eingesetzt.
+Somit lautet die Abfrage:
+<PRE>
+select ename from emp where sal = 800;
+ENAME
+------
+SMITH
+</PRE>
+Hierdurch wird der Name des oder der Mitarbeiter zur&#252;ckgegeben, der diese 800 verdient - die nat&#252;rlich wiederum dem geringsten Gehalt entsprechen.
+
+<H3><A NAME="SECTION00236100000000000000"></A>
+<A NAME="1017"></A>
+<BR>
+Inline View
+</H3>
+Inline Views sind Unterabfragen nach FROM.
+<PRE>
+select  a.last_name, a.salary, a.department_id, b.maxsal
+    FROM employees a,
+      (
+        SELECT department_id,max(salary) maxsal 
+          FROM employees 
+          GROUP BY department_id
+      ) b
+      WHERE a.department_id = department_id
+        AND a_salary &lt; b.maxsal
+;
+</PRE>
+<H3><A NAME="SECTION00236200000000000000"></A>
+<A NAME="1021"></A>
+<A NAME="1022"></A>
+<A NAME="1023"></A>
+<A NAME="1024"></A>
+<A NAME="1025"></A>
+<BR>
+IN
+</H3>
+Gibt die Unterabfrage mehr als einen Wert zur&#252;ck, so k&#246;nnen Sie nat&#252;rlich nicht auf Gleichheit oder Ungleichheit testen. 
+Hier m&#252;ssen Sie mit entsprechenden Operatoren, wie IN arbeiten.
+<PRE>
+select distinct d.dname from dept d 
+  where d.deptno in 
+   (
+     select distinct deptno from emp 
+       where job = 'SALESMAN' or job = 'MANAGER'
+   )
+;
+DNAME
+--------------
+ACCOUNTING
+RESEARCH
+SALES
+</PRE>
+In der Unterabfrage werden die Abteilungsnummern ermittelt, in denen Mitarbeiter der Positionen SALESMAN oder MANAGER arbeiten.
+In der &#228;u&#223;eren Abfrage  werden hierzu die  Abteilungsnamen ausgegeben.
+W&#252;rden Sie hier anstelle des IN ein = benutzen, so w&#252;rde ein Fehler ausgegeben werden:
+<PRE>
+FEHLER in Zeile 1: 
+ORA-01427: Unterabfrage für eine Zeile liefert mehr als eine Zeile
+</PRE>
+<H3><A NAME="SECTION00236300000000000000"></A>
+<A NAME="1031"></A>
+<A NAME="1032"></A>
+<A NAME="1033"></A>
+<A NAME="1034"></A>
+<A NAME="1035"></A>
+<BR>
+ANY
+</H3>
+Einer der Datens&#228;tze muss der Bedingung gen&#252;gen.
+<PRE>
+select * from employees where employeeid &gt; any
+  (select employeeid from orders)
+;
+</PRE>
+<H3><A NAME="SECTION00236400000000000000"></A>
+<A NAME="1039"></A>
+<A NAME="1040"></A>
+<A NAME="1041"></A>
+<A NAME="1042"></A>
+<A NAME="1043"></A>
+<BR>
+ALL
+</H3>
+Alle Datens&#228;tze m&#252;ssen der Bedingung gen&#252;gen (AND).
+<PRE>
+select * from employees where employeeid &gt; all
+  (select employeeid from orders)
+;
+</PRE>
+<H2><A NAME="SECTION00237000000000000000"></A>
+<A NAME="1047"></A>
+<A NAME="1048"></A>
+<BR>
+Top-N Analyse
+</H2>
+<PRE>
+select ROWNUM AS Rank, Name, Region, Sales from
+  (
+    select Name, Region, sum(Sales) AS Sales from Sales
+   GROUP BY Name, Region
+   order by sum(Sales) DESC
+  )
+  WHERE ROWNUM &lt;= 10
+;
+</PRE>
+Welche drei Mitarbeiter verdienen am besten?
+<PRE>
+select * from
+  (
+    select * from scott.emp order by SAL desc
+  )
+  where ROWNUM &lt; 4
+;
+</PRE>
+<H2><A NAME="SECTION00238000000000000000">
+&#220;bungen 05</A>
+</H2>
+&#220;bungen siehe Seite&nbsp;<A HREF="SQL_PL_Ubungen.html#_SQL-05_"><IMG  ALIGN="BOTTOM" BORDER="0" ALT="[*]"
+ SRC="http://rowa.giso.de/latexicons//crossref.png"></A>.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html688"
+  HREF="Data_Definition_Language.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="http://rowa.giso.de/latexicons//next.png"></A> <A NAME="tex2html689"
+  HREF="Data_Definition_Language.html">Data Definition Language (DDL)</A>
+<BR>
+
+<A NAME="tex2html682"
+  HREF="Einfuhrung_in_PL.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="http://rowa.giso.de/latexicons//up.png"></A> <A NAME="tex2html683"
+  HREF="Einfuhrung_in_PL.html">Einführung in PL / SQL Oracle 8i/9i</A>
+<BR>
+
+<A NAME="tex2html676"
+  HREF="Single_Row_Functions.html">
+<IMG WIDTH="20" HEIGHT="20" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="http://rowa.giso.de/latexicons//prev.png"></A> <A NAME="tex2html677"
+  HREF="Single_Row_Functions.html">Single Row Functions</A>
+<BR>
+ &nbsp <STRONG>  <A NAME="tex2html685"
+  HREF="Contents.html">Contents</A></STRONG>
+  &nbsp <STRONG>  <A NAME="tex2html687"
+  HREF="Index.html">Index</A></STRONG>
+ 
+<!--End of Navigation Panel-->
+<ADDRESS>
+<p><BR>
+<i>Stefan Hietel <a href="http://www.damago.de">dama.go GmbH</a>, Robert Warnke<A href="http://rowa.giso.de"> http://rowa.giso.de</A></i> 
+
+</ADDRESS>
+</BODY>
+</HTML>

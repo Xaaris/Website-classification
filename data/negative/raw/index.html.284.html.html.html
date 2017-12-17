@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+	<title>Plexmediaserver no longer start  - Plugins - openmediavault</title>
+	
+	<base href="https://forum.openmediavault.org/" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="This morning, after restarting omv, plexmediaserver does not want to start, I also tried uninstalling and reinstalling the plugin but the things does not change. Now if I try to enable it, upon reinstallation, it remains for hours on apply changes." />
+<meta name="keywords" content="OMV, OpenMediaVault, NAS, free, Open source, Linux, Debian, open, ssh, s.m.a.r.t., SMART, storage, samba, smb, cifs, daap, ftp, tftp, rsync, bittorrent, media, mdadm, raid, notification, nfs, iscsi, iscsi-target, freenas, alternative" />
+<meta property="og:site_name" content="openmediavault" />
+<meta property="og:title" content="Plexmediaserver no longer start - openmediavault" />
+<meta property="og:url" content="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="This morning, after restarting omv, plexmediaserver does not want to start, I also tried uninstalling and reinstalling the plugin but the things does not change. Now if I try to enable it, upon reinstallation, it remains for hours on apply changes." />
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="https://forum.openmediavault.org/wcf/style/style-3.css?m=1506460313" />
+
+
+<script>
+	//<![CDATA[
+	var SID_ARG_2ND	= '&s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597';
+	var WCF_PATH = 'https://forum.openmediavault.org/wcf/';
+	var SECURITY_TOKEN = 'ec45d60499f1a08e44a1c79339981317de2681a7';
+	var LANGUAGE_ID = 2;
+	var TIME_NOW = 1507650497;
+	var URL_LEGACY_MODE = true;
+	//]]>
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script>
+	//<![CDATA[
+	if (!window.jQuery) {
+		document.write('<script src="https://forum.openmediavault.org/wcf/js/3rdParty/jquery.min.js?v=1506460308"><\/script>');
+		document.write('<script src="https://forum.openmediavault.org/wcf/js/3rdParty/jquery-ui.min.js?v=1506460308"><\/script>');
+	}
+	//]]>
+</script>
+
+<script src="https://forum.openmediavault.org/wcf/js/WCF.Combined.min.js?v=1506460308"></script>
+
+
+
+
+
+
+<noscript>
+	<style type="text/css">
+		.jsOnly {
+			display: none !important;
+		}
+		
+		.noJsOnly {
+			display: block !important;
+		}
+	</style>
+</noscript>
+
+
+
+
+	
+	
+	
+
+
+
+
+
+        <!-- App Indexing for Google Search -->
+        <link href="android-app://com.quoord.tapatalkpro.activity/tapatalk/forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=google-indexing" rel="alternate" />
+        <link href="ios-app://307880732/tapatalk/forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=google-indexing" rel="alternate" />
+        
+        <meta property="al:android:package" content="com.quoord.tapatalkpro.activity" />
+        <meta property="al:android:url" content="tapatalk://forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=facebook-indexing" />
+        <meta property="al:android:app_name" content="Tapatalk" />
+        <meta property="al:ios:url" content="tapatalk://forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=facebook-indexing" />
+        <meta property="al:ios:app_store_id" content="307880732" />
+        <meta property="al:ios:app_name" content="Tapatalk" />
+        
+        <!-- twitter app card start-->
+        <!-- https://dev.twitter.com/docs/cards/types/app-card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tapatalk" />
+        <meta name="twitter:title" content="Plexmediaserver no longer start" />
+        <meta name="twitter:description" content="openmediavault" />
+        <meta name="twitter:image" content="https://forum.openmediavault.org/mobiquo/smartbanner/images/tapatalk-banner-logo.png" />
+        <meta name="twitter:app:id:iphone" content="307880732" />
+        <meta name="twitter:app:url:iphone" content="tapatalk://forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:ipad" content="307880732" />
+        <meta name="twitter:app:url:ipad" content="tapatalk://forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=twitter-indexing" />
+        <meta name="twitter:app:id:googleplay" content="com.quoord.tapatalkpro.activity" />
+        <meta name="twitter:app:url:googleplay" content="tapatalk://forum.openmediavault.org/?perpage=20&amp;location=topic&amp;tid=16971&amp;fid=13&amp;channel=twitter-indexing" />
+        <!-- twitter app card -->
+        <script>function onTapatalkBannerClosed(){null!==tapatalkStyleModification&&tapatalkStyleModification.parentNode.removeChild(tapatalkStyleModification)}function onTapatalkBannerShow(){tapatalkStyleModification=document.createElement('style'),tapatalkStyleModification.innerHTML='.userPanel{top:82px}',document.body.appendChild(tapatalkStyleModification)}var tapatalkStyleModification=null;</script>
+			
+<!--
+Secured by StopForumSpam
+Copyright (c) 2010-2017 by Sascha Greuel
+https://www.softcreatr.de
+-->
+
+			
+
+<!-- Icons -->
+<link rel="icon" href="https://forum.openmediavault.org/wcf/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="https://forum.openmediavault.org/wcf/images/apple-touch-icon.png" />
+
+
+	
+			<link rel="canonical" href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" />
+	
+	
+	
+</head>
+
+<body id="tplThread" data-template="thread" data-application="wbb">
+
+
+<a id="top"></a>
+
+
+
+<header id="pageHeader" class="layoutFluid">
+	<div>
+		<nav id="topMenu" class="userPanel">
+			<div class="layoutFluid">
+									<ul class="userPanelItems">
+						<!-- login box -->
+		<li id="userLogin">
+			<a class="loginLink" href="https://forum.openmediavault.org/index.php/Login/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Login or register</a>
+			<div id="loginForm" style="display: none;">
+								
+				<form method="post" action="https://forum.openmediavault.org/index.php/Login/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">
+					<fieldset>
+												
+						<dl>
+							<dt><label for="username">Username or Email Address</label></dt>
+							<dd>
+								<input type="text" id="username" name="username" value="" required="required" class="long" />
+							</dd>
+						</dl>
+						
+													<dl>
+								<dt>Are you already registered?</dt>
+								<dd>
+									<label><input type="radio" name="action" value="register" /> No, register now.</label>
+									<label><input type="radio" name="action" value="login" checked="checked" /> Yes, my password is:</label>
+								</dd>
+							</dl>
+												
+						<dl>
+							<dt><label for="password">Password</label></dt>
+							<dd>
+								<input type="password" id="password" name="password" value="" class="long" />
+							</dd>
+						</dl>
+						
+													<dl>
+								<dt></dt>
+								<dd><label><input type="checkbox" id="useCookies" name="useCookies" value="1" checked="checked" /> Remain logged in</label></dd>
+							</dl>
+												
+						
+						
+						<div class="formSubmit">
+							<input type="submit" id="loginSubmitButton" name="submitButton" value="Login" accesskey="s" />
+							<a class="button" href="https://forum.openmediavault.org/index.php/LostPassword/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Lost Password</span></a>
+							<input type="hidden" name="url" value="/index.php/Thread/16971-Plexmediaserver-no-longer-start/" />
+							<input type="hidden" name="t" value="ec45d60499f1a08e44a1c79339981317de2681a7" />						</div>
+					</fieldset>
+					
+									</form>
+			</div>
+			
+			
+		</li>
+				<li id="pageLanguageContainer">
+			
+		</li>
+					</ul>
+				
+				
+				
+				
+<aside id="search" class="searchBar dropdown" data-disable-auto-focus="true">
+	<form method="post" action="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;boardIDs%5B%5D=13&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">
+		<input type="search" name="q" placeholder="Search This Forum Only" autocomplete="off" required="required" value="" class="dropdownToggle" data-toggle="search" />
+		
+		<ul class="dropdownMenu">
+							<li class="dropdownText">
+					<label><input type="checkbox" name="subjectOnly" value="1" /> Search subject only</label><label><input type="checkbox" name="findThreads" value="1" /> Display results as threads</label>
+				</li>
+				<li class="dropdownDivider"></li>
+			
+			<li><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;boardIDs%5B%5D=13&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">More Options</a></li>
+		</ul>
+		
+		<input type="hidden" name="types[]" value="com.woltlab.wbb.post" /><input type="hidden" name="boardIDs[]" value="13" />		<input type="hidden" name="t" value="ec45d60499f1a08e44a1c79339981317de2681a7" />	</form>
+</aside>
+
+	
+			</div>
+		</nav>
+		
+		<div id="logo" class="logo">
+						
+			<a href="https://forum.openmediavault.org/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">
+									<img src="https://forum.openmediavault.org/wcf/images/openmediavault/full_logo_v2.png" alt="" />
+											</a>
+		</div>
+		
+		
+		
+			<nav id="mainMenu" class="mainMenu jsMobileNavigation" data-button-label="Navigation">
+		<ul>
+							<li data-menu-item="wcf.user.dashboard">
+					<a href="https://forum.openmediavault.org/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Dashboard</a>
+									</li>
+							<li class="active" data-menu-item="wbb.header.menu.board">
+					<a href="https://forum.openmediavault.org/index.php/BoardList/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Forum</a>
+											<ul class="invisible">
+															<li><a href="https://forum.openmediavault.org/index.php/BoardQuickSearch/?mode=undoneThreads&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Undone Threads</span></a></li>
+														
+						</ul>
+									</li>
+							<li data-menu-item="wcf.user.members">
+					<a href="https://forum.openmediavault.org/index.php/MembersList/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Members</a>
+									</li>
+					</ul>
+	</nav>
+		
+		
+		
+		<nav class="navigation navigationHeader">
+							<ul class="navigationMenuItems">
+							<li data-menu-item="wbb.header.menu.board.undoneThreads"><a href="https://forum.openmediavault.org/index.php/BoardQuickSearch/?mode=undoneThreads&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Undone Threads</span></a></li>
+						
+		</ul>
+					
+			<ul class="navigationIcons">
+				<li id="toBottomLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#bottom" title="Go to Page Bottom" class="jsTooltip"><span class="icon icon16 icon-arrow-down"></span> <span class="invisible">Go to Page Bottom</span></a></li>
+				<li id="sitemap" class="jsOnly"><a href="#" title="Sitemap" class="jsTooltip"><span class="icon icon16 icon-sitemap"></span> <span class="invisible">Sitemap</span></a></li>
+													</ul>
+		</nav>
+	</div>
+</header>
+
+
+
+<div id="main" class="layoutFluid">
+	<div>
+		<div>
+						
+																				
+			<section id="content" class="content">
+								
+				
+				
+					<nav class="breadcrumbs marginTop">
+		<ul>
+			<li title="openmediavault" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.openmediavault.org/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" itemprop="url"><span itemprop="title">openmediavault</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Forum" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.openmediavault.org/index.php/BoardList/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" itemprop="url"><span itemprop="title">Forum</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Installation" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.openmediavault.org/index.php/Board/6-Installation/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" itemprop="url"><span itemprop="title">Installation</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Plugins" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.openmediavault.org/index.php/Board/13-Plugins/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" itemprop="url"><span itemprop="title">Plugins</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+		</ul>
+	</nav>
+
+<header class="boxHeadline marginTop wbbThread labeledHeadline" data-thread-id="16971" data-is-link="0">
+	<h1>
+						
+		<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Plexmediaserver no longer start</a>
+	</h1>
+	
+			<ul class="statusIcons"></ul>
+	
+
+	
+			<ul class="labelList">
+							<li><span class="label badge blue">OMV 2.x</span></li>
+					</ul>
+		
+	
+</header>
+
+<div class="userNotice">
+		
+			<p class="info">This site uses cookies. By continuing to browse this site, you are agreeing to our <a href="https://forum.openmediavault.org/index.php/CookiePolicy/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Cookie Policy</a>.</p>
+		
+		
+	<noscript>
+		<p class="warning">Your browser has JavaScript disabled. If you would like to use all features of this site, it is mandatory to enable JavaScript.</p>
+	</noscript>
+	
+		
+		
+	</div>
+
+
+
+
+<div class="contentNavigation">
+		
+	<nav>
+		<ul class="jsThreadInlineEditorContainer" data-thread-id="16971" data-is-closed="0" data-is-sticky="0" data-is-disabled="0">
+												
+		</ul>
+	</nav>
+</div>
+
+<div class="marginTop">
+	<ul class="wbbThreadPostList messageList jsClipboardContainer" data-type="com.woltlab.wbb.post">
+										
+					
+	
+	
+			<li id="post134242" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134242" data-post-id="134242" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+						
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134242#post134242" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">1</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+									<h1>Plexmediaserver no longer start</h1>									<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134242#post134242" class="permalink"><time datetime="2017-01-11T12:25:22+01:00" class="datetime" data-timestamp="1484133922" data-date="Jan 11th 2017" data-time="12:25pm" data-offset="3600">Jan 11th 2017, 12:25pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																																									
+										This morning, after restarting omv, plexmediaserver does not want to start, I also tried uninstalling and reinstalling the plugin but the things does not change. Now if I try to enable it, upon reinstallation, it remains for hours on apply changes.									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134242" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134242&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134242"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+						
+				
+					
+							
+	
+	
+			<li id="post134244" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134244" data-post-id="134244" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134244#post134244" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">2</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134244#post134244" class="permalink"><time datetime="2017-01-11T13:04:04+01:00" class="datetime" data-timestamp="1484136244" data-date="Jan 11th 2017" data-time="1:04pm" data-offset="3600">Jan 11th 2017, 1:04pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										Look in the logs for an error.  They are in the <code class="inlineCode">Library/Application Support/Plex Media Server/Logs/</code> subdirectory of the plex home directory which you can find with <code class="inlineCode">getent password plex</code>									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134244" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134244&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134244"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134248" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134248" data-post-id="134248" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134248#post134248" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">3</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134248#post134248" class="permalink"><time datetime="2017-01-11T13:42:15+01:00" class="datetime" data-timestamp="1484138535" data-date="Jan 11th 2017" data-time="1:42pm" data-offset="3600">Jan 11th 2017, 1:42pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										I found out what was not starting the service and I solved temporarily, but when I try to enable the plugin by OMV remains locked to apply changes									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134248" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134248&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134248"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+							
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134252" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134252" data-post-id="134252" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134252#post134252" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">4</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134252#post134252" class="permalink"><time datetime="2017-01-11T14:11:10+01:00" class="datetime" data-timestamp="1484140270" data-date="Jan 11th 2017" data-time="2:11pm" data-offset="3600">Jan 11th 2017, 2:11pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										<div class="quoteBoxAuthor">
+	<div class="quoteAuthorAvatar"><a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink framed" data-user-id="12023"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 64px; height: 64px" alt="" class="userAvatarImage" /></a></div>
+	<blockquote class="quoteBox container containerPadding" cite="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134248#post134248">
+					<header>
+				<h3>
+											<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134248#post134248">Supersimo88 wrote:</a>
+									</h3>
+			</header>
+				
+		<div>
+			I found out what was not starting the service<br />
+		</div>
+	</blockquote>
+</div>
+What was causing it?  It might be the same thing that doesn't allow OMV to apply changes.  I don't use this plugin.  So, I need all the info I can get in order to fix it (if the plugin is actually causing the problem).									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134252" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134252&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134252"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134261" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134261" data-post-id="134261" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134261#post134261" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">5</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134261#post134261" class="permalink"><time datetime="2017-01-11T14:39:24+01:00" class="datetime" data-timestamp="1484141964" data-date="Jan 11th 2017" data-time="2:39pm" data-offset="3600">Jan 11th 2017, 2:39pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										the problem was on the Codecs folder, I created a link to that folder pointing to a folder &quot;/var/lib/plexmediaserver/Library/Application\ Support/Plex\ Media\ Server/&quot; because of the need to have execute permission to perform files transcoding.<br />
+<br />
+Since my library is on an external drive, that despite having tried to change noexec in exec in fstab does not allow the execution of the codec, leaving then transcodes impossible to run.<br />
+<br />
+<br />
+How other people solved this problem?<br />
+<br />
+Because now, having deleated the codecs folder plex start but I can not play virtually any file.The strange thing is that in my previous installation of OMV, before I broke the ODROID xu4, and the new one came in, I've always used without problems the codecs folder with links to another location to bypass the problem									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134261" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134261&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134261"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+						
+							
+						
+							
+					
+							
+	
+	
+			<li id="post134263" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134263" data-post-id="134263" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134263#post134263" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">6</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134263#post134263" class="permalink"><time datetime="2017-01-11T14:42:52+01:00" class="datetime" data-timestamp="1484142172" data-date="Jan 11th 2017" data-time="2:42pm" data-offset="3600">Jan 11th 2017, 2:42pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										The codec issue was something changed by plex.  If you want to make the data drive exec, you need to edit the mntent entry in /etc/openmediavault/config.xml and rewrite /etc/fstab with omv-mkconf fstab.									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																			<p class="wbbPostEditNote messageFooterNote">The post was edited 1 time, last by <a href="https://forum.openmediavault.org/index.php/User/4556/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556">ryecoaaron</a> (<time datetime="2017-01-11T14:50:17+01:00" class="datetime" data-timestamp="1484142617" data-date="Jan 11th 2017" data-time="2:50pm" data-offset="3600">Jan 11th 2017, 2:50pm</time>).</p>
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134263" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134263&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134263"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+							
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134265" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134265" data-post-id="134265" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134265#post134265" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">7</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134265#post134265" class="permalink"><time datetime="2017-01-11T14:44:30+01:00" class="datetime" data-timestamp="1484142270" data-date="Jan 11th 2017" data-time="2:44pm" data-offset="3600">Jan 11th 2017, 2:44pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										can you please explain?<br />
+<br />
+beacause i think that i've done this but it doesn't work, but i'm not shure that i've done thing right									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																			<p class="wbbPostEditNote messageFooterNote">The post was edited 1 time, last by <a href="https://forum.openmediavault.org/index.php/User/12023/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023">Supersimo88</a> (<time datetime="2017-01-11T14:52:12+01:00" class="datetime" data-timestamp="1484142732" data-date="Jan 11th 2017" data-time="2:52pm" data-offset="3600">Jan 11th 2017, 2:52pm</time>).</p>
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134265" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134265&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134265"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134266" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134266" data-post-id="134266" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134266#post134266" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">8</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134266#post134266" class="permalink"><time datetime="2017-01-11T14:50:55+01:00" class="datetime" data-timestamp="1484142655" data-date="Jan 11th 2017" data-time="2:50pm" data-offset="3600">Jan 11th 2017, 2:50pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										<div class="quoteBoxAuthor">
+	<div class="quoteAuthorAvatar"><a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink framed" data-user-id="12023"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 64px; height: 64px" alt="" class="userAvatarImage" /></a></div>
+	<blockquote class="quoteBox container containerPadding" cite="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134265#post134265">
+					<header>
+				<h3>
+											<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134265#post134265">Supersimo88 wrote:</a>
+									</h3>
+			</header>
+				
+		<div>
+			can you please explain?<br />
+		</div>
+	</blockquote>
+</div>
+Open /etc/openmediavault.config.xml<br />
+Go to mntent section<br />
+Find drive you want to change and remove noexec<br />
+save changes<br />
+Execute:  omv-mkconf fstab<br />
+reboot									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134266" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134266&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134266"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134268" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134268" data-post-id="134268" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134268#post134268" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">9</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134268#post134268" class="permalink"><time datetime="2017-01-11T14:53:22+01:00" class="datetime" data-timestamp="1484142802" data-date="Jan 11th 2017" data-time="2:53pm" data-offset="3600">Jan 11th 2017, 2:53pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										i have to remove complitly noexec or change it to exec?									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134268" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134268&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134268"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+							
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134269" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134269" data-post-id="134269" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134269#post134269" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">10</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134269#post134269" class="permalink"><time datetime="2017-01-11T14:56:21+01:00" class="datetime" data-timestamp="1484142981" data-date="Jan 11th 2017" data-time="2:56pm" data-offset="3600">Jan 11th 2017, 2:56pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										<div class="quoteBoxAuthor">
+	<div class="quoteAuthorAvatar"><a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink framed" data-user-id="12023"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 64px; height: 64px" alt="" class="userAvatarImage" /></a></div>
+	<blockquote class="quoteBox container containerPadding" cite="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134268#post134268">
+					<header>
+				<h3>
+											<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134268#post134268">Supersimo88 wrote:</a>
+									</h3>
+			</header>
+				
+		<div>
+			i have to remove complitly noexec or change it to exec?<br />
+		</div>
+	</blockquote>
+</div>
+Both work.  Removing it means the drive will be mounted executable because exec is default.									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134269" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134269&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134269"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+						
+							
+						
+							
+							
+					
+							
+	
+	
+			<li id="post134270" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134270" data-post-id="134270" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134270#post134270" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">11</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134270#post134270" class="permalink"><time datetime="2017-01-11T14:59:47+01:00" class="datetime" data-timestamp="1484143187" data-date="Jan 11th 2017" data-time="2:59pm" data-offset="3600">Jan 11th 2017, 2:59pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										i've done this with the exec method but it didn't work, I'm trying now completely removing noexec<br />
+<br />
+nothing, the codec doesn't start									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134270" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134270&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134270"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134271" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134271" data-post-id="134271" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134271#post134271" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">12</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134271#post134271" class="permalink"><time datetime="2017-01-11T15:03:11+01:00" class="datetime" data-timestamp="1484143391" data-date="Jan 11th 2017" data-time="3:03pm" data-offset="3600">Jan 11th 2017, 3:03pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										Not sure what to tell you.  I don't use plex.  I just read some of the thread about the codec / noexec issue.  You could also try running plex in a docker.									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134271" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134271&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134271"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+							
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134273" class="marginTop messageGroupStarter">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking3"
+				data-object-id="134273" data-post-id="134273" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="12023">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="12023" rel="author">
+						<span itemprop="name">Supersimo88</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 128px; height: 128px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge" itemprop="title">Beginner</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=12023&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by Supersimo88" class="jsTooltip">Posts</a></dt>
+	<dd>11</dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134273#post134273" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">13</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134273#post134273" class="permalink"><time datetime="2017-01-11T15:12:59+01:00" class="datetime" data-timestamp="1484143979" data-date="Jan 11th 2017" data-time="3:12pm" data-offset="3600">Jan 11th 2017, 3:12pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										I can not understand why this solves the problem to everyone except me, it seems as if it continued to be noexec									</div>
+									
+									
+								</div>
+								
+																
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134273" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134273&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134273"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+									
+						
+						
+							
+					
+							
+	
+	
+			<li id="post134275" class="marginTop">
+			<article class="wbbPost message messageSidebarOrientationLeft dividers jsClipboardObject jsMessage userOnlineGroupMarking5"
+				data-object-id="134275" data-post-id="134275" data-can-edit="0" data-can-edit-inline="0"
+								data-object-type="com.woltlab.wbb.likeablePost" data-like-liked="" data-like-likes="0" data-like-dislikes="0" data-like-users='{ }' data-user-id="4556">
+				
+				<div>
+					
+<aside class="messageSidebar member" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+	<div>
+								
+			<header>
+				<h2 class="username">
+					<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4556" rel="author">
+						<span itemprop="name">ryecoaaron</span>
+					</a>
+									</h2>
+				
+				
+			</header>
+			
+												<div class="userAvatar">
+												<a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="framed"><img itemprop="photo" src="https://forum.openmediavault.org/wcf/images/avatars/55/218-55886bfa1a2eaca5fb1222b12e50a81cfaefd776.jpg" style="width: 82px; height: 100px" alt="" class="userAvatarImage" /></a>
+						
+											</div>
+										
+												<div class="userTitle">
+						<p class="badge userTitleBadge blue" itemprop="title">Moderator</p>
+					</div>
+															
+		
+		
+									<div class="userCredits">
+					<dl class="plain dataList">
+						<dt><a href="https://forum.openmediavault.org/index.php/User/4556-ryecoaaron/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597#likes" class="jsTooltip" title="Display Likes Received by ryecoaaron">Likes Received</a></dt>
+								<dd>1,563</dd>
+														
+															<dt><a href="https://forum.openmediavault.org/index.php/Search/?types%5B%5D=com.woltlab.wbb.post&amp;userID=4556&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Display Posts by ryecoaaron" class="jsTooltip">Posts</a></dt>
+	<dd>20,346</dd>
+																																																															<dt>Website</dt>
+											<dd><a href="http://omv-extras.org" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">http://omv-extras.org</a></dd>
+																																																																																																																						<dt>Twitter</dt>
+											<dd><a href="http://twitter.com/ryecoaaron" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">ryecoaaron</a></dd>
+					</dl>
+				</div>
+			
+				
+		
+	</div>
+</aside>
+					
+					<section class="messageContent">
+						<div>
+							<header class="messageHeader">
+								<ul class="messageQuickOptions">
+																		
+																			<li><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134275#post134275" class="badge jsTooltip jsButtonShare" title="Share" data-link-title="Plexmediaserver no longer start">14</a></li>
+																		
+																	</ul>
+								
+								<div class="messageHeadline">
+																		<p>
+										<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134275#post134275" class="permalink"><time datetime="2017-01-11T15:30:50+01:00" class="datetime" data-timestamp="1484145050" data-date="Jan 11th 2017" data-time="3:30pm" data-offset="3600">Jan 11th 2017, 3:30pm</time></a>
+									</p>
+								</div>
+								
+																
+								
+							</header>
+							
+							<div class="messageBody">
+								<div>
+																		
+									
+									
+									<div class="messageText">
+																				
+										<div class="quoteBoxAuthor">
+	<div class="quoteAuthorAvatar"><a href="https://forum.openmediavault.org/index.php/User/12023-Supersimo88/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink framed" data-user-id="12023"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 64px; height: 64px" alt="" class="userAvatarImage" /></a></div>
+	<blockquote class="quoteBox container containerPadding" cite="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134273#post134273">
+					<header>
+				<h3>
+											<a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/?postID=134273#post134273">Supersimo88 wrote:</a>
+									</h3>
+			</header>
+				
+		<div>
+			it seems as if it continued to be noexec<br />
+		</div>
+	</blockquote>
+</div>
+Make permissions on your library are wrong?  If you uninstall then reinstall, it doesn't change your library if you re-use it.									</div>
+									
+									
+								</div>
+								
+																
+																	<div class="messageSignature">
+										<div>omv 4.0.6 arrakis | 64 bit | 4.12 backports kernel | omvextrasorg 4.1.0<br />
+omv-extras.org plugins source code and issue tracker - <a href="https://github.com/OpenMediaVault-Plugin-Developers" class="externalURL" rel="nofollow noopener noreferrer" target="_blank">github.com/OpenMediaVault-Plugin-Developers</a><br />
+<br />
+Please don't PM for support...  Too many PMs!</div>
+									</div>
+																
+								
+								
+								<div class="messageFooter">
+																		
+																		
+																		
+																		
+									
+								</div>
+								
+								<footer class="messageOptions">
+									<nav class="jsMobileNavigation buttonGroupNavigation">
+										<ul class="smallButtons buttonGroup">
+																																	<li class="jsQuoteMessage" data-object-id="134275" data-is-quoted="0"><a rel="nofollow" href="https://forum.openmediavault.org/index.php/PostAdd/16971/?quoteMessageID=134275&amp;s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="Quote" class="button jsTooltip"><span class="icon icon16 icon-quote-left"></span> <span class="invisible">Quote</span></a></li>
+											<li class="jsReportPost jsOnly" data-object-id="134275"><a href="#" title="Report Content" class="button jsTooltip"><span class="icon icon16 icon-warning-sign"></span> <span class="invisible">Report Content</span></a></li>																						
+											<li class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="button jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+										</ul>
+									</nav>
+								</footer>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</li>
+		
+	
+	
+															<li>
+						<div class="wcfAdLocation wbbAdLocationPostList wbbAdLocationAfterEvery2ndPost"><div><script type="text/javascript">
+    google_ad_client = "ca-pub-3480015648581648";
+    google_ad_slot = "3470404608";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- 728x90 minimalistic -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+					</li>
+				
+						
+						
+						
+							
+					
+							</ul>
+</div>
+
+<div class="contentNavigation">
+		
+	
+	
+	<nav class="jsClipboardEditor" data-types="[ 'com.woltlab.wbb.post' ]"></nav>
+</div>
+
+	<div class="container marginTop">
+		<ul class="containerList infoBoxList">
+			<li class="box32 wbbSimilarThreadList">
+						<span class="icon icon32 icon-info-sign"></span>
+						
+						<div>
+							<div class="containerHeadline">
+								<h3>Similar Threads</h3>
+							</div>
+							
+							<ul class="containerBoxList tripleColumned">
+																	<li>
+										<div class="box48">
+											<a href="https://forum.openmediavault.org/index.php/Thread/16954-Plex-plugin-no-longer-starting/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="fitur" class="framed"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 48px; height: 48px" alt="" class="userAvatarImage" /></a>
+										
+											<div>
+												<p>
+													<a href="https://forum.openmediavault.org/index.php/Thread/16954-Plex-plugin-no-longer-starting/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"  class="wbbTopicLink" data-thread-id="16954">Plex plugin no longer starting</a>
+												</p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/User/3612-fitur/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="3612">fitur</a>													- <time datetime="2017-01-10T13:05:09+01:00" class="datetime" data-timestamp="1484049909" data-date="Jan 10th 2017" data-time="1:05pm" data-offset="3600">Jan 10th 2017, 1:05pm</time>												</small></p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/Board/13-Plugins/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Plugins</a>
+												</small></p>
+											</div>
+										</div>
+									</li>
+																	<li>
+										<div class="box48">
+											<a href="https://forum.openmediavault.org/index.php/Thread/13824-Fire-TV-client-issues-with-Emby-and-PlexMediaServer/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="tekkb" class="framed"><img src="https://forum.openmediavault.org/wcf/images/avatars/c6/220-c6279f78ef8802ab299c0ddacc7e38455cc68fec.jpg" srcset="https://forum.openmediavault.org/wcf/images/avatars/c6/220-c6279f78ef8802ab299c0ddacc7e38455cc68fec.jpg 2x" style="width: 48px; height: 48px" alt="" class="userAvatarImage" /></a>
+										
+											<div>
+												<p>
+													<a href="https://forum.openmediavault.org/index.php/Thread/13824-Fire-TV-client-issues-with-Emby-and-PlexMediaServer/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"  class="wbbTopicLink" data-thread-id="13824">Fire TV client issues with Emby and PlexMediaServer</a>
+												</p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/User/4563-tekkb/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="4563">tekkb</a>													- <time datetime="2016-05-13T23:20:55+02:00" class="datetime" data-timestamp="1463174455" data-date="May 13th 2016" data-time="11:20pm" data-offset="7200">May 13th 2016, 11:20pm</time>												</small></p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/Board/29-Guides/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Guides</a>
+												</small></p>
+											</div>
+										</div>
+									</li>
+																	<li>
+										<div class="box48">
+											<a href="https://forum.openmediavault.org/index.php/Thread/13443-Plex-Media-Server-error-on-reinstall/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" title="seriousrick" class="framed"><img src="https://forum.openmediavault.org/wcf/images/avatars/avatar-default.svg" style="width: 48px; height: 48px" alt="" class="userAvatarImage" /></a>
+										
+											<div>
+												<p>
+													<a href="https://forum.openmediavault.org/index.php/Thread/13443-Plex-Media-Server-error-on-reinstall/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"  class="wbbTopicLink" data-thread-id="13443">Plex Media Server - error on reinstall</a>
+												</p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/User/7660-seriousrick/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597" class="userLink" data-user-id="7660">seriousrick</a>													- <time datetime="2016-04-06T20:02:29+02:00" class="datetime" data-timestamp="1459965749" data-date="Apr 6th 2016" data-time="8:02pm" data-offset="7200">Apr 6th 2016, 8:02pm</time>												</small></p>
+												<p><small>
+													<a href="https://forum.openmediavault.org/index.php/Board/13-Plugins/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Plugins</a>
+												</small></p>
+											</div>
+										</div>
+									</li>
+															</ul>
+						</div>
+					</li>
+		</ul>
+	</div>
+
+
+				
+				
+					<nav class="breadcrumbs marginTop">
+		<ul>
+			<li title="openmediavault">
+						<a href="https://forum.openmediavault.org/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>openmediavault</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Forum">
+						<a href="https://forum.openmediavault.org/index.php/BoardList/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Forum</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Installation">
+						<a href="https://forum.openmediavault.org/index.php/Board/6-Installation/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Installation</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+									<li title="Plugins">
+						<a href="https://forum.openmediavault.org/index.php/Board/13-Plugins/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597"><span>Plugins</span></a> <span class="pointer"><span>&raquo;</span></span>
+					</li>
+		</ul>
+	</nav>
+				
+																</section>
+			
+					</div>
+	</div>
+</div>
+
+<footer id="pageFooter" class="layoutFluid footer">
+	<div>
+		<nav id="footerNavigation" class="navigation navigationFooter">
+				<ul class="navigationMenuItems">
+					<li data-menu-item="wcf.footer.menu.termsOfUse"><a href="https://forum.openmediavault.org/index.php/Terms/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Terms of use</a></li>
+					<li data-menu-item="wcf.page.privacyPolicy"><a href="https://forum.openmediavault.org/index.php/PrivacyPolicy/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Privacy Policy</a></li>
+					<li data-menu-item="wcf.footer.menu.legalNotice"><a href="https://forum.openmediavault.org/index.php/LegalNotice/?s=93208b8bf3740e5d13af7fc93ba60eedcdfa1597">Legal Notice</a></li>
+			</ul>
+			
+			<ul class="navigationIcons">
+				<li id="toTopLink" class="toTopLink"><a href="https://forum.openmediavault.org/index.php/Thread/16971-Plexmediaserver-no-longer-start/#top" title="Go to Page Top" class="jsTooltip"><span class="icon icon16 icon-arrow-up"></span> <span class="invisible">Go to Page Top</span></a></li>
+				
+			</ul>
+			
+			<ul class="navigationItems">
+									<li title="(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"><p><span class="icon icon16 icon-time"></span> <span>Oct 10th 2017, 5:48pm</span></p></li>
+								
+			</ul>
+		</nav>
+		
+		<div class="footerContent">
+			
+			
+						
+			<address class="copyright marginTop"><a href="http://www.woltlab.com" target="_blank">Forum Software: <strong>Burning Board&reg;</strong>, developed by <strong>WoltLab&reg; GmbH</strong></a></address>		</div>
+		
+								</div>
+</footer>
+
+
+
+<script>
+	WCF.User.init(0, '');
+	
+	WCF.Language.addObject({
+		'__days': [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+		'__daysShort': [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+		'__months': [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ], 
+		'__monthsShort': [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+		'wcf.clipboard.item.unmarkAll': 'Unmark All',
+		'wcf.date.relative.now': 'A moment ago',
+		'wcf.date.relative.minutes': '{if $minutes > 1}{#$minutes} minutes{else}A minute{\/if} ago',
+		'wcf.date.relative.hours': '{if $hours > 1}{#$hours} hours{else}An hour{\/if} ago',
+		'wcf.date.relative.pastDays': '{if $days > 1}{$day}{else}Yesterday{\/if}, {$time}',
+		'wcf.date.dateFormat': 'M jS Y',
+		'wcf.date.dateTimeFormat': '%date%, %time%',
+		'wcf.date.shortDateTimeFormat': '%date%',
+		'wcf.date.hour': 'Hour',
+		'wcf.date.minute': 'Minute',
+		'wcf.date.timeFormat': 'g:ia',
+		'wcf.date.firstDayOfTheWeek': '0',
+		'wcf.global.button.add': 'Add',
+		'wcf.global.button.cancel': 'Cancel',
+		'wcf.global.button.close': 'Close',
+		'wcf.global.button.collapsible': 'Expand and Collapse',
+		'wcf.global.button.delete': 'Delete',
+		'wcf.global.button.disable': 'Disable',
+		'wcf.global.button.disabledI18n': 'monolingual',
+		'wcf.global.button.edit': 'Edit',
+		'wcf.global.button.enable': 'Enable',
+		'wcf.global.button.hide': 'Hide',
+		'wcf.global.button.next': 'Next »',
+		'wcf.global.button.preview': 'Preview',
+		'wcf.global.button.reset': 'Reset',
+		'wcf.global.button.save': 'Save',
+		'wcf.global.button.search': 'Search',
+		'wcf.global.button.submit': 'Submit',
+		'wcf.global.button.upload': 'Upload',
+		'wcf.global.confirmation.cancel': 'Cancel',
+		'wcf.global.confirmation.confirm': 'OK',
+		'wcf.global.confirmation.title': 'Confirmation Required',
+		'wcf.global.decimalPoint': '.',
+		'wcf.global.error.timeout': 'Did not receive a response from server, request aborted.',
+		'wcf.global.form.error.empty': 'Please fill in this field.',
+		'wcf.global.form.error.greaterThan': 'The entered value has to be greater than {#$greaterThan}.',
+		'wcf.global.form.error.lessThan': 'The entered value has to be less than {#$lessThan}.',
+		'wcf.global.language.noSelection': 'No Selection',
+		'wcf.global.loading': 'Loading …',
+		'wcf.global.page.jumpTo': 'Go to Page',
+		'wcf.global.page.jumpTo.description': 'Enter a value between “1” and “#pages#”.',
+		'wcf.global.page.pageNavigation': 'Navigation',
+		'wcf.global.page.next': 'Next Page',
+		'wcf.global.page.previous': 'Previous Page',
+		'wcf.global.pageDirection': 'ltr',
+		'wcf.global.reason': 'Reason',
+		'wcf.global.sidebar.hideLeftSidebar': '',
+		'wcf.global.sidebar.hideRightSidebar': '',
+		'wcf.global.sidebar.showLeftSidebar': '',
+		'wcf.global.sidebar.showRightSidebar': '',
+		'wcf.global.success': 'The action completed successfully.',
+		'wcf.global.success.add': 'The entry has been saved.',
+		'wcf.global.success.edit': 'Your changes have been saved.',
+		'wcf.global.thousandsSeparator': ',',
+		'wcf.page.pagePosition': 'Page {#$pageNo} of {#$pages}',
+		'wcf.page.sitemap': 'Sitemap',
+		'wcf.style.changeStyle': 'Change Style',
+		'wcf.user.activityPoint': 'Points',
+		'wcf.style.changeStyle': 'Change Style',
+		'wcf.user.panel.markAllAsRead': 'Mark All as Read',
+		'wcf.user.panel.markAsRead': 'Mark as Read',
+		'wcf.user.panel.settings': 'Settings',
+		'wcf.user.panel.showAll': 'Display All'
+					,'wcf.like.button.like': 'Like',
+			'wcf.like.button.dislike': 'Dislike',
+			'wcf.like.tooltip': '{if $likes}{#$likes} Like{if $likes != 1}s{/if}{if $dislikes}, {/if}{/if}{if $dislikes}{#$dislikes} Dislike{if $dislikes != 1}s{/if}{/if}',
+			'wcf.like.summary': '{if $others == 0}{@$users.slice(0, -1).join(", ")}{if $users.length > 1} and {/if}{@$users.slice(-1)[0]}{else}{@$users.join(", ")} and {if $others == 1}one{else}{#$others}{/if} other{if $others > 1}s{/if}{/if} like{if $users.length == 1}s{/if} this.',
+			'wcf.like.details': 'Details'
+				
+		
+	});
+	
+	new WCF.Date.Time();
+	
+	WCF.Dropdown.init();
+	WCF.System.Mobile.UX.init();
+	
+	WCF.TabMenu.init();
+	WCF.System.FlexibleMenu.init();
+</script>
+<script>
+	//<![CDATA[
+	$(function() {
+		new WCF.Effect.SmoothScroll();
+		new WCF.Effect.BalloonTooltip();
+		new WCF.Sitemap();
+		new WCF.Style.Chooser();		WCF.System.PageNavigation.init('.pageNavigation');
+		WCF.Date.Picker.init();
+		new WCF.User.ProfilePreview();
+		new WCF.Notice.Dismiss();
+		WCF.User.Profile.ActivityPointList.init();
+		
+		
+		
+							new WCF.System.KeepAlive(1740);
+				
+		if ($.browser.msie) {
+			window.onbeforeunload = function() {
+				/* Prevent "Back navigation caching" (http://msdn.microsoft.com/en-us/library/ie/dn265017%28v=vs.85%29.aspx) */
+			};
+		}
+		
+		$('form[method=get]').attr('method', 'post');
+	});
+	//]]>
+</script>
+<!--[IF IE 9]>
+<script>
+	$(function() {
+		function fixButtonTypeIE9() {
+			$('button').each(function(index, button) {
+				var $button = $(button);
+				if (!$button.attr('type')) {
+					$button.attr('type', 'button');
+				}
+			});
+		}
+		
+		WCF.DOMNodeInsertedHandler.addCallback('WCF.FixButtonTypeIE9', fixButtonTypeIE9);
+		fixButtonTypeIE9();
+	});
+</script>
+<![ENDIF]-->
+<script>
+		//<![CDATA[
+		var $imageViewer = null;
+		$(function() {
+			WCF.Language.addObject({
+				'wcf.imageViewer.button.enlarge': 'Full Screen Mode',
+				'wcf.imageViewer.button.full': 'View Source Image',
+				'wcf.imageViewer.seriesIndex': '{x} of {y}',
+				'wcf.imageViewer.counter': 'Image {x} of {y}',
+				'wcf.imageViewer.close': 'Close',
+				'wcf.imageViewer.enlarge': 'View Full Image',
+				'wcf.imageViewer.next': 'Next Image',
+				'wcf.imageViewer.previous': 'Previous Image'
+			});
+			
+			$imageViewer = new WCF.ImageViewer();
+		});
+		
+		// WCF 2.0 compatibility, dynamically fetch slimbox and initialize it with the request parameters
+		$.widget('ui.slimbox', {
+			_create: function() {
+				var self = this;
+				head.load('https://forum.openmediavault.org/wcf/js/3rdParty/slimbox2.min.js', function() {
+					self.element.slimbox(self.options);
+				});
+			}
+		});
+		//]]>
+	</script>
+<script>
+	WCF.Language.addObject({
+		
+		'wcf.global.error.title': 'Error Message'
+		
+		
+		
+	});
+</script>
+<script src="https://forum.openmediavault.org/js/WBB.min.js?v=1506460308"></script>
+<script>
+	//<![CDATA[
+	$(function() {
+		
+		new WBB.Post.Preview();
+	});
+	//]]>
+</script>
+<script src="https://forum.openmediavault.org/wcf/js/WCF.Infraction.min.js?v=1506460308"></script>
+<script>
+		//<![CDATA[
+		$(function() {
+			WCF.Language.addObject({
+				'wbb.post.closed': 'Post Editing Has Been Prohibited',
+				'wbb.post.copy.title': 'Copy Posts',
+				'wbb.post.edit': 'Edit Post',
+				'wbb.post.edit.close': 'Prohibit Editing',
+				'wbb.post.edit.delete': 'Move to Trash',
+				'wbb.post.edit.delete.confirmMessage': 'Do you really want to delete this post?',
+				'wbb.post.edit.deleteCompletely': 'Delete',
+				'wbb.post.edit.enable': 'Approve',
+				'wbb.post.edit.disable': 'Disable',
+				'wbb.post.edit.merge': 'Merge Posts',
+				'wbb.post.edit.merge.success': 'The posts have been merged.',
+				'wbb.post.edit.open': 'Allow Editing',
+				'wbb.post.edit.restore': 'Restore',
+				'wbb.post.edit.trash.confirmMessage': 'Do you really want to move this post to the trash?',
+				'wbb.post.edit.trash.reason': 'Reason (optional)',
+				'wbb.post.ipAddress.title': 'IP Address',
+				'wbb.post.moderation.redirect': 'Your post will be displayed once approved.',
+				'wbb.post.moveToNewThread': 'Move Into a New Thread',
+				'wbb.thread.closed': 'Closed',
+				'wbb.thread.confirmDelete': 'Do you really want to delete this thread, it cannot be reverted?',
+				'wbb.thread.confirmTrash': 'Do you really want to move this thread to the trash?',
+				'wbb.thread.confirmTrash.reason': 'Reason (optional)',
+				'wbb.thread.edit.advanced': 'More Options',
+				'wbb.thread.edit.close': 'Close',
+				'wbb.thread.edit.delete': 'Delete',
+				'wbb.thread.edit.done': 'Mark as Done',
+				'wbb.thread.edit.enable': 'Approve',
+				'wbb.thread.edit.disable': 'Disable',
+				'wbb.thread.edit.move': 'Move',
+				'wbb.thread.edit.moveDestination.error.equalsOrigin': 'The destination and origin forum are the same.',
+				'wbb.thread.edit.open': 'Open',
+				'wbb.thread.edit.removeLink': 'Remove Redirection Notice',
+				'wbb.thread.edit.restore': 'Restore',
+				'wbb.thread.edit.scrape': 'Unpin',
+				'wbb.thread.edit.sticky': 'Pin',
+				'wbb.thread.edit.trash': 'Move to Trash',
+				'wbb.thread.edit.undone': 'Mark as Undone',
+				'wbb.thread.moved': 'Moved',
+				'wbb.thread.newPosts': 'There {if $newPostsCount == 1}is one new post{else}are {#$newPostsCount} new posts{/if} in this thread.',
+				'wbb.thread.sticky': 'Pinned',
+				'wcf.global.worker.completed': 'Task completed',
+				'wcf.user.objectWatch.manageSubscription': 'Manage Subscription',
+				'wcf.message.bbcode.code.copy': 'Copy Contents',
+				'wcf.message.error.editorAlreadyInUse': 'The editor is already in use, please finish editing before continuing.',
+				'wcf.message.share': 'Share',
+				'wcf.message.share.permalink': 'Permalink',
+				'wcf.message.share.permalink.bbcode': 'BBCode',
+				'wcf.message.share.permalink.html': 'HTML',
+				'wcf.moderation.report.reportContent': 'Report Content',
+				'wcf.moderation.report.success': 'The content has been reported.',
+				'wcf.infraction.warn': 'Warn',
+				'wcf.infraction.warn.success': 'The user has been warned.',
+				'wbb.thread.edit.moveThreads': 'Move Threads',
+				'wbb.thread.edit': 'Edit Thread',
+				'wcf.label.none': 'No Selection',
+				'wbb.thread.done': 'Thread is marked as Done',
+				'wbb.thread.undone': 'Thread is Undone'
+			});
+			
+													WCF.Language.addObject({
+	'wcf.message.quote.insertAllQuotes': 'Insert All Quotes',
+	'wcf.message.quote.insertSelectedQuotes': 'Insert Marked Quotes',
+	'wcf.message.quote.manageQuotes': 'Manage Quotes',
+	'wcf.message.quote.quoteSelected': 'Save Quote',
+	'wcf.message.quote.quoteAndReply': 'Insert Quote',
+	'wcf.message.quote.removeAllQuotes': 'Remove All Quotes',
+	'wcf.message.quote.removeSelectedQuotes': 'Removed Marked Quotes',
+	'wcf.message.quote.showQuotes': 'Quotes (#count#)'
+});
+
+var $quoteManager = new WCF.Message.Quote.Manager(0, 'text', false, [  ]);
+			new WBB.Post.QuoteHandler($quoteManager);
+			
+			var $collapsedPostLoader = null;
+						
+			new WBB.Post.Like(0, 1, 1, 1);						
+			new WBB.Thread.LastPageHandler(16971, 1484145050, 1);			
+						
+						
+			WCF.Clipboard.init('wbb\\page\\ThreadPage', 0, { }, 16971);
+			
+							new WCF.Moderation.Report.Content('com.woltlab.wbb.post', '.jsReportPost');
+						
+						
+			new WCF.User.ObjectWatch.Subscribe();
+			new WCF.Message.Share.Content();
+			new WCF.Message.BBCode.CodeViewer();
+		});
+		//]]>
+	</script>
+<script>
+				//<![CDATA[
+				$(function() {
+					WCF.Language.addObject({
+						'wcf.user.button.login': 'Login',
+						'wcf.user.button.register': 'Register',
+						'wcf.user.login': 'Login'
+					});
+					new WCF.User.Login(true);
+				});
+				//]]>
+			</script>
+<script>
+				//<![CDATA[
+				$(function() {
+					var $languages = {
+													'1': {
+								iconPath: 'https://forum.openmediavault.org/wcf/icon/flag/de.svg',
+								languageName: 'Deutsch'
+							}
+						, 							'2': {
+								iconPath: 'https://forum.openmediavault.org/wcf/icon/flag/gb.svg',
+								languageName: 'English'
+							}
+											};
+					
+					new WCF.Language.Chooser('pageLanguageContainer', 'languageID', 2, $languages, function(item) {
+						var $location = window.location.toString().replace(/#.*/, '').replace(/(\?|&)l=[0-9]+/g, '');
+						var $delimiter = ($location.indexOf('?') == -1) ? '?' : '&';
+						
+						window.location = $location + $delimiter + 'l=' + item.data('languageID') + window.location.hash;
+					});
+				});
+				//]]>
+			</script>
+<script>
+		//<![CDATA[
+		$(function() {
+			new WCF.Search.Message.SearchArea($('#search'));
+		});
+		//]]>
+	</script>
+<script>if (typeof(tapatalkDetect) == "function") tapatalkDetect();</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.forum.openmediavault.org"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.openmediavault.org/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.openmediavault.org/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+<a id="bottom"></a>
+
+</body>
+</html>

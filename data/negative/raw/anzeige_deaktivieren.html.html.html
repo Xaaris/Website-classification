@@ -1,0 +1,191 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/layout.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/purecss.css">
+	<link rel="stylesheet" href="/hilfe/resources/styles/font-awesome-4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/header.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/mod-boxes.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/theme.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/mod-buttons.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/icons.css">
+	<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/index.css">
+
+	<meta content="width=device-width,initial-scale=1, maximum-scale=1"
+		  name="viewport">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+
+	<script type="text/javascript">
+		(function(i, s, o, g, r, a, m){
+			i['GoogleAnalyticsObject'] = r; // Acts as a pointer to support renaming.
+
+			// Creates an initial ga() function.  The queued commands will be executed once analytics.js loads.
+			i[r] = i[r] || function() {
+						(i[r].q = i[r].q || []).push(arguments)
+					},
+
+				// Sets the time (as an integer) this tag was executed.  Used for timing hits.
+					i[r].l = 1 * new Date();
+
+			// Insert the script tag asynchronously.  Inserts above current tag to prevent blocking in
+			// addition to using the async attribute.
+			a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'uga');
+
+
+		var emailRegEx = /([\w-+.]+@[\w-.]+)/;
+
+		var getPageType = function(path) {
+			if(path == "/hilfe/artikel/cookieverwendung") {
+				return "LegalCookie";
+			} else if(path == "/hilfe/artikel/nutzungsbedingungen") {
+				return "LegalTC";
+			} else {
+				return "Other";
+			}
+		};
+
+		uga('create', {
+			trackingId: 'UA-24356365-9',
+			cookieDomain: "ebay-kleinanzeigen.de"
+		});
+		uga('set', 'anonymizeIp', true);
+		uga('set', 'location', window.location.href.replace(emailRegEx,'%removed%'));
+		if(emailRegEx.test(document.referrer)){
+			uga('set', 'referrer', document.referrer.replace(emailRegEx,'%removed%'));
+		}
+
+		uga('send', 'pageview',{
+			'page': location.href.replace(emailRegEx,'%removed%'),
+			'dimension1': getPageType(window.location.pathname)
+		});
+
+	</script>
+</head>
+<body class="positionfixed">
+<div class="page-container">
+	<header id="site-header" class="topbar-fixed mobile-row">
+		<div id="topbar-back">
+			<a href="/hilfe/"> <img id="topbar-logo"
+											   alt="eBay Kleinanzeigen"
+											   src="/hilfe/resources/styles/logo-ebayk-402x80.exau6wm95es0.png">
+			</a>
+		</div>
+		<div id="topbar-title">
+			<h1></h1>
+		</div>
+		<section id="site-header-top">
+
+			<div id="site-logo">
+				<a href="http://www.ebay-kleinanzeigen.de"
+				   data-gaevent="Navigation,ClickLogo"> <img alt="Kleinanzeigen"
+															 src="/hilfe/resources/styles/logo-ebayk-402x80.exau6wm95es0.png">
+				</a> <span>Kostenlos. Einfach. Lokal.</span>
+			</div>
+
+		</section>
+
+
+		<section id="site-bar" class="bar-green">
+			<div id="site-bar-content">
+				</nav>
+			</div>
+		</section>
+
+	</header>
+	<div class="content">
+
+<h2>
+	
+</h2>
+
+
+
+
+
+<div id="search">
+	<form action="/hilfe/search" method="GET">
+		<span class="input-group-addon"><a href="#"></a> </span> <input
+			id="searchbar" name="search-query" type="text"
+			placeholder="Geben Sie hier Ihre Frage ein ..." />
+		<button class="btn-blue">
+			<span class="btn-label">Antwort suchen</span>
+		</button>
+	</form>
+</div>
+
+
+
+<link rel="stylesheet" type="text/css" href="/hilfe/resources/styles/answer.css">
+<script src="/hilfe/resources/js/jquery.min.js"></script>
+<script src="/hilfe/resources/js/feedback.js"></script>
+
+<div id=nav>
+	<a href="/hilfe/">Hilfe</a>
+	<span class=tab>></span>
+	<a href="/hilfe/kategorie/Sonstiges">Sonstiges</a>
+	<span class=tab>></span>
+	<span id=searchResult>Wie und warum deaktiviere ich eine Anzeige?</span>
+</div>
+
+<section class="questionbox">
+		<h2 id=frage>Wie und warum deaktiviere ich eine Anzeige?</h2>
+		<div id=conAnswer><p>Durch das Deaktivieren ist deine Anzeige für andere Nutzer nicht mehr sichtbar.</p><p>Diese Option ist vor allem hilfreich, wenn du zum Beispiel in den Urlaub fahren möchtest und nicht erreichbar bist, oder wenn du den Artikel so gut wie verkauft hast.</p><p>Über den Menüpunkt "<span style="font-weight: bold;">aktivieren</span>" - der erst dann erscheint - wenn du eine Anzeige deaktiviert hast, kannst du deine Anzeige wieder sichtbar machen. </p></div>
+</section>
+
+
+<br>
+<div id="helpful" data-id="20" >
+    War dieser Artikel hilfreich?
+	<a data-type="helpful" data-url="/hilfe/antwort/helpful" >Ja</a>
+	<span>/</span>
+	<a href=""  data-type="nothelpful" data-url="/hilfe/antwort/nothelpful" >Nein</a>
+</div>
+
+
+
+
+
+</div>
+<footer id="pg-footer">
+<div id="footerbox">
+<ul id="pg-footer-linklist">
+    <li class="list-item-inline"><a href="/hilfe">Hilfe</a></li>
+    <li class="list-item-inline"><a href="/datenschutzerklaerung.html">Datenschutzerklärung</a></li>
+    <li class="list-item-inline"><a href="/hilfe/artikel/nutzungsbedingungen">Nutzungsbedingungen</a></li>
+    <li class="list-item-inline"><a href="/hilfe/artikel/policy">Grundsätze</a></li>
+
+    <li class="list-item-inline"><a href="/impressum.html">Impressum</a></li>
+    <li class="list-item-inline"><a href="/sicherheitshinweise.html">Tipps für Ihre Sicherheit</a></li>
+    <li class="list-item-inline"><a href="/s-shop-verzeichnis.html">Übersicht der Unternehmensseiten</a></li>
+
+    <li class="list-item-inline"><a href="/s-beliebte-angebote.html">Beliebte Angebote</a></li>
+    <li class="list-item-inline"><a  href="/s-katalog-orte.html">Anzeigen Übersicht</a></li>
+    <li class="list-item-inline"><a href="/s-beliebte-suchen.html">Beliebte Suchen</a></li>
+    <li class="list-item-inline"><a href="/mobile-apps.html">Mobile Apps</a></li>
+
+</ul>
+</div>
+
+<p id="pg-footer-copyright" class="mousetype">
+    Copyright © 2005-2017 eBay Kleinanzeigen GmbH. Alle Rechte vorbehalten. Ausgewiesene Marken
+    gehören ihren jeweiligen Eigentümern.
+</p>
+</footer>
+</div>
+</body>
+</html>
+

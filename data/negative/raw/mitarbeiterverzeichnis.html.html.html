@@ -1,0 +1,1243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='de'>
+<head>
+			<title>Mitarbeiterverzeichnis / Stadt Bad Segeberg</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="language" content="deutsch, de" />
+	<meta name="author" content="Advantic Systemhaus GmbH" />
+	<meta name="publisher" content="Advantic Systemhaus GmbH" />
+	<meta name="designer" content="Advantic Systemhaus GmbH" />
+	<meta name="copyright" content="&copy; 2013 advantic.de" />
+	<meta name="robots" content="index,follow" />
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi" />
+	<link rel="apple-touch-icon" href="http://badse.advantic.de/apple-touch-icon.png" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" media="screen" type="text/css" href="/layout/stadtbadsegeberg/layout.css" />
+	<link rel="stylesheet" media="screen" type="text/css" href="/layout/stadtbadsegeberg/ausgabe.css" />
+	<link rel="stylesheet" media="screen and (min-width: 100px)" href="/layout/stadtbadsegeberg/layout_320.css" />
+	<link rel="stylesheet" media="screen and (min-width: 700px)" href="/layout/stadtbadsegeberg/layout_700.css" />
+	<link rel="stylesheet" media="screen and (min-width: 940px)" href="/layout/stadtbadsegeberg/layout_940.css" />
+	<link rel="stylesheet" media="screen and (min-width: 1024px)" href="/layout/stadtbadsegeberg/layout_1024.css" />
+	<link rel="stylesheet" media="print"  type="text/css" href="/layout/stadtbadsegeberg/print.css"/>
+	
+	<link rel="apple-touch-icon" href="http://badse.advantic.de/apple-touch-icon.png" />
+
+	<!-- Damit das ugly IE kapiert -->
+	<!--[if IE]>
+		<script type="text/javascript" src="/layout/stadtbadsegeberg/js/respond.js"></script>
+   	<![endif]-->		
+	
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	
+	<!-- JQuery -->
+	<script type="text/javascript" src="/layout/stadtbadsegeberg/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="/layout/stadtbadsegeberg/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/layout/stadtbadsegeberg/js/jquery.flexnav.js"></script>
+
+	<!-- Autocomplete -->
+	<script type='text/javascript' src='/output/js/jquery/jquery.bgiframe.min.js'></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.21/themes/base/jquery-ui.css" type="text/css" media="all" />
+	<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/output/js/jquery/jquery.ui.datepicker-de.js"></script>
+	<script type='text/javascript' src='/output/js/jquery/jquery.ajaxQueue.js'></script>
+	<script type='text/javascript' src='/output/js/jquery/jquery.autocomplete.pack.js'></script>
+	<script language="javascript" type="text/javascript" src="/output/js/jquery/jquery.getUrlParam.js"></script>
+	<link rel="stylesheet" type="text/css" href="/output/js/jquery/jquery.autocomplete.css" />	
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Hauptmenu
+			$("[role='navigation']").flexNav(); 
+			
+			// Googletranslate
+			$('a[rel=googletranslate_link], #googletranslate_box').mouseenter(function() {		
+				var height = $(this).height();
+				var top = $(this).offset().top;
+				var left = $(this).offset().left + ($(this).width() /2) - ($('#googletranslate_box').width() / 2);		
+				$('#googletranslate_box').show();
+			});			
+			$('#googletranslate_box').mouseleave(function () {
+				$(this).hide();
+			});
+
+			$('input[name="qs"]').autocomplete('/output/autocomplete_solr.php', {
+				'minChars' : 1, 
+				'max' : 20,
+				'scrollHeight' : 500,
+				'width' : 350,
+				'matchSubset' : false,
+				'selectFirst' : false,
+				'extraParams' : {'limit' : 30},		
+				formatItem: function(data, i, n, value) {
+					return (data[1]) ? data[1] : data[0];
+				},
+										
+				formatResult: function(data, value) {
+					return data[0];
+				}
+			});
+			
+			$('input[name="qs"]').bind('result', function() {
+				$(this).closest('form').trigger('submit');
+			});
+			
+			$( ".datepicker" ).datepicker();
+
+	    });
+	</script>
+	
+	<!-- HIGHSLIDE-->
+	<link rel="stylesheet" type="text/css" href="/output/js/highslide/highslide.css">
+	<script type="text/javascript" src="/output/js/highslide/highslide-with-gallery.packed.js"></script>
+	<script type="text/javascript" src="/output/js/highslide/hs_config.js"></script>
+
+	<script type="text/javascript" src="/output/js/ikiss/basic.js"></script>
+	
+	</head>
+
+
+<body>
+<a name="start"></a>
+<div class="sprungziel">
+	<h2><a name="anker_hilfsnavigation"></a>Hilfsnavigation</h2>
+	<ul>		
+		<li><a href="#anker_quickmenu">direkt zur Quickmenu</a></li>
+		<li><a href="#anker_volltextsuche">direkt zur Volltextsuche</a></li>
+		<li><a href="#anker_hauptmenu">direkt zum Hauptmenu</a></li>
+		<li><a href="#anker_untermenu">direkt zum Untermenu</a></li>
+		<li><a href="#anker_seiteninhalt">direkt zum Seiteninhalt</a></li>
+	</ul>
+</div>
+<div class="grey">
+	<div class="wrapper">		
+		<a name="anker_quickmenu" id="anker_quickmenu"></a>	
+		<div class="quickmenu">						
+			
+	<ul>
+		<li class="npt_off npt_first npt_nolink"><a href="/Kurzmen%C3%BC/Start" class="nlk_off npt_first npt_nolink">Start</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Kontakt" class="nlk_off">Kontakt</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Impressum" class="nlk_off">Impressum</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Sitemap" class="nlk_off">Sitemap</a></li>
+		<li class="npt_off npt_last"><a href="/Kurzmen%C3%BC/Login" class="nlk_off npt_last">Login</a></li>
+	</ul>
+			<div class="cb"></div>
+		</div>
+		<div class="grey_right">							
+			<a href="#" title="Seite übersetzen" rel="googletranslate_link" class="googletranslate">Sprachauswahl</a>
+			<div id="googletranslate_box">
+				<div class="googletranslate_content">
+					<div id="google_translate_element"></div>
+				</div>
+				<script>
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({
+							pageLanguage: 'de',
+							layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+						}, 'google_translate_element');
+					}
+				</script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>	
+			</div>	
+			<div class="suche">			
+				<a name="anker_volltextsuche" id="anker_volltextsuche"></a>
+				<form name="suchform" action="/" method="get">
+					<input type="hidden" name="NavID" value="2323.6" />
+					<input type="hidden" name="opt5" value="1824,1845,2323,2392" />
+					<label for="such">
+						<input type="text" name="qs" id="qs" onblur="(this.value == '') &amp;&amp; (this.value = 'Suchbegriff eingeben')" onfocus="(this.value == 'Suchbegriff eingeben') &amp;&amp; (this.value = '')" value="Suchbegriff eingeben" />
+						<input type="image" name="suchanfrage" src="/layout/stadtbadsegeberg/media/lupe.png" title="Los" alt="Los" class="lupe" />
+					</label>
+				</form>	
+			</div>	
+			<div class="cb"></div>
+		</div>
+		<div class="cb"></div>
+	</div>
+</div>
+<div class="white">
+	<div class="wrapper">
+		<div class="white_center"><a href="/" title="Logo Stadt Bad Segeberg - Zur Startseite"><img src="/layout/stadtbadsegeberg/media/logo_stadt_bad_segeberg.png" title="Logo Stadt Bad Segeberg - Zur Startseite" alt="Logo Stadt Bad Segeberg - Zur Startseite" class="logo" /></a></div>
+		<div class="menu">
+			<div class='menu-button'>Navigation</div>	
+			<nav>
+				<a name="anker_hauptmenu" id="anker_hauptmenu"></a>
+				
+	<ul id="rid_0" class="nlv_1" role='navigation'>
+		<li id="nlt_2323_7" class="npt_on npt_first childs"><a href="/Stadt-Politik" id="nid_2323_7" class="nlk_on npt_first childs">Stadt &amp; Politik</a>
+		<ul id="rid_2323_7" class="nlv_2" >
+			<li id="nlt_2323_244" class="npt_off npt_first"><a href="/Stadt-Politik/B%C3%BCrgermeister" id="nid_2323_244" class="nlk_off npt_first">Bürgermeister</a>			</li>
+			<li id="nlt_2323_39" class="npt_off childs"><a href="/Stadt-Politik/Politik" id="nid_2323_39" class="nlk_off childs">Politik</a>
+			<ul id="rid_2323_39" class="nlv_3" >
+				<li id="nlt_2323_42" class="npt_off npt_first"><a href="/Stadt-Politik/Politik/B%C3%BCrgervorsteherin" id="nid_2323_42" class="nlk_off npt_first">Bürgervorsteherin</a>				</li>
+				<li id="nlt_2323_61" class="npt_off"><a href="/Stadt-Politik/Politik/Sitzungskalender" id="nid_2323_61" class="nlk_off">Sitzungskalender</a>				</li>
+				<li id="nlt_2323_63" class="npt_off"><a href="/Stadt-Politik/Politik/K%C3%B6rperschaften" id="nid_2323_63" class="nlk_off">Körperschaften</a>				</li>
+				<li id="nlt_2323_64" class="npt_off"><a href="/Stadt-Politik/Politik/Gremien-der-K%C3%B6rperschaften" id="nid_2323_64" class="nlk_off">Gremien der Körperschaften</a>				</li>
+				<li id="nlt_2323_65" class="npt_off npt_last"><a href="https://www.sitzungsdienst-bad-segeberg.de/ri/logon.asp" onclick="ikiss_basic.popup('https://www.sitzungsdienst-bad-segeberg.de/ri/logon.asp',,,,'FENSTERNAME'); return false;" id="nid_2323_65" class="nlk_off npt_last">Gremien Login</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_194" class="npt_on childs"><a href="/Stadt-Politik/Service" id="nid_2323_194" class="nlk_on childs">Service</a>
+			<ul id="rid_2323_194" class="nlv_3" >
+				<li id="nlt_2323_44" class="npt_off npt_first"><a href="/Stadt-Politik/Service/%C3%96ffnungszeiten-im-Rathaus" id="nid_2323_44" class="nlk_off npt_first">Öffnungszeiten im Rathaus</a>				</li>
+				<li id="nlt_2323_14" class="npt_off"><a href="/Stadt-Politik/Service/Dienstleistungen-A-Z" id="nid_2323_14" class="nlk_off">Dienstleistungen A-Z</a>				</li>
+				<li id="nlt_2323_196" class="npt_off"><a href="/Stadt-Politik/Service/Formulare" id="nid_2323_196" class="nlk_off">Formulare</a>				</li>
+				<li id="nlt_2323_66" class="npt_on"><a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis" id="nid_2323_66" class="nlk_on">Mitarbeiterverzeichnis</a>				</li>
+				<li id="nlt_2323_197" class="npt_off"><a href="/Stadt-Politik/Service/wichtige-Rufnummern" id="nid_2323_197" class="nlk_off">wichtige Rufnummern</a>				</li>
+				<li id="nlt_2323_259" class="npt_off"><a href="/Stadt-Politik/Service/Beh%C3%B6rdennummer-115" id="nid_2323_259" class="nlk_off">Behördennummer 115</a>				</li>
+				<li id="nlt_2323_285" class="npt_off npt_last"><a href="/Stadt-Politik/Service/Datenschutz" target="_top" id="nid_2323_285" class="nlk_off npt_last">Datenschutz</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_174" class="npt_off"><a href="/Stadt-Politik/Aktuelles" id="nid_2323_174" class="nlk_off">Aktuelles</a>			</li>
+			<li id="nlt_2323_56" class="npt_off"><a href="/Stadt-Politik/Amtliche-Bekanntmachungen" id="nid_2323_56" class="nlk_off">Amtliche Bekanntmachungen</a>			</li>
+			<li id="nlt_2323_60" class="npt_off childs"><a href="/Stadt-Politik/Ausschreibungen-und-Beschaffung" id="nid_2323_60" class="nlk_off childs">Ausschreibungen und Beschaffung</a>
+			<ul id="rid_2323_60" class="nlv_3" >
+				<li id="nlt_2323_263" class="npt_off npt_first npt_last"><a href="/Stadt-Politik/Ausschreibungen-und-Beschaffung/Archiv" id="nid_2323_263" class="nlk_off npt_first npt_last">Archiv</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_67" class="npt_off childs"><a href="/Stadt-Politik/Stellenangebote" id="nid_2323_67" class="nlk_off childs">Stellenangebote</a>
+			<ul id="rid_2323_67" class="nlv_3" >
+				<li id="nlt_2323_69" class="npt_off npt_first npt_last childs"><a href="/Stadt-Politik/Stellenangebote/Ausbildung" id="nid_2323_69" class="nlk_off npt_first npt_last childs">Ausbildung</a>
+				<ul id="rid_2323_69" class="nlv_4" >
+					<li id="nlt_2323_70" class="npt_off npt_first"><a href="/Stadt-Politik/Stellenangebote/Ausbildung/Verwaltungsfachangestellte-r-Fachrichtung-Kommunalverwaltung" id="nid_2323_70" class="nlk_off npt_first">Verwaltungsfachangestellte/r - Fachrichtung Kommunalverwaltung</a>					</li>
+					<li id="nlt_2323_72" class="npt_off"><a href="/Stadt-Politik/Stellenangebote/Ausbildung/Bauzeichnerin-Bauzeichner" id="nid_2323_72" class="nlk_off">Bauzeichnerin / Bauzeichner</a>					</li>
+					<li id="nlt_2323_164" class="npt_off"><a href="/Stadt-Politik/Stellenangebote/Ausbildung/Fachkraft-f%C3%BCr-Abwassertechnik-" id="nid_2323_164" class="nlk_off">Fachkraft für Abwassertechnik </a>					</li>
+					<li id="nlt_2323_165" class="npt_off"><a href="/Stadt-Politik/Stellenangebote/Ausbildung/Kauffrau-Kaufmann-f%C3%BCr-Tourismus-und-Freizeit" id="nid_2323_165" class="nlk_off">Kauffrau/Kaufmann für Tourismus und Freizeit</a>					</li>
+					<li id="nlt_2323_247" class="npt_off npt_last"><a href="/Stadt-Politik/Stellenangebote/Ausbildung/Fachangestellte-r-f%C3%BCr-B%C3%A4derbetriebe" id="nid_2323_247" class="nlk_off npt_last">Fachangestellte/r für Bäderbetriebe</a>					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_30" class="npt_off"><a href="/Stadt-Politik/Ortsrecht" id="nid_2323_30" class="nlk_off">Ortsrecht</a>			</li>
+			<li id="nlt_2323_75" class="npt_off childs"><a href="/Stadt-Politik/Geschichte" id="nid_2323_75" class="nlk_off childs">Geschichte</a>
+			<ul id="rid_2323_75" class="nlv_3" >
+				<li id="nlt_2323_76" class="npt_off npt_first"><a href="/Stadt-Politik/Geschichte/Stadtchronik" id="nid_2323_76" class="nlk_off npt_first">Stadtchronik</a>				</li>
+				<li id="nlt_2323_77" class="npt_off"><a href="/Stadt-Politik/Geschichte/Stadtgeschichte" id="nid_2323_77" class="nlk_off">Stadtgeschichte</a>				</li>
+				<li id="nlt_2323_78" class="npt_off"><a href="/Stadt-Politik/Geschichte/Das-Stadtwappen" id="nid_2323_78" class="nlk_off">Das Stadtwappen</a>				</li>
+				<li id="nlt_2323_79" class="npt_off"><a href="/Stadt-Politik/Geschichte/Die-B%C3%BCrgermeister" id="nid_2323_79" class="nlk_off">Die Bürgermeister</a>				</li>
+				<li id="nlt_2323_80" class="npt_off npt_last childs"><a href="/Stadt-Politik/Geschichte/Pers%C3%B6nlichkeiten-und-Ehrentitel" id="nid_2323_80" class="nlk_off npt_last childs">Persönlichkeiten und Ehrentitel</a>
+				<ul id="rid_2323_80" class="nlv_4" >
+					<li id="nlt_2323_81" class="npt_off npt_first"><a href="/Stadt-Politik/Geschichte/Pers%C3%B6nlichkeiten-und-Ehrentitel/Ehrenb%C3%BCrger-der-Stadt" id="nid_2323_81" class="nlk_off npt_first">Ehrenbürger der Stadt</a>					</li>
+					<li id="nlt_2323_82" class="npt_off"><a href="/Stadt-Politik/Geschichte/Pers%C3%B6nlichkeiten-und-Ehrentitel/Heinrich-Rantzau-Medaille" id="nid_2323_82" class="nlk_off">Heinrich-Rantzau-Medaille</a>					</li>
+					<li id="nlt_2323_83" class="npt_off npt_last"><a href="/Stadt-Politik/Geschichte/Pers%C3%B6nlichkeiten-und-Ehrentitel/Ehrennadel-der-Stadt" id="nid_2323_83" class="nlk_off npt_last">Ehrennadel der Stadt</a>					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_179" class="npt_off"><a href="/Stadt-Politik/Partnerst%C3%A4dte" id="nid_2323_179" class="nlk_off">Partnerstädte</a>			</li>
+			<li id="nlt_2323_100" class="npt_off childs"><a href="/Stadt-Politik/Wahlen" id="nid_2323_100" class="nlk_off childs">Wahlen</a>
+			<ul id="rid_2323_100" class="nlv_3" >
+				<li id="nlt_2323_291" class="npt_off npt_first"><a href="/Stadt-Politik/Wahlen/Bundestagswahl-2017" id="nid_2323_291" class="nlk_off npt_first">Bundestagswahl 2017</a>				</li>
+				<li id="nlt_2323_293" class="npt_off npt_last"><a href="/Stadt-Politik/Wahlen/B%C3%BCrgerbegehren-B-Plan-94" id="nid_2323_293" class="nlk_off npt_last">Bürgerbegehren B-Plan 94</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_199" class="npt_off"><a href="/Stadt-Politik/Feuerwehr" id="nid_2323_199" class="nlk_off">Feuerwehr</a>			</li>
+			<li id="nlt_2323_204" class="npt_off npt_last childs"><a href="/Stadt-Politik/Hallenbad" id="nid_2323_204" class="nlk_off npt_last childs">Hallenbad</a>
+			<ul id="rid_2323_204" class="nlv_3" >
+				<li id="nlt_2323_262" class="npt_off npt_first"><a href="/Stadt-Politik/Hallenbad/%C3%96ffnungszeiten-und-Kurse" id="nid_2323_262" class="nlk_off npt_first">Öffnungszeiten und Kurse</a>				</li>
+				<li id="nlt_2323_278" class="npt_off npt_last"><a href="/Stadt-Politik/Hallenbad/Barrierefrei" id="nid_2323_278" class="nlk_off npt_last">Barrierefrei</a>				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li id="nlt_2323_8" class="npt_off childs"><a href="/Wirtschaft-Bauen" id="nid_2323_8" class="nlk_off childs">Wirtschaft &amp; Bauen</a>
+		<ul id="rid_2323_8" class="nlv_2" >
+			<li id="nlt_2323_150" class="npt_off npt_first childs"><a href="/Wirtschaft-Bauen/Wirtschaft" id="nid_2323_150" class="nlk_off npt_first childs">Wirtschaft</a>
+			<ul id="rid_2323_150" class="nlv_3" >
+				<li id="nlt_2323_35" class="npt_off npt_first"><a href="/Wirtschaft-Bauen/Wirtschaft/Fakten-zum-Standort" id="nid_2323_35" class="nlk_off npt_first">Fakten zum Standort</a>				</li>
+				<li id="nlt_2323_173" class="npt_off npt_last"><a href="/Wirtschaft-Bauen/Wirtschaft/Unternehmerverein-Wir-f%C3%BCr-Segeberg-" id="nid_2323_173" class="nlk_off npt_last">Unternehmerverein "Wir für Segeberg"</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_149" class="npt_off"><a href="/Wirtschaft-Bauen/Gewerbefl%C3%A4chen" id="nid_2323_149" class="nlk_off">Gewerbeflächen</a>			</li>
+			<li id="nlt_2323_162" class="npt_off"><a href="/Wirtschaft-Bauen/Einkaufsstandort" id="nid_2323_162" class="nlk_off">Einkaufsstandort</a>			</li>
+			<li id="nlt_2323_245" class="npt_off"><a href="/Wirtschaft-Bauen/Gesundheitspark" id="nid_2323_245" class="nlk_off">Gesundheitspark</a>			</li>
+			<li id="nlt_2323_49" class="npt_off childs"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg" id="nid_2323_49" class="nlk_off childs">Barrierefreies Bad Segeberg</a>
+			<ul id="rid_2323_49" class="nlv_3" >
+				<li id="nlt_2323_50" class="npt_off npt_first"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg/Veranstaltungen-News" id="nid_2323_50" class="nlk_off npt_first">Veranstaltungen - News</a>				</li>
+				<li id="nlt_2323_166" class="npt_off"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg/Noctalis" id="nid_2323_166" class="nlk_off">Noctalis</a>				</li>
+				<li id="nlt_2323_167" class="npt_off"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg/Karl-May-Spiele" id="nid_2323_167" class="nlk_off">Karl-May-Spiele</a>				</li>
+				<li id="nlt_2323_198" class="npt_off"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg/Stadtbus" id="nid_2323_198" class="nlk_off">Stadtbus</a>				</li>
+				<li id="nlt_2323_270" class="npt_off npt_last"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg/Hallenbad" id="nid_2323_270" class="nlk_off npt_last">Hallenbad</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_154" class="npt_off"><a href="/Wirtschaft-Bauen/Baugebiete" id="nid_2323_154" class="nlk_off">Baugebiete</a>			</li>
+			<li id="nlt_2323_155" class="npt_off childs"><a href="/Wirtschaft-Bauen/Stadtplanung" id="nid_2323_155" class="nlk_off childs">Stadtplanung</a>
+			<ul id="rid_2323_155" class="nlv_3" >
+				<li id="nlt_2323_156" class="npt_off npt_first"><a href="/Wirtschaft-Bauen/Stadtplanung/Fl%C3%A4chennutzungsplan" id="nid_2323_156" class="nlk_off npt_first">Flächennutzungsplan</a>				</li>
+				<li id="nlt_2323_157" class="npt_off"><a href="/Wirtschaft-Bauen/Stadtplanung/Bebauungspl%C3%A4ne" id="nid_2323_157" class="nlk_off">Bebauungspläne</a>				</li>
+				<li id="nlt_2323_158" class="npt_off"><a href="/Wirtschaft-Bauen/Stadtplanung/Intregiertes-Stadtentwicklungskonzept" id="nid_2323_158" class="nlk_off">Intregiertes Stadtentwicklungskonzept</a>				</li>
+				<li id="nlt_2323_279" class="npt_off"><a href="/Wirtschaft-Bauen/Stadtplanung/Aktuelle-Bauleitplanverfahren" id="nid_2323_279" class="nlk_off">Aktuelle Bauleitplanverfahren</a>				</li>
+				<li id="nlt_2323_292" class="npt_off npt_last"><a href="/Wirtschaft-Bauen/Stadtplanung/Landschaftsplan" id="nid_2323_292" class="nlk_off npt_last">Landschaftsplan</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_68" class="npt_off childs"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt" id="nid_2323_68" class="nlk_off childs">Soziale Stadt Südstadt</a>
+			<ul id="rid_2323_68" class="nlv_3" >
+				<li id="nlt_2323_168" class="npt_off npt_first childs"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Veranstaltungen-News" id="nid_2323_168" class="nlk_off npt_first childs">Veranstaltungen-News</a>
+				<ul id="rid_2323_168" class="nlv_4" >
+					<li id="nlt_2323_265" class="npt_off npt_first npt_last"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Veranstaltungen-News/Veranstaltungen-Archiv" id="nid_2323_265" class="nlk_off npt_first npt_last">Veranstaltungen Archiv</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_242" class="npt_off"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Presse-Infos-Flyer" id="nid_2323_242" class="nlk_off">Presse-Infos-Flyer</a>				</li>
+				<li id="nlt_2323_269" class="npt_off"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Verf%C3%BCgungsfonds" id="nid_2323_269" class="nlk_off">Verfügungsfonds</a>				</li>
+				<li id="nlt_2323_287" class="npt_off npt_nolink"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Stadtteilzeitung" id="nid_2323_287" class="nlk_off npt_nolink">Stadtteilzeitung</a>				</li>
+				<li id="nlt_2323_289" class="npt_off npt_nolink"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Stadtteilbeirat" id="nid_2323_289" class="nlk_off npt_nolink">Stadtteilbeirat</a>				</li>
+				<li id="nlt_2323_290" class="npt_off npt_last npt_nolink"><a href="/Wirtschaft-Bauen/Soziale-Stadt-S%C3%BCdstadt/Konzepte-und-Dokumentationen" id="nid_2323_290" class="nlk_off npt_last npt_nolink">Konzepte und Dokumentationen</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_160" class="npt_off"><a href="/Wirtschaft-Bauen/Stra%C3%9Fen-Ampeln-Beleuchtung" id="nid_2323_160" class="nlk_off">Straßen, Ampeln, Beleuchtung</a>			</li>
+			<li id="nlt_2323_161" class="npt_off"><a href="/Wirtschaft-Bauen/Abwasser" id="nid_2323_161" class="nlk_off">Abwasser</a>			</li>
+			<li id="nlt_2323_251" class="npt_off"><a href="/Wirtschaft-Bauen/Seepromenade" id="nid_2323_251" class="nlk_off">Seepromenade</a>			</li>
+			<li id="nlt_2323_280" class="npt_off npt_last childs"><a href="/Wirtschaft-Bauen/Klimaschutz" id="nid_2323_280" class="nlk_off npt_last childs">Klimaschutz</a>
+			<ul id="rid_2323_280" class="nlv_3" >
+				<li id="nlt_2323_281" class="npt_off npt_first"><a href="/Wirtschaft-Bauen/Klimaschutz/Einstiegsberatung" id="nid_2323_281" class="nlk_off npt_first">Einstiegsberatung</a>				</li>
+				<li id="nlt_2323_283" class="npt_off npt_last"><a href="/Wirtschaft-Bauen/Klimaschutz/Nationale-Klimaschutzinitiative" id="nid_2323_283" class="nlk_off npt_last">Nationale Klimaschutzinitiative</a>				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li id="nlt_2323_9" class="npt_off childs"><a href="/Tourismus-Kultur" id="nid_2323_9" class="nlk_off childs">Tourismus &amp; Kultur</a>
+		<ul id="rid_2323_9" class="nlv_2" >
+			<li id="nlt_2323_110" class="npt_off npt_first childs"><a href="/Tourismus-Kultur/Tourismus" id="nid_2323_110" class="nlk_off npt_first childs">Tourismus</a>
+			<ul id="rid_2323_110" class="nlv_3" >
+				<li id="nlt_2323_111" class="npt_off npt_first"><a href="/Tourismus-Kultur/Tourismus/Stadt-der-Karl-May-Spiele" id="nid_2323_111" class="nlk_off npt_first">Stadt der Karl-May-Spiele</a>				</li>
+				<li id="nlt_2323_37" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Kalkberg-Flederm%C3%A4use-und-Noctalis" id="nid_2323_37" class="nlk_off">Kalkberg, Fledermäuse und Noctalis</a>				</li>
+				<li id="nlt_2323_108" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Reiterstadt-Bad-Segeberg" id="nid_2323_108" class="nlk_off">Reiterstadt Bad Segeberg</a>				</li>
+				<li id="nlt_2323_109" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Gro%C3%9Fer-Segeberger-See-und-Gesundheitspark" id="nid_2323_109" class="nlk_off">Großer Segeberger See und Gesundheitspark</a>				</li>
+				<li id="nlt_2323_112" class="npt_off childs"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps" id="nid_2323_112" class="nlk_off childs">Freizeit- und Ausflugstipps</a>
+				<ul id="rid_2323_112" class="nlv_4" >
+					<li id="nlt_2323_151" class="npt_off npt_first"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps/Stadtf%C3%BChrungen" id="nid_2323_151" class="nlk_off npt_first">Stadtführungen</a>					</li>
+					<li id="nlt_2323_117" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps/Wanderwege" id="nid_2323_117" class="nlk_off">Wanderwege</a>					</li>
+					<li id="nlt_2323_118" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps/Grillpl%C3%A4tze" id="nid_2323_118" class="nlk_off">Grillplätze</a>					</li>
+					<li id="nlt_2323_119" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps/Ausflugstipps-im-Umland" id="nid_2323_119" class="nlk_off">Ausflugstipps im Umland</a>					</li>
+					<li id="nlt_2323_215" class="npt_off npt_last"><a href="/Tourismus-Kultur/Tourismus/Freizeit-und-Ausflugstipps/Der-M%C3%B6nchsweg" id="nid_2323_215" class="nlk_off npt_last">Der Mönchsweg</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_114" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Info-Service" id="nid_2323_114" class="nlk_off">Info &amp; Service</a>				</li>
+				<li id="nlt_2323_169" class="npt_off childs"><a href="/Tourismus-Kultur/Tourismus/Unterk%C3%BCnfte" id="nid_2323_169" class="nlk_off childs">Unterkünfte</a>
+				<ul id="rid_2323_169" class="nlv_4" >
+					<li id="nlt_2323_170" class="npt_off npt_first"><a href="http://web4.deskline.net/segeberg/de/accommodation/search" target="_blank" id="nid_2323_170" class="nlk_off npt_first">Suchen und Buchen</a>					</li>
+					<li id="nlt_2323_171" class="npt_off"><a href="/Tourismus-Kultur/Tourismus/Unterk%C3%BCnfte/Vermittlungsbedingungen" id="nid_2323_171" class="nlk_off">Vermittlungsbedingungen</a>					</li>
+					<li id="nlt_2323_172" class="npt_off npt_last"><a href="/Tourismus-Kultur/Tourismus/Unterk%C3%BCnfte/Jugendherberge" id="nid_2323_172" class="nlk_off npt_last">Jugendherberge</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_205" class="npt_off"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg" id="nid_2323_205" class="nlk_off">Barrierefreie Stadt Bad Segeberg</a>				</li>
+				<li id="nlt_2323_225" class="npt_off npt_last"><a href="/Tourismus-Kultur/Tourismus/Veranstaltungen" id="nid_2323_225" class="nlk_off npt_last">Veranstaltungen</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_116" class="npt_off childs"><a href="/Tourismus-Kultur/Kultur" id="nid_2323_116" class="nlk_off childs">Kultur</a>
+			<ul id="rid_2323_116" class="nlv_3" >
+				<li id="nlt_2323_120" class="npt_off npt_first childs"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen" id="nid_2323_120" class="nlk_off npt_first childs">Sehenswürdigkeiten &amp; Museen</a>
+				<ul id="rid_2323_120" class="nlv_4" >
+					<li id="nlt_2323_121" class="npt_off npt_first childs"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Museum-Alt-Segeberger-B%C3%BCrgerhaus" id="nid_2323_121" class="nlk_off npt_first childs">Museum Alt-Segeberger Bürgerhaus</a>
+					<ul id="rid_2323_121" class="nlv_5" >
+						<li id="nlt_2323_208" class="npt_off npt_first"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Museum-Alt-Segeberger-B%C3%BCrgerhaus/Geschichte" id="nid_2323_208" class="nlk_off npt_first">Geschichte</a></li>
+						<li id="nlt_2323_210" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Museum-Alt-Segeberger-B%C3%BCrgerhaus/Ausstellung" id="nid_2323_210" class="nlk_off">Ausstellung</a></li>
+						<li id="nlt_2323_211" class="npt_off npt_last"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Museum-Alt-Segeberger-B%C3%BCrgerhaus/%C3%96ffnungszeiten" id="nid_2323_211" class="nlk_off npt_last">Öffnungszeiten</a></li>
+					</ul>
+					</li>
+					<li id="nlt_2323_122" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Kunsthalle-Otto-Flath" id="nid_2323_122" class="nlk_off">Kunsthalle Otto-Flath</a>					</li>
+					<li id="nlt_2323_152" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Indian-Village-Nebraska-Haus-mit-Ausstellung-" id="nid_2323_152" class="nlk_off">Indian Village- Nebraska- Haus mit Ausstellung </a>					</li>
+					<li id="nlt_2323_123" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/St-Marienkirche" id="nid_2323_123" class="nlk_off">St. Marienkirche</a>					</li>
+					<li id="nlt_2323_124" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Wollspinnerei-Blunk" id="nid_2323_124" class="nlk_off">Wollspinnerei Blunk</a>					</li>
+					<li id="nlt_2323_125" class="npt_off npt_last"><a href="/Tourismus-Kultur/Kultur/Sehensw%C3%BCrdigkeiten-Museen/Stolpersteine" id="nid_2323_125" class="nlk_off npt_last">Stolpersteine</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_128" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Stadtb%C3%BCcherei" id="nid_2323_128" class="nlk_off">Stadtbücherei</a>				</li>
+				<li id="nlt_2323_226" class="npt_off childs"><a href="/Tourismus-Kultur/Kultur/Stadtarchiv" id="nid_2323_226" class="nlk_off childs">Stadtarchiv</a>
+				<ul id="rid_2323_226" class="nlv_4" >
+					<li id="nlt_2323_227" class="npt_off npt_first"><a href="/Tourismus-Kultur/Kultur/Stadtarchiv/Wissenswertes" id="nid_2323_227" class="nlk_off npt_first">Wissenswertes</a>					</li>
+					<li id="nlt_2323_228" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Stadtarchiv/Historische-Best%C3%A4nde" id="nid_2323_228" class="nlk_off">Historische Bestände</a>					</li>
+					<li id="nlt_2323_229" class="npt_off"><a href="/Tourismus-Kultur/Kultur/Stadtarchiv/Sammlungen" id="nid_2323_229" class="nlk_off">Sammlungen</a>					</li>
+					<li id="nlt_2323_231" class="npt_off npt_last"><a href="/Tourismus-Kultur/Kultur/Stadtarchiv/Nachl%C3%A4sse" id="nid_2323_231" class="nlk_off npt_last">Nachlässe</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_238" class="npt_off childs"><a href="/Tourismus-Kultur/Kultur/Wochenmarkt-und-Jahrmarkt" id="nid_2323_238" class="nlk_off childs">Wochenmarkt und Jahrmarkt</a>
+				<ul id="rid_2323_238" class="nlv_4" >
+					<li id="nlt_2323_239" class="npt_off npt_first"><a href="/Tourismus-Kultur/Kultur/Wochenmarkt-und-Jahrmarkt/Wochenmarkt" id="nid_2323_239" class="nlk_off npt_first">Wochenmarkt</a>					</li>
+					<li id="nlt_2323_240" class="npt_off npt_last"><a href="/Tourismus-Kultur/Kultur/Wochenmarkt-und-Jahrmarkt/Jahrmarkt" id="nid_2323_240" class="nlk_off npt_last">Jahrmarkt</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_266" class="npt_off npt_last childs"><a href="/Tourismus-Kultur/Kultur/European-Peoples-Festival" id="nid_2323_266" class="nlk_off npt_last childs">European Peoples` Festival</a>
+				<ul id="rid_2323_266" class="nlv_4" >
+					<li id="nlt_2323_267" class="npt_off npt_first npt_last"><a href="/Tourismus-Kultur/Kultur/European-Peoples-Festival/EPF-Verein" id="nid_2323_267" class="nlk_off npt_first npt_last">EPF-Verein</a>					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_203" class="npt_off npt_last"><a href="/Tourismus-Kultur/Wetter" id="nid_2323_203" class="nlk_off npt_last">Wetter</a>			</li>
+		</ul>
+		</li>
+		<li id="nlt_2323_10" class="npt_off childs"><a href="/Bildung-Soziales" id="nid_2323_10" class="nlk_off childs">Bildung &amp; Soziales</a>
+		<ul id="rid_2323_10" class="nlv_2" >
+			<li id="nlt_2323_131" class="npt_off npt_first childs"><a href="/Bildung-Soziales/Bildung" id="nid_2323_131" class="nlk_off npt_first childs">Bildung</a>
+			<ul id="rid_2323_131" class="nlv_3" >
+				<li id="nlt_2323_46" class="npt_off npt_first"><a href="/Bildung-Soziales/Bildung/Kindertagesst%C3%A4tten" id="nid_2323_46" class="nlk_off npt_first">Kindertagesstätten</a>				</li>
+				<li id="nlt_2323_132" class="npt_off"><a href="/Bildung-Soziales/Bildung/KiTa-Christiansfelde" id="nid_2323_132" class="nlk_off">KiTa Christiansfelde</a>				</li>
+				<li id="nlt_2323_48" class="npt_off"><a href="/Bildung-Soziales/Bildung/Schulen" id="nid_2323_48" class="nlk_off">Schulen</a>				</li>
+				<li id="nlt_2323_133" class="npt_off"><a href="/Bildung-Soziales/Bildung/Bildungseinrichtungen" id="nid_2323_133" class="nlk_off">Bildungseinrichtungen</a>				</li>
+				<li id="nlt_2323_134" class="npt_off childs"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle" id="nid_2323_134" class="nlk_off childs">Jugendzentrum Mühle</a>
+				<ul id="rid_2323_134" class="nlv_4" >
+					<li id="nlt_2323_232" class="npt_off npt_first"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle/Sport" id="nid_2323_232" class="nlk_off npt_first">Sport</a>					</li>
+					<li id="nlt_2323_233" class="npt_off"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle/Offener-Jugendtreff" id="nid_2323_233" class="nlk_off">Offener Jugendtreff</a>					</li>
+					<li id="nlt_2323_234" class="npt_off"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle/Info-Rallye" id="nid_2323_234" class="nlk_off">Info Rallye</a>					</li>
+					<li id="nlt_2323_235" class="npt_off"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle/Schulsozialarbeit-und-Jugendtreff" id="nid_2323_235" class="nlk_off">Schulsozialarbeit und Jugendtreff</a>					</li>
+					<li id="nlt_2323_236" class="npt_off npt_last"><a href="/Bildung-Soziales/Bildung/Jugendzentrum-M%C3%BChle/Hausordnung-und-Regeln-" id="nid_2323_236" class="nlk_off npt_last">Hausordnung und Regeln </a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_135" class="npt_off npt_last"><a href="/Bildung-Soziales/Bildung/Kinder-und-Jugendbeirat" id="nid_2323_135" class="nlk_off npt_last">Kinder- und Jugendbeirat</a>				</li>
+			</ul>
+			</li>
+			<li id="nlt_2323_136" class="npt_off npt_last childs"><a href="/Bildung-Soziales/Soziales" id="nid_2323_136" class="nlk_off npt_last childs">Soziales</a>
+			<ul id="rid_2323_136" class="nlv_3" >
+				<li id="nlt_2323_185" class="npt_off npt_first childs"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte" id="nid_2323_185" class="nlk_off npt_first childs">Gleichstellungsbeauftragte</a>
+				<ul id="rid_2323_185" class="nlv_4" >
+					<li id="nlt_2323_200" class="npt_off npt_first"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Aktuelles" id="nid_2323_200" class="nlk_off npt_first">Aktuelles</a>					</li>
+					<li id="nlt_2323_202" class="npt_off"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Ver%C3%B6ffentlichungen-und-Flyer" id="nid_2323_202" class="nlk_off">Veröffentlichungen und Flyer</a>					</li>
+					<li id="nlt_2323_206" class="npt_off"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Informationen" id="nid_2323_206" class="nlk_off">Informationen</a>					</li>
+					<li id="nlt_2323_248" class="npt_off"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Frauen-im-Dialog" id="nid_2323_248" class="nlk_off">Frauen im Dialog</a>					</li>
+					<li id="nlt_2323_249" class="npt_off"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Zusammenarbeit" id="nid_2323_249" class="nlk_off">Zusammenarbeit</a>					</li>
+					<li id="nlt_2323_250" class="npt_off npt_last"><a href="/Bildung-Soziales/Soziales/Gleichstellungsbeauftragte/Aufgaben-und-Ziele" id="nid_2323_250" class="nlk_off npt_last">Aufgaben und Ziele</a>					</li>
+				</ul>
+				</li>
+				<li id="nlt_2323_138" class="npt_off"><a href="/Bildung-Soziales/Soziales/Nachbarn-f%C3%BCr-Nachbarn" id="nid_2323_138" class="nlk_off">Nachbarn für Nachbarn</a>				</li>
+				<li id="nlt_2323_140" class="npt_off"><a href="/Wirtschaft-Bauen/Barrierefreies-Bad-Segeberg" id="nid_2323_140" class="nlk_off">Barrierefreies Segeberg</a>				</li>
+				<li id="nlt_2323_137" class="npt_off"><a href="/Bildung-Soziales/Soziales/Kirchen" id="nid_2323_137" class="nlk_off">Kirchen</a>				</li>
+				<li id="nlt_2323_86" class="npt_off npt_last childs"><a href="/Bildung-Soziales/Soziales/Seniorenbeirat" id="nid_2323_86" class="nlk_off npt_last childs">Seniorenbeirat</a>
+				<ul id="rid_2323_86" class="nlv_4" >
+					<li id="nlt_2323_246" class="npt_off npt_first"><a href="/Bildung-Soziales/Soziales/Seniorenbeirat/Notfallmappen" id="nid_2323_246" class="nlk_off npt_first">Notfallmappen</a>					</li>
+					<li id="nlt_2323_252" class="npt_off npt_last"><a href="/Bildung-Soziales/Soziales/Seniorenbeirat/Aktuelles" id="nid_2323_252" class="nlk_off npt_last">Aktuelles</a>					</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li id="nlt_2323_2" class="npt_off npt_last childs npt_nolink"><a href="/Kurzmen%C3%BC" id="nid_2323_2" class="nlk_off npt_last childs npt_nolink">Kurzmenü</a>
+		<ul id="rid_2323_2" class="nlv_2" >
+			<li id="nlt_2323_1" class="npt_off npt_first npt_nolink"><a href="/Kurzmen%C3%BC/Start" id="nid_2323_1" class="nlk_off npt_first npt_nolink">Start</a>			</li>
+			<li id="nlt_2323_3" class="npt_off"><a href="/Kurzmen%C3%BC/Kontakt" id="nid_2323_3" class="nlk_off">Kontakt</a>			</li>
+			<li id="nlt_2323_4" class="npt_off"><a href="/Kurzmen%C3%BC/Impressum" id="nid_2323_4" class="nlk_off">Impressum</a>			</li>
+			<li id="nlt_2323_5" class="npt_off"><a href="/Kurzmen%C3%BC/Sitemap" id="nid_2323_5" class="nlk_off">Sitemap</a>			</li>
+			<li id="nlt_2323_52" class="npt_off npt_last"><a href="/Kurzmen%C3%BC/Login" id="nid_2323_52" class="nlk_off npt_last">Login</a>			</li>
+		</ul>
+		</li>
+	</ul>
+			</nav>
+		</div>		
+		<div class="cb"></div>
+	</div>
+</div>
+<div class="tuerkis">
+	<div class="wrapper">
+	
+					
+			<!-- U N T E R S E I T E --> 	
+			<div class="flexslider">
+				<img src="http://www.bad-segeberg.de/media/custom/2323_916_1_r.JPG?1471416181" alt="2016_08_Rathaus_banner" width="1777" height="556" title="2016_08_Rathaus_banner" class="mt_none" />
+			</div>	
+			
+		 			<div class="slider_box_top">
+				<h3>&Ouml;ffnungszeiten</h3>
+<div class="einleitung"><div style="display:inline"><p>Mo - Fr: 08:00 - 12:00 Uhr<span class="text1"><br/>Do: 14:00 - 18:00 Uhr</span></p>
+<p><span class="text1">und t&auml;glich nach Vereinbarung</span></p>
+</div></div>
+<a name="a1" id="a1"></a><a name="a2" id="a2"></a><a name="a3" id="a3"></a><a name="a4" id="a4"></a><a name="a5" id="a5"></a><a name="a6" id="a6"></a><a name="a7" id="a7"></a><a name="a8" id="a8"></a><a name="a9" id="a9"></a><a name="a10" id="a10"></a><a name="a11" id="a11"></a><a name="a12" id="a12"></a>
+			</div>
+		 			<div class="slider_box_bottom">
+				<h3>Kontakt</h3>
+<div class="einleitung"><div style="display:inline">Stadt Bad Segeberg<br/> L&uuml;becker Stra&szlig;e 9<br/> 23795 Bad Segeberg<br/> T  04551 964-0<br/> F  04551 964-111 <br/><a href="mailto:info@badsegeberg.de" title="E-Mail an info@badsegeberg.de schreiben" class="csslink_email">E-Mail schreiben</a></div></div>
+<a name="a1" id="a1"></a><a name="a2" id="a2"></a><a name="a3" id="a3"></a><a name="a4" id="a4"></a><a name="a5" id="a5"></a><a name="a6" id="a6"></a><a name="a7" id="a7"></a><a name="a8" id="a8"></a><a name="a9" id="a9"></a><a name="a10" id="a10"></a><a name="a11" id="a11"></a><a name="a12" id="a12"></a>
+			</div>
+			
+	</div>
+</div>
+<div class="white">
+	<div class="wrapper">
+	
+				
+			<!-- U N T E R S E I T E --> 	
+			<div class="breadcrumb">
+				
+		<a href="/Kurzmen%C3%BC/Start" class="nlk_off npt_first npt_nolink">Start</a>
+/		<a href="/Stadt-Politik" class="nlk_on childs">Stadt &amp; Politik</a>
+/		<a href="/Stadt-Politik/Service" class="nlk_on childs">Service</a>
+/		<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis" class="nlk_on npt_last">Mitarbeiterverzeichnis</a>
+			</div>	
+			<div class="submenu">
+				<a name="anker_untermenu" id="anker_untermenu"></a>
+				
+	<ul id="rid_2323_7" class="nlv_1">
+		<li id="nlt_2323_7" class="npt_on npt_first npt_last childs"><a href="/Stadt-Politik" id="nid_2323_7" class="nlk_on npt_first npt_last childs">Stadt &amp; Politik</a>
+		<ul id="rid_2323_7" class="nlv_2">
+			<li id="nlt_2323_244" class="npt_off npt_first"><a href="/Stadt-Politik/B%C3%BCrgermeister" id="nid_2323_244" class="nlk_off npt_first">Bürgermeister</a></li>
+			<li id="nlt_2323_39" class="npt_off childs"><a href="/Stadt-Politik/Politik" id="nid_2323_39" class="nlk_off childs">Politik</a></li>
+			<li id="nlt_2323_194" class="npt_on childs"><a href="/Stadt-Politik/Service" id="nid_2323_194" class="nlk_on childs">Service</a>
+			<ul id="rid_2323_194" class="nlv_3">
+				<li id="nlt_2323_44" class="npt_off npt_first"><a href="/Stadt-Politik/Service/%C3%96ffnungszeiten-im-Rathaus" id="nid_2323_44" class="nlk_off npt_first">Öffnungszeiten im Rathaus</a></li>
+				<li id="nlt_2323_14" class="npt_off"><a href="/Stadt-Politik/Service/Dienstleistungen-A-Z" id="nid_2323_14" class="nlk_off">Dienstleistungen A-Z</a></li>
+				<li id="nlt_2323_196" class="npt_off"><a href="/Stadt-Politik/Service/Formulare" id="nid_2323_196" class="nlk_off">Formulare</a></li>
+				<li id="nlt_2323_66" class="npt_on"><a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis" id="nid_2323_66" class="nlk_on">Mitarbeiterverzeichnis</a></li>
+				<li id="nlt_2323_197" class="npt_off"><a href="/Stadt-Politik/Service/wichtige-Rufnummern" id="nid_2323_197" class="nlk_off">wichtige Rufnummern</a></li>
+				<li id="nlt_2323_259" class="npt_off"><a href="/Stadt-Politik/Service/Beh%C3%B6rdennummer-115" id="nid_2323_259" class="nlk_off">Behördennummer 115</a></li>
+				<li id="nlt_2323_285" class="npt_off npt_last"><a href="/Stadt-Politik/Service/Datenschutz" target="_top" id="nid_2323_285" class="nlk_off npt_last">Datenschutz</a></li>
+			</ul>
+			</li>
+			<li id="nlt_2323_174" class="npt_off"><a href="/Stadt-Politik/Aktuelles" id="nid_2323_174" class="nlk_off">Aktuelles</a></li>
+			<li id="nlt_2323_56" class="npt_off"><a href="/Stadt-Politik/Amtliche-Bekanntmachungen" id="nid_2323_56" class="nlk_off">Amtliche Bekanntmachungen</a></li>
+			<li id="nlt_2323_60" class="npt_off childs"><a href="/Stadt-Politik/Ausschreibungen-und-Beschaffung" id="nid_2323_60" class="nlk_off childs">Ausschreibungen und Beschaffung</a></li>
+			<li id="nlt_2323_67" class="npt_off childs"><a href="/Stadt-Politik/Stellenangebote" id="nid_2323_67" class="nlk_off childs">Stellenangebote</a></li>
+			<li id="nlt_2323_30" class="npt_off"><a href="/Stadt-Politik/Ortsrecht" id="nid_2323_30" class="nlk_off">Ortsrecht</a></li>
+			<li id="nlt_2323_75" class="npt_off childs"><a href="/Stadt-Politik/Geschichte" id="nid_2323_75" class="nlk_off childs">Geschichte</a></li>
+			<li id="nlt_2323_179" class="npt_off"><a href="/Stadt-Politik/Partnerst%C3%A4dte" id="nid_2323_179" class="nlk_off">Partnerstädte</a></li>
+			<li id="nlt_2323_100" class="npt_off childs"><a href="/Stadt-Politik/Wahlen" id="nid_2323_100" class="nlk_off childs">Wahlen</a></li>
+			<li id="nlt_2323_199" class="npt_off"><a href="/Stadt-Politik/Feuerwehr" id="nid_2323_199" class="nlk_off">Feuerwehr</a></li>
+			<li id="nlt_2323_204" class="npt_off npt_last childs"><a href="/Stadt-Politik/Hallenbad" id="nid_2323_204" class="nlk_off npt_last childs">Hallenbad</a></li>
+		</ul>
+		</li>
+	</ul>
+				<div class="cb"></div>
+			</div>
+			<div class="inhalt">
+				<a name="anker_seiteninhalt" id="anker_seiteninhalt"></a>
+				<form id="SFm" name="SFm" action="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php" method="get" target="_self" style="display:inline">
+<input type="hidden" name="ModID" value="9" />
+<input type="hidden" name="object" value="tx,2323.1" />
+<input type="hidden" name="La" value="1" />
+<input type="hidden" name="NavID" value="2323.66" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		
+			$(document).ready( function() {	
+				if ($("#absenden")[0]) $("#absenden").html('<'+'input type="button" onclick="document.location.href='+"'"+'/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?object=tx,2323.1&amp;NavID=2323.66&amp;La=1&mt_step=new'+"'"+'" value="Neu anlegen" title="Neu anlegen"  tabindex ="7"'+' />');				
+			});		
+		
+			function p_form() {
+				var s_cat = document.getElementById('kategorie');
+				if (s_cat) s_cat.selectedIndex=0;
+				document.SFm.ModID.value='';
+				document.SFm.submit();
+			}
+	
+		/* ]]> */
+	</script>	
+	
+	
+	
+			<h3>Mitarbeiterverzeichnis</h3>
+		
+	<div class="input_container">
+		
+					<input type="hidden" name="TypSel" value="1.101" />
+			
+	</div>
+
+	<div class="input_container">
+		
+					
+			
+							<input type="hidden" name="kat" value= "1822.182" />
+
+			</div>
+
+	<div class="cb"></div>
+	
+	<div class="input_container">
+		
+		<label for="name">Name:</label>
+		<input type="text" name="text" value="" id="name" tabindex="3" />	</div>
+	<div class="cb"></div>
+	
+		
+	
+	
+		
+	<div class="cb"></div>
+
+	
+	
+	<div class="abc_container">
+		
+		
+<script type='text/javascript'>
+/* <![CDATA[ */
+				function jump(ch) {
+					var node = document.getElementById('SFm');
+					if(node.text) node.text.value = '';
+					if(node.FID && node.FID.options) node.FID.selectedIndex = 0;
+					node.alpha.value = ch;
+					node.submit();
+				}
+			/* ]]> */</script>
+<input type="hidden" name="alpha" value="" />
+<table class="alphanav" cellpadding="0" cellspacing="0" width="100%" border="0"><tr><td align="center" ><a href="javascript:jump('A');">A</a> </td><td align="center" ><a href="javascript:jump('B');">B</a> </td><td align="center" ><a href="javascript:jump('C');">C</a> </td><td align="center" ><a href="javascript:jump('D');">D</a> </td><td align="center" ><a href="javascript:jump('E');">E</a> </td><td align="center" ><a href="javascript:jump('F');">F</a> </td><td align="center" ><a href="javascript:jump('G');">G</a> </td><td align="center" ><a href="javascript:jump('H');">H</a> </td><td align="center" ><a href="javascript:jump('I');">I</a> </td><td align="center" ><a href="javascript:jump('J');">J</a> </td><td align="center" ><a href="javascript:jump('K');">K</a> </td><td align="center" ><a href="javascript:jump('L');">L</a> </td><td align="center" ><a href="javascript:jump('M');">M</a> </td><td align="center" ><a href="javascript:jump('N');">N</a> </td><td align="center" ><a href="javascript:jump('O');">O</a> </td><td align="center" ><a href="javascript:jump('P');">P</a> </td><td align="center" >Q</td><td align="center" ><a href="javascript:jump('R');">R</a> </td><td align="center" ><a href="javascript:jump('S');">S</a> </td><td align="center" ><a href="javascript:jump('T');">T</a> </td><td align="center" >U</td><td align="center" >V</td><td align="center" ><a href="javascript:jump('W');">W</a> </td><td align="center" >X</td><td align="center" >Y</td><td align="center" ><a href="javascript:jump('Z');">Z</a> </td><td colspan="2" align="center" ><a href="javascript:jump('');">Alle</a></td></tr></table>	</div>
+	<div class="cb"></div>
+	
+	<input type="submit" value="Anzeigen" title="Anzeigen" tabindex="6" class="absenden" />
+	  	
+	
+
+				<input type="hidden" name="sfort" value= "1" />
+			<input type="hidden" name="bn" value= "" />
+
+
+	<div class="cb"></div>
+
+</form><h4 class="suchergebnis">Suchergebnis (99 Adressen)</h4>
+     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.102.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">David&nbsp;Abdulahad&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 2 -  Ordnung, Schule, Soziales<br />   Am Bienenhof 1<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=Am+Bienenhof+1%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 969 6450  					<br />
+				     Fax:&nbsp;04551 965 5265  					<br />
+				    						<a href="mailto:david.abdulahad@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.102.1&amp;mt_step=contact&amp;to_id=2323.102.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.102.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2196.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Kirsten&nbsp;Arnhold&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 2 -  Ordnung, Schule, Soziales<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-119  					<br />
+				     Fax:&nbsp;04551 964-16119  					<br />
+				     Raum:&nbsp;0.11  					<br />
+				    						<a href="mailto:kirsten.arnhold@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2196.1&amp;mt_step=contact&amp;to_id=1845.2196.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2196.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.85.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Dr.&nbsp;Georg&nbsp;Asmussen&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		 Stadtarchiv<br /> Amt 2 -  Ordnung, Schule, Soziales<br />   Oldesloer Straße 20<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=Oldesloer+Stra%DFe+20%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551- 8998866  					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.85.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.121.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Merle&nbsp;Asmussen&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Kita Christiansfelde<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 8564-712  					<br />
+				     Fax:&nbsp;0431 988 6 621 205  					<br />
+				    						<a href="mailto:merle.asmussen@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.121.1&amp;mt_step=contact&amp;to_id=2323.121.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.121.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2039.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Edgar&nbsp;Baldauf&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-315  					<br />
+				     Fax:&nbsp;04551 964-111  					<br />
+				     Raum:&nbsp;K 8  					<br />
+				    						<a href="mailto:edgar.baldauf@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2039.1&amp;mt_step=contact&amp;to_id=1845.2039.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2039.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.25.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Tanja&nbsp;Bartheidel&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />     23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-411  					<br />
+				     Fax:&nbsp;04551 964-16411  					<br />
+				     Raum:&nbsp;2.21  					<br />
+				    						<a href="mailto:tanja.bartheidel@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.25.1&amp;mt_step=contact&amp;to_id=2323.25.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.25.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2195.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Regina&nbsp;Beer&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-427  					<br />
+				     Fax:&nbsp;04551 964-16427  					<br />
+				     Raum:&nbsp;2.16  					<br />
+				    						<a href="mailto:regina.beer@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2195.1&amp;mt_step=contact&amp;to_id=1845.2195.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2195.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.114.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Giesela&nbsp;Birkholz&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 2 -  Ordnung, Schule, Soziales<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-201  					<br />
+				     Fax:&nbsp;04551 964-16201  					<br />
+				     Raum:&nbsp;0.09  					<br />
+				    						<a href="mailto:giesela.birkholz@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.114.1&amp;mt_step=contact&amp;to_id=2323.114.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.114.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.88.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Angela&nbsp;Bissa&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-423  					<br />
+				     Fax:&nbsp;04551 964-16423  					<br />
+				     Raum:&nbsp;2.12  					<br />
+				    						<a href="mailto:angela.bissa@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.88.1&amp;mt_step=contact&amp;to_id=2323.88.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.88.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2016.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Tanja&nbsp;Boss&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 1 -  Innere Organisation, Finanzen, Personal<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-132  					<br />
+				     Fax:&nbsp;04551 964-111  					<br />
+				     Raum:&nbsp;1.02  					<br />
+				    						<a href="mailto:tanja.boss@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2016.1&amp;mt_step=contact&amp;to_id=1845.2016.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2016.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2080.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Marcel&nbsp;Britt&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-453  					<br />
+				     Fax:&nbsp;04551 964-16453  					<br />
+				     Raum:&nbsp;2.15  					<br />
+				    						<a href="mailto:marcel.britt@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2080.1&amp;mt_step=contact&amp;to_id=1845.2080.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2080.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2146.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Simone&nbsp;Brunn&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-426  					<br />
+				     Fax:&nbsp;04551 964-16426  					<br />
+				     Raum:&nbsp;2.10  					<br />
+				    						<a href="mailto:simone.brunn@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2146.1&amp;mt_step=contact&amp;to_id=1845.2146.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2146.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.116.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Birgit&nbsp;Buck&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 1 -  Innere Organisation, Finanzen, Personal<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-135  					<br />
+				     Fax:&nbsp;04551 964-16135  					<br />
+				     Raum:&nbsp;1.02  					<br />
+				    						<a href="mailto:birgit.buck@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=2323.116.1&amp;mt_step=contact&amp;to_id=2323.116.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=2323.116.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1824.20.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Dieter&nbsp;Buthmann&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		     Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-0  					<br />
+				     Fax:&nbsp;04551 964-111  					<br />
+				     Raum:&nbsp;K 8  					<br />
+				    						<a href="mailto:dieter.buthmann@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1824.20.1&amp;mt_step=contact&amp;to_id=1824.20.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1824.20.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 			<div class="trenner"></div>
+		     
+
+<div class="adressen">
+	<div class="liste_titel">
+					<a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2193.1&amp;NavID=2323.66&amp;La=1" title="Detailansicht der Adresse anzeigen">Kevin&nbsp;Buttkus&nbsp;&raquo;</a>
+			</div>
+	
+	
+	  
+	
+	
+	<div class="liste_text" style="width:100%;">
+	
+		
+					
+			
+			<div class="adressen_links">	
+		  Amt 3 - Bauen und Umwelt<br />   Lübecker Straße 9<br />   23795&nbsp;Bad Segeberg<br />
+					<a
+					                                                              				href="http://maps.google.de/maps?t=m&amp;hl=de&amp;q=L%FCbecker+Stra%DFe+9%2C+23795+Bad+Segeberg"
+                                                              			                                                              				target="_blank" title="Externer Link: Google Maps">Karte anzeigen</a>
+                                                              		 					
+			</div>
+			<div class="adressen_rechts">				
+		      Telefon:&nbsp;04551 964-452  					<br />
+				     Fax:&nbsp;04551 964-16452  					<br />
+				     Raum:&nbsp;2.03  					<br />
+				    						<a href="mailto:kevin.buttkus@badsegeberg.de" title="E-Mail schreiben">E-Mail</a> oder <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ModID=9&amp;object=tx%7c2323.1&amp;FID=1845.2193.1&amp;mt_step=contact&amp;to_id=1845.2193.1&amp;NavID=2323.66&amp;La=1" title="E-Mail per Kontaktformular schreiben">Kontaktformular</a>
+					 					<br />
+				 			<a href="/output/options.php?call=vcard&amp;ModID=9&amp;La=1&amp;FID=1845.2193.1">Adresse exportieren</a>
+		 			</div>
+			<div class="cb"></div>
+		
+
+	</div>
+
+</div> 	
+			<div class="cb"></div>
+		  	<div class="seitenzaehler">
+					Seite:&nbsp;<span class="pn_active">1</span> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=15&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">2</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=30&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">3</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=45&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">4</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=60&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">5</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=75&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">6</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=90&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_step">7</a> | <a href="/Stadt-Politik/Service/Mitarbeiterverzeichnis/index.php?ofs_1=15&amp;La=1&amp;NavID=2323.66&amp;sfort=1&amp;kat=1822.182&amp;TypSel=1.101&amp;object=tx%7C2323.1&amp;ModID=9&amp;KatID=1.101" class="pn_page_r" title="Eine Seite vor">&gt;</a> 	</div>			</div>
+			
+						
+				<div class="randspalte">
+				
+					<!-- Randboxen Bilder -->
+										
+					<!-- Randbox für Adressen -->
+															
+					<!-- Randboxen für Texte -->
+					 							<div class="randspalte_box">
+								<h3>Organigramm der Stadt Bad Segeberg</h3><div style="display:inline"><script type="text/javascript">
+	if (hs.addSlideshow) {
+		hs.addSlideshow({
+			slideshowGroup: 'group2',
+			interval: 5000,
+			repeat: true,
+			useControls: true,
+			fixedControls: 'fit',
+			overlayOptions: {
+				opacity: .75,
+				position: 'bottom center',
+				hideOnMouseOut: true
+			}
+		});
+	}
+</script>
+
+                               
+			<!--IMGS-->
+				<div class="highslide_gallery_single mt_ac mt_noalign">
+			
+									<a href="/media/custom/2323_1266_1_g.JPG?1505391180" onclick="return hs.expand(this,{slideshowGroup:'group1'})">
+						<img src="/media/custom/2323_1266_1_r.JPG?1505391180" style="width:100%;height:auto;" alt="Bild vergrößern: Organigramm2017August" title="Bild vergrößern: Organigramm2017August" />
+					</a>
+								<div class="highslide-caption">Organigramm2017August</div>
+			</div>
+			<!--IMGE-->
+<p><a target="_blank" href="/media/custom/2323_1265_1.PDF?1505390576" class="csslink_PDF">Organigramm2017August</a></p>
+</div>
+							</div>
+						<div class="abstand"></div>
+						 	
+											
+					<!-- Randbox für diverse Links -->
+										
+				</div>	
+			 			
+		<div class="cb"></div>
+		<div class="seitennavigation">
+			<a href="#start" title="Nach oben zum Seitenanfang">nach oben</a><a href="javascript:print()" title="Seite drucken" class="displaynone">Seite drucken</a>
+		</div>
+		<div class="cb"></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="wrapper">		
+		<a name="anker_quickmenu" id="anker_quickmenu"></a>	
+		<div class="quickmenu">						
+			
+	<ul>
+		<li class="npt_off npt_first npt_nolink"><a href="/Kurzmen%C3%BC/Start" class="nlk_off npt_first npt_nolink">Start</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Kontakt" class="nlk_off">Kontakt</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Impressum" class="nlk_off">Impressum</a></li>
+		<li class="npt_off"><a href="/Kurzmen%C3%BC/Sitemap" class="nlk_off">Sitemap</a></li>
+		<li class="npt_off npt_last"><a href="/Kurzmen%C3%BC/Login" class="nlk_off npt_last">Login</a></li>
+	</ul>
+			<div class="cb"></div>
+		</div>
+		<div class="grey_right">
+			<div class="suche">			
+				<a name="anker_volltextsuche" id="anker_volltextsuche"></a>
+				<form name="suchform" action="/" method="get">
+					<input type="hidden" name="La" value="1" />
+					<input type="hidden" name="NavID" value="2323.6" />
+					<label for="such">
+						<input type="text" name="qs" id="qs" onblur="(this.value == '') &amp;&amp; (this.value = 'Suchbegriff eingeben')" onfocus="(this.value == 'Suchbegriff eingeben') &amp;&amp; (this.value = '')" value="Suchbegriff eingeben" />
+						<input type="image" name="suchanfrage" src="/layout/stadtbadsegeberg/media/lupe.png" title="Los" alt="Los" class="lupe" />
+					</label>
+				</form>	
+			</div>	
+			<div class="cb"></div>
+		</div>
+		<div class="cb"></div>
+	</div>
+</div>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//www.segeberg.de/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 3]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//www.segeberg.de/piwik/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code --></body>
+</html>

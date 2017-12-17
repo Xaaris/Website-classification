@@ -1,0 +1,676 @@
+<!doctype html>
+<html>
+  <head>
+  	<title></title>
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    
+    <link rel="stylesheet" href="https://css.bewerbermatching.com/base.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://css.bewerbermatching.com/responsive.css" type="text/css" media="all and (max-width: 892px)"> 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="jquery-1.4.2.min.js">      </script>
+    
+    <style>
+    /* LAYOUT */ 
+        
+		#ag {
+			width:900px;
+        	max-width: 900px;
+			background-color:#adafb1;
+			box-shadow: 0px 0px 10px #000;
+			border:none;			
+
+    	}
+		#ag #ag-inner-wrapper
+		{
+			background-color:#efeff0;
+			}
+        #ag p, #ag ul, #ag h1, #ag h2 {
+            font-family: 'Open Sans', Verdana,Arial,sans-serif;
+            color: #000000;
+            font-size: 13px;
+            padding: 0 15px;
+            line-height: 18px;
+        }	
+        #ag p { 
+            padding-top: 15px; 
+        }    
+        #ag h1 { 
+            font-size: 28px; 
+            line-height: 28px; 
+			padding-top:15px;
+			padding-bottom:25px; 
+			font-weight:bold;
+        }    
+        #ag h2 { 
+            font-size: 25px; 
+            padding-top: 55px; 
+            line-height: 28px;
+			color:#fff; 
+			font-weight:normal;
+			margin-left:295px;
+
+        }
+        #ag a { 
+            color:#000;	
+            text-decoration:none; 
+        }
+		#ag a:hover
+		{
+			color:#f3a536;
+		}
+
+			
+		#ag ul {
+			list-style: outside none none;
+			padding-top:10px;
+			}
+		
+		#ag ul li::before {
+			color:#f3a536;
+			content: "\2022";
+			font-size: 22px;
+			left: -1px;
+			position: absolute;
+			top: 0px;
+			}
+		#ag ul li {
+			position: relative;
+			padding-left:20px;
+		}
+
+		
+		body
+		{
+			background-color:#adafb1;
+		}
+		#ag #kopf
+		{
+			background:url(top.jpg) no-repeat top left;
+			height:203px;
+		}
+		#ag #kopf p
+		{
+			padding-top:50px;
+			margin-left:295px;
+			font-size:15px;	
+			font-weight:bold;		
+		}
+		#ag .high
+		{
+			font-weight:bold;
+		}
+		#ag #kopf a
+		{
+			color:#fff;
+		}
+		#ag #text
+		{
+			background-color:#adafb1;
+		}
+		#ag #beschreibung
+		{
+			background-color:#efeff0;
+			border-right:5px solid #adafb1;
+		}
+		#ag #links
+		{
+			width:236px;
+			float:left;
+			background-color:#efeff0;
+
+		}
+		
+		#ag #links p, #ag #links ul
+		{
+			font-size:12px;
+           font-family: 'Open Sans', Verdana,Arial,sans-serif;
+		}
+		#ag .block
+		{
+			text-align:justify;
+		}
+		
+		#ag #rechts
+		{
+			float:right;
+			width:639px;
+			background-color:#efeff0;
+			margin-right:5px;
+			margin-bottom:15px;
+			margin-top:22px;
+		}
+		#ag #rechts p, #ag #rechts ul
+		{
+           font-family: 'Open Sans', Verdana,Arial,sans-serif;
+		}
+		#ag .team
+		{
+			background-color:#454648;
+			padding-top:2px;
+			text-align:center;
+			padding-bottom:2px;
+			color:#fff;
+		}
+		#ag #abspann
+		{
+			width:639px;
+			padding-bottom:15px;
+
+		}
+		#ag #partner
+		{
+			width:40%;
+			float:left;
+			
+		}
+		#ag #frankfurt
+		{
+			width:30%;
+			float:left;
+			
+		}
+		#ag #homburg
+		{
+			width:30%;
+			float:left;
+			
+		}
+
+		#ag #abspann p
+		{
+			padding-left:15px;
+			padding-right:0px;
+			font-size:12px;
+           font-family: 'Open Sans', Verdana,Arial,sans-serif;
+		}
+
+		#ag .person
+		{
+			margin-top:35px;
+			margin-bottom:20px;
+			margin-left:15px;
+		}
+		#ag .drucken
+		{
+			float:right;
+			margin-right:15px;
+			margin-top:25px;
+		}
+		#ag .bewerben
+		{
+			margin-left:15px;
+			margin-top:25px;
+		}
+		
+		#ag h4
+		{
+   			 border-bottom: 1px solid #ffae38;
+    		 cursor: pointer;
+    		 font-size: 12px; line-height:18px;
+    		 margin: 10px 15px 5px; 
+			 background: rgba(0, 0, 0, 0) url(dot.png) no-repeat scroll right top;	
+           font-family: 'Open Sans', Verdana,Arial,sans-serif;		        
+		}
+		#ag h4:hover {
+	    background: rgba(0, 0, 0, 0) url(doto.png) no-repeat scroll right top;
+	
+		}
+		
+		#ag #grau
+		{
+		background-color:#454648;
+		height:5px;
+		margin-top:15px;			
+		}
+		
+		#ag #spek
+		{
+			display:none;
+		}
+		#ag #phil
+		{
+			display:none;
+		}
+		#ag #vorteile
+		{
+			display:none;
+		}
+		#ag #abspann .zeit
+		{
+			font-size:13px; 
+			padding-left:266px;
+		}
+		#ag #mobihead
+		{
+			display:none;
+		}
+		#ag #bewerb
+		{
+			width:50%; float:left;
+		}
+		#ag #druck
+		{
+			width:50%; float:right;
+		}
+		#ag #vorteile ul li::before
+		{
+
+			padding-left:0px;
+			color:#000;
+			font-size:12px;
+	
+		}
+		#ag #vorteile ul li {
+			padding-left:10px;
+		}
+		
+		#ag #strichpart
+		{
+			width:28%;
+			border-top:2px solid #454648;
+			margin-left:15px;
+			float:left;			
+		}
+		#ag #strichort
+		{
+			width:56%;
+			border-top:2px solid #454648;
+			float:right;
+			margin-right:15px;
+	
+	
+		}
+		
+
+		#ag #frankfurt p
+		{
+			padding-left:11px;			
+		}
+		
+		#ag #logolink
+		{
+			position:absolute;
+			width:210px;
+			height:140px;
+		}
+		#ag .talentvier
+		{
+			color:#019df0;
+			font-size:16px;
+		}
+		#ag .orange
+		{
+			color:#ffae38;
+		}
+		#ag .blau
+		{
+			color:#019df0;
+		}
+
+
+ @media screen and (max-width: 820px) { 
+ 		#ag {
+			width:818px;
+        	max-width: 818px;
+		    }
+		#ag #links
+		{
+			display:none;
+		}
+		#ag #kopf
+		{
+			background:url(top2.jpg) no-repeat left top;
+			height:185px;
+		}
+		
+		#ag h2
+		{
+			margin-left:265px;
+			padding-top:5%;
+		}
+		
+		#ag #kopf p
+		{
+			padding-top:30px;
+			margin-left:265px;
+			font-size:15px;	
+			font-weight:bold;		
+		}
+		
+		#ag #rechts
+		{
+			position:absolute;
+			left:0px;
+			width:820px;
+			margin-top:0px;
+		}
+		#ag .drucken
+		{
+			margin-right:15px;
+		}
+		#ag #abspann
+		{
+			width:100%;
+		}
+		
+		#ag #abspann p
+		{
+			font-size:13px;
+		}
+		
+		#ag #partner
+		{
+			width:33%;
+			
+		}
+		#ag #frankfurt
+		{
+			width:33%;
+			
+		}
+		#ag #homburg
+		{
+			width:33%;
+		}
+		#ag #abspann .zeit
+		{
+			padding-left:282px;
+		}
+		#ag .drucken
+		{
+			float:left;
+			margin-right:15px;
+			margin-top:25px;
+		}
+		#ag #bewerb
+		{
+			width:20%; float:left;
+		}
+		#ag #druck
+		{
+			width:80%; float:left;
+		}	
+		
+		#ag #strichpart
+		{
+			width:24%;
+			border-top:2px solid #454648;
+			margin-left:15px;
+			float:left;			
+		}
+		#ag #strichort
+		{
+			width:64%;
+			border-top:2px solid #454648;
+			float:right;
+			margin-right:15px;
+		}	
+		
+		#ag #logolink
+		{
+			width:190px;
+			height:125px;
+		}
+		
+ }
+ 
+@media screen and (max-width: 520px) { 
+		
+		#ag
+		{	max-width:520px;
+			width:100%;
+			margin:0 auto;
+			
+		}
+		#ag h1
+		{
+			font-size:24px;
+		}
+		#ag #kopf
+		{
+			display:none;
+		}
+		#ag #rechts
+		{
+			position:absolute;
+			left:0px;
+			width:100%;
+			margin-top:0px;
+		}
+		
+
+		#ag #partner
+		{
+			width:100%;
+			padding-bottom:15px;
+			
+		}
+		#ag #frankfurt
+		{
+			width:100%;
+			
+		}
+		#ag #homburg
+		{
+			width:100%;
+		}
+		#ag .drucken
+		{
+			display:none;
+		}
+		#ag #abspann .zeit
+		{
+			padding-left:15px;
+		}
+		#ag #mobihead
+		{
+			display:block;
+		}
+		#ag .kopfg
+		{
+			width:100%;
+		}
+
+		#ag #strichpart
+		{
+			display:none;
+		}
+		#ag #strichort
+		{
+			display:none;
+		}	
+		
+		#ag #frankfurt p
+		{
+			padding-left:15px;			
+		}
+		#ag #logolink
+		{
+			display:none;
+
+		}
+		
+
+}
+
+
+        
+    </style>
+
+
+  </head>
+  <body>
+	<div id="ag" class="clear">
+        <div id="ag-inner-wrapper">
+			<div class="zwoelf spalten" id="kopf">
+            <a href="http://www.ateam-frankfurt.de" target="_blank"><div id="logolink"></div></a>
+            <h2>Wir finden den Job,<br>
+für den Sie geboren sind.</h2>
+			<p><a href="http://www.ateam-frankfurt.de" target="_blank">www.ateam-frankfurt.de</a></p>
+            </div>
+           <div id="mobihead">
+           <a href="https://www.ateam-frankfurt.de/" target="_blank"><img src="head.jpg" class="kopfg"></a>
+           </div> 
+		 <div class="zwoelf spalten" id="text">
+    	  
+          <div id="links" class="clear">
+          <p class="team">&Uuml;ber das a-team</p> 
+          <p style="text-align:left;">Erst mit dem richtigen Job wird aus Leidenschaft und Potenzial eine erfolgreiche Karriere. Das a-team begleitet Sie auf dem Weg dorthin.</p>   
+          
+ 
+		 <h4 id="leistung">Leistungsspektrum</h4>	
+         <div id="spek">
+         <p class="block">Wir finden Jobs, in denen Sie Ihre Fachkenntnisse optimal einbringen und sich stetig weiterentwickeln k&ouml;nnen. Unser Kundenpool erstreckt sich von natio&shy;nalen mittel&shy;st&auml;ndischen Unternehmen bis hin zu inter&shy;nationalen Gro&szlig;konzernen und h&auml;lt <b>kauf&shy;m&auml;nnische Berufe</b> aus unterschiedlichen Bran&shy;chen und unter&shy;schiedlichen Bereichen für Sie bereit.
+ <p>
+Sei es im Rahmen<br>
+&bull; der Personalvermittlung oder<br>
+&bull; der Arbeitnehmer&uuml;berlassung als<br>
+  &nbsp;&nbsp; - langfristiger Einsatz<br>
+  &nbsp;&nbsp; - kurzfristiges Projekt<br>
+  &nbsp;&nbsp; - Einsatz mit einer zeitnahen<br>
+&nbsp; &nbsp;&nbsp; &Uuml;bernahme<br>
+<br>
+in den Bereichen:<br>
+&bull; Assistenz/Sekretariat/Back-Office<br>
+&bull; Buchhaltung/Controlling<br>
+&bull; Personal/Verwaltung<br>
+&bull; Einkauf/Logistik<br>
+&bull; Marketing/Vertrieb<br>
+&bull; Projektassistenz / &nbsp;&nbsp;Projektmanagement </p>
+		</div>
+     	 <h4 id="firmen">Firmenphilosophie</h4>
+         <div id="phil">
+			 <p>Bei <b>a-team</b> TALENT<span class="blau">4</span>TALENTS Personalmanagement findet sich, wer sich lange gesucht hat:<strong> der richtige Mitarbeiter f&uuml;r das richtige Unternehmen.</strong> Unsere besondere St&auml;rke liegt darin, die jeweiligen Bed&uuml;rfnisse und Anforderungen ideal aufeinander abzustimmen. So ist sichergestellt, dass Unternehmen und Mitarbeiter nicht nur fachlich, sondern auch zwischenmenschlich harmonieren.</p>
+         </div>
+         
+         <h4 id="vor">Ihre Vorteile</h4>
+         <div id="vorteile">
+		 <p>Als Bewerber genie&szlig;en Sie einige Vorteile in der Zusammenarbeit mit dem a-team:</p>
+         <ul>
+		<li>   individuelle Personal&shy;entwicklungs&shy;ma&szlig;nahmen im Rahmen der hausinternen a-team Akademie am Campus Frankfurt</li>
+		<li>interessante Zusatzinformationen durch 
+		langj&auml;hrige Kundenkontakte  </li>
+		<li>  Unterst&uuml;tzung bei der &Uuml;ber&shy;windung von Ein&shy;stellungs&shy;h&uuml;rden  </li>
+		<li>  qualifizierte und individuelle Beratung zu allen personal&shy;relevanten Themen (Feedback zu Ihrer Bewerbung sowie zu Ihren Karrierechancen, Einsch&auml;tzung Ihrer pers&ouml;nlichen Qualifikation&hellip;)  </li>
+		<li>  unterschiedliche Einsatzgebiete und diverse Posi&shy;tionen sowohl im Rahmen der Direktver&shy;mittlung als auch der Arbeit&shy;nehmer&shy;&uuml;ber&shy;lassung   </li>
+		<li>  &uuml;bertarifliche Verg&uuml;tungs&shy;strukturen </li>
+		</ul>
+		<p>
+Profitieren Sie von unseren M&ouml;g&shy;lichkeiten und lassen Sie sich vom a-team bei Ihrer individuellen Karriereplanung unterst&uuml;tzen. <br>
+<br>
+<b>Nutzen Sie unsere Kontakte zu Ihrem Vorteil!</b></p>
+         </div>
+		<a href="https://www.facebook.com/ateam.personal" target="_blank"><img src="fb.png" style="display:inline-block; margin-left:15px; margin-top:15px;"></a>
+        <a href="https://twitter.com/ateamPersonal" target="_blank"><img src="tw.png" style="display:inline-block;"> </a>
+        <a href="https://www.xing.com/companies/a-teamzeitarbeitundpersonalmanagementgmbh?current=1&literal=a-team+Zeitarbeit+und+Personalmanagement+GmbH" target="_blank"><img src="x.png" style="display:inline-block;"> </a>
+        <div id="grau"> </div>
+          </div>
+          
+          <div id="rechts">
+          <p>Bei einem unserer namhaften Kunden in Frankfurt am Main, einer international t&auml;tigen Unternehmensberatung, bietet sich diese interessante Perspektive in direkter Vermittlung:</p>
+              <h1>Recruiter (m/w)</h1>
+                <p class="high">Ihr Profil</p>
+                <ul>
+                <li> erfolgreich abgeschlossenes Studium (z.B.: BWL, Wirtschaftspsychologie, gerne Schwerpunkt Personal)     </li>
+                <li>fundierte Erfahrung im Bereich Recruiting/Research/Active Sourcing von Experten (ideal professional Services / HR / IT)     </li>
+                <li>Erfahrung in der eigenverantwortlichen Durchf&uuml;hrung von Projekten/Suchmandaten     </li>
+                <li>Neugier und Mut, Gestaltungsfreir&auml;ume zu nutzen, Innovation voranzutreiben und Entscheidungen zu treffen     </li>
+                <li>sicherer Umgang mit modernem cloudbasiertem Bewerbermanagementsystem inkl. weiteren internen IT-Tools (z.B. Referral-Programm) zur Projektsteuerung und -administration     </li>
+                <li>sehr gute Englischkenntnisse in Wort und Schrift     </li>
+                <li>hohes Ma&szlig; an Verantwortungsbewusstsein, Eigenst&auml;ndigkeit und Pragmatismus     </li>
+                <li>gewinnende und offene Art, &uuml;berzeugend und stark in der Kommunikation, Authentizit&auml;t</li>
+                </ul>
+                <p class="high">Ihre Aufgaben</p>
+                <ul>
+                <li> eigenst&auml;ndige Steuerung und Durchf&uuml;hrung interner Suchmandate sowie aktive Suche und proaktive Gewinnung von IT Consulting Experten / Projektleitern (m/w) inkl. Identifizierung und Direktansprache &uuml;ber verschiedene Kan&auml;le (Active Sourcing)     </li>
+                <li>Steuerung und Durchf&uuml;hrung des gesamten Recruitingprozesses     </li>
+                <li>Einsatz von Selling Stories und kreativer Sourcing Strategien zur Gewinnung von Personal in unserem Gesch&auml;ftsfeld HR Digitalisierung     </li>
+                <li>Matching potenzieller Kandidaten auf offene Positionen     </li>
+                <li>Durchf&uuml;hrung von Interviews via Telefon/Skype und Face-to-Face auf Deutsch und Englisch     </li>
+                <li>Erstellung von qualifizierten Kandidatenprofilen     </li>
+                <li>Erledigung aller administrativer Aufgaben     </li>
+                <li>Einsatzort: Frankfurt am Main</li>
+                </ul>
+                <p class="high">Ihre Chancen</p>
+                <p>Seit 2001 treiben wir Karrieren voran. Wir begleiten auch Sie auf dem Weg zu Ihrem Traumarbeitsplatz und sind Ihr zuverl&auml;ssiger Ansprechpartner. Wenn wir Ihr Interesse geweckt haben und Sie sich einer neuen Herausforderung stellen m&ouml;chten, bieten wir Ihnen vielseitige T&auml;tigkeiten bei einem unserer Kunden mit langfristigen Perspektiven.</p>
+    			<div id="bewerb">
+                <a href="https://www.ateam-frankfurt.de/bewerber/jetzt-bewerben/" target="_blank"><img src="bewerben.png" class="bewerben"></a>
+                </div>
+                <div id="druck">
+               <a href="#" onclick="window.print();"> <img src="drucken.png" class="drucken"></a>
+     			</div>
+                <div class="clear">
+          		<img src="Nina.jpg" class="person">
+                </div>
+          	<div id="abspann" class="clear">
+
+            <div id="strichpart"></div>
+            <div id="strichort"></div>            
+
+          	<div id="partner">
+         
+            <p style="font-size:13px;"><b>Ihre Ansprechpartnerin</b></p>
+                <p>Nina Turek <br>
+                  Junior-Personalreferentin<br>
+Tel.: + 49 (0)69 – 920 390 60<br>
+<a href="mailto:bewerbung@ateam-frankfurt.de">bewerbung@ateam-frankfurt.de</a></p></div>
+				<p class="zeit"><span class="orange"><strong> a-team </span> |  TALENT<span class="talentvier">4</span>TALENTS Personalmanagement</strong></p>
+          	<div id="frankfurt">         
+                <p>Gro&szlig;e Bockenheimer Str. 43<br>
+ 60313 Frankfurt<br>
+ Tel.: + 49 (0)69 &ndash; 920 390 60 <br>
+<a href="http://www.ateam-frankfurt.de" target="_blank">www.ateam-frankfurt.de</a></p>
+                </div>
+            	<div id="homburg">
+                <p>Ferdinandstrasse 11<br>
+61348 Bad Homburg<br>
+Tel.: + 49 (0)6172 &ndash; 681 88 0<br>
+<a href="http://www.ateam-badhomburg.de" target="_blank">www.ateam-badhomburg.de</a></p>                  
+          </div>
+          </div>	
+          </div>            
+            
+            </div>
+                </div>                                    
+     </div>    
+     
+
+     
+                  
+	<div id="foo" style="display: none">Social-Media-Recruiting soziale Netzwerke Personalwesen Betriebswirtschaft Empfehlungsprogramm Direct Search Personalberatung Personalabteilung  Personalmanagement Personalberatungsagentur Pre-Screening Telefoninterview Personalbeschaffung</div>
+
+    <script>
+	$("#leistung").click( function() {
+		$("#spek").toggle();}
+	
+	)
+	$("#firmen").click( function() {
+		$("#phil").toggle();}
+	
+	)
+	$("#vor").click( function() {
+		$("#vorteile").toggle();}
+	
+	)
+	</script>
+  <script type="text/javascript"> 
+    var _paq = _paq || [];
+	_paq.push(['setCustomVariable', 1, 'domain', document.domain, 'visit']);
+	_paq.push(['setCustomVariable', 2, 'jobboerse', 'xing', 'visit']);
+	_paq.push(['setCustomVariable', 3, 'jobboerse', 'xing', 'page']);
+	_paq.push(['setDoNotTrack', true]);
+	_paq.push(['disableCookies']);
+	_paq.push(['trackPageView']);
+	_paq.push(['enableLinkTracking']);
+
+	(function() {
+	var u='https://pw.bewerbermatching.com/';
+	_paq.push(['setTrackerUrl', u+'piwik.php']);
+	_paq.push(['setSiteId', '89271']);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+	g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	})();</script><noscript><img src="https://pw.bewerbermatching.com/xing/89271" style="border:0"></noscript></body>
+</html>

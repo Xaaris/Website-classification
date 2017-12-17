@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from nltk.stem.snowball import GermanStemmer
 import glob
+from langdetect import detect, lang_detect_exception
 
 
 def text_from_html(body):
@@ -72,15 +73,29 @@ def read_file_from_disc(path):
     return file.read()
 
 
-# docs = []
-# file_names = get_file_names_from_directory("/Users/hannes/Desktop/jobNoJob-master/files/negatives/raw/", "html")
+
+
+
+
+# docs_en = []
+# docs_de = []
+# file_names = get_file_names_from_directory("/Users/hannes/Desktop/jobNoJob-master/files/positives/raw/", "html")
 # for file_name in file_names:
 #     html = read_file_from_disc(file_name)
-#     processed_words = preprocess_doc(html)
-#     print(str(len(processed_words)) + " " + str(processed_words))
-#     docs.append(processed_words)
-#
-# write_docs_to_disc("jobs-neg.txt", docs)
+#     visible_text = text_from_html(html)
+#     if len(visible_text) > 0:
+#         try:
+#             language = detect(" ".join(visible_text))
+#             print(language)
+#         except lang_detect_exception.LangDetectException as error:
+#             print(error)
+#         processed_words = preprocess_doc(html)
+#         if language == "de":
+#             docs_de.append(processed_words)
+#         if language == "en":
+#             docs_en.append(processed_words)
+# write_docs_to_disc("jobs-pos_de.txt", docs_de)
+# write_docs_to_disc("jobs-pos_en.txt", docs_en)
 
 
 # nltk.download('stopwords')

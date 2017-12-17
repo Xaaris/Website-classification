@@ -1,0 +1,697 @@
+<!DOCTYPE html><html itemscope="itemscope" itemtype="http://schema.org/WebPage" class="no-js" lang="de"><head><link rel="alternate" href="http://app.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html" media="mobile"></link><link rel="amphtml" href="http://amp.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html"></link><script type="text/javascript">var mobileSwitchHandler = {
+  url: null,
+  ready: false,
+  init: function (a) {
+    'use strict';
+    var qs;
+    if((qs = document.querySelector('link[media="mobile"][rel="alternate"][href]')) !== null) {
+      this.url = qs.getAttribute('href');
+    }
+
+    if(this.url === null) {
+      return false;
+    }
+
+    var getQueryParameter = function (name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+        results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    if (getQueryParameter('home_teaser') !== '') {
+      return false;
+    }
+
+    if (getQueryParameter('mobile') === 'false') {
+      this.setMobileCookie(false);
+      return false;
+    }
+
+    try {
+      if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)) {
+        if (this.url !== null) {
+          if (document.cookie.indexOf('show_mobile=true') === -1 && document.cookie.indexOf('show_desktop=true') === -1) {
+            this.goMobile();
+          } else {
+            if (document.cookie.indexOf('show_desktop=true') === -1) {
+              this.goMobile();
+            } else {
+              this.showBackToMobileLayer();
+            }
+          }
+        }
+      }
+    } catch (e) {
+      console.log('error: ' + e);
+    }
+  },
+  goMobile: function () {
+    'use strict';
+    this.setMobileCookie(true);
+   // HBO-1037 If search query available from Google and mobileswitch, do not forget to take over search param
+   // Example: http://www.handelsblatt.com/suche/?sw=test --> http://app.handelsblatt.com/suche/?sw=test&mwl=ok
+   //
+   // if (location.search.indexOf('?sw=') > -1){
+   //    window.location.replace(this.url + location.search + '&mwl=ok');
+   //  } else {
+   //    window.location.replace(this.url + ((this.url.indexOf('?') === -1) ? '?' : '&') + 'mwl=ok' + ((location.search !== '') ? '_' + encodeURIComponent(location.search.substr(1)) : ''));
+   //  }
+    window.location.replace(this.url + location.search);
+  },
+  setMobileCookie: function (e) {
+    var setCookieName = (e) ? 'show_mobile' : 'show_desktop';
+    var removeCookieName = (e) ? 'show_desktop' : 'show_mobile';
+
+    // Return if no cookie not changed
+    if (document.cookie.indexOf(setCookieName + '=true') !== -1) {
+      return;
+    }
+
+    // Cookie Domain
+    var _c_domain = window.location.host.split('.');
+    if (_c_domain.length !== 1) {
+      _c_domain.shift();
+      _c_domain = '.' + _c_domain.join('.');
+    } else {
+      _c_domain = false;
+    }
+
+    // Remove old Cookie
+    document.cookie = removeCookieName + "=;expires=" + new Date('1970/01/01').toString() + ";" + ((_c_domain) ? "domain=" + _c_domain + ';' : '') + "path=/;";
+
+    // Cookie Time
+    var _c_date = new Date();
+    _c_date.setMonth(_c_date.getMonth() + 1);
+
+    // Set Cookie
+    document.cookie = setCookieName + "=true" + ";expires=" + _c_date + ";" + ((_c_domain) ? "domain=" + _c_domain + ';' : '') + "path=/;";
+  },
+  showBackToMobileLayer: function () {
+    var d = document.createElement('div');
+    d.className = 'vhb-back-to-mobile';
+    d.innerHTML = '<div class="vhb-stage"><div>Zur mobilen Ansicht wechseln</div></div>';
+    d.onclick = function () {
+      //COR-264 changed this -> mobileSwitchHandler && r .> mobileSwitchHandler.url
+      mobileSwitchHandler.setMobileCookie(true);
+      window.location.replace(mobileSwitchHandler.url + ((mobileSwitchHandler.url.indexOf('?') === -1) ? '?' : '&') + 'mwl=button-rueckverlinkung');
+    };
+    var insertIv = window.setInterval(function () {
+      if(document.body !== null) {
+        clearInterval(insertIv);
+        document.body.insertBefore(d, document.body.firstChild);
+      }
+    }, 500);
+
+  },
+};
+
+mobileSwitchHandler.init(navigator.userAgent || navigator.vendor || window.opera);
+</script><link href="/css/11357910/13/vendor.css" rel="stylesheet" type="text/css"/><link href="/css/11058124/371/styles.css" id="maincss" rel="stylesheet" type="text/css"/><link href="/css/11090282/58/vwd.css" media="all" rel="stylesheet" type="text/css"/><link href="/css/12535722/31/experiments.css" rel="stylesheet" type="text/css"/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<!--[if lte IE 8]>
+<link href="/css/11091050/8/ie-8.css" id="ie8css" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+<link href="/css/11104692/6/ie-9.css" id="ie9css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/11104704/1/ue.js"></script>
+<!--<![endif]--><script type="text/javascript" src="/preparesite/empty.js?elementId=20152184&#38;rand=783&#38;uri=%2Fhcf-webapp%2Fservlet%2Fpolitik%2Fdeutschland%2Fmedienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma%2F20152184.html"></script><script>var taboola = {article: 'auto'};</script><title>Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma </title><meta content="Altbundespräsidenten bekommen weiter ein hohes Gehalt vom Steuerzahler. Ex-Bundespräsident Christian Wulff reicht das nicht. Er arbeitet als Prokurist bei einer türkischen Modefirma. SPD und Linke kritisieren das scharf." name="description"/><meta content="" name="keywords"/><meta content="" name="news_keywords"/><meta name="robots" content="index,follow,noarchive"><link href="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html" rel="canonical"/><link href="/images/christian-wulff/20152198/2-format7.jpg" rel="image_src"/><meta content="Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma" property="og:title"/><meta content="Article" property="og:type"/><meta content="http://www.handelsblatt.com/images/christian-wulff/20152198/2-format2010.jpg" property="og:image"/><meta content="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html" property="og:url"/><meta content="Altbundespräsidenten bekommen weiter ein hohes Gehalt vom Steuerzahler. Ex-Bundespräsident Christian Wulff reicht das nicht. Er arbeitet als Prokurist bei einer türkischen Modefirma. SPD und Linke kritisieren das scharf." property="og:description"/><meta content="text" name="vr:type"/><meta content="Deutschland" name="vr:category"/><meta content="dpa  " name="vr:author"/><meta content="06.08.2017 12:51" name="vr:published-time"/><meta content="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html" name="vr:canonical"/><meta content="de-DE" http-equiv="Content-Language"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="text/css" http-equiv="Content-Style-Type"/><meta content="text/javascript" http-equiv="Content-Script-Type"/><meta content="104709558232" property="fb:page_id"/><meta content="{&quot;webtrekk&quot;:{&quot;contentId&quot;:&quot;politik.deutschland.Ex-Bundespräsident Wulff arbeitet für türkische Modefirma.20152184.Article&quot;,&quot;contentGroup&quot;:{&quot;1&quot;:&quot;politik&quot;,&quot;2&quot;:&quot;deutschland&quot;,&quot;3&quot;:&quot;&quot;,&quot;4&quot;:&quot;&quot;,&quot;5&quot;:&quot;20152184.Medienbericht.Ex-Bundespräsident Wulff arbeitet für türkische Modefirma&quot;,&quot;6&quot;:&quot;20152184&quot;},&quot;customParameter&quot;:{&quot;1&quot;:&quot;Article&quot;,&quot;2&quot;:&quot;Article.Image.1&quot;,&quot;3&quot;:&quot;Handelsblatt&quot;,&quot;4&quot;:&quot;&quot;,&quot;6&quot;:&quot;17.08.06&quot;,&quot;33&quot;:&quot;FREE&quot;,&quot;34&quot;:&quot;&quot;},&quot;media&quot;:{&quot;1&quot;:&quot;&quot;,&quot;2&quot;:&quot;&quot;},&quot;customClickParameter&quot;:{&quot;2&quot;:&quot;&quot;},&quot;heatmap&quot;:0,&quot;trackId&quot;:&quot;357500119523122&quot;,&quot;trackDomain&quot;:&quot;handelsblatt01.webtrekk.net&quot;,&quot;domain&quot;:&quot;REGEXP:^([a-zA-Z0-9\\-\\.])*?handelsblatt([a-zA-Z0-9\\-])*?\\.(com|de|net|org|biz)$&quot;,&quot;active&quot;:true},&quot;audioPlayer&quot;:{&quot;player&quot;:&quot;/downloads/1981510/2/audioplayer.swf&quot;},&quot;flowplayer&quot;:{&quot;player&quot;:&quot;/downloads/1981418/2/flowplayer-3-2-5.swf&quot;},&quot;swfobj&quot;:{&quot;install&quot;:&quot;/downloads/1981480/2/expressinstall.swf&quot;}}" http-equiv="Config"/><link href="/images/apple-touch-icon/3896854/2-formatOriginal.png" rel="apple-touch-icon-precomposed"/><link href="/images/favicon-ico/1981436/3-formatOriginal.ico" rel="SHORTCUT ICON"/><link rel="alternate" type="application/rss+xml" title="Handelsblatt Online - RSS-Feed: Top-Themen" href="/contentexport/feed/top-themen/"/><script type="text/javascript">var GLOBAL = {
+  ABWT: false,
+  WTTD: 'wtk.service.vhb.de',
+  NOIVW: ['footerhp=scroll'],
+  PSD: 'push.service.vhb.de',
+  JOB: 'http://www.vhb.de/karriereportal?yid=435',
+  JSL: {
+    TBL: 'http://www.handelsblatt.com/js/13587814/3/vhb.datatables.js'
+  },
+  CSSL: {
+    TBL: 'http://www.handelsblatt.com/css/13587868/4/vhb.datatables.bs.css'
+  }, 
+  CS: {
+    URI: 'http://dienste.vhb.de/collector/collector.php',
+    LV: false,
+    ERR: false
+  },
+  GEWINN: false
+};
+
+var EXPERIMENTS = [
+  false, //Paywall Layer
+  true, //Eigenwerbung 
+  false, //PushService
+  false, //Sticky Header Sparten
+  false, //TEMP Header Banner
+  false,
+  false
+];</script><script src="/js/13876838/2/webtrekk_optimizely.min.js" type="text/javascript"></script><script src="/js/11002856/18/header.js" type="text/javascript"></script><script src="//cdn.optimizely.com/js/571703138.js" type="text/javascript"></script><script src="//script.ioam.de/iam.js" type="text/javascript"></script><script src="/js/11462454/1/jquery.cycle.all.js" type="text/javascript"></script><script type="text/javascript">// START - Taboola Header: Loader
+  window._taboola = window._taboola || [];
+  _taboola.push(taboola);
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/vhb-handelsblatt/loader.js',
+  'tb_loader_script');
+// END - Taboola Header: Loader</script><script src="/js/12928036/126/iqadcontroller.js" type="text/javascript"></script>
+				
+
+<script type="text/javascript"> 
+	if (typeof AdController !== 'undefined') {
+		var pubCmsObject = {
+			$handle : "artikel",
+			$autoSizeFrames: true,
+			level2: "politik",
+			level3: "deutschland",
+			level4: "",
+			keywords :"hcfhb,newdesign,politik,deutschland",
+			tma:"Bundespraesident"
+		};
+		
+		AdController.setPageInfo(pubCmsObject);
+  	      try{
+  	         AdController.stage();
+  	      } catch (e){}
+	}
+</script>
+
+<script type="text/javascript">
+	if (typeof AdController !== 'undefined') { 
+	        AdController.initialize();
+	}
+</script>
+
+    <script type="text/javascript">
+	if(typeof AdController==='undefined') {
+  if(typeof hcf_userconfig === 'undefined') {
+    location.href = '/impressum/nutzungshinweise/blocker/' + '?ubm&callback=' + encodeURIComponent(location.pathname);
+  } else if(hcf_userconfig.cgi_adb_redirect_url && typeof hcf_userconfig.cgi_adb_granting_product === 'undefined') {
+    location.href = decodeURIComponent(hcf_userconfig.cgi_adb_redirect_url) + '?callback=' + encodeURIComponent(location.pathname);
+  }
+}
+    </script>
+<meta content="summary_large_image" name="twitter:card"/><meta content="@handelsblatt_de" name="twitter:site"/><meta content="Ex-Bundespräsident Wulff arbeitet für türkische Modefirma" name="twitter:title"/><meta content="Altbundespräsidenten bekommen weiter ein hohes Gehalt vom Steuerzahler. Ex-Bundespräsident Christian Wulff reicht das nicht. Er arbeitet als Prokurist bei einer türkischen Modefirma. SPD und Linke kritisieren das scharf." name="twitter:description"/><meta content="http://www.handelsblatt.com/images/christian-wulff/20152198/2-format2403.jpg" name="twitter:image"/></head><body class="hrb2017" id="hbo"><div id="ivw"><!-- SZM VERSION="2.0" -->
+<script type="text/javascript">
+var iam_data = { "st":"handbl", "cp":"pol_deu_48", "oc":"pol_deu_48", "mg":"yes", "sv":"in" };
+(function(){
+  var enableIVW = true;
+  if (typeof GLOBAL === 'object'){
+    if (GLOBAL.NOIVW){
+      if (GLOBAL.NOIVW.length){
+        for (var i = 0; i < GLOBAL.NOIVW.length; i += 1){
+          if (enableIVW && window.location.href.indexOf(GLOBAL.NOIVW[i]) > -1){
+            enableIVW = false;
+          }
+        }
+      }
+    }
+  }
+
+  if (typeof iom !== 'undefined' && enableIVW){
+    iom.c(iam_data);
+  }
+})();
+</script>
+<!--/SZM --></div><script type="text/javascript">if(typeof mobileSwitch === 'function') {
+  mobileSwitch(navigator.userAgent || navigator.vendor || window.opera);
+}</script><div data-nocache="/ajaxentry/nocache/teasabledata" data-cache="/ajaxentry/cache/cacheableteasabledata" data-param="/ajaxentry/nocache/teasabledata" data-command="getComments" id="hcf-wrapper" class="vhb-stage ajaxify"><div id="hcf-ad-wrapper"><div id="iqadtileOOP" > 
+	<script type="text/javascript"> 
+		if(typeof AdController !== "undefined" && typeof AdController._siteConfig !== "undefined" && AdController._siteConfig._adapterName !== "dfp5" ){ 
+			AdController.render("iqadtileOOP"); 
+		} 
+	</script> 
+</div><div class="hcf-ad-superbanner-print ajaxify" data:command="checkAds" data:param="" ><!--size = "728x90")-->
+<div id="iqadtile16">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile16", "iqadtile16");
+		}
+	</script>
+</div>
+
+</div><div class="hcf-ad-superbanner ajaxify" data:command="checkAds" data:param="" ><!--size = "728x90)-->
+<div id="iqadtile1">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile1", "iqadtile1");
+		}
+	</script>
+</div></div><div class="hcf-ad-skyscraper ajaxify" data:command="checkAds" data:param="" ><!--size = "120x600,160x600,200x600")-->
+<div id="iqadtile2">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile2", "iqadtile2");
+		}
+	</script>
+</div>
+
+</div></div><div id="taboola-descender-thumbnails"></div> <script type="text/javascript">   window._taboola = window._taboola || [];   _taboola.push({     mode: 'alternating-thumbnails-c',    container: 'taboola-descender-thumbnails',    placement: 'Descender Thumbnails',    target_type: 'mix'  });</script>
+<header data-command="header_v2" class="vhb-c-header ajaxify"><div class="vhb-c-header__content"><div class="vhb-c-header__nav-top"><time class="vhb-c-nav-top vhb-c-nav-top--date vhb-u-sticky__hidden">Dienstag, 10. Oktober 2017</time><div class="vhb-c-nav-top" data-param="/ajaxentry/nocache/mininavirebrush" id='profileNav' ><div class="vhb-c-nav-top vhb-c-nav-top--profile vhb-c-dropdown vhb-c-dropdown--profile"><div data-toggle="dropdown" class="dropdown-toggle vhb-c-sticky-icon"></div><div class="dropdown-menu"><ul class="dropdown-helper"><li><a class="ajaxify" data-command="setRedirectService" href="https://profil.vhb.de/sso/login?service=http://www.handelsblatt.com/ajaxentry/nocache/ssohandshake?redirecturl=http://finanzen.handelsblatt.com/redirect.htn?e=1%26url=http://www.handelsblatt.com/meinhandelsblatt/">Login</a></li><li><a class="vhb-c-link--special ajaxify" data-command="setRedirectService" href="http://angebot.handelsblatt.com/">Angebote</a></li></ul></div></div></div><ul class="vhb-c-nav-top vhb-c-nav-top--links vhb-u-sticky__hidden"><li><a href="http://club.handelsblatt.com" class="vhb-page-header-top-bar-link" target="_blank">Wirtschaftsclub</a></li><li><a href="http://epaper.handelsblatt.com/" class="vhb-page-header-top-bar-link" target="_blank">ePaper</a></li><li><a href="http://archiv.handelsblatt.com/" class="vhb-page-header-top-bar-link" target="_blank">Archiv</a></li><li><a href="/veranstaltungen/" class="vhb-page-header-top-bar-link" target="_blank">Veranstaltungen</a></li></ul></div>
+<!-- Teaser link, rechts; Logo .. im Header -->
+<div class="vhb-c-nav-logos">
+
+
+
+
+    <div class="vhb-c-header-logo">
+        <a href="/">
+            <img src="/images/logo_handelsblatt/11002806/7-formatOriginal.png" title="" alt="">
+        </a>
+    </div>
+
+</div><div class="vhb-c-nav__wrapper vhb-c-dropdown vhb-c-dropdown--nav"><div title="Menü" data-toggle="dropdown" class="dropdown-toggle vhb-c-sticky-icon"></div><div class="dropdown-menu"><div class="dropdown-helper"><ul class="vhb-c-nav"><li class=" vhb-c-nav__item  "><a class="" href="/finanzen/?navi=FINANZEN_1980476">Finanzen</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="http://finanzen.handelsblatt.com">Börsenkurse</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/maerkte/?navi=FINANZEN_SUBNAV_M%C3%84RKTE_1980480">Märkte</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/anlagestrategie/?navi=FINANZEN_SUBNAV_ANLAGESTRATEGIE_11251228">Anlagestrategie</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/banken-versicherungen/?navi=FINANZEN_SUBNAV_BANKEN+%2B+VERSICHERUNGEN_11263520">Banken + Versicherungen</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/geldpolitik/?navi=FINANZEN_SUBNAV_GELDPOLITIK_4588680">Geldpolitik</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/immobilien/?navi=FINANZEN_SUBNAV_IMMOBILIEN_1980488">Immobilien</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/vorsorge/?navi=FINANZEN_SUBNAV_VORSORGE_1980490">Vorsorge</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/steuern-recht/?navi=FINANZEN_SUBNAV_STEUERN+%2B+RECHT_1980492">Steuern + Recht</a></li><li class="vhb-c-sub-nav__item "><a href="/finanzen/finanztools/?navi=FINANZEN_SUBNAV_FINANZRECHNER_8174080">Finanzrechner</a></li></ul><div class="vhb-c-sub-nav__ad"><div><div class="vhb-iq-navigation">
+
+<section class="vhb-indicator">
+
+<style type="text/css">
+
+.hcf-consors-teaser {
+ height:160px;
+ width:300px;
+
+ overflow: hidden;
+
+ padding-top:10px;
+
+}
+
+</style>
+<div class="hcf-consors-teaser">
+
+ <a href="http://pubads.g.doubleclick.net/gampad/clk?id=58193245&iu=/183/hcfhb/iqclickcommand" ><img src="/images/cb_2015_300x150_cg/12731656/1-formatOriginal.png" alt="Consors"></a>
+</div>
+
+</section></div></div></div></div></li><li class=" vhb-c-nav__item  "><a class="" href="/unternehmen/?navi=UNTERNEHMEN_1980072">Unternehmen</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/unternehmen/industrie/?navi=UNTERNEHMEN_SUBNAV_INDUSTRIE_1980074">Industrie</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/energie/?navi=UNTERNEHMEN_SUBNAV_ENERGIE_19961134">Energie</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/handel-konsumgueter/?navi=UNTERNEHMEN_SUBNAV_HANDEL+%2B+KONSUMG%C3%9CTER_1980080">Handel + Konsumgüter</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/dienstleister/?navi=UNTERNEHMEN_SUBNAV_DIENSTLEISTER_11251998">Dienstleister</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/it-medien/?navi=UNTERNEHMEN_SUBNAV_IT+%2B+MEDIEN_1980082">IT + Medien</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/mittelstand/?navi=UNTERNEHMEN_SUBNAV_MITTELSTAND_1980084">Mittelstand</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/management/?navi=UNTERNEHMEN_SUBNAV_MANAGEMENT_1980088">Management</a></li><li class="vhb-c-sub-nav__item "><a href="/unternehmen/beruf-und-buero/?navi=UNTERNEHMEN_SUBNAV_BERUF+%2B+B%C3%9CRO_11479364">Beruf + Büro</a></li></ul></div></li><li class=" vhb-c-nav__item vhb-u-active "><a class="" href="/politik/?navi=POLITIK_1979524">Politik</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item vhb-u-active"><a href="/politik/deutschland/?navi=POLITIK_SUBNAV_DEUTSCHLAND_1979526">Deutschland</a></li><li class="vhb-c-sub-nav__item "><a href="/politik/konjunktur/?navi=POLITIK_SUBNAV_KONJUNKTUR_1979530">Konjunktur</a></li><li class="vhb-c-sub-nav__item "><a href="/politik/international/?navi=POLITIK_SUBNAV_INTERNATIONAL_1979528">International</a></li><li class="vhb-c-sub-nav__item "><a href="/politik/international/weltgeschichten/?navi=POLITIK_SUBNAV_WELTGESCHICHTEN_14023950">Weltgeschichten</a></li><li class="vhb-c-sub-nav__item "><a href="/politik/oekonomische-bildung/?navi=POLITIK_SUBNAV_%C3%96KONOMISCHE+BILDUNG_19700662">Ökonomische Bildung</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/technik/?navi=TECHNIK_1980588">Technik</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/technik/it-internet/?navi=TECHNIK_SUBNAV_IT+%2B+INTERNET_1980552">IT + Internet</a></li><li class="vhb-c-sub-nav__item "><a href="/technik/gadgets/?navi=TECHNIK_SUBNAV_GADGETS_1980558">Gadgets</a></li><li class="vhb-c-sub-nav__item "><a href="/technik/forschung-innovation/?navi=TECHNIK_SUBNAV_FORSCHUNG+%2B+INNOVATION_1980592">Forschung + Innovation</a></li><li class="vhb-c-sub-nav__item "><a href="/technik/medizin/?navi=TECHNIK_SUBNAV_MEDIZIN_1980608">Medizin</a></li><li class="vhb-c-sub-nav__item "><a href="/technik/energie-umwelt/?navi=TECHNIK_SUBNAV_ENERGIE+%2B+UMWELT_1980594">Energie + Umwelt</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/sport/?navi=SPORT_1980622">Sport</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/sport/fussball/?navi=SPORT_SUBNAV_FUSSBALL_1980424">Fußball</a></li><li class="vhb-c-sub-nav__item "><a href="/sport/fussball/ticker/?navi=SPORT_SUBNAV_FUSSBALL-LIVETICKER_1980432">Fußball-Liveticker</a></li><li class="vhb-c-sub-nav__item "><a href="http://tippspiel.handelsblatt.com">Tippspiele</a></li><li class="vhb-c-sub-nav__item "><a href="/sport/motorsport/?navi=SPORT_SUBNAV_MOTORSPORT_1980626">Motorsport</a></li><li class="vhb-c-sub-nav__item "><a href="/sport/sonstige-sportarten/?navi=SPORT_SUBNAV_SONSTIGE+SPORTARTEN_1980628">sonstige Sportarten</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/video/?navi=VIDEO_1981074">Video</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/video/finanzen/?navi=VIDEO_SUBNAV_FINANZEN_11289560">Finanzen</a></li><li class="vhb-c-sub-nav__item "><a href="/video/unternehmen/?navi=VIDEO_SUBNAV_UNTERNEHMEN_1981138">Unternehmen</a></li><li class="vhb-c-sub-nav__item "><a href="/video/politik/?navi=VIDEO_SUBNAV_POLITIK_1981136">Politik</a></li><li class="vhb-c-sub-nav__item "><a href="/video/technik/?navi=VIDEO_SUBNAV_TECHNIK_11289992">Technik</a></li><li class="vhb-c-sub-nav__item "><a href="/video/auto/?navi=VIDEO_SUBNAV_AUTO_1981106">Auto</a></li><li class="vhb-c-sub-nav__item "><a href="/video/sport/?navi=VIDEO_SUBNAV_SPORT_1981140">Sport</a></li><li class="vhb-c-sub-nav__item "><a href="/video/panorama/?navi=VIDEO_SUBNAV_PANORAMA_1981142">Panorama</a></li><li class="vhb-c-sub-nav__item "><a href="/video/peking-suess-sauer/?navi=VIDEO_SUBNAV_PEKING+S%C3%9CSS-SAUER_19322614">Peking süß-sauer</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/auto/?navi=AUTO_1980580">Auto</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/auto/nachrichten/?navi=AUTO_SUBNAV_NACHRICHTEN_1980584">Nachrichten</a></li><li class="vhb-c-sub-nav__item "><a href="/auto/test-technik/?navi=AUTO_SUBNAV_TEST+%2B+TECHNIK_1980450">Test + Technik</a></li><li class="vhb-c-sub-nav__item "><a href="/auto/ratgeber-service/?navi=AUTO_SUBNAV_RATGEBER+%2B+SERVICE_1980586">Ratgeber + Service</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/panorama/?navi=PANORAMA_1980686">Panorama</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/panorama/aus-aller-welt/?navi=PANORAMA_SUBNAV_AUS+ALLER+WELT_1980702">Aus aller Welt</a></li><li class="vhb-c-sub-nav__item "><a href="/panorama/reise-leben/?navi=PANORAMA_SUBNAV_REISE+%2B+LEBEN_6128708">Reise + Leben</a></li><li class="vhb-c-sub-nav__item "><a href="/panorama/tv-film/?navi=PANORAMA_SUBNAV_TV+%2B+FILM_11251820">TV + Film</a></li><li class="vhb-c-sub-nav__item "><a href="/panorama/kultur-kunstmarkt/?navi=PANORAMA_SUBNAV_KULTUR+%2B+KUNSTMARKT_6128700">Kultur + Kunstmarkt</a></li><li class="vhb-c-sub-nav__item "><a href="/panorama/spiele/?navi=PANORAMA_SUBNAV_SPIELE_12955046">Spiele</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/social-media/?navi=SOCIAL+MEDIA_11241840">Social Media</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="https://www.facebook.com/handelsblatt">Handelsblatt bei Facebook</a></li><li class="vhb-c-sub-nav__item "><a href="https://twitter.com/handelsblatt">Handelsblatt bei Twitter</a></li><li class="vhb-c-sub-nav__item "><a href="https://plus.google.com/+handelsblatt/posts">Handelsblatt bei Google +</a></li><li class="vhb-c-sub-nav__item "><a href="https://instagram.com/handelsblatt_">Handelsblatt bei Instagram</a></li><li class="vhb-c-sub-nav__item "><a href="/social-media/netz-bubble/?navi=SOCIAL+MEDIA_SUBNAV_NETZ-BUBBLE_12617678">Netz-Bubble</a></li></ul></div></li><li class=" vhb-c-nav__item  "><a class="" href="/service-angebote/?navi=SERVICE_8144472">Service</a><div class="vhb-c-sub-nav"><ul class="vhb-c-sub-nav__list"><li class="vhb-c-sub-nav__item "><a href="/service-angebote/abo-club/?navi=SERVICE_SUBNAV_ABO%2BCLUB_12881718">Abo+Club</a></li><li class="vhb-c-sub-nav__item "><a href="http://research.handelsblatt.com/">Research Institute</a></li><li class="vhb-c-sub-nav__item "><a href="http://www.handelsblatt.com/finanzen/finanztools/">Tools</a></li><li class="vhb-c-sub-nav__item "><a href="/service-angebote/digitale-angebote/?navi=SERVICE_SUBNAV_DIGITALE+ANGEBOTE_11260594">Digitale Angebote</a></li><li class="vhb-c-sub-nav__item "><a href="/veranstaltungen/?navi=SERVICE_SUBNAV_VERANSTALTUNGEN_1981156">Veranstaltungen</a></li><li class="vhb-c-sub-nav__item "><a href="/rss-feeds/?navi=SERVICE_SUBNAV_RSS-FEEDS_3597096">RSS-Feeds</a></li><li class="vhb-c-sub-nav__item "><a href="/service-angebote/newsletter/?navi=SERVICE_SUBNAV_NEWSLETTER_1981072">Newsletter</a></li><li class="vhb-c-sub-nav__item "><a href="/service-angebote/werbung-content/?navi=SERVICE_SUBNAV_WERBUNG+%2B+CONTENT_12138026">Werbung + Content</a></li><li class="vhb-c-sub-nav__item "><a href="/service-angebote/kontakt-hilfe/?navi=SERVICE_SUBNAV_KONTAKT%2BHILFE_1981444">Kontakt+Hilfe</a></li></ul></div></li></ul><div class="vhb-c-nav__ad"><div><div class="vhb-iq-navigation">
+
+<section class="vhb-indicator">
+
+<style type="text/css">
+
+.hcf-consors-teaser {
+ height:160px;
+ width:300px;
+
+ overflow: hidden;
+
+ padding-top:10px;
+
+}
+
+</style>
+<div class="hcf-consors-teaser">
+
+ <a href="http://pubads.g.doubleclick.net/gampad/clk?id=58193245&iu=/183/hcfhb/iqclickcommand" ><img src="/images/cb_2015_300x150_cg/12731656/1-formatOriginal.png" alt="Consors"></a>
+</div>
+
+</section></div></div></div></div></div></div><div class="vhb-page-header-sub-container vhb-page-header-hide-fixed"><ul class="vhb-c-nav vhb-c-nav--sub vhb-u-sticky__hidden"><li class="vhb-c-nav__item vhb-u-active"><a class="" data-param="" data-target="_self" href='/politik/deutschland/' title='Deutschland' object='NavigationImpl(contentId=&#39;1979526&#39;, client=&#39;SpringConfiguredClient(identifier=handelsblatt)&#39;)' >Deutschland</a></li><li class="vhb-c-nav__item "><a class="vhb-c-caret ajaxify" data-command="touchLink" data-param="" data-target="_self" href='/politik/konjunktur/' title='Konjunktur' object='NavigationImpl(contentId=&#39;1979530&#39;, client=&#39;SpringConfiguredClient(identifier=handelsblatt)&#39;)' >Konjunktur</a><ul class="vhb-c-sub-nav"><li class="vhb-c-sub-nav__item "><a href="/politik/konjunktur/bwl-ranking/" title="BWL-Ranking" target="_self">BWL-Ranking</a></li><li class="vhb-c-sub-nav__item "><a href="/politik/konjunktur/vwl-ranking/" title="VWL-Ranking" target="_self">VWL-Ranking</a></li></ul></li><li class="vhb-c-nav__item "><a class="" data-param="" data-target="_self" href='/politik/international/' title='International' object='NavigationImpl(contentId=&#39;1979528&#39;, client=&#39;SpringConfiguredClient(identifier=handelsblatt)&#39;)' >International</a></li><li class="vhb-c-nav__item "><a class="" data-param="" data-target="_self" href='/politik/international/weltgeschichten/' title='Weltgeschichten' object='NavigationImpl(contentId=&#39;14023950&#39;, client=&#39;SpringConfiguredClient(identifier=handelsblatt)&#39;)' >Weltgeschichten</a></li><li class="vhb-c-nav__item "><a class="" data-param="" data-target="_self" href='/politik/oekonomische-bildung/' title='Ökonomische Bildung' object='NavigationImpl(contentId=&#39;19700662&#39;, client=&#39;SpringConfiguredClient(identifier=handelsblatt)&#39;)' >Ökonomische Bildung</a></li></ul></div><div class="vhb-c-multibar vhb-c-sticky-dropdown vhb-c-sticky-dropdown--search"><div class="vhb-c-multibar-item vhb-c-multibar-item--left vhb-u-sticky__hidden"><div class="vhb-breadcrumb"><ul itemscope="" itemtype="http://schema.org/BreadcrumbList" itemprop="breadcrumb"><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/"><span itemprop="name"> Handelsblatt </span></a><meta content="1" itemprop="position"/></li><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/politik/"><span itemprop="name"> Politik </span></a><meta content="2" itemprop="position"/></li><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/politik/deutschland/"><span itemprop="name"> Deutschland </span></a><meta content="3" itemprop="position"/></li></ul><h1 itemprop="headline" id="headlineRH"> Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma</h1></div></div><div class="vhb-c-search vhb-c-dropdown vhb-c-dropdown--search"><div title="Suche" data-toggle="dropdown" class="dropdown-toggle vhb-c-sticky-icon"></div><div class="dropdown-menu"><div class="dropdown-helper"><form data-command="formValidate" novalidate="" accept-charset="UTF-8" method="post" action="/suche/" name="globalsearch" class="vhb-c-search"><input id="search-phrase" placeholder="Suchbegriff, WKN, ISIN" value="" class="vhb-required vhb-c-search__input" name="sw"/><button type="submit" title="Suche ausführen" class="vhb-c-search__button"></button></form></div></div></div></div><div class="vhb-c-social-media vhb-u-sticky__show"><ul><li><a data-command="track" data-share-url="http://www.handelsblatt.com/" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=facebook" title="Auf Facebook teilen" data-track="sh_facebook" class="vhb-c-social-media__icon vhb-c-social-media__icon--facebook vhb-share-socialmedia-facebook ajaxify"></a></li><li><a data-share-text="#Handelsblatt" data-command="track" data-share-url="http://www.handelsblatt.com/" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=twitter" title="Auf Twitter teilen" data-track="sh_twitter" class="vhb-c-social-media__icon vhb-c-social-media__icon--twitter vhb-share-socialmedia-twitter ajaxify"></a></li><li><a data-command="track" data-share-url="http://www.handelsblatt.com/" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=xing" title="Auf Xing teilen" data-track="sh_xing" class="vhb-c-social-media__icon vhb-c-social-media__icon--xing vhb-share-socialmedia-xing ajaxify"></a></li><li><a data-command="track" data-share-url="http://www.handelsblatt.com/" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=googleplus" title="Auf Google+ teilen" data-track="sh_googleplus" class="vhb-c-social-media__icon vhb-c-social-media__icon--googleplus vhb-share-socialmedia-googleplus ajaxify"></a></li><li><a data-command="track" data-share-url="http://www.handelsblatt.com/" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=linkedin" title="Auf Linkedin teilen" data-track="sh_linkedin" class="vhb-c-social-media__icon vhb-c-social-media__icon--linkedin vhb-share-socialmedia-linkedin ajaxify"></a></li></ul></div>
+
+<!-- Teaser für Premium im Sticky header -->
+<!-- HBO-1027 -->
+<div class="vhb-c-action-link vhb-u-sticky__show">
+    <a class="ajaxify"
+       data-command="track"
+       data-track="at_teasertracking"
+       data-track-param="DGP-Header-mitte"
+       target="_blank"
+       href="http://kunde.handelsblatt.com/startcheckout?redirecturl=http%3A%2F%2Fwww.handelsblatt.com&amp;offerid=H%3A3B3G00&amp;origin=sapmsd&amp;wc=H%3A3KDG00">
+        <img src="/images/digitalpass-sticky/19907266/4-formatOriginal.png" title="Jetzt 4 Wochen gratis testen!" width="200" height="71"/>
+    </a>
+</div>
+<div class="vhb-c-sticky-icon vhb-c-sticky-icon--home vhb-u-sticky__show"><a title="Zur Startseite" class="vhb-page-navigation-home-new" href="/"><span id="vhb-page-navigation-count-new"></span></a></div></div></header><div class="col-md-12"><div class="hcf-sponsoring"><!--size = "930x200,940x250,800x250")-->
+<div class="vhb-iq-wrapper">
+<div class="vhb-center-iq">
+	<div id="iqadtile3" class="vhb-indicator" style="text-align:center;">
+		<script>
+			if(typeof AdController!=='undefined'){
+				AdController.render("iqadtile3", "iqadtile3");
+			}
+		</script>
+	</div>
+</div>
+</div></div></div><div class="clearfix"></div><div class="container"><div class="vhb-content"><div id="vhb-article-area" class="vhb-flex-container vhb-article-area"><script>
+                document.getElementById('vhb-article-area').style.display = 'none';
+            </script><div itemref="PublisherRef" itemscope="" itemtype="http://schema.org/NewsArticle" itemprop="mainEntityOfPage" class="vhb-flex-item vhb-flex-top vhb-article-container"><meta itemid="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html" itemType="https://schema.org/WebPage" itemprop="mainEntityOfPage" itemscope=""/><article itemref="headlineRH discussionurlRH" data-article-id="20152184" class="vhb-article"><h2 itemprop="headline" headline="headline"><div class="vhb-subline">Medienbericht</div><span class="vhb-colon">: </span><div class="vhb-headline">Ex-Bundespräsident Wulff arbeitet für türkische Modefirma</div></h2><div class="vhb-article-author"><div class="vhb-article-author-table"><div class="vhb-article-author-row"><div class="vhb-article-author-cell vhb-article-caption">
+                     Datum:
+                  </div><div content="2017-08-06T12:51:42+0200" itemprop="datePublished" class="vhb-article-author-cell"><ul><li class="vhb-last-child">06.08.2017 12:51 Uhr</li></ul><meta content="2017-08-06T12:51:42+0200" itemprop="dateModified"/></div></div></div></div><div class="vhb-teaser-head"><span itemprop="description">Altbundespräsidenten bekommen weiter ein hohes Gehalt vom Steuerzahler. Ex-Bundespräsident Christian Wulff reicht das nicht. Er arbeitet als Prokurist bei einer türkischen Modefirma. SPD und Linke kritisieren das scharf. </span></div><div class="row"><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=facebook" title="Auf Facebook teilen" data-track="ash_facebook" class="vhb-share-socialmedia-facebook ajaxify">Facebook</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-share-text="#Medienbericht : #Ex-Bundespräsident #Wulff arbeitet für türkische #Modefirma" data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=twitter" title="Auf Twitter teilen" data-track="ash_twitter" class="vhb-share-socialmedia-twitter ajaxify">Twitter</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=googleplus" title="Auf Google+ teilen" data-track="ash_googleplus" class="vhb-share-socialmedia-googleplus ajaxify">Google+</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=xing" title="Auf Xing teilen" data-track="ash_xing" class="vhb-share-socialmedia-xing ajaxify">Xing</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=linkedin" title="Auf Linkedin teilen" data-track="ash_linkedin" class="vhb-share-socialmedia-linkedin ajaxify">Linkedin</a></div></div><div class="vhb-article-content-container"><div class="vhb-hidden"><img alt="" height="1" width="1" src="http://handelsblatt.met.vgwort.de/na/0f8db99e5ee94d29a4662a6345c717a0"/></div><div data-command="stickyScroller" class="vhb-article-controls-container ajaxify"><div class="vhb-article-controls vhb-sticky-scroller"><ul><li><a itemtype="url" itemprop="discussionUrl" class="vhb-article-control vhb-article-controls-comments" title="Kommentare" href="/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/v_detail_tab_comments/20152184.html"><span itemtype="integer" itemprop="commentCount">1</span></a></li><li><div class="vhb-share-button dropdown dropdown-right vhb-article-control vhb-article-controls-share"><button title="Teilen und weiterempfehlen" data-toggle="dropdown" type="button" class="dropdown-toggle"><span class=" ajaxify" data-command="loadDynamically" data-methods="GET" data-param="/ajaxentry/cache/socialcount?elementId=20152184&action=getshort&service=facebook%2Cxing%2Cgoogleplus%2Ctwitter%2Clinkedin" href='javascript:void(0);' ></span></button><div class="dropdown-menu"><div title="Schließen" class="vhb-share-close"></div><div class="vhb-share-headline">Teilen</div><hr/><div class="vhb-share-count"><span class=" ajaxify" data-command="loadDynamically" data-methods="GET" data-param="/ajaxentry/cache/socialcount?elementId=20152184&action=getfull&service=facebook%2Cxing%2Cgoogleplus%2Ctwitter%2Clinkedin" href='javascript:void(0);' ></span></div><div class="vhb-share-buttons small"><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=facebook" data-track="asd_facebook" data-methods="POST" data-command="track" class="vhb-share-socialmedia-facebook ajaxify" title="Artikel auf Facebook teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=twitter" data-track="asd_twitter" data-methods="POST" data-command="track" class="vhb-share-socialmedia-twitter ajaxify" title="Artikel auf Twitter teilen" data-share-text="Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma" data-share-url="http://www.handelsblatt.com/20152184.html" data-share-hashtags="Handelsblatt"></a></div><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=googleplus" data-track="asd_googleplus" data-methods="POST" data-command="track" class="vhb-share-socialmedia-googleplus ajaxify" title="Artikel auf Google+ teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=xing" data-track="asd_xing" data-methods="POST" data-command="track" class="vhb-share-socialmedia-xing ajaxify" title="Artikel auf Xing teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=linkedin" data-track="asd_linkedin" data-methods="POST" data-command="track" class="vhb-share-socialmedia-linkedin ajaxify" title="Artikel auf LinkedIn teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=email" data-track="asd_email" data-methods="POST" data-command="track" class="vhb-share-socialmedia-email ajaxify" title="E-Mail" data-share-url="http://www.handelsblatt.com/20152184.html" data-share-title="Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma"></a></div></div><div class="vhb-share-permalink vhb-share-permalink-bottom"><input value="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html?share=direct" readonly="readonly" type="text" class="vhb-form stop-propagation" onClick="this.setSelectionRange(0, this.value.length);"/><button title="URL in die Zwischenablage kopieren" class="zclip vhb-button vhb-button-white stop-propagation" data-zclip-text="http://www.handelsblatt.com/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/20152184.html?share=direct"></button></div><div class="clearfix"></div></div></div></li><li><a data-param="/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/v_detail_tab_print/20152184.html" data-command="print" class="vhb-article-control vhb-article-controls-print ajaxify" title="Drucken" href="#"></a></li><li class="vhb-last-child"><div class="vhb-share-button vhb-share-button-big dropdown dropdown-right vhb-article-control vhb-article-controls-bookmark"><div class="hidden-dropdown-toggle" data-toggle="dropdown"></div><button data-tooltip="In Merkliste aufnehmen" data-nocache="/ajaxentry/nocache/togglebookmark?teasableId=20152184" data-cache="/ajaxentry/cache/cacheabletogglebookmark?teasableId=20152184" data-tid="20152184" data-param="/ajaxentry/nocache/togglebookmark?teasableId=20152184" data-methods="POST" data-command="track toggleBookmark" type="button" data-track="ac_merken" class="ajaxify vhb-article-controls-bookmark-button"></button><div class="dropdown-menu"><div title="Schließen" class="vhb-share-close"></div><div class="vhb-share-headline">Artikel Teilen</div><hr/><p class="vhb-share-info-text">Sie haben den Artikel in Ihre Merkliste aufgenommen.
+                                    <br/>Möchten Sie ihn nicht auch gleich mit Feunden teilen?</p><div class="vhb-share-buttons"><div class="vhb-share-social-media-button small"><a data-track="asd_facebook" data-command="track" class="vhb-share-socialmedia-facebook ajaxify" title="Artikel auf Facebook teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-track="asd_twitter" data-command="track" class="vhb-share-socialmedia-twitter ajaxify" title="Artikel auf Twitter teilen" data-share-text="Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma" data-share-url="http://www.handelsblatt.com/20152184.html" data-share-hashtags="Handelsblatt"></a></div><div class="vhb-share-social-media-button small"><a data-track="asd_googleplus" data-command="track" class="vhb-share-socialmedia-googleplus ajaxify" title="Artikel auf Google+ teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-track="asd_xing" data-command="track" class="vhb-share-socialmedia-xing ajaxify" title="Artikel auf Xing teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-track="asd_linkedin" data-command="track" class="vhb-share-socialmedia-linkedin ajaxify" title="Artikel auf LinkedIn teilen" data-share-url="http://www.handelsblatt.com/20152184.html"></a></div><div class="vhb-share-social-media-button small"><a data-track="asd_email" data-command="track" class="vhb-share-socialmedia-email ajaxify" title="E-Mail" data-share-url="http://www.handelsblatt.com/20152184.html" data-share-title="Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma"></a></div></div><div class="row vhb-share-action-footer"><div class="col-md-6"><div class="vhb-form-element"><input name="formsGroupName" type="checkbox" id="vhb-share-bookmark-toggle"/><label for="vhb-share-bookmark-toggle">Nicht mehr fragen.</label></div></div><div class="col-md-6"><button class="vhb-button vhb-button-white pull-right" type="button">Schließen</button></div></div></div></div></li></ul></div></div><div itemProp="articleBody" class="vhb-article-content"><aside class="vhb-article-element vhb-full"><div class="clearfix"></div><figure itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject" class="vhb-image"><a class="vhb-image-link ajaxify" data-command="openLayer" data-param="/ajaxentry/cache/imagelightbox?elementId=20152198" title='Bild vergrößern' ><div itemprop="image" class="vhb-media-wrapper"><img src="/images/christian-wulff/20152198/2-format2010.jpg" alt="Christian Wulff" itemprop="url"/><meta content="1920" itemprop="width"/><meta content="1278" itemprop="height"/><span class="vhb-media"></span></div></a><figcaption class="vhb-caption-wrapper"><em itemtype="text" itemprop="name" class="vhb-title">Christian Wulff</em><div itemtype="text" itemprop="caption" class="vhb-caption"><div><p>Der schon zur Amtszeit äußerst umstrittene ehemalige Bundespräsident arbeitet laut Medienberichten für eine türkische Modefirma. </p></div></div><small class="vhb-credit"><a rel="" target="_blank" title="" href="http://www.dpa.de/">
+                     (Foto: dpa)
+                  </a></small></figcaption></figure></aside><p>Altbundespräsident Christian Wulff soll nach einem Zeitungsbericht als Prokurist für ein türkisches Modelabel arbeiten. Nach Informationen der „Bild am Sonntag“ ist Wulff seit Ende April für die Firma Yargici in dieser Funktion tätig. Das Berliner Büro von Wulff war am Sonntag zunächst nicht für eine Stellungnahme zu erreichen. Der Geschäftsführer des Unternehmens in Deutschland, Erik Schaap, sagte der Zeitung, Wulff begleite die Firma seit dem Markteintritt Anfang 2016 juristisch. </p><div class="hcf-detail-header-ad hcf-content"><div class="hcf-ad-wrapper"><div class="hcf-ad-rectangle hcf-mcol-box"><!-- size = "300x250") -->
+<div id="iqadtile4" class="vhb-indicator">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile4", "iqadtile4");
+		}
+	</script>
+</div>
+
+</div></div></div><p>SPD und Linke kritisierten dies scharf. „In der Regel übernehmen Altbundespräsidenten Ehrenämter und werden nicht Prokuristen von Modefirmen“, kritisierte der stellvertretende SPD-Parteivorsitzende Ralf Stegner in der „BamS“. „Der lebenslange Ehrensold wird schließlich gewährt, damit ehemalige Staatsoberhäupter nicht gezwungen sind, sich etwas dazu verdienen zu müssen.“ Wulff erhält als Ex-Bundespräsident derzeit einen <a href="http://www.bundespraesident.de/DE/Service/Fragen-und-Antworten/fragen-und-antworten-node.html#doc1894320bodyText5" target="_blank">Ehrensold von 236.000 Euro.</a></p><p>„Im Grunde war es Herr Wulff, der das Unternehmen dazu motiviert hat, in Deutschland zu starten“, sagte Schaap der „Bild am Sonntag“. Unklar ist, wie viel Wulff für seine Arbeit bei Yargici kassiert. Eine Mitarbeiterin Wulffs sagte der Zeitung, aus rechtlichen Gründen keine Angaben zur Höhe des Verdienstes geben zu können.</p><div id="iq-artikelanker"></div><p>Linken-Fraktionschefin Sahra Wagenknecht forderte, Gesetze über die finanzielle Ausstattung von Altbundespräsidenten zu ändern. „Es kann nicht sein, dass Wulff jährlich 236 000 Euro vom Steuerzahler erhält und private Einkünfte überhaupt nicht angerechnet werden.“ Ihre Partei werde dazu im Bundestag einen Antrag stellen.</p></div></div><section class="vhb-box-wrapper vhb-author-big"><header class="vhb-box-header"><nav class="vhb-box-nav"><ul data-param="#vhb-tab-author-test-1" data-command="navLine tabSwap" class="vhb-toggles-nav ajaxify"><li class="vhb-first vhb-active"><a class="vhb-nav-link" href="#"><span>dpa</span></a></li></ul></nav></header><div id="vhb-tab-author-test-1"><div class="vhb-tab-1 "><div class="vhb-author-content-container"><div class="vhb-author-content-image"><img src="/images/ersatzbild-agentur/4416120/2-format18.png" alt="Agentur"/></div><div class="vhb-author-content"><div class="vhb-author-content-name">dpa </div><div class="vhb-author-content-profession">dpa Deutsche Presse-Agentur GmbH / Nachrichtenagentur</div><div class="vhb-author-content-controls"><ul class="vhb-author-content-controls-links"><li><a rel="author" href="/autoren/deutsche-presse-agentur/3722536.html">Alle Beiträge von dpa  anzeigen.</a></li></ul></div></div></div></div></div></section></article></div><div class="vhb-flex-item vhb-flex-static vhb-flex-top vhb-flex-stretch vhb-flex-container vhb-flex-column vhb-flex-spacebetween"><div class="vhb-flex-item"><aside class=""><div class="hcf-ad-rectangle hcf-mcol-box"><!-- size = "300x250,300x600") -->
+<div id="iqadtile8" class="vhb-indicator">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile8", "iqadtile8");
+		}
+	</script>
+</div>
+
+</div><section class="vhb-box-wrapper"><header class="vhb-box-header"><nav class="vhb-box-nav"><ul class="vhb-toggles-nav ajaxify" data-command="navLine tabSwap setPartnerClass" data-param="#vhb-tab-11247986" data-config='' ><li class="vhb-first vhb-active"><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11247984&#38;view=rcol_box_3layer_ticker&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Politik-News </a></li><li><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11478240&#38;view=rcol_box_nLayer_standard&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Kolumnen </a></li><li class="vhb-last"><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11731140&#38;view=rcol_box_nLayer_standard&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Special </a></li></ul></nav></header><div id="vhb-tab-11247986"><div class="vhb-tab-1"><div class="vhb-newsticker vhb-newsticker--rebrush vhb-box-content" data-tb-region-item><div data-command="scrollBox" class="vhb-scrollpane ajaxify"><ul id="11247984" class="vhb-teaser-list-small--rebrush panel-group"><li data-tb-region-item="" class="vhb-teaser panel vhb-type-premium  vhb-type-article"><time datetime="2017-10-10T16:41" class="vhb-time">16:41</time><a href="/my/politik/deutschland/ig-bce-chef-michael-vassiliadis-stiller-moderator/20438428.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">IG-BCE-Chef Michael Vassiliadis</em><span class="vhb-colon">: </span><span class="vhb-headline">Stiller Moderator<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T16:28" class="vhb-time">16:28</time><a href="/politik/deutschland/appell-an-die-neue-bundesregierung-verbandsallianz-will-mehr-foerderung-von-innovationen/20437742.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Appell an die neue Bundesregierung</em><span class="vhb-colon">: </span><span class="vhb-headline">Verbandsallianz will mehr Förderung von Innovationen<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T16:24" class="vhb-time">16:24</time><a href="/politik/international/voestalpine-chef-eder-ich-bin-gott-sei-dank-viel-im-ausland-unterwegs/20438168.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Voestalpine-Chef Eder</em><span class="vhb-colon">: </span><span class="vhb-headline">„Ich bin Gott sei Dank viel im Ausland unterwegs“<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T16:20" class="vhb-time">16:20</time><a href="/politik/international/dauerkrise-fuer-erdogan-die-tuerkei-umzingelt-sich-selbst/20437612.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Dauerkrise für Erdogan</em><span class="vhb-colon">: </span><span class="vhb-headline">Die Türkei umzingelt sich selbst<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T16:10" class="vhb-time">16:10</time><a href="/politik/international/esm-debatte-schaeuble-tritt-mit-provokanten-vorschlaegen-ab/20438462.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">ESM-Debatte</em><span class="vhb-colon">: </span><span class="vhb-headline">Schäuble tritt mit provokanten Vorschlägen ab<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel vhb-type-premium  vhb-type-article"><time datetime="2017-10-10T15:43" class="vhb-time">15:43</time><a href="/my/politik/oekonomische-bildung/unternehmerisches-denken-gruenderzeit-an-schulen/20436146.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Unternehmerisches Denken</em><span class="vhb-colon">: </span><span class="vhb-headline">Gründerzeit an Schulen<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T15:00" class="vhb-time">15:00</time><a href="/politik/international/iwf-prognose-im-schatten-von-brexit-und-trump/20437140.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">IWF-Prognose</em><span class="vhb-colon">: </span><span class="vhb-headline">Im Schatten von Brexit und Trump<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T14:56" class="vhb-time">14:56</time><a href="/politik/international/briten-erwaegen-beitritt-zur-nafta-briten-hoffen-heimlich-auf-amerika/20437684.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Briten erwägen Beitritt zur Nafta</em><span class="vhb-colon">: </span><span class="vhb-headline">Briten hoffen heimlich auf Amerika<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T14:45" class="vhb-time">14:45</time><a href="/politik/international/niederlande-rechtsruck-auch-ohne-wilders/20437614.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Niederlande</em><span class="vhb-colon">: </span><span class="vhb-headline">Rechtsruck auch ohne Wilders<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T13:20" class="vhb-time">13:20</time><a href="/politik/deutschland/richtungsstreit-afd-abtruennige-sehen-partei-auf-npd-kurs/20436580.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Richtungsstreit</em><span class="vhb-colon">: </span><span class="vhb-headline">AfD-Abtrünnige sehen Partei auf NPD-Kurs<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T13:16" class="vhb-time">13:16</time><a href="/politik/international/analyse-von-gabor-steingart-die-trump-revolution-marschiert/20437086.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Analyse von Gabor Steingart</em><span class="vhb-colon">: </span><span class="vhb-headline">Die Trump-Revolution marschiert<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T13:04" class="vhb-time">13:04</time><a href="/politik/international/tuerkei-militaeraktion-in-syrien-soll-einwanderungswelle-verhindern/20436678.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Türkei</em><span class="vhb-colon">: </span><span class="vhb-headline">Militäraktion in Syrien soll Einwanderungswelle verhindern<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T13:04" class="vhb-time">13:04</time><a href="/politik/deutschland/pflegenotstand-streik-gegen-personalknappheit-in-kliniken/20436930.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Pflegenotstand</em><span class="vhb-colon">: </span><span class="vhb-headline">Streik gegen Personalknappheit in Kliniken<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T13:03" class="vhb-time">13:03</time><a href="/politik/deutschland/ehe-fuer-alle-erstes-schwules-paar-adoptiert-pflegekind/20437050.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Ehe für alle</em><span class="vhb-colon">: </span><span class="vhb-headline">Erstes schwules Paar adoptiert Pflegekind<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T12:17" class="vhb-time">12:17</time><a href="/politik/international/exportueberschuesse-das-schleichende-gift/20435786.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Exportüberschüsse</em><span class="vhb-colon">: </span><span class="vhb-headline">Das schleichende Gift<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T11:55" class="vhb-time">11:55</time><a href="/politik/international/wahl-in-oesterreich-oevp-laut-umfrage-vorn-fpoe-und-spoe-fast-gleichauf/20436302.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Wahl in Österreich</em><span class="vhb-colon">: </span><span class="vhb-headline">ÖVP laut Umfrage vorn, FPÖ und SPÖ fast gleichauf<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T11:53" class="vhb-time">11:53</time><a href="/politik/international/katalonien-krise-madrid-koennte-notfalls-die-katalanische-regierung-entmachten/20436626.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Katalonien-Krise</em><span class="vhb-colon">: </span><span class="vhb-headline">Madrid könnte notfalls die katalanische Regierung entmachten<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T11:34" class="vhb-time">11:34</time><a href="/politik/deutschland/raetselhaft-und-bizarr-vor-30-jahren-starb-der-politiker-barschel/20421134.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Rätselhaft und bizarr</em><span class="vhb-colon">: </span><span class="vhb-headline">Vor 30 Jahren starb der Politiker Barschel<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-imagegallery"><time datetime="2017-10-10T11:17" class="vhb-time">11:17</time><a href="/politik/oekonomische-bildung/oxford-harvard-und-co-die-besten-wirtschaftsunis-der-welt/20429344.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Oxford, Harvard und Co.</em><span class="vhb-colon">: </span><span class="vhb-headline">Die besten Wirtschaftsunis der Welt<span class="vhb-doctype"></span></span></a></li><li data-tb-region-item="" class="vhb-teaser panel   vhb-type-article"><time datetime="2017-10-10T11:03" class="vhb-time">11:03</time><a href="/politik/international/drei-jahre-nach-militaerputsch-thailands-machthaber-kuendigt-wahlen-an/20436200.html?nlayer=Politik-News_11247984" class="vhb-teaser-link"><em class="vhb-overline">Drei Jahre nach Militärputsch</em><span class="vhb-colon">: </span><span class="vhb-headline">Thailands Machthaber kündigt Wahlen an<span class="vhb-doctype"></span></span></a></li></ul></div><a href="http://www.handelsblatt.com/ticker/heute/politik" title="Alle Schlagzeilen" class="vhb-teaser-list-small-load-more" target="_self">Alle Schlagzeilen</a></div></div></div></section><section class="vhb-box-wrapper"><header class="vhb-box-header"><nav class="vhb-box-nav"><ul class="vhb-toggles-nav ajaxify" data-command="navLine tabSwap setPartnerClass" data-param="#vhb-tab-11236834" data-config='' ><li class="vhb-first vhb-active"><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11236836&#38;view=rcol_box_nLayer_standard&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Videos </a></li><li class="vhb-last"><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11236832&#38;view=rcol_box_nLayer_standard&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Bilder </a></li></ul></nav></header><div id="vhb-tab-11236834"><div class="vhb-tab-1"><div class="vhb-box-content" data-tb-region-item><ul class="vhb-teaser-list-small"><li class="vhb-teaser   vhb-type-video" data-tb-region-item><a data-param="/ajaxentry/cache/videolightbox?videoId=20438906" class="vhb-teaser-link ajaxify" data-track-param="Videos_11236836" data-track="lc_video" data-command="openVideoLightbox track" href="/video/politik/koalitionsgespraeche-wir-brauchen-mehr-details-dobrindt-fordert-inhaltlichen-fokus/20438906.html?nlayer=Videos_11236836"><div itemtype="http://schema.org/ImageObject" itemscope=" " itemprop="image" class="vhb-media-wrapper"><img src="/images/wir-brauchen-mehr-details-dobrindt-fordert-inhaltlichen-fokus/20438904/7-format2012.jpg" alt="Koalitionsgespräche: „Wir brauchen mehr Details“ – Dobrindt fordert inhaltlichen Fokus" width="260" itemprop="url"/><meta content="640" itemprop="width"/><meta content="360" itemprop="height"/><span class="vhb-media"></span></div><div class="vhb-link"><em class="vhb-overline">Koalitionsgespräche</em><span class="vhb-colon">: </span><span class="vhb-headline">„Wir brauchen mehr Details“ – Dobrindt fordert inhaltlichen Fokus</span></div></a></li><li class="vhb-teaser   vhb-type-video" data-tb-region-item><a data-param="/ajaxentry/cache/videolightbox?videoId=20437158" class="vhb-teaser-link ajaxify" data-track-param="Videos_11236836" data-track="lc_video" data-command="openVideoLightbox track" href="/video/politik/cdu-vor-der-landtagswahl-in-niedersachsen-junge-union-schickt-ihr-a-team-zur-unterstuetzung/20437158.html?nlayer=Videos_11236836"><div itemtype="http://schema.org/ImageObject" itemscope=" " itemprop="image" class="vhb-media-wrapper"><img src="/images/junge-union-schickt-ihr-a-team-zur-unterstuetzung/20437152/6-format2012.jpg" alt="CDU vor der Landtagswahl in Niedersachsen: Junge Union schickt ihr „A-Team“ zur Unterstützung" width="260" itemprop="url"/><meta content="640" itemprop="width"/><meta content="360" itemprop="height"/><span class="vhb-media"></span></div><div class="vhb-link"><em class="vhb-overline">CDU vor der Landtagswahl in Niedersachsen</em><span class="vhb-colon">: </span><span class="vhb-headline">Junge Union schickt ihr „A-Team“ zur Unterstützung</span></div></a></li><li class="vhb-teaser vhb-teaser-last  vhb-type-video" data-tb-region-item><a data-param="/ajaxentry/cache/videolightbox?videoId=20436520" class="vhb-teaser-link ajaxify" data-track-param="Videos_11236836" data-track="lc_video" data-command="openVideoLightbox track" href="/video/politik/spd-ministerpraesident-weil-wills-wieder-wissen-kampf-um-niedersachsens-spitzenposition-/20436520.html?nlayer=Videos_11236836"><div itemtype="http://schema.org/ImageObject" itemscope=" " itemprop="image" class="vhb-media-wrapper"><img src="/images/weil-wills-wieder-wissen-kampf-um-niedersachsens-spitzenposition/20436518/5-format2012.jpg" alt="SPD-Ministerpräsident : Weil will&#39;s wieder wissen: Kampf um Niedersachsens Spitzenposition " width="260" itemprop="url"/><meta content="640" itemprop="width"/><meta content="360" itemprop="height"/><span class="vhb-media"></span></div><div class="vhb-link"><em class="vhb-overline">SPD-Ministerpräsident</em><span class="vhb-colon">: </span><span class="vhb-headline">Weil will's wieder wissen: Kampf um Niedersachsens Spitzenposition</span></div></a></li></ul><a href="/video/politik/" title="Weitere Videos" class="vhb-teaser-list-small-load-more" target="_self">Weitere Videos</a></div></div></div></section><div class="hcf-ad-rectangle hcf-mcol-box"><!-- size = "300x250,300x100") -->
+<div id="iqadtile9" class="vhb-indicator">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile9", "iqadtile9");
+		}
+	</script>
+</div>
+
+</div>
+
+<section>
+
+<style type="text/css">
+
+.hcf-clevh-teaser {
+ height170px;
+ width:300px;
+
+ overflow: hidden;
+
+}
+
+.hcf-clevh-teaser:hover {
+
+ opacity: 0.5;
+
+
+}
+
+</style>
+<div class="hcf-clevh-teaser">
+
+ <a href="http://club.handelsblatt.com/event-uebersicht/" title="Handelsblatt Club Events" ><img src="/images/header_club_rechte_spalte/19298912/7-formatOriginal.png" alt=""></a>
+</div>
+
+</section><section class="vhb-box-wrapper vhb-box-tower-nav"><div id="vhb-tab-19308708"><div class="vhb-tab-1"><div class="vhb-box-content vhb-tab-image"><ul class="vhb-teaser-list-small"><li class="vhb-teaser"><a href="http://club.handelsblatt.com/event/club-gespraech-mit-olaf-scholz/" title=" Club-Gespräch mit Olaf Scholz" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Hamburg - 08.11.2017, 20.00 Uhr</em><span class="vhb-colon">: </span><span class="vhb-headline"> Club-Gespräch mit Olaf Scholz</span></div></a></li><li class="vhb-teaser"><a href="http://club.handelsblatt.com/event/zukunft-der-ernaehrung/" title=" Zukunft der Ernährung" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Düsseldorf - 16.10.2017, 18.00 Uhr</em><span class="vhb-colon">: </span><span class="vhb-headline"> Zukunft der Ernährung</span></div></a></li><li class="vhb-teaser"><a href="http://club.handelsblatt.com/event/wir-zusammen-schaffen-zukunft-10/" title=" Wir zusammen schaffen Zukunft" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Köln - 21.11.2017, 18.00 Uhr</em><span class="vhb-colon">: </span><span class="vhb-headline"> Wir zusammen schaffen Zukunft</span></div></a></li><li class="vhb-teaser"><a href="http://club.handelsblatt.com/event/wir-zusammen-schaffen-zukunft-9/" title=" Wir zusammen schaffen Zukunft" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Hannover - 07.11.2017, 18.00 Uhr</em><span class="vhb-colon">: </span><span class="vhb-headline"> Wir zusammen schaffen Zukunft</span></div></a></li><li class="vhb-teaser vhb-teaser-last  vhb-type-teaser" data-tb-region-item><a href="/clubevents/?nlayer=Club+Events+Politik_19308706" class="vhb-teaser-link" target="_self"><div class="vhb-link"><em class="vhb-overline">Zum Nachlesen</em><span class="vhb-colon">: </span><span class="vhb-headline">Alle Berichte über Club-Events</span></div></a></li></ul></div></div></div></section><section class="vhb-box-wrapper"><header class="vhb-box-header"><nav class="vhb-box-nav"><ul class="vhb-toggles-nav ajaxify" data-command="navLine tabSwap setPartnerClass" data-param="#vhb-tab-3893832" data-config='' ><li class="vhb-first vhb-active"><a class="vhb-nav-link" data-param="/ajaxentry/cache/teasablecontent?tgId=11469634&#38;view=rcol_box_nLayer_standard&#38;odId=&#38;externalURLs=" data-partner-class='' href='#' >Statistiken zum Thema Politik </a></li></ul></nav></header><div id="vhb-tab-3893832"><div class="vhb-tab-1"><div class="vhb-box-content" data-tb-region-item><ul class="vhb-teaser-list-small"><li class="vhb-teaser"><a href="https://de.statista.com/statistik/daten/studie/522137/umfrage/asylbewerber-in-den-niederlanden/" title="Asylbewerber in den Niederlanden bis August 2017" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Statista</em><span class="vhb-colon">: </span><span class="vhb-headline">Asylbewerber in den Niederlanden bis August 2017</span></div></a></li><li class="vhb-teaser"><a href="https://de.statista.com/statistik/daten/studie/523027/umfrage/asylbewerber-in-polen/" title="Asylbewerber in Polen bis September 2017" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Statista</em><span class="vhb-colon">: </span><span class="vhb-headline">Asylbewerber in Polen bis September 2017</span></div></a></li><li class="vhb-teaser"><a href="https://de.statista.com/statistik/daten/studie/523118/umfrage/asylbewerber-in-portugal/" title="Asylbewerber in Portugal bis Juli 2017" class="vhb-teaser-link" target="_blank"><div class="vhb-link"><em class="vhb-overline">Statista</em><span class="vhb-colon">: </span><span class="vhb-headline">Asylbewerber in Portugal bis Juli 2017</span></div></a></li></ul></div></div></div></section></aside></div><div class="vhb-flex-item"><aside></aside></div></div><script>
+                if (document.getElementById('vhb-article-area').style.removeProperty) {
+                    document.getElementById('vhb-article-area').style.removeProperty('display');
+                } else {
+                    document.getElementById('vhb-article-area').style.removeAttribute('display');
+                }
+            </script></div><div class="row"><div class="col-md-12"><div class="vhb-article-functions"><div class="row"><div class="col-md-8"><div class="row"><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=facebook" title="Auf Facebook teilen" data-track="asf_facebook" class="vhb-share-socialmedia-facebook ajaxify">Facebook</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-share-text="#Medienbericht : #Ex-Bundespräsident #Wulff arbeitet für türkische #Modefirma" data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=twitter" title="Auf Twitter teilen" data-track="asf_twitter" class="vhb-share-socialmedia-twitter ajaxify">Twitter</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=googleplus" title="Auf Google+ teilen" data-track="asf_googleplus" class="vhb-share-socialmedia-googleplus ajaxify">Google+</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=xing" title="Auf Xing teilen" data-track="asf_xing" class="vhb-share-socialmedia-xing ajaxify">Xing</a></div><div class="vhb-share-social-media-article vhb-share-social-media-button"><a data-command="track" data-share-url="http://www.handelsblatt.com/20152184.html" data-methods="POST" data-count="/ajaxentry/nocache/socialinc?elementId=20152184&action=inc&service=linkedin" title="Auf Linkedin teilen" data-track="asf_linkedin" class="vhb-share-socialmedia-linkedin ajaxify">Linkedin</a></div></div></div><div class="col-md-4"><a href="/nutzungsrechte/">Sie wollen unsere Inhalte verwenden? Erwerben Sie hier die Rechte</a></div></div></div></div></div>
+
+<div id="taboola-below-article-thumbnails"></div><script type="text/javascript"> window._taboola = window._taboola || []; _taboola.push({ mode: 'alternating-thumbnails-a', container: 'taboola-below-article-thumbnails', placement: 'Below Article Thumbnails', target_type: 'mix' });</script><div class="row"><div class="col-md-8"><section class="vhb-teaser-homepage"><div class="vhb-teaser"><div class="vhb-type-full"><div class="vhb-teaser-overlay"><a class="vhb-link-home" href="/">Startseite</a><a class="vhb-teaser-link" href="/?home_teaser_ds=20435918"><em class="vhb-overline">Ergo, Axa und Generali wollen Altverträge verkaufen</em><span class="vhb-colon">: </span><span class="vhb-headline">Aufruhr bei Versicherten</span></a></div><a class="vhb-teaser-link" href="/?home_teaser_ds=20435918"><div itemtype="http://schema.org/ImageObject" itemscope=" " itemprop="image" class="vhb-media-wrapper"><img src="/images/rettungsring/20438864/5-format2003.jpg" alt="Ergo, Axa und Generali wollen Altverträge verkaufen: Aufruhr bei Versicherten" itemprop="url"/><meta content="1920" itemprop="width"/><meta content="1281" itemprop="height"/><span class="vhb-media">image</span></div></a></div></div></section></div><aside class="col-md-4"><div class="hcf-ad-rectangle hcf-mcol-box"><!-- size = "300x250,300x100") -->
+<div id="iqadtile10" class="vhb-indicator">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile10", "iqadtile10");
+		}
+	</script>
+</div>
+
+</div></aside></div><div class=" ajaxify" data-command="loadDynamically" data-param="/ajaxentry/nocache/showanonymouscomment" ></div><div class="row"><div class="col-md-8"><section class="vhb-comments-container"><header class="clearfix"><h2 class="vhb-headline">Kommentare <span class="vhb-reference">zu "
+                                    Medienbericht: Ex-Bundespräsident Wulff arbeitet für türkische Modefirma"</span></h2><a id="discussionurlRH" href="/politik/deutschland/medienbericht-ex-bundespraesident-wulff-arbeitet-fuer-tuerkische-modefirma/v_detail_tab_comments/20152184.html" class="vhb-more-link">Alle Kommentare</a></header><div class="vhb-comments-wrapper" id="hcf-add-comment-id">
+
+<p class="vhb-notice">Dieser Beitrag kann nicht mehr kommentiert werden. Sie können wochentags von 8 bis 18 Uhr kommentieren, wenn Sie angemeldeter Handelsblatt-Online-Leser sind. Die Inhalte sind bis zu sieben Tage nach Erscheinen kommentierbar.</p></div><div class=" ajaxify" data-command="loadDynamically" data-param="" data-nocache='/ajaxentry/nocache/nocacheteasablecontent?tgId=20152184&#38;view=show_comments_bottom_list&#38;odId=20152184' ><div class="vhb-comments clearfix"><ul><li itemscope="" itemtype="http://schema.org/comment" itemprop="comment" class="col-md-offset-1"><header class="vhb-user-profile"><img src="/images/comment_user_public/6636586/2-formatOriginal.png" width="30" class="vhb-profile-pic" height="30"/><span itemscope="" itemtype="https://schema.org/Person" itemprop="author" class="vhb-user">Herr <span itemprop="name">Günther Schemutat</span></span><time content="2017-08-07T10:59:53+0200" itemprop="datePublished" class="vhb-time">07.08.2017, 10:59 Uhr</time></header><p itemprop="text" class="vhb-comment-content">Hier kann jeder wieder mal erkennen , dass heute kaum noch jemand Deutschland dient, sondern nur  dem Mammon.   Ob Schröder  für Russland jobbt oder Wulff <br/>für die Türken,  alle sind Geheimnisträger und bekommen  nach  der Amtszeit ausreichend Geld  um nicht  anhängig zu werden. Sie können  jeden Job annehmen der Menschen dient  und hilft  im eigenen Land ohne Bezahlung.<br/><br/>Ob Putin mal bei Siemens ,Trump  in  Nordkorea  nach ihrer Amtszeit arbeiten ist wohl  nicht zu erwarten. Sie  bleiben auch nach der Amtszeit  ihrem Land tief verbunden und  wären zu Stolz  für andere Länder  zu arbeiten.<br/><br/>Daher  wieder mal  Schuhe auf Wulff, er lernt es nie ihn diesem Leben. <br/><br/>Viele  Niedrig Löhner   können nur noch staunen .</p><footer class="vhb-footer-nav"><div class="dropdown"><a class="vhb-link vhb-spam ajaxify" data-command="openSpamDialog" data-methods="POST,GET" data-param="" data-toggle='dropdown' href='#' data-url='/ajaxentry/nocache/reportspam?reportAsSpam=true&#38;#38;commentId=59882c09a7a6d01ea9ea54e9' >Als Spam melden</a></div></footer></li></ul></div></div></section></div></div><div class="row"><section class="vhb-serviceoffer vhb-section-stage col-md-12"><header class="vhb-stage-header vhb-section-stage-header"><span class="vhb-headline"><span>Serviceangebote</span></span></header><ul class="vhb-serviceoffer-list row"><li class="vhb-serviceoffer-list-item col-md-2" data-tb-region-item><a href="http://handelsblatt-onlineservices.de/finance_today/nl/subscribe.php" class="vhb-serviceoffer-list-item-link" target="_self"><img src="/images/financetoday/3713312/10-format8.png" alt="Handelsblatt: Finance Today Newsletter" class="vhb-serviceoffer-list-item-image"/><div class="vhb-serviceoffer-list-item-overline">Finance Today Newsletter </div><p class="vhb-serviceoffer-list-item-text"></p></a></li><li class="vhb-serviceoffer-list-item col-md-2"><!-- size = "150x150") -->
+<div id="iqadtile14" class="vhb-indicator">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile14", "iqadtile14");
+		}
+	</script>
+</div>
+
+</li><li class="vhb-serviceoffer-list-item col-md-2" data-tb-region-item><a href="http://www.nl-services.com/subscribe/handelsblatt/hbo/subscribe.php" class="vhb-serviceoffer-list-item-link" target="_self"><img src="/images/nl_0011_energie/10002878/4-format8.png" alt="Kostenloser Newsletter: Handelsblatt Energie Briefing" class="vhb-serviceoffer-list-item-image"/><div class="vhb-serviceoffer-list-item-overline">Handelsblatt Energie Briefing </div><p class="vhb-serviceoffer-list-item-text"></p></a></li><li class="vhb-serviceoffer-list-item col-md-2" data-tb-region-item><a href="http://www.handelsblatt.com/finanzen/finanzfuehrerschein/" class="vhb-serviceoffer-list-item-link" target="_self"><img src="/images/finanzfuehrerschein/3742680/1-format8.gif" alt="Financial Education: Finanzwissen testen und erweitern" class="vhb-serviceoffer-list-item-image"/><div class="vhb-serviceoffer-list-item-overline">Finanzwissen testen und erweitern </div><p class="vhb-serviceoffer-list-item-text"></p></a></li><li class="vhb-serviceoffer-list-item col-md-2" data-tb-region-item><a href="http://www.handelsblattmachtschule.de" class="vhb-serviceoffer-list-item-link" target="_blank"><img src="/images/handelsblatt-macht-schule/4023434/2-format8.jpg" alt="Handelsblatt macht Schule: Wirtschaftsunterricht lebendig und praxisnah." class="vhb-serviceoffer-list-item-image"/><div class="vhb-serviceoffer-list-item-overline">Handelsblatt macht Schule </div><p class="vhb-serviceoffer-list-item-text"></p></a></li><li class="vhb-serviceoffer-list-item col-md-2" data-tb-region-item><a href="http://karriere.handelsblatt.com/default.aspx?init=HBFinance" class="vhb-serviceoffer-list-item-link" target="_self"><img src="/images/jobletter-banking-und-finance/6525782/10-format8.png" alt="Newsletter: Jobangebote aus der Finanzbranche" class="vhb-serviceoffer-list-item-image"/><div class="vhb-serviceoffer-list-item-overline">Jobangebote aus der Finanzbranche </div><p class="vhb-serviceoffer-list-item-text"></p></a></li></ul></section></div><div class="row"><div class="col-md-12"><div class="hcf-sponsoring"><!--size = "930x200")-->
+<div class="vhb-center-iq">
+	<div id="iqadtile15" class="vhb-indicator">
+		<script>
+			if(typeof AdController!=='undefined'){
+				AdController.render("iqadtile15", "iqadtile15");
+			}
+		</script>
+	</div>
+</div></div></div><div class="clearfix"></div></div></div></div><footer class="vhb-page-footer"><div class="col-md-12 vhb-page-footer-navigation-wrapper"><section class="col-md-3 vhb-page-footer-section-overview"><div class="vhb-page-footer-headline">Übersicht</div><ul class="vhb-page-footer-list"><li class="vhb-page-footer-list-item"><a href="/finanzen/" target="_self">Finanzen</a></li><li class="vhb-page-footer-list-item"><a href="/unternehmen/" target="_self">Unternehmen</a></li><li class="vhb-page-footer-list-item"><a href="/politik/" target="_self">Politik</a></li><li class="vhb-page-footer-list-item"><a href="/technik/" target="_self">Technik</a></li><li class="vhb-page-footer-list-item"><a href="/sport/" target="_self">Sport</a></li><li class="vhb-page-footer-list-item"><a href="/video/" target="_self">Video</a></li><li class="vhb-page-footer-list-item"><a href="/auto/" target="_self">Auto</a></li><li class="vhb-page-footer-list-item"><a href="/panorama/" target="_self">Panorama</a></li><li class="vhb-page-footer-list-item"><a href="/social-media/" target="_self">Social Media</a></li><li class="vhb-page-footer-list-item"><a href="/service-angebote/" target="_self">Service</a></li></ul></section>
+
+<section class="col-md-3 vhb-page-footer-section-contact">
+ <div class="vhb-page-footer-headline">Service</div>
+ <ul class="vhb-page-footer-list">
+ <li class="vhb-page-footer-list-item vhb-page-footer-contact-facebook"><a href="https://www.facebook.com/handelsblatt" target="_blank">Facebook</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-contact-twitter" target="_blank"><a href="https://twitter.com/handelsblatt">Twitter</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-contact-googleplus" target="_blank"><a href="https://plus.google.com/110845203466448026254">Google+</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-contact-email"><a href="/service-angebote/kontakt-hilfe/">Kontakt/Hilfe</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://www.handelsblatt.com/archiv/" target="_blank">Online-Archiv</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://veranstaltungen.handelsblatt.com/" target="_blank">Veranstaltungen</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://www.handelsblatt.com/impressum/netiquette/" target="_blank">Netiquette</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://www.handelsblatt.com/sitemap/" target="_blank">Sitemap</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://www.handelsblatt.com/impressum/nutzungshinweise/" target="_blank">Nutzungshinweise</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link"><a href="http://www.handelsblatt.com/impressum/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-contact-imprint"><a href="/impressum/">Impressum</a></li>
+ </ul>
+</section>
+
+<section class="col-md-6 vhb-page-footer-section-links">
+ <div class="vhb-page-footer-headline">Links</div>
+ <ul class="vhb-page-footer-list col-md-12">
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://orange.handelsblatt.com/" target="_blank">Orange by Handelsblatt</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://global.handelsblatt.com/" target="_blank">Handelsblatt Global Edition</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.handelsblatt-magazin.com/" target="_blank">Handelsblatt Magazin</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.iqdigital.de/" target="_blank">iqdigital.de</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://morningbriefing.handelsblatt.com/" target="_blank">Morning Briefing </a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://redner.handelsblatt.com/" target="_blank">Redner Agentur</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://research.handelsblatt.com/de/">Research Institute</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.vwd.com/" target="_blank">vwd Vereinigte Wirtschaftsdienste</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.datenschutz-berater.de/" target="_blank">Datenschutz-Berater</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.wiwo.de/" target="_blank">WirtschaftsWoche</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.karriere.de/" target="_blank">karriere.de</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.absatzwirtschaft.de/" target="_blank">Absatzwirtschaft</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.der-betrieb.de/" target="_blank">Der Betrieb</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.zoe-online.org/" target="_blank">OrganisationsEntwicklung</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.genios.de" target="_blank">GBI-Genios </a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.creditreform-magazin.de/" target="_blank">Creditreform</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.bellevue-ferienhaus.de/" target="_blank">bellevue-ferienhaus.de</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.boatoon.com/" target="_blank">boatoon.com</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://pressemonitor.de/" target="_blank">PMG</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://mittelstand.vhb.de/" target="_blank">Mittelstandsportal</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="https://www.dub.de/unternehmensnachfolge" target="_blank">DUB Unternehmensnachfolge</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="https://www.dub.de/franchise/franchise-unternehmen/" target="_blank">DUB Franchiseunternehmen</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://www.bellevue-kreuzfahrten.de/" target="_blank">bellevue-kreuzfahrten.de</a></li>
+ <li class="vhb-page-footer-list-item vhb-page-footer-link col-md-6"><a href="http://kreditkartenvergleich.handelsblatt.com/" target="_blank">Kreditkarten-Vergleich</a></li>
+ </ul>
+</section></div><div class="clearfix"></div><div class="vhb-page-footer-copyright">
+
+<div class="vhb-page-footer-copyright" id="PublisherRef" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+
+<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject"><a href="/"><img itemprop="url" src="/images/logo_handelsblatt/11002806/7-formatOriginal.png" class="vhb-page-footer-copyright-logo" title="Zurück zur Startseite" alt="Handelsblatt-Logo" /></a><meta itemprop="width" content="274"><meta itemprop="height" content="40"></div><meta itemprop="name" content="Handelsblatt">
+
+<div>© 2017 Handelsblatt GmbH - ein Unternehmen der <a target="_blank" title="Verlagsgruppe Handelsblatt" href="http://www.vhb.de">Verlagsgruppe Handelsblatt GmbH & Co. KG</a></div>
+
+<div>Verlags-Services für Werbung: <a href="http://www.iqdigital.de/" target="_blank">iqdigital.de</a> (<a href="http://www.iqm.de/digital/marken/handelsblatt-online/" target="_blank">Mediadaten</a>) | Verlags-Services für Content: <a href="http://www.handelsblatt.com/service-angebote/werbung-content/business-content/" target="_blank">Digitale Unternehmens-Lösungen</a></div>
+<div>Realisierung und Hosting der Finanzmarktinformationen: <a href="http://www.vwd.com/" target="_blank">vwd Vereinigte Wirtschaftsdienste GmbH</a></div>
+<div>Verzögerung der Kursdaten: Deutsche Börse 15 Min., Nasdaq und NYSE 20 Min.</div>
+<div>Keine Gewähr für die Richtigkeit der Angaben. Bitte beachten Sie auch: <a href="http://www.iqm.de/digital/nutzungsbasierte_Onlinewerbung/" target="_blank">Nutzungsbasierte Onlinewerbung</a></div>
+</div>
+
+
+
+
+
+</div></footer>
+
+<img src="//amplifypixel.outbrain.com/pixel?mid=00e7068831e919a12b2a22647cec5d3134">
+
+<style>
+
+.c-nojs {
+ background-color: white;
+ position: fixed;
+ z-index: 9999999;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom:0px;
+}
+
+.c-nojs{
+ font-family: "Gotham Narrow SSm A","Gotham Narrow SSm B",Arial,Helvetica,sans-serif;
+}
+
+.c-nojs__bar{
+ background-color: #ee7000;
+ min-height: 30px;
+}
+
+.c-nojs__wrapper{
+ max-width: 500px;
+ margin: 0 auto;
+}
+
+.c-nojs__logo{
+ margin-top: 20px;
+ text-align:center;
+ width:100%;
+ margin-bottom:50px;
+}
+
+.c-teaser__overline{
+ margin-top: 40px;
+ font-size: 12px;
+ line-height: 16px;
+ font-weight: 700; 
+ color: #ee7000;
+ text-transform: uppercase;
+}
+
+.c-teaser__headline{
+ font-size: 38px;
+ line-height: 42px;
+ font-weight: 700; 
+ margin-bottom:15px;
+}
+
+.c-teaser__text{
+ font-size: 20px;
+ line-height: 28px;
+ margin-bottom: 40px;
+}
+
+.c-nojs__table{
+ width:100%;
+ 
+}
+
+.c-nojs__hr {
+ margin-bottom: 10px;
+}
+
+.c-nojs__table a{
+ font-size: 12px;
+ color: #969696;
+}
+
+.c-nojs__table a:hover{
+
+ color: #ee7000;
+
+}
+
+.c-nojs__table td{
+ width: 33.3%
+}
+
+.u-text-right{
+ text-align: right;
+}
+
+.u-text-center{
+ text-align: center;
+}
+
+</style>
+
+<noscript>
+
+<div class="c-nojs">
+
+<div class="c-nojs__bar"></div>
+
+<div class="c-nojs__wrapper">
+
+<div class="c-nojs__logo">
+
+<a href="/">
+
+ <img src="/images/logo_handelsblatt/11002806/7-formatOriginal.png">
+
+</a>
+
+</div>
+
+<hr class="c-nojs__hr">
+
+<div class="c-teaser">
+
+<div class="c-teaser__overline">Javascript deaktiviert</div>
+
+<div class="c-teaser__headline">Warum sehe ich Handelsblatt Online nicht?</div>
+
+<div class="c-teaser__text">Um unser Angebot in vollem Umfang nutzen zu können, müssen Sie JavaScript in Ihrem Browser aktivieren.</div>
+
+</div>
+
+<hr class="c-nojs__hr">
+
+<table class="c-nojs__table">
+
+<tr>
+
+<td><a href="http://www.handelsblatt.com/impressum/nutzungshinweise/">Nutzungshinweise</a></td>
+
+<td class="u-text-center"><a href="http://www.handelsblatt.com/impressum/datenschutzerklaerung/">Datenschutz</a></td>
+
+<td class="u-text-right"><a href="http://www.handelsblatt.com/impressum/">Impressum</a></td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<img src="https://handelsblatt01.webtrekk.net/357500119523122/wt?p=433,JavaScript-deaktiviert,0,0,0,0,0,0,0,cp1=JavaScript-deaktiviert;ck6=JavaScript-deaktiviert;cg1=sonstiges;cg2=JavaScript-deaktiviert" height="1" width="1" alt="">
+
+<!-- SZM VERSION="2.0" -->
+<img src="http://de.ioam.de/tx.io?st=handbl&amp;np=nojs&amp;mo=0" width="1" height="1" alt="szmtag">
+<!--/SZM --> 
+
+</noscript>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1643668105893250'); 
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1643668105893250&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Google AdWords Code -->
+<script>
+var google_conversion_id = 881990970;var google_custom_params = window.google_tag_params;var google_remarketing_only = true;
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/881990970/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- End Google AdWords Code -->
+
+<!-- EXAMPLE Homepage Tag -->
+<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script><script type="text/javascript">window.criteo_q = window.criteo_q || [];var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";window.criteo_q.push( { event: "setAccount", account: 39660}, { event: "setSiteType", type: deviceType}, { event: "viewHome"});</script>
+<!-- EXAMPLE Home Page Tag --></div><div data-param="http://www.handelsblatt.com?footerhp=scroll" data-command="overscroller" class="vhb-overscroller ajaxify"><a class="vhb-overscroller-link" href="http://www.handelsblatt.com?footerhp=click"></a><div class="vhb-overscroller-overlay"></div><div class="vhb-stage"><div data-progress="0" class="vhb-radial-progress"><div class="vhb-circle"><div class="vhb-mask vhb-full"><div class="vhb-fill"></div></div><div class="vhb-mask vhb-half"><div class="vhb-fill"></div><div class="vhb-fill vhb-fix"></div></div><div class="vhb-shadow"></div></div><div class="vhb-inset"><div class="vhb-caption"><span>Zur Startseite</span></div><div class="vhb-percentage"><div class="vhb-numbers"><span>-</span><span>0%</span><span>1%</span><span>2%</span><span>3%</span><span>4%</span><span>5%</span><span>6%</span><span>7%</span><span>8%</span><span>9%</span><span>10%</span><span>11%</span><span>12%</span><span>13%</span><span>14%</span><span>15%</span><span>16%</span><span>17%</span><span>18%</span><span>19%</span><span>20%</span><span>21%</span><span>22%</span><span>23%</span><span>24%</span><span>25%</span><span>26%</span><span>27%</span><span>28%</span><span>29%</span><span>30%</span><span>31%</span><span>32%</span><span>33%</span><span>34%</span><span>35%</span><span>36%</span><span>37%</span><span>38%</span><span>39%</span><span>40%</span><span>41%</span><span>42%</span><span>43%</span><span>44%</span><span>45%</span><span>46%</span><span>47%</span><span>48%</span><span>49%</span><span>50%</span><span>51%</span><span>52%</span><span>53%</span><span>54%</span><span>55%</span><span>56%</span><span>57%</span><span>58%</span><span>59%</span><span>60%</span><span>61%</span><span>62%</span><span>63%</span><span>64%</span><span>65%</span><span>66%</span><span>67%</span><span>68%</span><span>69%</span><span>70%</span><span>71%</span><span>72%</span><span>73%</span><span>74%</span><span>75%</span><span>76%</span><span>77%</span><span>78%</span><span>79%</span><span>80%</span><span>81%</span><span>82%</span><span>83%</span><span>84%</span><span>85%</span><span>86%</span><span>87%</span><span>88%</span><span>89%</span><span>90%</span><span>91%</span><span>92%</span><span>93%</span><span>94%</span><span>95%</span><span>96%</span><span>97%</span><span>98%</span><span>99%</span><span>100%</span></div></div></div></div><img src="http://www.handelsblatt.com/contentexport/static/images/hp.png"/></div></div><script>
+                window._newsroom = window._newsroom || [];
+                !function (e, f, u) {
+                    e.async = 1;
+                    e.src = u;
+                    f.parentNode.insertBefore(e, f);
+                }(document.createElement('script'),
+                    document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/vhb-handelsblatt/newsroom.js');
+            </script><script src="/js/11002860/440/base.js" type="text/javascript"></script><script src="/js/13360408/6/iqipadfix.js" type="text/javascript"></script><script src="/js/9816410/1/z_iq-end-of-page-signal.js" type="text/javascript"></script><script type="text/javascript">// START - Taboola Footer: Flush
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+// END - Taboola Footer: Flush</script><!-- end adcontroller initializierung -->
+<script type = "text/javascript">
+	if (typeof AdController !== 'undefined') {
+		AdController.finalize();
+	}
+</script></body></html><!-- [powered by HCF: 17.10.1.15,degtlun5507.server.arvato-systems.de,20171010174322,ID:20152184 in 65ms] -->

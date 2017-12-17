@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+	        	<base href="http://www.isgos.de/cms/index.php/anmeldeformular" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Super User" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Anmeldeformular</title>
+	<link href="/cms/templates/template-isgos/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link rel="stylesheet" href="/cms/media/system/css/calendar-jos.css" type="text/css"  title="Grün"  media="all" />
+	<link rel="stylesheet" href="/cms/plugins/system/maximenuckmobile/themes/isgos/maximenuckmobile.css" type="text/css" />
+	<link rel="stylesheet" href="/cms/modules/mod_maximenuck/themes/blank/css/maximenuck.php?monid=maximenuck88" type="text/css" />
+	<style type="text/css">
+
+div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1.parent > a:after, div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1.parent > span.separator:after { display: none;}
+div#maximenuck88.maximenuckv ul.maximenuck { margin-top: 20px;margin-right: 15px;margin-left: 15px; } 
+div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1, div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1.parent { border-bottom: #FFFFFF 1px solid ; } 
+div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > a, div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > span.separator { padding-top: 8px;padding-bottom: 8px; } 
+div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > a span.titreck, div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > span.separator span.titreck { color: #000000; } 
+div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > a span.descck, div#maximenuck88.maximenuckv ul.maximenuck li.maximenuck.level1 > span.separator span.descck { color: #000000; } @media screen and (max-width: 524px) {#maximenuck88 .maximenumobiletogglericonck {display: block !important;font-size: 33px !important;text-align: right !important;padding-top: 10px !important;}#maximenuck88 ul.maximenuck .maximenumobiletogglerck ~ li.maximenuck.level1 {display: none !important;}#maximenuck88 ul.maximenuck .maximenumobiletogglerck:checked ~ li.maximenuck.level1 {display: block !important;}}@media screen and (max-width: 1100px) {#maximenuck88 ul.maximenuck li.maximenuck.nomobileck { display: none !important; }}@media screen and (min-width: 1101px) {#maximenuck88 ul.maximenuck li.maximenuck.nodesktopck { display: none !important; }}
+	</style>
+	<script src="/cms/media/system/js/calendar.js" type="text/javascript"></script>
+	<script src="/cms/media/system/js/calendar-setup.js" type="text/javascript"></script>
+	<script src="/cms/media/jui/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/cms/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+	<script src="/cms/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+	<script src="/cms/media/system/js/caption.js" type="text/javascript"></script>
+	<script src="/cms/plugins/system/maximenuckmobile/assets/maximenuckmobile.js" type="text/javascript"></script>
+	<script src="/cms/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/cms/media/jui/js/jquery.ui.core.min.js" type="text/javascript"></script>
+	<script src="/cms/modules/mod_maximenuck/assets/maximenuck.js" type="text/javascript"></script>
+	<script type="text/javascript">
+Calendar._DN = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"]; Calendar._SDN = ["So","Mo","Di","Mi","Do","Fr","Sa","So"]; Calendar._FD = 0; Calendar._MN = ["Januar","Februar","M\u00e4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]; Calendar._SMN = ["Jan","Feb","M\u00e4r","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"]; Calendar._TT = {"INFO":"\u00dcber den Kalender","ABOUT":"DHTML Date\/Time Selector\n(c) dynarch.com 2002-2005 \/ Author: Mihai Bazon\nFor latest version visit: http:\/\/www.dynarch.com\/projects\/calendar\/\nDistributed under GNU LGPL.  See http:\/\/gnu.org\/licenses\/lgpl.html for details.\n\nDatum Auswahl:\n- Die \u00ab und \u00bb Buttons nutzen, um das Jahr auszuw\u00e4hlen\n- Mit den Schaltfl\u00e4chen < und > den Monat ausw\u00e4hlen\n- Zur schnelleren Auswahl, die Maustaste auf einen der obigen Schaltfl\u00e4chen halten.","ABOUT_TIME":"\n\nTime selection:\n- Click on any of the time parts to increase it\n- or Shift-click to decrease it\n- or click and drag for faster selection.","PREV_YEAR":"Klick wechselt zum Vorjahr. Klicken und festhalten f\u00fcr die Jahresliste.","PREV_MONTH":"Klick wechselt zum Vormonat. Klicken und festhalten f\u00fcr die Monatsliste.","GO_TODAY":"Heutiges Datum","NEXT_MONTH":"Klick wechselt zum Folgemonat. Klicken und festhalten f\u00fcr die Monatsliste.","SEL_DATE":"Ein Datum ausw\u00e4hlen.","DRAG_TO_MOVE":"Ziehen zum Verschieben","PART_TODAY":" Heute ","DAY_FIRST":"Mit &bdquo;%s&ldquo; beginnen","WEEKEND":"0,6","CLOSE":"Schlie\u00dfen","TODAY":"Heute","TIME_PART":"(Shift-)Klicken oder Ziehen um den Wert zu \u00e4ndern","DEF_DATE_FORMAT":"%Y-%m-%d","TT_DATE_FORMAT":"%a, %b %e","WK":"KW","TIME":"Zeit:"};jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(document).ready(function($){
+                    $('#maximenuck88').MobileMaxiMenu({usemodules : 0,container : 'menucontainer',showdesc : 0,showlogo : 2,useimages : 0,menuid : 'maximenuck88',showmobilemenutext : 'custom',mobilemenutext : 'Institut für sozialpolitische und gerontologische Studien',mobilebackbuttontext : 'Back',displaytype : 'flat',menubarbuttoncontent : '',topbarbuttoncontent : '',uriroot : '/cms',displayeffect : 'normal'});});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });jQuery(document).ready(function(jQuery){jQuery('#maximenuck88').DropdownMaxiMenu({fxtransition : 'linear',dureeIn : 0,dureeOut : 500,menuID : 'maximenuck88',testoverflow : '0',orientation : 'vertical',behavior : 'mouseover',opentype : 'open',fxdirection : 'normal',directionoffset1 : '30',directionoffset2 : '30',showactivesubitems : '0',ismobile : 0,menuposition : '0',effecttype : 'dropdown',topfixedeffect : '1',fxduration : 500});});
+	</script>
+
+
+	<link type="text/css" href="/cms/templates/template-isgos/css/reset.css" rel="stylesheet" >
+        <link type="text/css" media="only screen and (min-device-width: 1101px)" href="/cms/templates/template-isgos/css/template.css" rel="stylesheet" >
+	<link type="text/css" media="only screen and (max-device-width: 1100px)" href="/cms/templates/template-isgos/css/template_mobile.css" rel="stylesheet" >
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<script src="/cms/templates/template-isgos/js/modernizr.js" type="text/javascript"></script>
+</head>
+
+
+<body class="page_bg ">
+
+<div id="wrapper">
+	<div id="wrapper-header-mobil">
+		<nav id="main-navigation-mobil">
+                			<div class="moduletable">
+						
+			<!--[if lte IE 7]>
+			<link href="/cms/modules/mod_maximenuck/themes/blank/css/ie7.css" rel="stylesheet" type="text/css" />
+			<![endif]--><!-- debut Maximenu CK, par cedric keiflin -->
+	<div class="maximenuckv ltr" id="maximenuck88" style="z-index:10;">
+        <div class="maxiroundedleft"></div>
+        <div class="maxiroundedcenter">
+            <ul class=" maximenuck">
+									<li class="maximenucklogo" style="margin-bottom: 0 !important;margin-left: 0 !important;margin-right: 0 !important;margin-top: 0 !important;">
+						<img src="/cms/images/logo_isgos.jpg" alt="" style="margin: 0px 0px 0px 20px" />					</li>
+								<label for="maximenuck88-maximenumobiletogglerck" class="maximenumobiletogglericonck" style="display:none;">&#x2261;</label><input id="maximenuck88-maximenumobiletogglerck" class="maximenumobiletogglerck" type="checkbox" style="display:none;"/>				<li data-level="1" class="maximenuck item101 first level1 " style="z-index : 12000;" ><a class="maximenuck " href="/cms/index.php"><span class="titreck">Start</span></a>
+		</li><li data-level="1" class="maximenuck item107 level1 " style="z-index : 11999;" ><a class="maximenuck " href="/cms/index.php/profil"><span class="titreck">Profil</span></a>
+		</li><li data-level="1" class="maximenuck item108 level1 " style="z-index : 11998;" ><a class="maximenuck " href="/cms/index.php/aktuelles"><span class="titreck">Aktuelles </span></a>
+		</li><li data-level="1" class="maximenuck item109 parent level1 " style="z-index : 11997;" ><a class="maximenuck " href="/cms/index.php/projekte"><span class="titreck">Projekte </span></a>
+	<div class="floatck" style=""><div class="maxidrop-top"><div class="maxidrop-top2"></div></div><div class="maxidrop-main" style=""><div class="maxidrop-main2"><div class="maximenuck2 first " >
+	<ul class="maximenuck2"><li data-level="2" class="maximenuck item110 first level2 " style="z-index : 11996;" ><a class="maximenuck " href="/cms/index.php/projekte/partizipation"><span class="titreck">Partizipation</span></a>
+		</li><li data-level="2" class="maximenuck item111 level2 " style="z-index : 11995;" ><a class="maximenuck " href="/cms/index.php/projekte/pflegeversorgung"><span class="titreck">Pflegeversorgung</span></a>
+		</li><li data-level="2" class="maximenuck item112 level2 " style="z-index : 11994;" ><a class="maximenuck " href="/cms/index.php/projekte/wohnen-im-alter"><span class="titreck">Wohnen im Alter</span></a>
+		</li><li data-level="2" class="maximenuck item113 last level2 " style="z-index : 11993;" ><a class="maximenuck " href="/cms/index.php/projekte/referenzen"><span class="titreck">Referenzen</span></a>
+	</li>
+	</ul>
+	<div class="clr"></div></div><div class="clr"></div></div></div><div class="maxidrop-bottom"><div class="maxidrop-bottom2"></div></div></div>
+	</li><li data-level="1" class="maximenuck item114 level1 " style="z-index : 11992;" ><a class="maximenuck " href="/cms/index.php/architektur"><span class="titreck">Architektur</span></a>
+		</li><li data-level="1" class="maximenuck item115 parent level1 " style="z-index : 11991;" ><a class="maximenuck " href="/cms/index.php/veranstaltungen/aktuell"><span class="titreck">Veranstaltungen</span></a>
+	<div class="floatck" style=""><div class="maxidrop-top"><div class="maxidrop-top2"></div></div><div class="maxidrop-main" style=""><div class="maxidrop-main2"><div class="maximenuck2 first " >
+	<ul class="maximenuck2"><li data-level="2" class="maximenuck item116 first level2 " style="z-index : 11990;" ><a class="maximenuck " href="/cms/index.php/veranstaltungen/aktuell"><span class="titreck">Aktuell</span></a>
+		</li><li data-level="2" class="maximenuck item117 level2 " style="z-index : 11989;" ><a class="maximenuck " href="/cms/index.php/veranstaltungen/rueckblick"><span class="titreck">Rückblick </span></a>
+		</li><li data-level="2" class="maximenuck item118 last level2 " style="z-index : 11988;" ><a class="maximenuck " href="/cms/index.php/veranstaltungen/ausstellungen"><span class="titreck">Ausstellungen</span></a>
+	</li>
+	</ul>
+	<div class="clr"></div></div><div class="clr"></div></div></div><div class="maxidrop-bottom"><div class="maxidrop-bottom2"></div></div></div>
+	</li><li data-level="1" class="maximenuck item119 parent level1 " style="z-index : 11987;" ><a class="maximenuck " href="/cms/index.php/publikationen"><span class="titreck">Publikationen </span></a>
+	<div class="floatck" style=""><div class="maxidrop-top"><div class="maxidrop-top2"></div></div><div class="maxidrop-main" style=""><div class="maxidrop-main2"><div class="maximenuck2 first " >
+	<ul class="maximenuck2"><li data-level="2" class="maximenuck item120 first level2 " style="z-index : 11986;" ><a class="maximenuck " href="/cms/index.php/publikationen/partizipation"><span class="titreck">Partizipation </span></a>
+		</li><li data-level="2" class="maximenuck item121 level2 " style="z-index : 11985;" ><a class="maximenuck " href="/cms/index.php/publikationen/wohnen"><span class="titreck">Wohnen</span></a>
+		</li><li data-level="2" class="maximenuck item122 level2 " style="z-index : 11984;" ><a class="maximenuck " href="/cms/index.php/publikationen/pflegeversorgung"><span class="titreck">Pflegeversorgung</span></a>
+		</li><li data-level="2" class="maximenuck item123 last level2 " style="z-index : 11983;" ><a class="maximenuck " href="/cms/index.php/publikationen/bildung-im-alter"><span class="titreck">Bildung im Alter </span></a>
+	</li>
+	</ul>
+	<div class="clr"></div></div><div class="clr"></div></div></div><div class="maxidrop-bottom"><div class="maxidrop-bottom2"></div></div></div>
+	</li><li data-level="1" class="maximenuck item124 level1 " style="z-index : 11982;" ><a class="maximenuck " href="/cms/index.php/downloads"><span class="titreck">Downloads</span></a>
+		</li><li data-level="1" class="maximenuck item125 parent level1 " style="z-index : 11981;" ><a class="maximenuck " href="/cms/index.php/kontakt"><span class="titreck">Kontakt</span></a>
+	<div class="floatck" style=""><div class="maxidrop-top"><div class="maxidrop-top2"></div></div><div class="maxidrop-main" style=""><div class="maxidrop-main2"><div class="maximenuck2 first " >
+	<ul class="maximenuck2"><li data-level="2" class="maximenuck item126 first level2 " style="z-index : 11980;" ><a class="maximenuck " href="/cms/index.php/kontakt/impressum"><span class="titreck">Impressum</span></a>
+		</li><li data-level="2" class="maximenuck item145 last level2 " style="z-index : 11979;" ><a class="maximenuck " href="/cms/index.php/kontakt/datenschutz"><span class="titreck">Datenschutz</span></a>
+	</li>
+	</ul>
+	<div class="clr"></div></div><div class="clr"></div></div></div><div class="maxidrop-bottom"><div class="maxidrop-bottom2"></div></div></div>
+	</li>            </ul>
+        </div>
+        <div class="maxiroundedright"></div>
+        <div style="clear:both;"></div>
+    </div>
+    <!-- fin maximenuCK -->
+		</div>
+	
+		</nav>
+		<div id="header-bilder">          
+		  	<p align="center"><img src="/cms/templates/template-isgos/images/bild1.jpg" alt="Bild1">
+			<img src="/cms/templates/template-isgos/images/bild2.jpg" alt="Bild2">
+			<img src="/cms/templates/template-isgos/images/bild3.jpg" alt="Bild3">
+			<img src="/cms/templates/template-isgos/images/bild4.jpg" alt="Bild4">
+			<img src="/cms/templates/template-isgos/images/bild5.jpg" alt="Bild5"></p>
+		</div>
+	</div>
+
+  	<header id="wrapper-header">
+		<a href="http://www.isgos.de"><img src="/cms/templates/template-isgos/images/header/logo_isgos.png" class="logo" alt="Logo ISGOS"></a>
+      	<p>Institut für sozialpolitische <br />und gerontologische Studien</p>
+	</header>
+
+	<div id="wrapper-content">
+		<div id="box_li"> 
+			<nav id="main-navigation">
+						<div class="moduletable_menu">
+						<ul class="nav menu">
+<li class="item-101 default"><a href="/cms/index.php" >Start</a></li><li class="item-107"><a href="/cms/index.php/profil" >Profil</a></li><li class="item-108"><a href="/cms/index.php/aktuelles" >Aktuelles </a></li><li class="item-109 parent"><a href="/cms/index.php/projekte" >Projekte </a></li><li class="item-114"><a href="/cms/index.php/architektur" >Architektur</a></li><li class="item-115 parent"><a href="/cms/index.php/veranstaltungen/aktuell" >Veranstaltungen</a></li><li class="item-119 parent"><a href="/cms/index.php/publikationen" >Publikationen </a></li><li class="item-124"><a href="/cms/index.php/downloads" >Downloads</a></li><li class="item-125 parent"><a href="/cms/index.php/kontakt" >Kontakt</a></li></ul>
+		</div>
+	
+			</nav>
+   		</div>
+
+  		<div id="box_re">
+		  	<p><img src="/cms/templates/template-isgos/images/bild1.jpg" alt="Bild1"></p>
+			<p><img src="/cms/templates/template-isgos/images/bild2.jpg" alt="Bild2"></p>
+			<p><img src="/cms/templates/template-isgos/images/bild3.jpg" alt="Bild3"></p>
+			<p><img src="/cms/templates/template-isgos/images/bild4.jpg" alt="Bild4"></p>
+			<p><img src="/cms/templates/template-isgos/images/bild5.jpg" alt="Bild5"></p>
+		</div> 
+		<div id="box_mi">	 
+            		<div class="moduletable">
+						
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li class="active">
+			<span class="divider icon-location"></span>
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/cms/index.php" class="pathway"><span itemprop="name">Startseite</span></a>
+				
+									<span class="divider">
+						<img src="/cms/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Anmeldeformular				</span>
+				<meta itemprop="position" content="2">
+			</li>
+		</ul>
+		</div>
+	          
+          	<hr />
+ 			<article id="artikeltext">
+
+		        <div id="system-message-container">
+	</div>
+		
+           		<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="de-DE" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="name">
+				Anmeldeformular			</h2>
+									</div>
+					
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Hiermit melde ich mich/wir unsere(n) Mitarbeiter/in verbindlich zur Teilnahme an<br />unten angegebener/en Veranstaltung/en (Seminare / Fachtagungen etc.) an:</p>
+<p><strong>Name der Teilnehmer:</strong></p>
+<p>
+<!-- BreezingForms V1.8.7 Stable (build 885) Copyright(c) 2008-2013 by Markus Bopp | FacileForms Copyright 2004-2006 by Peter Koch, Chur, Switzerland.  All rights reserved. -->
+<div class="bfClearfix">
+<script type="text/javascript">
+<!--
+ff_processor=new Object();ff_processor.okrun=true;ff_processor.ip='217.111.188.18';ff_processor.agent='Wget/1.19.1 (darwin16.4.0)';ff_processor.browser='Wget/1.19.1 (darwin16.4.0)';ff_processor.opsys='unix';ff_processor.provider='Unbekannt';ff_processor.submitted='2017-10-10 15:43:46';
+ff_processor.form=4;ff_processor.form_id='ff_form4';ff_processor.page=1;ff_processor.target=2;ff_processor.runmode=0;ff_processor.inframe=0;ff_processor.inline=0;ff_processor.template=0;ff_processor.homepage='http://www.isgos.de/cms/index.php';ff_processor.mossite='http://www.isgos.de/cms/index.php';
+ff_processor.images='http://www.isgos.de/cms/index.php/components/com_breezingforms/images';ff_processor.border='';ff_processor.align='';ff_processor.top='';ff_processor.suffix='';ff_processor.status=null;ff_processor.message=null;ff_processor.record_id=null;
+ff_processor.showgrid=false;ff_processor.traceBuffer=null;
+//-->
+</script>
+<script type="text/javascript" src="/cms/components/com_breezingforms/facileforms.js"></script>
+<div id="ff_formdiv4" class="bfFormDiv anmeldung"><div class="bfPage-tl"><div class="bfPage-tr"><div class="bfPage-t"></div></div></div><div class="bfPage-l"><div class="bfPage-r"><div class="bfPage-m bfClearfix">
+<script type="text/javascript">
+<!--
+
+function checkFileExtensions(){
+			return true;
+		}
+		function bfCheckCaptcha(){if(checkFileExtensions())ff_submitForm2();}function ff_initialize(condition)
+{}
+onload=function()
+{ff_initialize('formentry');ff_initialize('pageentry');if(ff_processor&&ff_processor.traceBuffer)ff_traceWindow();}
+function ff_showsubmitted(status,message)
+{alert(message);}
+function ff_submitForm()
+{if(document.getElementById('bfSubmitButton')){document.getElementById('bfSubmitButton').disabled=true;}if(typeof JQuery!='undefined'){JQuery('.bfCustomSubmitButton').prop('disabled',true);}bfCheckCaptcha();}function ff_submitForm2()
+{if(document.getElementById('bfSubmitButton')){document.getElementById('bfSubmitButton').disabled=true;}if(typeof JQuery!='undefined'){JQuery('.bfCustomSubmitButton').prop('disabled',true);}if(typeof bf_ajax_submit!='undefined'){bf_ajax_submit()}else{document.ff_form4.submit();}
+}
+var ff_validationFocusName='';
+var ff_elements=[['ff_elem57','ff_div57','T1Name',1,57],['ff_elem61','ff_div61','T1SemNr1',1,61],['ff_elem58','ff_div58','T1Pos',1,58],['ff_elem62','ff_div62','T1SemNr2',1,62],['ff_elem63','ff_div63','T1SemNr3',1,63],['ff_elem64','ff_div64','T1SemNr4',1,64],
+['ff_elem65','ff_div65','1ce0386717db10cf20fc51748a9700a6',1,65],['ff_elem66','ff_div66','2b3dad6d923ece78319da6cb09ba5536',1,66],['ff_elem67','ff_div67','T2Name',1,67],['ff_elem68','ff_div68','T2SemNr1',1,68],['ff_elem69','ff_div69','T2SemNr3',1,69],
+['ff_elem70','ff_div70','T2Pos',1,70],['ff_elem71','ff_div71','T2SemNr2',1,71],['ff_elem72','ff_div72','T2SemNr4',1,72],['ff_elem73','ff_div73','11177055e3097acc0b1ecb7015dfeef1',1,73],['ff_elem74','ff_div74','T3Name',1,74],['ff_elem75','ff_div75','T3Pos',1,75],
+['ff_elem76','ff_div76','T3SemNr1',1,76],['ff_elem77','ff_div77','T3SemNr3',1,77],['ff_elem78','ff_div78','T3SemNr2',1,78],['ff_elem79','ff_div79','T3SemNr4',1,79],['ff_elem80','ff_div80','5c5260156458c4069976039b7b5b4f8f',1,80],['ff_elem81','ff_div81','FirmaInstitut',1,81],
+['ff_elem82','ff_div82','Ansprechpartner',1,82],['ff_elem83','ff_div83','Strasse',1,83],['ff_elem84','ff_div84','PLZ',1,84],['ff_elem85','ff_div85','Tel',1,85],['ff_elem86','ff_div86','Ort',1,86],['ff_elem87','ff_div87','EMail',1,87],['ff_elem89','ff_div89','Newsletter',1,89],
+['ff_elem91','ff_div91','da5cd1415e05a6dd681041df06f53e2e',1,91]
+];
+function ff_getElementByName(name)
+{if(name.substr(0,6)=='ff_nm_')name=name.substring(6,name.length-2);for(var i=0;i<ff_elements.length;i++)
+if(ff_elements[i][2]==name)
+return eval('document.ff_form4.'+ff_elements[i][0]);return null;}
+function ff_getPageByName(name)
+{if(name.substr(0,6)=='ff_nm_')name=name.substring(6,name.length-2);for(var i=0;i<ff_elements.length;i++)
+if(ff_elements[i][2]==name)
+return ff_elements[i][3];return 0;}
+var ff_currentpage=1;
+function ff_switchpage(page){if(document.getElementById("bfPage1"))document.getElementById("bfPage1").style.display="none";if(document.getElementById("bfPage"+page))document.getElementById("bfPage"+page).style.display="";ff_currentpage=page;ff_initialize("pageentry");
+}
+function ff_validationFocus(name)
+{if(name==undefined||name==''){if(ff_validationFocusName!=''){ff_switchpage(ff_getPageByName(ff_validationFocusName));if(ff_getElementByName(ff_validationFocusName).focus){ff_getElementByName(ff_validationFocusName).focus();}}}else{if(ff_validationFocusName=='')
+ff_validationFocusName=name;}}
+function ff_validation(page)
+{if(typeof inlineErrorElements!='undefined')inlineErrorElements=new Array();error='';ff_validationFocusName='';if(error!=""&&document.getElementById('ff_capimgValue')){document.getElementById('ff_capimgValue').src='/cms/components/com_breezingforms/images/captcha/securimage_show.php?bfMathRandom='+Math.random();
+document.getElementById('bfCaptchaEntry').value="";}if(error!=""&&document.getElementById("bfSubmitButton")){document.getElementById("bfSubmitButton").disabled=false;}if(error!=""&&typeof JQuery!="undefined"){JQuery(".bfCustomSubmitButton").prop("disabled",false);}
+return error;}
+function ff_validate_submit(element,action)
+{if(typeof bfUseErrorAlerts!='undefined'){JQuery(".bfErrorMessage").html('');JQuery(".bfErrorMessage").css("display","none");}error=ff_validation(0);if(error!=''){if(typeof bfUseErrorAlerts=='undefined'){alert(error);}else{bfShowErrors(error);}ff_validationFocus();
+}else
+ff_submitForm();}
+//-->
+</script>
+<form data-ajax="false"  action="http://www.isgos.de/cms/index.php/anmeldeformular" method="post" name="ff_form4" id="ff_form4" enctype="multipart/form-data" accept-charset="utf-8" onsubmit="return false;" class="bfQuickMode">
+
+			<style type="text/css">
+			ul.droppableArea, ul.droppableArea li { background-image: none; list-style: none; }
+			li.ff_listItem { width: auto; list-style: none; }
+			li.ff_listItem .ff_div { width: auto; float: left; }
+			.ff_label { outline: none; }
+			.ff_elem { float: left; }
+			.ff_dragBox { display: none; }
+			</style>
+			
+<ul class="droppableArea" id="drop1"><li class="ff_listItem" id="ff_listItem65"><span class="ff_dragBox" id="ff_dragBox65">&nbsp;</span><div style="" class="ff_div" id="ff_div65"><div style="width: 170px; height: 14px; position: relative; padding: 0px; margin: 2px;" class="ff_elem" id="ff_elem65">Teilnehmer 1:</div></div><div style="clear: both;" class="ff_appender"></div></li><li style="" class="ff_listItem" id="ff_listItem57"><span class="ff_dragBox" id="ff_dragBox57">&nbsp;</span><div style="" class="ff_div" id="ff_div57"><div tabindex="0" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; top: 0px; left: 0px; padding: 0px; margin: 2px;" class="ff_label" id="ff_label57">Name:</div><div style="display: none;" class="ff_break" id="ff_break57"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1Name[]" id="ff_elem57" type="text"></div><div style="" class="ff_div" id="ff_div58"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; top: 0px; left: 0px; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel4fc59ac4c7e7c437ab6c25a971f014e5">Position:</div><div style="display: none;" class="ff_break" id="ff_break58"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1Pos[]" id="ff_elem58" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li style="" class="ff_listItem" id="ff_listItem61"><span class="ff_dragBox" id="ff_dragBox61">&nbsp;</span><div style="" class="ff_div" id="ff_div61"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label61">T1 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break61"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1SemNr1[]" id="ff_elem61" type="text"></div><div style="" class="ff_div" id="ff_div62"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabelcc7c9c8818ee85cf9415a4262fa91577">T1 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break62"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1SemNr2[]" id="ff_elem62" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li style="" class="ff_listItem" id="ff_listItem63"><span class="ff_dragBox" id="ff_dragBox63">&nbsp;</span><div style="" class="ff_div" id="ff_div63"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label63">T1 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break63"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1SemNr3[]" id="ff_elem63" type="text"></div><div style="" class="ff_div" id="ff_div64"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabelee4877450bfbf1c86f00c8207865d6a1">T1 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break64"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T1SemNr4[]" id="ff_elem64" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem66"><span class="ff_dragBox" id="ff_dragBox66">&nbsp;</span><div style="" class="ff_div" id="ff_div66"><div style="width: 170px; height: 14px; position: relative; padding: 0px; margin: 2px;" class="ff_elem" id="ff_elem66">Teilnehmer 2:</div></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem67"><span class="ff_dragBox" id="ff_dragBox67">&nbsp;</span><div style="" class="ff_div" id="ff_div67"><div tabindex="0" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label67">Name:</div><div style="display: none;" class="ff_break" id="ff_break67"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2Name[]" id="ff_elem67" type="text"></div><div style="" class="ff_div" id="ff_div70"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabelc9181241f75949932dcd4cc57b5b6d60">Position:</div><div style="display: none;" class="ff_break" id="ff_break70"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2Pos[]" id="ff_elem70" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem68"><span class="ff_dragBox" id="ff_dragBox68">&nbsp;</span><div style="" class="ff_div" id="ff_div68"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label68">T2 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break68"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2SemNr1[]" id="ff_elem68" type="text"></div><div style="" class="ff_div" id="ff_div71"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel0402a5c0c65132ced9333df3cfb992a9">T2 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break71"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2SemNr2[]" id="ff_elem71" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem69"><span class="ff_dragBox" id="ff_dragBox69">&nbsp;</span><div style="" class="ff_div" id="ff_div69"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label69">T2 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break69"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2SemNr3[]" id="ff_elem69" type="text"></div><div style="" class="ff_div" id="ff_div72"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabeld9fad07b0962bbbcda9134b6f83bb003">T2 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break72"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T2SemNr4[]" id="ff_elem72" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem73"><span class="ff_dragBox" id="ff_dragBox73">&nbsp;</span><div style="" class="ff_div" id="ff_div73"><div style="width: 170px; height: 14px; position: relative; padding: 0px; margin: 2px;" class="ff_elem" id="ff_elem73">Teilnehmer 3:</div></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem74"><span class="ff_dragBox" id="ff_dragBox74">&nbsp;</span><div style="" class="ff_div" id="ff_div74"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label74">Name:</div><div style="display: none;" class="ff_break" id="ff_break74"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3Name[]" id="ff_elem74" type="text"></div><div style="" class="ff_div" id="ff_div75"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel124d190f717663625ba09ec77bdd06ed">Position:</div><div style="display: none;" class="ff_break" id="ff_break75"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3Pos[]" id="ff_elem75" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem76"><span class="ff_dragBox" id="ff_dragBox76">&nbsp;</span><div style="" class="ff_div" id="ff_div76"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label76">T3 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break76"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3SemNr1[]" id="ff_elem76" type="text"></div><div style="" class="ff_div" id="ff_div78"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel3a488dd05e43f0a5bc1c49bea9c3a1cc">T3 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break78"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3SemNr2[]" id="ff_elem78" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem77"><span class="ff_dragBox" id="ff_dragBox77">&nbsp;</span><div style="" class="ff_div" id="ff_div77"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label77">T3 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break77"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3SemNr3[]" id="ff_elem77" type="text"></div><div style="" class="ff_div" id="ff_div79"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel74b3911e451e0b2472dcc6596d5618d8">T3 Sem. Nr.:</div><div style="display: none;" class="ff_break" id="ff_break79"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_T3SemNr4[]" id="ff_elem79" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem80"><span class="ff_dragBox" id="ff_dragBox80">&nbsp;</span><div style="" class="ff_div" id="ff_div80"><div style="width: 560px; position: relative; top: 0px; left: 0px; padding: 0px; margin: 2px; height: 70px;" class="ff_elem" id="ff_elem80"><p><strong>Bei gleichzeitiger Buchung von Tagung und Fachseminaren Nachlass auf Anfrage.</strong></p>
+<p><strong>Anschrift des/r Rechnungsempfänger(s)/in</strong></p></div></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem81"><span class="ff_dragBox" id="ff_dragBox81">&nbsp;</span><div style="" class="ff_div" id="ff_div81"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label81">Firma/Institut:</div><div style="display: none;" class="ff_break" id="ff_break81"></div><input value="" style="width: 475px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_FirmaInstitut[]" id="ff_elem81" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem82"><span class="ff_dragBox" id="ff_dragBox82">&nbsp;</span><div style="" class="ff_div" id="ff_div82"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label82">Ansprechpartner:</div><div style="display: none;" class="ff_break" id="ff_break82"></div><input value="" style="width: 475px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_Ansprechpartner[]" id="ff_elem82" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem83"><span class="ff_dragBox" id="ff_dragBox83">&nbsp;</span><div style="" class="ff_div" id="ff_div83"><div tabindex="0" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label83">Straße:</div><div style="display: none;" class="ff_break" id="ff_break83"></div><input value="" style="width: 475px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_Strasse[]" id="ff_elem83" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem84"><span class="ff_dragBox" id="ff_dragBox84">&nbsp;</span><div style="" class="ff_div" id="ff_div84"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_label84">PLZ:</div><div style="display: none;" class="ff_break" id="ff_break84"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_PLZ[]" id="ff_elem84" type="text"></div><div style="" class="ff_div" id="ff_div86"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabel75458e029c00a931a7790f73db9c70eb">Ort:</div><div style="display: none;" class="ff_break" id="ff_break86"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_Ort[]" id="ff_elem86" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem85"><span class="ff_dragBox" id="ff_dragBox85">&nbsp;</span><div style="" class="ff_div" id="ff_div85"><div tabindex="0" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px; top: 0px; left: 0px;" class="ff_label" id="ff_label85">Tel.:</div><div style="display: none;" class="ff_break" id="ff_break85"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_Tel[]" id="ff_elem85" type="text"></div><div style="" class="ff_div" id="ff_div87"><div tabindex="-1" style="vertical-align: top; width: 110px; height: 12px; float: left; position: relative; padding: 0px; margin: 2px;" class="ff_label" id="ff_elemLabeld3cd4f07d171ea23fe86b3140d2dcaf9">E-Mail:</div><div style="display: none;" class="ff_break" id="ff_break87"></div><input value="" style="width: 170px; height: 14px; position: static; margin: 2px; display: block; padding: 0px;" class="ff_elem" name="ff_nm_EMail[]" id="ff_elem87" type="text"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem89"><span class="ff_dragBox" id="ff_dragBox89">&nbsp;</span><div style="" class="ff_div" id="ff_div89"><div tabindex="0" style="vertical-align: top; width: 572px; float: left; position: relative; top: 0px; left: 0px; padding: 0px; margin: 2px; height: 40px;" class="ff_label" id="ff_label89"><strong>Die Teilnahmebedingungen erkenne/n ich/wir an und werde/n die Gebühr nach Erhalt der Rechnung bei Fälligkeit überweisen</strong></div><div style="display: none;" class="ff_break" id="ff_break89"></div><input value="cb" style="position: static; margin: 2px; display: block; height: 14px; width: 17px; padding: 0px;" class="ff_elem" name="ff_nm_Teilnahmebedingungen[]" id="ff_elem89" type="checkbox"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem89"><span class="ff_dragBox" id="ff_dragBox89">&nbsp;</span><div style="" class="ff_div" id="ff_div89"><div tabindex="0" style="vertical-align: top; width: 572px; float: left; position: relative; top: 0px; left: 0px; padding: 0px; margin: 2px; height: 18px;" class="ff_label" id="ff_label89"><strong>Ja, ich möchte zukünftig per E-Mail über Veranstaltungen informiert werden.</strong></div><div style="display: none;" class="ff_break" id="ff_break89"></div><input value="cb" style="position: static; margin: 2px; display: block; height: 14px; width: 17px; padding: 0px;" class="ff_elem" name="ff_nm_Newsletter[]" id="ff_elem89" type="checkbox"></div><div style="clear: both;" class="ff_appender"></div></li><li class="ff_listItem" id="ff_listItem91"><span class="ff_dragBox" id="ff_dragBox91">&nbsp;</span><div style="" class="ff_div" id="ff_div91"><div tabindex="0" style="vertical-align: top; width: 220px; height: 12px; float: left; position: relative; top: 0px; left: 0px;" class="ff_label" id="ff_label91"></div><div style="display: none;" class="ff_break" id="ff_break91"></div><input onclick="ff_validate_submit(this,'click');" style="padding: 0px; width: 176px; height: 26px; position: static; margin: 0px; display: block;" class="ff_elem" name="ff_nm_da5cd1415e05a6dd681041df06f53e2e[]" id="ff_elem91" type="submit"></div><div style="clear: both;" class="ff_appender"></div></li></ul><input value="true" class="mailbackSender" name="mailbackSender[EMail]" id="mailbackSender_EMail" type="hidden"><script type="text/javascript">
+                              <!--
+				if(document.getElementById("bfPage1"))document.getElementById("bfPage1").style.display = "none";;
+				if(document.getElementById("bfPage1"))document.getElementById("bfPage1").style.display = "";
+                              //-->
+                              </script>
+<input type="hidden" name="ff_contentid" value="23"/>
+<input type="hidden" name="ff_applic" value=""/>
+<input type="hidden" name="ff_record_id" value=""/>
+<input type="hidden" name="ff_module_id" value="0"/>
+<input type="hidden" name="ff_form" value="4"/>
+<input type="hidden" name="ff_task" value="submit"/>
+<input type="hidden" name="ff_target" value="2"/>
+<input type="hidden" name="ff_align" value=""/>
+<input type="hidden" name="option" value="com_content"/>
+<input type="hidden" name="Itemid" value="154"/>
+<input type="hidden" name="id" value="23"/>
+</form>
+</div></div></div><div class="bfPage-bl"><div class="bfPage-br"><div class="bfPage-b"></div></div></div></div><!-- form end -->
+</div>
+</p>	</div>
+
+	
+							</div>
+
+			</article>
+		</div>
+	</div>	 
+	<footer>
+    	<p><a href="http://57246232.swh.strato-hosting.eu/cms/index.php/kontakt/impressum">Impressum</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="http://57246232.swh.strato-hosting.eu/cms/index.php/kontakt/datenschutz">Datenschutz</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&copy;&nbsp;2017 isgos</p>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:ajax="http://xml.urban-media-berlin.de/namespaces/ajax" xmlns="http://www.w3.org/1999/xhtml" itemscope="itemscope" itemtype="http://schema.org/WebPage" class="no-js" xml:lang="de"><head><link rel="alternate" href="http://app.wiwo.de/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/14479212.html" media="mobile"></link><script type="text/javascript">var mobileSwitchHandler = {
+  url: null,
+  ready: false,
+  init: function (a) {
+    'use strict';
+    var qs;
+    if((qs = document.querySelector('link[media="mobile"][rel="alternate"][href]')) !== null) {
+      this.url = qs.getAttribute('href');
+    }
+
+    if(this.url === null) {
+      return false;
+    }
+
+    var getQueryParameter = function (name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+        results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    if (getQueryParameter('home_teaser') !== '') {
+      return false;
+    }
+
+    if (getQueryParameter('mobile') === 'false') {
+      this.setMobileCookie(false);
+      return false;
+    }
+
+    try {
+      if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)) {
+        if (this.url !== null) {
+          if (document.cookie.indexOf('show_mobile=true') === -1 && document.cookie.indexOf('show_desktop=true') === -1) {
+            this.goMobile();
+          } else {
+            if (document.cookie.indexOf('show_desktop=true') === -1) {
+              this.goMobile();
+            } else {
+              this.showBackToMobileLayer();
+            }
+          }
+        }
+      }
+    } catch (e) {
+      console.log('error: ' + e);
+    }
+  },
+  goMobile: function () {
+    'use strict';
+    this.setMobileCookie(true);
+   // HBO-1037 If search query available from Google and mobileswitch, do not forget to take over search param
+   // Example: http://www.handelsblatt.com/suche/?sw=test --> http://app.handelsblatt.com/suche/?sw=test&mwl=ok
+   //
+   // if (location.search.indexOf('?sw=') > -1){
+   //    window.location.replace(this.url + location.search + '&mwl=ok');
+   //  } else {
+   //    window.location.replace(this.url + ((this.url.indexOf('?') === -1) ? '?' : '&') + 'mwl=ok' + ((location.search !== '') ? '_' + encodeURIComponent(location.search.substr(1)) : ''));
+   //  }
+    window.location.replace(this.url + location.search);
+  },
+  setMobileCookie: function (e) {
+    var setCookieName = (e) ? 'show_mobile' : 'show_desktop';
+    var removeCookieName = (e) ? 'show_desktop' : 'show_mobile';
+
+    // Return if no cookie not changed
+    if (document.cookie.indexOf(setCookieName + '=true') !== -1) {
+      return;
+    }
+
+    // Cookie Domain
+    var _c_domain = window.location.host.split('.');
+    if (_c_domain.length !== 1) {
+      _c_domain.shift();
+      _c_domain = '.' + _c_domain.join('.');
+    } else {
+      _c_domain = false;
+    }
+
+    // Remove old Cookie
+    document.cookie = removeCookieName + "=;expires=" + new Date('1970/01/01').toString() + ";" + ((_c_domain) ? "domain=" + _c_domain + ';' : '') + "path=/;";
+
+    // Cookie Time
+    var _c_date = new Date();
+    _c_date.setMonth(_c_date.getMonth() + 1);
+
+    // Set Cookie
+    document.cookie = setCookieName + "=true" + ";expires=" + _c_date + ";" + ((_c_domain) ? "domain=" + _c_domain + ';' : '') + "path=/;";
+  },
+  showBackToMobileLayer: function () {
+    var d = document.createElement('div');
+    d.className = 'vhb-back-to-mobile';
+    d.innerHTML = '<div class="vhb-stage"><div>Zur mobilen Ansicht wechseln</div></div>';
+    d.onclick = function () {
+      //COR-264 changed this -> mobileSwitchHandler && r .> mobileSwitchHandler.url
+      mobileSwitchHandler.setMobileCookie(true);
+      window.location.replace(mobileSwitchHandler.url + ((mobileSwitchHandler.url.indexOf('?') === -1) ? '?' : '&') + 'mwl=button-rueckverlinkung');
+    };
+    var insertIv = window.setInterval(function () {
+      if(document.body !== null) {
+        clearInterval(insertIv);
+        document.body.insertBefore(d, document.body.firstChild);
+      }
+    }, 500);
+
+  },
+};
+
+mobileSwitchHandler.init(navigator.userAgent || navigator.vendor || window.opera);
+</script><script type="text/javascript" src="/preparesite/empty.js?elementId=14479212&#38;rand=804&#38;uri=%2Fhcf-webapp%2Fservlet%2Ferfolg%2Fjobsuche%2Fbewerbungsprozess-warum-dauert-das-denn-so-lange%2F14479212.html"></script><title>Bewerbungsprozess: Warum dauert das denn so lange? </title><meta content="" name="page-topic"/><meta content="Bis sich Unternehmen für einen Bewerber entschieden haben, vergeht immer häufiger viel Zeit. Die Personaler wollen sich beim Kandidaten sicher sein und testen, testen, testen. Das Problem: Dadurch springen Bewerber ab." name="description"/><meta content="Bewerbung,Personalwesen,Studie,Karriere,Personalrekrutierung,Robert Half,Hay Group" name="keywords"/><meta content="Bewerbung, Personalwesen, Studie, Karriere, Personalrekrutierung, Robert Half, Hay Group" name="news_keywords"/><meta name="robots" content="index,follow,noarchive"><link href="http://www.wiwo.de/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/14479212.html" rel="canonical"/><link href="/images/jobsuche/12692892/2-format7.jpg" rel="image_src"/><meta content="Bewerbungsprozess: Warum dauert das denn so lange?" name="og:title"/><meta content="Article" name="og:type"/><meta content="http://www.wiwo.de/images/jobsuche/12692892/2-format2101.jpg" name="og:image"/><meta content="http://www.wiwo.de/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/14479212.html" name="og:url"/><meta content="Bis sich Unternehmen für einen Bewerber entschieden haben, vergeht immer häufiger viel Zeit. Die Personaler wollen sich beim Kandidaten sicher sein und testen, testen, testen. Das Problem: Dadurch springen Bewerber ab." name="og:description"/><script>var taboola = {article: 'auto'};</script><meta content="de-DE" http-equiv="Content-Language"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="text/css" http-equiv="Content-Style-Type"/><meta content="text/javascript" http-equiv="Content-Script-Type"/><meta content="93810620818" property="fb:pages"/><link href="/images/favicon/4516376/6-formatOriginal.ico" rel="apple-touch-icon-precomposed"/><link href="/images/favicon/4516376/6-formatOriginal.ico" rel="SHORTCUT ICON"/><link rel="alternate" type="application/rss+xml" title="RSS-Feed" href="http://www.wiwo.de/contentexport/feed/rss/schlagzeilen"/><meta content="{&quot;webtrekk&quot;:{&quot;contentId&quot;:&quot;erfolg.jobsuche.Warum dauert das denn so lange?.14479212.Article&quot;,&quot;contentGroup&quot;:{&quot;1&quot;:&quot;erfolg&quot;,&quot;2&quot;:&quot;jobsuche&quot;,&quot;3&quot;:&quot;&quot;,&quot;4&quot;:&quot;&quot;,&quot;5&quot;:&quot;14479212.Bewerbungsprozess.Warum dauert das denn so lange?&quot;,&quot;6&quot;:&quot;14479212&quot;},&quot;customParameter&quot;:{&quot;1&quot;:&quot;Article&quot;,&quot;2&quot;:&quot;Article.ImageGallery.ShortTextGallery.ShortTextGallery.1&quot;,&quot;3&quot;:&quot;WirtschaftsWoche&quot;,&quot;4&quot;:&quot;Bewerbung.Personalwesen.Studie.Karriere.Personalrekrutierung.Robert Half.Hay Group&quot;,&quot;6&quot;:&quot;16.08.31&quot;,&quot;33&quot;:&quot;FREE&quot;,&quot;34&quot;:&quot;&quot;},&quot;media&quot;:{&quot;1&quot;:&quot;&quot;,&quot;2&quot;:&quot;&quot;},&quot;customClickParameter&quot;:{&quot;2&quot;:&quot;&quot;},&quot;heatmap&quot;:0,&quot;trackId&quot;:&quot;496847069983158&quot;,&quot;trackDomain&quot;:&quot;handelsblatt01.webtrekk.net&quot;,&quot;domain&quot;:&quot;REGEXP:^([a-zA-Z0-9\\-\\.])*?wiwo([a-zA-Z0-9\\-])*?\\.(com|de|net|org|biz)$&quot;,&quot;active&quot;:true},&quot;audioPlayer&quot;:{&quot;player&quot;:&quot;/audioplayer-swf/4516420.html&quot;},&quot;flowplayer&quot;:{&quot;player&quot;:&quot;/flowplayer-swf/4516474.html&quot;},&quot;swfobj&quot;:{&quot;install&quot;:&quot;/flashplayer-swf/4516434.html&quot;}}" http-equiv="Config"/><link href="/css/11677214/4/vendor.css" rel="stylesheet" type="text/css"/><link href="/css/9775930/246/styles.css" id="maincss" rel="stylesheet" type="text/css"/><link href="/css/11677216/3/vwd.css" media="all" rel="stylesheet" type="text/css"/><link href="/css/12614350/19/experiments.css" rel="stylesheet" type="text/css"/><!--[if IE 6]>
+	                   <link href="/css/9778298/3/ie6.css" id="ie6css" rel="stylesheet" type="text/css"/>
+	                   <![endif]-->
+	               <!--[if IE 7]>
+	                   <link href="/css/9778300/3/ie7.css" id="ie7css" rel="stylesheet" type="text/css"/>
+	                   <![endif]-->
+	               <!--[if IE 8]>
+	                   <link href="/css/9778302/3/ie8.css" id="ie8css" rel="stylesheet" type="text/css"/>
+	                   <![endif]-->
+	               <!--[if IE 9]>
+	                   <link href="/css/9778304/3/ie9.css" id="ie9css" rel="stylesheet" type="text/css"/>
+	                   <![endif]-->
+	               <link href="/css/9778306/2/standard.css" rel="stylesheet" type="text/css"/><link href="/css/8303044/7/standard.css" rel="stylesheet" type="text/css"/><script type="text/javascript">var GLOBAL = {
+  ABWT: false,
+  WTTD: 'wtk.service.vhb.de',
+  NOIVW: ['footerhp=scroll'], 
+  JOB: 'http://www.vhb.de/karriereportal?yid=435',
+  JSL: {
+    TBL: '//dienste.vhb.de/common/vhb-datatables/0.1.0/vhb.datatables.js'
+  },
+  CSSL: {
+    TBL: '//dienste.vhb.de/common/vhb-datatables/0.1.0/vhb.datatables.dt.css'
+  }, 
+  CS: {
+    URI: '//dienste.vhb.de/collector/collector.php',
+    LV: false,
+    ERR: false
+  }  
+};
+
+var EXPERIMENTS = [
+  false, //Paywall Layer
+  true, //Eigenwerbung 
+  false //chatbot
+];</script><script src="/js/13876838/2/webtrekk_optimizely.min.js" type="text/javascript"></script><script src="/js/9778308/4/jquery.js" type="text/javascript"></script><script src="//cdn.optimizely.com/js/571703138.js" type="text/javascript"></script><script src="/js/9778316/2/mpathy.js" type="text/javascript"></script><script src="/js/9778320/2/standard.js" type="text/javascript"></script><script src="//script.ioam.de/iam.js" type="text/javascript"></script><script type="text/javascript">	var _vrq = _vrq || [];
+	_vrq.push(['id', 575]);
+	_vrq.push(['automate', true]);
+	_vrq.push(['track', function(){}]);
+	(function(d, a){
+		var s = d.createElement(a),
+		x = d.getElementsByTagName(a)[0];
+		s.async = true;
+		s.src = 'http://a.visualrevenue.com/vrs.js';
+		x.parentNode.insertBefore(s, x);
+	})(document, 'script');</script><script type="text/javascript">  window._taboola = window._taboola || [];
+  _taboola.push(taboola);
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/vhb-wirtschaftswoche/loader.js',
+  'tb_loader_script');</script><script src="/js/19392048/9/playbuzz.js" type="text/javascript"></script><meta content="summary_large_image" name="twitter:card"/><meta content="@wiwo_de" name="twitter:site"/><meta content="Warum dauert das denn so lange?" name="twitter:title"/><meta content="Bis sich Unternehmen für einen Bewerber entschieden haben, vergeht immer häufiger viel Zeit. Die Personaler wollen sich beim Kandidaten sicher sein und testen, testen, testen. Das Problem: Dadurch springen Bewerber ab." name="twitter:description"/><meta content="http://www.wiwo.de/images/jobsuche/12692892/2-format2403.jpg" name="twitter:image"/><script src="/js/12928046/70/iqadcontroller.js" type="text/javascript"></script>
+						
+<script type="text/javascript"> 
+	if (typeof AdController !== 'undefined') {
+		var pubCmsObject = {
+			$handle : "artikel",
+			$autoSizeFrames: true,
+			level2: "erfolg",
+			level3: "jobsuche",
+			level4: "",
+			keywords :"iqwiwo,erfolg,jobsuche,US7703231032",
+			tma:"Bewerbung"
+		};
+
+
+		AdController.setPageInfo(pubCmsObject);		
+	        try{
+        	   AdController.stage();
+	        } catch (e){}
+	}
+</script>
+
+<script type="text/javascript">
+
+	if (typeof AdController !== 'undefined') { 
+	        AdController.initialize();
+	}
+</script>
+
+    <script type="text/javascript">
+	if(typeof AdController==='undefined') {
+  if(typeof hcf_userconfig === 'undefined') {
+    location.href = '/impressum/nutzungshinweise/blocker/' + '?ubm&callback=' + encodeURIComponent(location.pathname);
+  } else if(hcf_userconfig.cgi_adb_redirect_url && typeof hcf_userconfig.cgi_adb_granting_product === 'undefined') {
+    location.href = decodeURIComponent(hcf_userconfig.cgi_adb_redirect_url) + '?callback=' + encodeURIComponent(location.pathname);
+  }
+}
+    </script>
+</head><body id="wwo"><div id="ivw"><!-- SZM VERSION="2.0" -->
+<script type="text/javascript">
+var iam_data = { "st":"wirtwoch", "cp":"erf_job_80", "oc":"erf_job_80", "mg":"yes", "sv":"in" };
+(function(){
+  var enableIVW = true;
+  if (typeof GLOBAL === 'object'){
+    if (GLOBAL.NOIVW){
+      if (GLOBAL.NOIVW.length){
+        for (var i = 0; i < GLOBAL.NOIVW.length; i += 1){
+          if (enableIVW && window.location.href.indexOf(GLOBAL.NOIVW[i]) > -1){
+            enableIVW = false;
+          }
+        }
+      }
+    }
+  }
+
+  if (enableIVW){
+    iom.c(iam_data);
+  }
+})();
+</script>
+<!--/SZM --></div><script type="text/javascript">if(typeof mobileSwitch === 'function') {
+  mobileSwitch(navigator.userAgent || navigator.vendor || window.opera);
+}</script><style media="screen" type="text/css">
+        #hcf-header:before {
+            display: none;
+        }
+
+        #hcf-header {
+            height: auto;
+        }
+
+        #hcf-header, .hcf-mainsearch, #hcf-nav, #hcf-header, .hcf-top-wrapper {
+            display: block;
+        }
+    </style><div id="hcf-wrapper"><div id="hcf-ad-wrapper"><div id="iqadtileOOP" > 
+	<script type="text/javascript"> 
+		if(typeof AdController !== "undefined" && typeof AdController._siteConfig !== "undefined" && AdController._siteConfig._adapterName !== "dfp5" ){ 
+			AdController.render("iqadtileOOP"); 
+		} 
+	</script> 
+</div><div class="hcf-ad-superbanner-print ajaxify" data:command="checkAds" data:param="" ><div id="iqadtile16">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile16", "iqadtile16");
+		}	
+	</script>
+</div></div><div class="hcf-ad-superbanner ajaxify" data:command="checkAds" data:param="" ><div id="iqadtile1">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile1", "iqadtile1");
+		}	
+	</script>
+</div></div><div class="hcf-ad-skyscraper ajaxify" data:command="checkAds" data:param="" ><!--size = "120x600,160x600,200x600"-->
+<div id="iqadtile2">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile2", "iqadtile2");
+		}	
+	</script>
+</div></div></div><div id="hcf-stage"><div class=" ajaxify" data:command="stickyHeader" data:param="" id='hcf-header' ><div class="hcf-top-wrapper"><span class="hcf-date">Dienstag, 10. Oktober 2017</span>
+
+<div class="hcf-header-socials v2">
+ <ul>
+ <li>
+ <a target="_blank" href="https://www.facebook.com/Wirtschaftswoche/" class="hcf-social-link shcf-fb">Facebook</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://twitter.com/wiwo" class="hcf-social-link hcf-tw">Twitter</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://plus.google.com/103558740680527058586" class="hcf-social-link hcf-gp">Gplus</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.xing.com/news/pages/wirtschaftswoche-156" class="hcf-social-link hcf-xi">Xing</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.linkedin.com/company/984883" class="hcf-social-link hcf-li">LinkedIn</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.instagram.com/_wirtschaftswoche/?ref=badge" class="hcf-social-link hcf-ig">Instagram</a>
+ </li>
+ </ul>
+</div>
+
+<div class="hcf-services-nav ajaxify" data:command="showMenu">
+ <ul class="hcf-level-1 hcf-root">
+
+
+ <li class="hcf-has-subs hcf-first"><a href="#">Service</a>
+
+ <div class="hcf-sub-menu">
+ <a class="hcf-close" href="#">Schließen</a>
+ <ul class="hcf-level-2">
+ <li class="hcf-first hcf-odd">
+ <a href="https://angebot.wiwo.de" target="_blank">Abo-Service</a>
+ <ul class="hcf-level-3">
+ <li class="hcf-first"><a href="https://angebot.wiwo.de/abonnements/print-angebote/10-wochen-test/bestellformular.html?aboart=MA&na=1200" target="_blank">Miniabo</a></li>
+ <li><a href="https://angebot.wiwo.de/abonnements/print-angebote/jahresabo/bestellformular.html" target="_blank">Jahresabo</a></li>
+ <li><a href="https://angebot.wiwo.de/studenten-abo/print-angebote.html" target="_blank">Studentenabo</a></li>
+
+ <li><a href="https://angebot.wiwo.de/abonnements/print-angebote/leser-werben/bestellformular.html" target="_blank">Leser werben Leser</a></li>
+ </ul>
+ </li>
+ <li class="hcf-even">
+ <a class="hcf-main" href="http://www.wiwo-shop.de/aktuelles/redaktionelles/downloads/496/" target="_blank">Premium-Service</a>
+ <ul class="hcf-level-3">
+ <li class="hcf-first"><a href="http://emagazin.wiwo.de" target="_blank">eMagazin</a></li>
+ <li><a href="https://archiv.wiwo.de" target="_blank">WirtschaftsWoche Archiv</a></li>
+ 
+ </ul>
+ </li>
+
+ <li class="hcf-even">
+ <a class="hcf-main" href="http://club.wiwo.de" target="_blank">WirtschaftsWoche Club</a>
+ </li>
+ <li class="hcf-rule"></li>
+ <li class="hcf-odd"><a href="/veranstaltungen/">Veranstaltungen</a></li>
+
+ <li class="hcf-even"><a href="https://kaufhaus.handelsblatt.com/" target="_blank">Shop</a></li>
+ <li class="hcf-rule"></li>
+ <li class="hcf-odd"><a href="http://www.wiwo.de/meine-wirtschaftswoche/newsletter/">Newsletter</a></li>
+ <li class="hcf-even"><a href="/rss-feeds/">RSS-Feeds</a></li>
+ <li class="hcf-rule"></li>
+ <li class="hcf-odd"><a href="/erfolg/tools/jobturbo/">Jobs</a></li>
+ <li class="hcf-even"><a href="http://app.wiwo.de/" target="_blank">Mobil</a></li>
+ <li class="hcf-rule"></li>
+ </ul>
+ </div>
+ </li>
+
+
+ <li><a href="https://angebot.wiwo.de" target="_blank">Abo</a></li>
+
+
+ <li><a href="https://kaufhaus.handelsblatt.com/" target="_blank">Shop</a></li>
+ <li><a href="http://www.wiwo.de/meine-wirtschaftswoche/newsletter/">Newsletter</a></li>
+ </ul>
+</div><div class=" ajaxify" data:command="loadDynamically" data:param="/ajaxentry/nocache/mininavi" data-nocache='/ajaxentry/nocache/mininavi' data-cache='/ajaxentry/cache/cacheablemininavi' ></div><div class="hcf-mainsearch ajaxify" data:command="toggleLabel" data:param=".hcf-input-wrapper" id='hcf-mainsearch' ><form action="/suche/" method="post" id="globalsearch" name="globalsearch" accept-charset="UTF-8" novalidate="novalidate"><div class="hcf-input-wrapper"><label>Suchbegriff, WKN, ISIN</label><input autocomplete="off" name="sw" id="search-phrase" class="hcf-searchtext" value="" type="text"/><input type="submit" class="hcf-submit" name="submit" value=""/></div></form></div></div><a href="/" title="Die WirtschaftsWoche" class="hcf-logo-link" target="_self"></a><div id="hcf-nav"><ul class="hcf-level-1 hcf-root ajaxify ajaxify" data:command="ressortPreview" data:param="" ><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515950" class="hcf-first hcf-has-subs"><a href="/" title="Die WirtschaftsWoche" class="hcf-home-link" target="_self">Startseite</a></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515304" class="hcf-has-subs"><a href="/unternehmen/" title="Unternehmen" class="hcf-level-1-link " target="_self">Unternehmen</a></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515282" class="hcf-has-subs"><a href="/finanzen/" title="Finanzen" class="hcf-level-1-link " target="_self">Finanzen</a></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515268" class="hcf-has-subs"><a href="/politik/" title="Politik" class="hcf-level-1-link " target="_self">Politik</a></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515700" class="hcf-has-subs"><a href="/erfolg/" title="Erfolg" class="hcf-level-1-link  hcf-active" target="_self">Erfolg</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/erfolg/trends/" title="Trends" target="_self">Trends</a></li><li><a href="/erfolg/management/" title="Management" target="_self">Management</a></li><li><a href="/erfolg/gruender/" title="Gründer" target="_self">Gründer</a><ul class="hcf-level-3"><li class="hcf-first "><a href="http://gruender.wiwo.de" title="gruender.wiwo.de" target="_self">gruender.wiwo.de</a></li></ul></li><li><a href="/erfolg/beruf/" title="Beruf" target="_self">Beruf</a></li><li class=" hcf-active"><a href="/erfolg/jobsuche/" title="Jobsuche" target="_self">Jobsuche</a></li><li><a href="/erfolg/campus-mba/" title="Campus &#38; MBA" target="_self">Campus &amp; MBA</a></li><li><a href="http://www.karriere.de" title="Karriere" target="_blank">Karriere</a></li><li><a href="/erfolg/tools/jobturbo/" title="Jobturbo" target="_self">Jobturbo</a></li></ul></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=20050966" class="hcf-has-subs"><a href="/lifestyle/" title="Lifestyle" class="hcf-level-1-link " target="_self">Lifestyle</a></li><li data-src="/ajaxentry/cache/ressortpreview?naviId=4515668" class="hcf-has-subs"><a href="/technologie/" title="Technologie" class="hcf-level-1-link " target="_self">Technologie</a></li></ul></div></div><div class="hcf-vwd-holder"><iframe class="hcf-vwd-iframe-flat" scrolling="no" src="http://boerse.wiwo.de/include_marktuebersicht.htn?iframe=1&amp;style=new2014" frameborder="0">&nbsp;</iframe></div><div class="vhb-breadcrumb"><ul itemscope="" itemtype="http://schema.org/BreadcrumbList" itemprop="breadcrumb"><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/"><span itemprop="name"> Die WirtschaftsWoche </span></a><meta content="1" itemprop="position"/></li><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/erfolg/"><span itemprop="name"> Erfolg </span></a><meta content="2" itemprop="position"/></li><li itemscope="" itemtype="http://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/erfolg/jobsuche/"><span itemprop="name"> Jobsuche </span></a><meta content="3" itemprop="position"/></li></ul><h1 itemprop="headline" id="headlineRH"> Bewerbungsprozess: Warum dauert das denn so lange?</h1></div><div class=" ajaxify" data:command="getComments" data:param="{&#34;url&#34;:&#34;/ajaxentry/cache/numberofcomments?commentRootId=14479212&#34;,&#34;key&#34;:&#34;cid&#34;,&#34;className&#34;:&#34;showCommentNumbers&#34;,&#34;idPrefix&#34;:&#34;commentDiv_&#34;}" id='hcf-content-wrapper' ><div class="hcf-media-wrapper"><div class="vhb-center-iq">
+        <div class="hcf-ad-rectangle" style="background:transparent; text-align:left;">
+                <!--size = "930x200,940x250,800x250"-->
+                <div id="iqadtile3">
+	                <script>
+		                if(typeof AdController!=='undefined'){
+			                AdController.render("iqadtile3", "iqadtile3");
+		                }	
+		        </script>
+		</div>
+	</div>
+</div></div><div class="hcf-colset1 hcf-thema"><div class="hcf-column hcf-column1 hcf-main-col"><div class="hcf-content"><section><div class="hcf-thema-header"><div class="hcf-thema-header-inner"><div class="hcf-thema-label hcf-thema-right"><span class="hcf-thema-overline">Thema</span><span class="hcf-colon">:&nbsp;</span><a href="/themen/bewerbung" title="Thema: Bewerbung" class="hcf-goto-thema"><span class="hcf-thema-name">Bewerbung</span></a></div></div></div><div itemscope="" itemtype="https://schema.org/NewsArticle" itemprop="mainEntityOfPage" class="hcf-detail hcf-article hcf-clearfix"><meta itemid="http://www.wiwo.de/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/14479212.html" itemscope="" itemType="https://schema.org/WebPage" itemprop="mainEntityOfPage"/><span itemscope="" itemtype="https://schema.org/Organization" itemprop="publisher"><span itemscope="" itemtype="https://schema.org/ImageObject" itemprop="logo"><meta content="http://www.wirtschaftswoche.de/images/wiwo-logo-main/901378/1-formatOriginal.png" itemprop="url"/><meta content="600" itemprop="width"/><meta content="60" itemprop="height"/></span><meta content="Wirtschaftswoche" itemprop="name"/></span><article><div class="hcf-article-header"><div class="hcf-hidden"><img alt="" height="1" width="1" src="http://handelsblatt.met.vgwort.de/na/aa9ffeca08a24813aa06f5ad3506f946"/></div><h2><em class="hcf-overline">Bewerbungsprozess</em><span class="hcf-colon">: </span><span itemprop="headline" class="hcf-headline">Warum dauert das denn so lange?</span></h2><div class="hcf-time-data"><span content="2016-08-31T13:08:25+0200" itemprop="datePublished">31. August 2016<meta content="2016-08-31T13:08:25+0200" itemprop="dateModified"/></span></div></div><div class="hcf-content-wrapper"><div class="hcf-article-text"><div class="hcf-smartbox hcf-full"><div itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image" class="hcf-media-wrapper"><a href="/erfolg/management/best-recruiters-2016-diese-unternehmen-machen-bewerber-gluecklich/14448562.html" class="hcf-doctype-name hcf-doctype-imagegallery"><img src="/images/vorlage_triptichon_744-418/14450104/1-format2101.jpg" alt="Best Recruiters 2016: Diese Unternehmen machen Bewerber glücklich" itemprop="url"/><meta content="744" itemprop="width"/><meta content="418" itemprop="height"/><span class="hcf-media">Fotostrecke</span></a><div class="hcf-caption"><a href="/erfolg/management/best-recruiters-2016-diese-unternehmen-machen-bewerber-gluecklich/14448562.html"><span class="hcf-overline">Best Recruiters 2016</span><span class="hcf-colon">: </span><span class="hcf-headline">Diese Unternehmen machen Bewerber glücklich</span></a></div></div></div><div class="hcf-ad-wrapper hcf-ad-rectangle-top"><div class="hcf-ad-rectangle hcf-mcol-box"><div id="iqadtile8">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile8", "iqadtile8");
+		}	
+	</script>
+</div></div></div><p class="hcf-teaser" itemprop="description">Bis sich Unternehmen für einen Bewerber entschieden haben, vergeht immer häufiger viel Zeit. Die Personaler wollen sich beim Kandidaten sicher sein und testen, testen, testen. Das Problem: Dadurch springen Bewerber ab. </p><span itemprop="articleBody"><div><p>Deutsche Unternehmen trödeln bei der Personalauswahl. Von der Ausschreibung einer vakanten Stelle bis zum ersten Arbeitstag des neuen Mitarbeiters vergeht immer mehr Zeit. Bei 54 Prozent der Betriebe hat sich der Einstellungsprozess in den letzten drei Jahren verlängert, bei zehn Prozent dauere es sogar erheblich länger als noch 2013, bis der oder die Richtige gefunden und eingestellt sind. Das zeigt eine Arbeitsmarktstudie des Personaldienstleisters <a href="http://boerse.wiwo.de/include_suchbox.htn?sektion=portrait&amp;suchbegriff=US7703231032" class="hcf-figure ajaxify" data:command="openLayer" data-stats="Cockpit" data:param="/ajaxentry/cache/sparkline?externalUrl=http%3A%2F%2Fboerse.wiwo.de%2Finclude_infobox.htn%3Fsektion%3Dcockpit%26suchbegriff%3DUS7703231032">Robert Half</a>, für die Personaler aus 200 Unternehmen befragt worden sind. Verkürzt hat sich der ganze Prozess demnach nur bei zehn Prozent der deutschen Unternehmen. </p><h3>Personaler wollen Fehlbesetzungen vermeiden</h3><p>Schuld an der Entwicklung ist das Geld. Eine falsche Personalentscheidung ist nämlich richtig teuer. Einer entsprechenden <a href="http://www.hays.de/aktuelles/arbeitsmarkt.cfm?rn" target="_blank">Studie der Unternehmensberatung Hay Group</a> zufolge wird mehr als jede dritte Stelle (37 Prozent) mit einer Person besetzt, die nicht optimal für ihre künftige Aufgabe geeignet ist, was die jeweiligen Unternehmen <a href="http://www.wiwo.de/erfolg/management/personaler-suchen-vergeblich-die-richtigen-fehlbesetzungen-sind-aergerlich-und-teuer/10244450.html">mehr als 6000 Euro pro falschbesetzter Stelle kostet.</a> Rechnet man nicht nur die Recruitingkosten, Einarbeitung, Mitarbeiterausweise &amp; Co. zusammen, die nun zweimal bezahlt werden müssen, sondern auch noch das quasi verschwendete Jahresgehalt, komme man auf einen wirtschaftlichen Schaden von 30.000 bis 700.000 Euro - je nach Position.</p></div><div class="hcf-detail-header-ad hcf-content hcf-stopper"><div class="hcf-ad-wrapper"><span class="hcf-ad-tag">Anzeige</span><div class="hcf-ad-rectangle hcf-mcol-box"><div id="iqadtile4">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile4", "iqadtile4");
+		}	
+	</script>
+</div></div></div></div><div class="hcf-faq hcf-stopper"><h4>So verkürzen Unternehmen die Dauer der Mitarbeitersuche</h4><ul class=" ajaxify" data:command="faq" data:param="" ><li class=""><h5 class="hcf-triangle-right">Ermitteln Sie den richtigen Bedarf</h5><div><p>Ist die Position eine Vollzeitstelle oder benötigen Sie vorübergehende Unterstützung, zum Beispiel durch Zeitarbeitskräfte? Was hindert Sie daran, den passenden Kandidaten jetzt zu rekrutieren?</p><p> </p><p><em>Quelle: Robert Half</em></p></div></li><li class=""><h5 class="hcf-triangle-right">Beziehen Sie alle Entscheider frühzeitig ein</h5><div><p>Legen Sie einen Zeitplan für den Einstellungsprozess fest. Holen Sie sich die Zustimmung aller Entscheider ein, dass die Stellenbesetzung höchste Priorität hat. Blocken Sie Termine für Vorstellungsgespräche. Prüfen Sie die Stellenbeschreibung und das Gehaltsangebot. Definieren Sie, an welchen Punkten Sie kompromissbereit sind. Setzen Sie einen Notfallplan auf, um mögliche Terminverschiebungen abzufangen und bestimmen Sie, wer die finale Entscheidung fällen soll. </p></div></li><li class=""><h5 class="hcf-triangle-right">Laden Sie zum Vorstellungsgespräch ein</h5><div><p>Führen Sie ein erstes Kennenlernen mit den Bewerbern online, etwa über Skype oder FaceTime. Organisieren Sie das Vorstellungsgespräch vor Ort mit allen Entscheidern idealerweise an einem Tag. Holen Sie sich unmittelbar danach die Rückmeldung vom Bewerber und den involvierten Entscheidungsträgern ein, um das gegenseitige Interesse früh zu bestimmen. </p></div></li><li class=""><h5 class="hcf-triangle-right">Halten Sie den Bewerber stets auf dem Laufenden</h5><div><p>Informieren Sie die Kandidaten, wann Sie voraussichtlich die finale Entscheidung treffen werden. Sollte sich der Termin verzögern, rufen Sie die Bewerber an und teilen Sie das neue Entscheidungsdatum mit. Achten Sie in dem Fall genau auf die Reaktion seitens des Bewerbers: Ist diese verhalten, kann das ein Indiz für einen abgesprungenen Kandidaten sein. </p></div></li><li class=""><h5 class="hcf-triangle-right">Unterbreiten Sie das Jobangebot</h5><div><p>Prüfen Sie vor der Endauswahl Referenzen ehemaliger Arbeitgeber. Sobald Sie sich dann für einen Bewerber entschieden haben, teilen Sie ihm das telefonisch mit. Unterbreiten Sie Ihr Angebot inklusive Gehaltspaket, aber bereiten Sie sich darauf vor, das Gehalt und mögliche Zusatzleistungen mit dem Bewerber nachzuverhandeln. Vereinbaren Sie gemeinsam das Eintrittsdatum.</p></div></li></ul></div><div><p>Um das zu verhindern, werden Bewerber endlos auf Herz und Nieren geprüft – beispielsweise durch zusätzliche Vorstellungsrunden. Etwa jedes vierte Unternehmen nennt eine höhere Anzahl an Bewerbungen und zusätzliche Gesprächsrunden (je 24 Prozent) als Grund dafür, dass der Einstellungsprozess immer länger wird. </p></div><div class="hcf-faq hcf-stopper"><h4>In diesen Berufen dauert es überdurchschnittlich lange, Stellen neu zu besetzen</h4><ul class=" ajaxify" data:command="faq" data:param="" ><li class=""><h5 class="hcf-triangle-right">Durchschnitt aller Berufe</h5><div><p>81 Tage.<br/><em>Quelle: Bundesagentur für Arbeit</em></p></div></li><li class=""><h5 class="hcf-triangle-right">Krankenpfleger</h5><div><p>120 Tage</p></div></li><li class=""><h5 class="hcf-triangle-right">Maschinenbauer</h5><div><p>120 Tage</p></div></li><li class=""><h5 class="hcf-triangle-right">Ingenieur Elektrotechnik</h5><div><p>124 Tage</p></div></li><li class=""><h5 class="hcf-triangle-right">Altenpfleger</h5><div><p>129 Tage</p></div></li><li class=""><h5 class="hcf-triangle-right">Ärzte</h5><div><p>167 Tage</p></div></li></ul></div><div><p>Das Problem ist: Die Dauer des Einstellungsprozesses entscheidet nicht nur darüber, ob man wirklich den Top-Bewerber findet, sondern auch darüber, ob die Kandidaten überhaupt am Ball bleiben. Mehr als jeder zweite Arbeitgeber in Deutschland (52 Prozent) hat bereits einen präferierten Bewerber aufgrund der langen Wartezeit bis zur Personalentscheidung verloren. Kein Wunder, sagt Sven Hennige, Senior Managing Director bei Robert Half in Deutschland.</p></div><div id="iq-artikelanker"></div><div><p>"Der Einstellungsprozess spielt eine maßgebliche Rolle. Entsteht beim Bewerber das Gefühl, die eigene <a href="/themen/karriere" target="_self">Karriere</a> würde durch lange Entscheidungsprozesse ausgebremst, kann das zum entscheidenden Nachteil für das einstellende Unternehmen werden."</p></div></span><div class="hcf-ad-wrapper hcf-ad-rectangle-bottom"><div class="hcf-ad-rectangle"><div id="iqadtile9">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile9", "iqadtile9");
+		}	
+	</script>
+</div></div></div><div class="hcf-origin"><a class=" ajaxify" data:command="openLayer" data:param="/ajaxentry/cache/authorinfo?authorId=7414434" href='javascript:void(0);' ><span>ked</span></a></div><div itemscope="" itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating" class="hcf-article-rating-box"><div id="rating14479212" name="rating14479212" class="hcf-rating"><meta content="1.0" itemprop="worstRating"/><meta content="5.0" itemprop="bestRating"/><meta content="0.0" itemprop="ratingValue"/><meta content="0" itemprop="reviewCount"/><div class=" ajaxify" data:command="loadDynamically" data:param="/ajaxentry/nocache/rating?inDocTypeLabel=Artikel&#38;teasableId=14479212&#38;inShowTotal=false" class='ajaxify' ></div></div></div><div class="hcf-keywords"><label class="hcf-label">Schlagworte: </label><ul><li class="hcf-first hcf-keyword"><a href="/themen/Bewerbung" title="Bewerbung" target="_self">Bewerbung</a> </li><li class="hcf-keyword"><a href="/themen/Personalwesen" title="Personalwesen" target="_self">Personalwesen</a> </li><li class="hcf-keyword"><a href="/themen/Studie" title="Studie" target="_self">Studie</a> </li><li class="hcf-keyword"><a href="/themen/Karriere" title="Karriere" target="_self">Karriere</a> </li><li class="hcf-keyword"><a href="/themen/Personalrekrutierung" title="Personalrekrutierung" target="_self">Personalrekrutierung</a> </li><li class="hcf-keyword"><a href="/themen/Robert%20Half" title="Robert Half" target="_self">Robert Half</a> </li><li class="hcf-last hcf-keyword"><a href="/themen/Hay%20Group" title="Hay Group" target="_self">Hay Group</a> </li></ul></div>
+
+<div class="hcf-nutzungsrechtehinweis-box"><a href="/business-content/" class="hcf-nutzungsrechtehinweis-link"><span class="ci-text-color">&copy;</span> Sie wollen unsere Inhalte verwenden? Erwerben Sie hier die Rechte!</a></div></div><div id="hcf-actionbar-wrapper"><div class="hcf-actionbar ajaxify" data:command="stickySocialBar" data:param="" data-title='null' ><div class="hcf-action-rating"><div id="rating14479212" name="rating14479212" class="hcf-rating"><div class=" ajaxify" data:command="loadDynamically" data:param="/ajaxentry/nocache/rating?inDocTypeLabel=Artikel&#38;teasableId=14479212&#38;inShowTotal=false" ></div></div></div><div class="hcf-action-share"><ul class="hcf-action-share-list"><li class="hcf-first"><a data-track="asd_facebook" data-share-url="http://www.wiwo.de/14479212.html" data-param="facebook" data-methods="POST" data-command="socialshare track" title="Artikel auf Facebook teilen" data-count="/ajaxentry/nocache/socialinc?elementId=14479212&action=inc&service=facebook" class="ajaxify2 hcf-medium-facebook hcf-social-link v2"></a></li><li><a data-track="asd_googleplus" data-share-url="http://www.wiwo.de/14479212.html" data-param="googleplus" data-methods="POST" data-command="socialshare track" title="Artikel auf Google+ teilen" data-count="/ajaxentry/nocache/socialinc?elementId=14479212&action=inc&service=googleplus" class="ajaxify2 hcf-medium-google hcf-social-link v2"></a></li><li><a data-track="asd_twitter" data-share-text="Bewerbungsprozess: Warum dauert das denn so lange?" data-share-url="http://www.wiwo.de/14479212.html" data-param="twitter" data-methods="POST" data-command="socialshare track" title="Artikel auf Twitter teilen" data-count="/ajaxentry/nocache/socialinc?elementId=14479212&action=inc&service=twitter" class="ajaxify2 hcf-medium-twitter hcf-social-link v2"></a></li><li class="hcf-last"><a data-track="asd_xing" data-share-url="http://www.wiwo.de/14479212.html" data-param="xing" data-methods="POST" data-command="socialshare track" title="Artikel auf Xing teilen" data-count="/ajaxentry/nocache/socialinc?elementId=14479212&action=inc&service=xing" class="ajaxify2 hcf-medium-xing hcf-social-link v2"></a></li></ul></div><div class="hcf-action-user-bar"><ul class="hcf-action-user-list"><li class=" ajaxify" data:command="openLayer" data:methods="POST,GET" data:param="/ajaxentry/nocache/sendarticle?showOnlyForm=true&#38;teasableId=14479212&#38;docType=Artikel&#38;subjectPostfix=+-+WirtschaftsWoche+Online" ><a class="hcf-action-link hcf-mail ajaxify" data:command="tooltip" data:param="" data-content='Versenden Sie den Link zu diesem Artikel per E-Mail.' href='javascript:void(0);' >Versenden</a></li><li class=" ajaxify" data:command="articleToolPrint" data:param="/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/v_detail_tab_print/14479212.html" ><a class="hcf-action-link hcf-print ajaxify" data:command="tooltip" data:param="" rel='nofollow' data-content='Öffnet die Druckansicht dieses Artikels.' href='/erfolg/jobsuche/bewerbungsprozess-warum-dauert-das-denn-so-lange/v_detail_tab_print/14479212.html' title='' >Drucken</a></li><li name="bookmark14479212-1" id="bookmark14479212-1"><a class="hcf-action-link hcf-notice ajaxify" data:command="loadDynamically" data:param="/ajaxentry/nocache/showbookmarkicon?teasableViewModel=com.hcf.view.standard.article.ArticleViewModel%5BnumericId%3D14479212%5D&#38;position=1&#38;teasableId=14479212&#38;actionTextAdd=Merken&#38;docType=Artikel" data-nocache='/ajaxentry/nocache/showbookmarkicon?teasableViewModel=com.hcf.view.standard.article.ArticleViewModel%5BnumericId%3D14479212%5D&#38;position=1&#38;teasableId=14479212&#38;actionTextAdd=Merken&#38;docType=Artikel' data-cache='/ajaxentry/cache/cacheableshowbookmarkicon?teasableViewModel=com.hcf.view.standard.article.ArticleViewModel%5BnumericId%3D14479212%5D&#38;position=1&#38;teasableId=14479212&#38;actionTextAdd=Merken&#38;docType=Artikel' noFollow='true' href='javascript:void(0);' >Merken</a></li><li><a href="/" title="Startseite" class="hcf-action-link hcf-home" target="_self">Startseite</a></li></ul></div></div></div></div></article></div><div class="hcf-ad-wrapper"><span class="hcf-ad-tag">Anzeige</span><div><div class="hcf-ad-rectangle hcf-mcol-box hcf-ad-rectangle-full"><div id="iqadtile13">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile13", "iqadtile13");
+		}	
+	</script>
+</div></div></div></div></section></div></div></div><div class="hcf-colset1}">
+
+<div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+ window._taboola = window._taboola || [];
+ _taboola.push({
+ mode: 'alternating-thumbnails-a',
+ container: 'taboola-below-article-thumbnails',
+ placement: 'Below Article Thumbnails',
+ target_type: 'mix'
+ });
+</script></div><div class="hcf-colset2"><div class="hcf-column hcf-column1"><div class="hcf-content hcf-teaser"><div class="hcf-ressort-block hcf-more-ressort"><h2 class="hcf-header hcf-noborder">Mehr zum Thema</h2><div class="hcf-related-wrapper"><ul class="hcf-related"><li class="hcf-doctype-article "><a href="/?home_teaser_ds=20231356" class="hcf-related-link"><em class="hcf-overline">Berufsberatung:  </em><span class="hcf-headline">Drei Berater, drei Meinungen – was taugt Coaching?</span><span class="hcf-media">Article</span></a></li><li class="hcf-doctype-video "><a href="/?home_teaser_ds=20206468" class="hcf-related-link"><em class="hcf-overline">Berufswahl:  </em><span class="hcf-headline">So finden Sie den perfekten Job</span><span class="hcf-media">Video</span></a></li><li class="hcf-doctype-article "><a href="/?home_teaser_ds=20255020" class="hcf-related-link"><em class="hcf-overline">Gehaltsunterschiede:  </em><span class="hcf-headline">Die am besten und schlechtesten bezahlten Berufe Deutschlands</span><span class="hcf-media">Article</span></a></li></ul></div></div></div><div class="hcf-content hcf-teaser hcf-ressort-block"></div></div><div class="hcf-column hcf-column2">
+
+<section style="margin-bottom:0px; border:1px solid #afafaf; overflow:hidden;">
+
+ <div style ="margin-left:-9px;">
+
+<iframe name="hb_dub_suche" id="hb_dub_suche" src="https://www.dub.de/suchbox/" height="360" width="100%" scrolling="no"></iframe>
+
+</div>
+
+</section></div></div><div class="hcf-colset1 hcf-content">
+
+<div style="height:15px; background-color:#ffffff;">&nbsp;</div><div class="hcf-services-stage" data-tb-region="Service-Highlight-Bühne"><h2 class="hcf-header">Serviceangebote unserer Partner</h2><ul class="hcf-service-partner-list"><li class="hcf-first" data-tb-region-item><a href="http://www.bellevue-ferienhaus.de/wiwo" title="Bellevue Ferienhaus" target="_blank"><h3><em class="hcf-overline">Bellevue Ferienhaus</em><span class="hcf-colon">: </span><span class="hcf-headline">Exklusive Urlaubsdomizile zu Top-Preisen. </span></h3><img src="/images/teaser-bellevue-bild/10021980/3-format2104.jpg" alt="Bellevue Ferienhaus"/></a></li><li data-tb-region-item><a href="http://portal.immobilienscout24.de/portale_lp/index.php/wiwo?utm_medium=cooperation&#38;utm_source=wirtschaftswoche&#38;utm_campaign=default_content_navigation&#38;utm_content=default_index_cobranded" title="Immobilenscout24 " target="_blank"><h3><em class="hcf-overline">Immobilenscout24</em><span class="hcf-colon">: </span><span class="hcf-headline">Attraktive Angebote und Services rund um Ihre Wunschimmobilie. </span></h3><img src="/images/immobilienscout24/10119128/4-format2104.png" alt="Immobilienscout 24"/></a></li><li data-tb-region-item><a href="http://jobs.wiwo.de/" title="Jobturbo" target="_blank"><h3><em class="hcf-overline">Jobturbo</em><span class="hcf-colon">: </span><span class="hcf-headline">Finden Sie jetzt den passenden Job mit dem Jobturbo. </span></h3><img src="/images/teaser-jobturbo-bild/10021982/3-format2104.jpg" alt="Stellenmarkt"/></a></li><li data-tb-region-item><a href="http://maklerempfehlung.wiwo.de/" title="Homeday" target="_blank"><h3><em class="hcf-overline">Homeday</em><span class="hcf-colon">: </span><span class="hcf-headline">Jetzt den passenden Makler für Ihre Immobilie finden. </span></h3><img src="/images/homday_wiwo_retina_banner_210x118_/20014164/2-format2104.jpg" alt="Jetzt mit Homeday den passenden Makler für Ihre Immobilie finden"/></a></li></ul>
+
+<div class="hcf-services-list-stage">
+ <ul class="hcf-services-list">
+ <li><a href="http://www.wiwo.de/brutto-netto-rechner" class="hcf-service-link hcf-netto-rg" title="Brutto-Netto-Rechner">Brutto-Netto-Rechner</a></li>
+ <li><a href="http://tagesgeld.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-zins-es" title="Tagesgeldvergleich">Tagesgeldvergleich</a></li>
+ <li><a href="http://giro.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-giro-rg" title="Girokonten-Vergleich">Girokonto-Vergleich</a></li>
+ <li><a href="http://festgeld.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-festgeld-rg" title="Festgeld-Vergleich">Festgeld-Vergleich</a></li>
+ <li><a href="http://wertpapier.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-analysten-vg" title="Depot-Vergleich">Depot-Vergleich</a></li>
+
+ <li><a href="http://sparbrief.rechner.wiwo.de/rechner2/wiwo/" class="hcf-service-link hcf-studenten-br" title="Sparbrief-Vergleich">Sparbrief-Vergleich</a></li>
+ <li><a href="http://geldanlage.rechner.wiwo.de/wiwo/" class="hcf-service-link hcf-geldanlage-br" title="Geldanlage-Rechner">Geldanlage-Rechner</a></li>
+ <li><a href="http://kredit.rechner.wiwo.de/rechner2/wiwo/" class="hcf-service-link hcf-studenten-br" title="Kreditrechner">Kreditrechner</a></li>
+ <li><a href="http://ratenkredit.fmh-rechner.de/wiwo/" class="hcf-service-link hcf-ratenkredit-rg" title="Ratenkredit-Vergleich">Ratenkredit-Vergleich</a></li>
+ <li><a href="http://hypotheken.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-riester-rg" title="Hypothekendarlehen">Hypothekendarlehen</a></li>
+
+ <li><a href="http://www.wiwo.de/stundenlohnrechner" class="hcf-service-link hcf-netto-rg" title="Stundenlohnrechner">Stundenlohnrechner</a></li>
+ <li><a href="http://effektivzins.rechner.wiwo.de/rechner3/wiwo/effektivzinsrechner/" class="hcf-service-link hcf-netto-rg" title="Effektivzinsrechner">Effektivzinsrechner</a></li>
+ <li><a href="http://tilgung.rechner.wiwo.de/rechner3/wiwo/tilgungsrechner/" class="hcf-service-link hcf-tilgung-rg" title="Tilgungsrechner">Tilgungsrechner</a></li>
+ <li><a href="http://boerse.wiwo.de/devisen_rechner.htn?sektion=erweitert" class="hcf-service-link hcf-netto-rg" title="Währungsrechner">Währungsrechner</a></li>
+ <li><a href="http://www.wiwo.de/technologie/technologie-tools/kfzversicherungsrechner/" class="hcf-service-link hcf-kfzvers-vg" title="KFZ-Versicherungen">KFZ-Versicherungen</a></li>
+
+ <li><a href="http://stromrechner.wiwo.de/strom.php" class="hcf-service-link hcf-strom-vg" title="Strom-Vergleich">Strom-Vergleich</a></li>
+ <li><a href="http://www.wiwo.de/technologie/technologie-tools/dslrechner/" class="hcf-service-link hcf-dsl-vg" title="DSL-Vergleich">DSL-Vergleich</a></li>
+ <li><a href="http://rentenplaner.fmh-rechner.de/rechner/wiwo/" class="hcf-service-link hcf-rente-pl" title="Renten-Rechner">Renten-Rechner</a></li>
+ <li><a href="http://bundesschatzbrief.rechner.wiwo.de/rechner/wiwo/" class="hcf-service-link hcf-bundesschatzbrief" title="Bundesschatzbrief">Bundesschatzbrief</a></li>
+ <li><a href="http://www.wiwo.de/kfz-steuerrechner" class="hcf-service-link hcf-kfzvers-vg" title="KFZ-Steuerrechner">KFZ-Steuerrechner</a></li>
+ </ul>
+ <div class="hcf-sub-ressort-navi"><ul><li><a href="http://www.wiwo.de/tools" class="hcf-navi-link" title="alle Tools">alle Tools</a></li></ul></div>
+</div></div></div><div class="hcf-colset1"><div class="hcf-column hcf-ad hcf-sponsoring"><div id="iqadtile15">
+	<script>
+		if(typeof AdController!=='undefined'){
+			AdController.render("iqadtile15", "iqadtile15");
+		}	
+	</script>
+</div></div></div><div class="clearfix"></div></div><div id="hcf-footer"><footer><div id="hcf-bottom-nav"><div class="hcf-bottom-nav"><ul class="hcf-level-1 hcf-root"><li class="hcf-first hcf-has-subs"><a href="/" title="Die WirtschaftsWoche" class="hcf-home-link" target="_self">Startseite</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/themenuebersicht/" title="Themen" target="_self">Themen</a></li><li><a href="/blog/" title="Blogs" target="_self">Blogs</a></li><li><a href="/kolumnen/" title="Kolumnen" target="_self">Kolumnen</a></li><li><a href="/bilder/" title="Bilder" target="_self">Bilder</a></li><li><a href="/videos/" title="Videos" target="_self">Videos</a></li><li><a href="/mobil/" title="Mobil" target="_self">Mobil</a></li><li><a href="/digitalpass/" title="Digitalpass" target="_self">Digitalpass</a></li><li><a href="http://club.wiwo.de" title="WirtschaftsWoche Club" target="_blank">WirtschaftsWoche Club</a></li></ul></li><li class="hcf-has-subs"><a href="/unternehmen/" title="Unternehmen" target="_self">Unternehmen</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/unternehmen/banken/" title="Banken" target="_self">Banken</a></li><li><a href="/unternehmen/dienstleister/" title="Dienstleister" target="_self">Dienstleister</a></li><li><a href="/unternehmen/energie/" title="Energie" target="_self">Energie</a></li><li><a href="/unternehmen/industrie/" title="Industrie" target="_self">Industrie</a></li><li><a href="/unternehmen/it/" title="IT" target="_self">IT</a></li><li><a href="/unternehmen/handel/" title="Handel" target="_self">Handel</a></li><li><a href="/unternehmen/versicherer/" title="Versicherer" target="_self">Versicherer</a></li><li><a href="/unternehmen/mittelstand/" title="Mittelstand" target="_self">Mittelstand</a></li><li><a href="/unternehmen/auto/" title="Auto" target="_self">Auto</a></li></ul></li><li class="hcf-has-subs"><a href="/finanzen/" title="Finanzen" target="_self">Finanzen</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/finanzen/boerse/" title="Börse" target="_self">Börse</a></li><li><a href="/finanzen/geldanlage/" title="Geldanlage" target="_self">Geldanlage</a></li><li><a href="/finanzen/vorsorge/" title="Vorsorge" target="_self">Vorsorge</a></li><li><a href="/finanzen/steuern-recht/" title="Steuern &#38; Recht" target="_self">Steuern &amp; Recht</a></li><li><a href="/finanzen/immobilien/" title="Immobilien" target="_self">Immobilien</a></li><li><a href="/input/" title="WirtschaftsWoche Input" target="_self">WirtschaftsWoche Input</a></li><li><a href="/finanzen/finanztools/" title="FinanzTools" target="_self">FinanzTools</a></li></ul></li><li class="hcf-has-subs"><a href="/politik/" title="Politik" target="_self">Politik</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/politik/deutschland/" title="Deutschland" target="_self">Deutschland</a></li><li><a href="/politik/europa/" title="Europa" target="_self">Europa</a></li><li><a href="/politik/ausland/" title="Ausland" target="_self">Ausland</a></li><li><a href="/politik/konjunktur/" title="Konjunktur" target="_self">Konjunktur</a></li></ul></li><li class="hcf-active hcf-has-subs"><a href="/erfolg/" title="Erfolg" target="_self">Erfolg</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/erfolg/trends/" title="Trends" target="_self">Trends</a></li><li><a href="/erfolg/management/" title="Management" target="_self">Management</a></li><li><a href="/erfolg/gruender/" title="Gründer" target="_self">Gründer</a></li><li><a href="/erfolg/beruf/" title="Beruf" target="_self">Beruf</a></li><li><a href="/erfolg/jobsuche/" title="Jobsuche" target="_self">Jobsuche</a></li><li><a href="/erfolg/campus-mba/" title="Campus &#38; MBA" target="_self">Campus &amp; MBA</a></li><li><a href="http://www.karriere.de" title="Karriere" target="_blank">Karriere</a></li><li><a href="/erfolg/tools/jobturbo/" title="Jobturbo" target="_self">Jobturbo</a></li></ul></li><li class="hcf-has-subs"><a href="/lifestyle/" title="Lifestyle" target="_self">Lifestyle</a></li><li class="hcf-has-subs"><a href="/technologie/" title="Technologie" target="_self">Technologie</a><ul class="hcf-level-2"><li class="hcf-first"><a href="/technologie/digitale-welt/" title="Digitale Welt" target="_self">Digitale Welt</a></li><li><a href="/technologie/auto/" title="Auto" target="_self">Auto</a></li><li><a href="/technologie/umwelt/" title="Umwelt" target="_self">Umwelt</a></li><li><a href="/technologie/forschung/" title="Forschung" target="_self">Forschung</a></li><li><a href="/technologie/gadgets/" title="Gadgets" target="_self">Gadgets</a></li><li><a href="/technologie/green/" title="WiWo Green" target="_self">WiWo Green</a></li><li><a href="/technologie/storytelling/" title="Storytelling" target="_self">Storytelling</a></li></ul></li></ul></div></div>
+
+<p>&nbsp;</p>
+
+<div class="hcf-copyright">
+ <div class="hcf-copyright-inner">
+&copy; 2017 Handelsblatt GmbH - ein Unternehmen der Verlagsgruppe Handelsblatt GmbH &amp; Co. KG<br/>
+
+Verlags-Services für Werbung: <a href="https://www.iqm.de/digital/" target="_blank">iqm.de/digital</a> (<a href="http://www.iqm.de/digital/marken/wirtschaftswoche-online/" title="Mediadaten" target="_blank">Mediadaten</a>) | Verlags-Services für Content: <a href="/business-content/" title="Business Content">Business Content</a> | <a href="/sitemap/" title="Sitemap" target="_self">Sitemap</a> | <a href="/archiv/" title="Online-Archiv" target="_self">Online-Archiv</a><br/>
+Realisierung und Hosting der Finanzmarktinformationen: <a href="http://www.vwd.com" title="vwd Vereinigte Wirtschaftsdienste GmbH" target="_blank">vwd Vereinigte Wirtschaftsdienste GmbH</a> | Verzögerung der Kursdaten: Deutsche Börse 15 Min., Nasdaq und NYSE 20 Min.<br/>
+
+Keine Gewähr für die Richtigkeit der Angaben. Bitte beachten Sie auch folgende <a href="/impressum/nutzungshinweise/" title="Nutzungshinweise" target="_self">Nutzungshinweise</a>, die <a href="/impressum/datenschutzerklaerung/" title="Datenschutzerklärung" target="_self">Datenschutzerklärung</a> und das <a href="/impressum/" title="Impressum" target="_self">Impressum</a>. WirtschaftsWoche ist Mitglied im <a href="http://www.vdz.de" target="_blank" title="VDZ">VDZ</a>. <br/>Partnerseiten: <a target="_new" title="Handelsblatt" href="http://www.handelsblatt.com">Handelsblatt Online</a>, <a target="_new" title="karriere.de" href="http://www.karriere.de">karriere.de</a>, <a target="_new" title="absatzwirtschaft" href="http://www.absatzwirtschaft.de">absatzwirtschaft</a>, <a target="_new" title="Der Betrieb" href="https://www.der-betrieb.de">Der Betrieb</a>, <a target="_new" title="Creditreform" href="http://creditreform-magazin.de">Creditreform</a>, <a target="_new" title="VDI nachrichten" href="http://www.vdi-nachrichten.com">VDI nachrichten</a>, <a href="https://www.dub.de/unternehmensnachfolge/" title="DUB Unternehmensnachfolge" target="_new">DUB Unternehmensnachfolge</a>, <a href="https://www.dub.de/franchise/franchise-unternehmen/" title="DUB Franchiseunternehmen" target="_new">DUB Franchiseunternehmen</a>, <a target="_new" title="bellevue-ferienhaus.de" href="http://www.bellevue-ferienhaus.de">bellevue-ferienhaus.de</a>, <a target="_new" title="bellevue-kreuzfahrten.de" href="http://www.bellevue-kreuzfahrten.de">bellevue-kreuzfahrten.de</a>, <a target="_new" title="semigator.de" href="https://www.semigator.de">semigator.de</a>, <a target="_new" title="boatoon.com" href="https://www.boatoon.com/de/">boatoon.com</a>, <a target="_new" title="koffer.de" href="https://www.koffer.de">koffer.de</a>, <a target="_new" title="bellevue.de" href="https://www.bellevue.de">bellevue.de</a>
+ </div>
+
+<br/><br/>
+
+<div class="hcf-jump-mark">
+<a onclick="window.scrollTo(0, 0);" href="javascript:void(0)">Nach oben</a>
+</div>
+
+</div>
+<div class="hcf-meta-nav">
+ <ul class="hcf-level-1 hcf-root">
+ <li class="hcf-first hcf-has-subs"><a title="Nutzungsbedingungen" href="/impressum/nutzungshinweise/">Nutzungsbedingungen</a></li>
+ <li class="hcf-has-subs"><a title="Impressum" href="/impressum/">Impressum</a></li>
+ <li class="hcf-has-subs"><a title="Datenschutz" href="/impressum/datenschutzerklaerung/">Datenschutz</a></li>
+ <li class="hcf-has-subs"><a title="Datenschutz" target="_blank" href="https://www.iqm.de/digital/nutzungsbasierte_Onlinewerbung/">Nutzungsbasierte Onlinewerbung</a></li>
+
+ <li class="hcf-has-subs"><a title="Mediadaten-Online" target="_blank" href="http://www.iqm.de/digital/marken/wirtschaftswoche-online/">Mediadaten</a></li>
+ <li class="hcf-has-subs"><a title="Archiv" href="/archiv/">Archiv</a></li>
+ <li class="hcf-has-subs"><a title="Kontakt" href="/kontakt-hilfe/">Kontakt</a></li>
+ </ul>
+</div>
+
+
+
+<style>
+
+.c-nojs {
+ background-color: white;
+ position: fixed;
+ z-index: 9999999;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+ bottom:0px;
+}
+
+.c-nojs__bar{
+ min-height: 75px;
+ box-shadow: 0px 2px 7px #ccc;
+}
+
+.c-nojs__logo{
+ padding-top:10px;
+ width:840px;
+ margin: 0 auto;
+ margin-bottom:50px;
+}
+
+.c-nojs__wrapper{
+ max-width: 500px;
+ margin: 0 auto;
+}
+
+.c-teaser__overline{
+ margin-top: 80px;
+ font-size: 18px;
+ line-height: 16px;
+ font-weight: 700; 
+ color: #84020f;
+ margin-bottom:5px;
+}
+
+.c-teaser__headline{
+ font-size: 38px;
+ line-height: 42px;
+ font-weight: 700; 
+ margin-bottom:15px;
+}
+
+.c-teaser__text{
+ font-size: 20px;
+ line-height: 28px;
+ margin-bottom: 40px;
+}
+
+.c-nojs__table{
+ width:100%;
+ 
+}
+
+.c-nojs__hr {
+ margin-bottom: 10px;
+}
+
+.c-nojs__table a{
+ font-size: 12px;
+ color: #969696;
+}
+
+.c-nojs__table td{
+ width: 33.3%
+}
+
+.u-text-right{
+ text-align: right;
+}
+
+.u-text-center{
+ text-align: center;
+}
+
+</style>
+
+<noscript>
+
+
+
+<div class="c-nojs">
+
+<div class="c-nojs__bar">
+
+<div class="c-nojs__logo">
+
+<a href="/">
+
+ <img src="/images/wiwo-logo-main/10269318/6-formatOriginal.png">
+
+</a>
+
+</div>
+
+</div>
+
+<div class="c-nojs__wrapper">
+
+
+
+<div class="c-teaser">
+
+<div class="c-teaser__overline">JavaScript deaktiviert</div>
+
+<div class="c-teaser__headline">Warum sehe ich WirtschaftsWoche Online nicht?</div>
+
+<div class="c-teaser__text">Um unser Angebot in vollem Umfang nutzen zu können, müssen Sie JavaScript in Ihrem Browser aktivieren.</div>
+
+</div>
+
+<hr class="c-nojs__hr">
+
+<table class="c-nojs__table">
+
+<tr>
+
+<td><a href="http://www.wiwo.de/impressum/nutzungshinweise/">Nutzungshinweise</a></td>
+
+<td class="u-text-center"><a href="http://www.wiwo.de/impressum/datenschutzerklaerung/">Datenschutz</a></td>
+
+<td class="u-text-right"><a href="http://www.wiwo.de/impressum/">Impressum</a></td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<img src="https://handelsblatt01.webtrekk.net/496847069983158/wt?p=433,JavaScript-deaktiviert,0,0,0,0,0,0,0,cp1=JavaScript-deaktiviert;ck6=JavaScript-deaktiviert;cg1=sonstiges;cg2=JavaScript-deaktiviert" height="1" width="1" alt="">
+
+<!-- SZM VERSION="2.0" -->
+<img src="http://de.ioam.de/tx.io?st=wiwo&amp;np=nojs&amp;mo=0" width="1" height="1" alt="szmtag">
+<!--/SZM --> 
+
+</noscript>
+
+</footer></div>
+
+<img src="//amplifypixel.outbrain.com/pixel?mid=000ff846880c8e705f7a14debad9a56133"></div></div><div data-param="http://www.wiwo.de?footerhp=scroll" data-command="overscroller" class="vhb-overscroller ajaxify"><a class="vhb-overscroller-link" href="http://www.wiwo.de?footerhp=click"></a><div class="vhb-overscroller-overlay"></div><div class="vhb-stage"><div data-progress="0" class="vhb-radial-progress"><div class="vhb-circle"><div class="vhb-mask vhb-full"><div class="vhb-fill"></div></div><div class="vhb-mask vhb-half"><div class="vhb-fill"></div><div class="vhb-fill vhb-fix"></div></div><div class="vhb-shadow"></div></div><div class="vhb-inset"><div class="vhb-caption"><span>Zur Startseite</span></div><div class="vhb-percentage"><div class="vhb-numbers"><span>-</span><span>0%</span><span>1%</span><span>2%</span><span>3%</span><span>4%</span><span>5%</span><span>6%</span><span>7%</span><span>8%</span><span>9%</span><span>10%</span><span>11%</span><span>12%</span><span>13%</span><span>14%</span><span>15%</span><span>16%</span><span>17%</span><span>18%</span><span>19%</span><span>20%</span><span>21%</span><span>22%</span><span>23%</span><span>24%</span><span>25%</span><span>26%</span><span>27%</span><span>28%</span><span>29%</span><span>30%</span><span>31%</span><span>32%</span><span>33%</span><span>34%</span><span>35%</span><span>36%</span><span>37%</span><span>38%</span><span>39%</span><span>40%</span><span>41%</span><span>42%</span><span>43%</span><span>44%</span><span>45%</span><span>46%</span><span>47%</span><span>48%</span><span>49%</span><span>50%</span><span>51%</span><span>52%</span><span>53%</span><span>54%</span><span>55%</span><span>56%</span><span>57%</span><span>58%</span><span>59%</span><span>60%</span><span>61%</span><span>62%</span><span>63%</span><span>64%</span><span>65%</span><span>66%</span><span>67%</span><span>68%</span><span>69%</span><span>70%</span><span>71%</span><span>72%</span><span>73%</span><span>74%</span><span>75%</span><span>76%</span><span>77%</span><span>78%</span><span>79%</span><span>80%</span><span>81%</span><span>82%</span><span>83%</span><span>84%</span><span>85%</span><span>86%</span><span>87%</span><span>88%</span><span>89%</span><span>90%</span><span>91%</span><span>92%</span><span>93%</span><span>94%</span><span>95%</span><span>96%</span><span>97%</span><span>98%</span><span>99%</span><span>100%</span></div></div></div></div><img src="http://www.wiwo.de/contentexport/static/images/hp.png"/></div></div><script>
+                window._newsroom = window._newsroom || [];
+
+                !function (e, f, u) {
+                    e.async = 1;
+                    e.src = u;
+                    f.parentNode.insertBefore(e, f);
+                }(document.createElement('script'),
+                    document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/vhb-wirtschaftswoche/newsroom.js');
+            </script><script src="/js/12614366/23/experiments.js" type="text/javascript"></script><script src="/js/9775966/118/base.js" type="text/javascript"></script><script src="/js/9778310/2/BrightcoveExperiences.js" type="text/javascript"></script><script src="/js/13360408/6/iqipadfix.js" type="text/javascript"></script><script src="/js/10896592/2/z_iq-end-of-page-signal.js" type="text/javascript"></script><script type="text/javascript">  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});</script><script src="/js/9057532/37/stickylayer.js" type="text/javascript"></script><!-- end adcontroller initializierung -->
+<script type = "text/javascript">
+	if (typeof AdController !== 'undefined') {
+		AdController.finalize();
+	}
+</script></body></html><!-- [powered by HCF: 17.10.1.15,degtlun5505.server.arvato-systems.de,20171010174638,ID:14479212 in 1022ms] -->
