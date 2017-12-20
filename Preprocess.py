@@ -34,6 +34,11 @@ def write_docs_to_disc(filename, docs):
             docs_file.write("\n")
 
 
+def append_line_to_file(filename, line):
+    with open(filename, 'a') as file:
+        file.write(line + "\n")
+
+
 def read_lines_from_file(filename):
     with open(filename) as file:
         return file.readlines()
