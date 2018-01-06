@@ -1,29 +1,37 @@
 import glob
 
+from langdetect import detect, lang_detect_exception
 from nltk.corpus import stopwords
 from nltk.stem.snowball import GermanStemmer
 
 
-def remove_stop_words(words):
-    return [word for word in words if word not in stopwords.words('german')]
+def remove_punctuation(word):
+    return ''.join(char for char in word if char not in ['.', '"', ',', '(', ')', '!', '?', ';', ':', 'ǀ', '+'])
 
 
-def remove_punctuation(words):
-    return [''.join(char for char in word if char not in ['.', '"', ',', '(', ')', '!', '?', ';', ':', 'ǀ', '+']) for
-            word in words]
+def is_short_word(word):
+    return len(word) > 2
 
 
-def remove_short_words_and_numbers(words):
-    return [word for word in words if len(word) > 2 and not word.isdigit()]
+def is_number(word):
+    return word.isdigit()
 
 
-def apply_stemming(words):
-    stemmer = GermanStemmer()
-    return [stemmer.stem(word) for word in words]
+def apply_stemming(word):
+    return stemmer.stem(word)
+
+
+def is_stopword(word):
+    return word in stopwords.words('german')
 
 
 def preprocess_doc(words):
-    return apply_stemming(remove_short_words_and_numbers(remove_punctuation(remove_stop_words(words))))
+    processed_text = []
+    for word in words:
+        clean_word = remove_punctuation(word)
+        if not is_short_word(clean_word) and not is_number(clean_word) and not is_stopword(clean_word):
+            processed_text.append(apply_stemming(clean_word))
+    return processed_text
 
 
 def write_docs_to_disc(filename, docs):
@@ -53,26 +61,23 @@ def read_file_from_disc(path):
     file = open(path, 'rb')
     return file.read()
 
-# docs_en = []
-# docs_de = []
-# file_names = get_file_names_from_directory("/Users/hannes/Desktop/jobNoJob-master/files/positives/raw/", "html")
-# for file_name in file_names:
-#     html = read_file_from_disc(file_name)
-#     visible_text = text_from_html(html)
-#     if len(visible_text) > 0:
-#         try:
-#             language = detect(" ".join(visible_text))
-#             print(language)
-#         except lang_detect_exception.LangDetectException as error:
-#             print(error)
-#         processed_words = preprocess_doc(html)
-#         if language == "de":
-#             docs_de.append(processed_words)
-#         if language == "en":
-#             docs_en.append(processed_words)
-# write_docs_to_disc("jobs-pos_de.txt", docs_de)
-# write_docs_to_disc("jobs-pos_en.txt", docs_en)
 
+docs_de = []
+load_path = "./data/negative/visible_text/successful_text_extractions.txt"
+save_path = "./data/negative/visible_text/preprocessed_text.txt"
+stemmer = GermanStemmer()
+for i, line in enumerate(read_lines_from_file(load_path)):
+    if len(line) > 0:
+        try:
+            language = detect(line)
+            print(str(i) + " " + language + ": " + line)
+            if language == "de":
+                processed_words = preprocess_doc(line.split())
+                docs_de.append(processed_words)
+        except lang_detect_exception.LangDetectException as error:
+            print(error)
+
+write_docs_to_disc(save_path, docs_de)
 
 # nltk.download('stopwords')
 # url_list = read_lines_from_file("urls.txt")
