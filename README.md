@@ -1,2 +1,2 @@
-# not anymore master-project
+# Website Classification
 some python stuff related to website classification
